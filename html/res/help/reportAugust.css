@@ -1,0 +1,693 @@
+@media screen and (max-width: 1366px) {
+  .section img {
+    width: 70%;
+  }
+}
+.disnone {
+  display: none;
+}
+.bkgT {
+  background: url("img/reportAugust/bkgT.jpg") center no-repeat;
+  background-size: 100% 100%;
+}
+.bkgF {
+  background: url("img/reportAugust/bkgF.jpg") center no-repeat;
+  background-size: 100% 100%;
+}
+.bkg-first {
+  background: url("img/reportAugust/bkg-first.jpg") center no-repeat;
+  background-size: 100% 100%;
+}
+.bkg-special {
+  background: url("img/reportAugust/bkg-special.jpg") center no-repeat;
+  background-size: 100% 100%;
+}
+.section {
+  text-align: center;
+}
+.section .spec {
+  width: auto;
+}
+.section {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.section img {
+  display: block;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+.section .all-stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.section .all-stars .common-start {
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+.section .all-stars .first-star {
+  left: 17.45%;
+  top: 19.72%;
+  width: 18px;
+  height: 18px;
+  background: url("img/reportAugust/first.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .second-star {
+  left: 26.77%;
+  top: 11.48%;
+  width: 5px;
+  height: 5px;
+  background-color: #189af3;
+}
+.section .all-stars .third-star {
+  left: 33.8%;
+  top: 19.26%;
+  width: 5px;
+  height: 5px;
+  background-color: #1844f2;
+}
+.section .all-stars .fourth-star {
+  left: 40.31%;
+  top: 14.81%;
+  width: 23px;
+  height: 23px;
+  background: url("img/reportAugust/fourth.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .fifth-star {
+  left: 50.68%;
+  top: 4.81%;
+  width: 8px;
+  height: 8px;
+  background-color: #189af3;
+}
+.section .all-stars .sixth-star {
+  left: 52.6%;
+  top: 18.8%;
+  width: 5px;
+  height: 5px;
+  background-color: #189af3;
+}
+.section .all-stars .seventh-star {
+  left: 65.26%;
+  top: 6.76%;
+  width: 8px;
+  height: 8px;
+  background-color: #189af3;
+}
+.section .all-stars .eighth-star {
+  left: 70.78%;
+  top: 15.93%;
+  width: 5px;
+  height: 5px;
+  background-color: #1539c9;
+}
+.section .all-stars .ninth-star {
+  left: 75.05%;
+  top: 25.93%;
+  width: 14px;
+  height: 14px;
+  background: url("img/reportAugust/ninth.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .tenth-star {
+  left: 80.1%;
+  top: 6.76%;
+  width: 8px;
+  height: 8px;
+  background-color: #1539c9;
+}
+.section .all-stars .eleventh-star {
+  left: 85.94%;
+  top: 18.8%;
+  width: 3px;
+  height: 3px;
+  background-color: #1539c9;
+}
+.section .all-stars .twelfth-star {
+  left: 93.7%;
+  top: 11.3%;
+  width: 14px;
+  height: 14px;
+  background: url("img/reportAugust/twelfth.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .first-starT {
+  left: 7.55%;
+  top: 57.22%;
+  width: 5px;
+  height: 5px;
+  background: #189af3;
+}
+.section .all-stars .second-starT {
+  left: 15.26%;
+  top: 40.93%;
+  width: 14px;
+  height: 14px;
+  background: url("img/reportAugust/secondT.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .third-starT {
+  left: 23.59%;
+  top: 48.33%;
+  width: 3px;
+  height: 3px;
+  background-color: #1539c9;
+}
+.section .all-stars .fourth-starT {
+  left: 29.17%;
+  top: 36.3%;
+  width: 8px;
+  height: 8px;
+  background-color: #1539c9;
+}
+.section .all-stars .fifth-starT {
+  left: 33.91%;
+  top: 55.56%;
+  width: 14px;
+  height: 14px;
+  background: url("img/reportAugust/twelfthT.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .sixth-starT {
+  left: 38.49%;
+  top: 45.37%;
+  width: 8px;
+  height: 8px;
+  background-color: #189af3;
+}
+.section .all-stars .seventh-starT {
+  left: 56.82%;
+  top: 48.33%;
+  width: 5px;
+  height: 5px;
+  background-color: #189af3;
+}
+.section .all-stars .eighth-starT {
+  left: 68.18%;
+  top: 44.35%;
+  width: 23px;
+  height: 23px;
+  background: url("img/reportAugust/eighthT.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .ninth-starT {
+  left: 75.62%;
+  top: 48.7%;
+  width: 5px;
+  height: 5px;
+  background-color: #1539c9;
+}
+.section .all-stars .tenth-starT {
+  left: 79.06%;
+  top: 55.74%;
+  width: 8px;
+  height: 8px;
+  background-color: #189af3;
+}
+.section .all-stars .eleventh-starT {
+  left: 82.66%;
+  top: 40.93%;
+  width: 5px;
+  height: 5px;
+  background-color: #1539c9;
+}
+.section .all-stars .twelfth-starT {
+  left: 91.35%;
+  top: 49.26%;
+  width: 18px;
+  height: 18px;
+  background: url("img/reportAugust/thirteenthT.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .first-starR {
+  left: 12.92%;
+  top: 78.33%;
+  width: 14px;
+  height: 14px;
+  background: url("img/reportAugust/firstR.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .second-starR {
+  left: 21.25%;
+  top: 85.74%;
+  width: 3px;
+  height: 3px;
+  background-color: #1539c9;
+}
+.section .all-stars .third-starR {
+  left: 26.82%;
+  top: 73.7%;
+  width: 8px;
+  height: 8px;
+  background: url("img/reportAugust/thirdR.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .fourth-starR {
+  left: 31.56%;
+  top: 92.96%;
+  width: 14px;
+  height: 14px;
+  background: url("img/reportAugust/fourthR.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .fifth-starR {
+  left: 36.15%;
+  top: 82.78%;
+  width: 8px;
+  height: 8px;
+  background-color: #189af3;
+}
+.section .all-stars .sixth-starR {
+  left: 41.82%;
+  top: 73.7%;
+  width: 5px;
+  height: 5px;
+  background-color: #189af3;
+}
+.section .all-stars .seventh-starR {
+  left: 54.48%;
+  top: 85.74%;
+  width: 5px;
+  height: 5px;
+  background-color: #1539c9;
+}
+.section .all-stars .eighth-starR {
+  left: 56.25%;
+  top: 71.67%;
+  width: 8px;
+  height: 8px;
+  background-color: #189af3;
+}
+.section .all-stars .ninth-starR {
+  left: 65.83%;
+  top: 82.69%;
+  width: 23px;
+  height: 23px;
+  background: url("img/reportAugust/ninthR.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .tenth-starR {
+  left: 73.28%;
+  top: 86.11%;
+  width: 5px;
+  height: 5px;
+  background-color: #1539c9;
+}
+.section .all-stars .eleventh-starR {
+  left: 80.31%;
+  top: 78.33%;
+  width: 5px;
+  height: 5px;
+  background-color: #189af3;
+}
+.section .all-stars .twelfth-starR {
+  left: 88.96%;
+  top: 86.67%;
+  width: 18px;
+  height: 18px;
+  background: url("img/reportAugust/twelfthR.png") center center / 100% 100% no-repeat;
+}
+.section .all-stars .twinkling {
+  opacity: 0.3;
+  animation-name: move-twink-back;
+  -webkit-animation-name: move-twink-back;
+  -moz-animation-name: move-twink-back;
+  -o-animation-name: move-twink-back;
+  -ms-animation-name: move-twink-back;
+  animation-duration: 7s;
+  -webkit-animation-duration: 7s;
+  -moz-animation-duration: 7s;
+  -o-animation-duration: 7s;
+  -ms-animation-duration: 7s;
+  animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+}
+.section .all-stars .twinkling:nth-of-type(1) {
+  animation-delay: -1.169s;
+  -webkit-animation-delay: -1.169s;
+  -moz-animation-delay: -1.169s;
+  -o-animation-delay: -1.169s;
+  -ms-animation-delay: -1.169s;
+}
+.section .all-stars .twinkling:nth-of-type(2) {
+  animation-delay: -4.3279s;
+  -webkit-animation-delay: -4.3279s;
+  -moz-animation-delay: -4.3279s;
+  -o-animation-delay: -4.3279s;
+  -ms-animation-delay: -4.3279s;
+}
+.section .all-stars .twinkling:nth-of-type(3) {
+  animation-delay: -0.4s;
+  -webkit-animation-delay: -0.4s;
+  -moz-animation-delay: -0.4s;
+  -o-animation-delay: -0.4s;
+  -ms-animation-delay: -0.4s;
+}
+.section .all-stars .twinkling:nth-of-type(4) {
+  animation-delay: -7.1413s;
+  -webkit-animation-delay: -7.1413s;
+  -moz-animation-delay: -7.1413s;
+  -o-animation-delay: -7.1413s;
+  -ms-animation-delay: -7.1413s;
+}
+.section .all-stars .twinkling:nth-of-type(5) {
+  animation-delay: -0.4838s;
+  -webkit-animation-delay: -0.4838s;
+  -moz-animation-delay: -0.4838s;
+  -o-animation-delay: -0.4838s;
+  -ms-animation-delay: -0.4838s;
+}
+.section .all-stars .twinkling:nth-of-type(6) {
+  animation-delay: -3.5579s;
+  -webkit-animation-delay: -3.5579s;
+  -moz-animation-delay: -3.5579s;
+  -o-animation-delay: -3.5579s;
+  -ms-animation-delay: -3.5579s;
+}
+.section .all-stars .twinkling:nth-of-type(7) {
+  animation-delay: -3.4018s;
+  -webkit-animation-delay: -3.4018s;
+  -moz-animation-delay: -3.4018s;
+  -o-animation-delay: -3.4018s;
+  -ms-animation-delay: -3.4018s;
+}
+.section .all-stars .twinkling:nth-of-type(8) {
+  animation-delay: -8.6195s;
+  -webkit-animation-delay: -8.6195s;
+  -moz-animation-delay: -8.6195s;
+  -o-animation-delay: -8.6195s;
+  -ms-animation-delay: -8.6195s;
+}
+.section .all-stars .twinkling:nth-of-type(9) {
+  animation-delay: -5.6111s;
+  -webkit-animation-delay: -5.6111s;
+  -moz-animation-delay: -5.6111s;
+  -o-animation-delay: -5.6111s;
+  -ms-animation-delay: -5.6111s;
+}
+.section .all-stars .twinkling:nth-of-type(10) {
+  animation-delay: -7.6266s;
+  -webkit-animation-delay: -7.6266s;
+  -moz-animation-delay: -7.6266s;
+  -o-animation-delay: -7.6266s;
+  -ms-animation-delay: -7.6266s;
+}
+.section .all-stars .twinkling:nth-of-type(11) {
+  animation-delay: -2.1914s;
+  -webkit-animation-delay: -2.1914s;
+  -moz-animation-delay: -2.1914s;
+  -o-animation-delay: -2.1914s;
+  -ms-animation-delay: -2.1914s;
+}
+.section .all-stars .twinkling:nth-of-type(12) {
+  animation-delay: -5.1236s;
+  -webkit-animation-delay: -5.1236s;
+  -moz-animation-delay: -5.1236s;
+  -o-animation-delay: -5.1236s;
+  -ms-animation-delay: -5.1236s;
+}
+.section .all-stars .twinkling:nth-of-type(13) {
+  animation-delay: -3.988s;
+  -webkit-animation-delay: -3.988s;
+  -moz-animation-delay: -3.988s;
+  -o-animation-delay: -3.988s;
+  -ms-animation-delay: -3.988s;
+}
+.section .all-stars .twinkling:nth-of-type(14) {
+  animation-delay: -0.7645s;
+  -webkit-animation-delay: -0.7645s;
+  -moz-animation-delay: -0.7645s;
+  -o-animation-delay: -0.7645s;
+  -ms-animation-delay: -0.7645s;
+}
+.section .all-stars .twinkling:nth-of-type(15) {
+  animation-delay: -3.1379s;
+  -webkit-animation-delay: -3.1379s;
+  -moz-animation-delay: -3.1379s;
+  -o-animation-delay: -3.1379s;
+  -ms-animation-delay: -3.1379s;
+}
+.section .all-stars .twinkling:nth-of-type(16) {
+  animation-delay: -5.0598s;
+  -webkit-animation-delay: -5.0598s;
+  -moz-animation-delay: -5.0598s;
+  -o-animation-delay: -5.0598s;
+  -ms-animation-delay: -5.0598s;
+}
+.section .all-stars .twinkling:nth-of-type(17) {
+  animation-delay: -4.7473s;
+  -webkit-animation-delay: -4.7473s;
+  -moz-animation-delay: -4.7473s;
+  -o-animation-delay: -4.7473s;
+  -ms-animation-delay: -4.7473s;
+}
+.section .all-stars .twinkling:nth-of-type(18) {
+  animation-delay: -9.9926s;
+  -webkit-animation-delay: -9.9926s;
+  -moz-animation-delay: -9.9926s;
+  -o-animation-delay: -9.9926s;
+  -ms-animation-delay: -9.9926s;
+}
+.section .all-stars .twinkling:nth-of-type(19) {
+  animation-delay: -9.5328s;
+  -webkit-animation-delay: -9.5328s;
+  -moz-animation-delay: -9.5328s;
+  -o-animation-delay: -9.5328s;
+  -ms-animation-delay: -9.5328s;
+}
+.section .all-stars .twinkling:nth-of-type(20) {
+  animation-delay: -8.6048s;
+  -webkit-animation-delay: -8.6048s;
+  -moz-animation-delay: -8.6048s;
+  -o-animation-delay: -8.6048s;
+  -ms-animation-delay: -8.6048s;
+}
+.section .all-stars .twinkling:nth-of-type(21) {
+  animation-delay: -3.4675s;
+  -webkit-animation-delay: -3.4675s;
+  -moz-animation-delay: -3.4675s;
+  -o-animation-delay: -3.4675s;
+  -ms-animation-delay: -3.4675s;
+}
+.section .all-stars .twinkling:nth-of-type(22) {
+  animation-delay: -2.0672s;
+  -webkit-animation-delay: -2.0672s;
+  -moz-animation-delay: -2.0672s;
+  -o-animation-delay: -2.0672s;
+  -ms-animation-delay: -2.0672s;
+}
+.section .all-stars .twinkling:nth-of-type(23) {
+  animation-delay: -2.3842s;
+  -webkit-animation-delay: -2.3842s;
+  -moz-animation-delay: -2.3842s;
+  -o-animation-delay: -2.3842s;
+  -ms-animation-delay: -2.3842s;
+}
+.section .all-stars .twinkling:nth-of-type(24) {
+  animation-delay: -1.3029s;
+  -webkit-animation-delay: -1.3029s;
+  -moz-animation-delay: -1.3029s;
+  -o-animation-delay: -1.3029s;
+  -ms-animation-delay: -1.3029s;
+}
+.section .all-stars .twinkling:nth-of-type(25) {
+  animation-delay: -2.8702s;
+  -webkit-animation-delay: -2.8702s;
+  -moz-animation-delay: -2.8702s;
+  -o-animation-delay: -2.8702s;
+  -ms-animation-delay: -2.8702s;
+}
+.section .all-stars .twinkling:nth-of-type(26) {
+  animation-delay: -9.6423s;
+  -webkit-animation-delay: -9.6423s;
+  -moz-animation-delay: -9.6423s;
+  -o-animation-delay: -9.6423s;
+  -ms-animation-delay: -9.6423s;
+}
+.section .all-stars .twinkling:nth-of-type(27) {
+  animation-delay: -9.8907s;
+  -webkit-animation-delay: -9.8907s;
+  -moz-animation-delay: -9.8907s;
+  -o-animation-delay: -9.8907s;
+  -ms-animation-delay: -9.8907s;
+}
+.section .all-stars .twinkling:nth-of-type(28) {
+  animation-delay: -3.7124s;
+  -webkit-animation-delay: -3.7124s;
+  -moz-animation-delay: -3.7124s;
+  -o-animation-delay: -3.7124s;
+  -ms-animation-delay: -3.7124s;
+}
+.section .all-stars .twinkling:nth-of-type(29) {
+  animation-delay: -4.4097s;
+  -webkit-animation-delay: -4.4097s;
+  -moz-animation-delay: -4.4097s;
+  -o-animation-delay: -4.4097s;
+  -ms-animation-delay: -4.4097s;
+}
+.section .all-stars .twinkling:nth-of-type(30) {
+  animation-delay: -6.7638s;
+  -webkit-animation-delay: -6.7638s;
+  -moz-animation-delay: -6.7638s;
+  -o-animation-delay: -6.7638s;
+  -ms-animation-delay: -6.7638s;
+}
+.section .all-stars .twinkling:nth-of-type(31) {
+  animation-delay: -7.4669s;
+  -webkit-animation-delay: -7.4669s;
+  -moz-animation-delay: -7.4669s;
+  -o-animation-delay: -7.4669s;
+  -ms-animation-delay: -7.4669s;
+}
+.section .all-stars .twinkling:nth-of-type(32) {
+  animation-delay: -3.0802s;
+  -webkit-animation-delay: -3.0802s;
+  -moz-animation-delay: -3.0802s;
+  -o-animation-delay: -3.0802s;
+  -ms-animation-delay: -3.0802s;
+}
+.section .all-stars .twinkling:nth-of-type(33) {
+  animation-delay: -4.1697s;
+  -webkit-animation-delay: -4.1697s;
+  -moz-animation-delay: -4.1697s;
+  -o-animation-delay: -4.1697s;
+  -ms-animation-delay: -4.1697s;
+}
+.section .all-stars .twinkling:nth-of-type(34) {
+  animation-delay: -0.0902s;
+  -webkit-animation-delay: -0.0902s;
+  -moz-animation-delay: -0.0902s;
+  -o-animation-delay: -0.0902s;
+  -ms-animation-delay: -0.0902s;
+}
+.section .all-stars .twinkling:nth-of-type(35) {
+  animation-delay: -6.0366s;
+  -webkit-animation-delay: -6.0366s;
+  -moz-animation-delay: -6.0366s;
+  -o-animation-delay: -6.0366s;
+  -ms-animation-delay: -6.0366s;
+}
+@-webkit-keyframes move-twink-back {
+  5% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  68% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.3;
+  }
+}
+@-moz-keyframes move-twink-back {
+  5% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  68% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.3;
+  }
+}
+@-o-keyframes move-twink-back {
+  5% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  68% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.3;
+  }
+}
+@-ms-keyframes move-twink-back {
+  5% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  68% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.3;
+  }
+}
+@keyframes move-twink-back {
+  5% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  68% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.3;
+  }
+}
+#menu li {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url("img/reportAugust/default.png") no-repeat center;
+  opacity: 80;
+  margin-bottom: 20px;
+}
+#menu li.active {
+  background: url("img/reportAugust/active.png") no-repeat center;
+}
+#menu li:hover {
+  background: url("img/reportAugust/active.png") no-repeat center;
+}
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  text-decoration: none;
+}
+#menu li a:focus,
+#menu li.active a:focus {
+  outline: none;
+}
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 474px;
+  margin-top: -237px;
+  z-index: 70;
+}

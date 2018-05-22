@@ -1,0 +1,109 @@
+//调用am-float
+
+$img-color : mix($white, rgba($bg-main, .5));
+.img-balloon {
+  width : 120px; height : 120px; position : absolute; @include opacity(.7);
+}
+
+.img-balloon > *:nth-child(1),
+.img-balloon > *:nth-child(6) {
+  width      : 100%; height : 100%;
+  background : radial-gradient(at 50% 50%, #586296 0, #3a4364 100%);
+  position   : absolute; left : 0; border-radius : 50%;
+}
+
+.img-balloon > *:nth-child(1):before {
+  display    : block; content : ""; width : 70%; height : 100%;
+  background : radial-gradient(at 50% 50%, #6d77b3 0, #505a81 100%);
+  position   : absolute; left : 15%; border-radius : 50%;
+}
+
+.img-balloon > *:nth-child(1):after {
+  display    : block; content : ""; width : 30%; height : 100%;
+  background : radial-gradient(at 50% 50%, #586296 0, #3a4364 100%);
+  position   : absolute; left : 35%; border-radius : 50%;
+}
+
+.img-balloon > *:nth-child(6) {
+  background    : none;
+  border-bottom : 30px solid rgba(0, 0, 0, .08)
+}
+
+.img-balloon > *:nth-child(2),
+.img-balloon > *:nth-child(3),
+.img-balloon > *:nth-child(4),
+.img-balloon > *:nth-child(5) {
+  position : absolute;
+  //overflow: hidden;
+}
+
+.img-balloon > *:nth-child(2) {
+  width      : 30%;
+  height     : 5%;
+  left       : 35%;
+  top        : 96%;
+  background : radial-gradient(at 50% 50%, #41496f 0, #3a4364 100%);
+  z-index    : 2;
+}
+
+.img-balloon > *:nth-child(3) {
+  width   : 10%;
+  height  : 20%;
+  left    : 45%;
+  z-index : 3;
+  top     : 100%;
+}
+
+.img-balloon > *:nth-child(4) {
+  width   : 20%;
+  height  : 20%;
+  left    : 40%;
+  z-index : 1;
+  top     : 100%;
+}
+
+.img-balloon > *:nth-child(3):before,
+.img-balloon > *:nth-child(3):after,
+.img-balloon > *:nth-child(4):before,
+.img-balloon > *:nth-child(4):after,
+.img-balloon > *:nth-child(5):after {
+  content    : " ";
+  display    : block;
+  width      : 2px;
+  height     : 100%;
+  background : #6d77b3;
+  position   : absolute;
+  top        : 0;
+}
+
+.img-balloon > *:nth-child(3):before,
+.img-balloon > *:nth-child(4):before {
+  left : 0;
+  @include rotate(-15)
+}
+
+.img-balloon > *:nth-child(3):after,
+.img-balloon > *:nth-child(4):after {
+  right : 0;
+  @include rotate(15)
+}
+
+.img-balloon > *:nth-child(5) {
+  width         : 30%;
+  height        : 20%;
+  left          : 35%;
+  top           : 116%;
+  background    : radial-gradient(at 50% 50%, #586296 0, #3a4364 100%);
+  border-radius : 20%;
+  z-index       : 2;
+  position      : absolute;
+}
+
+.img-balloon > *:nth-child(5):after {
+  width         : 110%; height : 20%;
+  left          : -5%;
+  border-radius : 20%;
+}
+
+//.img-balloon { filter: alpha(opacity=0); -moz-opacity: 0; opacity: 0; z-index: 5; transition: all 1s;}
+//.active .img-balloon { top:0; filter: alpha(opacity=100); -moz-opacity: 1; opacity: 1; transition-delay: 0.7s; animation: img-balloon 2s ease 0s infinite alternate;  -webkit-animation: img-balloon 2s ease 0s infinite alternate;  -moz-animation: img-balloon 3s ease 0s infinite alternate;}

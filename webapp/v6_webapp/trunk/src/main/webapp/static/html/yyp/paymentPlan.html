@@ -1,0 +1,99 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center">月月派详情</div>
+        <div class="right">
+            <span id="yyp-quit" style="color:#007aff;font-size: 15px;display: none;" class="dmp-click" dmp_type="click" dmp_event="redeem" dmp_target_type="1">提前退出</span>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="paymentPlan" class="page" directory="yyp">
+        <!-- Scrollable page content-->
+        <div class="page-content paymentPlan">
+            <div class="content-block " style="margin: 0;padding: 0">
+                <div class="list-block media-list" style="    background: #2096E9;
+                    padding: 0.6rem;
+                    font-size: 0.8rem;margin: 0;">
+                    <div class="row no-gutter">
+	                    <div id="name"></div>
+	                    <div style="border: 1px solid #fff;
+	                        font-size: 0.6rem;
+	                        padding: 2px;
+	                        border-radius: 7px;" id="yypAgreement">查看合同</div>
+                    </div>
+                </div>
+                <div class="list-block media-list" style="background: #115898;
+                        padding: 0.6rem;
+                        font-size: 0.8rem;margin: 0">
+                   <div class="row no-gutter">
+	                   <div>年化收益：<span id="apr">0.00</span>%</div>
+	                   <div id="status"></div>
+                   </div>
+               </div>
+                <div class="list-block media-list"  style="background: #2096E9;
+                                        padding: 0.6rem;
+                                        font-size: 0.8rem;margin: 0">
+                    <div class="row">
+                        <!-- Each "cell" has col-[widht in percents] class -->
+                        <div class="col-33">
+                            <div class="text-center dmp_content_spa" id="EFFECTIVEMONEY">0.00</div>
+                            <div class="text-center" style="font-size: 0.6rem;">投资金额</div>
+                        </div>
+                        <div class="col-33" style="border-left: 1px solid #fff;
+                            border-right: 1px solid #fff;">
+                            <div class="text-center" id="REALINTEREST">0.00</div>
+                            <div class="text-center" style="font-size: 0.6rem;">已收收益</div>
+                        </div>
+                        <div class="col-33">
+                            <div class="text-center" id="WAITINTEREST">0.00</div>
+                            <div class="text-center" style="font-size: 0.6rem;">待收收益</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-block media-list"  style="background: #F1F1F1;
+                    font-size: 0.8rem;
+                    margin: 0;
+                    color: #000000;">
+                    <ul style="overflow: hidden;
+                                            padding: 0;
+                                            margin: 0;
+                                            list-style-type: none;line-height: 2.6rem;background: #F1F1F1;">
+                        <li style="float: left;text-align: center;font-size: 0.4rem;width: 7%;line-height: 1.4rem;">
+                            &nbsp;
+                        </li>
+                        <li style="float: left; text-align: center;width: 93%;background: #F1F1F1;">
+                            <div class="row">
+                                <div class="col-33 text-center" style="width: 30%;">应收本金</div>
+                                <div class="col-33 text-center" style="width: 30%;">应收利息</div>
+                                <div class="col-33" style="width: 40%;text-align: left;    padding-left: 0.8rem;">应收日期</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block media-list"  style="background: #ffffff;font-size: 0.8rem;margin: 0;color: #000000;">
+                    <ul style="background: #2096E9;display: none;" class="yyp-mentplan-ul yyp-mentplan-ul-one">
+                        <li class="li1">
+                            <div style="line-height: 0.8rem;
+                                font-size: 0.7rem;
+                                color: #fff;">已<br>回<br>款<br></div>
+                        </li>
+                        <li class="li2 yyp-mentplan-ul-oneLi">
+                        </li>
+                    </ul>
+                    <ul style="background: #B2B2B2;display: none;"  class="yyp-mentplan-ul yyp-mentplan-ul-two">
+                        <li class="li1">
+                            <div style="line-height: 0.8rem;
+                                font-size: 0.7rem;
+                                color: #fff;">待<br>回<br>款<br></div>
+                        </li>
+                        <li class="li2 yyp-mentplan-ul-twoLi">
+                        </li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>

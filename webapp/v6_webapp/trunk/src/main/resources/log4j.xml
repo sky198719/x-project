@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+    <!-- 控制台日志，开发用-->
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <param name="Threshold" value="INFO"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[v6_webapp][%p]%d{yyyy-MM-dd HH:mm:ss} %m - %c%n"/>
+        </layout>
+    </appender>
+
+    <!-- 每天产生一个日志文件 -->
+    <appender name="RollingFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/admin/logs/v6_webapp.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <param name="MaxFileSize" value="2MB"/>
+        <param name="MaxBackupIndex" value="100"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="[v6_webapp]%d{yyyy-MM-dd HH:mm:ss.SSS} (%t) [%-40.40c:%-3L:%-5p] -%m%n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="INFO"/>
+            <param name="LevelMax" value="ERROR"/>
+            <param name="AcceptOnMatch" value="true"/>
+        </filter>
+    </appender>
+
+
+    <!-- 异步文件日志输出，生产环境用 -->
+    <appender name="ASYNC_RollingFile" class="org.apache.log4j.AsyncAppender">
+        <param name="blocking" value="false"/>
+        <param name="bufferSize" value="8192"/>
+        <param name="LocationInfo" value="true"/>
+        <appender-ref ref="RollingFile"/>
+    </appender>
+
+    <!-- 异步控制台日志,开发环境用 -->
+    <appender name="ASYNC_CONSOLE" class="org.apache.log4j.AsyncAppender">
+        <param name="blocking" value="false"/>
+        <param name="BufferSize" value="128"/>
+        <param name="LocationInfo" value="true"/>
+        <appender-ref ref="CONSOLE"/>
+    </appender>
+
+    <!-- 应用日志：大数据准备日志记录配置　start -->
+    <appender name="log_data_file" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/home/admin/logs/webapp_out.log"/>
+		<param name="DatePattern" value="'.'yyyy-MM-dd"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[v6_webapp01]%d{yyyy-MM-dd HH:mm:ss.SSS} - %m%n"/>
+		</layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="INFO"/>
+            <param name="LevelMax" value="ERROR"/>
+            <param name="AcceptOnMatch" value="true"/>
+        </filter>
+	</appender>
+	 <!-- 异步文件日志输出 -->
+    <appender name="ASYNC_LOG_DATA_File" class="org.apache.log4j.AsyncAppender">
+        <param name="blocking" value="false"/>
+        <param name="BufferSize" value="128"/>
+        <param name="LocationInfo" value="true"/>
+        <appender-ref ref="log_data_file"/>
+    </appender>
+	<logger additivity="false" name="sysTranLog" >
+		<level value="INFO"/>
+		<appender-ref ref="ASYNC_LOG_DATA_File"/>
+	</logger>
+	<!-- 应用日志：大数据准备日志记录配置　end -->
+
+    <!-- 依赖包 -->
+    <logger name="org.springframework">
+        <level value="WARN"/>
+    </logger>
+    <logger name="org.springframework.core">
+        <level value="INFO"/>
+    </logger>
+    <logger name="org.springframework.jdbc.core">
+        <level value="INFO"/>
+    </logger>
+    <logger name="org.springframework.beans">
+        <level value="INFO"/>
+    </logger>
+    <logger name="org.springframework.beans.factory.xml">
+        <level value="FATAL"/>
+    </logger>
+    <logger name="org.springframework.beans.factory.support">
+        <level value="FATAL"/>
+    </logger>
+    <logger name="org.springframework.context">
+        <level value="INFO"/>
+    </logger>
+    <logger name="org.springframework.context.support.">
+        <level value="FATAL"/>
+    </logger>
+    <logger name="org.springframework.aop">
+        <level value="INFO"/>
+    </logger>
+    <logger name="org.springframework.transaction.annotation">
+        <level value="INFO"/>
+    </logger>
+    <logger name="org.springframework.web">
+        <level value="INFO"/>
+    </logger>
+    <logger name="org.springframework.web.context.support">
+        <level value="FATAL"/>
+    </logger>
+    <logger name="org.apache.commons">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="log4j.logger.org.hibernate">
+        <level value="INFO"/>
+    </logger>
+
+    <!-- WEB　APP LOG LEVEL -->
+    <logger name="com.xxdai">
+        <level value="INFO"/>
+    </logger>
+    <logger name="com.payment">
+        <level value="INFO"/>
+    </logger>
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder">
+        <level value="INFO"/>
+    </logger>
+    <logger name="com.fivestars.interfaces.bbs">
+        <level value="INFO"/>
+    </logger>
+
+    <!-- 生产环境日志输出到MongoDB、RollingFile -->
+    <root>
+        <priority value="WARN"/>
+        <appender-ref ref="ASYNC_CONSOLE"/>
+        <appender-ref ref="ASYNC_RollingFile"/>
+    </root>
+
+</log4j:configuration>

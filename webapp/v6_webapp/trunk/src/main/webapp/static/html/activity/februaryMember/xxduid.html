@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>二月会员日</title>
+<style>
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none; font-family:'微软雅黑';}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+input,button{outline:none;}
+input::-webkit-input-placeholder{color:#875a26;}
+.container{width:100%; position:relative;}
+.container img{display:block; border:none; width:100%;}
+#img2{width:100%; display:none;}
+
+#btn1{width:80%; top:0; left:10%; position:absolute;}
+.layer{width:100%; height:100%; top:0; left:0; position:fixed; background:#000000; opacity:0.5; display:none;}
+.warning{width:100%; height:2rem; line-height:2rem; background-color:rgba(0,0,0,0.5); top:0; left:0; position:fixed; display:none; color:#ffffff; font-size:1rem; text-align:center;}
+
+.luckyList{width:85%; height:4.8rem; top:6rem; left:7.5%; position:absolute; overflow:hidden;}
+.luckyList ul{width:100%; height:auto; top:0; left:0; position:absolute;}
+.luckyList ul li{width:100%; height:1.2rem; line-height:1.2rem; font-size:0.65rem; color:#ffffff;}
+.luckyList ul li span{width:24%; height:1.2rem; line-height:1.2rem; float:left; display:inline; overflow:hidden; text-align:center;}
+.luckyList ul li strong{width:49.5%; height:1.2rem; line-height:1.2rem; float:left; display:inline; font-weight:normal; overflow:hidden; text-align:center;}
+.luckyList ul li em{width:26.5%; height:1.2rem; line-height:1.2rem; float:left; display:inline; font-style:normal; overflow:hidden; text-align:center;}
+
+.topList{width:66%; height:3rem; top:4.7rem; left:27.5%; position:absolute;}
+.topList li{width:100%; height:1.2rem; line-height:1.2rem; font-size:0.7rem; color:#ffffff;}
+.topList li span{width:65%; height:1.2rem; line-height:1.2rem; float:left; display:inline; text-align:center;}
+.topList li strong{width:35%; height:1.2rem; line-height:1.2rem; float:left; display:inline; font-weight:normal; text-align:center;}
+
+.minelist{width:43%; height:1rem; line-height:1rem; font-size:0.8rem; text-align:center; top:8.5rem; left:5.3rem; position:absolute; color:#ffffff;border-radius: 4px;background: #c02521;display: none;}
+
+.proList{width:100%; height:100%; top:0; left:0; position:absolute;}
+.proList li{position:absolute;}
+.proList #pro1{width:35%; top:4.5rem; left:14%; position:absolute;}
+.proList #pro2{width:35%; top:4.5rem; right:14%; position:absolute;}
+.proList #pro3{width:30%; top:13.5rem; left:4%; position:absolute;}
+.proList #pro4{width:30%; top:13.5rem; left:35%; position:absolute;}
+.proList #pro5{width:30%; top:13.5rem; left:66%; position:absolute;}
+.proList li img{width:100%; top:0; left:0; position:absolute;}
+.proList li strong{color:#ffffff; position:absolute;}
+.proList li strong span{font-weight:normal;}
+.proList #pro1 strong{font-size:4.5rem; top:1.2rem; left:16%;}
+.proList #pro1 strong span{font-size:0.8rem;}
+.proList #pro2 strong{font-size:4rem; top:1.2rem; left:18%;}
+.proList #pro2 strong span{font-size:1rem;}
+.proList #pro3 strong{font-size:4rem; top:1.2rem; left:18%;}
+.proList #pro3 strong span{font-size:1rem;}
+.proList #pro4 strong{font-size:4rem; top:1.2rem; left:18%;}
+.proList #pro4 strong span{font-size:1rem;}
+.proList #pro5 strong{font-size:3.8rem; top:1.2rem; left:5%; letter-spacing:-0.4rem;}
+.proList #pro5 strong span{font-size:1rem; margin-left:0.4rem;}
+
+.info{width:90%; top:1rem; left:5%; position:absolute; display:none; z-index:100;}
+.info img{width:100%;}
+.info .close{width:2rem; height:2rem; top:0; right:0; position:absolute;}
+
+.alerts{width:90%; top:0; left:5%; position:fixed; display:none;}
+.alerts .text{width:100%; text-align:center; margin-top:17.5rem;}
+.alerts .text span{width:100%; line-height:1.5rem; font-size:1.2rem; color:#71300c; font-family:'微软雅黑'; font-weight:bold; display:block;}
+.alerts .text span b{font-size:1.4rem;}
+.alerts .text strong{width:100%; line-height:2rem; font-size:1.2rem; color:#ffffff; font-family:'微软雅黑'; font-weight:normal; display:block;}
+.alerts .clicks{width:100%; height:3rem; text-align:center;}
+.alerts .clicks img{display:inline; border:none; margin:0; height:3rem;}
+#login{background:url(img/login.png) 0 0 no-repeat; background-size:100% 100%; height:32rem;}
+#login .loginarea{width:90%; height:12.3rem; margin:15rem auto 0; border-radius:10px;}
+#login .loginarea ul{width:90%; margin:0 auto; padding-top:1rem;}
+#login .loginarea ul li{width:100%; height:1.6rem; line-height:1.6rem; box-sizing:border-box; border-radius:2px; padding:0 7%; margin-bottom:0.5rem; position:relative;}
+#login .loginarea ul li label{display:none; color:#ffffff;}
+#login .loginarea ul li input{width:100%; height:1.6rem; line-height:1.6rem; color:#ffffff; font-size:0.8rem; background:#ee4e48; border:none; box-sizing:border-box; padding:0 5%;}
+input::-webkit-input-placeholder {color:#ffffff;} 
+input:-moz-placeholder {color:#ffffff;} 
+input::-moz-placeholder {color:#ffffff;} 
+input:-ms-input-placeholder {color:#ffffff;} 
+#login .loginarea ul #loginImageCode input{width:60%; float:left; display:inline;}
+#login .loginarea ul #loginImageCode img{width:4.5rem; height:1.6rem; float:left; display:inline; margin-left:4%;}
+#login .loginarea .tip{width:85%; margin:0 auto; height:1rem; line-height:1rem; font-size:0.8rem; color:#ffffff; text-align:center;}
+#login .loginarea button{width:80%; margin:0 auto; display:block; border:none; background:none; margin-top:0.3rem;}
+#login .loginarea button img{width:100%; display:block;}
+#login .loginarea .bip{width:100%; height:1rem; line-height:1rem; font-size:0.8rem; color:#ffffff; font-family:'微软雅黑'; text-align:center;}
+#login .loginarea .bip a{font-size:0.8rem; color:#ffffff;}
+#reward{background:url(img/reward.png) 0 0 no-repeat; background-size:100% 100%; height:27rem;}
+#rewardlist{background:url(img/rewardlist.png) 0 0 no-repeat; background-size:100% 100%; height:28rem;}
+#rewardlist ul{width:70%; margin:16.5rem auto 0;}
+#rewardlist ul li{width:100%; height:1.2rem; line-height:1.2rem; color:#ffffff;}
+#rewardlist ul li span{width:40%; float:left; display:inline; font-size:0.8rem; line-height:1.2rem; height:1.2rem; overflow:hidden;}
+#rewardlist ul li em{width:60%; float:left; display:inline; font-size:0.8rem; line-height:1.2rem; font-style:normal;}
+#rewardlist .pages{width:100%; height:1rem; font-size:0.8rem; color:#ffffff; line-height:1rem; text-align:center; margin-top:0.5rem;}
+#rewardlist .pages span{margin:0 5%;}
+#playtime{width:40%; bottom:0.5rem; left:30%; height:1.5rem; line-height:1.5rem; background:#ba1716; border-radius:3px; text-align:center; font-size:0.8rem; color:#ffffff; position:absolute;}
+#playtime b{font-weight:normal;}
+#noplaytime{background:url(img/gameover.png) 0 0 no-repeat; background-size:100% 100%; height:27rem; display:none;}
+#noplaytime img{height:3.5rem; margin-top:1rem;}
+
+.casebox{width:100%; height:3rem; bottom:0; left:0; position:fixed; background-color:rgba(0,0,0,0.5);}
+.casebox ul{width:100%; height:2.4rem; margin-top:0.3rem;}
+.casebox ul li{width:30%; margin:0 1.5%; float:left; display:inline; position:relative; height:2.4rem;}
+.casebox ul li img{width:100%; height:100%;}
+</style>
+</head>
+
+<body>
+<div class="container">
+	<img src="img/bg1.jpg" />
+</div>
+<div class="container">
+	<img src="img/bg2.jpg" />
+</div>
+<div class="container" id="bg3">
+	<img src="img/bg3.jpg" id="img1" />
+	<img src="img/bg3_1.jpg" id="img2" />
+	<div id="playtime" style="display: none;">还有<b></b>次机会</div>
+</div>
+<div class="container">
+	<img src="img/bg4.jpg" />
+	<img src="img/btn1.png" id="btn1" />
+</div>
+<div class="container">
+	<img src="img/bg5.jpg" />
+</div>
+<div class="container">
+	<img src="img/bg6.png" />
+	<div class="luckyList">
+		<ul>
+
+		</ul>
+	</div>
+</div>
+<div class="container">
+	<img src="img/bg7.jpg" />
+	<ul class="topList">
+
+	</ul>
+	<div class="minelist"></div>
+</div>
+<div class="container" id="bg8">
+	<img src="img/bg8.jpg" />
+	<ul class="proList">
+		<li id="pro1"><a href="javascript:void(0);"><img src="img/pro1.png" /><strong></strong></a></li>
+		<li id="pro2" value="1"><a href="javascript:void(0);"><img src="img/pro2.png" /><strong></strong></a></li>
+		<li id="pro3" value="3"><a href="javascript:void(0);"><img src="img/pro3.png" /><strong></strong></a></li>
+		<li id="pro4" value="6"><a href="javascript:void(0);"><img src="img/pro4.png" /><strong></strong></a></li>
+		<li id="pro5" value="12"><a href="javascript:void(0);"><img src="img/pro5.png" /><strong></strong></a></li>
+	</ul>
+</div>
+<div class="container" style="padding-bottom:3rem;">
+	<img src="img/bg9.jpg" id="bg9" />
+</div>
+<div class="casebox">
+	<ul>
+		<li><img src="img/btn9.png" id="btn9" /></li>
+		<li><img src="img/btn2.png" id="btn2" /></li>
+		<li><img src="img/btn10.png" id="btn10" /></li>
+	</ul>
+</div>
+<div class="info">
+	<img src="img/info.png" />
+</div>
+<div class="layer"></div>
+<div class="warning"></div>
+<div class="alerts" id="reward">
+	<div class="text">
+		<strong></strong>
+	</div>
+	<div class="clicks">
+		<img src="img/btn5.png" id="btn5" />
+		<img src="img/btn6.png" id="btn6" />
+	</div>
+</div>
+<div class="alerts" id="noplaytime">
+	<div class="text">
+		
+	</div>
+	<div class="clicks">
+		<img src="img/btn8.png" id="btn8" />
+	</div>
+</div>
+<div class="alerts" id="rewardlist">
+	<ul>
+
+	</ul>
+	<div class="pages">
+		<span id="last">上一页</span>
+		<span id="next">下一页</span>
+	</div>
+    <div style="height: 50px;width: 50px;position: absolute;bottom: 10px;
+        margin-left: 8rem;" id="rewardlist_close"></div>
+</div>
+
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.md5.js"></script>
+<script src="js/default.js"></script>
+</body>
+</html>
+
+<script>
+var str = window.location.href;
+var index2 = str.indexOf('uid=');
+var index3 = str.indexOf('&sign=');
+var result = str.substring(index2 + 4,index3);
+var result2 = str.substr(index3 + 6,str.length);
+
+// 通用-弹出弹框
+function alertBox(ctr,obj){
+	ctr.click(function(){
+		$('.layer').fadeIn(0);
+		obj.fadeIn(0);
+	});
+}
+
+// 通用-报错信息
+var timer;
+function warnBox(msg){
+	clearTimeout(timer);
+	$('.warning').empty();
+	$('.warning').html(msg);
+	$('.warning').fadeIn(0);
+	timer = setTimeout(function(){
+		$('.warning').fadeOut(0);
+	},3000);
+}
+
+// 跳转锚点
+$('#btn8').click(function(){
+	$('#noplaytime').fadeOut(0);
+	$('.layer').fadeOut(0);
+	window.location.href = '#bg8';
+});
+$('#btn10').click(function(){
+	window.location.href = '#bg3';
+});
+
+$('#reward').click(function(){
+    $("#reward").fadeOut(0);
+    $('.layer').fadeOut(0);
+});
+$('#noplaytime').click(function(){
+    $("#noplaytime").fadeOut(0);
+    $('.layer').fadeOut(0);
+});
+$('#rewardlist_close').click(function(){
+    $("#rewardlist").fadeOut(0);
+    $('.layer').fadeOut(0);
+});
+
+$('.info').click(function(){
+    $(".info").fadeOut(0);
+    $('.layer').fadeOut(0);
+});
+
+// 获取图片验证码
+$.ajax({
+    url:link + 'randCode/getImageCodeUrl.do' + linkextra,
+    type:'get',
+    dataType:'jsonp',
+    jsonp:'jsoncallback',
+    success:function(data){
+    	ran = Math.random();
+        imgLink2 = data.verifcodeUrl;
+        $('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+    },
+    error:function(){
+        warnBox('网络异常，请重试！');
+    }
+});
+
+// 刷新登录验证码
+var ran = Math.random();
+$('#codeUrl2').click(function(){
+	ran = Math.random();
+	$('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+});
+
+// 打开登录弹窗
+var imgLink2 = '';
+function loginBox(ctr){
+	ctr.click(function(){
+		$.each($('.alerts'),function(){
+			$(this).fadeOut(0);
+		});
+		window.location.href = 'xxd://login';
+		$.ajax({
+	        url:link + 'randCode/getImageCodeUrl.do' + linkextra,
+	        type:'get',
+	        dataType:'jsonp',
+	        jsonp:'jsoncallback',
+	        success:function(data){
+	        	ran = Math.random();
+	            imgLink2 = data.verifcodeUrl;
+	            $('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+	        },
+	        error:function(){
+	            warnBox('网络异常，请重试！');
+	        }
+	    });
+	});
+}
+
+// 中奖名单
+$.ajax({
+	url:link + 'memberDay922/luckyList.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:"jsoncallback",
+	success:function(data){
+		var x = 0;
+		$('.luckyList ul').html('');
+		$.each(data,function(index,item){
+			if(index % 2 == 0) {
+                $('.luckyList ul').append('<li style="background: #c02521;border-radius: 3px;"><span>' + item.user + '</span><strong>' + item.time + '</strong><em>' + item.reward + '</em></li>');
+            } else {
+                $('.luckyList ul').append('<li><span>' + item.user + '</span><strong>' + item.time + '</strong><em>' + item.reward + '</em></li>');
+            }
+		});
+		if($('.luckyList').find('ul').find('li').length <= 5){
+			$('.luckyList').find('ul').html($('.luckyList').find('ul').html());
+		}
+		if($('.luckyList').find('ul').find('li').length > 5){
+			$('.luckyList').find('ul').html($('.luckyList').find('ul').html() + $('.luckyList').find('ul').html());
+			setInterval(function(){
+				x++;
+				$('.luckyList').find('ul').animate({'top':-parseFloat(1.199*parseInt(x)).toFixed(2) + 'rem'},500);
+				if(x == $('.luckyList').find('ul').find('li').length/2){
+					x = 0;
+					$('.luckyList').find('ul').animate({'top':-parseFloat(1.199*parseInt(x)).toFixed(2) + 'rem'},0);
+				}
+			},3000);
+		}
+	},
+	error:function(){
+		warnBox('网络异常请重试！');
+	}
+});
+
+// 投资排名
+$.ajax({
+	url:link + 'memberDay922/topList.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:"jsoncallback",
+	success:function(data){
+		$('.topList').html('');
+		$.each(data,function(index,item){
+			$('.topList').append('<li><span>' + item.user + '</span><strong>' + item.amount + '</strong></li>')	
+		});
+	},
+	error:function(){
+		warnBox('网络异常请重试！');
+	}
+});
+
+// 日日盈利率
+/*
+$.ajax({
+	url:link + 'fund/selectFundInfo.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:'jsonpCallback',
+	success:function(data){
+		$('.proList').find('li').eq(0).find('strong').html(data.fundApr.apr + data.fundApr.floatApr + '<span>%年化收益率</span>');
+	},
+	error:function(){
+		warnBox('网络异常请重试！');
+	}
+}); */
+
+// 新元宝利率
+/*
+var closeterms;
+$.each($('.proList').find('li').not(':first'),function(){
+	var _this = $(this);
+	closeterms = $(this).attr('value');
+	$.ajax({
+		url:link + 'xplan/getLatestSchemeId.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsonpCallback',
+		data:{closeTerm:closeterms},
+		success:function(data){
+			if(data.schemeInfo != null && data.schemeInfo != ""){
+				_this.find('strong').html(data.schemeInfo.MINAPR + '<span>%</span>');
+			}
+		},
+		error:function(){
+			warnBox('网络异常请重试！');
+		}
+	});
+});    */
+
+// 我的奖品列表
+var pageid = 1;
+var pageall = 0;
+function myRewad(){
+	$.ajax({
+		url:link + 'memberDay922/queryUserPrizeRecs.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:"jsoncallback",
+		data:{currentPage:pageid,pageSize:4,uid:result,sign:result2},
+		success:function(data){
+			if(data.resultCode != 0){
+				// warnBox(data.msg);
+			}else{
+				pageall = data.pageInfo.totalpage;
+				$('#rewardlist').find('ul').empty();
+				$.each(data.data,function(index,item){
+					$('#rewardlist').find('ul').append('<li><span>' + item.time + '</span><em>' + item.reward + '</em></li>');
+				});
+			}
+		},
+		error:function(){
+			warnBox('网络异常请重试！');
+		}
+	});
+}
+
+// 我的奖品上一页
+$('#last').click(function(){
+	pageid--;
+	if(pageid <= 0){
+		pageid = 1;
+		warnBox('已经是第一页！');
+	}
+	myRewad();
+});
+
+// 我的奖品下一页
+$('#next').click(function(){
+	pageid++;
+	if(parseInt(pageid) > parseInt(pageall)){
+		pageid = pageall;
+		warnBox('已经是最后一页');
+	}
+	myRewad();
+});
+
+// 打开规则
+$('#btn9').click(function(){
+	$('.layer').fadeIn(0);
+	$('.info').fadeIn(0);
+	$('body').scrollTop(0);
+	$('html').scrollTop(0);
+});
+
+// 关闭规则
+$('.layer').click(function(){
+	$('.layer').fadeOut(0);
+	$('.alerts').fadeOut(0);
+	$('.info').fadeOut(0);
+});
+
+// 统一弹窗关闭
+$('.close').click(function(){
+	$('.layer').fadeOut(0);
+	$('.alerts').fadeOut(0);
+	$('.info').fadeOut(0);
+	$('#img1').css('display','block');
+	$('#img2').css('display','none');
+});
+
+$('#btn7').click(function(){
+	$('.alerts').fadeOut(0);
+	$('.layer').fadeOut(0);
+	window.location.href = '#bg3';
+});
+$('#btn6').click(function(){
+	$('.alerts').fadeOut(0);
+	$('.layer').fadeOut(0);
+	gameStart();
+});
+$('#btn5').click(function(){
+	$('.alerts').fadeOut(0);
+	$('.layer').fadeOut(0);
+});
+$('#btn8').click(function(){
+	$('.alerts').fadeOut(0);
+	$('.layer').fadeOut(0);
+	window.location.href = '#bg8';
+});
+
+// 初始化未登录
+function unLogin(){
+	$.each($('.proList').find('li').find('a'),function(){
+		$(this).attr('href','javascript:void(0);');
+		$(this).click(function(){
+			window.location.href = 'xxd://login';
+		});
+	});
+	$('.minelist').html('');
+	$('#noplaytime').fadeOut(0);
+	$('#btn1').click(function(){
+		window.location.href = 'xxd://login';
+	});
+	$('#btn2').click(function(){
+		window.location.href = 'xxd://login';
+	});
+}
+
+// 初始化已登录
+var clickFlag = 0;
+function login(){
+	$.ajax({
+		url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		data:{uid:result,sign:result2},
+		success:function(data){
+			//$('#noplaytime').fadeIn(0);
+			if(data.resultCode == 2){
+				$('#playtime').find('b').html('0');
+                $('#playtime').show();
+                $(".minelist").show();
+			}else{
+				$('#playtime').find('b').html(data.data.playtime);
+                $('#playtime').show();
+                $(".minelist").show();
+			}
+			$('.minelist').html('我的年化：' + data.data.userXYBAmount + '元');
+			myRewad();
+			$('.proList').find('li').eq(0).find('a').attr('href','xxd://list/pdd?selID=1&pdName=ririying');
+			$.each($('.proList').find('li').not(':first'),function(){
+				var _this = $(this);
+				closeterms = $(this).attr('value');
+				$.ajax({
+					url:link + 'xplan/getLatestSchemeId.do' + linkextra,
+					type:'get',
+					dataType:'jsonp',
+					jsonp:'jsonpCallback',
+					data:{closeTerm:closeterms},
+					success:function(data){
+						if(data.schemeInfo != null && data.schemeInfo != ""){
+							_this.find('a').attr('href','xxd://list/pdd?selID=1&pdName=xinyuanbao&xybID=' + data.schemeInfo.SCHEMEID);
+						}
+					},
+					error:function(){
+						warnBox('网络异常请重试！');
+					}
+				});
+			});
+			$('#btn1').click(function(){
+				if(clickFlag == 0){
+					clickFlag = 1;
+					gameStart();
+				}else{
+					// warnBox('请等待本次抽奖结果！');
+				}
+			});
+			alertBox($('#btn2'),$('#rewardlist'));
+		},
+		error:function(){
+			warnBox('网络异常请重试！');
+		}
+	});
+}
+
+// 判断是否登录
+function checkLogin(){
+	$.ajax({
+		url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		data:{uid:result,sign:result2},
+		success:function(data){
+			if(data.resultCode != 0){
+				if(data.resultCode == 1){
+					unLogin();
+				}else if(data.msg == '获取签名失败'){
+					unLogin();
+				}else if(data.msg == '签名非法'){
+					unLogin();
+				}else{
+					login();
+				}
+			}else{
+				login();
+			}
+		},
+		error:function(){
+			warnBox('网络异常请重试！');
+		}
+	});
+}
+
+// 判断活动时间
+function activityTime(){
+	$.ajax({
+		url:link + 'activity/checkActivity.do' + linkextra,
+		type:'get',
+		data:{code:'February-vip-activity'},
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				warnBox(data.msg);
+				$('#btn1').click(function(){
+					warnBox(data.msg);
+				});
+				$('#btn2').click(function(){
+					warnBox(data.msg);
+				});
+				$.each($('.proList').find('li'),function(){
+					$(this).find('a').click(function(){
+						warnBox(data.msg);
+					});
+				});
+			}else{
+				checkLogin();
+			}
+		},
+		error:function(){
+			warnBox('网络异常请重试！');
+		}
+	});
+}
+
+// 砸蛋结束
+function gameEnd(){
+	$.ajax({
+		url:link + 'memberDay922/playEnd.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		data:{uid:result,sign:result2},
+		success:function(data){
+			if(data.resultCode != 0){
+				warnBox(data.msg);
+				$('#img1').css('display','block');
+				$('#img2').css('display','none');
+				clickFlag = 0;
+			}else{
+				$('#playtime').find('b').html(data.data[0].playtime);
+				setTimeout(function(){
+					$('.layer').fadeIn(0);
+					$('#reward').fadeIn(0);
+					$('#img1').css('display','block');
+					$('#img2').css('display','none');
+					clickFlag = 0;
+					myRewad();
+					login();
+				},500);
+			}
+		},
+		error:function(){
+			warnBox('网络异常请重试！');
+		}
+	});
+}
+
+// 砸蛋开始
+function gameStart(){
+	$.ajax({
+		url:link + 'memberDay922/playStart.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		data:{uid:result,sign:result2},
+		success:function(data){
+			if(data.resultCode != 0){
+				if(data.resultCode == 1){
+					unLogin();
+				}else if(data.msg == '获取签名失败'){
+					unLogin();
+				}else if(data.resultCode == 10){
+					$('#noplaytime').fadeIn(0);
+					$('.layer').fadeIn(0);
+					clickFlag = 0;
+				}
+			}else{
+				$('#reward').find('.text').find('strong').html(data.data[0].itemName);
+				$('#img1').css('display','none');
+				$('#img2').css('display','block');
+				gameEnd();
+			}
+		},
+		error:function(){
+			warnBox('网络异常请重试！');
+		}
+	});
+}
+
+activityTime();
+</script>

@@ -1,0 +1,43 @@
+/*
+ * 模块：字号
+ * 模块类型：b(基础模块)
+ * 精度：9 +
+ * 分级：3 +
+ * 适配：桌面 | 平析 | 移动
+ * 兼容：
+ * 版本：v0.0.1
+ * 备注：s->Small 小，m->Middle 中，l->Large 大；
+ */
+
+$sz : 14px;
+$rank : 'ss', 'sm', 'sl', 'ms,h6', 'mm,h5', 'ml,h4', 'ls,h3', 'lm,h2', 'll,h1';
+%fw300 { font-weight : 300; }
+
+html[xui][size="m"] { font-size : $sz; }
+
+@each $i in $rank {
+  @if index($rank,$i) < 4 {
+    [xui] .#{$i} {
+      font-size : $sz - (8-(index($rank,$i)*2));
+      @debug $sz - (8-(index($rank,$i)*2));
+    }
+  } @else {
+    [xui] .#{$i} {
+      font-size : $sz + (index($rank,$i)-4)*2;
+      @debug $sz + (index($rank,$i)-4)*2;
+    }
+  }
+}
+
+//为兼容ie8以下转化为px
+@for $i from 1 through 5 {
+  [xui] .s#{$i}e { font-size : round($sz*$i); @extend %fw300; }
+  @debug round($sz*$i);
+  [xui] .s#{$i}e5 { font-size : round($sz*($i + .5)); @extend %fw300; }
+  @debug round($sz*($i + .5));
+}
+
+//粗细
+@for $i from 1 through 7 {
+  [xui] .fw#{$i} { font-weight : $i * 100 }
+}

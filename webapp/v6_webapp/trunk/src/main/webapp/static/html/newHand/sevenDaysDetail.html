@@ -1,0 +1,152 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">
+            七天大胜
+        </div>
+        <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through toolbar-through">
+    <div data-page="sevenDaysDetail" class="page" directory="newHand">
+        <div class="page-content pull-to-refresh-content infinite-scroll ">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="content-block-inner mt10 pr0">
+                <div class="row no-gutter" style="margin: 10px 0 10px 0;">
+                    <div style="width:50%">
+                        <div class="sevenDays-corner">
+                            <span style="position: absolute;margin-top: 10px;margin-left: 80px;display: none;" class="newhandActivity">
+                                    <img src="static/img/xxd/nh_detail_add_apr.png" height="20"/>
+                                </span>
+                            <div style="padding-right: 30px;"><span class="font40" id="7d_apr">0</span>%<span
+                                    name="7d_floatApr"></span></div>
+                            <div style="padding-right: 25px;">历史年化收益</div>
+                          </div>
+                    </div>
+                    <div style="width:50%">
+                        <div class="item-content" style="padding:0 0 0 5%;min-width: 150px;">
+                            <div class="item-title-row displayNone singlesdayDetails">
+                               <div class="item-title">
+                                   <img src="static/img/xxd/1111day.png" height="20px"/>
+                               </div>
+                            </div>
+                            <div class="item-title-row" class="sd-pd2">
+                                <div class="item-title font-666">起投金额：<span id="7d_leastAmount">0.00</span>元</div>
+                            </div>
+                            <div class="item-title-row" class="sd-pd2">
+                                <div class="item-title font-666">锁定期限：<span id="7d_closeTerm">0</span>天</div>
+                            </div>
+                            <div class="item-title-row" class="sd-pd2" style="display: none;">
+                                <div class="item-title font-666">适用：质保服务专款计划</div>
+                            </div>
+                            <div class="item-title-row" class="sd-pd2">
+                                <div class="item-title font-666"><span class="font-red">限购1次</span></div>
+                            </div>
+                            <div class="item-title-row">
+                                风险提示：<a id="fenxiantishi" href="#">《风险提示函》</a>
+                            </div>
+                            <div class="item-title-row">
+                                债权列表：<a id="tradeList" href="#">点击查看</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block-inner mt10 pr0" style="min-height: 400px;">
+                <ul class="nav nav-tabs" style="margin-top: 0px;">
+                    <li id="introduce" class="active"><a style="background: transparent;font-size: 0.8rem;"> 产品介绍</a></li>
+                    <li id="qa"><a style="background: transparent;font-size: 0.8rem;"> 常见问题</a></li>
+                    <li id="trade-record"><a style="background: transparent;font-size: 0.8rem;"> 加入记录<span name="7d_total" style="font-size: 10px;"></span></a></li>
+                </ul>
+                <!-- Tab 1, 默认激活 -->
+                <div id="introduce-c" class="list-block font-dark">
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">产品描述及购买说明</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">七天大胜是新新贷推出的<span name="7d_closeTerm">0</span>天期体验型理财计划，每日24小时开放投资，随时可投。该产品<span id="7d_leastAmount1">0.00</span>元起投，投资上限<span id="7d_mostAmount">0.00</span>元，每人限投一次。该产品一旦投资成功，不支持提前赎回。该产品债权对接平台的优质短期借款标的。</div>
+                         </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">收益如何计算</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">本产品投资成功后当日开始计息，新用户（即尚未在新新贷平台投资过的用户）投资历史年化收益率为<span name="nh_AddApr">0</span>%（产品历史年化收益率<span name="nh_apr"></span>%+平台额外贴息<span name="7d_floatApr"></span>），老用户投资历史年化收益率为<span name="nh_apr">0</span>%。</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">收益=投资金额×<span name="nh_AddApr">0</span>%(或<span name="nh_apr">0</span>%)÷360×<span name="7d_closeTerm">0</span>。</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">如何回款</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">成功投资本产品之日起<span name="7d_closeTerm">0</span>天（含购买当日及节假日）后，系统自动将本金加利息返回到您的新新贷账户。</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Tab 2 -->
+                <div id="qa-c" class="list-block font-dark" style="display: none;">
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">1.我注册你们平台有段时间了，还没有投资过，这个产品我可以投资吗？</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">当然可以，七天大胜是新老用户都可以投资的体验性理财计划，每人限投1次。</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">2.我之前投资过你们平台的其他产品，但是没有投资过七天大胜，我现在可以投资七天大胜吗？</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">可以的，为回馈老用户，七天大胜现在向老用户也开放体验，只要之前没有投资过七天大胜，每人都有一次体验机会，只限1次。</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">3.收益什么时候到账？</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">成功投资本产品之日起<span name="7d_closeTerm">0</span>天（含购买当日及节假日）后，例如您在11月1日投资，11月8日就可以收到本金加收益。</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">4.我投资了100元，还可以再投吗？</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">不可以了，七天大胜只能投资一次。</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">5.我11月1日投资了这个产品，11月4日想提前退出了，怎么退出？</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">您的本金加收益将会在11月8日自动退出，该产品一旦购买，不支持提前赎回。</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Tab 3 -->
+                <div id="trade-record-c" style="display: none;">
+                    <div class="content-block">
+                        <table class="bid-his-table">
+                            <thead>
+                            <tr>
+                                <th style="width: 33%">投资人</th>
+                                <th style="width: 33%">加入金额</th>
+                                <th style="width: 33%">加入时间</th>
+                            </tr>
+                            </thead>
+                            <tbody id="sevenDaysList"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="fenxiantishi-c" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="toolbar no-border" style="height: 55px;">
+            <div class="sevenDays-button" name="7d_join"> 立即抢购</div>
+            <div style="display: none;">
+                <div style="width:100%;text-align: center;margin: auto;color: #fff;background-color: #f9ac3a;font-size: 15px;height: 45px;line-height: 45px;">七天大胜仅限购1次，更多其他热门产品等着你</div>
+                <div class="sevenDays-button" name="7d_goBuy" style="height: 55px;">去选购</div>
+            </div>
+
+        </div>
+        <input type="hidden" id="v_deployid" value=""/>
+        <input type="hidden" id="currentPage" value="1"/>
+        <input type="hidden" id="totalPages" value="1"/>
+    </div>
+</div>

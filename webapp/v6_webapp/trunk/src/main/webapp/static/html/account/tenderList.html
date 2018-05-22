@@ -1,0 +1,34 @@
+{{#each list}}
+<div class="list-block accordion-list inset">
+    <ul >
+        <li class="accordion-item">
+            <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                    <div class="item-title"><h5>{{tenderTitle}}</h5></div>
+                </div>
+            </a>
+            <div class="accordion-item-content">
+                <div class="content-block font-grey">
+                    <h6 class="mt10">投资时间：{{tenderAddtime}} {{#if isShow}}<a class="borrowHistoryContract" data-borrowId="{{borrowId}}"  style="float: right;">查看合同</a>{{/if}}</h6>
+                    <h6 class="mt5">年化利率：{{borrowApr}}%</h6>
+                    <h6 class="mt5">待收本息：{{tenderRepaymentAccount}} 元</h6>
+                </div>
+            </div>
+        </li>
+        <li class="accordion-item">
+            <div class="item-inner pl15">
+                <div class="item-title-row width100">
+                    <div class="item-title left font-grey"><h6>投资：{{tenderTotalAmount}} 元</h6></div>
+                    <div class="item-after right">
+                        {{#if statusDouble}}
+                            <h6 class="font-green" >{{status}}</h6>
+                        {{else}}
+                            <h6 class="font-grey" >{{status}}</h6>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{{/each}}

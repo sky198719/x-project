@@ -1,0 +1,67 @@
+@border-color-default:#333;
+@border-color-active:#33ffff;
+@media screen and (max-width: 1366px) {
+  .section {
+    img {
+      width: 70%;
+    }
+  }
+  //.bkgL{
+  //  img{
+  //    width: 40%;
+  //  }
+  //}
+}
+body{
+  //background: url("img/reportJan/bkg.jpg") 0 0 no-repeat;
+}
+.section {
+  text-align: center;
+}
+.bkg{
+  background: url("img/reportJan/bkg.png") center/100% 100% no-repeat;
+}
+.whiteBg{
+  background: #f7f9ff;
+}
+.blueBg{
+  background: #718eff;
+}
+.whiteXBg{
+  background: url("img/reportJan/whiteXBg.png") center/100% 100% no-repeat;
+}
+.blueXBg{
+  background: url("img/reportJan/blueXBg.png") center/100% 100% no-repeat;
+}
+.bkgEnd{
+  background: url("img/reportJan/bkgEnd.png") center/100% 100% no-repeat;
+}
+#menu li {
+  display: block;
+  width: 3px;
+  height: 9px;
+  background: #3f67f0;
+  margin-bottom: 20px;
+}
+#menu li.active,#menu li:hover{
+  background: #00d4bf;
+}
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 3px;
+  height: 9px;
+  text-decoration: none;
+  &:focus{outline:none;}
+}
+
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 516px;
+  margin-top: -200px;
+  z-index: 70;
+}

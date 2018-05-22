@@ -1,0 +1,162 @@
+/*
+ * 模块：提示框
+ * 模块类型：b(基础模块)
+ * 精度：9 +
+ * 分级：3 +
+ * 适配：平板 | 移动
+ * 兼容：
+ * 版本：v0.0.1
+ * 备注：
+ * dim (true 开 | false 关)；是否开启暗层（默认关闭）
+ * pos (tl 上左 | tc 上中 | tr 上右 | cl 中左 |cc 中中 | cr 中右 | bl 下左 | bc 下中 | br 下右)；提示框位置（默认中中）
+ * time (number 显示时间) 设计一个数字（默认3秒）
+ * icon (success 成功 | warning 警告 | error 错误) 非必需（默认无图标）
+ * msg (提示内容)
+ */
+
+
+.prompt-o-hide{
+  overflow: hidden;
+}
+.xui-prompt{
+  display: inline-table;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+}
+.xui-prompt>*{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+//暗层（默认开启）
+.xui-prompt .xui-prompt-dim,
+  //暗层开启
+.xui-prompt[dim="true"] .xui-prompt-dim{
+  background: rgba(0,0,0,.2);
+}
+//暗层关闭
+.xui-prompt[dim="false"] .xui-prompt-dim{
+  background: rgba(0,0,0,0);
+}
+
+//弹出层对齐位置
+.xui-prompt[pos="tl"]>*{vertical-align: top;text-align: left  }
+.xui-prompt[pos="tc"]>*{vertical-align: top;text-align: center}
+.xui-prompt[pos="tr"]>*{vertical-align: top;text-align: right }
+
+.xui-prompt[pos="bl"]>*{vertical-align: bottom;text-align: left  }
+.xui-prompt[pos="bc"]>*{vertical-align: bottom;text-align: center}
+.xui-prompt[pos="br"]>*{vertical-align: bottom;text-align: right }
+
+.xui-prompt[pos="cl"]>*{vertical-align: center;text-align: left  }
+.xui-prompt[pos="cc"]>*{vertical-align: center;text-align: center}
+.xui-prompt[pos="cr"]>*{vertical-align: center;text-align: right }
+
+.xui-prompt-content{
+  display: inline-block;
+  border-radius: 5px;
+  background: rgba(0,0,0,.8);
+  color:#fff;
+  padding:1em;
+  margin:.5em;
+  max-width: 80%;
+}
+.prompt-icon{
+  text-align: center;
+  padding-bottom: 5px;
+}
+.prompt-icon > *{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border:2px solid #fff;
+  text-align: center;
+  margin:5px 0;
+  position: relative;
+}
+@keyframes rotate0-360 {
+  0% {
+    transform  : rotate(0deg);
+  }
+
+  100% {
+    transform  : rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate0-360 {
+  0% {
+    -webkit-transform  : rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform  : rotate(360deg);
+  }
+}
+.prompt-icon-loading{
+  animation: rotate0-360 1s linear infinite;
+  -webkit-animation: rotate0-360 1s linear infinite;
+}
+.prompt-icon-loading:before{
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  left: 1px;
+  top:1px;
+  background: #fff;
+}
+
+.prompt-icon-success:before,
+.prompt-icon-success:after{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-radius: 20%;
+  height: 2px;
+  background: #fff;
+}
+.prompt-icon-success:before{
+  width: 19px;
+  transform: rotate(-52deg);
+  -webkit-transform: rotate(-52deg);
+  bottom: 16px;
+  left: 13px;
+}
+.prompt-icon-success:after{
+  width: 12px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  bottom: 13px;
+  left: 7px;
+}
+
+.prompt-icon-warning:before{
+  content: '!';
+  display: inline;
+  line-height: 36px;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.prompt-icon-error:before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  top: 6px;
+  left: 6px;
+  background: linear-gradient(45deg,transparent 46%,#fff 47%,#fff 53%,transparent 54%),linear-gradient(-45deg,transparent 46%,#fff 47%,#fff 53%,transparent 54%);
+}

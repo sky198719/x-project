@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>浪漫情人节 获取丘比特之心</title>
+<style>
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none; font-family:'微软雅黑';}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+input{outline:none;}
+button{outline:none;}
+.container{width:100%; position:relative;}
+.container img{display:block; border:none; width:100%;}
+.tip{width:100%; height:1.5rem; line-height:1.5rem; background-color:rgba(0,0,0,0.5); text-align:center; font-size:0.8rem; color:#ffffff; top:0; left:0; position:fixed; z-index:101; display:none;}
+.layer{width:100%; height:100%; top:0; left:0; position:fixed; background-color:rgba(0,0,0,0.5); z-index:5; display:none;}
+.close{width:100%; height:3rem; display:block;}
+
+#register{width:80%; height:22rem; top:50%; left:10%; margin-top:-11rem; position:fixed; z-index:100; background:url(img/register.png) 0 0 no-repeat; background-size:100% 100%; display:none;}
+#register ul{width:85%; margin:0 auto; padding-top:3.2rem;}
+#register ul li{width:100%; height:2rem; line-height:2rem; background:#ffffff; border-radius:5px; margin-bottom:0.3rem;}
+#register ul li label{display:none;}
+#register ul li input{border:none; line-height:2rem; height:2rem; font-size:0.8rem; background:none; padding:0 5%; width:90%; color:#666666; float:left; display:inline;}
+#register ul #rcode input{width:50%;}
+#register ul #mcode input{width:50%;}
+#register ul #sli2{height:0.8rem; padding:0.2rem 0; background:none; line-height:0.8rem; margin-bottom:0;}
+#register ul #rbtn{height:2rem; background:none; margin-bottom:0;}
+#register ul li img{width:5rem; height:1.6rem; margin-top:0.2rem; float:left; display:inline;}
+#register ul li span{width:5rem; height:1.6rem; margin-top:0.2rem; float:left; display:inline; border-radius:8px; background:#fd4d8b; color:#ffffff; text-align:center; font-size:0.7rem; line-height:1.6rem;}
+#register ul li p{width:0.8rem; height:0.8rem; float:left; display:inline; background:#ffffff; border-radius:5px; margin-right:0.3rem;}
+#register ul li p img{display:none; width:0.8rem; height:0.8rem; display:none; margin-top:0;}
+#register ul li .current img{display:block;}
+#register ul li b{font-size:0.7rem; color:#ffffff; height:0.8rem; line-height:0.8rem; float:left; display:inline; font-weight:normal;}
+#register ul .bss{background:none; height:0.8rem; line-height:0.8rem; font-size:0.7rem;  padding:0.2rem 0; line-height:0.8rem; margin-bottom:0; text-align:center;}
+#register ul li button{background:none; border:none; height:2rem; width:50%; display:block; margin:0 auto;}
+#register ul li button img{height:100%; width:100%; margin-top:0;}
+#register ul #sli{height:1.5rem; line-height:1.5rem; font-size:1rem; color:#ffffff; text-align:center; background:none;}
+#register ul #sli strong{font-weight:normal; color:#fbea95; line-height:1.5rem; font-size:1rem;}
+
+#login{width:80%; height:18rem; top:50%; left:10%; margin-top:-9rem; position:fixed; z-index:100; background:url(img/login.png) 0 0 no-repeat; background-size:100% 100%; display:none;}
+#login ul{width:85%; margin:0 auto; padding-top:3.2rem;}
+#login ul li{width:100%; height:1.8rem; line-height:1.8rem; background:none; border-radius:5px; margin-bottom:0.5rem; position:relative;}
+#login ul #lcode{margin-bottom:0.2rem;}
+#login ul li label{width:22%; height:1.8rem; line-height:1.8rem; font-size:0.9rem; color:#fcf2bf; float:left; display:inline; text-align:right; margin-right:4%;}
+#login ul li input{border:none; line-height:1.8rem; height:1.8rem; font-size:0.8rem; padding:0 5%; width:55%; color:#666666; float:left; display:inline; background:#ffffff; border-radius:8px;}
+#login ul #lbtn{height:2rem; background:none; margin-bottom:0;}
+#login ul .bss{background:none; height:0.8rem; line-height:0.8rem; font-size:0.7rem;  padding:0.2rem 0; line-height:0.8rem; margin-bottom:0; text-align:center;}
+#login ul li button{background:none; border:none; height:2rem; width:50%; display:block; margin:0 auto;}
+#login ul li button img{height:100%; width:100%; margin-top:0;}
+#login ul #sli{height:1.5rem; line-height:1.5rem; font-size:1rem; color:#ffffff; text-align:center; background:none;}
+#login ul #lcode img{width:4rem; height:1.4rem; top:0.2rem; right:1.5rem; position:absolute;}
+
+#intellless{width:100%; height:100%; top:0; left:0; position:fixed; overflow:scroll; background:#ffffff; color:#000; text-align:left; padding:1rem; box-sizing:border-box; display:none; z-index:100;}
+#intellless div{width:100%; height:3rem; line-height:3rem; color:#ffffff; font-size:1rem; text-align:center; background:#ff7800; bottom:0; left:0; position:fixed;}
+#intellless strong{margin-top:0.5rem;}
+#intellless p{color:#000; line-height:1.2rem; text-align:justify;}
+#intellless p span{color:#000; font-weight:bold;}
+
+#rbg{width:100%; bottom:0; left:0; position:fixed;}
+</style>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+</head>
+
+<body>
+<div>
+    <div class="container">
+        <img src="img/rbg1.jpg" />
+    </div>
+    <div class="container">
+        <img src="img/rbg2.jpg" />
+    </div>
+    <div class="container">
+        <img src="img/rbg3.jpg" />
+    </div>
+    <div class="container">
+        <img src="img/rbg4.jpg" />
+    </div>
+    <div class="container">
+        <img src="img/rbg5.jpg" />
+    </div>
+    <img src="img/rbg6.jpg" id="rbg" class="ga-xa-event" ga_pro2="马上注册_摇金币" xa_pro1="Christmas_reg_goldCoin" xa_pro2="马上注册_摇金币" />
+</div>
+<div class="tip"></div>
+<div class="layer"></div>
+<div class="alerts" id="register">
+    <em class="close"></em>
+    <ul>
+        <li><label>账号</label><input type="text" maxlength=11 id="mobile" placeholder="请输入手机号" /></li>
+        <li><label>密码</label><input type="password" maxlength=20 id="password" placeholder="请设置密码" /></li>
+        <li id="rcode"><label>验证码</label><input type="text" maxlength=4 id="vCode" placeholder="图片验证码" /><img src="" id="codeUrl1" /></li>
+        <li id="mcode"><label>手机验证</label><input type="text" maxlength=4 id="mCode" placeholder="手机验证码" /><span>获取验证码</span></li>
+        <li id="sli2"><p class="current"><img src="img/right.png" /></p><b>我已阅读并同意新新贷协议</b></li>
+        <li class="bss" id="rbss"></li>
+        <li id="rbtn"><button><img src="img/rbtn.png" id="btn3" /></button></li>
+        <li id="sli">已有账号？<strong>请登录</strong></li>
+    </ul>
+</div>
+<div class="alerts" id="login">
+    <em class="close"></em>
+    <ul>
+        <li><label>账号</label><input type="text" id="lmobile" /></li>
+        <li><label>密码</label><input type="password" id="lpassword" /></li>
+        <li id="lcode"><label>验证码</label><input type="text" maxlength=4 id="lvCode" /><img src="" id="codeUrl2" /></li>
+        <li class="bss" id="lbss"></li>
+        <li id="lbtn"><button><img src="img/lbtn.png" id="btn4" /></button></li>
+        <li id="sli">没有账号？请注册</li>
+    </ul>
+</div>
+<div id="intellless">
+    <h3>新新贷注册使用协议</h3>
+    <p>本服务协议双方为新新贷（上海）金融信息服务有限公司（下称"新新贷"）与新新贷用户，本服务协议具有合同效力。</p>
+    <p>本网站由新新贷（上海）金融信息服务有限公司负责运营(以下本网站均指新新贷网站)。用户注册成为新新贷用户前请务必仔细阅读以下条款。一旦注册，则用户接受新新贷的服务时必须受以下条款的约束。若用户不接受以下条款，请立即离开本网站。</p>
+    <p>本服务协议内容包括以下条款及已经发布的或将来可能发布的各类规则。所有规则为协议不可分割的一部分，与协议正文具有同等法律效力。本协议是由您与本网站共同签订的，适用于您在本网站的全部活动。在您注册成为用户时，您已经阅读、理解并接受本协议的全部条款及各类规则，并承诺遵守中国现行的法律、法规、规章及其他政府规定，如有违反而导致任何法律后果的发生，您将以自己的名义独立承担所有相应的法律责任。</p>
+    <p><span>本网站有权根据需要不时地制定、修改本协议或各类规则，如本协议及规则有任何变更，本网站将在网站上刊载公告，经修订的协议、规则一经在公布后，立即自动生效。您应不时地注意本协议及附属规则地变更，若您不同意相关变更，本网站有权不经任何告知终止、中止本协议或者限制您进入本网站的全部或者部分板块且不承担任何法律责任。</span>您确认本服务协议后，本服务协议即在您和本网站之间产生法律效力。您只要在注册页面协议链接前方的选择框内打勾，并按照本网站规定的注册程序成功注册为用户，您的行为既表示同意并签署了本服务协议。本服务协议不涉及您与本网站的其他用户之间因网上交易而产生的法律关系及法律纠纷。</p>
+    <strong>一、使用限制</strong>
+    <p>本网站中的全部内容的版权均属于本网站所有，该等内容包括但不限于文本、数据、文章、设计、源代码、软件、图片、照片及其他全部信息(以下称"网站内容")。网站内容受中华人民共和国著作权法及各国际版权公约的保护。未经本网站事先书面同意，您承诺不以任何方式、不以任何形式复制、模仿、传播、出版、公布、展示网站内容，包括但不限于电子的、机械的、复印的、录音录像的方式和形式等。您承认网站内容是属于本网站的财产。未经本网站书面同意，您亦不得将本网站包含的资料等任何内容镜像到任何其他网站或者服务器。任何未经授权对网站内容的使用均属于违法行为，本网站将追究您的法律责任。您承诺合法使用本网站提供的服务及网站内容。禁止在本网站从事任何可能违反中国现行的法律、法规、规章和政府规范性文件的行为或者任何未经授权使用本网站的行为，如擅自进入本网站的未公开的系统、不正当的使用密码和网站的任何内容等。本网站接受中国大陆以及香港特区、澳门特区及台湾地区的18周岁以上的具有完全民事行为能力的自然人成为网站用户。如您不符合前述资格，请勿注册。本网站保留中止或终止您用户资格的权利。您注册成功后，不得将本网站的用户名转让给第三方或者授权给第三方使用。您确认，您用您的用户名和密码登录本网站后在本网站的一切行为均代表您并由您承担相应的法律后果。您有义务在注册时提供自己的真实资料，并保证诸如电子邮件地址、联系电话、联系地址、邮政编码等内容的有效性及安全性。如您因网上交易与其他用户产生诉讼的，用户有权通过司法部门要求网站提供相关资料。经国家生效法律文书或行政处罚决定确认您存在违法行为，或者本网站有足够事实依据可以认定您存在违法或违反本服务协议的行为的或者您借款逾期未还的，本网站有权在互联网络上公布您的违法、违约行为，并将有关该内容记入任何与您相关的信用资料和档案。本网站的网站内容可能涉及由第三方所有、控制或者运营的其他网站(以下称"第三方网站")。本网站不能保证也没有义务保证第三方网站上的信息的真实性和有效性。您确认按照第三方网站的服务协议使用第三方网站，而不是按照本协议。<span>第三方网站不是本网站推荐或者介绍的，第三方网站的内容、产品、广告和其他任何信息均由您自行判断并承担风险，而与本网站无关。</span></p>
+    <strong>二、涉及第三方网站</strong>
+    <p>本网站的网站内容可能涉及由第三方所有、控制或者运营的其他网站(以下称"第三方网站")。本网站不能保证也没有义务保证第三方网站上的信息的真实性和有效性。您确认按照第三方网站的服务协议使用第三方网站，而不是按照本协议。第三方网站不是本网站推荐或者介绍的，第三方网站的内容、产品、广告和其他任何信息均由您自行判断并承担风险，而与本网站无关。</p>
+    <strong>三、不保证</strong>
+    <p>本网站提供的服务中不带有对本网站中的任何用户、任何交易的任何保证或条件，无论是明示、默示或法定的，因此本网站及其股东、创建人、高级职员、董事、代理人、关联公司、母公司、子公司和雇员(以下称"本网站方")不保证网站内容的真实性、充分性、及时性、可靠性、完整性和有效性，并且免除任何由此引起的法律责任。</p>
+    <strong>四、责任限制</strong>
+    <p><span>在任何情况下，本网站对您使用本网站服务而产生的任何形式的的直接或间接损失均不承担法律责任，包括但不限于资金损失、利润损失、营业中断损失等。因为本网站或者涉及的第三方网站的设备、系统存在缺陷或者因为计算机病毒造成的损失，本网站均不负责赔偿，您的补救措施只能是与本网站终止本协议并停止使用本网站。但是，中国现行法律、法规另有规定的除外。</span>
+    </p>
+    <strong>五、网站内容监测</strong>
+    <p>本网站没有义务监测网站内容，但是您确认并同意本网站有权不时地根据法律、法规、政府要求透露、修改或者删除必要的、合适的信息，以便更好地运营本网站并保护自身及本网站的其他合法用户。</p>
+    <strong>六、授权条款</strong>
+    <p>1、为进一步加强用户在本网站进行投资、借款、债权转让等操作时所签电子合同的法律效力，本网站与深圳法大大网络科技有限公司或其他第三方CA认证机构及专业于电子签约技术的第三方机构合作（以下简称“电子签约合作机构”），从而引进电子签约系统；在此，您同意并授权本网站代其向电子签约合作机构提出CA认证申请，并向上述机构提供CA认证所需的您在本网站提供的实名信息，您承诺该实名信息真实、完整、有效，并自行承担相应的法律后果。</p>
+    <p>2、为提高用户体验，在保障电子合同法律效力的前提下简化用户操作流程，本网站有权选择开通电子签约合作机构开发的“用户自动签约功能”；在此，您授权本网站在开通此功能后，本网站有权在您点击确认投标或点击确认借款时，通过系统自动在相应电子合同上生成您的电子签名。您对上述电子签名的效力无异议。</p>
+    <strong>七、隐私规则</strong>
+    <p>本网站对于用户提供的、自行收集的、经认证的个人信息将按照本规则予以保护、使用或者披露。</p>
+    <p>1、用户身份限制</p>
+    <p>本网站要求未成年人（年龄18周岁以下人士）、外籍人士（不含港澳台人士）及除自然人以外的其他组织等不要向本网站提交任何个人资料。</p>
+    <p>2、涉及的个人资料</p>
+    <p>用户提供给本网站的个人资料及本网站自行收集的个人资料的主要目的在于向用户提供一个顺利、有效和度身订造的交易经历。本网站仅收集本网站认为就此目的及达成本目标所必须的关于用户的个人资料。经用户本人书面同意后，本网站可以公开用户私人资料来源并收集用户的额外资料，以更好地了解本网站用户，并为其度身订造本网站服务、解决争议并有助确保在网站进行安全交易。本网站按照用户在本网站网址上的行为自动追踪关于用户的某些资料。本网站利用这些资料进行有关本网站之用户的人口统计、兴趣及行为的内部研究，以更好地了解用户及向用户和本网站的用户社区提供更好的服务。本网站在本网站的某些网页上使用诸如"Cookies"的资料收集装置。如果用户将个人通讯信息交付给本网站，或如果其他用户或第三方向本网站发出关于用户在本网站上的活动或登录事项的通讯信息，本网站可以将这些资料收集在用户的专门档案中。</p>
+    <p>3、本网站对用户的资料的使用</p>
+    <p>用户同意本网站可使用关于用户的个人资料（包括但不限于本网站持有的有关用户的档案中的资料，及本网站从用户目前及以前在本网站上的活动所获取的其他资料）以解决争议、对纠纷进行调停、有助于确保在本网站进行安全交易，并执行本网站的服务协议。本网站有时候可能调查多个用户以识别问题或解决争议，特别是本网站可审查用户的资料以区分使用多个用户名或别名的用户。为禁止用户在本网站上的欺诈、非法或其他刑事犯罪活动，使本网站免受其害，用户同意本网站可通过人工或自动程序对用户的个人资料进行评价。用户同意本网站可以使用用户的个人资料以改进本网站的推广和促销工作、分析网站的使用率、改善本网站的内容和产品推广形式，并使本网站的网站内容、设计和服务更能符合用户的要求。这些使用能改善本网站的网页，以调整本网站的网页使其更能符合用户的需求，从而使用户在使用本网站服务时得到更为顺利、有效、安全及度身订造的交易体验。用户同意本网站利用用户的资料与用户联络并向用户传递（在某些情况下）针对用户的兴趣而提供的信息，例如：有针对性的广告条、行政管理方面的通知、产品提供以及有关用户使用本网站的通讯。</p>
+    <p>4、本网站对用户的资料的披露</p>
+    <p>本网站有义务根据有关法律要求向司法机关和政府部门提供用户的个人资料。如用户的借款逾期超过30天的，本网站有权对用户提供的及本网站自行收集的用户的个人信息和资料编辑入网站黑名单。</p>
+    <p>5、用户对其他用户的资料的使用</p>
+    <p>在本网站提供的交易活动中，用户无权要求本网站提供其他用户的个人资料，除非符合以下条件：</p>
+    <p>（a）用户已向法院起诉其他用户的在本网站活动中的违约行为；</p>
+    <p>（b）接受用户贷款的借款人逾期未归还借款本息；</p>
+    <p>（c）本网站被吊销营业执照、解散、清算、宣告破产或者其他有碍于用户收回借款本息的情形。</p>
+    <p>6、电子邮件和群组</p>
+    <p>用户不得使用本网站提供的站内信服务、群组服务或其他电子邮件转发服务发出垃圾邮件、信息或其他可能违反本网站的服务协议的内容。如果您利用本网站的服务向没有在本网站内注册的电子邮件地址发出电子邮件，本网站除了利用该电子邮件地址发出用户的电子邮件之外将不作任何其他用途。本网站不会出租或出售这些电子邮件地址。本网站不会永久储存电子邮件信息或电子邮件地址。</p>
+    <p>7.密码的安全性</p>
+    <p>用户须对使用用户的用户名和密码所采取的一切行为负责。因此，用户不要向任何第三方披露用户在本网站的用户名和密码，否则由此造成的损失由用户自行承担。</p>
+    <strong>八、补偿</strong>
+    <p><span>就任何第三方提出的，由于您违反本协议的条款和规则或您违反任何法律、法规或侵害第三方的权利而产生或引起的任何索赔、要求、诉讼、损失和损害(实际的、特别的及有后果的)，无论是已知或未知的，包括但不限于因此所产生的律师费、诉讼费、差旅费等，您同意就此对本网站和(如适用)本网站的母公司、子公司、关联公司、高级职员、董事、代理人和雇员进行补偿并使其免受损害。</span>
+    </p>
+    <strong>九、终止</strong>
+    <p>除非本网站终止本协议或者您申请终止本协议且经本网站同意，否则本协议始终有效。本网站有权在不通知您的情况下在任何时间终止本协议或者限制您使用本网站。</p>
+    <strong>十、适用法律和管辖</strong>
+    <p>因本网站提供服务所产生的争议均适用中华人民共和国法律，并由本网站住所地的上海市虹口区人民法院管辖。</p>
+    <strong>十一、附加条款</strong>
+    <p>在本网站的某些部分或页面中可能存在除本协议以外的单独的附加服务条款，当这些条款存在冲突时，在该些部分和页面中附加条款优先适用。</p>
+    <strong>十二、条款的独立性</strong>
+    <p style="padding-bottom:3.5rem;">若本协议的部分条款被认定为无效或者无法实施时，本协议中的其他条款仍然有效。</p>
+    <div id="regSure">继续注册</div>
+</div>
+<input type="hidden" id="channel" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.md5.js"></script>
+<script type="text/javascript" src="js/default.js"></script>
+</body>
+</html>
+
+<script>
+var str = window.location.href;
+var index2 = str.indexOf('?channel=');
+var index3 = str.indexOf('index.html');
+var result = str.substring(0,index2);
+var result2 = str.substring(0,index3);
+// 统一关闭
+function alertClose(obj){
+    $(obj).click(function(){
+        $('.alerts').fadeOut(0);
+        $('.layer').fadeOut(0);
+    });
+}
+alertClose('.close')
+
+// 报错信息提示框
+var tip;
+function tipTime(msg){
+    $('.tip').html('');
+    clearTimeout(tip);
+    $('.tip').html(msg);
+    $('.tip').fadeIn(0);
+    tip = setTimeout(function(){
+        $('.tip').fadeOut(0);
+    },3000);
+}
+
+// 打开普通弹窗
+function alertBox(ctr,obj){
+    $(ctr).click(function(){
+        $.each($('.alerts'),function(){
+            $(this).fadeOut(0);
+        });
+        $(obj).fadeIn(0);
+        $('.layer').fadeIn(0);
+        $('#rule').fadeOut(0);
+    });
+}
+
+// 自动弹窗
+function autoBox(obj){
+    $(obj).fadeIn(0);
+    $('.layer').fadeIn(0);
+}
+
+// 刷新验证码
+var ran = Math.random();
+$('#codeUrl1').click(function(){
+    ran = Math.random();
+    $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+});
+$('#codeUrl2').click(function(){
+    ran = Math.random();
+    $('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+});
+
+// 打开登录弹窗
+var imgLink2 = '';
+function loginBox(ctr){
+    $(ctr).click(function(){
+        $.each($('.alerts'),function(){
+            $(this).fadeOut(0);
+        });
+        $('#login').fadeIn(0);
+        $('.layer').fadeIn(0);
+        $.ajax({
+            url:link + 'randCode/getImageCodeUrl.do' + linkextra,
+            type:'get',
+            dataType:'jsonp',
+            jsonp:'jsoncallback',
+            success:function(data){
+                ran = Math.random();
+                imgLink2 = data.verifcodeUrl;
+                $('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+            },
+            error:function(){
+                tipTime('网络异常，请重试！');
+            }
+        });
+    });
+}
+loginBox('#register #sli');
+
+// 打开注册弹窗
+var imgLink1 = '';
+function registerBox(ctr){
+    $(ctr).click(function(){
+        $.each($('.alerts'),function(){
+            $(this).fadeOut(0);
+        });
+        $('#register').fadeIn(0);
+        $('.layer').fadeIn(0);
+        $.ajax({
+            url:link + 'randCode/getImageCodeUrl.do' + linkextra,
+            type:'get',
+            dataType:'jsonp',
+            jsonp:'jsoncallback',
+            success:function(data){
+                imgLink1 = data.verifcodeUrl;
+                ran = Math.random();
+                $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+            },
+            error:function(){
+                tipTime('网络异常，请重试！');
+            }
+        });
+    });
+}
+registerBox('#rbg');
+registerBox('#login #sli');
+
+// 登录错误提示
+function lred(msg){
+    $('#lbss').fadeIn(0);
+    $('#lbss').html(msg);
+}
+
+// 注册错误提示
+function rred(msg){
+    $('#rbss').fadeIn(0);
+    $('#rbss').html(msg);
+}
+
+// 非空验证
+function emptyCheck(obj,msg){
+   var _value = $(obj).val().replace(/(^\s+)|(\s+$)/g,"");
+   if(_value == ''){
+        tipTime(msg + '不能为空！');
+        return 1;
+   }else{
+        return 0;
+   }
+}
+function emptyCheckr(obj,msg){
+   var _value = $(obj).val().replace(/(^\s+)|(\s+$)/g,"");
+   if(_value == ''){
+        $('#rbss').fadeIn(0);
+        $('#rbss').html(msg + '不能为空！');
+        return 1;
+   }else{
+        return 0;
+   }
+}
+function emptyCheckl(obj,msg){
+   var _value = $(obj).val().replace(/(^\s+)|(\s+$)/g,"");
+   if(_value == ''){
+        $('#lbss').fadeIn(0);
+        $('#lbss').html(msg + '不能为空！');
+        return 1;
+   }else{
+        return 0;
+   }
+}
+// 协议部分
+var isPass = 0;
+$('#sli2').find('p').click(function(){
+    if(isPass == 0){
+        $(this).removeClass('current');
+        isPass = 1;
+    }else{
+        $(this).addClass('current');
+        isPass = 0;
+    }
+});
+$('#sli2').find('b').click(function(){
+    $('#intellless').fadeIn(0);
+});
+$('#regSure').click(function(){
+    $('#intellless').fadeOut(0);
+});
+// 发送短信验证码
+var regMobile = /^1[34578]\d{9}$/;
+var timer = 60;
+var clickFlag = 0;
+var passWordtest = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
+var t;
+function checkMobile(mobile){
+    var exist = false;
+    $.ajax({
+        url:link + 'user/checkMobile.do',
+        data:{
+            mobile:mobile
+        },
+        async: false,
+        success: function (data) {
+            if (data == 0) {
+               exist = false;
+           } else if (data == 1) {
+               exist = true;
+           }
+        }
+    });
+    return exist;
+}
+$('#register').find('span').click(function(){
+    if(clickFlag == 0){
+        if(!regMobile.test($('#mobile').val())){
+            rred('手机号码格式错误！');
+            return false;
+        }else if(!passWordtest.test($('#password').val())){
+            rred('密码必须是6-16位数字、字母组合');
+            return false;
+        }else if(emptyCheckr('#mobile','手机号码') == 1 || emptyCheckr('#password','登录密码') == 1 || emptyCheckr('#vCode','图片验证码') == 1) {
+            return false;
+        } else if(checkMobile($('#mobile').val())){
+            rred('您输入的手机号已被注册！');
+            return false;
+        }else{
+            $.ajax({
+                url:link + 'randCode/checkVerifyCode.do' + linkextra,
+                type:'post',
+                dataType:'jsonp',
+                jsonp:'jsoncallback',
+                data:{imgCode:$('#vCode').val()},
+                success:function(data){
+                    if(data.resultCode != 0){ // 图片验证码是否通过
+                        if(data.resultCode == 1){
+                            rred('图片验证码错误！');
+                        }else{
+                            rred(data.msg);
+                        }
+                        ran = Math.random();
+                        $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+                        return false;
+                    }else{
+                        $.ajax({ // 发送短信验证码
+                            url:link + 'user/sendSMS.do' + linkextra,
+                            type:'get',
+                            dataType:'jsonp',
+                            jsonp:'jsoncallback',
+                            data:{phone:$('#mobile').val(),type:1,imgCode:$('#vCode').val()},
+                            success:function(data){
+                                if(data.resultCode == 0){
+                                    clickFlag = 1;
+                                    $('#register').find('span').addClass('negative');
+                                    $('#register').find('span').html(timer + '秒后重发');
+                                    $('#rbss').fadeOut(0);
+                                    clearInterval(t);
+                                    t = setInterval(function(){
+                                        timer--;
+                                        $('#register').find('span').html(timer + '秒后重发');
+                                        if(timer <= 0){
+                                            clearInterval(t);
+                                            $('#register').find('span').html('获取验证码');
+                                            $('#register').find('span').removeClass('negative');
+                                            timer = 60;
+                                            clickFlag = 0;
+                                        }
+                                    },1000);
+                                }else{
+                                    rred('发送失败，请重试！');
+                                    ran = Math.random();
+                                    $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+                                }
+                            },
+                            error:function(){
+                                tipTime('网络异常，请重试！');
+                            }
+                        });
+                    }
+                },
+                error:function(){
+                    tipTime('网络异常，请重试！');
+                }
+            });
+        }
+    }else{
+        return false;
+    }
+});
+// 提交注册
+var channel;
+if(str.indexOf('?channel=') == -1){
+    channel = 'xinxindai';
+}else{
+    if(str.indexOf('&') == -1){
+        channel = str.substr(str.indexOf('?channel=') + 9,str.length);
+    }else{
+        channel = str.substring(str.indexOf('?channel=') + 9,str.indexOf('&'));
+    } 
+}
+$('#channel').val(channel);
+$('#btn3').click(function(){
+    if(!regMobile.test($('#mobile').val())){
+        rred('手机号码格式错误！');
+        return false;
+    }else if(isPass == 1){
+        rred('请先阅读并同意《新新贷使用协议》！');
+        return false;
+    }else if(emptyCheckr('#mobile','手机号码') == 1 || emptyCheckr('#password','登录密码') == 1 || emptyCheckr('#mCode','短信验证码') == 1){
+        ran = Math.random();
+        $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+        return false;
+    }else{
+        $.ajax({
+            url:link + 'user/regV3.do' + linkextra,
+            type:'post',
+            dataType:'jsonp',
+            jsonp:'jsoncallback',
+            data:{smsCode:$('#mCode').val(),phone:$('#mobile').val(),password:$.md5($.md5($('#password').val())),uuid:$('#channel').val(),actCode:'romantic-valentine-activity',regsource:7},
+            success:function(data){
+                if(data.resultCode != 0){
+                    rred(data.msg);
+                    ran = Math.random();
+                    $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+                    return false;
+                }else{
+                    if(data.regResultCode == 103){
+                        rred(data.regDesc);
+                        return false;
+                    }else{
+                        rred('注册成功！');
+                        //window.location.reload();
+                        window.location.href = "index.html";
+                    }
+                    var userId = data.user.userId;
+                    //XXD_TRACK._trackEvent( {category:"webapp_doubleFestival_reg", action:"reg_success_webapp" , label:"注册成功", value:userId,custval:"1" });
+                    //注册ga布码
+                    ga('set', 'dimension1', '注册用户');
+                    ga('send', 'event','注册', '圣诞活动注册成功', window.location.href);
+                }
+            },
+            error:function(){
+                tipTime('网络异常，请重试！');
+            }
+        });
+    }
+});
+// 登录
+$('#btn4').click(function(){
+    if(emptyCheckl('#lmobile','账号') == 1 || emptyCheckl('#lpassword','登录密码') == 1 || emptyCheckl('#lvCode','图片验证码') == 1){
+        ran = Math.random();
+        $('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+        return false;
+    }else{
+        $.ajax({
+            url:link + 'user/login.do' + linkextra,
+            type:'post',
+            dataType:'jsonp',
+            jsonp:'jsoncallback',
+            data:{imgCode:$('#lvCode').val(),username:$('#lmobile').val(),password:$.md5($.md5($('#lpassword').val()))},
+            success:function(data){
+                if(data.resultCode != 0){
+                    if(data.resultCode == -1){
+                        lred('账号或者密码错误！');
+                    }else{
+                        lred(data.msg);
+                    }
+                    ran = Math.random();
+                    $('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+                    return false;
+                }else{
+                    lred('登录成功！');
+                    var userId = data.user.userId;
+                    //XXD_TRACK._trackEvent( {category:"webapp_Christmas_reg", action:"login_success_webapp" , label:"登录成功", value:userId,custval:"1" });
+                    ga('send', 'event','登录', "登录成功", window.location.href);
+                    //window.location.reload();
+                    window.location.href = "index.html";
+                }
+            },
+            error:function(){
+                tipTime('网络异常，请重试！');
+            }
+        });
+    }
+});
+</script>

@@ -1,0 +1,63 @@
+.swiper-slide9{
+  background: #242540;
+  .xui-chart-bar .grid-data li b{
+    font-size: 0.9rem;
+    right: -10%;
+  }
+}
+
+#page9-chart1 {
+  height: 50vw;
+  max-height: 208px;
+  position: relative;
+  margin-bottom: 3.5rem;
+
+   .grid-text{
+      width: 18%;
+
+     li{
+       height: 9.5%;
+     }
+   }
+
+  .grid-data li {
+    width : 21%;
+  }
+  .grid-data li em{
+    bottom: -1.2rem;
+  }
+
+  .chart-bar1 {
+    left             : 7%;
+    border-radius    : 3px;
+    background-color : rgba(65,67,141,.8);
+    color            : rgb(65,67,141);
+  }
+
+  .chart-bar2 {
+    left             : 39%;
+    border-radius    : 3px;
+    background-color : rgba(28,193,255,.75);
+    color            : rgb(28,193,255);
+  }
+
+  .chart-bar3 {
+    left            : 72%;
+    border-radius    : 3px;
+    background-color : rgba(255,254,111,.9);
+    color            : rgb(255,254,111);
+  }
+
+}
+
+.swiper-slide-active #page9-chart1 .grid-data li.chart-bar1 {
+  height : 68%
+}
+
+.swiper-slide-active #page9-chart1 .grid-data li.chart-bar2 {
+  height : 77%
+}
+
+.swiper-slide-active #page9-chart1 .grid-data li.chart-bar3 {
+  height : 91%
+}

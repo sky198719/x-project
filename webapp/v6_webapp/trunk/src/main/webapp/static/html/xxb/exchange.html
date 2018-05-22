@@ -1,0 +1,98 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">新新币</div>
+        <div class="right sliding">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" id="xxb_exchange_logs">
+                <img src="static/img/xxd/xxb_info.png" width="30" style="padding-top:5px;">
+                </a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through">
+    <!-- Page, data-page contains page name-->
+    <div data-page="xxbExchange" class="page" directory="xxb">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title"><span class="font-grey">新新币总额</span></div>
+                            <div class="item-after"><span class="font-grey" name="xxb_coins">0个</span></div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title"><span class="font-grey">可兑换金额</span></div>
+                            <div class="item-after"><span class="font-grey" name="xxb_money">0.00元</span></div>
+                        </div>
+                    </li>
+                 </ul>
+            </div>
+            <div style="padding: 0px 10px 0px 15px;color: #989797;
+                font-size: 12px;">新新币兑换人民币的比例为50:1，兑换成功后账户可用余额增加</div>
+            <div class="list-block accordion-list">
+                <ul>
+                    <li class="accordion-item">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <img src="static/img/xxd/xxb_money.png" width="30">
+                                <div class="item-input">
+                                    <input type="text" placeholder="请输入兑换金额" id="xxb_exchangemoney" style="font-size:16px;text-align:left"/>
+                                </div>
+                                <div class="item-after">元</div>
+                            </div>
+                            <div class="item-inner" style="width: 70%;">
+                                <img src="static/img/xxd/xxb_1.png" width="30" style="text-align:center">
+                                <div class="item-input" style="text-align: center" id="xxb_exchange_num">
+                                    0
+                                </div>
+                                <div class="item-after">新新币</div>
+                            </div>
+                        </div>
+                    </li>
+                    <div style="background-color: #ffeded;">
+                        <span id="xe_amount_note" class="font-red" style="font-size: 14px;padding-left: 50px;padding-top:5px;padding-bottom:5px;display: none;"></span></div>
+                    <li class="accordion-item">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <img src="static/img/xxd/xxb_pwd.png" width="30">
+                                <div class="item-input">
+                                    <input type="password" placeholder="请输入支付密码" id="xxb_pwd" style="font-size:16px;text-align:left"/>
+                                </div>
+                                <!--div class="item-after" id="xxb_exchange_forgetpwd">忘记支付密码</div-->
+                            </div>
+                        </div>
+                    </li>
+                    <div style="background-color: #ffeded;">
+                    <span id="xe_pwd_note" class="font-red" style="font-size: 14px;padding-left: 50px;padding-top:5px;padding-bottom:5px;display: none; "></span></div>
+                    <li class="accordion-item">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <img src="static/img/xxd/xxb_code.png" width="30">
+                                <div class="item-input">
+                                    <input type="text" placeholder="请输入图片验证码" id="xxb_randCode" style="font-size:16px;text-align:left"/>
+                                </div>
+                                <div class="item-after"><img src="randCode/createVerifyCode.do" id="xxb_randImage"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <div style="background-color: #ffeded;">
+                    <span id="xe_randcode_note" class="font-red" style="font-size: 14px;padding-left: 50px;padding-top:5px;padding-bottom:5px;display: none;"></span></div>
+                </ul>
+            </div>
+            <div class="mr10 ml10">
+                <a href="#" class="button button-51 active" id="xxb_exchange">确认兑换</a>
+            </div>
+        </div>
+    </div>
+</div>

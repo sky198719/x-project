@@ -1,0 +1,11 @@
+.am-hide-aa { animation : am-hide-aa .2s forwards; -webkit-animation : am-hide-aa .2s forwards; opacity: 1; }
+
+@-webkit-keyframes am-hide-aa {
+  0% { -webkit-transform : scale(1, 1) }
+  100% { -webkit-transform : scale(0.3, 0.3); opacity : 0 }
+}
+
+@keyframes am-hide-aa {
+  0% { transform : scale(1, 1) }
+  100% { transform : scale(0.3, 0.3); opacity : 0 }
+}

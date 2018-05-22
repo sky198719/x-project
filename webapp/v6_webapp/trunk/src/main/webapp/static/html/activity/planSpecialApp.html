@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动详情</title>
+    <style>
+        html, div, p, a, b, span, em, strong, h1, h2,
+        h3, h4, h5, h6, ul, li, ol, dl, dd, dt, table,
+        tr, th, td, img, button, form, link, label,
+        input, textarea, select, option {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        img {
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box{
+        	font-family: "微软雅黑";
+        	/*margin: 0 auto;*/
+        	width: 100vw;
+        }
+        .box div{
+        	background-size: 100%;
+        }
+        .header{
+        	width: 100%;
+        	height: 78.90625vw;
+        	background: url("../../img/activity/planSpecial/header.png");
+        }
+        .content{
+        	width: 100%;
+        	height: 157.1875vw;
+        	background: url("../../img/activity/planSpecial/content.png");
+        }
+        .gold{
+        	width: 100%;
+        	height: 110.09375vw;
+        	background: #f0fdff;
+        	box-sizing: border-box;
+        	padding: 6.5625vw 6.71875% 0 6.5625%;
+        }
+        .place{
+        	display: block;
+        	width: 40.3125%;
+        	height: 46.90625vw;
+        	position: relative;
+        	cursor: pointer;
+        }
+        .percent{
+        	position: absolute;
+        	top: 11.5vw;
+        	right: 42.75%;
+        	color: #fff600;
+        	font-size: 3.90625vw;
+        }
+        .number{
+        	position: absolute;
+        	top: 5.8125vw;
+        	right: 52.875%;
+        	font-size: 9.21875vw;
+        	color: #fff600;
+        }
+        .per1{
+        	right: 37.625%;
+        }
+        .num4{
+        	right: 47.75%;
+        }
+        .general{
+        	position: absolute;
+        	left: 21.90625%;
+        	font-size: 2.34375vw;
+        }
+        .money p:nth-child(1){
+        	bottom: 18.125vw;
+        }
+        .money p:nth-child(2){
+        	bottom: 14.0625vw;
+        }
+        .money p:nth-child(3){
+        	bottom: 10.0vw;
+        }
+        .January{
+        	float: left;
+        	background: url("../../img/activity/planSpecial/January.png") no-repeat;
+        	background-size: 100% 100%;
+        }
+        .March{
+        	float: right;
+        	background: url("../../img/activity/planSpecial/March.png") no-repeat;
+        	background-size: 100% 100%;
+        }
+        .June{
+        	float: left;
+        	background: url("../../img/activity/planSpecial/June.png") no-repeat;
+        	background-size: 100% 100%;
+        	margin-top: 4.84375vw;
+        }
+        .December{
+        	float: right;
+        	background: url("../../img/activity/planSpecial/December.png") no-repeat;
+        	background-size: 100% 100%;
+        	margin-top: 4.84375vw;
+        }
+        .income{
+        	width: 100%;
+        	height: 61.25vw;
+        	background: url("../../img/activity/planSpecial/income.png");
+        }
+        .good{
+        	width: 100%;
+        	height: 43.28125vw;
+        	background: url("../../img/activity/planSpecial/good.png");
+        }
+        .safe{
+        	width: 100%;
+        	height: 50.9375vw;
+        	background: url("../../img/activity/planSpecial/safe.png");
+        }
+        .opacity{
+        	width: 100%;
+        	height: 43.75vw;
+        	background: url("../../img/activity/planSpecial/opacity.jpg");
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="header"></div>
+    <div class="content"></div>
+    <div class="gold">
+        <a href="" class="plan1">
+        <div class="January place ">
+            <div class="percent">%</div>
+            <div class="number num1 apr1">0</div>
+            <div class="money">
+                <p class="general"><span>起投金额 : </span><span class="j_start startMoney1">0.00</span>元</p>
+
+                <p class="general"><span>投资金额 : </span><span class="j_alread tenderMoney1">0.00</span>元</p>
+
+                <p class="general"><span>历史收益 : </span><span class="j_accept shouyi1">0.00</span>元</p>
+            </div>
+        </div>
+        </a>
+        <a href="" class="plan3">
+        <div class="March place ">
+            <div class="percent">%</div>
+            <div class="number num2 apr3">0</div>
+            <div class="money">
+                <p class="general"><span>起投金额 : </span><span class="m_start startMoney3">0.00</span>元</p>
+
+                <p class="general"><span>投资金额 : </span><span class="m_alread tenderMoney3">0.00</span>元</p>
+
+                <p class="general"><span>历史收益 : </span><span class="m_accept shouyi3">0.00</span>元</p>
+            </div>
+        </div>
+        </a>
+        <a href="" class="plan6">
+        <div class="June place">
+            <div class="percent">%</div>
+            <div class="number num3 apr6">0</div>
+            <div class="money">
+                <p class="general"><span>起投金额 : </span><span class="b_start startMoney6">0.00</span>元</p>
+
+                <p class="general"><span>投资金额 : </span><span class="b_alread tenderMoney6">0.00</span>元</p>
+
+                <p class="general"><span>历史收益 : </span><span class="b_accept shouyi6">0.00</span>元</p>
+            </div>
+        </div>
+        </a>
+        <a href="" class="plan12">
+        <div class="December place ">
+            <div class="percent per1">%</div>
+            <div class="number num4 apr12">0</div>
+            <div class="money">
+                <p class="general"><span>起投金额 : </span><span class="d_start startMoney12">0.00</span>元</p>
+
+                <p class="general"><span>投资金额 : </span><span class="d_alread tenderMoney12" >0.00</span>元</p>
+
+                <p class="general"><span>历史收益 : </span><span class="d_accept shouyi12">0.00</span>元</p>
+            </div>
+        </div>
+        </a>
+    </div>
+    <div class="income"></div>
+    <div class="good"></div>
+    <div class="safe"></div>
+    <div class="opacity"></div>
+    <div style="    padding: 30px;
+        text-align: center;
+        color: #359DC2;
+        background: #9CF1FF;">您通过本软件参加的任何商业活动或抽奖活动，均与苹果公司Apple Inc无关</div>
+</div>
+</body>
+<script src="../../lib/flexible.js"></script>
+<script src="../../lib/jquery/jquery1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        getPlan(1);
+        getPlan(3);
+        getPlan(6);
+        getPlan(12);
+    });
+    function getPlan(closeTerm) {
+        $.ajax({
+            url: '../../../xplan/getLatestSchemeId.do',
+            data: {
+                currentPage: 1,
+                closeTerm: closeTerm,
+                pageSize: 10
+            },
+            dataType: 'json',
+            success: function (data) {
+                if(data.resultCode == 0) {
+                    $(".startMoney" + closeTerm).html(data.schemeInfo.LEASTAMOUNT);
+                    $(".apr" + closeTerm).html(data.schemeInfo.MINAPR);
+                    $(".tenderMoney" + closeTerm).html(fmoney(100000));
+                    var num = 12;
+                    if(closeTerm == 3) {
+                        num = 4;
+                    } else if(closeTerm ==6){
+                        num = 2;
+                    } else if(closeTerm ==12){
+                        num = 1;
+                    }
+                    $(".shouyi" + closeTerm).html(fmoney(100000 * parseFloat(data.schemeInfo.MINAPR/100) / num,2));
+
+                    $(".plan"+closeTerm).attr("href", 'xxd://list/pdd?selID=1&pdName=xinyuanbao&xybID=' + data.schemeInfo.SCHEMEID);
+
+                }
+
+            }
+        });
+    }
+
+    function fmoney(s, n) {
+        if (s == null || s === '') {
+            return "0.00";
+        }
+        if (typeof(s) == "undefined") {
+            return "0.00";
+        }
+
+        if (typeof(n) == "undefined") {
+            n = 0;
+        }
+
+        n = n >= 0 && n <= 20 ? n : 2;
+        s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";
+        var l = s.split(".")[0].split("").reverse(),
+                r = s.split(".")[1];
+        var t = "";
+        for (var i = 0; i < l.length; i++) {
+            t += l[i] + ((i + 1) % 3 == 0 && (i + 1) != l.length ? "," : "");
+        }
+
+        if(n == 0) {
+            return t.split("").reverse().join("");
+        } else {
+            return t.split("").reverse().join("") + "." + r;
+        }
+    }
+</script>
+</html>

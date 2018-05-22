@@ -1,0 +1,1 @@
+define(["base","footerTpl","pcFooter"],function(t,e,o){"use strict";e&&(t("#J_footer").html(e),o.init())});

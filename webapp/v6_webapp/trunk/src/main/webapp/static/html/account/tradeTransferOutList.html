@@ -1,0 +1,39 @@
+{{#each list}}
+<div class="list-block accordion-list inset">
+    <ul>
+        <li class="accordion-item">
+            <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                    <div class="item-title"><h5>{{borrowName}}</h5></div>
+                </div>
+            </a>
+
+            <div class="accordion-item-content">
+                <div class="content-block font-grey">
+                    <h6 class="mt10">转让流水号：{{requestId}}</h6>
+                    <h6 class="mt10">交易日期：{{outTime}}</h6>
+                    <h6 class="mt5">年化收益：{{apr}}%</h6>
+
+                    <!--<div class="mt10">
+                        <a href="#" class="button button-fill color-red">撤销转让</a>
+                    </div>-->
+                </div>
+            </div>
+        </li>
+        <li class="accordion-item">
+            <div class="item-inner pl15">
+                <div class="item-title-row width100">
+                    <div class="item-title left font-grey"><h6>转出价格：{{amount_funds}} 元</h6></div>
+                    <div class="item-after right">
+                        {{#if status}}
+                        <h6 class="font-green">{{statusName}}</h6>
+                        {{else}}
+                        <h6 class="font-grey">{{statusName}}</h6>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{{/each}}

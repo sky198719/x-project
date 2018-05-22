@@ -1,0 +1,126 @@
+@import "../../side";
+@dottedPath: "../../../../";
+@import "@{dottedPath}css/reset";
+@import "@{dottedPath}css/variable";
+@path: "@{dottedPath}tmp/merge/";
+@import "@{path}tip.index.css";
+@import "@{path}dialog.index.css";
+@import "@{path}backTop.index-1.css";
+@import "@{path}dialog-float.index.css";
+@import "@{path}rotate.index.css";
+
+@import "../../../header";
+@import "../../../footer";
+.g-right {
+  .m-con-wrap {
+    padding-bottom: 20px;
+    .goupons {
+      border-bottom: 1px solid #eee;
+      border-top: 1px solid #eee;
+    }
+    .goupons-bd {
+      margin: 25px 0 0 30px;
+      ul{
+        li {
+          margin-right: 70px;
+          margin-bottom: 40px;
+          display: inline-block;
+          padding: 26px 20px;
+          background: #f6f6f6;
+          border: 1px solid #f7c6c6;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          border-radius: 12px;;
+          .goupon-pic {
+            float: left;
+            position: relative;
+            width: 148px;
+            height: 148px;
+            background: #ffffff url(../../../../img/gift.png) no-repeat center 24px;
+            border: 1px solid #ef5f64;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;;
+            p {
+              position: absolute;
+              width: 100%;
+              bottom: 20px;
+              font-size: @font16px;
+              color: #ef5f64;
+              text-align: center;
+            }
+          }
+          .goupon-info {
+            float: left;
+            display: inline-block;
+            width: 173px;
+            margin-left: 10px;
+            p {
+              float: left;
+              padding-bottom: 13px;
+              font-size: @font14px;
+              color: @col-333;
+              &.last {
+                padding-bottom: 0;
+              }
+              span {
+                color: @col-999;
+              }
+            }
+          }
+        }
+      }
+    }
+    .m-con-bd {
+      border-bottom: none;
+      .filed-user {
+        font-size: 16px;
+        color: #666666;
+        margin: 25px 0;
+        span {
+          display: inline-block;
+          padding-right: 20px;
+          text-align: left;
+          font-size: 16px;
+          color: #666666;
+          &.red {
+            color: #FF0000;
+            font-size: @font18px;
+          }
+        }
+        input {
+          box-sizing: border-box;
+          width: 280px;
+          height: 40px;
+          line-height: 40px;
+          padding-left: 10px;
+          font-size: 16px;
+        }
+        .get-coupon {
+          display: inline-block;
+          background: #2096e9;
+          width: 180px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 16px;
+          color: #fff;
+          text-align: center;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-left: 30px;
+          border:0;
+          &:hover {
+            background-color: #0266be;
+          }
+        }
+        .disable{
+          background: #999;
+          color: #fff;
+          cursor: default;
+        }
+      }
+    }
+  }
+}

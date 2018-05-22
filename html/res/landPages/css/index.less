@@ -1,0 +1,185 @@
+input::-webkit-placeholder {
+  font-size: 14px;
+  color: #908f8f;
+}
+input::placeholder {
+  font-size: 14px;
+  color: #908f8f;
+}
+input{
+  background:none;
+  outline:none;
+  border:0px;
+  -webkit-appearance:none;
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button{
+  border: 0 none;
+  outline: none;
+  background-image: none;
+  text-shadow: none;
+}
+.disnone{
+  display: none;
+}
+.disblock{
+  display: block;
+}
+.dishidden{
+  visibility: hidden;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: ".";
+  visibility: hidden;
+}
+.user-verigy .disfont{
+  font-size: 12px !important;
+}
+html{
+  width: 100%;
+  height: auto !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body{
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+#J_wrapBody{
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  overflow-y: auto;
+}
+.wrap{
+  margin: 0 auto;
+}
+
+/*//header start*/
+.header{
+  width: 100%;
+  height: 93px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+.header-main{
+  width: 1200px;
+  height: 93px;
+  margin: 0 auto;
+}
+.header .logo{
+  display: inline-block;
+  width: 368px;
+  height:93px;
+  background: url("img/logo.png") center no-repeat;
+}
+.tel{
+  float: right;
+  height: 93px;
+  margin-right: 0;
+}
+.tel-icon{
+  display: inline-block;
+  height: 93px;
+  line-height: 93px;
+  vertical-align: middle;
+}
+.tel-icon img{
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+.tel-num{
+  display: inline-block;
+  border-left: 1px solid #d9d9d9;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 18px;
+  padding-left: 18px;
+}
+.tel-num h3{
+  font-size: 24px;
+  color: #004682;
+}
+.tel-num p{
+  font-size: 16px;
+  color: #7b7a7a;
+}
+
+/*固定导航条*/
+.header-fixed{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  opacity: 0.5;
+  filter:alpha(opacity=50);
+  height: 72px;
+}
+.header-fixed .logo{
+  height: 72px;
+}
+.header-fixed .tel{
+  height: 72px;
+}
+.header-fixed .tel-icon{
+  height: 72px;
+  line-height: 72px;
+}
+/*header end*/
+
+//提示
+.detail-footer .prompt{
+  text-align: right;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #ff9936;
+}
+.detail-footer .prompt span{
+  display: inline-block;
+  margin-right: 12px;
+  width: 68px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 18px;
+  border: 1px solid #ff9936;
+}
+.no-checkBkg{
+  background-color: #999 !important;
+}
+.mui-preview{
+  background-color: transparent !important;
+}
+.cur{
+  width: 302px;
+  height: 20px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size: 14px;
+  color: red;
+}
+.cur-special{
+  width: 268px;
+  color: #fff;
+}
+.footer{
+  width: 100%;
+  height: 119px;
+  background: url("img/footer.png") center no-repeat;
+}

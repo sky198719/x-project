@@ -1,0 +1,121 @@
+<div class="navbar no-border">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+    <div class="center sliding">确认投资</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="thirtyDaysTrade" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content thirtyDaysTrade">
+        <div class="content-block">
+            <div class="content-block-inner">
+                <span class="sevenDaysName" >新手专享30天<span style="color:red">(新手专享)</span></span>
+                <span style="position: absolute; margin-top: 8px; margin-left:20px;display: none;" class="thirtyDaysTradeActivity animated fadeInLeft">
+                    <img src="static/img/xxd/thirtytip.png" height="20">
+                </span>
+                <h5 class="font-grey mt5">历史年化收益率：<span id="30d_apr">0%</span></h5>
+                <h5 class="font-grey mt5">锁定期限：<span class="7d_closeTerm">0</span>天</h5>
+                <h5 class="font-grey mt5">加入限额：<span id="thirty_lowestTender">0</span>元起投，加入上限<span id="thirty_mostTender">0</span>元</h5>
+                <h5 class="font-grey mt5" style="color:red">每人限投1次</h5>
+            </div>
+        </div>
+        <div class="list-block accordion-list">
+          <ul>
+              <li class="accordion-item">
+                  <a href="#" class="item-content item-link" id="7d_topup_step">
+                      <div class="item-inner">
+                          <div class="item-title font-grey">账户余额：<span class="font-blue" id="7d_accountUsable">0.00</span>
+                              元
+                          </div>
+                          <div class="item-after" style="color:#007aff">充值</div>
+                      </div>
+                  </a>
+                  <div class="accordion-item-content"></div>
+              </li>
+              <li class="accordion-item">
+                  <div class="item-content">
+                      <div class="item-inner">
+                          <div class="item-input">
+                              <input type="text" id="7d_trade_num" placeholder="请输入投资金额"/>
+                          </div>
+                          <div class="item-after"> 元</div>
+                      </div>
+                  </div>
+                  <div class="accordion-item-content"></div>
+              </li>
+              <li>
+                  <div class="item-content">
+                      <div class="item-inner">
+                          <div class="item-input">
+                              <div class="item-title">您最大可加入金额：<span class="font-red" id="thirty_mostTender2">0.00</span>元</div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="item-content">
+                      <div class="item-inner">
+                          <div class="item-input">
+                              <div class="item-title font-grey-A9">历史收益：<span class="font-red" id="7days_income">0.00</span>元</div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+         </div>
+        <div class="list-block">
+          <ul>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input item-inline" style="display: inline-block;margin-right: 10px;">
+                    <label class="label-switch">
+                      <input type="checkbox" checked="checked" id="7d_agreementCheck">
+                      <div class="checkbox"></div>
+                    </label>
+                  </div>
+                  <div style="display: inline-block;">
+                      <a href="#"  class="open-popup a-xy" name="7d_agreement" style="font-size: 0.7rem;color: black;">我已同意《<span style="color: #3f9bff;">新手专享30天服务协议</span>》</a>、<a class="open-popup savenDay_Ami" href="#" style="font-size: 0.7rem;color: black;">《<span style="color: #3f9bff;">自动配标委托书</span>》</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="list-block">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">
+                            </div>
+                            <div class="item-after">实际支付：<span class="font-blue dmp_content_spa" id="7d_affirm_money">0.00</span>元</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list-block inset" style="margin-top:30px;">
+          <ul>
+              <li><a href="#" class="button button-001 active dmp-click"  id="7d_confirmButton" dmp_type="click" dmp_event="buy" dmp_target_type="1" dmp_target_id="3">确认投资</a></li>
+          </ul>
+        </div>
+        <input type="hidden" id="v_7dAccount" value=""/>
+        <input type="hidden" id="v_7dMostTender" value=""/>
+        <input type="hidden" id="v_7dCanBuy" value=""/>
+        <input type="hidden" id="v_leastAmount" value=""/>
+        <input type="hidden" id="v_deployid" value=""/>
+        <input type="hidden" id="v_closeTerm" value=""/>
+        <input type="hidden" id="v_7dApr" value=""/>
+        <input type="hidden" id="v_7dFloatApr" value=""/>
+        <input type="hidden" id="v_7dIsNewUser" value=""/>
+        <input type="hidden" id="v_7dDays" value=""/>
+        <input type="hidden" id="v_7dSteps" value=""/>
+    </div>
+  </div>
+</div>

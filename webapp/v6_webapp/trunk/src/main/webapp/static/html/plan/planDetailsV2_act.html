@@ -1,0 +1,82 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="link goBackPrevious"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">
+            <span>新元宝</span>
+        </div>
+        <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through toolbar-through">
+    <div data-page="planDetailsV2_act" class="page" directory="plan">
+        <div class="page-content pull-to-refresh-content infinite-scroll planDetailsV2">
+        	<!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="content-block-inner mt10 pr0">
+                <div class="row no-gutter" style="margin: 10px 0 10px 0;">
+                    <div style="width:35%">
+                        <div class="tongue" style="background-color:#3f9bff;" id="planDetailCorner">
+                        	<span style="position: absolute; margin-top: 5px; margin-left: 50px; display:none;" id="planActivityTip_detail">
+                            	<img src="static/img/activity/md_cj_detail.png" height="20">
+                            </span>
+                            <div id="detailAprDiv">
+                            	<span style="font-size: 40px;" id="tenderApr">0</span>%
+                                <span class="increaseApr displayNone">0</span>
+                            </div>
+                            <div style="padding-right: 8px;">历史年化收益</div>
+                          </div>
+                    </div>
+                    <div style="width:65%">
+                        <div class="item-content" style="padding:3px 0 0 5%;min-width: 150px;">
+                            <div class="item-title-row displayNone singlesdayDetails">
+                               <div class="item-title">
+                                   <img src="static/img/xxd/1111day.png" height="20px"/>
+                               </div>
+                            </div>
+                            <div class="item-title-row">
+                                <div class="item-title font-666"><span id="planItemName">新元宝0个月</span>-<span id="planItemTerm" style="margin-top: 2px;">0期</span></div>
+                            </div>
+                            <div class="item-title-row">
+                                <div class="item-title font-666">剩余可投：<span id="remainderAmount">0</span>元</div>
+                            </div>
+                            <div class="item-title-row">
+                                 <div class="item-title font-666">锁定期限：<span id="closeTerm">0</span>个月</div>
+                            </div>
+                            <div class="item-title-row" style="display: none;">
+                                 <div class="item-title font-666">适用：质保服务专款计划</div>
+                            </div>
+                            <div class="item-title-row activityLabel_plan_detail" style="display: none;">
+                                <div class="item-title font-666 activityLabel_plan_detail_text"></div>
+                            </div>
+                            <div class="font-666 mgpd0 font-white" style="margin-top: 5px;display: none" name="planDetailDiv1">
+                                <img src="static/img/activity/member-badge.png" height="23" style="position: absolute;margin-left:2px;"/>
+                                <span class="member_return_planDetail" style="margin-left: 25px;">返现高至1.1%</span></div>
+                            <div class="item-title-row">
+                                风险提示：<a id="fenxiantishi" href="#">《风险提示函》</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block-inner mt10 pr0" style="min-height:300px;">
+                <ul class="nav nav-tabs" style="margin-top: 0px;">
+                    <li id="introduction" class="active"><a style="background: transparent;"> 产品介绍</a></li>
+                    <li id="questions"><a style="background: transparent;"> 常见问题</a></li>
+                    <li id="joinHistory"><a style="background: transparent;"> 加入记录</a></li>
+                </ul>
+               	<input type="hidden" id="currentPage" value="1"/>
+       			<input type="hidden" id="totalPage" value="1"/>
+				<div id="tabContent" style="color:#6d6d72;"></div>
+            </div>
+        </div>
+
+        <div class="toolbar no-border" style="height: 55px;">
+            <div class="plan-button" id="goTender" style="color:#fff;">立即投标</div>
+        </div>
+    </div>
+</div>

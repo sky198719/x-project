@@ -1,0 +1,380 @@
+.disnone {
+  display: none;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: ".";
+  visibility: hidden;
+}
+html {
+  width: 100%;
+  height: auto !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+#J_wrapBody {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-width: 1200px;
+}
+.main-content {
+  width: 100%;
+  height: 1477px;
+  min-width: 1200px;
+  background: url("img/Jan/bkg-top.jpg") center center no-repeat;
+}
+.wrap {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.wrap .content-list {
+  position: absolute;
+  top: 1190px;
+  left: 50%;
+  margin-left: -336px;
+  width: 672px;
+  height: 45px;
+  line-height: 45px;
+}
+.wrap .content-list .winData {
+  width: 672px;
+  height: 45px;
+}
+.wrap .content-list .winData ul {
+  height: 45px;
+  display: inline-block;
+  overflow: hidden;
+  zoom: 1;
+}
+.wrap .content-list .winData ul li {
+  height: 45px;
+  line-height: 46px;
+  font-size: 20px;
+  color: #612900;
+}
+.wrap .content-list .winData ul li span {
+  display: inline-block;
+}
+.wrap .content-list .winData .active-w {
+  width: 100%;
+  text-align: center;
+}
+.wrap .content-list .plus-mar-left {
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.wrap .content-list .plus-mar-left ul {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.wrap .content-list .plus-mar-left ul li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  text-indent: 15px;
+}
+.wrap .rules-twinkle {
+  position: absolute;
+  z-index: 100;
+  top: 1250px;
+  right: 220px;
+  width: 209px;
+  height: 66px;
+  background: url("img/Jan/rob-goods.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.wrap .rules-rock {
+  cursor: pointer;
+  -webkit-animation: flash 3s infinite alternate ease;
+  -moz-animation: flash 3s infinite alternate ease;
+  -ms-animation: flash 3s infinite alternate ease;
+  -o-animation: flash 3s infinite alternate ease;
+  animation: flash 3s infinite alternate ease;
+}
+.wrap .person {
+  position: absolute;
+  z-index: 10;
+  top: 1300px;
+  right: 140px;
+  width: 153px;
+  height: 187px;
+  background: url("img/Jan/person.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.wrap .person-rock {
+  cursor: pointer;
+  -webkit-animation: move 1s 0.1s infinite alternate ease-in-out;
+  -moz-animation: move 1s 0.1s infinite alternate ease-in-out;
+  -ms-animation: move 1s 0.1s infinite alternate ease-in-out;
+  -o-animation: move 1s 0.1s infinite alternate ease-in-out;
+  animation: move 1s 0.1s infinite alternate ease-in-out;
+  -webkit-transform-origin: bottom;
+  -moz-transform-origin: bottom;
+  -o-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+}
+.wrap .person-l {
+  position: absolute;
+  z-index: 100;
+  top: 1562px;
+  left: -49px;
+  width: 236px;
+  height: 278px;
+  background: url("img/Jan/person-l.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.wrap .person-r {
+  position: absolute;
+  z-index: 100;
+  top: 1442px;
+  right: -49px;
+  width: 294px;
+  height: 396px;
+  background: url("img/Jan/person-r.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.wrap .prizes-one {
+  position: absolute;
+  z-index: 90;
+  top: 1290px;
+  left: 172px;
+  width: 716px;
+  height: 249px;
+  background: url("img/Jan/prizes1.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.wrap .prizes-two {
+  position: absolute;
+  z-index: 90;
+  top: 1552px;
+  left: 174px;
+  width: 796px;
+  height: 181px;
+  background: url("img/Jan/prizes2.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.wrap .activity-gl {
+  position: absolute;
+  z-index: 110;
+  top: 1816px;
+  left: 50%;
+  margin-left: -624px;
+  width: 1248px;
+  height: 303px;
+  background: url("img/Jan/gl.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+@-moz-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+@-ms-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+@-o-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(-5deg);
+  }
+  66% {
+    -webkit-transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes move {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  33% {
+    -moz-transform: rotate(-5deg);
+  }
+  66% {
+    -moz-transform: rotate(5deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+  }
+}
+@-o-keyframes move {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  33% {
+    -o-transform: rotate(-5deg);
+  }
+  66% {
+    -o-transform: rotate(5deg);
+  }
+  100% {
+    -o-transform: rotate(0deg);
+  }
+}
+@-ms-keyframes move {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  33% {
+    -ms-transform: rotate(-5deg);
+  }
+  66% {
+    -ms-transform: rotate(5deg);
+  }
+  100% {
+    -ms-transform: rotate(0deg);
+  }
+}
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(-5deg);
+  }
+  66% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.main-bottom {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 1104px;
+  min-width: 1200px;
+  background: url("img/Jan/bkg-bottom.jpg") center center no-repeat;
+  overflow: hidden;
+}
+.main-bottom .activity-rules {
+  width: 1140px;
+  border: 2px solid #c47d3b;
+  padding: 20px;
+  margin: 680px auto 0;
+}
+.main-bottom .activity-rules h3 {
+  font-size: 24px;
+  color: #fcae66;
+  text-align: left;
+}
+.main-bottom .activity-rules dl {
+  margin-top: 24px;
+}
+.main-bottom .activity-rules dl dt {
+  float: left;
+  width: 22px;
+  height: 22px;
+  font-size: 18px;
+  color: #fcae66;
+  text-align: center;
+  line-height: 22px;
+  margin-top: 4px;
+}
+.main-bottom .activity-rules dl dd {
+  letter-spacing: 2px;
+  font-size: 18px;
+  color: #fcae66;
+  width: 1106px;
+  margin-left: 35px;
+  margin-bottom: 15px;
+}
+/*弹窗*/
+.popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+}
+.popup .pop-main {
+  position: fixed;
+  width: 480px;
+  height: 467px;
+  top: 50%;
+  left: 50%;
+  margin-left: -240px;
+  margin-top: -233.5px;
+  background: url("img/Jan/pop.png") center no-repeat;
+  background-size: 100% 100%;
+}
+.popup .pop-main .close {
+  position: absolute;
+  top: 460px;
+  left: 50%;
+  margin-left: -30px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("img/Jan/close.png") center no-repeat;
+  background-size: 100% 100%;
+}

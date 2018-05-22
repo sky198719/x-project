@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+    <style>
+        body {
+            font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            font-size: 14px;
+            line-height: 1.4;
+            width: 100%;
+            -webkit-text-size-adjust: 100%;
+            overflow: hidden;
+            background: #efeff4;
+            overflow: auto;
+        }
+        .text-center {
+            text-align: center;
+        }
+        p{
+            text-indent:25px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="connment">
+
+</div>
+
+<script type="text/javascript" src="../../lib/jquery/jquery1.11.1.min.js"></script>
+<script type="text/javascript">
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+            };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.ajax({
+            url:'tenderAgreement.html',
+            dataType:'text',
+            success:function(data) {
+                $("#connment").html(data);
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,802 @@
+@import "css/swiper2.min.css";
+@import "css/index";
+
+/*container start*/
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+.top-main{
+  width: 100%;
+  height:523px;
+  margin: 0 auto;
+  background: url("img/givedata/banner.png") center no-repeat;
+}
+/*注册 register*/
+.top-wrap{
+  width: 1200px;
+  height: 754px;
+  margin: 0 auto;
+  overflow: hidden;
+  .register-main{
+    float:right;
+    margin-top: 70px;
+    padding: 20px 30px;
+    background: #fff;
+    .register-title{
+      margin-bottom: 12px;
+     height: 37px;
+      background: url("img/givedata/register-title.png") center no-repeat;
+    }
+    //h2{
+    //  font-size: 26px;
+    //  color:#3a3a3a;
+    //  padding-bottom: 12px;
+    //  span{
+    //    display: inline-block;
+    //    vertical-align: middle;
+    //  }
+    //  i{
+    //    display: inline-block;
+    //    vertical-align: middle;
+    //    color: #ff523a;
+    //    font-style: normal;
+    //
+    //  }
+    //  .color-special{
+    //    font-size: 40px;
+    //    color: #ff523a;
+    //  }
+    //}
+    .user-common{
+      height: 38px;
+      margin-bottom: 14px;
+      input{
+        border: 1px solid #f0f0f0;
+        text-indent: 6px;
+        color: #a9a9a9;
+      }
+    }
+    .user-num,.user-psw{
+      width: 302px;
+    }
+    .J-num,.J-psw{
+      width:302px;
+      height: 38px;
+      background: #f6f5f5;
+    }
+    //验证码
+    .user-verigy{
+      margin-bottom: 14px;
+    }
+    .user-voice{
+      text-align: right;
+      margin-bottom: 18px;
+    }
+    .user-verigy .J-verify,.user-verigy .J-phoneyzm{
+      float: left;
+      width: 178px;
+      height: 38px;
+      background: #f6f5f5;
+    }
+    .user-verigy .change-verify,.user-verigy .get-phoneyzm{
+      float: right;
+      margin-left: 8px;
+      width: 116px;
+      height: 38px;
+      background: #f6f5f5;
+      cursor: pointer;
+    }
+    //语音验证码
+    .user-voice .J-voiceyzm{
+      font-size: 14px;
+      color: #ff523a;
+    }
+    .user-verigy .get-phoneyzm{
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      line-height: 38px;
+    }
+    //同意协议
+    .user-agree{
+      margin-bottom: 16px;
+      position: relative;
+      span{
+        display: inline-block;
+        font-size: 14px;
+        color: #ddd;
+        text-indent: 8px;
+        a{
+          font-size: 14px;
+          color: #7bade1;
+          cursor: pointer;
+        }
+      }
+    }
+    .user-agree .check-style{
+      display: inline-block;
+      vertical-align: middle;
+      width: 13px;
+      height: 13px;
+    }
+    .user-agree .no-check{
+      background: url("img/check.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    .user-agree .checked{
+      background: url("img/checked.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    .register-btn{
+      width: 304px;
+      height: 48px;
+      //text-align: center;
+      //line-height: 48px;
+      margin:0 auto 14px;
+      cursor: pointer;
+      background: url("img/givedata/register-btn.png") center no-repeat;
+      //background-color: #fe454d;
+      //font-size:24px;
+      ////color:#fffb8c;
+    }
+    .have-login{
+      text-align: right;
+      font-size: 14px;
+      color: #3a3a3a;
+    }
+    .have-login .logined{
+      text-decoration: underline;
+      color: #ff523a;
+    }
+  }
+  /*registered*/
+  .registered{
+    float:right ;
+    margin-top: 70px;
+    background-color: #fff;
+    padding: 40px 30px;
+    text-align: center;
+  }
+  .logo-company{
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background-color: #ee262e;
+    margin: 0 auto 40px;
+  }
+  .logo-company img{
+    display: inline-block;
+    width: 48px;
+    height:58px;
+    left:50%;
+    top:50%;
+    margin-top:22px;
+  }
+  .user-info{
+    font-size: 16px;
+    color: #3a3a3a;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight:300;
+  }
+  .user-money{
+    font-size: 16px;
+    color: #909090;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .user-money .go-money{
+    font-size: 16px;
+    color: #fe454d;
+    cursor: pointer;
+  }
+  .all-money{
+    padding-bottom: 30px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #3a3a3a;
+  }
+  .enter-account{
+    display: block;
+    width: 304px;
+    height: 48px;
+    margin:0 auto;
+    cursor: pointer;
+    background: url("img/givedata/registered-btn.png") center no-repeat;
+
+  }
+}
+
+
+/*container-main start*/
+.container-main{
+  width: 100%;
+  margin: 0 auto;
+}
+.container-wrap{
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+/*投资赢流量 start*/
+.invest-flow{
+  position: relative;
+  width: 100%;
+  height: 425px;
+  background: url("img/givedata/invest-flow.png") center no-repeat;
+  .xyb-account{
+    position: absolute;
+    top:56px;
+    left: 50%;
+    margin-left:42px;
+    font-size: 24px;
+    color: #fff;
+  }
+  .xyb-cur{
+    position: absolute;
+    top:80px;
+    left: 50%;
+    margin-left:50px;
+    font-size: 24px;
+    color: #fff;
+  }
+  .datas-num{
+    position: absolute;
+    top: 38px;
+    height:90px;
+    line-height: 90px;
+    color: #fe454d;
+    text-align: center;
+    .big{
+      font-size: 66px;
+    }
+    .small{
+      font-size: 44px;
+    }
+    .center{
+      font-size:50px;
+    }
+  }
+  .xscp-data{
+    right: 50%;
+    width: 230px;
+    margin-right: 115px;
+  }
+  .xyb-data{
+    width: 220px;
+    left: 50%;
+    margin-left:150px;
+  }
+  .invest-btn{
+    position: absolute;
+    width: 247px;
+    height: 71px;
+    bottom: 0;
+    background: url("img/givedata/buy-btn.png") center no-repeat;
+  }
+  .left{
+    right: 50%;
+    margin-right: 123.5px;
+  }
+  .right{
+    left: 50%;
+    margin-left: 123.5px;
+  }
+}
+
+//end
+//活动
+.activity-rule{
+  width: 100%;
+  background: #e01c1c;
+  padding:30px 0 28px 0;
+  .rule{
+    cursor: pointer;
+    height: 47px;
+    background: url("img/givedata/rule.png") center no-repeat;
+  }
+  .rule-details{
+    margin: 24px auto 0;
+    width: 1002px;
+    background-color: #e01c1c;
+    position:relative;
+    .rule-btnbkg{
+      position:absolute;
+      width: 248px;
+      left: 50%;
+      margin-left: -124px;
+      top:-24px;
+      background-color:#e01c1c;
+      .rule-btn{
+        width:195px;
+        height: 47px;
+        background: url("img/givedata/rule-btn.png") center no-repeat;
+        cursor: pointer;
+        margin: 0 auto;
+      }
+    }
+
+    .rules-info{
+      width: 1000px;
+      margin:0 auto;
+      border: 1px solid #fff;
+      .details-list{
+        padding:60px 0 50px 16px;
+        font-size: 20px;
+        text-align: left;
+        color: #fff;
+        .details-listB{
+          padding-bottom: 0;
+        }
+        li{
+          list-style: square outside url("img/givedata/rule-icon.png");
+          font-size: 20px;
+          text-align: left;
+          color: #fff;
+          padding-bottom: 10px;
+          margin-left: 20px;
+          .list-item{
+            color: #fdff51;
+          }
+        }
+
+      }
+    }
+    .rules-common{
+      width: 990px;
+      margin: 20px auto 0;
+      h3{
+        width:118px;
+        text-align: center;
+        font-size: 20px;
+        color: #ff4263;
+        background-color: #fff;
+        height: 32px;
+        line-height: 32px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        -webkit-border-radius:4px;
+        -moz-border-radius:4px;
+        -o-border-radius:4px;
+      }
+      ul{
+        width: 990px;
+        margin: 0 auto;
+        li{
+          width: 990px;
+          text-align: left;
+          list-style: disc outside;
+          margin-left: 20px;
+          font-size: 20px;
+          color: #fffebd;
+        }
+      }
+    }
+
+  }
+}
+//背景
+.bkg-special{
+  width: 100%;
+  height: 121px;
+  background:url("img/givedata/bkg-special.png") center no-repeat;
+}
+.wrap-content{
+  width: 100%;
+  background: #ffec9e;
+  overflow: hidden;
+  //优势
+  .advantage-info{
+     height: 593px;
+     background: url("img/givedata/advantage.png") center no-repeat;
+    .advantage-data{
+      width: 1108px;
+      margin: 0 auto;
+      height: 70px;
+      padding-top:94px;
+      clear: both;
+      li{
+        float: left;
+        width: 210px;
+        margin-left: 153px;
+        color: #ff4263;
+        text-align: left;
+        .advantage-content{
+          display: block;
+          font-size: 20px;
+          font-weight: lighter;
+        }
+        p{
+          font-size: 35px;
+          color: #ff4263;
+          width: 210px;
+          span{
+            color: #8348ff;
+          }
+        }
+      }
+      .advantage-first{
+        width:180px;
+      }
+    }
+    .advantage-time{
+      font-size: 14px;
+      color: #ffdbdb;
+      text-align: right;
+      width: 942px;
+      margin: 0 auto;
+    }
+  }
+  //明星
+  .star-product{
+    height: 592px;
+    margin:92px auto 0;
+    .star-title{
+      padding-bottom: 15px;
+      height: 92px;
+      background: url("img/givedata/star-recommond.png") center no-repeat;
+    }
+    .product-list{
+      width: 1008px;
+      height: 491px;
+      margin: 0 auto;
+      clear: both;
+      .bbgs-data{
+        .list-border{
+          width: 286px;
+        }
+      }
+      .product-data{
+        width: 386px;
+        margin:100px 0  0 28px;
+        text-align: center;
+        h4{
+          font-size: 30px;
+          color: #713ce0;
+          text-align: center;
+        }
+        .product-point{
+          font-size: 16px;
+          color: #713ce0;
+          text-align: center;
+        }
+        .detail-num{
+          height: 90px;
+          color: #fd4b4b;
+          .big{
+            font-size: 70px;
+            font-weight: 400;
+          }
+          .small{
+            font-size: 36px;
+          }
+        }
+        .list-border{
+          display:block;
+          width: 276px;
+          margin: 0 auto;
+          height: 1px;
+          background-color:#fea6a6;
+        }
+        .detail-info{
+          clear: both;
+          width:260px;
+          margin: 18px auto 0;
+          height: 42px;
+          .info{
+           .right-fuhao{
+             display: inline-block;
+             width: 21px;
+             height: 21px;
+             vertical-align: middle;
+              background: url("img/givedata/right.png") center center/100% 100% no-repeat;
+           }
+           .info-detail{
+             font-size:20px;
+             color: #713ce0;
+             vertical-align: middle;
+             display: inline-block;
+             text-indent: 4px;
+           }
+          }
+          .info-left{
+            float: left;
+          }
+          .info-right{
+            float: right;
+          }
+        }
+      }
+      li{
+        position: relative;
+        width: 434px;
+        height: 485px;
+        float: left;
+        a{
+          position: absolute;
+          width: 278px;
+          height: 87px;
+          bottom: 36px;
+          left: 50%;
+          margin-left: -130px;
+          background: url("img/givedata/buy-btn2.png") center no-repeat;
+        }
+      }
+     .yjdj{
+       background: url("img/givedata/yjdj.png") center no-repeat;
+     }
+      .bbgs{
+        margin-left: 140px;
+        background: url("img/givedata/bbgs.png") center no-repeat;
+      }
+    }
+  }
+  /*媒体*/
+  .media-content{
+    width: 100%;
+    margin: 0 auto;
+    height: 437px;
+    padding-top: 83px;
+    .media{
+      height:437px;
+      background: url("img/givedata/media.png") center no-repeat ;
+    }
+  }
+
+  .join-in{
+    padding-top: 58px;
+    font-size: 24px;
+    color: #713ce0;
+    border-bottom: 1px solid #fd4b4b;
+    width: 450px;
+    margin: 0 auto;
+  }
+  .join-in span{
+    font-size: 34px;
+    color:#fd4b4b;
+    font-weight: 700;
+  }
+  .suspend{
+    display: block;
+    width:100%;
+    height: 184px;
+    cursor: pointer;
+    background: url("img/givedata/footer.png") center no-repeat;
+  }
+
+}
+
+.suspend-special{
+  width:100%;
+  height: 184px;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right:0;
+  z-index:800;
+  cursor: pointer;
+  background: url("img/givedata/footer.png") center no-repeat;
+}
+
+/*certificate*/
+.certificate{
+  position: relative;
+  width: 1150px;
+  height: 482px;
+  margin: 80px auto 0;
+  background: url("img/givedata/certificate.png") center no-repeat;
+}
+
+.certificate-main{
+  width: 1162px;
+  margin: 0 auto;
+}
+.swiper-container{
+  width: 1020px;
+  margin: 0 auto;
+  padding-top: 120px;
+  height: 278px;
+}
+.swiper-slide{
+  width: 330px !important;
+  text-align: center;
+  margin-left: 9px;
+}
+.swiper-slide .slide-img{
+  width: 330px;
+  height: 230px;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+.swiper-slide .slide-img img{
+  display: inline-block;
+  vertical-align:middle;
+  cursor: pointer;
+}
+.swiper-slide p{
+  font-size: 16px;
+  color:#f9281f;
+}
+/*left right btn*/
+.certificate-main .btn-common{
+  position: absolute;
+  top:50%;
+  margin-top: -15px;
+  width: 26px;
+  height: 30px;
+  cursor: pointer;
+}
+.certificate-main .left-btn{
+  left:32px;
+  background: url("img/givedata/left-btn.png") no-repeat center;
+}
+.certificate-main .right-btn{
+  right:32px;
+  background: url("img/givedata/right-btn.png") no-repeat center;
+}
+
+
+
+/*container-main end*/
+/*container end*/
+//注册弹窗
+
+.disgray{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background:rgba(0,0,0,0.6);
+}
+.register-pop{
+  position: fixed;
+  width: 1080px;
+  height:480px;
+  left: 50%;
+  top: 50%;
+  margin-top: -240px;
+  margin-left:-540px;
+  background:url("img/givedata/pop.png") no-repeat;
+  background-size: 100% 100%;
+  /*overflow: hidden;*/
+}
+
+.top-wrap .register-special{
+  position: fixed;
+  top:50%;
+  left:50%;
+  margin-left: 124px;
+  margin-top: -219px;
+  //margin-top: -232.5px;
+  z-index: 10000;
+}
+.register-pop .logo-small{
+  display: inline-block;
+  width: 170px;
+  height: 46px;
+  margin: 16px 0 0 50px;
+  background: url("img/logo-small.png") no-repeat;
+}
+.register-pop .close{
+  float: right;
+  display: inline-block;
+  margin: 0px 15px 0 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+}
+
+//左侧导航条
+.get-money{
+  display: block;
+}
+.side-bar{
+  position: fixed;
+  right: 10px;
+  top:50%;
+  z-index: 900;
+  margin-top: -197.5px;
+  width:137px;
+  height: 395px;
+  background: url("img/givedata/sider.png") no-repeat;
+  .sider-close{
+    float: right;
+    display: inline-block;
+    font-size: 24px;
+    color: #000;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+
+  }
+  .get-disnone{
+    display: none;
+  }
+  h3,.get-money{
+    margin: 126px auto 6px;
+    width: 116px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    font-size:18px;
+    color: #fff;
+    cursor: pointer;
+    background:#ff3c44;
+    border-radius: 12px;
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    -o-border-radius:12px;
+  }
+  ul{
+    text-align: center;
+    li{
+      padding: 6px 0;
+      border-bottom: 1px solid #692fdf;
+      font-size:16px;
+      color: #fff;
+      a{
+        font-size:16px;
+        color: #fff;
+      }
+    }
+    .last{
+      border: none;
+    }
+    .lighter-location{
+      background: #ff3c44;
+      a{
+        color: #fff;
+      }
+    }
+  }
+}
+.activity-time{
+  padding: 14px;
+  .c_close{
+    font-size: 14px;
+    text-align: right;
+    cursor: pointer;
+  }
+  .activity-content{
+    font-size: 16px;
+    text-align: center;
+    padding-top:14px;
+    padding-bottom: 14px;
+  }
+  .btn_center{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #999;
+    cursor: pointer;
+    background-color: #2e82ff;
+    color: #fff;
+  }
+}
+.mui-dialog .mui-dialog-inner{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

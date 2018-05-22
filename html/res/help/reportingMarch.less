@@ -1,0 +1,55 @@
+
+.section {
+  text-align: center;
+  background: #191919;
+  .spec {
+    width: auto;
+  }
+}
+
+.sectiontopbg {
+  background: url("img/page1.png") 50%;
+}
+.sectionbottombg {
+  background: url("img/page16.png") 50%;
+}
+
+#menu li {
+  display: block;
+  width: 12px;
+  height: 12px;/*
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;*/
+  background:url("img/default.png") no-repeat center;
+  opacity: 80;
+  margin-bottom: 15px;
+}
+
+#menu li.active {
+  background:url("img/active.png") no-repeat center;
+}
+
+#menu li:hover {
+  background: url("img/active.png") no-repeat center;
+}
+
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  text-decoration: none;
+  &:focus{outline:none;}
+}
+
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 440px;
+  margin-top: -220px;
+  z-index: 70;
+}

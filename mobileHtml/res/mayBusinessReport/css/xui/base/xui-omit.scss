@@ -1,0 +1,27 @@
+.xui-omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.xui-omit[row="1"] {
+  -webkit-line-clamp: 1;
+}
+
+.xui-omit[row="2"] {
+  -webkit-line-clamp: 2;
+}
+
+.xui-omit[row="3"] {
+  -webkit-line-clamp: 3;
+}
+
+.xui-omit[row="4"] {
+  -webkit-line-clamp: 4;
+}
+
+.xui-omit[row="5"] {
+  -webkit-line-clamp: 5;
+}

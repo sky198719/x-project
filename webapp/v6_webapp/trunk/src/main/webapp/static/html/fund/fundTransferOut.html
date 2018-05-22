@@ -1,0 +1,55 @@
+<div class="navbar no-border">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+    <div class="center sliding">转出</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="fundTransferOut" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">		      	
+        <div class="list-block accordion-list">
+          <ul>             
+            <li>
+               <div class="item-content">   
+                 <div class="item-inner"  style="padding:15px 35px 15px 0"> 
+                    <div class="item-title">转出至账户余额 </div>
+                  </div>
+                </div>
+              </li>   
+              <li>
+                    <div class="item-content">                        
+                        <div class="item-inner" style="padding:15px 0 15px 0">
+                            <div class="item-title" style="width:140px;">转出金额</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="输入转出金额" id="trade_num" class="dmp_content_input">
+                            </div>
+                            <div class="item-after"><span class="font-blue" style="padding-right:15px;" id="transferOutAll">全部转出</span></div>
+                        </div>
+                    </div>
+              </li>              
+          </ul>
+         </div>
+        <div class="content-block-title text-right">
+            <span>
+                <h6 style="white-space: pre-wrap; line-height: 25px;" id="maxMoney">最大可转出<span class="font-orange">0.00</span>元</h6>
+            </span>
+        </div>
+        <div class="list-block inset" style="margin-top:20px;">
+          <ul>
+              <li><a href="#" class="button button-001 active dmp-click" id="confirmButton" dmp_type="click" dmp_event="redeem" dmp_target_type="1" dmp_target_id="1">确认转出</a></li>
+          </ul>
+        </div>
+        <input type="hidden" id="dde_account" value=""/>
+        <div class="content-block-title">
+             <span>
+               <h6 style="white-space: pre-wrap; line-height: 25px;" class="font-grey-A9">该笔转出金额，当前不计算收益</h6>
+             </span>
+         </div>        
+    </div>
+  </div>
+</div>

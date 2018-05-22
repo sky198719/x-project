@@ -1,0 +1,41 @@
+{{#each list}}
+<li class="swipeout">
+        {{#if isTender}}
+        <div class="swipeout-content">
+            <div class="bid-mark bidding">
+                <h6>投标中</h6>
+            </div>
+        {{else}}
+        <div class="swipeout-content trade-full">
+            <div class="bid-mark">
+                <h6>已抢完</h6>
+            </div>
+        {{/if}}
+            <a href="#" class="item-link item-content borrowList" data-id="{{borrowId}}">
+                <div class="item-inner">
+                    <div class="item-title-row xxd-item-row mt10">
+                        <div class="item-title">{{name}}</div>
+                    </div>
+                    <div class="item-subtitle">
+                        <div class="progress">
+                            <div class="progress-bar {{#if isTender}} {{else}} progress-bar-full {{/if}}
+                            " style="width: {{borrowPercent}};"></div>
+                        </div>
+                    </div>
+                    <div class="item-title-row xxd-item-row mt15">
+                        <div class="item-after font-red"><span class="font18">{{apr}}</span> <span class="font13 pt5">%</span></div>
+                        <div class="item-after"><span class="font18">{{timeLimit}}</span><span class="font13 pt5">{{dayType}}</span></div>
+                        <div class="item-after"><span class="font13 pt5">剩余可投</span> <span class="font18">{{surplusAccount}}</span> <span class="font13 pt5">元</span></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{#if isTender}}
+        <div class="swipeout-actions-right" data-id="{{borrowId}}">
+            <a href="#" class="bg-green express-bid">快捷投标</a>
+        </div>
+        {{else}}
+        {{/if}}
+    </div>
+</li>
+{{/each}}

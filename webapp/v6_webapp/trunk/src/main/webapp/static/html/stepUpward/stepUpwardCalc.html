@@ -1,0 +1,46 @@
+a<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">
+            <span id="itemName">收益计算</span>
+        </div>
+        <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through toolbar-through">
+	<div data-page="stepUpwardCalc" class="page" directory="stepUpward">
+		<div class="page-content stepUpwardCalc" style="list-style-type:none; ">
+			<div class="bg2">
+					<ul style="list-style-type: none; padding: 0px;">
+						<li>
+							<input id="tenderAmount" type="tel" placeholder="请输入金额"/>
+							<span>元</span> 
+							<input type="text" id="selectTerm" value="选择期限" readonly/>
+						</li>
+						<li>
+							<div id="calc">计算</div>
+						</li>
+					</ul>
+			</div>
+			<div class="bg3">
+				<div class="case1">
+					<span id="stepUpwardApr1" style="width: 0%"></span> 
+					<strong id="stepUpwardApr2" style="left: 0%;">年化<br/><span id="stepUpwardApr">0%</span></strong>
+				</div>
+				<em class="font1">步步高升&nbsp;&nbsp;&nbsp;历史收益：<span id="stepUpwardIncome">0.00</span>元</em>
+				<div class="case2">
+					<span id="bankApr1" style="width: 0%"></span> 
+					<strong id="bankApr2" style="left: 0%;">年化<br/><span id="bankApr">0%</span></strong>
+				</div>
+				<em class="font2">银行活期&nbsp;&nbsp;&nbsp;历史收益：<span id="bankIncome">0.00</span>元</em>
+			</div>
+<!-- 			<div class="bg4"> -->
+<!-- 				<div id="calc_submitTender">立即抢购</div> -->
+<!-- 			</div> -->
+		</div>
+		<div class="toolbar no-border" style="height: 55px;">
+            <div class="stepUpwardCalc-button" id="calc_submitTender" style="color:#fff;">立即抢购</div>
+        </div>
+	</div>
+</div>

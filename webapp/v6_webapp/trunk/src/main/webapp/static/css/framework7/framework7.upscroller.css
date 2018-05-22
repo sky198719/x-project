@@ -1,0 +1,47 @@
+/* .upscroller { */
+/* 	-webkit-transform: translate3d(0,0,0); */
+/* 	transform: translate3d(0,0,0); */
+/* 	transition: -webkit-transform 0.5s; */
+/* 	position: fixed; */
+/* 	left:50%; */
+/* 	margin-left:-47px; */
+/* 	top:-50px; */
+/* 	z-index:9999 !important; */
+/* 	height: 20px; */
+/* 	border-radius:20px; */
+/* 	width: 100px; */
+/* 	background: #4792e6; */
+/* 	font-size:14px; */
+/* 	text-align: center; */
+/* 	padding: 2px; */
+/* 	padding-top:3px; */
+/* 	color: #fff !important; */
+/* 	cursor: pointer; */
+/* } */
+
+/* .upscroller.show { */
+/* 	-webkit-transform: translate3d(0,110px,0); */
+/* 	transform: translate3d(0,110px,0); */
+/* } */
+.upscroller {
+	bottom:-100px;
+	position:fixed;
+	z-index:9999999 !important;
+	right:10px;
+	width: 52px;
+  	height: 41px;
+	cursor: pointer;
+	background-image:url(../../img/xxd/toTop.png);
+	background-repeat: no-repeat;
+  	background-size: 40px;
+	filter:alpha(opacity=50); 
+	-moz-opacity:0.5; 
+	opacity:0.5;
+  	-moz-transition:bottom 500ms ease-in-out;
+	-webkit-transition: bottom 500ms ease-in-out;
+}
+.upscroller.show {
+	bottom:15px;
+	-moz-transition-duration:500ms;
+	-webkit-transition-duration:500ms;
+}

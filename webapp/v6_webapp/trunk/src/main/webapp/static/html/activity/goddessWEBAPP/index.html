@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>女神节</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/flexible_css.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="../../../js/utils/track.js"></script>
+</head>
+<body>
+<!--顶部-->
+<header></header>
+<!--游戏部分-->
+<section class='content clearfix'>
+    <div class='prize-show f_left'>
+        <ul></ul>
+    </div>
+    <div class='f_right times'>
+        <span>您有</span>
+        <span class='game-times'></span>
+        <span>次走心机会</span>
+    </div>
+    <div class='heart'>
+        <div class='rose'></div>
+    </div>
+    <div class='start-btn center'>
+        <input type="button" class='ready ready-go'>
+    </div>
+</section>
+<!--排名大奖-->
+<section class='news'>
+    <div class='rank'>
+        <ul></ul>
+    </div>
+    <p class='center inviteFriend'>我已邀请好友注册<span class="invite"></span>人，投资<span class='investment'></span>人。</p>
+</section>
+<!--底部按钮-->
+<div class='footer-box'></div>
+<footer>
+    <input type="button" class='attention'>
+    <input type="button" class='raiders'>
+    <input type="button" class='share'>
+    <input type="button" class='check-price'>
+    <input type="button" class='ready-go'>
+</footer>
+<!--弹框层-->
+<section class='all-popup'>
+    <div class='mask'></div>
+    <div class='popup popup-price'>
+        <div class='price-content'>
+            <div class='close-popup'></div>
+            <div class='know-popup'></div>
+            <div class='price-list'>
+                <ul>
+                </ul>
+            </div>
+            <div class='center page'>
+                <a href="javascript:;" class='page-up'>上一页</a>
+                <a href="javascript:;" class='page-down'>下一页</a>
+            </div>
+        </div>
+    </div>
+    <div class='popup popup-price-no center'>
+        <div class='price-content'>
+            <div class='close-popup'></div>
+            <div class='know-popup'></div>
+            <p>还未获得奖品~</p>
+        </div>
+    </div>
+    <div class='popup popup-dice'>
+        <div class='center'>
+            <p class='dice-more'>前进<span class='step-number'></span>步</p>
+            <p>亲爱的，是福是祸，坚挺住。</p>
+        </div>
+    </div>
+    <div class='popup popup-forward'>
+        <div class='center'>
+            <p class='forword'></p>
+        </div>
+    </div>
+    <div class='popup popup-onceMore'>
+        <div class='center'>
+            <div class='close-popup '></div>
+            <div class='know-popup ready-go'></div>
+            <p>亲爱的，请收好<span></span>，</p>
+            <p>我们继续。</p>
+        </div>
+    </div>
+    <div class='popup popup-noChance'>
+        <div class='center'>
+            <div class='close-popup'></div>
+            <a class='share-popup' href='javascript:;'></a>
+            <a class='invest-popup' href="../../../../#!/static/html/popular/financesList.html?path=popular"></a>
+        </div>
+    </div>
+    <div class='popup popup-praise'>
+        <div class='center'>
+            <div class='close-popup'></div>
+            <div class='know-popup'></div>
+        </div>
+    </div>
+    <div class='popup popup-promptLogin'>
+        <div class='center'>
+            <div class='close-popup'></div>
+            <div class='sign-user'></div>
+        </div>
+    </div>
+    <div class='popup popup-result'>
+        <div class='center'>
+            <div class='close-result'></div>
+            <div class='know-result'></div>
+            <p class='result-msg'></p>
+        </div>
+    </div>
+</section>
+<div class='userLogin-box'>
+    <div class='popup-userLogin center'>
+        <div class='center'>
+            <h3>用户登录</h3>
+            <div class='close-popup'></div>
+            <input class='top-input' type="text" placeholder='请输入账号' id='login_username'>
+            <p class='login-error' id='login_username_error'></p>
+            <input class='top-input' type="password" placeholder='请输入密码' id='login_pwd'>
+            <p class='login-error' id='login_pwd_error'></p>
+            <div class='validate input-box'>
+                <input type="text" placeholder='图片验证码' id='login_img'>
+                <div class='validata-img'>
+                    <img id="VerifyCode" src="../../../../randCode/createVerifyCode.do">
+                </div>
+            </div>
+            <p class='login-error' id='login_img_error'></p>
+            <div class='register center'></div>
+            <a href="../../../../#!/static/html/user/register.html" class="registry">没有账号？请注册</a>
+        </div>
+    </div>
+</div>
+
+<div class='popup-raiders'>
+    <div class='close-popup'></div>
+    <div class='know-popup'></div>
+</div>
+<div class='popup-attention'>
+    <div class='close-popup'></div>
+    <div class='know-popup'></div>
+</div>
+<!--活动未开始与已结束弹框-->
+<!--<div class='time-limit'>-->
+<div class='times-than center'>活动已结束</div>
+<div class='times-less center'>活动未开始</div>
+<div class='pagetop center'>已经是第一页了</div>
+<div class='pagebot center'>已经是最后一页了</div>
+<!--</div>-->
+<!-- 分享内容 -->
+<div class="join">
+    <div class="join-wei join-base ga-xa-event" ga_xa_pro="分享到微博" xa_pro="goddess_share_twitter">分享到微博</div>
+    <div class="join-note join-base ga-xa-event" ga_xa_pro="发送短信" xa_pro="goddess_send_sms">发送短信</div>
+    <div class="join-copy join-base ga-xa-event" ga_xa_pro="复制链接" xa_pro="goddess_copy_link">复制链接</div>
+    <div class="join-cancel join-base ga-xa-event" ga_xa_pro="取消" xa_pro="goddess_cancle">取消</div>
+</div>
+<div class="layer"></div>
+<div class="alerts" id="alert2">
+    <div id="alert2_title"></div>
+    <div id="alert2_cantent"></div>
+    <span id="alert2_close">关闭</span>
+</div>
+</body>
+<script data-main='js/main' src='js/require.min.js'></script>
+</html>

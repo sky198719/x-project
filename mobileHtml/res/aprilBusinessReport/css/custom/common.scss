@@ -1,0 +1,128 @@
+//箭头-------------------------------------------------------
+.ui-arrow {
+  display           : inline-block;
+  position          : absolute;
+  width             : 2rem;
+  height            : 2rem;
+  z-index           : 9;
+  animation         : am-arrow 1.5s infinite ease-in-out;
+  -webkit-animation : am-arrow 1.5s infinite ease-in-out;
+  bottom            : 0;
+  left              : 50%;
+  overflow          : hidden;
+  margin-left       : -1rem;
+}
+
+.ui-arrow:before {
+  content           : " ";
+  display           : block;
+  position          : absolute;
+  width             : 100%;
+  height            : 100%;
+  border            : 2px solid $co-back;
+  transform         : rotate(45deg) translate(-50%, -50%);
+  -webkit-transform : rotate(45deg) translate(-50%, -50%);
+}
+
+.ui-arrow.isend:before {
+  display : none;
+}
+
+.ui-arrow.isend:after {
+  content : attr(data-end);
+  opacity : .5;
+  color   : $co-back;
+}
+
+//标题1------------------------------------------------------
+
+.com-title1 {
+  min-width   : 102px;
+  text-align  : center;
+  font-size   : 16px;
+  color       : $bg-back;
+  //text-shadow : 1px 1px 1px rgba(0, 87, 43, 0.3);
+  background  : linear-gradient(to bottom, $co-main, $co-vice);
+  position    : relative;
+  margin-top  : 15px;
+  display     : inline-block;
+  padding     : 5px 20px;
+}
+
+.com-title1:before {
+  content  : " ";
+  display  : inline-block;
+  position : absolute;
+  width    : 100%;
+  height   : 100%;
+  border   : 2px solid #f9df18;
+  top      : -20%;
+  left     : 7%;
+  z-index  : -1;
+}
+
+//标题3------------------------------------------------------
+
+
+.com-title3 {
+  margin: 2vh 0 1vh 0;
+  position: relative;
+  text-align: justify;
+  text-indent: -.5rem;
+  padding-left: .5rem;
+
+  &:after {
+    content: attr(data-note);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    font-size: .8em;
+    margin-top: .2em;
+    color: $co-back;
+  }
+  &:before {
+    content: " ";
+    display: inline-block;
+    width: .5em;
+    height: 1em;
+    background: currentColor;
+    top: -1px;
+    left: -1px;
+    position: relative;
+    border: 1px solid #141414;
+    vertical-align: middle;
+  }
+}
+
+
+
+.com-title3.co-white:after {
+  color: #888888;
+}
+
+
+
+
+.com-title3.co-white:before {
+  background: #fff;
+}
+
+.com-title3.co-read:before {
+  background: #cccccc;
+}
+
+
+//标题4 ------------------------------------
+.com-title4[co="main"] {
+  background-image        : -webkit-gradient(linear, 0 0, 0 bottom, from($co-main), to($co-vice));
+  -webkit-background-clip : text;
+  -webkit-text-fill-color : transparent;
+}
+
+.com-title4[co="tag3"] {
+  background-image        : -webkit-gradient(linear, 0 0, 0 bottom, from($co-tag2), to($co-tag3));
+  -webkit-background-clip : text;
+  -webkit-text-fill-color : transparent;
+}
+
+.page-box{width: 100%; max-width: 364px; max-height: 508px}

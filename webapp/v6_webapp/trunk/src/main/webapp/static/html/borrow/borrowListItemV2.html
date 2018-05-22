@@ -1,0 +1,79 @@
+{{#each list}}
+{{#if isTender}}
+<li class="swipeout">
+    <div class="swipeout-content" data-id="{{borrowId}}" data-borrwoApr="{{borrowApr}}" data-timeLimit="{{timeLimit}}" data-type="{{borrowType}}">
+        <div class="item-inner pl15">
+            <div class="item-title-row">
+                <div class="item-title text-overflow" style="width: 60%;">
+                    <span class="bus-square">{{borrowType}}</span> {{name}}
+                </div>
+                <div class="item-after" style="line-height: 28px;">剩余可投{{surplusAccount}}</div>
+            </div>
+            <div class="item-subtitle item-title-row mt5">
+                <div class="item-title" style="width: 80%">
+                    <div class="progress">
+                        <div class="progress-bar" style="width:{{borrowPercent}};"></div>
+                    </div>
+                </div>
+                <div class="item-after">
+                    <div class="send">{{borrowPercent}}
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-text mt5" style="height: 50px;display: list-item;">
+                    <span style="float: left;width: 33%">
+                        {{apr}}
+                        <br>
+                        <span style="line-height: 28px;">年化收益</span>
+                    </span>
+                    <span style="float: left;width: 33%;line-height: 23px;">
+                        <span class="font18 font-3A3939">{{period}}{{periodunit}}</span>
+                        <br>
+                        <span style="line-height: 28px;">期限</span>
+                    </span>
+                    <span style="float: right;width: 33%;text-align: right;">
+                        <button class="button qg-btn" style="display: inline;">立即抢购</button>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <div class="swipeout-actions-right borrowListSwipeoutV2" data-id="{{borrowId}}">
+        <a href="#" class="bg-green express-bid">快捷投标</a>
+    </div>
+</li>
+{{else}}
+<li class="swipeout">
+    <div class="swipeout-content" data-id="{{borrowId}}">
+        <div class="item-inner pl15">
+            <div class="item-title-row">
+                <div class="item-title text-overflow font-999" style="width:70%;">
+                    <span class="bus-square-disable">{{borrowType}}</span> {{name}}
+                </div>
+            </div>
+            <div class="item-text mt15" style="height: 50px;display: list-item;">
+                    <span style="float: left;width: 33%">
+                        {{apr}}
+                        <br>
+                        <span style="line-height: 28px;">年化收益</span>
+                    </span>
+                    <span style="float: left;width: 26%;line-height: 23px;">
+                        <span class="font18 font-3A3939">{{timeLimit}}{{dayType}}</span>
+                        <br>
+                        <span style="line-height: 28px;">期限</span>
+                    </span>
+
+                    <span style="float: left;width: 40%;line-height: 23px;">
+                       <span class="font18 font-3A3939">{{surplusAccount}}</span>
+                       <br>
+                       <span style="line-height: 28px;">剩余可投</span>
+                   </span>
+            </div>
+        </div>
+        <div class="game-over">
+            <img src="static/img/xxd/buy-none.png" width="68px" height="68px;">
+        </div>
+    </div>
+</li>
+{{/if}}
+{{/each}}

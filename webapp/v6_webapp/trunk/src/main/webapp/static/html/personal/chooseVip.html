@@ -1,0 +1,56 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">客服编号</div>
+        <div class="right">
+            <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+	<!-- Page, data-page contains page name-->
+	<div data-page="chooseVip" class="page chooseVip" directory="personal">
+		<!-- Search bar -->
+
+<!-- 		<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init"> -->
+<!-- 			<div class="list-block list-block-search searchbar-found "> -->
+<!-- 				<div class="item-content" style="width:100%"> -->
+<!-- 					<div class="searchbar-input item-inner"> -->
+<!-- 						<input type="search" placeholder="请输入客服编号" class="searchbarInput"> -->
+<!-- 						<a href="#" class="searchbar-clear"></a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item-after"> -->
+<!-- 						<a href="#" class="back">取消</a> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</form> -->
+
+		<!-- Search bar -->
+		<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+			<div class="searchbar-input" style="    width: 85%;">
+				<input type="search" placeholder="请输入客服编号" class="searchbarInput">
+				<a href="#" class="searchbar-clear"></a>
+			</div>
+			<a href="#" class="back" style="width:15%;padding-left:8px;text-align:center;">取消</a>
+		</form>
+
+		<!-- Search bar overlay -->
+<!-- 		<div class="searchbar-overlay"></div> -->
+
+		<div class="page-content" style="padding-bottom:3px;">
+			<!-- This block will be displayed if nothing found -->
+			<div class="content-block searchbar-not-found defaultValue">
+				<div class="content-block-inner searchBarDefaultResult">未找到匹配结果</div>
+			</div>
+
+			<!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+			<div class="list-block list-block-search searchbar-found" style="height: 100%;">
+				<input id="vipexp" type="hidden"/>
+				<ul class="vipList" style="height: 100%; overflow: auto;">
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

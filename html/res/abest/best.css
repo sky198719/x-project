@@ -1,0 +1,189 @@
+.warp-div {
+  width: 100%;
+  min-width: 1020px;
+  background: none no-repeat center;
+}
+.warp-div .inner-div {
+  width: 1020px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg1 {
+  background-image: url(img/bg1.jpg);
+}
+.bg1 .area1 {
+  height: 650px;
+}
+.bg2 {
+  background-image: url(img/bg2.jpg);
+}
+.bg2 .area2 {
+  height: 546px;
+}
+.bg3 {
+  background-image: url(img/bg3.jpg);
+}
+.bg3 .area3 {
+  height: 528px;
+}
+.bg4 {
+  background-image: url(img/bg4.jpg);
+}
+.bg4 .area4 {
+  height: 176px;
+}
+.bg5 {
+  background-image: url(img/bg5.jpg);
+}
+.bg5 .area5 {
+  height: 318px;
+}
+.bg5 .area5 p {
+  position: absolute;
+  display: inline-block;
+  width: 217px;
+  color: #ee3147;
+}
+.bg5 .area5 p span {
+  font-weight: bold;
+  font-size: 30px;
+}
+.bg5 .area5 p i {
+  font-style: normal;
+  font-size: 30px;
+}
+.bg5 .area5 p.totaltrade {
+  text-align: left;
+  top: 14px;
+  left: 21px;
+}
+.bg5 .area5 p.totalincome {
+  left: 238px;
+  top: 14px;
+  text-align: right;
+}
+.bg5 .area5 p.totalcount {
+  text-align: left;
+  top: 147px;
+  left: 21px;
+}
+.bg5 .area5 p.totalbalace {
+  left: 238px;
+  top: 147px;
+  text-align: right;
+}
+.bg5 .area5 p.totalbalace span {
+  font-size: 21px;
+}
+.bg6 {
+  background-image: url(img/bg6.jpg);
+}
+.bg6 .area6 {
+  height: 152px;
+}
+.bg7 {
+  background-image: url(img/bg7.jpg);
+}
+.bg7 .area7 {
+  height: 382px;
+  text-align: center;
+}
+.bg7 .area7 i {
+  display: inline-block;
+  position: absolute;
+  width: 33px;
+  height: 90px;
+  right: 66px;
+  top: 127px;
+  cursor: pointer;
+}
+.bg7 .area7 i.left {
+  left: 61px;
+}
+.bg7 .area7 i.right {
+  right: 66px;
+}
+.bg7 .area7 .wrap-partner {
+  width: 756px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.bg7 .area7 .wrap-partner ul {
+  display: inline-block;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 25px;
+  height: 300px;
+}
+.bg7 .area7 .wrap-partner ul li {
+  float: left;
+  display: inline-block;
+}
+.bg7 .area7 .wrap-partner ul li a {
+  margin: 25px;
+  display: inline-block;
+  width: 202px;
+  height: 245px;
+  background: none no-repeat center;
+}
+.bg7 .area7 .wrap-partner ul li a.ad1 {
+  background-image: url("img/award1.png");
+}
+.bg7 .area7 .wrap-partner ul li a.ad2 {
+  background-image: url("img/award2.png");
+}
+.bg7 .area7 .wrap-partner ul li a.ad3 {
+  background-image: url("img/award3.png");
+}
+.bg7 .area7 .wrap-partner ul li a.ad4 {
+  background-image: url("img/award4.png");
+}
+.bg7 .area7 .wrap-partner ul li a.ad5 {
+  background-image: url("img/award5.png");
+}
+.bg7 .area7 .wrap-partner ul li a.ad6 {
+  background-image: url("img/award6.png");
+}
+.bg8 {
+  background-image: url(img/bg8.jpg);
+}
+.bg8 .area8 {
+  height: 544px;
+}
+.bg8 .area8 ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  top: 234px;
+  text-align: center;
+  left: 13px;
+}
+.bg8 .area8 ul li {
+  float: left;
+  display: inline-block;
+  width: 324px;
+  height: 177px;
+}
+.bg8 .area8 ul li.mid {
+  margin: 0 10px;
+}
+.bg8 .area8 ul li a {
+  display: inline-block;
+  width: 324px;
+  height: 177px;
+}
+.bg9 {
+  background-image: url(img/bg9.jpg);
+}
+.bg9 .area9 {
+  height: 195px;
+}
+.bg9 .area9 a {
+  position: absolute;
+  top: 30px;
+  left: 267px;
+  display: inline-block;
+  width: 478px;
+  height: 90px;
+}

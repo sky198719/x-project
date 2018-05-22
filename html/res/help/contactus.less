@@ -1,0 +1,121 @@
+@import "css/index";
+
+/*联系我们*/
+.g-right {
+  .m-con-wrap {
+    .m-con-bd {
+      margin: 20px auto;
+      width: 900px;
+      border-bottom: 1px dashed @col-eee;
+      p {
+        padding-left: 0;
+      }
+    }
+    .contaus-map {
+      padding-bottom: 20px;
+      .headcomp {
+        width: 556px;
+        height: 325px;
+        border: 4px solid #bddcff;
+      }
+      .headcomadr {
+        margin: 10px 0;
+      }
+      .branchcmp {
+        font-size: @font14px;
+        color: @col-57a;
+        padding-bottom: 25px;
+        cursor: pointer;
+      }
+    }
+    .contaus-info {
+      padding-bottom: 35px;
+      i {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        vertical-align: middle;
+        margin-right: 10px;
+        &.contus-phone {
+          background: url("@{imgurl}contaus-phone.png") no-repeat center;
+        }
+        &.contaus-client {
+          background: url("@{imgurl}contaus-client.png") no-repeat center;
+        }
+        &.contaus-global {
+          background: url("@{imgurl}contaus-global.png") no-repeat center;
+        }
+      }
+      li {
+        font-size: @font14px;
+        line-height: 30px;
+      }
+      .w230 {
+        width: 230px;
+      }
+      .w425 {
+        width: 425px;
+      }
+
+    }
+    .brancom-site {
+      width: 874px;
+      border-bottom: none;
+      .areas {
+        li {
+          float: left;
+          display: inline-block;
+          width: 83px;
+          height: 28px;
+          margin-right: 45px;
+          line-height: 28px;
+          font-size: @font14px;
+          color: @col-57a;
+          text-align: center;
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          border-radius: 6px;
+          border: 1px solid @col-57a;
+          background-color: @col-fff;
+          &.active, &:hover {
+            color: @col-fff;
+            background-color: @col-57a;
+            cursor: pointer;
+          }
+          &.last {
+            margin-right: 0;
+          }
+        }
+      }
+      .adresses {
+        .mr100 {
+          margin-right: 100px;
+        }
+        ul {
+          float: left;
+          width: 364px;
+          margin-top: 30px;
+          li {
+            font-size: @font14px;
+            color: @col-666;
+            line-height: 30px;
+            &.name {
+              font-size: @font18px;
+              color: @col-000;
+            }
+            span {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .paging-info {
+        margin: 45px auto;
+        text-align: center;
+        .pagination {
+          .pag();
+        }
+      }
+    }
+  }
+}

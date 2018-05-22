@@ -1,0 +1,35 @@
+{{#each list}}
+	<li class="swipeout">
+		<div class="card">
+			<div class="card-header" name="showPlanDetail" data-id="OS20151218360">
+				<span class="font18 text-overflow">{{name}}</span>
+				<span class="color-blue" style="margin-right: 5px;">
+				{{#if isFinished}}已完成{{else}}锁定期{{/if}}</span>
+			</div>
+			<div class="card-content">
+				<div class="card-content-inner">
+					<div class="width100 mb5">
+						<span>投资金额：</span><span style="margin-left:10px;">{{effectiveMoney}}&nbsp;元</span>
+					</div>
+					<div class="width100 mb5">
+						<span>历史年化收益：</span><span style="margin-left:10px;color:red;">{{apr}}%</span>
+					</div>
+					<div class="width100 mb5">
+						<span>投资时间：</span><span style="margin-left:10px;">{{addTime}}</span><span class="right">锁定期</span>
+					</div>
+					<div class="width100 mb5">
+						<span>历史收益：</span><span style="margin-left:10px;color:#333333;">{{repayInterest}}&nbsp;元</span><span class="right" style="color:red;">{{timeLimit}}天</span>
+					</div>
+					<div class="width100 mb5">
+						债权列表：<span class="color-blue userTradeList" data-joinid="{{joinId}}">点击查看</span>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<div class="row width100">
+					<span>于&nbsp;{{finishTime}}&nbsp;到期，本金和收益{{#if isFinished}}已{{else}}将{{/if}}返还至您的新新贷账户</span>
+				</div>
+			</div>
+		</div>
+	</li>
+{{/each}}

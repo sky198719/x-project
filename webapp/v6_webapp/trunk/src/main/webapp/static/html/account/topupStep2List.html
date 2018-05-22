@@ -1,0 +1,11 @@
+{{#each list}}
+<li>
+    <a href="#" class="item-link item-content topup_bankList" data-id="{{bankId}}" data-code="{{bankCode}}">
+        <div class="item-inner">
+            <div class="item-title-row">
+            <div class="item-title bank {{bankCode}}" style="height: 40px;"><div style="padding-left: 70px;height:40px;line-height:40px;overflow:hidden;">{{bankName}}(尾号{{bankAccount}})</div></div>
+            </div>
+        </div>
+    </a>
+</li>
+{{/each}}

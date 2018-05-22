@@ -1,0 +1,79 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <!-- We have home navbar without left link-->
+        <div class="center sliding">
+            <a href="#" data-popover=".popover-link" class="open-popover popver-arrow-right">新元宝</a>
+        </div>
+        <div class="right sliding">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel" data-panel="right"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="planList" class="page" style="background: #fff;">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <input type="hidden" id="planCurrentPage" value="1"/>
+            <input type="hidden" id="planTotalPage" value="1"/>
+
+            <!-- 往期计划 start-->
+            <div class="content-block" style="padding:0 5%;">
+                <h5 class="font-dark">往期计划</h5>
+                <!--往期计划 tabs start-->
+                <div class="buttons-row mt5">
+                    <!-- 关联到第一个tab, 默认激活 -->
+                    <a href="#closeTerm3" class="tab-link active button">3个月</a>
+                    <!-- 关联到第二个tab -->
+                    <a href="#closeTerm6" class="tab-link button">6个月</a>
+                    <!-- 关联到第三个tab -->
+                    <a href="#closeTerm12" class="tab-link button">12个月</a>
+                </div>
+                <input id="planCurrentTab" type="hidden" value="closeTerm3Tab"/>
+            </div>
+            <!-- Tabs, over -->
+            <div class="tabs">
+                <!-- Tab 1, 默认激活 -->
+                <div id="closeTerm3" class="tab active">
+                    <div class="content-block" style="padding:0;">
+                        <div class="list-block media-list">
+                            <ul id="closeTerm3Content">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab 2 -->
+                <div id="closeTerm6" class="tab">
+                    <div class="content-block" style="padding:0;">
+                        <div class="list-block media-list">
+                            <ul id="closeTerm6Content">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab 3 -->
+                <div id="closeTerm12" class="tab">
+                    <div class="content-block" style="padding:0;">
+                        <div class="list-block media-list">
+                            <ul id="closeTerm12Content">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 往期计划 over-->
+        </div>
+    </div>
+</div>

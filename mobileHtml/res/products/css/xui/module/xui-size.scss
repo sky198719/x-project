@@ -1,0 +1,120 @@
+/*
+ * 模块：字号
+ * 模块类型：b(基础模块)
+ * 精度：9 +
+ * 分级：3 +
+ * 适配：桌面 | 平析 | 移动
+ * 兼容：
+ * 版本：v0.0.1
+ * 备注：s->Small 小，m->Middle 中，l->Large 大；
+ */
+
+$sz : 13px;
+$rank : 'ss', 'sm', 'sl', 'ms,h6', 'mm,h5', 'ml,h4', 'ls,h3', 'lm,h2', 'll,h1';
+html[xui] { font-size : 13px; }
+[xui] .ss { font-size : 8px }
+[xui] .sm { font-size : 9px }
+[xui] .sl { font-size : 10px }
+[xui] .ms, h6 { font-size : 11px }
+[xui] .mm, h5 { font-size : 12px }
+[xui] .ml, h4 { font-size : 13px }
+[xui] .ls, h3 { font-size : 14px }
+[xui] .lm, h2 { font-size : 15px }
+[xui] .ll, h1 { font-size : 16px }
+
+@media (min-width : 375px) {
+  html[xui] { font-size : 14px; }
+  [xui] .ss { font-size : 8px }
+  [xui] .sm { font-size : 10px }
+  [xui] .sl { font-size : 11px }
+  [xui] .ms, h6 { font-size : 12px }
+  [xui] .mm, h5 { font-size : 13px }
+  [xui] .ml, h4 { font-size : 14px }
+  [xui] .ls, h3 { font-size : 15px }
+  [xui] .lm, h2 { font-size : 16px }
+  [xui] .ll, h1 { font-size : 17px }
+}
+
+[xui] .s1e5{
+  font-size: 1.5rem;
+}
+[xui] .s2e{
+  font-size: 2rem;
+}
+[xui] .s2e5{
+  font-size: 2.5rem;
+}
+[xui] .s3e{
+  font-size: 3rem;
+}
+[xui] .s3e5{
+  font-size: 3.5rem;
+}
+%fs8x{font-size:8px}
+%fs9x{font-size:9px}
+
+%fs10x{font-size:10px}
+%fs11x{font-size:11px}
+%fs12x{font-size:12px}
+%fs13x{font-size:13px}
+%fs14x{font-size:14px}
+%fs15x{font-size:15px}
+%fs16x{font-size:16px}
+%fs17x{font-size:17px}
+%fs18x{font-size:18px}
+%fs19x{font-size:19px}
+
+%fs20x{font-size:20px}
+%fs21x{font-size:21px}
+%fs22x{font-size:22px}
+%fs23x{font-size:23px}
+%fs24x{font-size:24px}
+%fs25x{font-size:25px}
+%fs26x{font-size:26px}
+%fs27x{font-size:27px}
+%fs28x{font-size:28px}
+%fs29x{font-size:29px}
+
+%fs30x{font-size:30px}
+%fs31x{font-size:31px}
+%fs32x{font-size:32px}
+%fs33x{font-size:33px}
+%fs34x{font-size:34px}
+%fs35x{font-size:35px}
+%fs36x{font-size:36px}
+%fs37x{font-size:37px}
+%fs38x{font-size:38px}
+%fs39x{font-size:39px}
+
+%fs40x{font-size:40px}
+%fs41x{font-size:41px}
+%fs42x{font-size:42px}
+%fs43x{font-size:43px}
+%fs44x{font-size:44px}
+%fs45x{font-size:45px}
+%fs46x{font-size:46px}
+%fs47x{font-size:47px}
+%fs48x{font-size:48px}
+%fs49x{font-size:49px}
+
+%fs50x{font-size:50px}
+%fs51x{font-size:51px}
+%fs52x{font-size:52px}
+%fs53x{font-size:53px}
+%fs54x{font-size:54px}
+%fs55x{font-size:55px}
+%fs56x{font-size:56px}
+%fs57x{font-size:57px}
+%fs58x{font-size:58px}
+%fs59x{font-size:59px}
+
+%fs60x{font-size:60px}
+%fs61x{font-size:61px}
+%fs62x{font-size:62px}
+%fs63x{font-size:63px}
+%fs64x{font-size:64px}
+%fs65x{font-size:65px}
+%fs66x{font-size:66px}
+%fs67x{font-size:67px}
+%fs68x{font-size:68px}
+%fs69x{font-size:69px}

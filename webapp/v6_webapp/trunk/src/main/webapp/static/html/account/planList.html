@@ -1,0 +1,28 @@
+{{#each list}}
+<li class="swipeout">
+    <div class="swipeout-content trade-reco">
+        <div class="item-link item-content">
+            <div class="item-inner">
+                <div class="item-title-row font-grey">
+                    <div class="item-title">
+	                    <h5>
+                            {{tenderTitle}} {{pname}}
+	                    </h5>
+                    </div>
+                    <div class="item-after"><h5>{{repayAccount}}</h5></div>
+                </div>
+                <div class="item-title-row font-grey">
+                    <div class="item-title"><h6>应收日期：{{repayTime}}</h6></div>
+                    <div class="item-after">
+                        {{#if statusDouble}}
+                        <h6 class="font-grey">{{status}}</h6>
+                        {{else}}
+                        <h6 class="font-blue">{{status}}</h6>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+{{/each}}

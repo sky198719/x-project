@@ -1,0 +1,666 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+body {
+  overflow: scroll;
+  height: auto;
+}
+html {
+  height: auto;
+  overflow: scroll;
+}
+.mBox {
+  width: 100%;
+  min-width: 1200px;
+}
+.mCon {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.header {
+  width: 100%;
+  height: 90px;
+  background: #f9f9f9;
+}
+.header h1 {
+  width: 340px;
+  height: 60px;
+  background: url(img/promotion.png) 0 -345px no-repeat;
+  top: 15px;
+  left: 0;
+  position: absolute;
+}
+.header h1 a {
+  width: 340px;
+  height: 60px;
+  display: block;
+}
+.header div div {
+  width: 220px;
+  height: 50px;
+  background: url(img/promotion.png) 0 -420px no-repeat;
+  top: 20px;
+  right: 0;
+  position: absolute;
+}
+.header div div strong {
+  width: 165px;
+  height: 50px;
+  margin-left: 39px;
+  border-left: 1px solid #d9d9d9;
+  display: block;
+  font-weight: normal;
+  padding-left: 15px;
+}
+.header div div strong span {
+  width: 165px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 22px;
+  color: #004682;
+  display: block;
+  margin-bottom: 6px;
+}
+.header div div strong em {
+  width: 165px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #7b7a7a;
+  display: block;
+  font-style: normal;
+}
+.footer {
+  width: 100%;
+  height: 110px;
+  background: #f9f9f9;
+  padding-top: 15px;
+}
+.footer p {
+  font-size: 16px;
+  line-height: 28px;
+  color: #666666;
+  text-align: center;
+}
+.footer p a {
+  text-decoration: none;
+  color: #666666;
+}
+.footer p a i {
+  width: 23px;
+  height: 23px;
+  background: url(img/promotion.png) -2px -301px no-repeat;
+  margin: 0 3px 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer ul {
+  width: 1200px;
+  text-align: center;
+  height: 28px;
+  margin-top: 7px;
+}
+.footer ul li {
+  height: 28px;
+  margin: 0 5px;
+  overflow: hidden;
+  display: inline-block;
+}
+.footer ul li a {
+  display: block;
+  height: 28px;
+}
+.footer ul .acc1 {
+  width: 140px;
+  background: url(img/promotion.png) 0 -188px no-repeat;
+}
+.footer ul .acc1:hover {
+  background: url(img/promotion.png) 0 -225px no-repeat;
+}
+.footer ul .acc2 {
+  width: 28px;
+  background: url(img/promotion.png) 0 -123px no-repeat;
+}
+.footer ul .acc2:hover {
+  background: url(img/promotion.png) 0 -153px no-repeat;
+}
+.footer ul .acc3 {
+  width: 68px;
+  background: url(img/promotion.png) 0 -64px no-repeat;
+}
+.footer ul .acc3:hover {
+  background: url(img/promotion.png) 0 -93px no-repeat;
+}
+.footer ul .acc4 {
+  width: 75px;
+  background: url(img/promotion.png) 0 0 no-repeat;
+}
+.footer ul .acc4:hover {
+  background: url(img/promotion.png) 0 -32px no-repeat;
+}
+.footer ul .acc5 {
+  width: 142px;
+  background: url(img/promotion.png) 0 -188px no-repeat;
+}
+.footer ul .acc5:hover {
+  background: url(img/promotion.png) 0 -225px no-repeat;
+}
+.footer {
+  margin-bottom: 100px;
+}
+.bg1 {
+  height: 910px;
+  background: url(img/pg1.jpg) 50% 0 no-repeat;
+}
+.bg2 {
+  height: 808px;
+  background: url(img/pg2.jpg) 50% 0 no-repeat;
+}
+.bg3 {
+  height: 782px;
+  background: url(img/pg3.jpg) 50% 0 no-repeat;
+}
+.bg4 {
+  height: 342px;
+  background: url(img/pg4.jpg) 50% 0 no-repeat;
+}
+.bg5 {
+  height: 443px;
+  background: url(img/pg5.jpg) 50% 0 no-repeat;
+}
+.outLayer {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: #000000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  z-index: 300;
+  display: none;
+}
+.bottomBox {
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 200;
+  background: rgba(30, 70, 43, 0.8);
+  display: none;
+}
+.bottomBox img {
+  height: 75px;
+  margin: 12.5px auto 0;
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+.registerBox {
+  width: 255px;
+  height: 415px;
+  top: 60px;
+  right: 0;
+  padding: 0 20px;
+  position: absolute;
+  display: none;
+  background: url(img/pg6.jpg) 0 0 no-repeat;
+}
+.registerBox h2 {
+  width: 255px;
+  height: 75px;
+  background: url(img/promotion1.png) 50% 30px no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.registerBox ul {
+  width: 245px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+.registerBox ul li {
+  width: 245px;
+  height: 40px;
+  margin-bottom: 10px;
+  background: #ededed;
+  border-radius: 5px;
+}
+.registerBox ul li input {
+  width: 225px;
+  height: 40px;
+  border: none;
+  display: inline;
+  padding: 0 10px;
+  font-size: 14px;
+  float: left;
+  background: none;
+}
+.registerBox ul li #imgCode {
+  width: 125px;
+  margin-right: 10px;
+}
+.registerBox ul li #mobileCode {
+  width: 125px;
+  margin-right: 10px;
+}
+.registerBox ul li span {
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+  display: inline;
+  background: #ededed;
+  text-align: center;
+  float: left;
+}
+.registerBox ul li span img {
+  width: 80px;
+  height: 30px;
+  margin: 5px auto 0;
+  display: block;
+  cursor: pointer;
+  border: none;
+}
+.registerBox ul li strong {
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  display: inline;
+  float: left;
+  background: #ffdd27;
+  text-align: center;
+  font-size: 14px;
+  color: #e23e02;
+  font-weight: normal;
+  cursor: pointer;
+}
+.registerBox ul li .banned {
+  background: #eeeeee;
+}
+.registerBox ul .voice {
+  height: 20px;
+  text-align: right;
+  background: none;
+  margin-bottom: 0;
+}
+.registerBox ul .voice b {
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: normal;
+}
+.registerBox ul .voice em {
+  font-style: normal;
+  font-size: 14px;
+  color: #bfbfbf;
+}
+.registerBox ul .voice em a {
+  color: #038f56;
+  text-decoration: underline;
+}
+.registerBox ul .rule {
+  height: 20px;
+  line-height: 20px;
+  color: #038f56;
+  font-size: 12px;
+  background: none;
+  margin-bottom: 0;
+}
+.registerBox ul .rule a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #038f56;
+}
+.registerBox ul .rule input {
+  width: 13px;
+  height: 13px;
+  border-radius: none;
+  background: none;
+  border: 1px solid #038f56;
+  margin: 4px 5px 0 0;
+  vertical-align: bottom;
+}
+.registerBox button {
+  width: 255px;
+  height: 50px;
+  line-height: 50px;
+  color: #ffdd27;
+  text-align: center;
+  font-size: 24px;
+  background: #c91339;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+}
+.loginBoxold {
+  width: 295px;
+  height: 415px;
+  top: 60px;
+  right: 0;
+  position: absolute;
+  display: none;
+  background: url(img/pg6.jpg) 0 0 no-repeat;
+}
+.loginBoxold span {
+  font-size: 16px;
+  color: #038f56;
+  line-height: 24px;
+  top: 25px;
+  left: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.loginBoxold strong {
+  width: 295px;
+  height: 120px;
+  line-height: 36px;
+  display: block;
+  font-size: 18px;
+  color: #038f56;
+  top: 120px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  font-size: 28px;
+}
+.loginBoxold em {
+  width: 295px;
+  height: 30px;
+  line-height: 24px;
+  color: #038f56;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  bottom: 25px;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+.loginBoxold a img {
+  width: 225px;
+  bottom: 70px;
+  left: 35px;
+  position: absolute;
+  display: block;
+  border: none;
+  z-index: 1;
+}
+.loginBoxnew {
+  width: 370px;
+  height: 440px;
+  top: 60px;
+  right: 0;
+  position: absolute;
+  display: none;
+}
+.loginBoxnew .layerBox {
+  width: 370px;
+  height: 440px;
+  background: #000000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 10px;
+}
+.loginBoxnew span {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 24px;
+  top: 15px;
+  left: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.loginBoxnew strong {
+  width: 370px;
+  height: 56px;
+  line-height: 28px;
+  font-weight: normal;
+  display: block;
+  background: url(img/promotion4.png) 50% 0 no-repeat;
+  font-size: 18px;
+  color: #ffffff;
+  padding-top: 120px;
+  top: 70px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+}
+.loginBoxnew em {
+  width: 370px;
+  height: 48px;
+  line-height: 24px;
+  color: #ffdf62;
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+  top: 300px;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+.loginBoxnew a img {
+  width: 300px;
+  bottom: 30px;
+  left: 35px;
+  position: absolute;
+  display: block;
+  border: none;
+  z-index: 1;
+}
+.eventRule {
+  width: 100px;
+  height: 100px;
+  display: block;
+  top: 585px;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.userList {
+  width: 680px;
+  height: 45px;
+  overflow: hidden;
+  top: 685px;
+  left: 260px;
+  position: absolute;
+}
+.userList ul {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  font-size: 16px;
+}
+.userList ul li {
+  height: 45px;
+  line-height: 45px;
+  color: #ffffff;
+  font-size: 16px;
+  float: left;
+  display: inline;
+}
+.userList ul li strong {
+  height: 45px;
+  line-height: 45px;
+  float: left;
+  display: inline;
+  font-weight: normal;
+  text-align: right;
+}
+.userList ul li em {
+  padding: 0 50px 0 20px;
+  height: 45px;
+  line-height: 45px;
+  float: left;
+  display: inline;
+  font-style: normal;
+  text-align: left;
+}
+.market {
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  font-size: 30px;
+  color: #ffffff;
+  top: 230px;
+  left: 85px;
+  position: absolute;
+}
+.user {
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  font-size: 30px;
+  color: #ffffff;
+  top: 230px;
+  left: 355px;
+  position: absolute;
+}
+.amount {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  font-size: 30px;
+  color: #ffffff;
+  top: 230px;
+  left: 645px;
+  position: absolute;
+}
+.earn {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  font-size: 30px;
+  color: #ffffff;
+  top: 230px;
+  left: 935px;
+  position: absolute;
+}
+.gameChance {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  top: 300px;
+  left: 500px;
+  position: absolute;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: #ffdd27;
+}
+.gameChance a {
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+#oneMonth {
+  width: 200px;
+  height: 70px;
+  top: 330px;
+  left: 330px;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+#twelveMonth {
+  width: 200px;
+  height: 70px;
+  top: 330px;
+  left: 920px;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+#oneMonth1 {
+  width: 200px;
+  height: 70px;
+  top: 330px;
+  left: 330px;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+#twelveMonth1 {
+  width: 200px;
+  height: 70px;
+  top: 330px;
+  left: 920px;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+.gameRule {
+  width: 899px;
+  height: 457px;
+  background: url(img/gameRule.png) 0 0 no-repeat;
+  top: 50%;
+  left: 50%;
+  margin: -229px 0 0 -450px;
+  position: fixed;
+  z-index: 301;
+  display: none;
+}
+.gameRule .close {
+  width: 100px;
+  height: 100px;
+  display: block;
+  float: right;
+  cursor: pointer;
+}
+.eggs {
+  width: 192px;
+  height: 240px;
+  position: absolute;
+}
+.eggs .egg1 {
+  width: 192px;
+  height: 240px;
+  display: block;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.eggs .egg2 {
+  width: 0;
+  height: 240px;
+  display: block;
+  top: 0;
+  left: 96px;
+  position: absolute;
+}
+#egg1 {
+  top: 355px;
+  left: 200px;
+}
+#egg2 {
+  top: 415px;
+  left: 505px;
+}
+#egg3 {
+  top: 355px;
+  left: 810px;
+}

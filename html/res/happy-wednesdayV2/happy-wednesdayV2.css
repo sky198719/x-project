@@ -1,0 +1,94 @@
+.container {
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+  height: 2518px;
+  background: url("img/bg.png") center no-repeat;
+}
+.container .main {
+  width: 1200px;
+  height: 2518px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.container .main .immediate-btn {
+  width: 655px;
+  margin-top: 924px;
+  float: right;
+}
+.container .main .immediate-btn div {
+  width: 236px;
+  height: 275px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.container .main .immediate-btn div img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.container .main .immediate-btn div img.front {
+  width: 236px;
+  z-index: 1;
+  height: 215px;
+}
+.container .main .immediate-btn div img.behind {
+  width: 0;
+  height: 215px;
+  z-index: 0;
+}
+.container .main .immediate-btn .btn-left {
+  margin-left: 48px;
+}
+.container .main .immediate-btn .btn-right {
+  float: right;
+  margin-right: 52px;
+}
+.container .main .immediate-btn a {
+  display: inline-block;
+  width: 230px;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 225px;
+}
+.container .main .immediate-btn .on-btn {
+  background: url("img/btn1.png") center center / 100% 100% no-repeat;
+}
+.container .main .immediate-btn .overtime-btn {
+  background: url("img/btn2.png") center center / 100% 100% no-repeat;
+}
+.container .main .immediate-btn .left-btn {
+  float: left;
+  margin-left: 4px;
+}
+.container .main .immediate-btn .right-btn {
+  float: right;
+  margin-right: 3px;
+}
+.container .main .product-list {
+  position: absolute;
+  width: 1173px;
+  height: 302px;
+  bottom: 191px;
+  left: 10px;
+  margin: 0 auto;
+}
+.container .main .product-list a {
+  cursor: pointer;
+  display: inline-block;
+  width: 49.5%;
+  height: 100%;
+}
+.container .main .product-list .bbgs-product {
+  float: left;
+}
+.container .main .product-list .qtds-product {
+  float: right;
+}
+.disnone {
+  display: none;
+}

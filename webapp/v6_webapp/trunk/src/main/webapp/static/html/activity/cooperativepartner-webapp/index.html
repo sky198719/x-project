@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>历数新新贷那些强大的"小伙伴"</title>
+    <style>
+
+        html {
+            font-size: 100%;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a, img {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+            font-family: '微软雅黑';
+        }
+
+        .container img {
+            display: block;
+            border: none;
+            width: 100%;
+        }
+
+        .btn {
+            width: 100%;
+            position: absolute;
+            top: 2rem;
+        }
+
+        .entrry {
+            position: absolute;
+            top: 0;
+            left: 6%;
+            display: inline-block;
+            width: 87%;
+            height: 96%;
+        }
+    </style>
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+</head>
+
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+    <div class="container">
+        <img src="img/bg_01.png"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_02.jpg"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_03.jpg"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_04.jpg"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_05.jpg"/>
+        <a href="javascript:void(0);" onclick="skiptormlc()"><img src="img/btn.png" class="btn"></a>
+    </div>
+    <div class="container">
+        <img src="img/bg_06.jpg"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_07.jpg"/>
+        <a href="javascript:void(0);" class="entrry" onclick="skiptowgzt()"></a>
+    </div>
+    <div class="container">
+        <img src="img/bg_08.jpg"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_09.jpg"/>
+        <a href="javascript:void(0);" class="entrry" onclick="skiptofkzt()"></a>
+    </div>
+    <div class="container">
+        <img src="img/bg_10.jpg"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_11.png"/>
+        <a href="javascript:void(0);" class="entrry" onclick="skiptohjzt()"></a>
+    </div>
+    <div class="container">
+        <img src="img/bg_12.jpg"/>
+    </div>
+
+</div>
+<!--login-->
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+
+    var link = '../../../../';
+    var linkextra = '?jsonpCallback=?';
+
+    //1	点击“立即投资”按钮，跳转至“理财列表->热门理财”页
+    function skiptormlc() {
+        window.location.href = link + "/#!/static/html/popular/financesList.html";
+    }
+    //2	点击“拥抱监管 合规水准对照盘点”图，页面跳转至网贷管理规定专题页
+    function skiptowgzt() {
+        window.location.href = link + "static/html/activity/netloan-webapp/index.html";
+    }
+    //3	点击“风控才是硬实力”图，页面跳转至风控相关内容专题页
+    function skiptofkzt() {
+        window.location.href = link + "static/html/activity/riskmanagement-webapp/index.html";
+    }
+    //4	点击“新新贷荣膺中国互联网金融协会首批会员”图，页面跳转至互金协会专题页
+    function skiptohjzt() {
+        window.location.href = link + "/static/html/activity/p2p-webapp/index.html";
+    }
+    //GA、XA布码
+    $.ajax({
+        url: '../../../../user/getCurrentUser.do',
+        data: {},
+        dataType: 'json',
+        success: function (result) {
+            var gauserId = "";
+            if (result.code == 0) {
+                gauserId = result.data.user.userId;
+            }
+            //XXD_TRACK.track_pageview();
+            gaInits(gauserId);
+            growingIOInits({userId: gauserId});
+        }
+    });
+</script>
+</body>
+</html>

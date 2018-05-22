@@ -1,0 +1,561 @@
+html {
+  width: 100%;
+  height: auto !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body {
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+  height: inherit !important;
+}
+#J_wrapBody {
+  position: relative;
+  width: 100%;
+  height: inherit !important;
+  overflow-y: inherit !important;
+}
+.red-header {
+  width: 100%;
+  height: 93px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+.header-main {
+  width: 1200px;
+  height: 93px;
+  margin: 0 auto;
+}
+.red-header .logo {
+  display: inline-block;
+  width: 368px;
+  height: 93px;
+  background: url("img/logo.png") center no-repeat;
+}
+.tel {
+  float: right;
+  height: 93px;
+  margin-right: 0;
+}
+.tel-icon {
+  display: inline-block;
+  height: 93px;
+  line-height: 93px;
+  vertical-align: middle;
+}
+.tel-icon img {
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+.tel-num {
+  display: inline-block;
+  border-left: 1px solid #d9d9d9;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 18px;
+  padding-left: 18px;
+}
+.tel-num h3 {
+  font-size: 24px;
+  color: #004682;
+}
+.tel-num p {
+  font-size: 16px;
+  color: #7b7a7a;
+}
+.redAugust1 {
+  width: 100%;
+  height: 876px;
+  background: url(img/redAugust1.png) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.redAugust1 .area1 {
+  width: 1200px;
+  height: 876px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.register {
+  background: #211C18;
+  width: 253px;
+  border: 2px solid #ffc42c;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  float: right;
+  margin-top: 94px;
+  padding: 20px;
+}
+.register h3 {
+  color: #ffc42c;
+  font: 900 22px 'microsoft yahei';
+  text-align: center;
+  margin: 0 0 18px 0;
+}
+.register .user-common {
+  height: 40px;
+  overflow: hidden;
+}
+.register .user-common input {
+  width: 162px;
+  height: 28px;
+  background: #fff;
+  border-radius: 5px;
+  border: 0;
+  padding-left: 8px;
+}
+.register .user-common p {
+  display: inline-block;
+  font: 300 14px "microsoft yahei";
+  color: #fff;
+  width: 82px;
+  letter-spacing: 3px;
+  margin: 0;
+}
+.register .user-common p.five-word {
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.register .user-common .J-verify,
+.register .user-common .J-phoneyzm {
+  width: 64px;
+}
+.register .user-common .change-verify {
+  width: 80px;
+  height: 30px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.register .user-common .message-word {
+  float: left;
+  margin-top: 6px;
+}
+.register .user-common .J-phoneyzm {
+  float: left;
+  margin-right: 4px;
+}
+.register .user-common .get-phoneyzm {
+  float: left;
+  width: 93px;
+  height: 30px;
+  background: #ffc42c;
+  border-radius: 5px;
+  text-align: center;
+  color: #5d3200;
+  font: normal 14px/30px "microsoft yahei";
+  cursor: pointer;
+}
+.register .user-voice {
+  text-align: right;
+  margin-top: -6px;
+}
+.register .J-voiceyzm {
+  color: #ffc42c;
+  font: 300 13px "microsoft yahei";
+  text-decoration: none;
+}
+.register .cur-special {
+  margin: 0;
+  font: 400 16px/30px "microsoft yahei";
+  color: #ffc42c;
+}
+.register .user-agree {
+  height: 35px;
+}
+.register .user-agree .check-style {
+  /*display: inline-block;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #fff;
+      vertical-align: middle;
+      font:normal 12px "microsoft yahei";
+      color: #fff;  */
+}
+.register .user-agree span {
+  color: #fff;
+  font: 300 14px "microsoft yahei";
+}
+.register .user-agree a {
+  color: #fff;
+  text-decoration: none;
+}
+.register .get-red {
+  height: 47px;
+  width: 251px;
+  background: #ffc42c;
+  font: 400 24px/47px "microsoft yahei";
+  color: #5d3200;
+  text-align: center;
+  border: 0;
+  margin: 10px 0 0 0;
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.register .have-login {
+  color: #fff;
+  font: normal 14px "microsoft yahei";
+  margin: 14px 0 0 0;
+  text-align: right;
+}
+.register .have-login a {
+  color: #ffc42c;
+  font: normal 14px "microsoft yahei";
+  text-decoration: underline;
+}
+.register .login-done {
+  text-align: center;
+  margin: 0 auto;
+}
+.register .login-done p {
+  color: #fff;
+  font: 300 18px "micsoft yahei";
+  margin-bottom: 16px;
+}
+.register .login-done p span {
+  font: 500 26px "microsoft yahei";
+  color: #ffc42c;
+}
+.register .login-done a {
+  display: block;
+  width: 250px;
+  height: 48px;
+  color: #5d3200;
+  text-align: center;
+  font: 400 22px/48px "microsoft yahei";
+  border: 0;
+  background: #ffc42c;
+  border-radius: 8px;
+  margin-top: 25px;
+}
+.logged {
+  padding: 50px 30px;
+  margin: 200px 0 0 0;
+  background: #000;
+}
+.disnone {
+  display: none;
+}
+.disblock {
+  display: block;
+}
+.dishidden {
+  display: none;
+}
+.redAugust2 {
+  width: 100%;
+  height: 798px;
+  background: url(img/redAugust2.png) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.redAugust2 .area2 {
+  width: 1200px;
+  height: 798px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.tojoin {
+  display: inline-block;
+  float: left;
+  width: 382px;
+  height: 65px;
+  margin: 576px 0 0 106px;
+  cursor: pointer;
+}
+.data-form {
+  width: 496px;
+  height: 456px;
+  margin: 214px 0 0 592px;
+  overflow: hidden;
+}
+.data-form h5 {
+  margin: 25px 0 0 0 ;
+  color: #ffd132;
+  text-align: center;
+  font: 400 18px "microsoft yahei";
+}
+.data-form h5 span {
+  color: #fff;
+}
+.data-form table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 14px;
+}
+.data-form table td {
+  border: 1px solid #d31d1d;
+  width: 55px;
+  color: #fff;
+  font: 300 20px "microsoft yahei";
+  padding: 8px 0 27px 8px;
+  position: relative;
+}
+.data-form table th {
+  border: 0;
+  color: #fff;
+  font: 300 16px "microsoft yahei";
+}
+.data-form table .first-line {
+  height: 40px;
+}
+.data-form table .absent {
+  color: #f07170;
+}
+.data-form table em {
+  font: normal 12px "microsoft yahei";
+}
+.data-form table .friday {
+  background: #f12e2e;
+}
+.data-form table .raise-rates {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 38px;
+  background: #ffc42c;
+  color: #770000;
+  font: 300 12px/14px "microsoft yahei";
+  text-align: center;
+}
+.data-form table .raise-rates i {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 8px solid #f12e2e;
+  border-color: transparent transparent #f12e2e transparent;
+}
+.data-form table .prize {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+.data-form table .signed-coin {
+  position: absolute;
+  bottom: 4px;
+  left: 7px;
+  color: #ffd132;
+}
+.data-form table .signed-coin i {
+  float: left;
+  color: #ffd132;
+  font: 300 12px "microsoft yahei";
+  margin: 1px 0 0 6px;
+}
+.data-form table .signed-coin img {
+  vertical-align: middle;
+  float: left;
+}
+.data-form .signed {
+  background: #940001 !important;
+}
+.data-form .signed .raise-rates i {
+  border-color: transparent transparent #940001 transparent !important;
+}
+.redAugust3 {
+  width: 100%;
+  height: 534px;
+  background: url(img/redAugust3.png) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.redAugust3 .area3 {
+  width: 1200px;
+  height: 534px;
+  margin: 0 auto;
+  position: relative;
+}
+.dimension {
+  position: absolute;
+  top: 115px;
+  left: 700px;
+  width: 245px;
+  height: 245px;
+  background: url("img/dimension.png") 0 0 no-repeat;
+  display: none;
+}
+.dimension2 {
+  left: 1000px;
+}
+.dimension3 {
+  top: 615px;
+  left: 800px;
+}
+.show {
+  display: block !important;
+}
+.product {
+  display: inline-block;
+  width: 280px;
+  height: 308px;
+  float: left;
+  cursor: pointer;
+}
+.product1 {
+  margin: 114px 0 0 490px;
+}
+.product2 {
+  margin: 114px 0 0 51px;
+}
+.redAugust4 {
+  width: 100%;
+  height: 471px;
+  background: url(img/redAugust4.jpg) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.redAugust4 .area4 {
+  width: 1200px;
+  height: 471px;
+  margin: 0 auto;
+  position: relative;
+}
+.redAugust5 {
+  width: 100%;
+  height: 594px;
+  background: url(img/redAugust5.png) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.redAugust5 .area5 {
+  width: 1200px;
+  height: 594px;
+  margin: 0 auto;
+  position: relative;
+}
+.to-submit,
+.to-scan {
+  display: inline-block;
+  width: 500px;
+  height: 80px;
+  position: absolute;
+  bottom: 12px;
+  left: 355px;
+  cursor: pointer;
+}
+.to-scan {
+  height: 84px;
+  bottom: 48px;
+  left: 353px;
+}
+.redAugust6 {
+  width: 100%;
+  height: 656px;
+  background: url(img/redAugust6.jpg) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.redAugust6 .area6 {
+  width: 1200px;
+  height: 656px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg1 {
+  width: 100%;
+  height: 664px;
+  background: url(img/redAugustLand1.jpg) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.bg1 .area1 {
+  width: 1200px;
+  height: 664px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg2 {
+  width: 100%;
+  height: 803px;
+  background: url(img/redAugustLand2.jpg) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.bg2 .area2 {
+  width: 1200px;
+  height: 803px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.bg3 {
+  width: 100%;
+  height: 837px;
+  background: url(img/redAugustLand3.png) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.bg3 .area3 {
+  width: 1200px;
+  height: 837px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg4 {
+  width: 100%;
+  height: 593px;
+  background: url(img/redAugustLand4.png) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.bg4 .area4 {
+  width: 1200px;
+  height: 593px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg5 {
+  width: 100%;
+  height: 643px;
+  background: url(img/redAugustLand5.png) 50% 0 no-repeat;
+  min-width: 1200px;
+}
+.bg5 .area5 {
+  width: 1200px;
+  height: 643px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg6 {
+  width: 100%;
+  height: 120px;
+  background: #201915;
+  min-width: 1200px;
+}
+.bg6 .area6 {
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+.to-submit {
+  background: url("img/button.png") 0 0 no-repeat;
+}
+.land-footer {
+  width: 100%;
+  height: 119px;
+  background: #f4f5f9;
+}
+.land-footer .area7 {
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+.land-footer .area7 > div {
+  background: url("img/footer.png") center no-repeat;
+  width: 783px;
+  height: 120px;
+  margin: 0 auto;
+}
+.to-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  background: rgba(32, 25, 21, 0.7);
+}
+.to-bottom {
+  margin-bottom: 120px;
+}

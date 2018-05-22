@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>注册即送108元新手红包</title>
+    <style>
+
+        html {
+            font-size: 100%;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a, img {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+            font-family: '微软雅黑';
+        }
+
+        .container img {
+            display: block;
+            border: none;
+            width: 100%;
+        }
+
+        .btn {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 9;
+        }
+
+        .enterity {
+            position: absolute;
+            top: 0;
+            left: 14%;
+            display: inline-block;
+            width: 73%;
+            height: 98%;
+        }
+
+        .yjdj {
+            position: absolute;
+            top: 17%;
+            left: 24%;
+            display: inline-block;
+            width: 51%;
+            height: 18%;
+        }
+
+        .rry {
+            position: absolute;
+            top: 43%;
+            left: 24%;
+            display: inline-block;
+            width: 51%;
+            height: 18%;
+        }
+
+        .scyd {
+            position: absolute;
+            bottom: 3%;
+            left: 14%;
+            display: inline-block;
+            width: 73%;
+            height: 23%;
+        }
+        .pdt-rate {
+            position: absolute;
+            left:80px;
+            top:12px;
+            color:#a85e18;
+            font-weight: bold;
+        }
+        .pdt-rate-apr {
+            font-size: 20px;
+        }
+        .pdt-rate-per {
+            font-size: 15px;
+        }
+    </style>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+</head>
+
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+    <div class="container">
+        <img src="img/bg_01.png"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_02.png"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_03.png"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_04.png"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_05.png"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_06.png"/>
+        <a href="javascript:void(0);" class="enterity" onclick="skiptohongbao()"></a>
+    </div>
+    <div class="container">
+        <img src="img/bg_07.png"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_08.png"/>
+        <a href="javascript:void(0);" class="enterity" onclick="skiptoqtds()"></a>
+    </div>
+    <div class="container">
+        <img src="img/bg_09.png"/>
+        <a href="javascript:void(0);" class="enterity" onclick="skiptoxybone()"></a>
+    </div>
+    <div class="container">
+        <img src="img/bg_10.png"/>
+    </div>
+    <div class="container">
+        <img src="img/bg_11.png"/>
+        <a href="javascript:void(0);" class="yjdj" onclick="skiptoyjdj()"><span class="pdt-rate"><span class="pdt-rate-apr" id="monthFinanceApr">15</span><span class="pdt-rate-per">%</span></span></a>
+        <a href="javascript:void(0);" class="rry" onclick="skitptorry()"><span class="pdt-rate"><span class="pdt-rate-apr" id="fundApr">7</span><span class="pdt-rate-per"><span>% - </span><span id="fundFloatApr">1</span><span>%</span></span></span></a>
+        <a href="javascript:void(0);" class="scyd" onclick="skiptormlc()"></a>
+    </div>
+    <div class="container">
+        <img src="img/bg_12.png"/>
+        <a href="javascript:void(0);" onclick="skiptohongbao()">
+            <img src="img/btn.png" class="btn">
+        </a>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+
+    $(document).ready(function () {
+        fund();
+        monthFinance();
+    });
+
+    var link = '../../../../';
+    var linkextra = '?jsonpCallback=?';
+    //跳转至红包页面
+    function skiptohongbao() {
+        $.ajax({
+            url: link + 'user/isLogin.do' + linkextra + '&v=' + new Date().getTime(),
+            type: 'get',
+            dataType: 'jsonp',
+            data: {},
+            success: function (data) {
+                if (data.isLogin != null) {
+                    var result = data.isLogin;
+                    if (result) {
+                        //已登录 红包页面
+                        window.location.href = link + "#!/static/html/account/hongbao.html"
+                    } else {
+                        //未登录 注册页面
+                        window.location.href = link + "#!/static/html/user/register.html"
+                    }
+                }
+            }
+
+        });
+    }
+    //跳转至七天大胜详情页
+    function skiptoqtds() {
+        window.location.href = link + "#!/static/html/newHand/sevenDaysDetail.html";
+    }
+
+    //页面跳转至当天新元宝1个月详情页
+    function skiptoxybone() {
+        $.ajax({
+            url: link + 'xplan/getLatestSchemeId.do' + linkextra,
+            type: 'get',
+            dataType: 'jsonp',
+            data: {
+                currentPage: 1,
+                pageSize: 1,
+                closeTerm: 1 //参数1 表示获取新元宝1个月 12你猜
+            },
+            success: function (data) {
+                var schemeid = data.schemeInfo.SCHEMEID;
+                window.location.href = link + "#!/static/html/plan/planDetailsV2.html?planId=" + schemeid;
+            }
+        });
+
+    }
+
+    //页面跳转至月进斗金
+    function skiptoyjdj() {
+        window.location.href = link + "/#!/static/html/monthFinance/monthFinanceDetails.html";
+    }
+    //页面跳转至日日盈详情页
+    function skitptorry() {
+        window.location.href = link + "/#!/static/html/stepUpward/stepUpwardDetail.html";
+    }
+    //页面跳转至页面跳转至“热门理财”页
+    function skiptormlc() {
+        window.location.href = link + "/#!/static/html/popular/financesList.html";
+    }
+    function fund() {
+        $.ajax({
+            url: '../../../../stepUpward/getStepUpwardInfo.do',
+            dataType: 'json',
+            type: 'GET',
+            success: function (result) {
+                if (result.resultCode == 0) {
+                    $("#fundApr").html(result.data.minApr);
+                    $("#fundFloatApr").html(result.data.maxApr);
+                }
+            }
+        });
+    }
+    function monthFinance() {
+        $.ajax({
+            url: '../../../../monthFinance/getProudctDetail.do',
+            dataType: 'json',
+            type: 'GET',
+            success: function (result) {
+                if (result.resultCode == 0) {
+                    $("#monthFinanceApr").html(result.data.apr);
+                }
+            }
+        });
+    }
+    //GA、XA布码
+    $.ajax({
+        url: '../../../../user/getCurrentUser.do',
+        data: {},
+        dataType: 'json',
+        success: function (result) {
+            var gauserId = "";
+            if (result.code == 0) {
+                gauserId = result.data.user.userId;
+            }
+            //XXD_TRACK.track_pageview();
+            gaInits(gauserId);
+            growingIOInits({userId: gauserId});
+        }
+    });
+</script>
+
+</body>
+</html>

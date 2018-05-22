@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xui="0.0.1">
+<head>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="xinxindai">
+    <meta name="author" content="UI Manxiaoman | Front-end Junbo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>评测结果</title>
+    <link href="css/main.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!--win和view是单页应用架构扩展预留-->
+<div id="win1" class="win">  
+    <div class="tobar ml ban_move">
+        <div class="tonav nw1e">
+            <em class="x_win co-main lm"><span><b class="icon icon-left"></b>返回</span></em>
+            <p id="win2_title" class="page_title ll">商品详情</p>  
+        </div>
+    </div>
+    <div id="view1" class="view">
+        <ul id="list1" class="xui-list nw1e mt1e">
+            <li>
+                <p class="lm">资金存管机构</p>
+                <p id="dt_bank_name" class="co-back">华瑞银行股份有限公司（简称：华瑞银行）</p>
+            </li>
+            <li>
+                <p class="lm">真实姓名</p>
+                <p id="dt_user_name" class="co-back">&nbsp;</p>
+            </li>
+            <li>
+                <p class="lm">身份证号</p>
+                <p id="dt_user_id_card" class="co-back">&nbsp;</p>
+            </li>
+            <li>
+                <p class="lm">手机号码</p>
+                <p id="dt_user_mobile" class="co-back">&nbsp;</p>
+            </li>
+        </ul>
+        <ul class="nw1e nh1e-z">
+            <li class="ew mm">
+                <label class="nr3x"><input id="checkout1" class="xui-checkout" type="checkbox" checked /></label>
+                <label for="checkout1" class="co-read-hover">
+                    我已阅读并同意
+                </label>
+                《<span class="co-main prorocol-url">用户授权协议</span>》
+            </li>
+            <li>
+                <form action="https://jzh-test.fuiou.com/jzh/webReg.action" method="post" id="to_submit">
+                   <input class="hide" type="text" name="bank_nm" value="23123">
+                   <input class="hide" type="text" name="capAcntNo" value="12312312312321312312">
+                   <input class="hide" type="text" name="certif_id" value="130822198112143928">
+                   <input class="hide" type="text" name="certif_tp" value="7">
+                   <input class="hide" type="text" name="city_id" value="110000">
+                   <input class="hide" type="text" name="cust_nm" value="鹏元征信">
+                   <input class="hide" type="text" name="mchnt_cd" value="0002900F0352818">
+                   <input class="hide" type="text" name="mchnt_txn_ssn" value="OPEN_ACNT20170503195711001011">
+                   <input class="hide" type="text" name="mobile_no" value="15122222222">
+                   <input class="hide" type="text" name="page_notify_url" value="http://dev.xxd.com/jzh/queryUserInfs.action">
+                   <input class="hide" type="text" name="parent_bank_id" value="icbc">
+                   <input class="hide" type="text" name="signature" value="ssfkuOXqHRA1VI/smusGBnrK+EA4/m02AvgZYne2UMzqd2a/+Hlt/rOYu1mufnGocUcxqapht1GTD+UsND9jbBv+4T2Cgd6zqnj3Kqc8gJsoa5rp37HtrRBvBliiJfD+VbLxULbDY7nDyK7IatdnFRxC5qdUExnhMBkK0zWSiok=">
+                   <input class="hide" type="text" name="user_id_from" value="115397">
+                   <input class="hide" type="text" name="ver" value="0.44">
+                    <input type="button" id="to_account" class="xui-btn w100 ls" sz="m" co="main" value="同意协议并开通存管账户"/>
+                    <input class="hide" type="submit">
+                </form>
+
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

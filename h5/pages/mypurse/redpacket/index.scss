@@ -1,0 +1,27 @@
+@import '../../../node_modules/antd-mobile/lib/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/icon/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/pull-to-refresh/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/list-view/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/button/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/toast/style/index.css';
+@import '../../../node_modules/antd-mobile/lib/modal/style/index.css';
+
+@import "../../../static/html/css/base.css";
+@import '../../../static/html/redpacket_list/index.css';
+h1{
+    font-weight: normal
+}
+
+.redpacket-box .redpacket-container .tab-content .red-list{
+    padding: 0!important;
+}
+.redpacket-box .redpacket-container .tab-content .red-list .red-list-item{
+    margin: 10px;
+}
+.text-center{
+    text-align: center;
+    padding: 20px 0;
+}
+.xxd-xl-btn{
+    margin-left: 0.1rem;
+}

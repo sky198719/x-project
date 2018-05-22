@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>欢乐星期三</title>
+<style>
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none; font-family:'微软雅黑';}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+input{outline:none;}
+button{outline:none;}
+.container{width:100%; position:relative;}
+.container img{display:block; border:none; width:100%;}
+</style>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<img src="img/bg1.jpg" />
+</div>
+<div class="container">
+	<a href="../../../../#!/static/html/popular/financesList.html"><img src="img/bg2.jpg" /></a>
+</div>
+<div class="container">
+	<img src="img/bg3.jpg" />
+</div>
+<div class="container">
+	<img src="img/bg4.jpg" />
+</div>
+<div class="container">
+	<img src="img/bg5.jpg" />
+</div>
+<div class="container">
+	<img src="img/bg6.jpg" />
+</div>
+<div class="container">
+	<a href="../../../../#!/static/html/popular/financesList.html"><img src="img/bg7.jpg" /></a>
+    <div>
+        <span style="float:left;background: red"></span>
+        <span style="float:left;background: red"></span>
+        <span style="float:left;background: red"></span>
+    </div>
+</div>
+<div class="container">
+	<img src="img/bg8.jpg" />
+</div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+</html>
+<script>
+	//GA、XA布码
+	$.ajax({
+		url: '../../../../user/getCurrentUser.do',
+		data: {},
+		dataType: 'json',
+		success: function (data) {
+			if(data.code == 0){
+				var userId = data.data.user.userId;
+			}else{
+				var userId ="";
+			}
+			//XXD_TRACK.track_pageview();
+			gaInits(userId);
+			growingIOInits({userId:userId});
+		}
+	});
+</script>

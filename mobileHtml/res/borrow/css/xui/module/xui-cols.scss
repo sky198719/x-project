@@ -1,0 +1,6 @@
+@for $i from 1 to 13 {
+  [xui] .col-#{$i} {
+    width : $i / 12 * 100%;
+    @debug $i / 12 * 100%;
+  }
+}

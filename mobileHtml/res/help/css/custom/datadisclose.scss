@@ -1,0 +1,131 @@
+.logo1,
+.logo2,
+.logo3,
+.logo4,
+.logo5,
+.logo6,
+.logo7,
+.logo8,
+.logo9,
+.logo10,
+.logo11 {
+  display : inline-block;
+  width   : 10rem;
+  height  : 10rem;
+}
+
+.logo1 {
+  background : url("../imgs/datadisclose/datadis-transmoney.png") no-repeat center / cover;
+}
+
+.logo2 {
+  background : url("../imgs/datadisclose/datadis-tottrans.png") no-repeat center / cover;
+}
+
+.logo3 {
+  background : url("../imgs/datadisclose/datadis-financer.png") no-repeat center / cover;
+}
+
+.logo4 {
+  background : url("../imgs/datadisclose/datadis-investor.png") no-repeat center / cover;
+}
+
+.logo5 {
+  background : url("../imgs/datadisclose/datadis-totreg.png") no-repeat center / cover;
+}
+
+.logo6 {
+  background : url("../imgs/datadisclose/datadis-totearn.png") no-repeat center / cover;
+}
+
+.logo7 {
+  background : url("../imgs/datadisclose/datadis-qumoney.png") no-repeat center / cover;
+}
+
+.logo8 {
+  background : url("../imgs/datadisclose/overamount.png") no-repeat center / cover;
+}
+
+.logo9 {
+  background : url("../imgs/datadisclose/rateproj.png") no-repeat center / cover;
+}
+
+.logo10 {
+  background : url("../imgs/datadisclose/unreceived.png") no-repeat center / cover;
+}
+
+.logo11 {
+  background : url("../imgs/datadisclose/rateamount.png") no-repeat center / cover;
+}
+
+.voldata {
+  margin     : 0 auto;
+  height     : 300px;
+  background : url("../imgs/datadisclose/datadis-temp1.png") no-repeat center / cover;
+}
+
+.m-con-bd .usertype li.age {
+  background : url("../imgs/datadisclose/datadis-temp3.png") no-repeat center / cover;
+}
+
+.m-con-bd .usertype li.sex {
+  background : url("../imgs/datadisclose/datadis-temp4.png") no-repeat center / cover;
+}
+
+.m-con-bd .mothdata {
+  margin     : 0 auto;
+  height     : 220px;
+  background : url("../imgs/datadisclose/datadis-temp5.png") no-repeat center / cover;
+}
+
+.m-con-bd .borrowtype li.age {
+  background : url("../imgs/datadisclose/datadis-temp71.png") no-repeat center / cover;
+}
+
+.m-con-bd .borrowtype li.sex {
+  background : url("../imgs/datadisclose/datadis-temp72.png") no-repeat center / cover;
+}
+
+.voteuser {position: relative}
+.voteuser li {
+  display: inline-block;
+  height: 203px;
+  white-space: nowrap;
+}
+.voteuser li:nth-child(1){width: 40%}
+.voteuser li:nth-child(2){width: 20%;padding-top: 27px;}
+.voteuser li:nth-child(3){width: 40%}
+
+
+.usertype>li,
+.borrowtype>li
+{
+  height: 80vw
+}
+
+.map {height: 90vw}
+
+.middle p{
+  line-height: 1;
+  padding: 7px 5px;
+  margin: 0;
+}
+
+
+#J_datadisclos_rank{ width :100%;}
+#J_datadisclos_rank td.head{
+  background-color: #57a8ff;
+  color: #fff;
+}
+#J_datadisclos_rank td{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #57a8ff;
+  color: #666;
+}
+
+.usertype {
+  margin: 1rem 0;
+}

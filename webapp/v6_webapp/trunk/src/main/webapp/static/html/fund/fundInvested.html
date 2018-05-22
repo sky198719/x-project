@@ -1,0 +1,73 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+    <div class="center sliding" style="color:#2096e9;">日日盈</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only" name="ddeHelp">
+      <i class="icon "><img src="static/img/xxd/when.png" width="20" class="mt15"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="fundInvested" class="page" directory="fund">
+    <!-- Scrollable page content-->
+    <div class="page-content fundInvested">
+      <div class="content-block account_tit">
+        <div class="fundBackground day-top" >
+              <div class="row">
+                  <div class="col-100 text-center mt20" stlye="position: relative;">
+                      <div class="text-center fundTitle3">
+                          <img src="static/img/xxd/xinxin.png" width="18">
+                          <span class="font18 font-white ml10 width100">昨日收益&nbsp;(元)</span>
+                      </div>
+                      <div class="fund-moneybag" style="display: none;"></div>
+                      <div class="fund-womenDay1" style="display: none;"></div>
+                  </div>                  
+              </div>
+              <div class="row">
+                  <div class="col-100 text-center mt15 mb30">
+                      <div class="mb25" id="earningsYesterday">
+                        <span class="font80">0</span><span class="font28">.00</span>
+                       </div>
+                      <div class="text-centerm mt10 fundSumMoneyDiv">
+                          <h5 class="font-white">总金额&nbsp;(元)</h5>
+                          <h5 id="investMoney">0.00</h5>
+                      </div>
+                  </div>
+              </div>
+        </div>
+        <div class="row no-gutter">
+            <div class="col-50">
+                <a href="#" class="day-invest-bid day-invest-active" >
+                    <h5>预期年收益(%)</h5>
+                    <span id="investedFundApr"><span id="yield"><span class="font36 font-red">0</span><span class="font18 font-red">.00</span></span></span>
+                </a>
+            </div>
+            <div class="col-50">
+                <a href="#" class="day-invest-bid day-invest-active" name="earningsUrl">
+                    <h5>累计收益(元)</h5>
+                    <span id="totalEarnings"><span class="font36 font-red">0</span><span class="font18 font-red">.00</span></span>
+                </a>
+            </div>
+        </div>
+        <input type="hidden" id="v_isbanlance" value="1"/>
+        <input type="hidden" id="v_islastbalance" value="1"/>
+        <input type="hidden" id="v_purchase_switch" value="1"/>
+        <input type="hidden" id="v_ransom_switch" value="1"/>
+        <div>&nbsp;</div>
+        <div style="margin:0 auto;text-align:center;width:100%"><span id="dde_notice" class="font-orange"></span></div>
+        <div class="day-footer-optbutton">
+          <div class="row">
+            <div class="col-50 transferOut"><a href="#" class="button button-50-disable font-black"  name="index_transferOut">转出</a></div>
+            <div class="col-50 transferIn"><a href="#" class="button button-51-disable active"  name="index_transferIn" data-fcode="">转入</a></div>
+          </div>
+        </div>
+        <div style="color:red;margin: 20px 20px 0 20px;">
+            日日盈即将下架，请您及时做好安排，建议投资步步高升、新元宝等其他产品
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

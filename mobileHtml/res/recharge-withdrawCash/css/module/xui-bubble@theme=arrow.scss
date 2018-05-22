@@ -1,0 +1,58 @@
+/*
+ * 组件：气泡
+ * 组件注册编号：02-0002
+ * 标准结构1级
+ * 属性：
+ * sz    规格（默认：m   s | m | l）
+ * co    颜色 (默认：read  read | back | main | vice | info | success | warn | error)
+ * 示例：
+ *  <span class="xui-btn" mc="02-0002"></span> 默认的这样就行了
+ *  <div class="xui-btn" mc="02-0002" btn-sz="s"></div> 小号的这样写
+ * 关联：html+css
+ */
+
+.xui-bubble[theme="arrow"] {
+  font-style: normal;
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+  background: $bg-main;
+  border-radius: 3px;
+  color: #fff;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  padding: 2px .5em;
+  transform: scale(.8);
+  -webkit-transform: scale(.8);
+  position: relative;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.xui-bubble[theme="arrow"][pos="left"]:before,
+.xui-bubble[theme="arrow"][pos="right"]:before {
+  content: "";
+  display: block;
+  width: .5em;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  background: $bg-main;
+}
+
+//颜色
+.xui-bubble[theme="arrow"][co="main"],.xui-bubble[theme="arrow"][co="main"]:before{ background: $bg-main;}
+.xui-bubble[theme="arrow"][co="vice"],.xui-bubble[theme="arrow"][co="vice"]:before{ background: $bg-vice; }
+.xui-bubble[theme="arrow"][co="info"],.xui-bubble[theme="arrow"][co="info"]:before{ background: $bg-info; }
+.xui-bubble[theme="arrow"][co="success"],.xui-bubble[theme="arrow"][co="success"]:before{ background: $bg-success; }
+.xui-bubble[theme="arrow"][co="warn"],.xui-bubble[theme="arrow"][co="warn"]:before{ background: $bg-warn; }
+.xui-bubble[theme="arrow"][co="danger"],.xui-bubble[theme="arrow"][co="danger"]:before{ background: $bg-danger; }
+
+.xui-bubble[theme="arrow"][pos="none"] {margin:0 0 0 .5em; transform-origin:100% 50%; -webkit-transform-origin:100% 50%;}
+//向方
+.xui-bubble[theme="arrow"][pos="left"]{margin:0 0 0 .5em; transform-origin:100% 50%; -webkit-transform-origin:100% 50%;}
+.xui-bubble[theme="arrow"][pos="left"]:before {right: 100%; -webkit-clip-path: polygon(10% 50%, 100% 10%, 100% 90%);clip-path: polygon(10% 50%, 100% 10%, 100% 90%);margin-right: -1px;}
+
+
+.xui-bubble[theme="arrow"][pos="right"]{margin:0 .5em 0 0;transform-origin:0% 50%; -webkit-transform-origin:0% 50%;}
+.xui-bubble[theme="arrow"][pos="right"]:before {left: 100%; -webkit-clip-path: polygon(0% 10%,90% 50%, 0% 90%);clip-path: polygon(0% 10%,90% 50%, 0% 90%);margin-left: -1px;}

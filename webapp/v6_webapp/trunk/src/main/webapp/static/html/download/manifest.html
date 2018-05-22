@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>理财师下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        html {
+            font-size: 100%;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+        }
+
+        .container img {
+            width: 100%;
+            display: block;
+        }
+
+        .container .ios_btn {
+            width: 30%;
+            top: 55%;
+            left: 15%;
+            position: absolute;
+            display: block;
+            border: none;
+        }
+        .container .ios_android {
+            width: 30%;
+            top: 55%;
+            left: 55%;
+            position: absolute;
+            display: block;
+            border: none;
+        }
+        .qixilayer{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 9;
+            top: 0;
+            left: 0;
+            position: fixed;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+    <div class="container">
+        <img src="../../../static/img/activity/manifest/bg1.jpg"/>
+    </div>
+    <div class="container">
+        <img src="../../../static/img/activity/manifest/bg2.jpg"/>
+    </div>
+    <div class="container">
+        <img src="../../../static/img/activity/manifest/bg3.png"/>
+        <img src="../../../static/img/activity/manifest/manifest-ios.png" class="ios_btn"/>
+        <img src="../../../static/img/activity/manifest/manifest-android.png" class="ios_android"/>
+    </div>
+</div>
+<div class="qixilayer">
+    <img src="../../../static/img/xxd/download/live.png" width="250" style="float: right"/>
+</div>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 640) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script src="../../../static/lib/zepto/zepto.min.js"></script>
+<script type="text/javascript">
+    var n = 30;
+    var iosNumber = n;
+    var iosInterval;
+    $(document).ready(function () {
+        $(".ios_btn").click(function(){
+            var isDow = $(this).data("isDow");
+            if(isDow != undefined && isDow == true) {
+                return;
+            }
+            $(this).data("isDow",true);
+
+            if(!ios()) {
+                alert("该项为IOS版专属下载");
+                return;
+            }
+            if(isWeixin()) {
+                $(".qixilayer").show();
+                return;
+            }
+            iosInterval = setInterval(function(){
+                if(iosNumber == 0) {
+                    clearInterval(iosInterval);
+                    $(".ios_btn").data("isDow",false);
+                    iosNumber = n;
+                    $(".ios_btn").attr("src","../../../static/img/activity/manifest/manifest-ios.png");
+                } else {
+                    iosNumber--;
+                }
+            },1000);
+            $(".ios_btn").attr("src","../../../static/img/activity/manifest/manifest-ios-in.png");
+            window.location.href = 'itms-services://?action=download-manifest&url=https://www.xinxindai.com/static/download/ios/manifest.plist';
+        });
+
+        var androidNumber = n;
+        var androidInterval;
+        $(".ios_android").click(function(){
+            var isDow = $(this).data("isDow");
+             if(isDow != undefined && isDow == true) {
+                 return;
+             }
+             $(this).data("isDow",true);
+            if(ios()) {
+                alert("该项为安卓版专属下载");
+                return;
+            }
+
+            if(isWeixin()) {
+                $(".qixilayer").show();
+                return;
+            }
+
+            androidInterval = setInterval(function(){
+               if(androidNumber == 0) {
+                   clearInterval(androidInterval);
+                   $(".ios_android").data("isDow",false);
+                   androidNumber = n;
+                   $(".ios_android").attr("src","../../../static/img/activity/manifest/manifest-android.png");
+               } else {
+                   androidNumber--;
+               }
+           },1000);
+           $(".ios_android").attr("src","../../../static/img/activity/manifest/manifest-android-in.png");
+           window.location.href = 'http://download-cdn.xinxindai.com/xxd_licaishi_release.apk';
+
+        });
+    });
+
+
+    function isWeixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function ios() {
+        var ua = navigator.userAgent;
+        var ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
+        var ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/);
+        var iphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/);
+        if (ipad || iphone || ipod) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

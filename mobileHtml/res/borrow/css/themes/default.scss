@@ -1,0 +1,175 @@
+@import "../xui/base/xui-color";
+
+//主体
+%co-main                           {            color: $co-main          }
+%co-main-hover                     {            color: $co-main-hover    }
+%co-main-active                    {            color: $co-main-active   }
+
+%bg-main                           { background-color: $bg-main          }
+%bg-main-hover                     { background-color: $bg-main-hover    }
+%bg-main-active                    { background-color: $bg-main-active   }
+
+%bc-main                           {     border-color: $bc-main          }
+%bc-main-hover                     {     border-color: $bc-main-hover    }
+%bc-main-active                    {     border-color: $bc-main-active   }
+
+//辅助
+%co-vice                           {            color: $co-vice          }
+%co-vice-hover                     {            color: $co-vice-hover    }
+%co-vice-active                    {            color: $co-vice-active   }
+
+%bg-vice                           { background-color: $bg-vice          }
+%bg-vice-hover                     { background-color: $bg-vice-hover    }
+%bg-vice-active                    { background-color: $bg-vice-active   }
+
+%bc-vice                           {     border-color: $bc-vice          }
+%bc-vice-hover                     {     border-color: $bc-vice-hover    }
+%bc-vice-active                    {     border-color: $bc-vice-active   }
+
+//阅读(默认)
+%co-read                           {            color: $co-read          }
+%co-read-hover                     {            color: $co-read-hover    }
+%co-read-active                    {            color: $co-read-active   }
+
+%bg-read                           { background-color: $bg-read          }
+%bg-read-hover                     { background-color: $bg-read-hover    }
+%bg-read-active                    { background-color: $bg-read-active   }
+
+%bc-read                           {     border-color: $bc-read          }
+%bc-read-hover                     {     border-color: $bc-read-hover    }
+%bc-read-active                    {     border-color: $bc-read-active   }
+
+//远景
+%co-back                           {            color: $co-back          }
+%co-back-hover                     {            color: $co-back-hover    }
+%co-back-active                    {            color: $co-back-active   }
+
+%bg-back                           { background-color: $bg-back          }
+%bg-back-hover                     { background-color: $bg-back-hover    }
+%bg-back-active                    { background-color: $bg-back-active   }
+
+%bc-back                           {     border-color: $bc-back          }
+%bc-back-hover                     {     border-color: $bc-back-hover    }
+%bc-back-active                    {     border-color: $bc-back-active   }
+
+//信息
+%co-info                           {            color: $co-info          }
+%co-info-hover                     {            color: $co-info-hover    }
+%co-info-active                    {            color: $co-info-active   }
+
+%bg-info                           { background-color: $bg-info          }
+%bg-info-hover                     { background-color: $bg-info-hover    }
+%bg-info-active                    { background-color: $bg-info-active   }
+%bg-info-prompt                    { background-color: $bg-info-prompt   }
+
+%bc-info                           {     border-color: $bc-info          }
+%bc-info-hover                     {     border-color: $bc-info-hover    }
+%bc-info-active                    {     border-color: $bc-info-active   }
+%bc-info-prompt                    {     border-color: $bc-info-prompt   }
+
+//成功
+%co-success                        {            color: $co-success       }
+%co-success-hover                  {            color: $co-success-hover }
+%co-success-active                 {            color: $co-success-active}
+
+%bg-success                        { background-color: $bg-success       }
+%bg-success-hover                  { background-color: $bg-success-hover }
+%bg-success-active                 { background-color: $bg-success-active}
+%bg-success-prompt                 { background-color: $bg-success-prompt}
+
+%bc-success                        {     border-color: $bc-success       }
+%bc-success-hover                  {     border-color: $bc-success-hover }
+%bc-success-active                 {     border-color: $bc-success-active}
+%bc-success-prompt                 {     border-color: $bc-success-prompt}
+
+//提示
+%co-warn                           {            color: $co-warn          }
+%co-warn-hover                     {            color: $co-warn-hover    }
+%co-warn-active                    {            color: $co-warn-active   }
+
+%bg-warn                           { background-color: $bg-warn          }
+%bg-warn-hover                     { background-color: $bg-warn-hover    }
+%bg-warn-active                    { background-color: $bg-warn-active   }
+%bg-warn-prompt                    { background-color: $bg-warn-prompt   }
+
+%bc-warn                           {     border-color: $bc-warn          }
+%bc-warn-hover                     {     border-color: $bc-warn-hover    }
+%bc-warn-active                    {     border-color: $bc-warn-active   }
+%bc-warn-prompt                    {     border-color: $bc-warn-prompt   }
+
+//警告
+%co-danger                          {            color: $co-danger         }
+%co-danger-hover                    {            color: $co-danger-hover   }
+%co-danger-active                   {            color: $co-danger-active  }
+
+%bg-danger                          { background-color: $bg-danger         }
+%bg-danger-hover                    { background-color: $bg-danger-hover   }
+%bg-danger-active                   { background-color: $bg-danger-active  }
+%bg-danger-prompt                   { background-color: $bg-danger-prompt  }
+
+%bc-danger                          {     border-color: $bc-danger         }
+%bc-danger-hover                    {     border-color: $bc-danger-hover   }
+%bc-danger-active                   {     border-color: $bc-danger-active  }
+%bc-danger-prompt                   {     border-color: $bc-danger-prompt  }
+
+
+//顶栏(非必需)
+%co-tobar                          {            color: $co-tobar         }
+%co-tobar-hover                    {            color: $co-tobar-hover          }
+%co-tobar-active                   {            color: $co-tobar-active         }
+
+%bg-tobar                          { background-color: $bg-tobar         }
+%bg-tobar-hover                    { background-color: $bg-tobar-hover          }
+%bg-tobar-active                   { background-color: $bg-tobar-active         }
+
+%bc-tobar                          {     border-color: $bc-tobar         }
+%bc-tobar-hover                    {     border-color: $bc-tobar-hover          }
+%bc-tobar-active                   {     border-color: $bc-tobar-active         }
+
+//头部(非必需)
+%co-header                         {            color: $co-header        }
+%co-header                         {            color: $co-header        }
+%co-header                         {            color: $co-header        }
+
+%bg-header                         { background-color: $bg-header        }
+%bg-header                         { background-color: $bg-header        }
+%bg-header                         { background-color: $bg-header        }
+
+%bc-header                         {     border-color: $bc-header        }
+%bc-header                         {     border-color: $bc-header        }
+%bc-header                         {     border-color: $bc-header        }
+
+//底部(非必需)
+%co-footer                         {            color: $co-footer        }
+%co-footer-hover                   {            color: $co-footer-hover  }
+%co-footer-active                  {            color: $co-footer-active }
+
+%bg-footer                         { background-color: $bg-footer        }
+%bg-footer-hover                   { background-color: $bg-footer-hover  }
+%bg-footer-active                  { background-color: $bg-footer-active }
+
+%bc-footer                         {     border-color: $bc-footer        }
+%bc-footer-hover                   {     border-color: $bc-footer-hover  }
+%bc-footer-active                  {     border-color: $bc-footer-active }
+
+//底栏(非必需)
+%co-fobar                          {            color: $co-fobar         }
+%co-fobar-hover                    {            color: $co-fobar-hover   }
+%co-fobar-active                   {            color: $co-fobar-active  }
+
+%bg-fobar                          { background-color: $bg-fobar         }
+%bg-fobar-hover                    { background-color: $bg-fobar-hover   }
+%bg-fobar-active                   { background-color: $bg-fobar-active  }
+
+%bc-fobar                          {     border-color: $bc-fobar         }
+%bc-fobar-hover                    {     border-color: $bc-fobar-hover   }
+%bc-fobar-active                   {     border-color: $bc-fobar-active  }
+
+//黑色
+%co-black                          {            color: $black            }
+%bg-black                          { background-color: $black            }
+%bc-black                          {     border-color: $black            }
+//白色
+%co-white                          {            color: $white            }
+%bg-white                          { background-color: $white            }
+%bc-white                          {     border-color: $white            }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xui="0.0.1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="xinxindai">
+    <meta name="author" content="UI Manxiaoman | Front-end Junbo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>银行存管 震撼上线</title>
+    <link href="css/main.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class='container'>
+    <img src="imgs/bg1.png" alt="">
+    <img src="imgs/bg2.png" alt="">
+    <img src="imgs/bg3.png" alt="">
+    <img src="imgs/bg4.png" alt="">
+    <img src="imgs/bg5.png" alt="">
+    <img src="imgs/bg6.png" alt="">
+    <button id="J_login" ></button>
+</div>
+<div class="fobar-block"></div>
+<!--<div id="J_wrapBody"></div>-->
+<div id="floater" class="floater-bg1 show-login" style="display: none">
+    <div class="tobar ar">
+        <b id="x_floater" class="multiply"></b>
+    </div>
+    <div id="login3" class="xui-login">
+        <div>
+            <h5 class="login-title">用户登录</h5>
+            <ul>
+                <li><input type="text" placeholder="请输入用户名" class="ux_login_user"></li>
+                <li><input type="password" placeholder="请输入密码" class="ux_login_password"></li>
+                <li><input type="text" placeholder="请输入验证码" class="ux_login_v_code"><b class="ui-login-v-code-img ux_login_v_code_img"></b></li>
+                <li>
+                    <button class="ux_login_submit">登录</button>
+                </li>
+                <li class="ac login-text">
+                    <p id="to_reg">没有帐户？去<span class="co1-vice">注册</span></p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div id="reg1" class="xui-register">
+        <div>
+            <h5 class="reg-title">用户注册</h5>
+            <ul>
+                <li><input id="aaa1" type="tel" placeholder="请输入注册手机号" class="register-input" maxlength="11"></li>
+
+                <li><input id="bbb1" type="password" placeholder="请输入密码" class="register-input"></li>
+
+                <li>
+                    <input id="ccc1" type="text" placeholder="请输入图形验证码" class="register-input">
+                    <img id="ddd1" class="ui-register-v-code-img" src="">
+                </li>
+
+                <li>
+                    <input id="eee1" type="number" placeholder="请输入手机验证码" class="register-input">
+                    <b id="fff1" class="xui-m-code">发送手机验证码</b>
+                </li>
+                <li>
+                    <button id="ggg1" class="register-button xui_submit_register">注册</button>
+                </li>
+                <li class="ac reg-text">
+                    <p id="to_login">已有帐户？去<span class="co1-vice">登录</span></p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+</div>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = fontSize * (clientWidth / 375) + 'px';
+            };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script src="js/iscroll-probe.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

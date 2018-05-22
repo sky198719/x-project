@@ -1,0 +1,58 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">交易明细</div>
+        <div class="right">
+            <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+        </div>
+        <!-- tab -->
+        <div class="subnavbar sliding">
+            <!-- tabs控制面板 -->
+            <div class="buttons-row theme-orange fundTradeList">
+                <!-- 关联到第一个tab, 默认激活 -->
+                <a href="#fundEarnings" class="tab-link active button">收益</a>
+                <!-- 关联到第二个tab -->
+                <a href="#fundTransferIn" class="tab-link button">转入</a>
+                <!-- 关联到第三个tab -->
+                <a href="#fundTransferOut" class="tab-link button">转出</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="fundDetailsList" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content infinite-scroll with-subnavbar hide-bars-on-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <!-- tabs start -->
+            <div class="tabs">
+                <!--收益-->
+                <div id="fundEarnings" class="tab active">
+                    <div class="list-block media-list">
+                        <ul></ul>
+                    </div>
+                </div>
+                <!--转入-->
+                <div id="fundTransferIn" class="tab">
+                    <!-- 退出期demo -->
+                    <div class="list-block media-list">
+                        <ul></ul>
+                    </div>
+                </div>
+                <!-- 转出 -->
+                <div id="fundTransferOut" class="tab">
+                    <div class="list-block media-list">
+                        <ul> </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- tabs over -->
+        </div>
+    </div>
+</div>

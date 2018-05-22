@@ -1,0 +1,217 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">
+            <a href="#" data-popover=".popover-link" class="open-popover popver-arrow-right">热门理财</a>
+        </div>
+        <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through toolbar-through">
+    <div data-page="financesList" class="page" directory="popular">
+        <div class="page-content pull-to-refresh-content">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+
+            <div class="list-block media-list financesList">
+                <ul id="finances7d" style="margin-top: 10px;">
+                    <li class="swipeout">
+                        <div class="swipeout-content">
+                            <!-- 定期 -->
+                            <div class="nh-pop">
+                                <img src="static/img/xxd/thirtylist.png" width="22px" height="80px;" >
+                            </div>
+                            <div class="item-inner pl40">
+                                <div class="item-title-row">
+                                    <div class="item-title font15" style="width: 100%">
+                                        <span class="font18">新手专享30天</span>&nbsp;
+                                        <span class="font-red" style="font-size: 0.7rem;">(限购一次)</span>
+                                        <span style="float: right;">投资上限<span class="pro30_mostInvestAmount">0</span>元</span>
+                                    </div>
+                                </div>
+                                <span style="position: absolute;margin-left: 70px;display: none;" class="newhandActivityFinances">
+                                    <img src="static/img/xxd/thirtytip.png" height="20"/>
+                                </span>
+                                <div class="item-text mt20" style="height: 50px;display: list-item;overflow: visible;">
+                                    <span style="float: left;width: 40%">
+                                       <span id="finances_7dApr" class="font-red">
+                                                 <span class="font28">0</span>
+                                                 <span class="font16">.00%</span>
+                                             </span>
+                                           <br>
+                                        <span style="line-height: 28px;">历史年化收益</span>
+                                   </span>
+                                    <span style="float: left;width: 25%;">
+                                       <span class="font-3A3939"><span id="finances_7d_closeTerm" class="font18">0</span>天</span>
+                                            <br>
+                                            <span style="line-height: 28px;">锁定期限</span>
+                                    </span>
+                                    <input type="hidden" name="finances_fund_join">
+                                    <span style="float: left;width: 35%;text-align: right;" id="finances_7dOP">
+                                        <button class="button popular-btn finances_7dJoin"  style="display: inline;">立即抢购</button>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div style="text-align:right;display: none;" class="activityLabel_list_step">
+                        <span style="
+                            color:#fff;
+                            display: inline-block;
+                            font-size: 0.7rem;
+                            height: 1.3rem;
+                            line-height: 1.3rem;
+                            position: relative;
+                            padding: 0 5px 0 20px;
+                            background: #ff7365;
+                            /*clip-path  : polygon(20px 0%,100% 0,100% 100%,0 100%);*/
+                            clip-path  : polygon(14.275px 2.711px, 15.409px 1.513px,16.502px 0.786px,17.619px 0.318px ,21px 0%,100% 0,100% 100%,0 100%);
+                            -webkit-clip-path: polygon(14.275px 2.711px, 15.409px 1.513px,16.502px 0.786px,17.619px 0.318px ,21px 0%,100% 0,100% 100%,0 100%);
+" class="activityLabel_list_step_text"></span>
+                </div>
+
+				<ul id="stepUpward" style="display:none;">
+                    <li class="swipeout">
+                        <div class="swipeout-content">
+                            <!-- 定期 -->
+                            <div class="nh-pop">
+                                <img src="static/img/xxd/freeAndFix.png" width="22px" height="80px;"  name="financesListPlanLogo">
+                            </div>
+                            <div class="item-inner pl40">
+                                <div class="item-title-row">
+                                    <div class="item-title font16">
+                                        <span class="font18">步步高升</span>&nbsp;
+                                        <span class="font15">
+<!--                                         	<span class="tenderStartAmount">0</span>元起投&nbsp; -->
+                                        	定期变活期&nbsp;存取灵活
+                                        </span>
+                                    </div>
+                                </div>
+                                <span style="position: absolute;margin-left: 35px;display: none;" class="suActivity">
+                                    <img src="static/img/xxd/forphone_down.png" height="20"/>
+                                </span>
+                                <div class="item-text suAprDiv" style="height: 50px;display: list-item;overflow: visible;margin-top:10px;">
+                                    <span style="float: left;width: 40%;" class="suAprSpan">
+                                        <span class="font-red suApr" style="font-size:22px;">
+                                             <span class="minApr">0</span><span class="aprPercent" style="font-size:18px;">%</span>
+                                             -
+                                             <span class="maxApr">0</span><span class="aprPercent" style="font-size:18px;">%</span>
+                                         </span>
+                                       <br>
+                                       <span style="line-height: 28px;">历史年化收益</span>
+                                   </span>
+                                    <span style="float: left;width: 25%;">
+                                        <span class="font18 font-3A3939">1个月</span>起
+                                        <br>
+                                        <span style="line-height: 28px;">投资期限</span>
+                                    </span>
+                                    <span style="float: right;width: 35%;text-align: right;" id="stepUpwardButtonDiv">
+				                        <button class="button  popular-btn disable" style="display: inline;" name="立即抢购" id="stepUpwardButton">
+                                               	立即抢购
+                                           </button>
+				                     </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+				<ul style="background: #efeff4;display: none;" id="monthFinanceList">
+                    <li  class="swipeout" style="margin-top:8px;margin-bottom: 8px;border-top: 1px solid #E1E1E1;border-bottom: 1px solid #E1E1E1;background: #fff;">
+                        <div class="swipeout-content">
+	                        <div style="display:none;" id="monthFinanceCountDownDiv">
+	                        	<div style="right:0px;display:flex;">
+		                        	<div style="width: 0;height: 0;border-bottom: 18px solid #2096e9;border-left: 10px solid transparent;margin-top:-18px;right: 174px;position: absolute;"></div>
+		                            <div class="bid-mark bidding" style="margin-top:-23px;right:0px;">
+		                                <h6 id="monthFinanceCountDown" style="border-radius: 6px 0px 0px 0px;width: 160px;text-align: center;">距离抢购结束：00:00:00</h6>
+		                            </div>
+	                            </div>
+	                        </div>
+                            <!-- 定期 -->
+                            <div class="dq-blue">
+                                <img src="static/img/xxd/dq-blue.png" width="25px" height="50px;">
+                            </div>
+                            <div class="item-inner pl40">
+                                <div class="item-title-row">
+                                    <div class="item-title text-overflow" style="width: 100%;">
+                                        <span class="font18" id="itemName"></span>
+                                        <span class="ml10 font15" style="float:right">每天10:00、20:00发售</span>
+                                    </div>
+                                    <!-- 					                <div class="item-after">计划金额：100.00 万</div> -->
+                                </div>
+
+                                <div class="item-subtitle item-title-row" id="progressBarDiv">
+                                    <div class="item-title" style="width: 80%">
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width:0%;" id="monthFinanceProgressBar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-after">
+                                        <div class="send"><span id="monthFinancePercent">0%</span>
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item-text mt5" style="height: 50px;display: list-item;overflow: visible;" id="monthFinanceInfoDiv">
+					                    <span style="float: left;width: 40%">
+					                        <span class="font-red font28" id="monthFinanceApr">0</span><span class="font-red font18">%</span>
+					                        <br>
+					                        <span style="line-height: 28px;">历史年化收益</span>
+					                    </span>
+					                    <span style="float: left;width: 25%;line-height: 25px;">
+					                        <span class="font18 font-3A3939"><span id="monthFinanceLockDays">0</span>天</span>
+					                        <br>
+					                        <span style="line-height: 28px;">锁定期限</span>
+					                    </span>
+					                    <span style="float: right;width: 35%;text-align: right;" id="monthFinanceButtonDiv">
+
+					                        <button class="button  popular-btn disable" style="display: inline;" name="等待发售" id="monthFinanceButton">
+                                                等待发售
+                                            </button>
+
+					                     </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="list-block media-list displayNone financesPlanList">
+                    <ul>
+                        <li class="backgroundGrey">
+                            <div class="content-block-title text-center font-999 font14 mb15">
+                                <p class="mgpd0 clearfix">
+                                    <span class="left-solid-border"></span>
+                                    <span class="center-content"><img src="static/img/xxd/xx_07.png" height="16" style="margin-bottom: -2px;margin-right: 5px;">新元宝每天0点发售</span>
+                                    <span class="right-solid-border"></span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="planList"></ul>
+                <div class="list-block media-list displayNone financesYypList">
+                    <ul>
+                        <li class="backgroundGrey">
+                            <div class="content-block-title text-center font-999 font14 mb15">
+                                <p class="mgpd0 clearfix">
+                                    <span class="left-solid-border"></span>
+                                    <span class="center-content" style="font-size: 0.7rem"><img src="static/img/xxd/yyp_listSplitIcon.png" height="16" style="margin-bottom: -2px;margin-right: 5px;">月月派：投资次日起息，先息后本</span>
+                                    <span class="right-solid-border"></span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="yypList"></ul>
+            </div>
+        </div>
+    </div>
+</div>

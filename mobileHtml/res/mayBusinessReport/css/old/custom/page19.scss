@@ -1,0 +1,139 @@
+//page19
+.end {
+  width: 80%;
+  left: 10%;
+  position: relative;
+  text-align: justify;
+}
+.page19 .logo.logo19{
+  margin-top:0;
+}
+
+.ew2 > * {
+  width: 50%;
+  float: left
+}
+
+.ew3 > * {
+  width: 33.33%;
+  float: left
+}
+
+.ew-m10x {
+  margin: 0 -10px
+}
+
+.ew-m10x > * {
+  padding: 0 10px;
+}
+
+.vm {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.vm:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.page19 > .year {
+  position: relative
+}.st0 {
+   fill: #c58b53;
+ }
+
+.page19 > .year h1 {
+  font-size: 6rem;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.5;
+}
+
+.page19 > .year h1 svg {
+  font-weight: 500;
+  position: relative;
+  top: 5rem;
+  transition: all 0s;
+  -webkit-transition: all 0s;
+}
+
+.swiper-slide-active .page19 > .year h1 svg {
+  top: -.1rem;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+.page19 > .year h1:before, .page19 > .year h1:after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  z-index: 2;
+
+}
+
+.page19 > .year h1:before {
+  width: 52rem;
+  height: 32rem;
+  top: 57%;
+  margin-left: -26rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11%, #191919 11%), radial-gradient(at 50% 50%, $co-main 69%, $bg-back 69.5%);
+}
+
+.page19 > .year h1:after {
+  width: 64rem;
+  height: 32rem;
+  top: 67%;
+  margin-left: -32rem;
+  background: $bg-back;
+}
+
+.page19 > .year P {
+  font-size: 1.9rem;
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  top: 69%;
+  z-index: 2;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+
+}
+
+
+
+.swiper-slide-active .page19 > .year p {
+  opacity: 1;
+  animation: am-pop2ps .6s ease .4s forwards;
+  -webkit-animation: am-pop2ps .6s ease .4s forwards;
+}
+
+.page19 > .year p b {
+  font-size: 2.3rem;
+  position: relative;
+  top: .1rem;
+}
+
+.page19 .line {
+  width: 80%;
+  max-width: 23rem;
+  height: 1px;
+  background: linear-gradient(90deg, #191919 0%, #c48c53 25%, #c48c53 75%, #191919 100%);
+  margin: 2rem 0 1.5rem;
+  display: inline-block;
+}
+
+
+.page19 .logo {
+  margin-top: 2.5rem;
+}
+
+.page19 .logo img {
+  width: 10rem;
+  margin-left: .5rem;
+}

@@ -1,0 +1,310 @@
+@import "css/index";
+@import "css/register";
+@color-title:#ff3333;
+@color-cur:#993333;
+@apr-color:#ff6633;
+.container{
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  .wrap{
+    width: 1200px;
+    margin: 0 auto;
+    overflow:hidden;
+    position: relative;
+    .title-center{
+      color: @color-title;
+      font-size: 46px;
+      text-align: center;
+    }
+  }
+}
+
+.top{
+  height: 778px;
+  background: url("img/top-fri.jpg") center center no-repeat;
+  .operate-data{
+    width: 1200px;
+    padding-top: 114px;
+    overflow:hidden;
+    .advantage-data {
+      width: 1018px;
+      margin: 0 auto;
+      clear: both;
+      overflow: hidden;
+      li{
+        float: left;
+        width: 210px;
+        color: #fff;
+        text-align: left;
+        .advantage-content{
+          font-size: 20px;
+          color: #ffffcc;
+        }
+        p {
+          font-size: 25px;
+          color: #ffff33;
+          width: 210px;
+          span {
+            font-size: 32px;
+            color: #ffff33;
+          }
+        }
+      }
+
+      .advantage-second{
+        width: 290px;
+      }
+
+    }
+    .advantage-data .advantage-1{
+      margin-left: 30px;
+    }
+    .advantage-data .advantage-2{
+      margin-left: 18px;
+    }
+    .advantage-data .advantage-4{
+     width: 180px;
+    }
+  }
+}
+
+.center{
+  height: 902px;
+  background: url("img/center-fri.jpg") center center no-repeat;
+  .wrap-top{
+    width: 1200px;
+    margin: 0 auto;
+    .title-center{
+      padding-top: 132px;
+    }
+    p{
+      color: @color-cur;
+      font-size: 24px;
+      text-align: center;
+      height: 44px;
+      line-height: 44px;
+      margin-top: 5px;
+    }
+  }
+//  中间轮播
+  .list-container{
+    width: 1080px;
+    margin: 44px auto 0;
+    overflow: hidden;
+    .show-container{
+      float: left;
+      width:716px;
+      height: 472px;
+      cursor: pointer;
+    }
+    .show-list{
+      float: right;
+      width: 328px;
+      margin-right: 12px;
+      .winData-title{
+        width: 100%;
+        padding-top: 114px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 22px;
+        color: #ffff99;
+        span{
+          display: inline-block;
+
+        }
+        .user-name{
+          margin-left: 56px;
+        }
+        .priname{
+          margin-left: 80px;
+        }
+      }
+      .winData{
+        width: 100%;
+        height: 270px;
+        overflow: hidden;
+        position: relative;
+        ul{
+          width: 100%;
+          padding:0;
+          position: relative;
+          li{
+            width: 100%;
+            height: 54px;
+            line-height: 54px;
+            color: #993333;
+            font-size:20px;
+            position: relative;
+            span{
+              display: inline-block;
+              text-align:center;
+            }
+            .username{
+              width: 55%;
+            }
+            .prizename{
+              width: 43%;
+              margin-right: 2%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .show-common{
+    width: 1080px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 20px;
+    color: @color-cur;
+
+  }
+  .show-people{
+     padding:19px 0 5px;
+     span{
+       color: @color-title;
+     }
+  }
+}
+.bottom{
+  position: relative;
+  height: 1310px;
+  background: url("img/bottom-fri.png") center center no-repeat;
+  .safety-control{
+    width: 1200px;
+    height: 550px;
+    margin:36px auto 0;
+    .title-center{
+      padding: 70px 0 60px;
+    }
+    .safe-list{
+      width: 928px;
+      overflow: hidden;
+      margin: 0 auto;
+      li{
+        float: left;
+        margin-left: 100px;
+        img{
+          display: block;
+          margin:0 auto;
+        }
+        div{
+          padding-top: 10px;
+          h4{
+            font-size: 28px;
+            color: @color-title;
+            text-align:center;
+          }
+          p{
+            font-size: 18px;
+            color: @color-cur;
+            text-align:center;
+          }
+        }
+      }
+    }
+    .safe-list .safe-list1{
+      margin-left: 0;
+    }
+  }
+  .product-content{
+      margin-top: 62px;
+      .title-center{
+        color: #fff;
+      }
+     .product-list{
+       width: 1200px;
+       margin: 40px auto 0;
+       li{
+         position: relative;
+         float: left;
+         margin-left: 42px;
+         width: 370px;
+         height: 387px;
+         background: url("img/product-bkg.png") center center no-repeat;
+         background-size: 100% 100%;
+         cursor: pointer;
+         .p-title{
+           position: absolute;
+           right: 20px;
+           top:26px;
+           font-size: 34px;
+           color: #fff;
+         }
+         >div{
+           width: 308px;
+           height: 348px;
+           margin-top: 33px;
+           margin-left: 6px;
+           h4{
+             font-size: 44px;
+             color: @color-cur;
+             text-align: center;
+             height: 44px;
+             line-height: 44px;
+             padding: 44px 0 36px;
+           }
+           p{
+             text-align: center;
+           }
+           .p-apr{
+             font-size: 45px;
+             color: @apr-color;
+             height: 65px;
+             line-height: 65px;
+             span{
+               font-size: 65px;
+             }
+           }
+           .p-history{
+             font-size: 20px;
+             color: @color-cur;
+             padding: 12px 0 20px;
+           }
+           .p-info{
+             height: 60px;
+             line-height: 60px;
+             font-size: 22px;
+             color: @color-cur;
+           }
+         }
+       }
+     }
+    .product-list .product-list1{
+      margin-left: 0;
+    }
+  }
+}
+//悬浮按钮
+.register-bottom{
+  position: relative;
+  bottom: 100px;
+  height: 100px;
+  background-color:rgba(153,51,51,0.8);
+}
+.bottom-btn{
+  display: block;
+  position: absolute;
+  width: 493px;
+  height: 78px;
+  left: 50%;
+  top: 50%;
+  margin-left: -246.5px;
+  margin-top: -39px;
+  font-size: 39px;
+  color: @color-cur;
+  text-align: center;
+  line-height: 78px;
+  background: url("img/btn-bottom.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.special-bottom{
+  width: 100%;
+  min-width:1200px;
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  z-index: 999;
+  background-color:rgba(153,51,51,0.5);
+}

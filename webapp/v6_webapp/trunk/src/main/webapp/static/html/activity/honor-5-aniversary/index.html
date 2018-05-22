@@ -1,0 +1,645 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name = "format-detection" content = "telephone=no">
+<title>新新贷五周年</title>
+<style>
+/* 通用样式 */
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none; font-family:'微软雅黑';}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px white inset;}
+input,button{outline:none; border:none;}
+input::-webkit-input-placeholder{color:#999999;}
+.container{width:100%; position:relative;}
+.container img{display:block; border:none; width:100%;}
+.tip{width:100%; height:2rem; line-height:2rem; background-color:rgba(0,0,0,0.5); color:#ffffff; top:0; left:0; position:fixed; z-index:2; text-align:center; display:none;}
+
+/* 区块样式 */
+#bg2 #dayList{width:100%; height:3.2rem; text-align:center; top:3.9rem; left:0; position:absolute;}
+#bg2 #dayList li{width:9%; height:3.2rem; display:inline-block; margin:0 1.5%; position:relative;}
+#bg2 #dayList li span{width:100%; height:1.9rem; display:block; text-align:center; background:url(img/type2.png) 0 0 no-repeat; background-size:100% 100%; line-height:1.9rem; font-size:0.8rem; color:#f71d31; font-weight:bold; top:0; left:0; position:absolute;}
+#bg2 #dayList li strong{width:100%; height:1.3rem; display:none; text-align:center; line-height:1.3rem; font-size:0.5rem; color:#ffffff; font-weight:normal; bottom:0; left:0; position:absolute;}
+#bg2 #dayList li em{width:100%; height:1.3rem; display:none; text-align:center; line-height:1.3rem; font-size:0.5rem; color:#ffd434; font-style:normal; bottom:0; left:0; position:absolute;}
+#bg2 #dayList .sign span{background:url(img/type2_c.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg2 #dayList .sign strong{display:none;}
+#bg2 #dayList .sign em{display:block;}
+#bg2 #dayList .unsign span{background:url(img/type2.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg2 #dayList .unsign strong{display:block;}
+#bg2 #dayList .unsign em{display:none;}
+#bg2 #dayList li:last-child{width:11%; margin-left:0;}
+#bg2 #dayList li:last-child span{height:2.2rem; background:url(img/type1.png) 0 0 no-repeat; background-size:100% 100%; line-height:2.2rem; top:-0.2rem;}
+#bg2 #signTip{width:100%; height:1.3rem; line-height:1.3rem; font-size:0.6rem; text-align:center; color:#ffd434; top:6rem; left:0; position:absolute;}
+#bg2 #btn1{width:60%; top:14.5rem; left:20%; position:absolute; display:none;}
+#bg2 #btn1_c{width:60%; top:14.5rem; left:20%; position:absolute; display:none;}
+#bg2 #btn1_n{width:60%; top:14.5rem; left:20%; position:absolute; display:none;}
+
+#bg4 #pro1{width:46%; top:2.9rem; right:0.55rem; position:absolute;}
+#bg4 #pro2{width:46%; top:12rem; left:0.55rem; position:absolute;}
+#bg4 #pro3{width:46%; top:12rem; right:0.55rem; position:absolute;}
+
+#bg5 #pro4{width:46%; top:3rem; left:0.55rem; position:absolute;}
+#bg5 #pro5{width:46%; top:3rem; right:0.55rem; position:absolute}
+
+#bg6 ul{top:0; left:0; position:absolute; width:100%;}
+#bg6 ul li{width:5.7rem; height:5.7rem; position:absolute;}
+#bg6 ul #reward1{background:url(img/reward1.png) 0 0 no-repeat; background-size:100% 100%; top:2.3rem; left:5%;}
+#bg6 ul #reward1.current{background:url(img/reward1_c.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg6 ul #reward2{background:url(img/reward2.png) 0 0 no-repeat; background-size:100% 100%; top:2.3rem; left:35.8%;}
+#bg6 ul #reward2.current{background:url(img/reward2_c.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg6 ul #reward3{background:url(img/reward3.png) 0 0 no-repeat; background-size:100% 100%; top:2.3rem; right:5%;}
+#bg6 ul #reward3.current{background:url(img/reward3_c.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg6 ul #reward4{background:url(img/reward4.png) 0 0 no-repeat; background-size:100% 100%; top:8.4rem; right:5%;}
+#bg6 ul #reward4.current{background:url(img/reward4_c.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg6 ul #reward5{background:url(img/reward5.png) 0 0 no-repeat; background-size:100% 100%; top:14.5rem; right:5%;}
+#bg6 ul #reward5.current{background:url(img/reward5_c.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg6 ul #reward6{background:url(img/reward6.png) 0 0 no-repeat; background-size:100% 100%; top:14.5rem; left:35.8%;}
+#bg6 ul #reward6.current{background:url(img/reward6_c.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg6 ul #reward7{background:url(img/reward7.png) 0 0 no-repeat; background-size:100% 100%; top:14.5rem; left:5%;}
+#bg6 ul #reward7.current{background:url(img/reward7_c.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg6 ul #reward8{background:url(img/reward8.png) 0 0 no-repeat; background-size:100% 100%; top:8.4rem; left:5%;}
+#bg6 ul #reward8.current{background:url(img/reward8_c.png) 0 0 no-repeat; background-size:100% 100%;}
+#bg6 #btn3{width:5.7rem; height:5.7rem; top:8.4rem; left:35.8%; position:absolute;}
+#bg6 #btn3_c{width:5.7rem; height:5.7rem; top:8.4rem; left:35.8%; position:absolute; display:none;}
+#bg6 #info1{width:50%; height:2rem; line-height:2rem; top:24rem; left:5%; position:absolute; font-size:0.8rem; color:#fcd720;}
+#bg6 #btn2{width:35%; top:24rem; right:3%; position:absolute;}
+
+#bg7 #pro6{width:32%; top:3rem; left:1.5%; position:absolute;}
+#bg7 #pro7{width:32%; top:3rem; left:34%; position:absolute;}
+#bg7 #pro8{width:32%; top:3rem; right:1.5%; position:absolute;}
+
+/* 弹窗样式 */
+.layer{width:100%; height:100%; background:#000000; filter:alpha(opacity=50); -moz-opacity:0.5; opacity:0.5; top:0; left:0; position:fixed; z-index:1; display:none;}
+
+.alert1{width:85%; height:10rem; background:url(img/alert1.png) 0 0 no-repeat; background-size:100% 100%; top:50%; left:50%; margin-top:-5rem; margin-left:-42.5%; position:fixed; z-index:1; display:none;}
+.alert1 h2{font-size:1.2rem; height:2rem; line-height:2rem; font-weight:bold; color:#fa1c32; text-align:center; width:100%; margin-top:1rem;}
+.alert1 span{font-size:0.8rem; height:3rem; line-height:1.2rem; color:#ae6946; text-align:center; width:90%; margin:0 auto; display:block; padding:0.2rem 0;}
+.alert1 strong{font-size:0.8rem; height:3rem; line-height:1.2rem; color:#fa1c32; text-align:center; width:90%; margin:0 auto; display:block; padding:0.2rem 0; font-weight:normal;}
+.alert1 img{width:40%; display:block; margin:0 auto;}
+
+.alert2{width:85%; height:16.5rem; background:url(img/alert2.png) 0 0 no-repeat; background-size:100% 100%; top:50%; left:50%; margin-top:-8rem; margin-left:-42.5%; position:fixed; z-index:1; display:none;}
+.alert2 h2{font-size:1.2rem; height:2rem; line-height:2rem; font-weight:bold; color:#fa1c32; text-align:center; width:100%; margin-top:1rem;}
+
+#loginBox .close{width:2rem; height:2rem; background:url(img/close.png) 0 0 no-repeat; background-size:100% 100%; top:50%; right:3%; margin-top:-9rem; position:fixed; z-index:10; display:block;}
+#loginBox ul{width:85%; margin:0.5rem auto 0;}
+#loginBox ul li{width:100%; margin-bottom:0.5rem; background:#ffffff; border:1px solid #ff364a; position:relative; min-height:1.8rem;}
+#loginBox ul li label{display:none; color:#999999;}
+#loginBox ul li input{width:100%; height:1.8rem; line-height:1.8rem; font-size:0.8rem; color:#999999; padding:0 0.5rem; box-sizing:border-box;}
+#loginBox ul li:last-child{margin-bottom:0;}
+#loginBox ul li:last-child input{width:40%;}
+#loginBox ul li:last-child img{width:40%; height:1.6rem; top:0.1rem; right:0.2rem; position:absolute;}
+#loginBox div{width:100%;}
+#loginBox div span{width:85%; padding:0.2rem 7.5%; font-size:0.6rem; height:1rem; line-height:1rem; display:block; color:#fa1c32;}
+#loginBox div img{width:40%; display:block; margin:0 auto;}
+#loginBox div strong{width:100%; font-size:0.8rem; height:1.5rem; line-height:1.5rem; display:block; font-weight:normal; color:#fa1c32; text-align:center;}
+#loginBox div strong a{color:#fa1c32; text-decoration:none;}
+
+#listBox ul{width:85%; margin:0.5rem auto; height:7.5rem;}
+#listBox ul li{width:100%; height:1.5rem; line-height:1.5rem; overflow:hidden;}
+#listBox ul li span{line-height:1.5rem; float:left; display:inline; margin-right:1rem; font-size:0.8rem; color:#fa1c32;}
+#listBox ul li em{line-height:1.5rem; float:left; display:inline; font-size:0.8rem; color:#fa1c32; font-style:normal;}
+#listBox div{text-align:center; font-size:0.8rem; color:#fa1c32;}
+#listBox div span{margin:0 0.5rem; height:1rem; line-height:1rem;}
+#listBox div img{width:40%; display:block; margin:0.5rem auto 0;}
+</style>
+</head>
+
+<body>
+<!-- 区块 -->
+<div class="container" id="bg1">
+	<img src="img/bg1.jpg" />
+</div>
+<div class="container" id="bg2">
+	<img src="img/bg2.jpg" />
+	<ul id="dayList">
+		<li><span>14</span><strong>未登录</strong><em>已登录</em></li>
+		<li><span>15</span><strong>未登录</strong><em>已登录</em></li>
+		<li><span>16</span><strong>未登录</strong><em>已登录</em></li>
+		<li><span>17</span><strong>未登录</strong><em>已登录</em></li>
+		<li><span>18</span><strong>未登录</strong><em>已登录</em></li>
+		<li><span>19</span><strong>未登录</strong><em>已登录</em></li>
+		<li><span>20</span><strong>未登录</strong><em>兑换日</em></li>
+	</ul>
+	<div id="signTip">登录查看签到明细</div>
+	<img src="img/btn1.png" id="btn1" class="click2" />
+	<img src="img/btn1_n.png" id="btn1_n" class="click2" />
+	<img src="img/btn1_c.png" id="btn1_c" />
+</div>
+<div class="container" id="bg3">
+	<img src="img/bg3.jpg" />
+</div>
+<div class="container" id="bg4">
+	<img src="img/bg4.jpg" />
+	<a href="../../../../#!/static/html/popular/financesList.html"><img src="img/pro1.png" id="pro1" class="click2 proClick" /></a>
+	<a href="../../../../#!/static/html/popular/financesList.html"><img src="img/pro2.png" id="pro2" class="click2 proClick" /></a>
+	<a href="../../../../#!/static/html/popular/financesList.html"><img src="img/pro3.png" id="pro3" class="click2 proClick" /></a>
+</div>
+<div class="container" id="bg5">
+	<img src="img/bg5.jpg" />
+	<a href="../../../../#!/static/html/popular/financesList.html"><img src="img/pro4.png" id="pro4" class="click2 proClick" /></a>
+	<a href="../../../../#!/static/html/popular/financesList.html"><img src="img/pro5.png" id="pro5" class="click2 proClick" /></a>
+</div>
+<div class="container" id="bg6">
+	<img src="img/bg6.jpg" />
+	<ul id="game">
+		<li id="reward1" class="current" value="195"></li>
+		<li id="reward2" value="192"></li>
+		<li id="reward3" value="193"></li>
+		<li id="reward4" value="196"></li>
+		<li id="reward5" value="189"></li>
+		<li id="reward6" value='191'></li>
+		<li id="reward7" value="190"></li>
+		<li id="reward8" value="194"></li>
+	</ul>
+	<img src="img/btn3.png" id="btn3" class="click2" />
+	<img src="img/btn3_c.png" id="btn3_c" class="click2" />
+	<span id="info1"></span>
+	<img src="img/btn2.png" id="btn2" class="click2" />
+</div>
+<div class="container" id="bg7">
+	<img src="img/bg7.jpg" />
+	<a href="../../../../#!/static/html/newHand/sevenDaysDetail.html"><img src="img/pro6.png" id="pro6" class="click2 proClick" /></a>
+	<a href="../../../../#!/static/html/monthFinance/monthFinanceDetails.html"><img src="img/pro7.png" id="pro7" class="click2 proClick" /></a>
+	<a href="../../../../#!/static/html/popular/financesList.html"><img src="img/pro8.png" id="pro8" class="click2 proClick" /></a>
+</div>
+<div class="container" id="bg8">
+	<img src="img/bg8.jpg" />
+</div>
+<div class="container" id="bg9">
+	<img src="img/bg9.jpg" />
+</div>
+<div class="container" id="bg10">
+	<img src="img/bg10.jpg" />
+</div>
+<div class="container" id="bg11">
+	<img src="img/bg11.jpg" />
+</div>
+
+<!-- 弹窗 -->
+<div class="layer"></div>
+<div class="alert1" id="timeBox">
+	<h2>领取成功</h2>
+	<span></span>
+	<img src="img/click1.png" class="click1" />
+</div>
+<div class="alert1" id="endBox">
+	<h2>抽奖机会用完了！</h2>
+	<span>攻略：今天投资新元宝活动标1万元以上可获得1次抽奖机会，仅一次</span>
+	<img src="img/click1.png" class="click1" />
+</div>
+<div class="alert1" id="rewardBox">
+	<h2>中奖啦！</h2>
+	<strong></strong>
+	<img src="img/click1.png" class="click1" />
+</div>
+<div class="alert2" id="listBox">
+	<h2>我的奖品</h2>
+	<ul id="list">
+		
+	</ul>
+	<div>
+		
+	</div>
+	<div><img src="img/click1.png" class="click1" /></div>
+</div>
+<div class="alert2" id="loginBox">
+	<b class="close"></b>
+	<h2>用户登录</h2>
+	<ul>
+		<li><label>账号</label><input type="text" id="account" placeholder="请输入账号" maxlength="30" /></li>
+		<li><label>密码</label><input type="password" id="password" placeholder="请输入密码" maxlength="30" /></li>
+		<li><label>验证码</label><input type="text" id="vCode" placeholder="请输入验证码" maxlength="4" /><img src="" id="codeUrl" /></li>
+	</ul>
+	<div><span id="prompt"></span></div>
+	<div><img src="img/click2.png" id="click2" /></div>
+	<div><strong><a href="../../../../#!/static/html/user/register.html">没有账号？请注册</a></strong></div>
+</div>
+<div class="tip"></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.md5.js"></script>
+<script src="js/default.js"></script>
+</body>
+</html>
+
+<script>
+// 规则部分
+$('#bg10').fadeOut(0);
+$('#bg11').fadeOut(0);
+var ruleCounter = 0;
+$('#bg9').click(function(){
+	if(ruleCounter == 0){
+		ruleCounter = 1;
+		$('#bg10').fadeIn(0);
+		$('#bg11').fadeIn(0);
+	}else{
+		ruleCounter = 0;
+		$('#bg10').fadeOut(0);
+		$('#bg11').fadeOut(0);
+	}
+});
+
+// 通用关闭弹窗
+function closeBox(ctr){
+	$(ctr).click(function(){
+		$('.alert1').fadeOut(0);
+		$('.alert2').fadeOut(0);
+		$('.layer').fadeOut(0);
+	});
+}
+closeBox('.click1');
+closeBox('.layer');
+closeBox('.close');
+
+// 通用窗口打开
+function openBox(obj){
+	$(obj).fadeIn(0);
+	$('.layer').fadeIn(0);
+}
+
+// 老虎机效果
+var index1 = 0;
+var t1;
+function gameAnimate(timer){
+	clearInterval(t1);
+	t1 = setInterval(function(){
+		index1 ++;
+		if(index1 >= 8){
+			index1 = 0;
+		}
+		$('#game').find('li').removeClass('current').eq(index1).addClass('current');
+	},timer);
+}
+gameAnimate(1000);
+$('.click1').click(function(){
+	gameAnimate(1000);
+});
+
+// 报错信息
+var t2;
+function tipBox(msg){
+	clearTimeout(t2);
+	$('.tip').html(msg).fadeIn(0);
+	t2 = setTimeout(function(){
+		$('.tip').fadeOut(0);
+	},2000);
+}
+
+// 初始化数据
+function init(){
+	$.ajax({
+		url:link + 'honor5th/initInfo.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.activityCode != 0){
+				if(data.activityCode == 1){
+					$('#btn1').fadeOut(0);
+					$('#btn1_n').fadeIn(0);
+					$('#btn1_c').fadeOut(0);
+					$('#btn1_n').click(function(){
+						tipBox('活动未开始');
+					});
+					$('#btn1_c').click(function(){
+						return false;
+					});
+					$('#btn1').click(function(){
+						return false;
+					});
+					tipBox('活动未开始');
+					$.each($('.click2'),function(){
+						$(this).click(function(){
+							tipBox('活动未开始');
+						});
+					});
+					$.each($('.proClick'),function(){
+						$(this).parent('a').attr('href','javascript:void(0);');
+						$(this).click(function(){
+							tipBox('活动未开始');
+						});
+					});
+					$('#info1').html('活动未开始');
+					$('#signTip').html('活动未开始');
+					$('#signTip').fadeIn(0);
+				}else if(data.activityCode == 2){
+					$('#btn1').fadeIn(0);
+					$('#btn1_n').fadeOut(0);
+					$('#btn1_c').fadeOut(0);
+					$('#btn1').click(function(){
+						tipBox('活动已结束');
+					});
+					$('#btn1_c').click(function(){
+						return false;
+					});
+					$('#btn1_n').click(function(){
+						return false;
+					});
+					tipBox('活动已结束');
+					$.each($('.click2'),function(){
+						$(this).click(function(){
+							tipBox('活动已结束');
+						});
+					});
+					$.each($('.proClick'),function(){
+						$(this).parent('a').attr('href','javascript:void(0);');
+						$(this).click(function(){
+							tipBox('活动已结束');
+						});
+					});
+					$('#info1').html('活动已结束');
+					$('#signTip').html('活动已结束');
+					$('#signTip').fadeIn(0);
+				}
+			}else{
+				if(data.resultCode != 0){
+					$('#btn1').fadeIn(0);
+					$('#btn1_n').fadeOut(0);
+					$('#btn1_c').fadeOut(0);
+					$('#btn1_c').click(function(){
+						return false;
+					});
+					$('#btn1_n').click(function(){
+						return false;
+					});
+					$.each($('.click2'),function(){
+						$(this).click(function(){
+							loginBox();
+						});
+					});
+					$.each($('.proClick'),function(){
+						$(this).parent('a').attr('href','javascript:void(0);');
+					});
+					$('#info1').html('登录查看抽奖次数');
+					$('#signTip').fadeIn(0);
+				}else{
+					if(data.data.days < 7){
+						$('#btn1_c').fadeOut(0);
+						$('#btn1').fadeOut(0);
+						$('#btn1_n').fadeIn(0);
+						$('#btn1_c').click(function(){
+							return false;
+						});
+						$('#btn1').click(function(){
+							return false;
+						});
+						$('#btn1_n').click(function(){
+							return false;
+						});
+						$('#btn3_c').fadeIn(0);
+						$('#btn3').fadeOut(0);
+						$('#btn3').click(function(){
+							return false;
+						});
+						$('#btn3_c').click(function(){
+							tipBox('抽奖活动未开始');
+						});
+						$('#info1').html('抽奖活动未开始');
+					}else{
+						if(data.data.receive == 0){
+							$('#btn1').fadeIn(0);
+							$('#btn1_n').fadeOut(0);
+							$('#btn1_c').fadeOut(0);
+							$('#btn1').click(function(){
+								rewardGet();
+							});
+							$('#btn1_c').click(function(){
+								return false;
+							});
+							$('#btn1_n').click(function(){
+								return false;
+							});
+						}else{
+							$('#btn1_c').fadeIn(0);
+							$('#btn1').fadeOut(0);
+							$('#btn1_n').fadeOut(0);
+							$('#btn1_c').click(function(){
+								tipBox('已经领取过奖励');
+							});
+							$('#btn1').click(function(){
+								return false;
+							});
+							$('#btn1_n').click(function(){
+								return false;
+							});
+						}
+						$('#btn3_c').fadeOut(0);
+						$('#btn3').fadeIn(0);
+						$('#btn3').click(function(){
+							gameStart();
+						});
+						$('#btn3_c').click(function(){
+							return false;
+						});
+						$('#info1').html('剩余抽奖次数：' + data.data.remainChance + '次');
+					}
+					$('#btn2').click(function(){
+						myReward(0);
+						openBox('#listBox');
+					});
+					$('#signTip').fadeOut(0);
+					for(var i = 0 ; i < data.data.days ; i ++){
+						$('#dayList').find('li').eq(i).addClass('unsign');
+					}
+					$.each($('#dayList').find('li'),function(){
+						var _index = $(this).index();
+						$.each(data.data.loginList,function(index,item){
+							if(index == _index){
+								$('#dayList').find('li').eq(item.index).removeClass('unsign').addClass('sign');
+							}
+						});
+					});
+				}
+			}
+		},
+		error:function(){
+			tipBox('网络异常，请重试！');
+		}
+	});
+}
+init();
+
+// 领取奖品
+function rewardGet(){
+	$.ajax({
+		url:link + 'honor5th/getLoginPrize.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				tipBox('不在领取奖励时间内');
+			}else{
+				$('#timeBox').find('span').html('恭喜你获得' + data.data.remark + '个新新币，我们将会在活动结束后的2个工作日下发到您的账户中')
+				openBox('#timeBox');
+				$('#btn1').fadeOut(0);
+				$('#btn1_n').fadeOut(0);
+				$('#btn1_c').fadeIn(0);
+				$('#btn1').click(function(){
+					return false;
+				});
+				$('#btn1_c').click(function(){
+					tipBox('已经领取过奖励');
+				});
+				$('#btn1_n').click(function(){
+					return false;
+				});
+			}
+		},
+		error:function(){
+			tipBox('网络异常，请重试！');
+		}
+	});
+}
+
+// 抽奖开始
+var prizeId = 0;
+function gameStart(){
+	$.ajax({
+		url:link + 'honor5th/lotteryPrize.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				if(data.resultCode == 1){
+					openBox('#endBox');
+				}else if(data.resultCode == -4){
+					tipBox('抽奖活动未开始');
+				}else{
+					loginBox();
+				}
+			}else{
+				prizeId = data.data.prizeInfo.prizeId;
+				gameAnimate(30);
+				setTimeout(function(){
+					clearInterval(t1);
+					$.each($('#game').find('li'),function(){
+						if($(this).attr('value') == prizeId){
+							index1 = $(this).index();
+						}
+					});
+					$('#game').find('li').removeClass('current').eq(index1).addClass('current');
+					$('#rewardBox').find('strong').html('恭喜你获得 ' + data.data.prizeInfo.prizeName);
+					$('#info1').html('剩余抽奖次数：' + data.data.remainChance + '次');
+					openBox('#rewardBox');
+				},3000);
+			}
+		},
+		error:function(){
+			tipBox('网络异常，请重试！');
+		}
+	});
+}
+
+// 奖品列表
+var page = 1;
+var totalPage = 0;
+function myReward(page){
+	$.ajax({
+		url:link + 'honor5th/myPrize.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		data:{currentPage:page},
+		success:function(data){
+			totalPage = data.data.totalPage;
+			if(data.resultCode != 0){
+				if(data.resultCode == 1){
+					$('#list').empty();
+					$('#list').append('<li></li><li style="text-align:center; color:#fa1c32; font-size:0.8rem;">暂未获得奖品</li>');
+					$('#pre').fadeOut(0);
+					$('#next').fadeOut(0);
+				}else{
+					loginBox();
+				}
+			}else{
+				$('#list').empty();
+				$.each(data.data.prizeList,function(index,item){
+					$('#list').append('<li><span>' + item.gameTime + '</span><em>' + item.prizeName + '</em></li>')
+				});
+				$('#pre').fadeIn(0);
+				$('#next').fadeIn(0);
+			}
+		},
+		error:function(){
+			tipBox('网络异常，请重试！');
+		}
+	});
+}
+
+// 刷新登录验证码
+var ran = Math.random();
+$('#codeUrl').click(function(){
+	ran = Math.random();
+	$('#codeUrl').attr('src',imgLink + '?' + ran);
+});
+
+// 打开登录弹窗
+var imgLink = '';
+function loginBox(){
+	$('#loginBox').fadeIn(0);
+	$('.layer').fadeIn(0);
+	$.ajax({
+        url:link + 'randCode/getImageCodeUrl.do' + linkextra,
+        type:'get',
+        dataType:'jsonp',
+        jsonp:'jsoncallback',
+        success:function(data){
+        	ran = Math.random();
+            imgLink = data.verifcodeUrl;
+            $('#codeUrl').attr('src',imgLink + '?' + ran);
+        },
+        error:function(){
+            tipBox('网络异常，请重试！');
+        }
+    });
+}
+
+// 登录非空验证
+function emptyCheck(obj,msg){
+   var _value = $(obj).val();
+   if(_value == ''){
+		$('#prompt').html(msg + '不能为空！');
+        return 1;
+   }else{
+        return 0;
+   }
+}
+
+// 登录
+$('#click2').click(function(){
+    if(emptyCheck('#account','账号') == 1 || emptyCheck('#password','密码') == 1 || emptyCheck('#vCode','验证码') == 1){
+        ran = Math.random();
+        $('#codeUrl').attr('src',imgLink + '?' + ran);
+        return false;
+    }else{
+        $.ajax({
+            url:link + 'user/login.do' + linkextra,
+            type:'post',
+            dataType:'jsonp',
+            jsonp:'jsoncallback',
+            data:{username:$('#account').val(),password:$.md5($.md5($('#password').val())),imgCode:$('#vCode').val()},
+            success:function(data){
+                if(data.resultCode != 0){
+                	$('#prompt').html('账号或者密码错误，请重试！');
+                    ran = Math.random();
+                    $('#codeUrl').attr('src',imgLink + '?' + ran);
+                    return false;
+                }else{
+                    $('#prompt').html('登录成功！即将刷新页面');
+                    window.location.reload();
+                }
+            },
+            error:function(){
+                tipBox('网络异常，请重试！');
+            }
+        });
+    }
+});
+</script>

@@ -1,0 +1,24 @@
+.xui-chart-bar{
+  .grid-text {opacity: .2;width: 15%;height: 100%;position: absolute;top: -1%;left: 0; }
+  .chart8 .grid-text { width: 18% }
+  .grid-text li {width: 100%;height: 12%;color: #ddd;text-align: right;padding-right: 10px;font-size: 11px; }
+  .img-grid {width: 85%;height: 100%;position: absolute;right: 0;top: 0; }
+  .img-grid table { width: 100%; height: 100%; opacity: .2; }
+  .img-grid td {border: 1px solid #555;}
+  .grid-data { position: absolute; width: 100%; height: 100%; right: 0; top: 0; }
+  .grid-data li {
+    /*width: 25%;*/ height: 0; display: inline-block; position: absolute; bottom: 0; text-align: center; transition: all 0s ease .5s; -webkit-transition: all 0s ease .5s;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+
+  }
+  .grid-data li h5{ position: absolute; left: 0; bottom: 0; display: inline-block; width: 100%; height: 100%; background: currentColor; }
+  .grid-data li b, .grid-data li em { display: inline-block; position: absolute; white-space: nowrap; }
+  .grid-data li b { font-size: 10px; right: 0; bottom:103%; font-weight: 400}
+  .grid-data li em { bottom: -2.5rem; font-size: 10px; opacity: .8; transform: translateX(-50%); -webkit-transform: translateX(-50%); line-height: 1.2; }
+}
+
+//bar-type
+.xui-chart-bar[theme="triangle"]{
+  .chart-bar h5{ clip-path: polygon(0 100%, 50% 0, 100% 100%); -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%); }
+}

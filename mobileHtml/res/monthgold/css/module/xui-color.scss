@@ -1,0 +1,113 @@
+//主体
+$main : #ffd24c;
+
+//辅助
+$vice : #fd303e;
+
+//阅读(默认)
+$read : #cacaca;
+
+//远景
+$back : #ffd24c;
+
+//信息
+$info : #468dd7;
+
+//成功
+$success : #3caf62;
+
+//提示
+$warn : #f70;
+
+//警告
+$danger : #fd303e;
+
+//顶栏(非必需)
+$tobar : #fff;
+
+//头部(非必需)
+$header : #fff;
+
+//底部(非必需)
+$footer : #fff;
+
+//底栏(非必需)
+$fobar : rgba(27, 27, 27, 90);
+
+//黑色
+$black : #000;
+
+//白色
+$white : #fff;
+
+//主 $白色
+//.co-main { color : $main; }
+//.bg-main { background-color : $main; @extend .co-white }
+//.bc-main { border-color : $main; }
+
+//辅助
+//.co-vice { color : $vice; }
+//.bg-vice { background-color : $vice; @extend .co-white }
+//.bc-vice { border-color : $vice; }
+
+//阅读(默认)
+//body,
+//.co-read { color : $read; }
+//.bg-read { background-color : $read; }
+//.bc-read { border-color : $read; }
+
+//远景
+//.co-back { color : $back; }
+//.bg-back { background-color : $back; }
+//.bc-back { border-color : $back; }
+
+//信息
+//.co-info { color : $info; }
+//.bg-info { background-color : $info; @extend .co-white }
+//.bc-info { border-color : $info; }
+
+//成功
+//.co-success { color : $success; }
+//.bg-success { background-color : $success; @extend .co-white }
+//.bc-success { border-color : $success; }
+
+//提示
+//.co-warn { color : $warn; }
+//.bg-warn { background-color : $warn; @extend .co-white }
+//.bc-warn { border-color : $warn; }
+
+//警告
+//.co-danger { color : $danger; }
+//.bg-danger { background-color : $danger; @extend .co-white }
+//.bc-danger { border-color : $danger; }
+
+//顶栏(非必需)
+//.co-tobar                          {            color: $tobar         ;                        }
+//.bg-tobar                          { background-color: $tobar         ;                        }
+//.bc-tobar                          {     border-color: $tobar         ;                        }
+
+//头部(非必需)
+//.co-header                         {            color: $header        ;                        }
+//.bg-header                         { background-color: $header        ;                        }
+//.bc-header                         {     border-color: $header        ;                        }
+
+//底部(非必需)
+//.co-footer                         {            color: $footer        ;                        }
+//.bg-footer                         { background-color: $footer        ;                        }
+//.bc-footer                         {     border-color: $footer        ;                        }
+
+//底栏(非必需)
+//.co-fobar { color : $white; }
+//.bg-fobar { background-color : $fobar; }
+//.bc-fobar { border-color : $fobar; }
+
+//黑色
+//.co-black { color : $black; }
+//.bg-black { background-color : $black; }
+//.bc-black { border-color : $black; }
+
+//白色
+.co-white { color : $white; }
+.bg-white { background-color : $white; }
+.bc-white { border-color : $white; }
+

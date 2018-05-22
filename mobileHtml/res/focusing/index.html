@@ -1,0 +1,45 @@
+<!Doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="../focusing/combo.css" rel="stylesheet">
+</head>
+<body>
+<div class='container'>
+    <img src="imgs/bg1.png" alt="">
+</div>
+<div class='container'>
+    <div class='bg2'>
+        <div>
+            <video id="xxd_video_2014" preload="" controls="" loop="">
+                <source src="//download-cdn.xinxindai.com/video/interview.mp4">
+            </video>
+        </div>
+    </div>
+    <img src="imgs/bg3.jpg" alt="">
+    <img src="imgs/bg4.jpg" alt="">
+    <img src="imgs/bg5.jpg" alt="">
+</div>
+<div id="J_wrapBody"></div>
+</body>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = fontSize * (clientWidth / 375) + 'px';
+            };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script src="../focusing/combo.js"></script>
+</html>

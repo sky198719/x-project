@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>还款保障措施</title>
+    <style>
+        body {
+            font: 15px/1.5 "Microsoft YaHei", DroidSansFallback, Arial, sans-serif, STHeiti;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            line-height: 1.4;
+            width: 100%;
+            -webkit-text-size-adjust: 100%;
+            overflow: hidden;
+            overflow: auto;
+        }
+
+        .content-block-title {
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 1rem;
+            text-transform: uppercase;
+            line-height: 1;
+            color: #6d6d72;
+            margin: 15px 15px 0px;
+            font-weight: bold;
+        }
+
+        .rectangle {
+            width: 7px;
+            height: 1rem;
+            background: #3f9bff;
+            position: absolute;
+            border-radius: 3px;
+        }
+
+        .list-block {
+            margin: 15px 0;
+            font-size: 0.8rem;
+        }
+
+        p {
+            text-indent: 2em;
+            margin: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="content-block-title" style="display: none;" id="xindai1_title">
+    <span class="rectangle"></span>
+    <span style="margin-left: 15px;">信贷类（30万以下）</span>
+</div>
+<div class="list-block" style="display: none;" id="xindai1">
+    <p>借款人到期还款金额为第一还款来源。</p>
+
+    <p>还款保障措施包括但不限于：</p>
+
+    <p>1. 平台自上线至今专注于为中小微企业提供金融信息服务，积累了颇具特色的中小微企业服务经验；</p>
+
+    <p>2. 通过自身研发的信用评分模型进行综合授信评估、专业的信审团队进行严格的实地考察、与数十家大数据征信机构合作进行多重交叉验证等，筛选优质借款人；</p>
+
+    <p>3. 监控客户经营状况和还款能力，结合客户信用评级，定期与不定期进行回访；</p>
+
+    <p>4. 设立质保服务专款计划，平台上的逾期项目根据借款合同享受质保服务。</p>
+</div>
+<div class="content-block-title" style="display: none;" id="xindai2_title">
+    <span class="rectangle"></span>
+    <span style="margin-left: 15px;">信贷类（30万以上）</span>
+</div>
+<div class="list-block" style="display: none;" id="xindai2">
+    <p>借款人到期还款金额为第一还款来源。</p>
+
+    <p>还款保障措施包括但不限于：</p>
+
+    <p>1. 平台自上线至今专注于为中小微企业提供金融信息服务，积累了颇具特色的中小微企业服务经验；</p>
+
+    <p>2. 通过自身研发的信用评分模型进行综合授信评估、专业的信审团队进行严格的实地考察、与数十家大数据征信机构合作进行多重交叉验证等，筛选优质借款人；</p>
+
+    <p>3. 监控客户经营状况和还款能力，结合客户信用评级，定期与不定期进行回访 ；</p>
+
+    <p>4. 借款人提供房产抵押，已办妥房产抵押合同、委托公证、收回房产证等相关房产抵押手续；</p>
+
+    <p>5. 设立质保服务专款计划，平台上的逾期项目根据借款合同享受质保服务。 </p>
+</div>
+
+<div class="content-block-title" style="display: none;">
+    <span class="rectangle"></span>
+    <span style="margin-left: 15px;">房贷类</span>
+</div>
+<div class="list-block" style="display: none;" id="xinfangdai">
+    <p>借款人到期还款金额为第一还款来源。</p>
+
+    <p>还款保障措施包括但不限于：</p>
+
+    <p>1. 借款人提供房产抵押，已办妥房产抵押合同、委托公证、收回房产证等相关房产抵押手续； </p>
+
+    <p>2. 借款额度控制在房屋评估价值的6折以下； </p>
+
+    <p>3. 设立质保服务专款计划，平台上的逾期项目根据借款合同享受质保服务。</p>
+</div>
+<div class="content-block-title" style="display: none;">
+    <span class="rectangle"></span>
+    <span style="margin-left: 15px;">车贷类</span>
+</div>
+<div class="list-block" style="display: none;" id="xinchedai">
+    <p>借款人到期还款金额为第一还款来源。</p>
+
+    <p>还款保障措施包括但不限于：</p>
+
+    <p>1. 车辆安装GPS追踪器，以便及时处理逾期财产； </p>
+
+    <p>2. 在车管所办理车辆抵押登记，相关车辆原件资料交由平台保管； </p>
+
+    <p>3. 借款额度控制在车辆评估价值的7折以下； </p>
+
+    <p>4. 设立质保服务专款计划，平台上的逾期项目根据借款合同享受质保服务。 </p>
+</div>
+<script type="text/javascript" src="../../lib/jquery/jquery1.11.1.min.js"></script>
+<script type="text/javascript">
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)return  decodeURI(r[2]);
+        return null;
+    }
+    $(document).ready(function () {
+        var borrowId = GetQueryString("borrowId");
+
+        if(borrowId == undefined) {
+            $("#xindai1").show();
+            $("#xindai2").show();
+            $("#xinfangdai").show();
+            $("#xinchedai").show();
+            $(".content-block-title").show();
+        } else {
+              //标详情
+            borrowDetail(borrowId);
+        }
+    });
+    function borrowDetail(borrowId) {
+           $.ajax({
+               url: "../../../borrow/detail/" + borrowId + ".do",
+               data: {},
+               dataType: 'json',
+               success: function (data) {
+                   var type = data.borrow.TYPE;
+
+                   //新商贷
+                   if(type == 9) {
+                       var account = data.borrow.ACCOUNT;
+                       var number = 300000;
+                       if(account <= number) {
+                            $("#xindai1").show();
+                       } else {
+                           $("#xindai2").show();
+                       }
+                   } else if (type == 10) {
+                       //10新房贷
+                       $("#xinfangdai").show();
+                   } else if(type == 14){
+                       //14新车贷
+                       $("#xinchedai").show();
+                   }
+
+               }
+           });
+       }
+</script>
+</body>
+</html>

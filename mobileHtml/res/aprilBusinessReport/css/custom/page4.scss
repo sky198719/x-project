@@ -1,0 +1,107 @@
+
+//page4
+
+.page4-chart1 {
+  position: relative;
+  width: 100%;
+  height: 83vw;
+  max-height: 382px;
+}
+
+.page4-chart1 > * {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#page4-chart-map {
+  background: url(../imgs/maps.png) no-repeat center !important;
+  background-size: contain !important;
+  position: relative;
+}
+#page4-chart-map > * {
+  position: absolute;
+  color: $co-vice;
+}
+
+#page4-chart-map > *:nth-child(1) {
+  top: 11%;
+  right: 0;
+}
+
+#page4-chart-map > *:nth-child(2) {
+  top: 27%;
+  right: 0;
+}
+
+#page4-chart-map > *:nth-child(3) {
+  top: 46%;
+  right: 0;
+}
+
+#page4-chart-map > *:nth-child(4) {
+  top: 65%;
+  right: 0;
+}
+
+#page4-chart-map > *:nth-child(5) {
+  top: 86%;
+  right: 0;
+}
+
+#page4-chart-map > *:nth-child(6) {
+  top: 87%;
+  left: 3.3%;
+}
+
+#page4-chart-map > *:nth-child(7) {
+  top: 71%;
+  left: 3.3%;
+}
+
+#page4-chart-map > *:nth-child(8) {
+  top: 53%;
+  left: 3.3%;
+}
+
+#page4-chart-map > *:nth-child(9) {
+  top: 36.5%;
+  left: 3.3%;
+}
+
+#page4-chart-map > *:nth-child(10) {
+  top: 25%;
+  left: 3.3%;
+}
+#page4-chart-map > *:nth-child(11) {
+  top: 12%;
+  left: 3.3%;
+}
+
+
+#page4-chart-text > * {
+  position  : absolute;
+  font-size : 10px;
+}
+
+#page4-chart-text > *:nth-child(1) { color : #01a351; top : 25%; right : 0; }
+#page4-chart-text > *:nth-child(2) { color : #18c16c; top : 65%; right : 0; }
+#page4-chart-text > *:nth-child(3) { color : #58efa4; top : 81%; right : 0; }
+#page4-chart-text > *:nth-child(4) { color : #2cdc84; top : 81%; left : 0; }
+#page4-chart-text > *:nth-child(5) { color : #baf43e; top : 69%; left : 0; }
+#page4-chart-text > *:nth-child(6) { color : #f2ff29; top : 56%; left : 0; }
+#page4-chart-text > *:nth-child(7) { color : #f1cd27; top : 44%; left : 0; }
+#page4-chart-text > *:nth-child(8) { color : #f2ff29; top : 31%; left : 0; }
+#page4-chart-text > *:nth-child(9) { color : #baf43e; top : 17%; left : 0; }
+#page4-chart-text > *:nth-child(10){ color : #32db86; top : 4.5%; left : 0; }
+#page4-chart-text > *:nth-child(11){ color : #18c16c; top : 4.5%; right : 0; }
+#page4-chart-text > h2 { color : #58efa4;width:100%; top : 38%; left :2%;  text-align : center; }
+
+#page4-chart-text > h2 > *:nth-child(1) { font-size : 12px }
+
+#page4-chart-text > h2 > *:nth-child(2) {line-height: 1; font-size : 25px;font-weight: bolder;    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#71ff9d), to(#02c780));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+

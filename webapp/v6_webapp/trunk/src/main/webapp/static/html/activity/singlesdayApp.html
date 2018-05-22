@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>万众7待 双11</title>
+    <style>
+        html {
+            font-size: 100%;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a, img {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+            font-family: '微软雅黑';
+        }
+
+        .container img {
+            display: block;
+            border: none;
+            width: 100%;
+        }
+
+        .container .btn {
+            width: 50%;
+            position: absolute;
+        }
+
+        .container #btn1 {
+            top: 22%;
+            left: 0;
+        }
+
+        .container #btn2 {
+            top: 22%;
+            right: 0;
+        }
+
+        .container #btn3 {
+            top: 62%;
+            left: 0;
+        }
+
+        .container #btn4 {
+            top: 62%;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+    <div class="container">
+        <img src="../../img/activity/singlesdayWebapp/bg1.jpg"/>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/singlesdayWebapp/bg2.jpg"/>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/singlesdayWebapp/bg3.jpg"/>
+        <a href="javascript:void(0)" id="a1"><img src="../../img/activity/singlesdayWebapp/btn1.png" class="btn"
+                                                  id="btn1"/></a>
+        <a href="javascript:void(0)" id="a3"><img src="../../img/activity/singlesdayWebapp/btn2.png" class="btn"
+                                                  id="btn2"/></a>
+        <a href="javascript:void(0)" id="a6"><img src="../../img/activity/singlesdayWebapp/btn3.png" class="btn"
+                                                  id="btn3"/></a>
+        <a href="javascript:void(0)" id="a12"><img src="../../img/activity/singlesdayWebapp/btn4.png" class="btn"
+                                                   id="btn4"/></a>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/singlesdayWebapp/bg4.jpg"/>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/singlesdayWebapp/bg5.jpg"/>
+    </div>
+</div>
+<!--login-->
+<script type="text/javascript" src="../../lib/jquery/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../js/utils/analytics_plugin.js"></script>
+<script>
+    //获取url中参数的值
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    function selectPlan(closeTerm) {
+        $.ajax({
+            url: "../../../xplan/getLatestSchemeId.do",
+            data: {
+                currentPage: 1,
+                closeTerm: closeTerm,
+                pageSize: 10
+            },
+            dataType: 'json',
+            indicator: true,
+            success: function (data) {
+                if (data != null && data.schemeInfo != null) {
+                    var planId = data.schemeInfo.SCHEMEID;
+                    $("#a" + closeTerm).attr("href", "xxd://list/pdd?selID=1&pdName=xinyuanbao&xybID=" + planId);
+                }
+            }
+        });
+    }
+    $(document).ready(function () {
+        try {
+            selectPlan(1);
+            selectPlan(3);
+            selectPlan(6);
+            selectPlan(12);
+
+
+            var request = new Object();
+            request = GetRequest();
+            var gauserId = request["gaid"];
+            //XXD_TRACK.track_pageview('memberDayWebApp0922');
+            gaInits(gauserId);
+            //growingIO布码
+            growingIOInits({userId: gauserId});
+        } catch (e) {
+        }
+    });
+
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+</body>
+</html>

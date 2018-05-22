@@ -1,0 +1,21 @@
+{
+  "name": "xxd-fs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.xxd.com/fe/xxd-fs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  }
+}

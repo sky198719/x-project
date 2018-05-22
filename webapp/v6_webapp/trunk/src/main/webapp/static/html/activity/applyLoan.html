@@ -1,0 +1,235 @@
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><img src="static/img/activity/applyLoan/9.png" style="width: 25px;height: 30px;"/></div>
+        <div class="center sliding" style="color: #3f9bff;">电商贷申请借款</div>
+        <div class="right"><a href="#" class="link icon-only" id="applyLoan_top"><img src="static/img/activity/applyLoan/15.png"
+                                                                              style="width: 25px;height: 25px;"/></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+<div data-page="applyLoan" class="page" directory="activity" style="overflow-y:scroll;padding-top: 35px;">
+<div class="list-block" style="background: #eaf4ff;padding-bottom: 20px;border-bottom:1px solid #c8c7cc;">
+    <div class="content-block"
+         style="height: 90px;background:url('static/img/activity/applyLoan/10.png');background-size:100% 100%;padding:0;text-align: center;">
+        <img src="static/img/activity/applyLoan/1.png" height="40" style="margin-top:15px;width: 87%"/>
+
+        <div class="row no-gutter">
+            <div class="col-25" style="font-size: 8px;text-align: center">
+                填写借款申请
+            </div>
+            <div class="col-25" style="font-size: 8px;text-align: center">
+                信贷专员与您联系
+            </div>
+            <div class="col-25" style="font-size: 8px;text-align: center">
+                提交材料，审批放款
+            </div>
+            <div class="col-25" style="font-size: 8px;text-align: center">
+                审批结束，放款成功
+            </div>
+        </div>
+    </div>
+    <ul style="background: #eaf4ff;">
+        <!-- Text inputs -->
+        <li>
+            <div class="item-content">
+                <div class="item-media" style="font-size: 1rem;">真&nbsp;实&nbsp;姓&nbsp;名</div>
+                <div class="item-inner1">
+                    <div class="item-input">
+                        <input type="text" placeholder=""
+                               style="border:1px solid #e8e8e8; height:35px; font-size: 15px;background:url(static/img/activity/applyLoan/6.png) 8px 8px no-repeat;background-color: #fff;background-size: 15px;padding-left: 30px;" id="applyLoan_username">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li style="display: none;" id="applyLoan_username_error">
+            <div class="item-content" style="min-height: 12px;">
+                <div class="item-media" style="margin: 0;padding:0;">&nbsp;</div>
+                <div class="item-inner1" style="min-height: 12px;">
+                    <div class="item-input">
+                        <div class="dsd-error"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-media" style="font-size: 1rem;">手&nbsp;机&nbsp;号&nbsp;码</div>
+                <div class="item-inner1">
+                    <div class="item-input">
+                        <input type="tel" placeholder=""
+                               style="border:1px solid #e8e8e8; height:35px; font-size: 15px;background:url(static/img/activity/applyLoan/5.png) 8px 8px no-repeat;background-color: #fff;background-size: 15px;padding-left: 30px;" maxlength="11"
+                               id="applyLoan_mobileNo">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li style="display: none;" id="applyLoan_mobileNo_error">
+            <div class="item-content" style="min-height: 12px;">
+                <div class="item-media" style="margin: 0;padding:0;">&nbsp;</div>
+                <div class="item-inner1" style="min-height: 12px;">
+                    <div class="item-input">
+                        <div class="dsd-error"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-media" style="font-size: 1rem;">称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;谓</div>
+                <div class="item-inner1">
+                    <div class="item-input" style="font-size: 14px;">
+                        <input type="radio" placeholder="" id="sex_1" name="sex" checked value="1">先生&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" placeholder="" id="sex_0" name="sex" value="0">女士
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-media" style="font-size: 1rem;">居&nbsp;住&nbsp;城&nbsp;市</div>
+                <div class="item-inner1">
+                    <div class="item-input">
+                        <input type="text" id="addBank_provinceAndCity" placeholder="居住所在省市"
+                               style="border:1px solid #e8e8e8;background: #fff;height: 35px;font-size: 15px;">
+                        <input type="hidden" id="addBank_province">
+                        <input type="hidden" id="addBank_city">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li style="display: none;" id="applyLoan_province_error">
+            <div class="item-content" style="min-height: 12px;">
+                <div class="item-media" style="margin: 0;padding:0;">&nbsp;</div>
+                <div class="item-inner1" style="min-height: 12px;">
+                    <div class="item-input">
+                        <div class="dsd-error"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-media" style="font-size: 1rem;">借&nbsp;款&nbsp;金&nbsp;额</div>
+                <div class="item-inner1">
+                    <div class="item-input">
+                        <input type="text" placeholder="100,000"
+                               style="border:1px solid #e8e8e8;background: #fff;height: 35px;font-size: 15px;" id="applyLoan_money">
+                    </div>
+                    <div class="item-after">元</div>
+                </div>
+            </div>
+        </li>
+        <li style="display: none;" id="applyLoan_money_error">
+            <div class="item-content" style="min-height: 12px;">
+                <div class="item-media" style="margin: 0;padding:0;">&nbsp;</div>
+                <div class="item-inner1" style="min-height: 12px;">
+                    <div class="item-input">
+                        <div class="dsd-error"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-media" style="font-size: 1rem;">借&nbsp;款&nbsp;期&nbsp;限</div>
+                <div class="item-inner1">
+                    <div class="item-input">
+                        <input type="text" placeholder="请选择" readonly id="picker-cycle"
+                               style="border:1px solid #e8e8e8;background: #fff;height: 35px;font-size: 15px;">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li style="display: none;" id="picker_cycle_error">
+            <div class="item-content" style="min-height: 12px;">
+                <div class="item-media" style="margin: 0;padding:0;">&nbsp;</div>
+                <div class="item-inner1" style="min-height: 12px;">
+                    <div class="item-input">
+                        <div class="dsd-error"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-media" style="font-size: 1rem;">月均交易额</div>
+                <div class="item-inner1">
+                    <div class="item-input">
+                        <input type="text" placeholder="近6个月店铺平均交易额"
+                               style="border:1px solid #e8e8e8;background: #fff;height: 35px;font-size: 15px;" id="applyLoan_income">
+                    </div>
+                    <div class="item-after">元</div>
+                </div>
+            </div>
+        </li>
+        <li style="display: none;" id="applyLoan_income_error">
+            <div class="item-content" style="min-height: 12px;">
+                <div class="item-media" style="margin: 0;padding:0;">&nbsp;</div>
+                <div class="item-inner1" style="min-height: 12px;">
+                    <div class="item-input">
+                        <div class="dsd-error"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-media" style="font-size: 1rem;">验&nbsp;&nbsp;&nbsp;&nbsp;证&nbsp;&nbsp;&nbsp;码
+                </div>
+                <div class="item-inner1">
+                    <div class="item-input">
+                        <input type="text" placeholder=""
+                               style="border:1px solid #e8e8e8;background: #fff;height: 35px;font-size: 15px;" id="applyLoan_randCode_value">
+                    </div>
+                    <div class="item-after"><img src="randCode/createVerifyCode.do" id="applyLoan_randCode">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li style="display: none;" id="applyLoan_randCode_error">
+            <div class="item-content" style="min-height: 12px;">
+                <div class="item-media" style="margin: 0;padding:0;">&nbsp;</div>
+                <div class="item-inner1" style="min-height: 12px;">
+                    <div class="item-input">
+                        <div class="dsd-error"></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="mr10 ml10 mt20"><a href="#" class="button button-51 active" id="applyLoan_submit">快速申请</a></div>
+</div>
+<div class="content-block tablet-inset">
+    <div class="content-block-inner" style="background: #eaf4ff;">
+        <img src="static/img/activity/applyLoan/12.png" height="25"
+             style="margin-left: -20px;margin-top: -15px;"/>
+
+        <p style="margin-top: 0px;">
+            借款额度：5-100万 <br>
+            审核时间：1个工作日 <br>
+            还款方式：等额本息，先息后本 <br>
+            借款期限：3个月，6个月 <br>
+        </p>
+        <img src="static/img/activity/applyLoan/11.png" height="25"
+             style="margin-left: -20px;margin-top: 10px;"/>
+
+        <p style="margin-top: 0px;">
+            1. 年化利率：9% <br>
+            2. 质保服务专款：审批金额的10%（客户正常还款，到期退还） <br>
+            具体费用请以风控审核后确定的费率为准
+        </p>
+
+        <p style="text-align: center;margin-bottom: 80px;margin-top: 40px;">
+            <img src="static/img/activity/applyLoan/14.png" height="30"/> <br>
+            人工服务时间（周一至周五）：9:00-18:00
+        </p>
+    </div>
+</div>
+
+<div>
+    <img src="static/img/activity/applyLoan/16.png" width="100%"/>
+</div>
+</div>
+</div>
+</div>

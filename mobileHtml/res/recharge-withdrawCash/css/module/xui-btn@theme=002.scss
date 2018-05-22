@@ -1,0 +1,111 @@
+/*
+ * 组件：按钮
+ * 组件注册编号：02-0002
+ * 标准结构1级
+ * 属性：
+ * sz    规格（默认：m   s | m | l）
+ * co    颜色 (默认：read  read | back | main | vice | info | success | warn | error)
+ * 示例：
+ * 关联：html+css
+ */
+
+.xui-btn[theme="002"] {
+  user-select: none;
+  -webkit-user-select: none;
+  display: inline-block;
+  text-align: center;
+  line-height: 3rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  border-radius: 3px;
+  background: none;
+  color: $co-read;
+  border: 1px solid rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+//颜色
+.xui-btn[theme="002"][co="back"] {
+  border-color: $bc-back;
+}
+
+.xui-btn[theme="002"][co="main"] {
+  border-color: $bc-main;
+  color: $co-main;
+}
+
+.xui-btn[theme="002"][co="vice"] {
+  border-color: $bc-vice;
+  color: $co-vice;
+}
+
+.xui-btn[theme="002"][co="info"] {
+  border-color: $bc-info;
+  color: $co-info;
+}
+
+.xui-btn[theme="002"][co="success"] {
+  border-color: $bc-success;
+  color: $co-success;
+}
+
+.xui-btn[theme="002"][co="warn"] {
+  border-color: $bc-warn;
+  color: $co-warn;
+}
+
+.xui-btn[theme="002"][co="danger"] {
+  border-color: $bc-danger;
+  color: $co-danger;
+}
+
+//规格
+.xui-btn[theme="002"][sz="s"] {
+  line-height: 2.5rem
+}
+
+.xui-btn[theme="002"][sz="l"] {
+  line-height: 3.5rem
+}
+
+.xui-btn[theme="002"]:disabled {
+  opacity: .5;
+}
+
+.xui-btn[theme="002"]:active {
+  box-shadow: inset 0 0 1000px rgba(0, 0, 0, .1);
+  -webkit-box-shadow: inset 0 0 1000px rgba(0, 0, 0, .1);
+  transform: scale(.99, .98);
+  -webkit-transform: scale(.99, .98);
+}
+.xui-btn[theme="002"][co="main"]:active  {
+  box-shadow: inset 0 0 1000px rgba($co-main, .1);
+  -webkit-box-shadow: inset 0 0 1000px rgba($co-main, .1);
+}
+
+.xui-btn[theme="002"][co="vice"]:active  {
+  box-shadow: inset 0 0 1000px rgba($co-vice, .1);
+  -webkit-box-shadow: inset 0 0 1000px rgba($co-vice, .1);
+
+}
+
+.xui-btn[theme="002"][co="info"]:active  {
+  box-shadow: inset 0 0 1000px rgba($co-info, .1);
+  -webkit-box-shadow: inset 0 0 1000px rgba($co-info, .1);
+}
+
+.xui-btn[theme="002"][co="success"]:active  {
+  box-shadow: inset 0 0 1000px rgba($co-success, .1);
+  -webkit-box-shadow: inset 0 0 1000px rgba($co-success, .1);
+}
+
+.xui-btn[theme="002"][co="warn"]:active  {
+  box-shadow: inset 0 0 1000px rgba($co-warn, .1);
+  -webkit-box-shadow: inset 0 0 1000px rgba($co-warn, .1);
+}
+
+.xui-btn[theme="002"][co="danger"]:active  {
+  box-shadow: inset 0 0 1000px rgba($co-danger, .1);
+  -webkit-box-shadow: inset 0 0 1000px rgba($co-danger, .1);
+}

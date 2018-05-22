@@ -1,0 +1,73 @@
+[xui] .img-plane {
+  display    : block;
+  position   : absolute;
+  width      : 160px;
+  height     : 160px;
+}
+
+[xui] .img-plane b {
+  display       : block;
+  position      : absolute;
+  overflow      : hidden;
+  width         : 100%;
+  height        : 41%;
+  transform     : skew(52deg, -3deg) rotate(-14deg);
+  z-index       : 2;
+  border-radius : 3% 2%;
+  left          : -10px;
+  top           : 30px;
+}
+
+[xui] .img-plane b:before {
+  border-bottom : 1000px solid #465078;
+  border-left   : 730px solid transparent;
+  border-right  : 1500px solid transparent;
+  left          : -680px;
+  top           : 0;
+}
+
+[xui] .img-plane b:after {
+  border-bottom : 1000px solid #37405f;
+  border-left   : 30px solid transparent;
+  border-right  : 380px solid transparent;
+  left          : 160px;
+  top           : -70px;
+  transform     : rotate(-17deg);
+}
+
+[xui] .img-plane b:after, [xui] .img-plane b:before {
+  content  : " ";
+  display  : block;
+  position : absolute;
+}
+
+[xui] .img-plane i {
+  display   : block;
+  position  : absolute;
+  width     : 50px;
+  height    : 50px;
+  overflow  : hidden;
+  top       : 48%;
+  left      : 58%;
+  z-index   : 1;
+  transform : rotate(-15deg);
+}
+
+[xui] .img-plane i:before {
+  border-top   : 490px solid #37405f;
+  border-right : 470px solid transparent;
+}
+
+[xui] .img-plane i:after {
+  border-top   : 490px solid #293046;
+  border-right : 0 solid transparent;
+}
+
+[xui] .img-plane i:after, [xui] .img-plane i:before {
+  border-left : 450px solid transparent;
+  left        : -430px;
+  bottom      : 10px;
+  display     : block;
+  position    : absolute;
+  content     : " ";
+}

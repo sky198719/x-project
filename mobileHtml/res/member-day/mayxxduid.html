@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>五月会员日</title>
+    <link href="../member-day/maycombo.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class='container'>
+        <div id='activeCar'></div>
+        <div class='staticCar'></div>
+        <div class='titles'>
+            <p>华为P10 价值3788</p>
+            <p>1000元携程卡</p>
+            <p>苹果电脑 价值6988</p>
+            <p>22枚新新币</p>
+            <p>30元话费</p>
+            <p>100元京东卡</p>
+            <p>522枚新新币</p>
+            <p>迪士尼门票 价值500元</p>
+        </div>
+        <div class='shape'></div>
+    </div>
+    <div class='startGame'>
+        <input type="button" class='start' value='点击开始游戏' id='startGame'>
+    </div>
+    <p class='chanceTip'>您当前有<span class='game-times'>0</span>个游戏币</p>
+</header>
+<section class='gameRule'>
+    <div class='mainTitle center'>
+        <h3>游戏规则</h3>
+    </div>
+    <div class='gameContent'>
+        <p data-list="1">活动期间，购买新元宝/月月派产品累计满100元，即可获得1个游戏币，其他投资金额/可获游戏币对照表如下，活动期间共8个：</p>
+        <table class='center'>
+            <tr>
+                <th>累计投资金额</th>
+                <th>可获游戏币</th>
+            </tr>
+            <tr>
+                <td>100-999</td>
+                <td>1个</td>
+            </tr>
+            <tr>
+                <td>1000-1999</td>
+                <td>2个</td>
+            </tr>
+            <tr>
+                <td>2000-2999</td>
+                <td>3个</td>
+            </tr>
+            <tr>
+                <td>3000-3999</td>
+                <td>4个</td>
+            </tr>
+            <tr>
+                <td>4000-4999</td>
+                <td>5个</td>
+            </tr>
+            <tr>
+                <td>5000-5999</td>
+                <td>6个</td>
+            </tr>
+            <tr>
+                <td>6000-6999</td>
+                <td>7个</td>
+            </tr>
+            <tr>
+                <td>7000+</td>
+                <td>8个</td>
+            </tr>
+        </table>
+        <p data-list="2">活动期间，当天单笔购买步步高升产品满100元即可获得1个游戏币，（每个用户ID仅限一次）。</p>
+    </div>
+</section>
+<section class='winning'>
+    <div class='mainTitle center'>
+        <h3>中奖播报</h3>
+    </div>
+    <div class='winContent'>
+        <div class='winTitle clearfix'>
+            <li>幸运用户</li>
+            <li>获奖时间</li>
+            <li>所获奖品</li>
+        </div>
+        <div class='winBg'>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+        <div class='winData'>
+            <ul></ul>
+        </div>
+    </div>
+    <p class='amountData'>新元宝+月月派累计投资额<span class='sumAmount'>0</span>元</p>
+</section>
+<scection class='product'>
+    <div class='mainTitle center'>
+        <h3>活动产品</h3>
+    </div>
+    <div class='proContent clearfix'>
+        <div class='f_left'>
+            <div>
+                <div class='center'>
+                    <h5>新元宝</h5>
+                    <p>懒人理财神器</p>
+                    <div class='rate'>
+                        <span>7</span><span>%</span><span>~10.5</span><span>%</span>
+                    </div>
+                    <p>历史年化收益</p>
+                    <div class='proBtn center'>
+                        <div>
+                            <input type="button" value='立即抢购' id='goldIngot' class="dmp-click" eventType="jump" dev_id="xyb_12" target_id="新元宝">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='f_right'>
+            <div>
+                <div class='center'>
+                    <h5>步步高升</h5>
+                    <p>逐月递增 存取灵活</p>
+                    <div class='rate'>
+                        <span>6</span><span>%</span><span>~10.4</span><span>%</span>
+                    </div>
+                    <p>历史年化收益</p>
+                    <div class='proBtn center'>
+                        <div>
+                            <input type="button" value='立即抢购' id='stepUpward' class="dmp-click" eventType="jump" dev_id="bbgs" target_id="步步高升">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</scection>
+<section class='app-tips'>
+    <p>您通过本软件参加的任何商业活动或抽奖相关活动，</p>
+    <p>均与苹果公司Apple Inc.无关</p>
+</section>
+<footer>
+    <input type="button" value='注意事项' id='attention-btn'>
+    <input type="button" value='我的奖品' id='myPrize-btn'>
+</footer>
+<div class='pop attention'>
+    <div>
+        <div class="rule-text">
+            <div class='close'></div>
+            <table>
+                <tr>
+                    <td><p>活动时间：</p></td>
+                    <td>2017年5月22日0:00—23:59</td>
+                </tr>
+                <tr>
+                    <td><p>活动用户：</p></td>
+                    <td>所有用户</td>
+                </tr>
+                <tr>
+                    <td><p>活动平台：</p></td>
+                    <td>APP/WAP</td>
+                </tr>
+                <tr>
+                    <td><p>活动产品：</p></td>
+                    <td>新元宝、月月派、步步高升</td>
+                </tr>
+                <tr>
+                    <td><p>注意事项：</p></td>
+                    <td></td>
+                </tr>
+            </table>
+            <ul>
+                <li data-list="1">
+                    中奖名单将于活动结束后的5个工作日后公布，新新贷客服将在名单公布后的5个工作日内与获奖用户取得联系，如超过5个工作日无法联系，则将视为放弃活动奖励；
+                </li>
+                <li data-list="2">
+                    实物奖品将在名单公布后的7个工作日内寄送到用户账户的有效地址中，如遇奖品缺货、节假日等特殊情况，发放时间可能延后；
+                </li>
+                <li data-list="3">
+                    充值类奖品将在名单公布后的5个工作日内直接充值到账户的有效联系电话中；
+                </li>
+                <li data-list="4">
+                    活动当天，利用不正当手段（包括但不限于网络技术手段攻击后台扰乱系统正常运转）参与活动，新新贷有权终止其活动资格；
+                </li>
+                <li data-list="5">
+                    为了使活动透明公开，在活动期间将会公布用户个人账户ID、投资信息和时间；
+                </li>
+                <li data-list="6">
+                    若用户投资新元宝在未到期时选择退出，则在退出提现时，将所得奖励金额从提现金额中扣除。
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class='pop noChance'>
+    <div>
+        <div>
+            <div class='close' id='nochanceclose'></div>
+            <p>阿欧，您的抽奖机会已经用完了</p>
+            <a href="javascript:;" id='invest'>投资立即获得机会</a>
+        </div>
+    </div>
+</div>
+<div class='pop haveprize'>
+    <div>
+        <div class='clearfix center'>
+            <div id='closegame'></div>
+            <h6 class='prize-info'>超级幸运儿！恭喜您获得</h6>
+            <p class='prize-name'>Apple MacBook 笔记本电脑</p>
+            <a href="javascript:;" class='put-pocket'>收入囊中</a>
+            <a href="javascript:;" class='one-more'>再来一次</a>
+        </div>
+    </div>
+</div>
+<div class='pop winning-record'>
+    <div>
+        <div>
+            <div class='close'></div>
+            <span class='threestars'></span>
+            <p>我的中奖记录</p>
+            <div class='winning-con'>
+                <ul>
+                </ul>
+            </div>
+            <div class='page'>
+                <span class='pageUp'>上一页</span>
+                <span class='pageDown'>下一页</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='tip'></div>
+<div class='pagetip'></div>
+<div id="J_wrapBody"></div>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = fontSize * (clientWidth / 375) + 'px';
+            };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script src='../member-day/combomayxxd.js'></script>
+</body>
+</html>

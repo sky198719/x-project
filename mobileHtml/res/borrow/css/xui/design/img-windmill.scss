@@ -1,0 +1,56 @@
+$img-color : mix($white, rgba($bg-main, .5));
+
+[xui] .img-windmill {
+  display  : block;
+  position : absolute;
+  width    : 160px;
+  height   : 160px;
+  @include opacity(.4);
+}
+
+[xui] .img-windmill b {
+  display       : block;
+  position      : absolute;
+  overflow      : hidden;
+  width         : 40%;
+  height        : 40%;
+  z-index       : 1;
+  left          : 20%;
+  bottom        : 0;
+  border-radius : 50%;
+  background    : $img-color;
+}
+
+//[xui] .img-windmill b:after,
+[xui] .img-windmill b:before {
+  content       : " ";
+  display       : block;
+  position      : absolute;
+  width         : 100%;
+  height        : 100%;
+  z-index       : 1;
+  border-radius : 50% 50% 0;
+  left          : 0;
+  bottom        : 0;
+  //background: $img-color;
+}
+
+[xui] .img-windmill b:before {
+}
+
+[xui] .img-windmill b:after {
+  //border-right:100px solid $img-color;
+}
+
+[xui] .img-windmill i {
+}
+
+[xui] .img-windmill i:before {
+}
+
+[xui] .img-windmill i:after {
+}
+
+[xui] .img-windmill i:after,
+[xui] .img-windmill i:before {
+}

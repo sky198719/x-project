@@ -1,0 +1,73 @@
+{{#each list}}
+<li class="swipeout"  data-id="{{schemeid}}">
+    <div class="swipeout-content">
+        <!-- 定期 -->
+        <div class="dq-blue">
+            <img src="{{fixedImg}}" width="25px" height="50px;">
+        </div>
+        <a class="item-link">
+            <div class="item-content" style="padding-left: 40px;">
+                <div class="item-inner pb0"  style="position:static;">
+                    <div class="item-title-row xxd-item-row">
+                        <div class="item-title font-3A3939">
+                            <span class="font18">{{pname}}</span>
+                        </div>
+                        <div class="item-after">
+                            <span class="inn-title font-666 hl20">计划金额：{{account}} 万</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{#if isJoin}}
+            <div class="item-content" style="padding-left: 40px;margin-top: -15px;">
+                <div class="item-inner pb0" style="position:static;">
+                    <div class="item-title-row xxd-item-row">
+                        <div class="item-title" style="width:80%">
+                            <div class="progress">
+                                <div class="progress-bar" style="width:{{planPercent}};"></div>
+                            </div>
+                        </div>
+                        <div class="item-after">
+                            <div class="send">{{planPercent}}
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            <div class="item-content" style="padding-left: 40px;margin-top: -15px;padding-bottom:10px;">
+                <div class="item-inner" style="position:static;">
+                    <div class="item-title-row xxd-item-row">
+                        <div class="item-title font-red"><span class="font24">{{maxapr}}</span><span class="font16">{{maxapr_dec}}% </span></div>
+                    </div>
+                    <div class="item-subtitle ">
+                        <span class="font-999">历史年化收益</span>
+                    </div>
+                </div>
+                <div class="item-inner" style="position:static;">
+                    <div class="item-title-row xxd-item-row">
+                        <div class="item-title "><span class="font18 font-3A3939" style="line-height: 36px;">{{closeterm}}个月</span></div>
+                    </div>
+                    <div class="item-subtitle">
+                        <span  class="font-999">期限</span>
+                    </div>
+                </div>
+                {{#if isClose}}
+                <div class="item-inner"  style="position:static;">
+                    <div class="game-over-rmlc">
+                        <img src="static/img/xxd/buy-none.png" width="68px" height="68px">
+                    </div>
+                </div>
+                {{else}}
+                <div class="item-inner" style="position:static;margin-top: -8px;">
+                    <div class="item-title-row xxd-item-row width100">
+                        <button class="button mt18 {{buttonClass}} " name="{{buttonName}}" data-id="{{schemeid}}">{{buttonName}}</button>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+        </a>
+    </div>
+</li>
+{{/each}}

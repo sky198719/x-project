@@ -1,0 +1,44 @@
+@border-color-default:#333;
+@border-color-active:#33ffff;
+@media screen and (max-width: 1366px) {
+  .section {
+    img {
+      width: 70%;
+    }
+  }
+}
+body{
+  background: url("img/reportApr/usual-bg.png") center/100% 100% no-repeat;
+}
+.section {
+  text-align: center;
+}
+#menu li {
+  display: block;
+  width: 3px;
+  height: 9px;
+  background: #6356ee;
+  margin-bottom: 20px;
+}
+#menu li.active,#menu li:hover{
+  background: #ca88ec;
+}
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 3px;
+  height: 9px;
+  text-decoration: none;
+  &:focus{outline:none;}
+}
+
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 516px;
+  margin-top: -200px;
+  z-index: 70;
+}

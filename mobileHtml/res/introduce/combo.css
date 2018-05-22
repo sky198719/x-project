@@ -1,0 +1,211 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  overflow-y: auto;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: bottom;
+  display: block;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  position: relative;
+  line-height: 1.5;
+}
+.J_container {
+  width: 100%;
+}
+.banner {
+  width: 100%;
+  height: 21.875rem;
+  background: url("img/banner.png") center center / 100% 100% no-repeat;
+}
+.second-step {
+  width: 100%;
+  height: 10.3125rem;
+  background: url("img/second-step.png") center center / 100% 100% no-repeat;
+  overflow: hidden;
+}
+.third-step {
+  width: 100%;
+  height: 15.3125rem;
+  margin: 0 auto;
+  background: url("img/third-step.png") center center / 100% 100% no-repeat;
+}
+.fourth-step {
+  width: 100%;
+  height: 22.25rem;
+  margin: 0 auto;
+  background: url("img/fourth-step.png") center center / 100% 100% no-repeat;
+}
+.fifth-step {
+  position: relative;
+  width: 100%;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.fifth-step .fifth-content {
+  position: relative;
+  width: 20.9375rem;
+  height: 27.5313rem;
+  margin: 0 auto;
+  background: url("img/fifth-step.png") center center / 100% 100% no-repeat;
+}
+.fifth-step .fifth-content .fifth-data .big {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.fifth-step .fifth-content .fifth-data .small {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.fifth-step .fifth-content .fifth-data .red-font {
+  color: #fd4621;
+}
+.fifth-step .fifth-content .fifth-data .yellow-font {
+  color: #fe6925;
+}
+.fifth-step .fifth-content .qtds-data {
+  position: absolute;
+  top: 4rem;
+  right: 1.5625rem;
+}
+.fifth-step .fifth-content .xyb-data {
+  position: absolute;
+  top: 12.3125rem;
+  left: 7.4375rem;
+}
+.fifth-step .fifth-content .xyb-data .big {
+  font-size: 1.5rem;
+}
+.fifth-step .fifth-content .xyb-data .small {
+  font-size: 0.9375rem;
+}
+.fifth-step .fifth-content .xyb-change {
+  left: 6.8125rem;
+}
+.fifth-step .fifth-content .bbgs-data {
+  position: absolute;
+  bottom: 4.125rem;
+  right: 1.875rem;
+}
+.fifth-step .fifth-content .bbgs-data .big {
+  font-size: 1.125rem;
+}
+.fifth-step .fifth-content .bbgs-data .small {
+  font-size: 0.75rem;
+}
+.fifth-step .fifth-content .qtds-btn {
+  position: absolute;
+  top: 9.25rem;
+  right: 1.4375rem;
+  width: 7.9688rem;
+  height: 1.875rem;
+  background: url("img/btn-one.png") center center / 100% 100% no-repeat;
+}
+.fifth-step .fifth-content .xyb-btn {
+  position: absolute;
+  top: 16.9375rem;
+  left: 1.1875rem;
+  width: 7.6563rem;
+  height: 1.875rem;
+  background: url("img/btn-two.png") center center / 100% 100% no-repeat;
+}
+.fifth-step .fifth-content .bbgs-btn {
+  position: absolute;
+  bottom: 0.5625rem;
+  right: 2.8125rem;
+  width: 7.6563rem;
+  height: 1.875rem;
+  background: url("img/btn-two.png") center center / 100% 100% no-repeat;
+}
+.sixth-step {
+  width: 100%;
+  padding-bottom: 4.8125rem;
+  background: url("img/problem.jpg") center center / 100% 100% no-repeat;
+}
+.sixth-step .title {
+  font-size: 1.1875rem;
+  padding-top: 1.7188rem;
+  padding-bottom: 0.5938rem;
+  color: #ffdd41;
+  text-align: center;
+  display: block;
+  background: none;
+}
+.sixth-step .container {
+  width: 20.9375rem;
+  margin: 0 auto;
+}
+.sixth-step .container .list {
+  width: 100%;
+}
+.sixth-step .container .list li {
+  width: 100%;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.sixth-step .container .list li h4 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+.sixth-step .container .list li p {
+  font-size: 0.625rem;
+  color: #fff;
+}
+.sixth-step .container .list .last {
+  border: none;
+  padding-bottom: 0;
+}
+.sixth-step .container .problem-info {
+  margin-top: 1.1875rem;
+  width: 100%;
+  height: 1.3125rem;
+}
+.sixth-step .container .problem-info .problem {
+  display: block;
+  float: right;
+  width: 4rem;
+  height: 1.25rem;
+  background: url("img/problem.png") center center / 100% 100% no-repeat;
+}
+.suspension-frame {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3.4375rem;
+  margin: 0 auto;
+  background-color: rgba(72, 28, 10, 0.8);
+}
+.suspension-frame div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -6.0938rem;
+  margin-top: -1.125rem;
+  width: 12.1563rem;
+  height: 2.25rem;
+  background: url("img/pop-btn.png") center center / 100% 100% no-repeat;
+}

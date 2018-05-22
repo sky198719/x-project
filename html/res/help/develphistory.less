@@ -1,0 +1,176 @@
+@import "css/index";
+
+/*发展历程*/
+.g-right {
+  .m-con-wrap {
+    .m-con-bd {
+      border-bottom: none;
+      width: 736px;
+      &.tit-mark {
+        margin-top: 35px;
+        .clock {
+          width: 120px;
+          background: url("@{imgurl}devhis-clock.png") no-repeat left center;
+          height: 58px;
+        }
+        ul.tit-time {
+          height: 58px;
+          line-height: 58px;
+          li {
+            float: left;
+            display: inline-block;
+            width: 86px;
+            height: 58px;
+            line-height: 58px;
+            font-size: @font16px;
+            color: @col-666;
+            text-align: left;
+            &.active, &:hover {
+              font-size: @font20px;
+              color: @col-57a;
+              cursor: pointer;
+            }
+            &.last {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .devhis-year {
+      padding-top: 20px;
+      margin-bottom: 50px;
+      background: url("@{imgurl}devhis-road.jpg") repeat-y center;
+      ul {
+        li {
+          margin-bottom: 30px;
+        }
+      }
+      .mark {
+        width: 77px;
+        height: 25px;
+        margin: 25px 0 0 -35px;
+        background: url("@{imgurl}devhis-mark.png") no-repeat right center;
+        font-size: @font18px;
+        color: @col-57a;
+        &.mark16101 {
+
+        }
+      }
+      .new-special li:nth-child(5) .mark,.new-special li:nth-child(6) .mark{
+        margin: 12px 0 0 -35px;
+      }
+      .mark-content {
+        width: 618px;
+        div {
+          width: 144px;
+          height: 80px;
+          background: #e3e3e3;
+          //2018年
+          &.devhis-18012{
+            background: url("@{imgurl}devhis-18012.png") center center/contain no-repeat;
+          }
+          &.devhis-18011{
+            background: url("@{imgurl}devhis-18011.png") center center/contain no-repeat;
+          }
+          // 2017年
+          &.devhis-17121{
+            background: url("@{imgurl}devhis-17121.png") center center/contain no-repeat;
+          }
+          &.devhis-17122{
+             background: url("@{imgurl}devhis-17122.png") center center/contain no-repeat;
+          }
+          &.devhis-17101{
+             background: url("@{imgurl}devhis-17101.png") center center/contain no-repeat;
+          }
+          &.devhis-17102{
+            background: url("@{imgurl}devhis-17102.png") center center/contain no-repeat;
+          }
+          &.devhis-17103{
+            span{
+              display: block;
+              width: 100%;
+              height: 100%;
+              background: url("@{imgurl}devhis-17103.png") center center/contain no-repeat;
+            }
+
+          }
+          &.devhis-17104{
+            background: url("@{imgurl}devhis-17104.png") center center/contain no-repeat;
+          }
+          &.devhis-16101 {
+            background: url("@{imgurl}devhis-16101.png") no-repeat center;
+          }
+          &.devhis-16041 {
+            background: url("@{imgurl}devhis-16041.png") no-repeat center;
+          }
+          &.devhis-16042 {
+            background: url("@{imgurl}devhis-16042.png") no-repeat center;
+          }
+          &.devhis-16031 {
+            background: url("@{imgurl}devhis-16031.png") no-repeat center;
+          }
+          &.devhis-16032 {
+            background: url("@{imgurl}devhis-16032.png") no-repeat center;
+          }
+          &.devhis-16033 {
+            background: url("@{imgurl}devhis-16033.png") no-repeat center;
+          }
+          &.devhis-15101 {
+            background: url("@{imgurl}devhis-15101.png") no-repeat center;
+          }
+          &.devhis-15071 {
+            background: url("@{imgurl}devhis-15071.png") no-repeat center;
+          }
+          &.devhis-15051 {
+            background: url("@{imgurl}devhis-15051.png") no-repeat center;
+          }
+          &.devhis-15011 {
+            background: url("@{imgurl}devhis-15011.png") no-repeat center;
+          }
+          &.devhis-14121 {
+            background: url("@{imgurl}devhis-14121.png") no-repeat center;
+          }
+          &.devhis-14071 {
+            background: url("@{imgurl}devhis-14071.png") no-repeat center;
+          }
+          &.devhis-14041 {
+            background: url("@{imgurl}devhis-14041.png") no-repeat center;
+          }
+          &.devhis-14031 {
+            background: url("@{imgurl}devhis-14031.png") no-repeat center;
+          }
+          &.devhis-131201 {
+            background: url("@{imgurl}devhis-13121.png") no-repeat center;
+          }
+          &.devhis-13101 {
+            background: url("@{imgurl}devhis-13101.png") no-repeat center;
+          }
+          &.devhis-13103 {
+            background: url("@{imgurl}devhis-13103.png") no-repeat center;
+          }
+          &.devhis-121201 {
+            background: url("@{imgurl}devhis-121201.png") no-repeat center;
+          }
+          &.devhis-12111 {
+            background: url("@{imgurl}devhis-12111.png") no-repeat center;
+          }
+          &.devhis-12011 {
+            background: url("@{imgurl}devhis-12011.png") no-repeat center;
+          }
+        }
+        p {
+          padding-left: 0;
+          font-size: @font16px;
+          margin: 10px 0 20px
+        }
+      }
+    }
+
+  }
+  .devhis-topbg {
+    background: url("@{imgurl}devhis-topbg.png") no-repeat center;
+    width: 970px;
+    height: 250px;
+  }
+}

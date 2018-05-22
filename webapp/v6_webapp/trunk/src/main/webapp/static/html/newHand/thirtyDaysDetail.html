@@ -1,0 +1,184 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">
+            新手专享30天
+        </div>
+        <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through toolbar-through">
+    <div data-page="thirtyDaysDetail" class="page" directory="newHand">
+        <div class="page-content pull-to-refresh-content infinite-scroll ">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="content-block-inner mt10 pr0">
+                <div class="row no-gutter" style="margin: 10px 0 10px 0;">
+                    <div style="width:40%">
+                        <div class="sevenDays-corner">
+
+                            <div style="padding-right: 40px;"><span class="font40" id="7d_apr">0</span>%<span
+                                    name="7d_floatApr"></span>
+                                <span style="position: absolute;margin-top: -50px;margin-left: 100px;display: none;" class="newhandActivity">
+                                    <img src="static/img/xxd/thirtytip.png" height="20"/>
+                                </span>
+                            </div>
+                            <div style="padding-right: 35px;">历史年化收益</div>
+                          </div>
+                    </div>
+                    <div style="width:60%">
+                        <div class="item-content" style="padding:0 0 0 12%;min-width: 150px;">
+                            <div class="item-title-row displayNone singlesdayDetails">
+                               <div class="item-title">
+                                   <img src="static/img/xxd/1111day.png" height="20px"/>
+                               </div>
+                            </div>
+                            <div class="item-title-row" class="sd-pd2">
+                                <div class="item-title font-666">起投金额：<span id="7d_leastAmount">0.00</span>元</div>
+                            </div>
+                            <div class="item-title-row" class="sd-pd2">
+                                <div class="item-title font-666">锁定期限：<span id="7d_closeTerm">0</span>天</div>
+                            </div>
+                            <div class="item-title-row" class="sd-pd2" style="display: none;">
+                                <div class="item-title font-666">适用：质保服务专款计划</div>
+                            </div>
+                            <div class="item-title-row" class="sd-pd2">
+                                <div class="item-title font-666"><span class="font-red">新人专享，每人限投一次</span></div>
+                            </div>
+                            <div class="item-title-row">
+                                风险提示：<a id="fenxiantishi" href="#">《风险提示函》</a>
+                            </div>
+                            <div class="item-title-row">
+                                债权列表：<a id="tradeList" href="#">点击查看</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block-inner mt10 pr0" style="min-height: 400px;">
+                <ul class="nav nav-tabs" style="margin-top: 0px;">
+                    <li id="introduce" class="active"><a style="background: transparent;font-size: 0.8rem;"> 产品介绍</a></li>
+                    <li id="qa"><a style="background: transparent;font-size: 0.8rem;"> 常见问题</a></li>
+                    <li id="trade-record"><a style="background: transparent;font-size: 0.8rem;"> 加入记录<span name="7d_total" style="font-size: 10px;"></span></a></li>
+                </ul>
+                <!-- Tab 1, 默认激活 -->
+                <div id="introduce-c" class="list-block font-dark">
+                    <ul>
+                        <li>
+                            <div class="ml20 font15 pb10 mr10">新手专享30天服务仅针对<span style="color:red">未曾在新新贷平台（包含官网，WAP和APP）投资过任一产品的新手用户</span>，每位新手用户仅限参与体验一次。</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">该服务将在用户认可的标的范围内，对符合要求的标的进行自动投标，期限结束后，新手专享30天所投资标的将到期还款。用户收回投资本金和相应的收益。</div>
+                         </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10" style="font-weight: bold">收益计算：历史收益=投资金额*<span class="pro30apr">0</span>%/360*30<span style="color:red;display: none;" class="pro30floataprText">+投资金额*0%/360*30</span></div>
+                            <div class="ml20 font15 mb10 pb10 mr10">
+                                <table class="rateTable">
+                                    <thead>
+                                    <tr>
+                                        <th style="text-align: center;">投资金额（元）</th>
+                                        <th style="text-align: center;">历史年化收益率</th>
+                                        <th style="text-align: center;">锁定期限</th>
+                                        <th style="text-align: center;">历史收益（元）</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="interestRateTable" style="text-align: center;">
+                                        <tr>
+                                            <td>100</td>
+                                            <td><span class="pro30apr">0</span>%<span style="color:red;display: none;" class="pro30floatapr">+0%</span></td>
+                                            <td>30天</td>
+                                            <td class="result100">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1000</td>
+                                            <td><span class="pro30apr">0</span>%<span style="color:red;display: none;" class="pro30floatapr">+0%</span></td>
+                                            <td>30天</td>
+                                            <td class="result1000">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5000</td>
+                                            <td><span class="pro30apr">0</span>%<span style="color:red;display: none;" class="pro30floatapr">+0%</span></td>
+                                            <td>30天</td>
+                                            <td class="result5000">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10000</td>
+                                            <td><span class="pro30apr">0</span>%<span style="color:red;display: none;" class="pro30floatapr">+0%</span></td>
+                                            <td>30天</td>
+                                            <td class="result10000">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">回款规则:</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">锁定期结束后次日（含周末节假日）自动返还至新新贷账户。</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Tab 2 -->
+                <div id="qa-c" class="list-block font-dark" style="display: none;">
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">1.我投资了新元宝，还能投新手专享30天吗？</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">不能，新手专享30天仅限未在新新贷任意平台投资过任一产品的用户参与体验。</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">2.投资新手专享30天可以使用新手红包吗？</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">不可以，新手红包仅限在投资月月派、新元宝产品及散标直投产品（票据贷除外）可用。</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">3.投资新手专享30天锁定期内可以退出吗？</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">不可以，锁定期限内不支持提前退出。</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="ml20 font17 mb10 mr10">4.新手专享30天安全吗？</div>
+                            <div class="ml20 font15 mb10 pb10 mr10">新新贷以严谨负责的态度对每笔借款进行严格筛选。</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Tab 3 -->
+                <div id="trade-record-c" style="display: none;">
+                    <div class="content-block">
+                        <table class="bid-his-table">
+                            <thead>
+                            <tr>
+                                <th style="width: 33%">投资人</th>
+                                <th style="width: 33%">加入金额</th>
+                                <th style="width: 33%">加入时间</th>
+                            </tr>
+                            </thead>
+                            <tbody id="sevenDaysList"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="fenxiantishi-c" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="toolbar no-border" style="height: 55px;">
+            <div class="sevenDays-button" name="7d_join"> 立即抢购</div>
+            <div style="display: none;">
+                <div style="width:100%;text-align: center;margin: auto;color: #fff;background-color: #f9ac3a;font-size: 15px;height: 45px;line-height: 45px;">新手专享30天仅限购1次，更多其他热门产品等着你</div>
+                <div class="sevenDays-button" name="7d_goBuy" style="height: 55px;">去选购</div>
+            </div>
+
+        </div>
+        <input type="hidden" id="v_deployid" value=""/>
+        <input type="hidden" id="currentPage" value="1"/>
+        <input type="hidden" id="totalPages" value="1"/>
+    </div>
+</div>

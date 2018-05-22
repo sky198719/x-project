@@ -1,0 +1,377 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>2017新新中国行全民户外运动嘉年华</title>
+<style>
+/* 通用样式 */
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none; font-family:'微软雅黑';}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+input,button{outline:none;}
+input::-webkit-input-placeholder{color:#999999;}
+.ui-loader{display:none;}
+
+.container{width:100%; height:100%; top:0; left:0; position:absolute; z-index:0;}
+.container img{width:100%; height:100%; margin:0 auto; display:block;}
+.container2{width:100%; height:100%; top:0; left:0; position:absolute; z-index:0;}
+.container2 img{width:100%; height:100%; margin:0 auto; display:block;}
+
+.formBox{width:90%; margin:0 auto; top:7rem; left:5%; position:absolute;}
+.formBox li{width:100%; margin-bottom:0.5rem; min-height:1.5rem; position:relative;}
+.formBox #special1{padding-bottom:1rem;}
+.formBox #special1 strong{font-weight:normal; width:65%; bottom:0; right:0; position:absolute; font-size:0.6rem; color:#fbd700; text-align:center; display:block;}
+.formBox li label{width:30%; float:left; display:inline; font-size:1rem; color:#fbd700; text-align:right; height:1.5rem; line-height:1.5rem; margin-right:5%;}
+.formBox li input[type='text']{width:65%; float:left; display:inline; font-size:0.8rem; padding:0 0.5rem; box-sizing:border-box; background:none; background-color:rgba(255,255,255,0.5); border:none; height:1.5rem; line-height:1.5rem; color:#bf1a20;}
+.formBox li img{width:5rem; height:1.3rem; top:0.1rem; right:0.1rem; position:absolute;}
+.formBox #special2 input{width:30%; float:left; margin-left:35%; text-align:center; padding:0;}
+.formBox #special2 span{width:30%; float:left; margin-left:5%; background-color:rgba(255,255,255,0.5); color:#bf1a20; text-align:center; height:1.5rem; line-height:1.5rem; font-size:0.8rem;}
+.formBox #special2 .current{color:#999999;}
+.formBox li select{width:65%; border-radius:0; background:none; background-color:rgba(255,255,255,0.5); border:none; height:1.5rem; line-height:1.5rem; color:#bf1a20; font-size:0.8rem; padding:0 0.3rem; box-sizing:border-box;}
+.formBox #special3{height:2.5rem;}
+.formBox #special3 #btn1{width:30%; background:none; background-color:rgba(255,255,255,0.5); color:#bf1a20; border:none; text-align:center; margin:0 auto; height:2.5rem; line-height:2.5rem; font-size:1.5rem; display:block;}
+.formBox #special4{width:65%; margin-left:35%; height:1rem; line-height:1rem; min-height:1rem; color:#bf1a20; font-size:0.6rem;}
+
+#special5{width:85%; height:1rem; line-height:1rem; min-height:1rem; color:#bf1a20; font-size:0.6rem; top:12rem; left:7.5%; position:absolute; display:block; text-align:center;}
+#passWord{width:85%; height:2rem; line-height:2rem; top:13rem; left:7.5%; position:absolute; background:none; border:none; background-color:rgba(255,255,255,0.5); color:#333333; padding:0 0.5rem; box-sizing:border-box; font-size:1rem;}
+#btn2{width:30%; top:19rem; left:35%; position:absolute; background:none; background-color:rgba(255,255,255,0.5); color:#006735; border:none; text-align:center; margin:0 auto; height:2.5rem; line-height:2.5rem; font-size:1.5rem; display:block;}
+
+.arrow{width:8%; height:1.5rem; top:1rem; left:46%; position:absolute; z-index:100; opacity:1; background:url(img/arrow.png) 0 0 no-repeat; background-size:100% 100%;}
+
+.tip{top:15.5rem; left:0; position:absolute; width:100%; height:2rem; line-height:1rem; text-align:center; font-size:0.6rem; color:#016735;}
+</style>
+<bgsound src="media/bg.mp3" loop="-1">
+</head>
+
+<body>
+<div class="container">
+	<img src="img/bg1.jpg" />
+	<div class="arrow"></div>
+</div>
+<div class="container" style="display:none;">
+	<img src="img/bg2.jpg" />
+	<div class="arrow"></div>
+</div>
+<div class="container" style="display:none;">
+	<img src="img/bg3.jpg" />
+	<div class="arrow"></div>
+</div>
+<div class="container2" style="display:none;">
+	<img src="img/bg4.jpg" />
+	<ul class="formBox">
+		<li>
+			<label>姓名</label>
+			<input type="text" maxlength=10 id="realName" alt="姓名" />
+		</li>
+		<li id="special1">
+			<label>身份证号</label>
+			<input type="text" maxlength=18 id="idCode" alt="身份证号" />
+			<strong>（身份证号码用于购买保险）</strong>
+		</li>
+		<li>
+			<label>请选择组别</label>
+			<select id="groupType">
+				<option>青春组</option>
+				<option>亲子组（宝宝参加免报名）</option>
+				<option>挑战组</option>
+				<option>体验组</option>
+			</select>
+		</li>
+		<li>
+			<label>手机号</label>
+			<input type="text" maxlength=11 id="mobilePhone" alt="手机号" />
+		</li>
+		<li>
+			<label>图片验证码</label>
+			<input type="text" maxlength=4 id="imgCode" alt="图片验证码" />
+			<img src="" id="imgUrl" />
+		</li>
+		<li id="special2">
+			<input type="text" id="mobileCode" maxlength=4 placeholder="手机验证码" alt="手机验证码" />
+			<span id="timeSet">获取验证码</span>
+		</li>
+		<li id="special4"></li>
+		<li id="special3">
+			<button id="btn1">提交</button>
+		</li>
+	</ul>
+</div>
+<div class="container2" style="display:none;">
+	<img src="img/bg5.jpg" />
+	<span id="special5"></span>
+	<input type="password" maxlength=16 id="passWord" placeholder="请输入6-16位数字，字母组合密码" />
+	<div class="tip">（为了保护您的隐私，请设置您的账号密码，<br/>妥善保管，不要外泄）</div>
+	<button id="btn2">提交</button>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery-mobile.js"></script>
+<script src="js/jquery.md5.js"></script>
+<script src="js/default.js"></script>
+</body>
+</html>
+
+<script>
+// 初始化配置
+document.body.ontouchmove=function(e){
+    e.preventDefault();
+}
+$("input").attr('data-role','none');
+$("select").attr('data-role','none');
+$("button").attr('data-role','none');
+
+// 初始化dom
+$.each($('.container'),function(index,item){
+	$(this).css('z-index',10 - index);
+});
+$.each($('.container2'),function(index,item){
+	$(this).css('z-index',5 - index);
+});
+setInterval(function(){
+	$('.arrow').animate({'top':'0.5rem','opacity':'0'},500);
+	$('.arrow').animate({'top':'1rem','opacity':'1'},0);
+},1500);
+
+// 翻页
+var mouseDown;
+var mouseUp;
+var winHeight = $(window).height();
+var clickFlag = 0;
+$('.container').bind('vmousedown',function(ev){
+	var e = ev || window.event;
+	mouseDown = e.clientY;
+});
+$('.container').bind('vmouseup',function(ev){
+	$('.container').fadeIn(0);
+	$('.container2').fadeIn(0);
+	var _this = $(this);
+	var index = $.inArray(this,$('.container'));
+	var e = ev || window.event;
+	mouseUp = e.clientY;
+	if(clickFlag == 0){
+		clickFlag = 1;
+		if(mouseDown > mouseUp){
+			if(index < 3){
+				_this.animate({'top':-winHeight + 'px'},500);
+			}else{
+				clickFlag = 0;
+				return false;
+			}
+		}else if(mouseDown < mouseUp){
+			if(index > 0){
+				$('.container').eq(index-1).animate({'top':0 + 'px'},500);
+			}else{
+				clickFlag = 0;
+				return false;
+			}
+		}
+		setTimeout(function(){
+			clickFlag = 0;
+		},1000);
+	}
+	
+});
+
+// 非空验证
+function emptyCheck(obj){
+	var str = $(obj).val();
+	str = str.replace(/(^\s*)|(\s*$)/g,"");
+	if(str == ''){
+		$('#special4').html('* ' + $(obj).attr('alt') + '不能为空');
+		imgcodeRan();
+		return 1;
+	}else{
+		$('#special4').html('');
+		return 0;
+	}
+}
+
+// 手机号验证
+function mobileCheck(){
+	var mobiletest = /^1[34578]\d{9}$/; 
+	if(!mobiletest.test($("#mobilePhone").val())){
+    	$('#special4').html('* 手机号格式不正确');
+    	imgcodeRan();
+    	return 1;
+	}else{
+		$('#special4').html('');
+		return 0;
+	}
+}
+
+// 身份证验证
+function idCheck(){
+	var idtest = /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/;  
+	if(!idtest.test($('#idCode').val())){
+		$('#special4').html('* 身份证格式不正确');
+		imgcodeRan();
+		return 1;
+	}else{
+		$('#special4').html('');
+		return 0;
+	}
+}
+
+// 密码规则
+function passwordCheck(){
+	var passwordtest = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/;
+	if(!passwordtest.test($('#passWord').val())){
+		$('#special5').html('* 密码必须是6-16位数字和字母组合');
+		return 1;
+	}else{
+		$('#special5').html('');
+		return 0;
+	}
+}
+
+// 获取验证码
+var imgUrl;
+$.ajax({
+	url:link + 'randCode/getImageCodeUrl.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:'jsoncallback',
+	success:function(data){
+		$('#imgUrl').attr('src',data.verifcodeUrl);
+		imgUrl = data.verifcodeUrl;
+	},
+	error:function(){
+		alert('网络异常，请刷新页面后重试！');
+	}
+});
+
+// 刷新验证码
+var ran = Math.random();
+function imgcodeRan(){
+	ran = Math.random();
+	$('#imgUrl').attr('src',imgUrl + '?' + ran);
+}
+$('#imgUrl').click(function(){
+	imgcodeRan();
+});
+
+/*
+// 亲子组人数判断
+$.ajax({
+	url:link + '' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:'jsoncallback',
+	success:function(data){
+		if(data.resultCode != 0){
+			$('#groupType').find('option').eq(1).attr('disabled','disabled');
+		}
+	},
+	error:function(){
+		alert('网络异常，请刷新页面后重试！');
+	}
+});
+*/
+
+// 验证码倒计时
+var timer = 60;
+var t1;
+// 获取短信验证码
+$('#timeSet').click(function(){
+	var _this = $(this);
+	if(emptyCheck('#idCode') == 0 && emptyCheck('#realName') == 0 && emptyCheck('#mobilePhone') == 0 && emptyCheck('#imgCode') == 0 && mobileCheck() == 0 && idCheck() == 0){
+		$.ajax({
+			url:link + 'user/sendSMSTemplate.do' + linkextra,
+			type:'get',
+			dataType:'jsonp',
+			jsonp:'jsoncallback',
+			data:{phone:$('#mobilePhone').val(),imgCode:$('#imgCode').val()},
+			success:function(data){
+				if(data.resultCode != 0){
+					imgcodeRan();
+					$('#special4').html('* ' + data.msg);
+					return false;
+				}else{
+					if(!_this.hasClass('current')){
+						_this.addClass('current');
+						_this.html(timer + '秒后重发');
+						t1 = setInterval(function(){
+							timer--;
+							if(timer == 0){
+								clearInterval(t1);
+								timer = 60;
+								_this.html('获取验证码');
+								_this.removeClass('current');
+							}else{
+								_this.html(timer + '秒后重发');
+							}
+						},1000);
+					}
+				}
+			},
+			error:function(){
+				alert('网络异常，请刷新页面后重试！');
+			}
+		});
+	}else{
+		imgcodeRan();
+		return false;
+	}
+});
+
+// 表单提交
+$('#btn1').click(function(){
+	if(emptyCheck('#idCode') == 0 && emptyCheck('#realName') == 0 && emptyCheck('#mobilePhone') == 0 && emptyCheck('#mobileCode') == 0 && mobileCheck() == 0 && idCheck() == 0){
+		$.ajax({
+			url:link + 'populariseUser/popularizeUserReg.do' + linkextra,
+			type:'get',
+			dataType:'jsonp',
+			jsonp:'jsoncallback',
+			data:{realName:$('#realName').val(),idCode:$('#idCode').val(),groupType:$('#groupType').val(),mobilePhone:$('#mobilePhone').val(),passWord:$.md5($.md5($('#idCode').val().substr($('#idCode').val().length - 6,6))),mobileCode:$('#mobileCode').val()},
+			success:function(data){
+				if(data.resultCode != 0){
+					$('#special4').html('* ' + data.msg);
+					return false;
+				}else{
+					localStorage.setItem('localUsername',$('#mobilePhone').val());
+					localStorage.setItem('localPassword',$.md5($.md5($('#idCode').val().substr($('#idCode').val().length - 6,6))));
+					alert('报名成功！同时注册好新新贷账号，账号名为手机号码，初始密码为身份证号码后六位！');
+					$('.container2').eq(0).animate({'top':-winHeight + 'px'},500);
+				}
+			},
+			error:function(){
+				alert('网络异常，请刷新页面后重试！');
+			}
+		});
+	}else{
+		return false;
+	}
+});
+
+// 修改密码
+$('#btn2').click(function(){
+	if(passwordCheck() == 0){
+		$.ajax({
+			url:link + 'populariseUser/updatePwd.do' + linkextra,
+			type:'get',
+			dataType:'jsonp',
+			jsonp:'jsoncallback',
+			data:{userName:localStorage.getItem('localUsername'),oldPassword:localStorage.getItem('localPassword'),newPassword:$.md5($.md5($('#passWord').val()))},
+			success:function(data){
+				if(data.resultCode != 0){
+					$('#special5').html('* ' + data.msg);
+					return false;
+				}else{
+					if(confirm("修改密码成功！去了解下新新贷？")){
+						window.location.href = '/';
+					}else{
+						
+					}
+				}
+			},
+			error:function(){
+				alert('网络异常，请刷新页面后重试！');
+			}
+		});
+	}
+});
+</script>

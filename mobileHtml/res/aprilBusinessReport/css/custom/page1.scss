@@ -1,0 +1,44 @@
+//page1
+.swiper-slide1, .swiper-slide15 {
+  background: url(../imgs/bg1.jpg) no-repeat center / cover
+}
+
+.home {
+  width: 100%;
+  max-width: 340px;
+  height: 375px;
+  background: url(../imgs/title.png) no-repeat center / contain;
+  padding: 186px 20px 0 20px;
+
+
+}
+
+.home li {
+  line-height: 1.7rem;
+  color: $co-read
+}
+
+.meteor, .meteor2 {
+  width: 50.5vh;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background: url(../imgs/meteor.png) no-repeat center / contain;
+  z-index: 111;
+}
+
+.meteor2 {
+  top: -5%;
+  left: 15%;
+}
+
+.swiper-slide-active .meteor {
+  animation: am-meteor 5s ease infinite;
+  -webkit-animation: am-meteor 5s ease infinite;
+}
+
+.swiper-slide-active .meteor2 {
+  animation: am-meteor 2s ease infinite;
+  -webkit-animation: am-meteor 2s ease infinite;
+}

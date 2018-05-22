@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>七月会员日</title>
+    <link href="../member-day/Julycombo.css" rel="stylesheet">
+</head>
+<body>
+<div id="homeIndex">
+    <header>
+    </header>
+    <section class="middle">
+        <div class="title">百元得好礼  千人更惊喜</div>
+        <div class="gameChance">
+            <div class="peopleNum">
+                <span>当前投资人数</span>
+                <p id="investNum"></p>
+            </div>
+            <div class="myChance">
+                <span>我的抽奖机会</span>
+                <p class='game-times'></p>
+            </div>
+        </div>
+        <p class="amountData">新元宝+月月派累计投资额<span class='sumAmount'></span>元</p>
+        <div class="prize">
+            <!--<h3>未满<span>1000</span>人奖区</h3>-->
+            <!--<p class="prizeInfo">活动期间，投资人数未满1000人时，可抽取以下奖品。</p>-->
+            <!--<ul class="lessAward">-->
+                <!--<li><img src="imgsJuly/prize1.png" /></li>-->
+                <!--<li><img src="imgsJuly/prize2.png" /></li>-->
+                <!--<li><img src="imgsJuly/prize3.png" /></li>-->
+                <!--<li><img src="imgsJuly/prize4.png" /></li>-->
+            <!--</ul>-->
+            <!--<h3 class="fullTitle">满<span>1000</span>人新增</h3>-->
+            <!--<p class="fullInfo">活动期间，投资人数满1000人后，所有奖品全部开放。</p>-->
+            <!--<ul class="fullAward">-->
+                <!--<li><img src="imgsJuly/prize5.png" /></li>-->
+                <!--<li><img src="imgsJuly/prize6.png" /></li>-->
+                <!--<li><img src="imgsJuly/prize7.png" /></li>-->
+                <!--<li><img src="imgsJuly/prize8.png" /></li>-->
+                <!--<li><img src="imgsJuly/prize9.png" /></li>-->
+            <!--</ul>-->
+            <div class="mask"></div>
+            <div class="invite">
+                <span></span>
+                <p>投资人数满1000人后，所有参与用户额外获得平分10W新新币奖励（平分奖励每个用户ID最多可获得1次），赶紧邀请好友来凑千人吧！</p>
+            </div>
+        </div>
+    </section>
+    <section class="bottom">
+        <div class='winning'>
+            <h3>大奖动态</h3>
+            <div class="winContent">
+                <ul class='winTitle'>
+                    <li>用户名</li>
+                    <li>获奖时间</li>
+                    <li>所获奖品</li>
+                </ul>
+                <!--<ul class='winBg'>-->
+                <!--<li>123232331212</li>-->
+                <!--<li>123232331212</li>-->
+                <!--<li>123232331212</li>-->
+                <!--<li>123232331212</li>-->
+                <!--<li>123232331212</li>-->
+                <!--<li>123232331212</li>-->
+                <!--</ul>-->
+                <div class='winData myscroll'>
+                    <ul>
+                        <!--<li><span>18211111111</span><span>2017.05.18</span><span>Apple MacBook Air</span></li>-->
+                        <!--<li><span>18211111111</span><span>2017.05.18</span><span>Apple MacBook Air</span></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class='proContent'>
+            <h3>活动产品</h3>
+            <div class='product dmp-click' id="goldIngot" eventType="jump" dev_id="xyb_12" target_id="新元宝">
+                <button class="product-name">新元宝</button>
+                <!--<div class="product-name">-->
+                <!--<input type="button" value='立即抢购' id='stepUpward' class="dmp-click" eventType="jump" dev_id="bbgs" target_id="步步高升">-->
+                <!--</div>-->
+                <span>1/3/6/12/24/36个月</span>
+                <div class="proXplan">
+                    <p class="product-rate"><span>7</span>%-<span>12</span>%</p>
+                    <p class="rate-info">历史年化收益率</p>
+                </div>
+            </div>
+            <div class='product dmp-click'  id='yyp' eventType="jump" dev_id="yyp" target_id="月月派">
+                <button class="product-name">月月派</button>
+                <span>12个月</span>
+                <div class="proYyp">
+                    <p class="product-rate"><span>10</span>%</p>
+                    <p class="rate-info">历史年化收益率</p>
+                </div>
+            </div>
+            <div class='product dmp-click' id="stepUpward" eventType="jump" dev_id="bbgs" target_id="步步高升">
+                <button class="product-name">步步高升</button>
+                <span>活期</span>
+                <div class="proStep">
+                    <p class="product-rate"><span>6</span>%-<span>10.4</span>%</p>
+                    <p class="rate-info">历史年化收益率</p>
+                </div>
+            </div>
+        </div>
+        <p class="instruction">您通过本软件参加的任何商业活动或抽奖相关活动，均与苹果公司Apple Inc.无关</p>
+    </section>
+</div>
+<footer>
+    <input type="button" value='活动规则' id='attention-btn'>
+    <input type="button" value='点击开始' id='startGame'>
+    <input type="button" value='我的奖品' id='myPrize-btn'>
+</footer>
+<div class='pop attention'>
+    <div>
+        <div class="rule-text">
+            <div class='close'></div>
+            <ul  class="popTab">
+                <li id="tab1">奖励规则</li>
+                <li id="tab2">注意事项</li>
+            </ul>
+            <div class="gameAttention hide">
+                <p>1).中奖名单将于活动结束后的5个工作日后公布，新新贷客服将在名单公布后的5个工作日内与获奖用户取得联系，如超过5个工作日无法联系，则将视为放弃活动奖励。<p>
+                <p>2).实物奖品将在名单公布后的7个工作日内寄送到用户账户的有效地址中，如遇奖品缺货、节假日等特殊情况，发放时间可能延后。</p>
+                <p>3). 充值类奖品将在名单公布后的5个工作日内充值到获奖用户的有效联系电话中。</p>
+                <p>4).用户按照规则参与活动所得新新币将于获奖名单公布后5个工作日发放至新新贷账户中，新新币可兑换现金并进行提现，50新新币=1元钱。</p>
+                <p>5).活动当天，利用不正当手段（包括但不限于网络技术手段攻击后台扰乱系统正常运转）参与活动，新新贷有权终止其活动资格。</p>
+                <p>6).为了使活动透明公开，在活动期间将会公布用户个人账户ID、投资信息和时间。</p>
+                <p>7).若用户投资新元宝、月月派产品在未到期时选择退出，则在退出提现时，将所得奖励金额从提现金额中扣除。</p>
+            </div>
+            <div class="gameRule">
+                <p>
+                    活动期间，投资人数未满1000人时可抽取相应奖区奖品，满1000人后可抽取所有奖品（投资人数按照用户ID计数）。
+                </p>
+                <p>
+                    1）活动期间，当天累计购买新元宝/月月派产品满100元，即可获得1次抽奖机会，其他投资金额/可获机会对照表如下（每个用户ID最多5次）：
+                </p>
+                <table class="table1" cellspacing="0" cellpadding="5">
+                    <tbody>
+                    <tr class="trLine">
+                        <td>投资金额</td>
+                        <td>100-999</td>
+                        <td>1000-1999</td>
+                        <td>2000-2999</td>
+                    </tr>
+                    <tr>
+                        <td>可获机会</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table2" cellspacing="0" cellpadding="5">
+                    <tbody>
+                    <tr class="trLine">
+                        <td>投资金额</td>
+                        <td colspan="2" >3000-3999</td>
+                        <td>4000+</td>
+                    </tr>
+                    <tr>
+                        <td>可获机会</td>
+                        <td colspan="2" >4</td>
+                        <td>5</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>2）活动期间，当天单笔购买步步高升产品满100元即可获得1次抽奖机会（每个用户ID仅限1次）。</p>
+                <p>3）活动期间，投资人数满1000人后，所有参与用户可额外获得平分10W新新币奖励（每个用户ID最多1次）。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='pop noChance'>
+    <div>
+        <div>
+            <div class='close' id='nochanceclose'></div>
+            <p>好可惜,您的抽奖机会已经用完了</p>
+            <a href="javascript:;" id='invest'>投资立即获得机会</a>
+        </div>
+    </div>
+</div>
+<div class='pop noChanceEver'>
+    <div>
+        <div>
+            <div class='close' id='noChanceEver'></div>
+            <p>没有机会啦，下月会员日继续！</p>
+        </div>
+    </div>
+</div>
+<!--<div class='pop toLogin'>-->
+    <!--<div>-->
+        <!--<div>-->
+            <!--<div class='close' id='loginClose'></div>-->
+            <!--<p>您还没有登录，请先登录</p>-->
+            <!--<b class="ux_show_login">立即登录</b>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class='pop haveprize'>
+    <div>
+        <div class='clearfix center'>
+            <div id='closegame'></div>
+            <h6 class='prize-info'>运气好到爆！ </h6>
+            <p>恭喜抽中<span class='prize-name'>索尼微单！</span></p>
+            <a href="javascript:;" class='put-pocket'>收入囊中</a>
+            <a href="javascript:;" class='one-more'>再来一次</a>
+        </div>
+    </div>
+</div>
+<div class='pop winning-record'>
+    <div>
+        <div class="winningBox">
+            <div class='close'></div>
+            <span class='threestars'></span>
+            <p>我的中奖记录</p>
+            <div class='winning-con'>
+                <ul>
+                    <!--<li><span>2017.08.12</span>抽中了<span>apple MacBook Air</span></li>-->
+                    <!--<li><span>2017.08.12</span>抽中了<span>apple MacBook Air</span></li>-->
+                    <!--<li><span>2017.08.12</span>抽中了<span>apple MacBook Air</span></li>-->
+                    <!--<li><span>2017.08.12</span>抽中了<span>apple MacBook Air</span></li>-->
+                    <!--<li><span>2017.08.12</span>抽中了<span>apple MacBook Air</span></li>-->
+                    <!--<li><span>2017.08.12</span>抽中了<span>100元话费充值</span></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='tip'></div>
+<div class='pagetip'></div>
+<div id="J_wrapBody"></div>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = fontSize * (clientWidth / 375) + 'px';
+            };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script src='../member-day/comboJulyxxd.js'></script>
+<!--<script src="lib/vticker.js"></script>-->
+</body>
+</html>

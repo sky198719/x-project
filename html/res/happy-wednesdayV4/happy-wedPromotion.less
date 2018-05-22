@@ -1,0 +1,319 @@
+/**
+ * Created by gaoshanshan_syp on 2017/11/29.
+ */
+@import "css/index";
+
+@read-register-rule:#cc0033;
+@user-agree-color:#ccc;
+@input-color:#993333;
+@get-yzm-color:#993333;
+//默认属性
+input,input:focus{
+  background:none;
+  outline:none;
+  border:0;
+  -webkit-appearance:none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button{
+  border: none;
+  outline: none;
+}
+input::-webkit-placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+input::placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+.user-verigy .disfont{
+  font-size: 12px !important;
+}
+//给属性加前缀
+.prefixAdd(@name,@val){
+    @{name}:@val;
+  -webkit-@{name}:@val;
+  -moz-@{name}:@val;
+  -o-@{name}:@val;
+  -ms-@{name}:@val;
+}
+.borderRadius(@borderR){
+  border-radius: @borderR;
+  -webkit-border-radius: @borderR;
+  -moz-border-radius: @borderR;
+  //兼容IE8以下的border-radius
+  behavior:url("css/ie-css3.htc");
+}
+/*container start*/
+.wrap{
+  min-width: 1200px;
+}
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+.top-main{
+  width: 100%;
+  height: 832px;
+  margin: 0 auto;
+  background: url("img/bkg-top.png") center no-repeat;
+  .top-wrap {
+    width: 1200px;
+    height: 754px;
+    margin: 0 auto;
+    overflow: hidden;
+    .register-main{
+      float: right;
+      margin-top: 50px;
+      padding: 30px;
+      background: url("img/register-bg.png") center center no-repeat;
+      background-size: 100% 100%;
+      .register-title{
+        margin-bottom: 18px;
+        height: 26px;
+        background: url("img/register-title.png")  center no-repeat;
+        .prefixAdd(background-size,contain);
+      }
+      .user-common{
+        width: 304px;
+        height: 38px;
+        margin:0 auto 14px;
+        input{
+          height: 38px;
+          line-height: 38px;
+          border: 1px solid #f0f0f0;
+          text-indent: 6px;
+          font-size:14px;
+          color: @input-color;
+        }
+      }
+      .user-num,.user-psw{
+        width: 304px;
+      }
+      .user-psw{
+        position: relative;
+        .psw-cur{
+          position: absolute;
+          display: inline-block;
+          left:6px;
+          top: 12px;
+          height: 14px;
+          line-height: 14px;
+          font-size: 14px;
+          color: @input-color;
+        }
+        .disnone{
+          display:none;
+        }
+      }
+      .J-num,.J-psw{
+        width:304px;
+        height: 40px;
+        background: #f6f5f5;
+      }
+      //验证码
+      .user-verigy{
+        margin:0 auto 14px;
+      }
+      .verify-special{
+        margin:0 auto 10px;
+      }
+      .user-voice{
+        text-align: right;
+        margin:0 auto 14px;
+      }
+      .user-verigy .J-verify,.user-verigy .J-phoneyzm{
+        float: left;
+        width: 178px;
+        height: 40px;
+        background:#f6f5f5;
+
+      }
+      .user-verigy .change-verify,.user-verigy .get-phoneyzm{
+        float: left;
+        margin-left: 8px;
+        width: 116px;
+        height: 40px;
+        background:#f6f5f5;
+        color:  @get-yzm-color;
+        cursor: pointer;
+        .borderRadius(4px);
+      }
+      //语音验证码
+      .user-voice .J-voiceyzm{
+        font-size: 14px;
+        color: #fff;
+      }
+      .user-verigy .get-phoneyzm{
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+        line-height: 40px;
+      }
+      //同意协议
+      .user-agree{
+        width: 302px;
+        margin: 0 auto  16px;
+        position: relative;
+        span{
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 14px;
+          font-size: 14px;
+          color: @input-color;
+          text-indent: 8px;
+          a{
+            font-size: 14px;
+            color: @read-register-rule;
+            cursor: pointer;
+          }
+        }
+      }
+      .user-agree .check-style{
+        display: inline-block;
+        vertical-align: middle;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #000;
+        position: relative;
+        .user-check{
+          position: absolute;
+          display: inline-block;
+          top: 50%;
+          margin-top: -8px;
+          left: 50%;
+          margin-left: -8px;
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+        }
+        .checked{
+          background: url("img/checked.png") center no-repeat;
+          background-size: 8px 9px;
+        }
+      }
+      .have-login{
+        width: 300px;
+        margin: 0 auto;
+        text-align: right;
+        font-size: 14px;
+        color: @input-color;
+      }
+      .have-login .logined{
+        text-decoration: underline;
+        color: @read-register-rule;
+      }
+      .cur{
+        width: 302px;
+        height: 20px;
+        padding-bottom: 5px;
+        margin: 0 auto;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        font-size: 14px;
+        color: red;
+      }
+      .cur-special{
+        margin: 0 auto;
+        width: 268px;
+        color: #fff;
+      }
+      .register-btn{
+        display: block;
+        width: 282px;
+        height: 61px;
+        text-align: center;
+        line-height: 61px;
+        margin:0 auto 14px;
+        cursor: pointer;
+        background: url("img/register-btn.png") center no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.container-main{
+  width: 100%;
+  min-width:1200px;
+  height: 1989px;
+  background: url("img/bkg-center.png") center no-repeat;
+  margin: 0 auto;
+  overflow:hidden;
+  .wrap-btn{
+    width: 1120px;
+    margin: 324px auto 0;
+    height: 74px;
+    position:relative;
+    overflow: hidden;
+    span{
+      position:absolute;
+      width: 341px;
+      height: 74px;
+      cursor: pointer;
+    }
+    .btn1{
+      left: 88px;
+      background: url("img/btn1.png") center center no-repeat;
+      background-size: 100% 100%;
+    }
+    .btn2{
+      right: 88px;
+      background: url("img/btn1.png") center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .suspend{
+    display: block;
+    width:100%;
+    min-width:1200px;
+    height: 110px;
+    background: url("img/bkg-bottom.png") center center no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    position: absolute;
+    bottom:119px;
+    span{
+      display: inline-block;
+      width: 527px;
+      height: 86px;
+      cursor: pointer;
+      background: url("img/bottom-btn.png") center center no-repeat;
+      background-size: 100% 100%;
+      margin: 12px auto 0;
+    }
+  }
+}
+.suspend-special{
+  width:100%;
+  height: 110px;
+  min-width: 1200px;
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:800;
+  background: url("img/bkg-bottom.png") center center no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  span{
+    display: inline-block;
+    width: 527px;
+    height: 86px;
+    cursor: pointer;
+    background: url("img/bottom-btn.png") center center no-repeat;
+    margin: 12px auto 0;
+  }
+}

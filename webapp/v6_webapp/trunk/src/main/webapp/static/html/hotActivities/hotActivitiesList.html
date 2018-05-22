@@ -1,0 +1,15 @@
+{{#each list}}
+<li>
+    <div class="card demo-card-header-pic">
+        <div style="background-image:url({{picPath}})" valign="bottom" class="card-header color-white no-border"><div class="{{statusClass}}">{{statusValue}}</div></div>
+        <div class="card-content">
+            <div class="card-content-inner">
+                <p>{{topic}}</p>
+                <p class="color-gray"><span>活动起止日期：</span> <span>{{beginDate}}</span><span>&nbsp;~&nbsp;</span><span>{{endDate}}</span></p>
+            </div>
+        </div>
+        <div class="card-footer" name="{{activityId}}">
+        </div>
+    </div>
+</li>
+{{/each}}

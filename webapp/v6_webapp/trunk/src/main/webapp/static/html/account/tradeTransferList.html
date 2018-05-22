@@ -1,0 +1,49 @@
+{{#each list}}
+<div class="list-block accordion-list inset">
+    <ul>
+        <li class="accordion-item">
+            <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                    <div class="item-title">
+                        <h5>{{borrowName}}</h5>
+                    </div>
+                    <div class="item-after">
+                        {{#if borrowTenderStatus}}
+                        <span class="font-green ml20">{{borrowTenderStatusName}}</span>
+                        {{else}}
+                        <span class="font-red ml20">{{borrowTenderStatusName}}</span>
+                        {{/if}}
+                    </div>
+                </div>
+            </a>
+
+            <div class="accordion-item-content">
+                <div class="content-block font-grey">
+                    <h6 class="mt10">投标日期：{{borrowTenderTime}} {{#if isShow}}<a class="borrowHistoryContract" data-borrowId="{{borrowId}}" style="float: right;">查看合同</a>{{/if}}</h6>
+                    <h6 class="mt5">投标金额：{{effectiveMoney}} 元</h6>
+                    <h6 class="mt5">年化收益：{{rateYear}}%</h6>
+                    <h6 class="mt5">剩余期数：{{remainNumber}}</h6>
+                    <h6 class="mt5">下一回款日：{{nextRepaymentTime}}</h6>
+
+                    <!--<div class="mt10">
+                        <a href="#" class="button button-fill color-orange">转出此债权</a>
+                    </div>-->
+                </div>
+            </div>
+        </li>
+        <li class="accordion-item">
+            <div class="item-inner pl15">
+                <div class="item-title-row width100">
+                    <div class="item-title left font-grey"><h6>债权价值：{{repayCapital}} 元</h6></div>
+                    {{#if borrowTenderStatus}}
+                    <div class="item-after right">
+                        <a href="#" class="button button-fill color-orange btn-small right trade_ac2" data-id="{{tenderId}}">转出债权</a>
+                    </div>
+                    {{else}}
+                    {{/if}}
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{{/each}}

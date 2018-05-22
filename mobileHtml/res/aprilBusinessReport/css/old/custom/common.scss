@@ -1,0 +1,117 @@
+
+
+//未用到，保留
+//.swiper-pagination-bullet {width: 5px;height: 5px;background: #fff;opacity: .2; }
+//.swiper-pagination-bullet-active { opacity: .5; }
+
+
+
+//内容容器+垂直居中
+.vc-page {
+  width: 100%;
+  max-width: 414px;
+  position: relative;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+
+
+//二级标题-全局共用
+
+
+.mix-title2 {
+  display: inline-block;
+  color: #191919;
+  background: #c58b53;
+  text-align: center;
+  line-height: 2rem;
+  padding: 0 1rem .2rem;
+  overflow: hidden;
+}
+.mix-title2 > span{
+  position: relative;
+}
+.mix-title2 > span:before{
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  width: 1000%;
+  height: 1px;
+  //background: #191919;
+  background: 	linear-gradient(0deg, rgba(0,0,0,0) 30%, rgba(25,25,25,1.00) 70%);
+  right: 0;
+  bottom:-.3rem;
+}
+
+
+//暂时放一下
+//page18
+
+.mix-title3 {
+  //font-size: 12px;
+  margin: 2vh 0 1vh 0;
+  padding-left: 1.3rem;
+  position: relative;
+  text-align: justify
+}
+
+.mix-title3:after {
+  content: attr(data-note);
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  font-size: .8em;
+  margin-top: .2em;
+  color: #888888;
+}
+
+.mix-title3:after {
+  color: #016c37;
+}
+
+.mix-title3.co-white:after {
+  color: #888888;
+}
+
+.mix-title3:before {
+  content: " ";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  top: 50%;
+  margin-top: -.5em;
+  left: 1px;
+  position: absolute;
+  border: 1px solid $bg-back;
+
+}
+
+
+.mix-title3.co-white:before {
+  background: #fff;
+}
+
+.mix-title3.co-read:before {
+  background: #cccccc;
+}
+
+.mix-title4{
+  display: inline-block;
+  //position: absolute;
+  //right: 0;
+  font-size: .8em;
+  margin-top: .2em;
+  color: #888888;
+}
+
+.new-text {
+  max-width: 100%;
+}
+
+.new-text img {
+  max-width: 100%;
+}

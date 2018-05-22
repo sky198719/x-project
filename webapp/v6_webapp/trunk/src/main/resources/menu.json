@@ -1,0 +1,91 @@
+{
+  "menu": {
+    "button": [
+      {
+        "name": "我要投资",
+        "sub_button": [
+          {
+            "type": "view",
+            "name": "月进斗金",
+            "url": "http://www.xinxindai.com/m/#!/static/html/monthFinance/monthFinanceDetails.html"
+          },
+          {
+            "type": "view",
+            "name": "七天大胜",
+            "url": "http://www.xinxindai.com/m/#!/static/html/newHand/sevenDaysDetail.html?path=newHand"
+          },
+          {
+            "type": "view",
+            "name": "日日盈",
+            "url": "http://www.xinxindai.com/m/#!/static/html/fund/fundUnInvested.html?path=fund"
+          },
+          {
+            "type": "view",
+            "name": "新元宝",
+            "url": "http://www.xinxindai.com/m/#!/static/html/popular/financesList.html"
+          },
+          {
+            "type": "view",
+            "name": "散标",
+            "url": "http://www.xinxindai.com/m/#!/static/html/borrow/borrowListV2.html"
+          }
+        ]
+      },
+      {
+        "name": "活动事件",
+        "sub_button": [
+          {
+            "type": "view",
+            "name": "保卫南海等你来战",
+            "url": "http://www.xinxindai.com/m/#!/static/html/gameExchange/gameLand.html"
+          },
+          {
+            "type": "view",
+            "name": "新手红包",
+            "url": "http://www.xinxindai.com/m/#!/static/html/activity/red108Webapp.html"
+          },
+          {
+            "type": "view",
+            "name": "光大银行保障",
+            "url": "http://mp.weixin.qq.com/s?__biz=MzA3OTk2NzQyOA==&mid=212067959&idx=1&sn=04f48c9f56e3571ff85ca05fbaa8a6a8#rd"
+          },
+          {
+            "type": "view",
+            "name": "PICC账户险保障",
+            "url": "http://mp.weixin.qq.com/s?__biz=MzA3OTk2NzQyOA==&mid=212068009&idx=1&sn=e7ab1522131e41c6b75b960b46934532#rd"
+          },
+          {
+            "type": "view",
+            "name": "新新贷官网",
+            "url": "http://www.xinxindai.com/m"
+          }
+        ]
+      },
+      {
+        "name": "服务中心",
+        "sub_button": [
+          {
+            "type": "view",
+            "name": "公司简介",
+            "url": "http://mp.weixin.qq.com/s?__biz=MzA3OTk2NzQyOA==&mid=205849628&idx=1&sn=c161433b8f59c4f5ff6a07b743e4f423&scene=18#rd"
+          },
+          {
+            "type": "view",
+            "name": "联系我们",
+            "url": "http://www.xinxindai.com/m/#!/static/html/common/about-us.html"
+          },
+          {
+            "type": "view",
+            "name": "新新商城",
+            "url": "http://www.xinxindai.com/m/#!/static/html/xxStore/goodsList.html"
+          },
+          {
+            "type": "view",
+            "name": "下载APP",
+            "url": "http://www.xinxindai.com/m/static/html/download/app.html"
+          }
+        ]
+      }
+    ]
+  }
+}

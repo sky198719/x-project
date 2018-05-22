@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+  height: 2024px;
+  background: url("img/bkg.jpg") center no-repeat;
+}
+.container .main {
+  width: 960px;
+  height: 425px;
+  margin: 764px auto 0;
+  overflow: hidden;
+  position: relative;
+}
+.container .main .immediate-btn {
+  width: 892px;
+  margin: 0 auto;
+}
+.container .main .immediate-btn div {
+  width: 366px;
+  height: 421px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.container .main .immediate-btn div.front {
+  width: 366px;
+  z-index: 1;
+  height: 421px;
+}
+.container .main .immediate-btn div.front a {
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 80px;
+  cursor: pointer;
+  top: 264px;
+  left: 50%;
+  margin-left: -150px;
+}
+.container .main .immediate-btn div.front .on-btn {
+  background: url("img/btn.png") center center / 100% 100% no-repeat;
+}
+.container .main .immediate-btn div.front .overtime-btn {
+  background: url("img/btn2.png") center center / 100% 100% no-repeat;
+}
+.container .main .immediate-btn div img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.container .main .immediate-btn div img.behind {
+  width: 0;
+  height: 421px;
+  z-index: 0;
+}
+.container .main .immediate-btn .btn-left {
+  float: left;
+}
+.container .main .immediate-btn .btn-right {
+  float: right;
+}
+.disnone {
+  display: none;
+}

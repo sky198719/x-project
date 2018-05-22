@@ -1,0 +1,717 @@
+// 公用头尾
+*{
+  padding:0;
+  margin:0;
+  list-style-type:none;
+}
+body{
+  overflow:scroll;
+  height:auto;
+}
+html{
+  height:auto;
+  overflow:scroll;
+}
+.mBox{
+  width:100%;
+  min-width:1200px;
+}
+.mCon{
+  width:1200px;
+  margin:0 auto;
+  position:relative;
+}
+.header{
+  width:100%;
+  height:90px;
+  background:#f9f9f9;
+  h1{
+    width:340px;
+    height:60px;
+    background:url(img/promotion.png) 0 -345px no-repeat;
+    top:15px;
+    left:0;
+    position:absolute;
+    a{
+      width:340px;
+      height:60px;
+      display:block;
+    }
+  }
+  div{
+    div{
+      width:220px;
+      height:50px;
+      background:url(img/promotion.png) 0 -420px no-repeat;
+      top:20px;
+      right:0;
+      position:absolute;
+      strong{
+        width:165px;
+        height:50px;
+        margin-left:39px;
+        border-left:1px solid #d9d9d9;
+        display:block;
+        font-weight:normal;
+        padding-left:15px;
+        span{
+          width:165px;
+          height:24px;
+          line-height:24px;
+          font-size:22px;
+          color:#004682;
+          display:block;
+          margin-bottom:6px;
+        }
+        em{
+          width:165px;
+          height:20px;
+          line-height:20px;
+          font-size:16px;
+          color:#7b7a7a;
+          display:block;
+          font-style:normal;
+        }
+      }
+    }
+  }
+}
+.footer{
+  width:100%;
+  height:110px;
+  background:#f9f9f9;
+  padding-top:15px;
+  p{
+    font-size:16px;
+    line-height:28px;
+    color:#666666;
+    text-align:center;
+    a{
+      text-decoration:none;
+      color:#666666;
+      i{
+        width:23px;
+        height:23px;
+        background:url(img/promotion.png) -2px -301px no-repeat;
+        margin:0 3px 0 10px;
+        display:inline-block;
+        vertical-align:middle;
+      }
+    }
+  }
+  ul{
+    width:1200px;
+    text-align:center;
+    height:28px;
+    margin-top:7px;
+    li{
+      height:28px;
+      margin:0 5px;
+      overflow:hidden;
+      display:inline-block;
+      a{
+        display:block;
+        height:28px;
+      }
+    }
+    .acc1{
+      width:140px;
+      background:url(img/promotion.png) 0 -188px no-repeat;
+      &:hover{
+        background:url(img/promotion.png) 0 -225px no-repeat;
+      }
+    }
+    .acc2{
+      width:28px;
+      background:url(img/promotion.png) 0 -123px no-repeat;
+      &:hover{
+        background:url(img/promotion.png) 0 -153px no-repeat;
+      }
+    }
+    .acc3{
+      width:68px;
+      background:url(img/promotion.png) 0 -64px no-repeat;
+      &:hover{
+        background:url(img/promotion.png) 0 -93px no-repeat;
+      }
+    }
+    .acc4{
+      width:75px;
+      background:url(img/promotion.png) 0 0 no-repeat;
+      &:hover{
+        background:url(img/promotion.png) 0 -32px no-repeat;
+      }
+    }
+    .acc5{
+      width:142px;
+      background:url(img/promotion.png) 0 -188px no-repeat;
+      &:hover{
+        background:url(img/promotion.png) 0 -225px no-repeat;
+      }
+    }
+  }
+}
+
+//通用修改
+.footer{
+  margin-bottom:100px;
+}
+
+//布局
+.bg1{
+  height:1015px;
+  background:url(img/bg1.jpg) 50% 0 no-repeat;
+}
+.bg2{
+  height:188px;
+  background:url(img/bg2.jpg) 50% 0 no-repeat;
+}
+.bg3{
+  height:754px;
+  background:url(img/bg3.jpg) 50% 0 no-repeat;
+}
+.bg4{
+  height:686px;
+  background:url(img/bg4.jpg) 50% 0 no-repeat;
+}
+.bg5{
+  height:820px;
+  background:url(img/bg5.jpg) 50% 0 no-repeat;
+}
+.outLayer{
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  position:fixed;
+  background:#000000;
+  opacity:0.8;
+  filter:alpha(opacity=80);
+  -moz-opacity:0.8;
+  -khtml-opacity:0.8;
+  z-index:300;
+  display:none;
+}
+
+//二维码弹出框
+.erweima{
+  width:471px;
+  height:445px;
+  top:50%;
+  left:50%;
+  margin:-223px 0 0 -235px;
+  position:fixed;
+  z-index:301;
+  background:url(img/qr-code.png) 0 60px no-repeat;
+  display:none;
+  .close{
+    width:47px;
+    height:47px;
+    background:url(img/close.png) 0 0 no-repeat;
+    float:right;
+    display:block;
+    cursor:pointer;
+  }
+}
+
+//活动规则
+.gameRule{
+  width:922px;
+  height:530px;
+  background:url(img/gameRule.png) 0 0 no-repeat;
+  top:50%;
+  left:50%;
+  margin:-265px 0 0 -461px;
+  position:fixed;
+  z-index:301;
+  display:none;
+  .close{
+    width:150px;
+    height:150px;
+    display:block;
+    float:right;
+    cursor:pointer;
+  }
+}
+
+//底部浮层
+.bottomBox{
+  width:100%;
+  height:100px;
+  bottom:0;
+  left:0;
+  position:fixed;
+  background:rgba(251,129,20,0.8);
+  z-index:200;
+  display:none;
+  img{
+    height:75px;
+    margin:12.5px auto 0;
+    display:block;
+    border:none;
+    cursor:pointer;
+  }
+}
+
+//注册框
+.registerBox{
+  width:300px;
+  height:440px;
+  top:60px;
+  right:0;
+  padding:0 35px;
+  position:absolute;
+  display:none;
+  .layerBox{
+    width:370px;
+    height:440px;
+    background:#000000;
+    opacity:0.6;
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity:0.6;
+    top:0;
+    left:0;
+    position:absolute;
+    z-index:0;
+    border-radius:10px;
+  }
+  h2{
+    width:300px;
+    height:80px;
+    background:url(img/promotion1.png) 50% 50% no-repeat;
+    position:relative;
+    z-index:1;
+  }
+  ul{
+    width:300px;
+    position:relative;
+    z-index:1;
+    li{
+      width:300px;
+      height:40px;
+      margin-bottom:10px;
+      input{
+        width:280px;
+        height:40px;
+        border:none;
+        background:#ffffff;
+        border-radius:5px;
+        display:inline;
+        padding:0 10px;
+        font-size:16px;
+        float:left;
+      }
+      #imgCode{
+        width:180px;
+        margin-right:10px;
+      }
+      #mobileCode{
+        width:180px;
+        margin-right:10px;
+      }
+      span{
+        width:90px;
+        height:40px;
+        border-radius:5px;
+        display:inline;
+        background:#ffffff;
+        text-align:center;
+        float:left;
+        img{
+          width:80px;
+          height:30px;
+          margin:5px auto 0;
+          display:block;
+          cursor:pointer;
+          border:none;
+        }
+      }
+      strong{
+        width:90px;
+        height:40px;
+        line-height:40px;
+        border-radius:5px;
+        display:inline;
+        float:left;
+        background:#ffffff;
+        text-align:center;
+        font-size:14px;
+        color:#333333;
+        font-weight:normal;
+        cursor:pointer;
+      }
+      .banned{
+        background:#eeeeee;
+      }
+    }
+    .voice{
+      height:20px;
+      text-align:right;
+      b{
+        color:#ff0000;
+        cursor:pointer;
+        font-size:12px;
+        line-height:20px;
+        font-weight:normal;
+      }
+      em{
+        font-style:normal;
+        font-size:12px;
+        color:#ffffff;
+        a{
+          color:#e6c857;
+          text-decoration:underline;
+        }
+      }
+    }
+    .rule{
+      height:20px;
+      line-height:20px;
+      color:#ffffff;
+      font-size:12px;
+      a{
+        font-size:12px;
+        text-decoration:none;
+        color:#e6c857;
+      }
+      input{
+        width:13px;
+        height:13px;
+        border-radius:none;
+        background:#ffffff;
+        border:1px solid #000000;
+        margin:4px 5px 0 0;
+        vertical-align:bottom;
+      }
+    }
+  }
+  button{
+    width:300px;
+    height:50px;
+    line-height:50px;
+    color:#ffffff;
+    text-align:center;
+    font-size:24px;
+    background:#ff5d02;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+    margin-bottom:5px;
+    position:relative;
+    z-index:1;
+  }
+}
+
+//老用户登录框
+.loginBoxold{
+  width:370px;
+  height:440px;
+  top:60px;
+  right:0;
+  position:absolute;
+  display:none;
+  .layerBox{
+    width:370px;
+    height:440px;
+    background:#000000;
+    opacity:0.6;
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity:0.6;
+    top:0;
+    left:0;
+    position:absolute;
+    z-index:0;
+    border-radius:10px;
+  }
+  span{
+    font-size:14px;
+    color:#ffffff;
+    line-height:24px;
+    top:15px;
+    left:20px;
+    position:absolute;
+    z-index:1;
+  }
+  strong{
+    width:370px;
+    height:56px;
+    line-height:28px;
+    font-weight:normal;
+    display:block;
+    background:url(img/promotion4.png) 50% 0 no-repeat;
+    font-size:18px;
+    color:#ffffff;
+    padding-top:120px;
+    top:70px;
+    left:0;
+    position:absolute;
+    text-align:center;
+    z-index:1;
+  }
+  a{
+    img{
+      width:300px;
+      bottom:30px;
+      left:35px;
+      position:absolute;
+      display:block;
+      border:none;
+      z-index:1;
+    }
+  }
+}
+
+//新用户登录框
+.loginBoxnew{
+  width:370px;
+  height:440px;
+  top:60px;
+  right:0;
+  position:absolute;
+  display:none;
+  .layerBox{
+    width:370px;
+    height:440px;
+    background:#000000;
+    opacity:0.6;
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity:0.6;
+    top:0;
+    left:0;
+    position:absolute;
+    z-index:0;
+    border-radius:10px;
+  }
+  span{
+    font-size:14px;
+    color:#ffffff;
+    line-height:24px;
+    top:15px;
+    left:20px;
+    position:absolute;
+    z-index:1;
+  }
+  strong{
+    width:370px;
+    height:56px;
+    line-height:28px;
+    font-weight:normal;
+    display:block;
+    background:url(img/promotion4.png) 50% 0 no-repeat;
+    font-size:18px;
+    color:#ffffff;
+    padding-top:120px;
+    top:70px;
+    left:0;
+    position:absolute;
+    text-align:center;
+    z-index:1;
+  }
+  em{
+    width:370px;
+    height:48px;
+    line-height:24px;
+    color:#ffdf62;
+    font-style:normal;
+    font-size:14px;
+    text-align:center;
+    top:300px;
+    left:0;
+    position:absolute;
+    z-index:1;
+  }
+  a{
+    img{
+      width:300px;
+      bottom:30px;
+      left:35px;
+      position:absolute;
+      display:block;
+      border:none;
+      z-index:1;
+    }
+  }
+}
+
+//食物板块
+.foodList{
+  position:absolute;
+  top:0;
+  left:100px;
+  li{
+    width:20px;
+    height:20px;
+    cursor:pointer;
+    position:absolute;
+    overflow:visible;
+    img{
+      height:20px;
+      display:block;
+      border:none;
+    }
+  }
+  .l1{
+    top:244px;
+    left:53px;
+  }
+  .l2{
+    top:244px;
+    left:259px;
+  }
+  .l3{
+    top:244px;
+    left:464px;
+  }
+  .l4{
+    top:442px;
+    left:53px;
+  }
+  .l5{
+    top:442px;
+    left:259px;
+  }
+  .l6{
+    top:442px;
+    left:464px;
+  }
+  .l7{
+    top:644px;
+    left:53px;
+  }
+  .l8{
+    top:644px;
+    left:252px;
+  }
+  .l9{
+    top:644px;
+    left:464px;
+  }
+}
+
+//食物遮罩层
+.foodLayer{
+  width:600px;
+  height:600px;
+  top:80px;
+  left:100px;
+  position:absolute;
+}
+
+//查看活动规则
+.eventRule{
+  font-size:16px;
+  text-decoration:underline;
+  color:#ffdf62;
+  top:600px;
+  right:40px;
+  position:absolute;
+  cursor:pointer;
+}
+
+//用户列表
+.userList{
+  width:378px;
+  height:400px;
+  overflow:hidden;
+  top:189px;
+  right:30px;
+  position:absolute;
+  ul{
+    width:378px;
+    li{
+      width:378px;
+      height:50px;
+      line-height:50px;
+      color:#ffffff;
+      font-size:14px;
+      strong{
+        width:188px;
+        height:50px;
+        line-height:50px;
+        float:left;
+        display:inline;
+        font-weight:normal;
+        text-align:center;
+      }
+      em{
+        width:185px;
+        height:50px;
+        line-height:50px;
+        float:left;
+        display:inline;
+        font-style:normal;
+        text-align:center;
+      }
+    }
+  }
+}
+
+//活动开始和结束
+.gameOut{
+  width:378px;
+  height:400px;
+  overflow:hidden;
+  top:189px;
+  right:30px;
+  position:absolute;
+  z-index:1;
+  font-size:24px;
+  line-height:300px;
+  color:#ffffff;
+  background:#ff5d02;
+  text-align:center;
+  display:none;
+}
+
+//运营数据
+.market{
+  width:250px;
+  height:40px;
+  line-height:40px;
+  display:block;
+  text-align:center;
+  font-size:24px;
+  color:#ff5d02;
+  top:190px;
+  left:25px;
+  position:absolute;
+}
+.user{
+  width:250px;
+  height:40px;
+  line-height:40px;
+  display:block;
+  text-align:center;
+  font-size:24px;
+  color:#ff5d02;
+  top:190px;
+  left:315px;
+  position:absolute;
+}
+.amount{
+  width:200px;
+  height:40px;
+  line-height:40px;
+  display:block;
+  text-align:center;
+  font-size:24px;
+  color:#ff5d02;
+  top:190px;
+  left:635px;
+  position:absolute;
+}
+.earn{
+  width:200px;
+  height:40px;
+  line-height:40px;
+  display:block;
+  text-align:center;
+  font-size:24px;
+  color:#ff5d02;
+  top:190px;
+  left:930px;
+  position:absolute;
+}

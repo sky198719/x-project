@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>新版app上线</title>
+<style>
+*{margin:0; padding:0; list-style-type:none;}
+
+.bg{position:relative;}
+.bg img{width:100%; display:block;}
+</style>
+</head>
+
+<body>
+<div class="bg">
+    <img src="img/bg1.jpg" />
+</div>
+<div class="bg">
+    <img src="img/bg2.jpg" />
+</div>
+<div class="bg">
+    <img src="img/bg3.jpg" />
+</div>
+<div class="bg">
+    <img src="img/bg4.jpg" />
+</div>
+<div class="bg">
+    <img src="img/bg5.jpg" />
+</div>
+<div class="bg">
+    <img src="img/bg6.jpg" />
+</div>
+<div class="bg">
+    <img src="img/bg7.jpg" />
+</div>
+</body>
+<script src="js/main.js"></script>
+</html>
+
+<script>
+(function(doc,win,fontSize) {
+    var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function(){
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth){
+            return;
+        }
+        docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+    };
+    if(!doc.addEventListener){
+        return;
+    }
+    win.addEventListener(resizeEvt,recalc,false);
+    doc.addEventListener('DOMContentLoaded',recalc,false);
+})(document,window,16);
+</script>

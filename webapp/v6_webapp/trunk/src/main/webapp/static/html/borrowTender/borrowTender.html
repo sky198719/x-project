@@ -1,0 +1,89 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">马上投标</div>
+        <div class="right sliding">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel" data-panel="right">
+            <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through">
+    <!-- Page, data-page contains page name-->
+    <div data-page="borrowTender" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block">
+                <div class="content-block-inner" id="quicktender">
+                    {{funds}}
+                    <h5 class="font-grey mt10">剩余可投金额：<span class="font-red font24">{{lackaccount}}</span> 元</h5>
+                    <h5 class="font-grey mt5">投标限额：{{lowesttender}} 元 {{mosttender}}</h5>
+                </div>
+            </div>
+            <input type="hidden" id="v_lowesttender" value=""/>
+            <div class="list-block accordion-list">
+                <ul>
+                    <li class="accordion-item">
+                        <a href="#" class="item-content item-link" id="topup_step">
+                            <div class="item-inner">
+                                <div class="item-title font-grey">账户余额：<span class="font-blue" id="showUserAccount">{{usable}}</span>
+                                    元
+                                </div>
+                                <input id="userAccount" type="hidden" value="0"/>
+                                <div class="item-after" style="color:#007aff">充值</div>
+                            </div>
+                        </a>
+                        <div class="accordion-item-content"></div>
+                    </li>
+                    <li class="accordion-item">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="text" id="accountnumber" placeholder="请输入投标金额 最低50元"/>
+                                </div>
+                                <div class="item-after"> 元</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item-content"></div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <select class="font-grey" id="borrow_redpacketSelect">
+                                        <option value="">不使用红包</option>
+                                    </select>
+                                </div>
+                                <div class="item-after">实际支付 &nbsp;<span class="font-blue dmp_content_spa" id="borrow_affirm_money_show"> 0.00 </span>&nbsp; 元</div>
+                                <input type="hidden" id="borrow_affirm_money" value=""/>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input item-inline">
+                                    <label class="label-switch">
+                                        <input type="checkbox" checked="checked" id="agreement">
+                                        <div class="checkbox"></div>
+                                    </label>
+                                </div>
+                                <a href="#" data-popup=".popup-bidhistory" class="open-popup">我已同意《新新贷资金出借风险提示函》</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mr10 ml10">
+                <a href="#" class="button button-51 active dmp-click" id="confirmTender" dmp_type="click" dmp_event="buy" dmp_target_type="1" dmp_target_id="7">确认投标</a>
+            </div>
+        </div>
+    </div>
+</div>

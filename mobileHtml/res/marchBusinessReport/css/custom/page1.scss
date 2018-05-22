@@ -1,0 +1,230 @@
+
+/*非模块化一次性代码，转到css引入，不再打包，因为要留给不想重构的同事和后台使劲瞎搞覆盖的地方。*/
+
+
+
+//page1
+
+.page1 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  padding-bottom: 1rem;
+}
+
+.page1 > .year {
+  position: relative
+}.st0 {
+   fill: #c58b53;
+ }
+
+.page1 > .year h1 {
+  font-size: 6rem;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.5;
+}
+
+.page1 > .year h1 svg {
+  font-weight: 500;
+  position: relative;
+  top: 5rem;
+  transition: all 0s;
+  -webkit-transition: all 0s;
+}
+
+.swiper-slide-active .page1 > .year h1 svg {
+  top: -.1rem;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+.page1 > .year h1:before, .page1 > .year h1:after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  z-index: 2;
+
+}
+
+.page1 > .year h1:before {
+  width: 52rem;
+  height: 32rem;
+  top: 57%;
+  margin-left: -26rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11%, #191919 11%), radial-gradient(at 50% 50%, $co-main 69%, $bg-back 69.5%);
+}
+
+.page1 > .year h1:after {
+  width: 64rem;
+  height: 32rem;
+  top: 67%;
+  margin-left: -32rem;
+  background: $bg-back;
+}
+
+.page1 > .year P {
+  font-size: 1.9rem;
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  top: 69%;
+  z-index: 2;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+
+}
+
+
+
+.swiper-slide-active .page1 > .year p {
+  opacity: 1;
+  animation: am-pop2ps .6s ease .4s forwards;
+  -webkit-animation: am-pop2ps .6s ease .4s forwards;
+}
+
+.page1 > .year p b {
+  font-size: 2.3rem;
+  position: relative;
+  top: .1rem;
+}
+
+.page1 li {
+  line-height: 2
+}
+
+.am-up > li, .page1 .logo img {
+  opacity: 0;
+  transform: translateY(1rem);
+  -webkit-transform: translateY(1rem);
+
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition: all 0s;
+  -webkit-transition: all 0s;
+}
+
+.page1 .line {
+  width: 0;
+  max-width: 23rem;
+  height: 1px;
+  background: linear-gradient(90deg, #191919 0%, #c48c53 25%, #c48c53 75%, #191919 100%);
+  margin: 2rem 0 1.5rem;
+  display: inline-block;
+  transition: all 0s ease 0s;
+  -webkit-transition: all 0s ease-out 0s;
+}
+
+.swiper-slide-active .page1 .line {
+  width: 80%;
+  transition: all .3s ease 1.3s;
+  -webkit-transition: all .3s ease-out 1.3s;
+}
+
+.page1 .logo {
+  margin-top: 2.5rem;
+}
+
+.page1 .logo img {
+  width: 10rem;
+  margin-left: .5rem;
+}
+
+.swiper-slide-active .am-up > li:nth-child(1) {
+  transition-delay: 1.5s;
+  -webkit-transition-delay: 1.5s;
+}
+
+.swiper-slide-active .am-up > li:nth-child(2) {
+  transition-delay: 1.6s;
+  -webkit-transition-delay: 1.6s;
+}
+
+.swiper-slide-active .am-up > li:nth-child(3) {
+  transition-delay: 1.7s;
+  -webkit-transition-delay: 1.7s;
+}
+
+.swiper-slide-active .am-up > li:nth-child(4) {
+  transition-delay: 1.8s;
+  -webkit-transition-delay: 1.8s;
+}
+
+.swiper-slide-active .am-up > li:nth-child(5) {
+  transition-delay: 1.9s;
+  -webkit-transition-delay: 1.9s;
+}
+
+.swiper-slide-active .am-up > li:nth-child(6) {
+  transition-delay: 2s;
+  -webkit-transition-delay: 2s;
+}
+
+.swiper-slide-active .am-up > li:nth-child(7) {
+  transition-delay: 2.1s;
+  -webkit-transition-delay: 2.1s;
+}
+
+.swiper-slide-active .page1 .logo img {
+  transition-delay: 2.3s;
+  -webkit-transition-delay: 2.3s;
+}
+
+.swiper-slide-active .am-up > li, .swiper-slide-active .logo img {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+.bg-box {
+  opacity: .3;
+}
+
+.bg-box > * {
+  position: absolute;
+  display: block;
+  border: 1px solid #c58b53;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 16rem;
+  height: 16rem;
+}
+
+.bg-box > *:nth-child(1) {
+  bottom: 100%;
+  right: 100%;
+  margin-bottom: -1rem;
+  margin-right: -12rem;
+
+}
+
+.bg-box > *:nth-child(2) {
+  bottom: 100%;
+  right: 100%;
+  margin-bottom: -17rem;
+  margin-right: -1.5rem;
+
+}
+
+.bg-box > *:nth-child(3) {
+  top: 100%;
+  left: 100%;
+  margin-top: -4rem;
+  margin-left: -13rem;
+
+}
+
+.bg-box > *:nth-child(4) {
+  top: 100%;
+  left: 100%;
+  margin-top: -21rem;
+  margin-left: -2rem;
+}

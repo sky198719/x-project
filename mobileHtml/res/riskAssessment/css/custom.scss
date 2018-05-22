@@ -1,0 +1,105 @@
+@import "module/xui-color";
+
+html[browser="app"] .win{
+  padding-top: 0;
+}
+
+html[browser="app"] .xui-prompt[theme=topbar]{
+   top: 0 !important;
+ }
+
+html[browser="web"] .win{
+  padding-top: 3.5rem;
+}
+html[browser="web"] .xui-prompt[theme=topbar]{
+  top: 3.5rem !important;
+}
+
+#list1>li>p,#list2>li>p{line-height: 2;}
+
+.dis-icon1{
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  border-radius: 50%;
+  background: $bg-main;
+  color:#fff;
+  background-size: cover;
+  font-size: 2rem;
+}
+
+.tobar{
+  display: inline-block;
+  width: 100%;
+  height: 3.5rem;
+  top:0;
+  left: 0;
+  background: #f7f7f8;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.08);
+}
+.tonav {
+  width: 100%;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  position: relative;
+}
+.tonav>*{
+  display:inline-block;
+}
+.tonav>*.page_title{
+  position: absolute;
+  left: 4rem;
+  right: 4rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+
+.swiper-container {
+  width: 100%;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.swiper-container >* *{
+  white-space: normal;
+}
+.swiper-slide {
+  display: inline-block;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  //-webkit-box-align: center;
+  //-ms-flex-align: center;
+  //-webkit-align-items: center;
+  //align-items: center;
+  vertical-align: top;
+}
+
+.swiper-slide label{
+  width: 100%;
+  display: inline-block;
+  padding:0 1rem;
+  line-height: 3.5rem;
+
+  input[type="radio"]{
+    margin-right: .5rem;
+  }
+
+  input[type="radio"]:checked + * {
+    color: $co-main;
+  }
+}
+
+.page-number{
+  width: 100%;
+  padding: 1.5rem 1rem 1rem;
+
+  *{
+    width: 33.33%;
+  }
+}

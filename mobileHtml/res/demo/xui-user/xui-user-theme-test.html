@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xui="0.0.1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="xinxindai">
+    <meta name="author" content="UI Manxiaoman | Front-end Junbo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/main.min.css" rel="stylesheet">
+    <title>登录插件</title>
+    <style>
+        * { -webkit-touch-callout : none; -webkit-tap-highlight-color : rgba(0, 0, 0, 0); cursor : pointer; }
+
+        *,
+        :after,
+        :before { border : 0; -webkit-box-sizing : border-box; -moz-box-sizing : border-box; box-sizing : border-box; }
+
+        html{font-size : 12px;}
+        html,
+        body { min-height : 100%; }
+
+        body,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p { margin : 0; }
+
+        button,
+        input,
+        ol,
+        ul { margin : 0; padding : 0; }
+
+        body {
+            font-family : -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+            position    : relative;
+            line-height : 1.5;
+        }
+
+        button,
+        input,
+        select,
+        textarea { outline : none; }
+
+        input,
+        button { -webkit-appearance : none; }
+
+        input:-webkit-autofill { -webkit-box-shadow : 0 0 0 1000px white inset; }
+
+        input,
+        button,
+        textarea,
+        select,
+        optgroup,
+        option,
+        label,
+        fieldset,
+        legend { font-family : inherit; font-style : inherit; font-weight : inherit; font-size : 1em; color : inherit; line-height : inherit; }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        strong { font-weight : normal; }
+
+        table { border-collapse : collapse; border-spacing : 0; }
+
+        address,
+        cite,
+        dfn,
+        em,
+        var { font-style : normal; }
+
+        a { text-decoration : none; color : inherit; display : inline-block; cursor : pointer; }
+
+        ul,
+        ol { list-style : none; }
+
+        input { border : 1px solid #bbb; height : 3rem; width : 100%; margin : .5rem 0; padding : 0 1em; border-radius : 3px; }
+
+        button { width : 100%; height : 3rem; background : #369adc; border-radius : 3px; color : #fff; margin : .5rem 0;}
+
+        .ux_register_m_code_btn {
+            display    : inline-block;
+            height : 3rem;
+            line-height: 3rem;
+            padding: 0 1rem;
+            background : #ff9900;
+            color      : #fff;
+            border-radius : 3px;
+        }
+
+        .ui-login-v-code-img,
+        .ui-register-v-code-img {
+            display          : inline-block;
+            width            : 9rem;
+            height           : 3rem;
+            background-color : #f5f5f5;
+            background-size: 100% 100%;
+        }
+
+        #mmm,
+        #ccc1,
+        #eee1
+        {
+            width: 66%;
+            float: left;
+        }
+        #mmmimg,
+        #ddd1,
+        #fff1
+        {
+            float: right;
+            margin: .5rem 0;
+        }
+    </style>
+</head>
+<body>
+<div style="padding:1.5rem">
+    <h2 style="text-align: center">XUI-USER 纯数据版</h2>
+    <br>
+    <div id="login1" class="xui-login">
+        <div>
+            <div>
+                <h3 style="text-align: center">标题登录1</h3>
+                <div>
+                    <div><input id="ccc" type="tel" placeholder="用户名/注册手机/邮箱地址" class="login-input" maxlength="11">
+                    </div>
+                    <div>
+                        <input id="bbb" type="password" placeholder="请输入密码" class="login-input"></div>
+                    <div>
+                        <input id="mmm" type="text" placeholder="请输入验证码" class="login-input">
+                        <div id="mmmimg" class="ui-login-v-code-img"></div>
+                    </div>
+
+                </div>
+                <div>
+                    <button class="login-button ux_login_submit">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="reg1" class="xui-register">
+        <div>
+            <h3 style="text-align: center">标题注册1</h3>
+            <div>
+                <div>
+                    <p>用户名：</p>
+                    <input id="aaa1" type="tel" placeholder="用户名/注册手机/邮箱地址" class="register-input" maxlength="11">
+                </div>
+                <div>
+                    <p>密码：</p>
+                    <input id="bbb1" type="password" placeholder="请输入密码" class="register-input"></div>
+                <div>
+                    <p>验证码：</p>
+                    <div>
+                        <input id="ccc1" type="text" placeholder="请输入密码" class="register-input">
+                        <b id="ddd1" class="ui-register-v-code-img ux_register_v_code_img"></b>
+                    </div>
+                </div>
+
+                <div>
+                    <p>手机验证码：</p>
+                    <div>
+                        <input id="eee1" type="text" placeholder="请输入密码" class="register-input">
+                        <b id="fff1" class="ux_register_m_code_btn">发送手机验证码</b></div>
+                    </div>
+            </div>
+            <br>
+            <div>
+                <button id="ggg1" class="register-button xui_submit_register">注册</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/xui-user-theme-test.js"></script>
+</body>
+</html>

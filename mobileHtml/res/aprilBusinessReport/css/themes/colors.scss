@@ -1,0 +1,125 @@
+//主体
+$co-main : #fff182;
+
+$bg-main : #fff182;
+
+$bc-main : #fff182;
+
+//辅助
+$co-vice : #f9df18;
+
+$bg-vice : #f9df18;
+
+$bc-vice : #f9df18;
+
+//阅读(默认)
+$co-read : #c0d6ed;
+
+$bg-read : #fafafa;
+
+$bc-read : #b5b5b5;
+
+//远景
+$co-back : #d3d3d3;
+
+$bg-back : #141414;
+
+$bc-back : #e8e8e8;
+
+//黑色
+$black : #000000;
+
+//白色
+$white : #ffffff;
+
+$co-tag1 : #85a0be;
+$co-tag2 : #9ea5ff;
+$co-tag3 : #5762f7;
+
+//主 $白色
+.co-main {
+  color : $co-main;
+}
+
+.bg-main {
+  background-color : $bg-main;
+  @extend .co-white
+}
+
+.bc-main {
+  border-color : $bc-main;
+}
+
+//辅助
+.co-vice {
+  color : $co-vice;
+}
+
+.bg-vice {
+  background-color : $bg-vice;
+  @extend .co-white
+}
+
+.bc-vice {
+  border-color : $bc-vice;
+}
+
+//阅读(默认)
+body,
+.co-read {
+  color : $co-read;
+}
+
+.bg-read {
+  background-color : $bg-read;
+}
+
+.bc-read {
+  border-color : $bc-read;
+}
+
+//远景
+.co-back {
+  color : $co-back;
+}
+
+body,
+.bg-back {
+  background-color : $bg-back;
+}
+
+.bc-back {
+  border-color : $bc-back;
+}
+
+//黑色
+.co-black {
+  color : $black;
+}
+
+.bg-black {
+  background-color : $black; }
+
+.bc-black { border-color : $black; }
+
+//白色
+.co-white { color : $white; }
+
+.bg-white { background-color : $white; }
+
+.bc-white { border-color : $white; }
+
+.co-tag1 { color : $co-tag1 }
+.co-tag2 { color : $co-tag2 }
+.co-tag3 { color : $co-tag3 }
+
+//图表
+[co="chart-co1"],
+[co="page6-chart1-co1"] {
+  color : rgba(224, 176, 126, .5)
+}
+
+[co="chart-co4"],
+[co='page6-chart1-co2'] {
+  color : #c58b53
+}

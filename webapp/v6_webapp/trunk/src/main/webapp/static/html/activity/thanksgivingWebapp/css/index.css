@@ -1,0 +1,176 @@
+*{
+	font-family: "微软雅黑";
+}
+.header{
+	width: 100%;
+	height: 125.3125vw;
+	background: url("../img/header.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.header1 {
+    width: 100%;
+    height: 163.28125vw;
+    background: url("../img/header1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.letv{
+	width: 100%;
+	height: 87.34375vw;
+	background: url("../img/letv.png") no-repeat;
+	background-size: 100% 100%;	
+}
+.about{
+	width: 100%;
+	height: 115.15625vw;
+	background: url("../img/about.png") no-repeat;
+	background-size: 100% 100%;	
+}
+.hot-bao{
+	width: 100%;
+	height: 125.46875vw;
+	background: url("../img/hot-bao.png") no-repeat;
+	background-size: 100% 100%;	
+}
+.gift{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 15.625vw;
+	background: url("../img/login.png") no-repeat;
+	background-size: 100% 100%;		
+}
+
+
+/*弹出框*/
+.pop-up{
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+}
+.box{
+	width: 80.3125vw;
+	height: 111.875;
+	border-radius: 2.03125%;
+	position: relative;
+	top: 10.5925vh;
+	left: 9.6875%;
+	background: white;
+	padding-bottom: 2.375vw;
+}
+.close{
+	position: absolute;
+	top: -10.78125vw;
+	right: 0;
+	width:10.78125vw;
+	height: 10.78125vw;
+	background: url(../img/close.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.invest{
+	width: 100%;
+	height: 28.125vw;
+	background: url(../img/chiken.png) no-repeat;
+	background-size: 100% 100%;
+}
+.general{
+	width: 66.71875vw;
+	height: 9.375vw;
+	box-sizing: border-box;
+	border-radius: 0.56875vw;
+	border: 0.3125vw solid #b4b4b4;
+	padding: 0.78125vw 1.5625vw;
+	margin: 0 auto;
+}
+.general-inp{
+	border: none;
+	box-shadow: none;
+	width: 100%;
+	height: 100%;
+	font-size: 4.125vw;
+	color: #b4b4b4;
+}
+.phone{
+	margin-top: 6.09375vw;
+}
+.password{
+	margin-top: 2.1875vw;
+}
+.img-code{
+	margin-top: 2.1875vw;
+}
+.phone-code{
+	margin-top: 2.1875vw;
+}
+.img-inp,.mobile-inp{
+	float: left;
+	width: 39.0625vw;
+	height: 100%;
+}
+.img-code img{
+	width: 23.4375vw;
+	height: 100%;
+	background: cyan;
+}
+.phone-code img{
+	width: 23.4375vw;
+	height: 100%;
+	background: cyan;
+}
+.protocol{
+	margin: 3.125vw 0;
+	font-size: 3.125vw;
+	border: none;
+	margin: 4.125vw auto;
+	margin-bottom: 0;
+	padding: 0;
+}
+.protocol img{
+	width: 4.6875vw;
+	height: 4.6875vw;
+	margin-bottom: -1.09375vw;
+}
+.protocol span{
+	font-size: 3.28125vw;
+}
+.protocol input{
+	width: 3.6875vw;
+	height: 3.6875vw;
+	margin-bottom: -1.09375vw;	
+}
+.sign-up{
+	display: block;
+	width: 66.40625vw;
+	height: 9.0625vw;
+	line-height: 9.0625vw;
+	text-align: center;
+	color: white;
+	font-size: 4.6875vw;
+	background: #fb882b;
+	margin: 0 auto;
+	margin-top: -1.5625vw;
+}
+.login{
+	width: 100%;
+	text-align: center;
+	margin-top: 2.375vw;
+	font-size: 3.28125vw;
+}
+.login a{
+	color: #fb882b;
+}
+.error{
+    margin: 10px 0 10px 80px;color: red;display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-indent {
+    text-indent: 2em;
+}

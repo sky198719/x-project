@@ -1,0 +1,41 @@
+/*
+ * 组件：气泡
+ * 组件注册编号：02-0002
+ * 标准结构1级
+ * 属性：
+ * sz    规格（默认：m   s | m | l）
+ * co    颜色 (默认：read  read | back | main | vice | info | success | warn | error)
+ * 示例：
+ *  <span class="xui-btn" mc="02-0002"></span> 默认的这样就行了
+ *  <div class="xui-btn" mc="02-0002" btn-sz="s"></div> 小号的这样写
+ * 关联：html+css
+ */
+
+.xui-bubble[data-theme="default"] {
+  font-style         : normal;
+  display            : inline-block;
+  width              : 1em;
+  height             : 1em;
+  line-height        : 1em;
+  background         : $bg-main;
+  border-radius      : 3px;
+  color              : #fff;
+  margin-right       : 3px;
+  box-sizing         : content-box;
+  -webkit-box-sizing : content-box;
+  padding            : 2px;
+  transform          : scale(.8);
+  -webkit-transform  : scale(.8);
+}
+
+.xui-bubble[data-theme="default"][data-co="main"] { background : $bg-main; }
+
+.xui-bubble[data-theme="default"][data-co="vice"] { background : $bg-vice; }
+
+.xui-bubble[data-theme="default"][data-co="info"] { background : $bg-info; }
+
+.xui-bubble[data-theme="default"][data-co="success"] { background : $bg-success; }
+
+.xui-bubble[data-theme="default"][data-co="warn"] { background : $bg-warn; }
+
+.xui-bubble[data-theme="default"][data-co="danger"] { background : $bg-danger; }

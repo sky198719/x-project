@@ -1,0 +1,40 @@
+
+.xui-title[theme="003"] {
+  position: relative;
+  text-align: justify;
+  text-indent: -.5rem;
+  padding-left: .6rem;
+  color: #333;
+  font-size: 15px;
+
+  &:after {
+    content: attr(data-note);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    font-size: .8em;
+    margin-top: .2em;
+  }
+  &:before {
+    content: " ";
+    display: inline-block;
+    width: .5em;
+    height: 1em;
+    background: #3f9bff;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    border: 1px solid #fff;
+    vertical-align: middle;
+    border-radius: 1px;
+  }
+}
+.xui-title[theme="003"].co-white:after {
+  color: #888888;
+}
+.xui-title[theme="003"].co-white:before {
+  background: #fff;
+}
+.xui-title[theme="003"].co-read:before {
+  background: #cccccc;
+}

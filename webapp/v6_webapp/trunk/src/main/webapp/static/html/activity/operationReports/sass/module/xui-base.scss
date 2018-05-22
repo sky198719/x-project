@@ -1,0 +1,44 @@
+//容器
+.box { width : 1200px; margin: auto; position: relative}
+.bold { font-weight: bold}
+
+//对齐
+.al, .al-z > * { text-align : left; }
+
+.ar, .ar-z > * { text-align : right; }
+
+.ac, .ac-z > * { text-align : center; }
+.aj, .aj-z > * {text-align: justify;}
+.vt, .vt-z > * { vertical-align : top; }
+
+.vc, .vc-z > * { vertical-align : middle; }
+
+.vb, .vb-z > * { vertical-align : bottom; }
+
+//水平垂直居中
+.hvc { position : relative; width : 100%; height : 100%; top : 0; left : 0; text-align : center; }
+
+.hvc:after { content : " "; width : 0; height : 100%; display : inline-block; vertical-align : middle; }
+
+.hvc > * { display : inline-block;vertical-align: middle;}
+
+/*定位*/
+.pr, .pr-z > * { position : relative; }
+
+.pa, .pa-z > * { position : absolute; }
+
+.pf, .pf-z > * { position : fixed; }
+
+/*浮动*/
+.fl, .fl-z > * { float : left; }
+
+.fr, .fr-z > * { float : right; }
+
+.fn, .fn-z > * { float : none; }
+
+.cb, .cb-z > * { clear : both; }
+
+.cb:after, .cb-z > *:after, .box:after { display : table; content : ""; clear : both; }
+
+.tobar.fix{width:100%; position: fixed; top:0;}
+.fobar.fix{width:100%; position: fixed; bottom:0;}

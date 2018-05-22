@@ -1,0 +1,134 @@
+/*面包屑*/
+.detail-crumbs {
+  margin-bottom: 20px;
+  background: #57a8ff;
+}
+.detail-crumbs .crumbs {
+  margin: 0 auto;
+  width: 1200px;
+  font: 400 14px/34px "microsoft yahei";
+  color: #fff;
+}
+.detail-crumbs .crumbs a,
+.detail-crumbs .crumbs b {
+  color: #fff;
+  font-weight: 400;
+}
+.container {
+  width: 1100px;
+  border: 1px solid #eee;
+  background: #fff;
+  margin: 20px auto;
+  padding: 0 50px 50px;
+}
+.container.serve-con {
+  padding: 0 50px 100px;
+}
+.container * {
+  margin: 0;
+  color: #878d96;
+}
+.container h1 {
+  text-align: center;
+  font: 400 22px/60px 'MicroSoft YaHei';
+  color: #525252;
+  margin-top: 50px;
+}
+.container h5 {
+  font: 400 14px/28px 'MicroSoft YaHei';
+}
+.container h6 {
+  font: 300 14px/28px 'MicroSoft YaHei';
+}
+.container h3 {
+  font: 400 22px/60px 'MicroSoft YaHei';
+  color: #525252;
+  margin-top: 14px;
+}
+.container p {
+  text-indent: 2em;
+  font: 300 14px/28px 'MicroSoft YaHei';
+  position: relative;
+}
+.container p a {
+  color: #57a8ff;
+}
+.container p a:hover {
+  color: #00498a;
+}
+.container .stamp {
+  position: absolute;
+  display: block;
+  width: 169px;
+  height: 169px;
+  top: -64px;
+  left: 105px;
+  background: url("img/stamp.png") 0 0 no-repeat;
+}
+.container span {
+  display: block;
+  text-align: right;
+  font: 300 14px/28px 'MicroSoft YaHei';
+  margin-right: 100px;
+}
+.container .people-detail {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 518px;
+}
+.container .people-detail th {
+  background: #D9D9D9;
+  padding: 0cm 5.4pt 0cm 5.4pt;
+  width: 97.55pt;
+  height: 28.55pt;
+  font: 400 14px 'MicroSoft YaHei';
+}
+.container .money-detail {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.container .money-detail td {
+  padding: 0cm 5.4pt 0cm 5.4pt;
+  width: 97.55pt;
+  height: 28.55pt;
+  font: 400 14px 'MicroSoft YaHei';
+}
+.container .money-detail .last {
+  width: 120pt;
+}
+.container .money-detail .haha {
+  text-align: right;
+}
+.container h2 {
+  font: 200 22px/60px 'MicroSoft YaHei';
+  color: #525252;
+}
+.container .table-detail {
+  border-collapse: collapse;
+  width: 516px;
+}
+.container .table-detail th {
+  background: #D9D9D9;
+  padding: 0cm 5.4pt 0cm 5.4pt;
+  width: 97.55pt;
+  height: 28.55pt;
+  font: 400 14px 'MicroSoft YaHei';
+}
+.container .table-detail td {
+  padding: 0cm 5.4pt 0cm 5.4pt;
+  width: 97.55pt;
+  height: 28.55pt;
+  font: 400 14px 'MicroSoft YaHei';
+}
+.container .serve-money {
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 518px;
+}
+.container .serve-money td {
+  padding: 0cm 5.4pt 0cm 5.4pt;
+  width: 97.55pt;
+  height: 28.55pt;
+  font: 400 14px 'MicroSoft YaHei';
+  border: 1px solid #000;
+}

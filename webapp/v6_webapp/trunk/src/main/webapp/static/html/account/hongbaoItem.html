@@ -1,0 +1,26 @@
+{{#each list}}
+<div class="list-block accordion-list inset">
+    <ul>
+        <li class="accordion-item">
+            <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                    <div class="item-title"><h5>{{name}}</h5></div>
+                </div>
+            </a>
+            <div class="accordion-item-content">
+                <div class="content-block font-grey">
+                    <h6 class="mt5">使用条件：<span>投标满{{quota}}元</span></h6>
+                </div>
+            </div>
+        </li>
+        <li class="accordion-item">
+            <div class="item-inner pl15">
+                <div class="item-title-row width100">
+                    <div class="item-title left font-grey">有效期：<span class="font-red">{{validDate}}</div>
+                    <div class="item-after right font-red">{{faceValue}}元</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{{/each}}

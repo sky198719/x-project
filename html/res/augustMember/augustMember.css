@@ -1,0 +1,146 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.warp-div {
+  width: 100%;
+  min-width: 1200px;
+  background: none no-repeat center;
+}
+.warp-div > div {
+  width: 1040px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+}
+.bg1 {
+  height: 1030px;
+  background-image: url(img/bg1.png);
+}
+.bg2 {
+  height: 1045px;
+  background-image: url(img/bg2.png);
+  overflow: hidden;
+}
+.bg2 > div {
+  width: 1000px;
+  height: 600px;
+  margin: 200px auto 0;
+}
+.bg2 p {
+  width: 1040px;
+  height: 780px;
+  margin: 75px auto 0;
+}
+.bg3 {
+  height: 242px;
+  background-image: url(img/bg3.png);
+  text-align: center;
+}
+.bg3 p {
+  display: inline-block;
+  width: 686px;
+  height: 93px;
+  margin-top: 70px;
+}
+.bg4 {
+  height: 971px;
+  background-image: url(img/bg4.png);
+  overflow: hidden;
+}
+.bg4 > div {
+  width: 1030px;
+  height: 380px;
+  margin-top: 305px;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+}
+.bg4 > div ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.bg4 > div ul li {
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  color: #fff;
+  font-size: 20px;
+}
+.bg4 > div ul li span {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  right: 2%;
+}
+.bg4 > div ul li .username {
+  width: 30%;
+}
+.bg4 > div ul li .time {
+  width: 40%;
+}
+.bg4 > div ul li .prizename {
+  width: 30%;
+}
+.bg5 {
+  height: 912px;
+  background-image: url(img/bg5.png);
+  overflow: hidden;
+}
+.bg5 > div {
+  height: 470px;
+  margin-top: 100px;
+  text-align: left;
+}
+.bg5 > div a {
+  display: inline-block;
+  width: 370px;
+  height: 470px;
+  float: left;
+}
+.bg5 > div .gold-ingot {
+  width: 345px;
+}
+.bg5 > div .month-profit {
+  width: 325px;
+}
+.bg6 {
+  height: 1021px;
+  background-image: url(img/bg6.png);
+}
+.mui-dialog-inner {
+  background: transparent !important;
+}
+.dimension {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+.dimension p {
+  font-size: 28px;
+  color: #fff;
+  margin: 0 auto 0;
+  text-align: center;
+  width: 280px;
+}
+.dimension .surprise {
+  margin-bottom: 20px;
+}
+.dimension .c_close {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("img/close.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+  bottom: -53px;
+  right: 123px;
+}

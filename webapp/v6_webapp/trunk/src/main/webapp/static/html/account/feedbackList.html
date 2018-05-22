@@ -1,0 +1,14 @@
+<li class="item-content" style=" min-height: 30px;"><label class="font15" style="line-height: 0">是否遇到以下问题</label>
+</li>
+<hr style="height:1px;border:none;border-top:1px solid #e3e2e8;" />
+{{#each list}}
+<li class="item-content" style=" min-height: 30px;"><label style="line-height: 0;font-size: 12px;"><input type="checkbox" name="feedbackItem" value="{{id}}"/> {{name}}</label>
+</li>
+{{/each}}
+<li class="item-content"><label style="line-height: 0;font-size: 12px;"><input type="checkbox" name="feedbackItem" value="-1">
+    其它问题 </label>
+</li>
+<li class="item-content"><div style="width:95%;">
+    <textarea  style="border:1px solid #e3e2e8;font-size: 15px;" aria-labelby="" placeholder="我们期待您的意见和反馈，我们会不断优化产品，为您提供更好的服务和体验。" maxlength="200" id="fb_advise"></textarea>
+</div>
+</li>

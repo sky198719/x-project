@@ -1,0 +1,267 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "MicroSoft YaHei" !important;
+}
+/*基调色*/
+/*根字体函数*/
+/*字体DPR适配*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "MicroSoft YaHei", "sans-serif";
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #ff4e97;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+img {
+  vertical-align: bottom;
+  display: block;
+}
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.m_r10 {
+  margin-right: 0.15625rem;
+}
+.m_l10 {
+  margin-left: 0.15625rem;
+}
+.m_t10 {
+  margin-top: 0.15625rem;
+}
+.m_b10 {
+  margin-bottom: 0.15625rem;
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+/*顶部*/
+header {
+  width: 100%;
+  height: 16.515625rem;
+  background: url("../img/in-header.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.about {
+  width: 100%;
+  height: 8.96875rem;
+  background: url("../img/in-about.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.red-raiders {
+  width: 100%;
+  height: 8.921875rem;
+  background: url("../img/red-raiders.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.footer-box {
+  width: 100%;
+  height: 1.5625rem;
+}
+footer {
+  width: 100%;
+  height: 1.5625rem;
+  background: url("../img/in-footer.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+footer a {
+  display: block;
+  width: 100%;
+  height: 1.5625rem;
+}
+.pop-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 35.96875rem;
+  overflow: hidden;
+  z-index: 10000;
+  display: none;
+}
+.pop-up .box {
+  width: 7.625rem;
+  margin-top: 20%;
+  margin-left: 14%;
+  background: url("../img/popup-userLogin-bg.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+  border: 0.09375rem solid #ff4e97;
+  border-radius: 0.3125rem;
+  position: relative;
+}
+.pop-up .title {
+  height: 0.90625rem;
+  width: 4.125rem;
+  background: url("../img/title.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+.pop-up .close {
+  background: url("../img/close.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+  height: 0.90625rem;
+  width: 0.90625rem;
+  position: absolute;
+  right: -0.46875rem;
+  top: -0.46875rem;
+  z-index: 3;
+}
+.pop-up .top-input,
+.pop-up .input-box {
+  margin: 0 auto;
+  display: block;
+  width: 6.671875rem;
+  height: 0.9375rem;
+  line-height: 0.9375rem;
+  border: 0.015625rem solid #ff4e97;
+  margin-bottom: 0.09375rem;
+  margin-top: 0.09375rem;
+  border-radius: 0.078125rem;
+  padding-left: 0.28125rem;
+}
+.pop-up .input-box {
+  position: relative;
+  background: #ffffff;
+}
+.pop-up .input-box .validata-img,
+.pop-up .input-box .input-btn {
+  width: 2.375rem;
+  height: 0.75rem;
+  position: absolute;
+  top: 0.078125rem;
+  right: 0.125rem;
+}
+.pop-up .input-box .validata-img img,
+.pop-up .input-box .input-btn img {
+  width: 100%;
+  height: 100%;
+}
+.pop-up .input-box .input-btn {
+  background: #ff4e97;
+  border-radius: 0.078125rem;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 0.75rem;
+}
+[data-dpr="2"] .pop-up .input-box .input-btn {
+  font-size: 23px;
+}
+[data-dpr="2.5"] .pop-up .input-box .input-btn {
+  font-size: 29px;
+}
+[data-dpr="2.75"] .pop-up .input-box .input-btn {
+  font-size: 32px;
+}
+[data-dpr="3"] .pop-up .input-box .input-btn {
+  font-size: 35px;
+}
+[data-dpr="4"] .pop-up .input-box .input-btn {
+  font-size: 46px;
+}
+.pop-up .input-box .input-time {
+  margin-left: -0.3125rem;
+}
+.pop-up .agreement {
+  margin-top: 0.21875rem;
+  margin-left: 0.3125rem;
+  height: 0.46875rem;
+  line-height: 0.46875rem;
+  overflow: hidden;
+}
+.pop-up .agreement #cbox {
+  display: none;
+}
+.pop-up .agreement label {
+  display: inline-block;
+  height: 0.46875rem;
+  width: 0.46875rem;
+  background: #ff4e97;
+  border-radius: 0.078125rem;
+}
+.pop-up .agreement input[type=checkbox]:checked + label:after {
+  display: block;
+  content: '';
+  height: 0.46875rem;
+  width: 0.46875rem;
+  background: url("../img/checkbox.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.pop-up .agreement span {
+  display: inline-block;
+  margin-left: 0.21875rem;
+  color: #c67596;
+}
+.pop-up .login-error {
+  height: 0.625rem;
+  line-height: 0.625rem;
+  display: none;
+}
+.pop-up .sign {
+  display: block;
+  height: 1.03125rem;
+  width: 3.5rem;
+  margin-top: 0.25rem;
+  background: url("../img/sign-up.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.pop-up .immediately {
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+.pop-up .immediately span:first-child {
+  color: #c67596;
+  margin-right: 0.28125rem;
+}
+.pop-up .immediately a:link,
+.pop-up .immediately a:visited,
+.pop-up .immediately a:hover,
+.pop-up .immediately a:active {
+  text-decoration: none;
+}

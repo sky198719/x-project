@@ -1,0 +1,50 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.bodyhidden {
+  overflow: hidden !important;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: bottom;
+  display: block;
+}
+.container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.container img {
+  width: 100%;
+}
+.container a {
+  position: fixed;
+  bottom: 0;
+  background-image: url("imgs/openBtn.png");
+  background-size: 100%;
+  display: block;
+  width: 100%;
+  height: 3.75rem;
+  line-height: 3.75rem;
+}

@@ -1,0 +1,354 @@
+//主体
+$co-main                           : #2ce8a4;
+$co-main-hover                     : #39c5ff;
+$co-main-active                    : #1194e3;
+
+$bg-main                           : #2ce8a4;
+$bg-main-hover                     : #3fd5ff;
+$bg-main-active                    : #13a3ee;
+
+$bc-main                           : #17c7fc;
+$bc-main-hover                     : #45dfff;
+$bc-main-active                    : #15b0f3;
+
+//辅助
+$co-vice                           : #00c67f;
+$co-vice-hover                     : #8cd224;
+$co-vice-active                    : #699b19;
+
+$bg-vice                           : #00c67f;
+$bg-vice-hover                     : #8cd224;
+$bg-vice-active                    : #699b19;
+
+$bc-vice                           : #7fc121;
+$bc-vice-hover                     : #8cd224;
+$bc-vice-active                    : #699b19;
+
+//阅读(默认)
+$co-read                           : #cacaca;
+$co-read-hover                     : #666666;
+$co-read-active                    : #252525;
+
+$bg-read                           : #fafafa;
+$bg-read-hover                     : #fbfbfb;
+$bg-read-active                    : #f0f0f0;
+
+$bc-read                           : #b5b5b5;
+$bc-read-hover                     : #cccccc;
+$bc-read-active                    : #999999;
+
+//远景
+$co-back                           : #888888;
+$co-back-hover                     : #c3c3c3;
+$co-back-active                    : #a2a2a2;
+
+$bg-back                           : #030712;
+$bg-back-hover                     : #fcfcfc;
+$bg-back-active                    : #efefef;
+
+$bc-back                           : #e8e8e8;
+$bc-back-hover                     : #eee;
+$bc-back-active                    : #e0e0e0;
+
+//信息
+$co-info                           : #468dd7;
+$co-info-hover                     : #4a9deb;
+$co-info-active                    : #3986c3;
+
+$bg-info                           : #2eb4f0;
+$bg-info-hover                     : #2eafef;
+$bg-info-active                    : #2e95d1;
+$bg-info-prompt                    : #f8f5fd;
+
+$bc-info                           : #1ca2e3;
+$bc-info-hover                     : #2eb1ef;
+$bc-info-active                    : #2c98d1;
+$bc-info-prompt                    : #52a9ff;
+
+//成功
+$co-success                        : #3caf62;
+$co-success-hover                  : #40c877;
+$co-success-active                 : #35a05c;
+
+$bg-success                        : #3cc477;
+$bg-success-hover                  : #40d281;
+$bg-success-active                 : #36aa65;
+$bg-success-prompt                 : #f7fcf3;
+
+$bc-success                        : #3caf62;
+$bc-success-hover                  : #40c877;
+$bc-success-active                 : #35a05c;
+$bc-success-prompt                 : #a1d97c;
+
+//提示
+$co-warn                           : #ff7700;
+$co-warn-hover                     : #ff9900;
+$co-warn-active                    : #ff6600;
+
+$bg-warn                           : #ffa500;
+$bg-warn-hover                     : #ffca54;
+$bg-warn-active                    : #ff9815;
+$bg-warn-prompt                    : #ffffe1;
+
+$bc-warn                           : #ff9000;
+$bc-warn-hover                     : #ffb020;
+$bc-warn-active                    : #ff8f14;
+$bc-warn-prompt                    : #ffc061;
+
+//警告
+$co-danger                          : #ff3838;
+$co-danger-hover                    : #ff4848;
+$co-danger-active                   : #ff2828;
+
+$bg-danger                          : #ff6868;
+$bg-danger-hover                    : #ff7878;
+$bg-danger-active                   : #ff5858;
+$bg-danger-prompt                   : #fff8f8;
+
+$bc-danger                          : #ff5858;
+$bc-danger-hover                    : #ff6868;
+$bc-danger-active                   : #ff4848;
+$bc-danger-prompt                   : #ffa9a9;
+
+
+//顶栏(非必需)
+$co-tobar                          : #ffffff;
+$co-tobar-hover                    : #ffffff;
+$co-tobar-active                   : #ffffff;
+
+$bg-tobar                          : #ffffff;
+$bg-tobar-hover                    : #ffffff;
+$bg-tobar-active                   : #ffffff;
+
+$bc-tobar                          : #ffffff;
+$bc-tobar-hover                    : #ffffff;
+$bc-tobar-active                   : #ffffff;
+
+//头部(非必需)
+$co-header                         : #ffffff;
+$co-header-hover                   : #ffffff;
+$co-header-active                  : #ffffff;
+
+$bg-header                         : #090723;
+$bg-header-hover                   : #ffffff;
+$bg-header-active                  : #ffffff;
+
+$bc-header                         : #ffffff;
+$bc-header-hover                   : #ffffff;
+$bc-header-active                  : #ffffff;
+
+//底部(非必需)
+$co-footer                         : #ffffff;
+$co-footer-hover                   : #ffffff;
+$co-footer-active                  : #ffffff;
+
+$bg-footer                         : #ffffff;
+$bg-footer-hover                   : #ffffff;
+$bg-footer-active                  : #ffffff;
+
+$bc-footer                         : #ffffff;
+$bc-footer-hover                   : #ffffff;
+$bc-footer-active                  : #ffffff;
+
+//底栏(非必需)
+$co-fobar                          : #ffffff;
+$co-fobar-hover                    : #ffffff;
+$co-fobar-active                   : #ffffff;
+
+$bg-fobar                          : #ffffff;
+$bg-fobar-hover                    : #ffffff;
+$bg-fobar-active                   : #ffffff;
+
+$bc-fobar                          : #ffffff;
+$bc-fobar-hover                    : #ffffff;
+$bc-fobar-active                   : #ffffff;
+
+//黑色
+$black                             : #000000;
+
+//白色
+$white                             : #ffffff;
+
+$co-s:#0dcb6d;
+$co-m:#b4c402;
+$co-l:#e79917;
+
+//主 $白色
+.co-main                           {            color: $co-main          ;                        }
+.co-main-hover                     {            color: $co-main-hover    ;                        }
+.co-main-active                    {            color: $co-main-active   ;                        }
+
+.bg-main                           { background-color: $bg-main          ;   @extend .co-white    }
+.bg-main-hover                     { background-color: $bg-main-hover    ;   @extend .co-white    }
+.bg-main-active                    { background-color: $bg-main-active   ;   @extend .co-white    }
+
+.bc-main                           {     border-color: $bc-main          ;                        }
+.bc-main-hover                     {     border-color: $bc-main-hover    ;                        }
+.bc-main-active                    {     border-color: $bc-main-active   ;                        }
+
+//辅助
+.co-vice                           {            color: $co-vice          ;                        }
+.co-vice-hover                     {            color: $co-vice-hover    ;                        }
+.co-vice-active                    {            color: $co-vice-active   ;                        }
+
+.bg-vice                           { background-color: $bg-vice          ;   @extend .co-white    }
+.bg-vice-hover                     { background-color: $bg-vice-hover    ;   @extend .co-white    }
+.bg-vice-active                    { background-color: $bg-vice-active   ;   @extend .co-white    }
+
+.bc-vice                           {     border-color: $bc-vice          ;                        }
+.bc-vice-hover                     {     border-color: $bc-vice-hover    ;                        }
+.bc-vice-active                    {     border-color: $bc-vice-active   ;                        }
+
+//阅读(默认)
+body,
+.co-read                           {            color: $co-read          ;                        }
+.co-read-hover                     {            color: $co-read-hover    ;                        }
+.co-read-active                    {            color: $co-read-active   ;                        }
+
+.bg-read                           { background-color: $bg-read          ;                        }
+.bg-read-hover                     { background-color: $bg-read-hover    ;                        }
+.bg-read-active                    { background-color: $bg-read-active   ;                        }
+
+.bc-read                           {     border-color: $bc-read          ;                        }
+.bc-read-hover                     {     border-color: $bc-read-hover    ;                        }
+.bc-read-active                    {     border-color: $bc-read-active   ;                        }
+
+//远景
+.co-back                           {            color: $co-back          ;                        }
+.co-back-hover                     {            color: $co-back-hover    ;                        }
+.co-back-active                    {            color: $co-back-active   ;                        }
+
+body,
+.bg-back                           { background-color: $bg-back          ;                        }
+.bg-back-hover                     { background-color: $bg-back-hover    ;                        }
+.bg-back-active                    { background-color: $bg-back-active   ;                        }
+
+.bc-back                           {     border-color: $bc-back          ;                        }
+.bc-back-hover                     {     border-color: $bc-back-hover    ;                        }
+.bc-back-active                    {     border-color: $bc-back-active   ;                        }
+
+//信息
+.co-info                           {            color: $co-info          ;                        }
+.co-info-hover                     {            color: $co-info-hover    ;                        }
+.co-info-active                    {            color: $co-info-active   ;                        }
+
+.bg-info                           { background-color: $bg-info          ;   @extend .co-white    }
+.bg-info-hover                     { background-color: $bg-info-hover    ;   @extend .co-white    }
+.bg-info-active                    { background-color: $bg-info-active   ;   @extend .co-white    }
+.bg-info-prompt                    { background-color: $bg-info-prompt   ;                        }
+
+.bc-info                           {     border-color: $bc-info          ;                        }
+.bc-info-hover                     {     border-color: $bc-info-hover    ;                        }
+.bc-info-active                    {     border-color: $bc-info-active   ;                        }
+.bc-info-prompt                    {     border-color: $bc-info-prompt   ;                        }
+
+//成功
+.co-success                        {            color: $co-success       ;                        }
+.co-success-hover                  {            color: $co-success-hover ;                        }
+.co-success-active                 {            color: $co-success-active;                        }
+
+.bg-success                        { background-color: $bg-success       ;   @extend .co-white    }
+.bg-success-hover                  { background-color: $bg-success-hover ;   @extend .co-white    }
+.bg-success-active                 { background-color: $bg-success-active;   @extend .co-white    }
+.bg-success-prompt                 { background-color: $bg-success-prompt;                        }
+
+.bc-success                        {     border-color: $bc-success       ;                        }
+.bc-success-hover                  {     border-color: $bc-success-hover ;                        }
+.bc-success-active                 {     border-color: $bc-success-active;                        }
+.bc-success-prompt                 {     border-color: $bc-success-prompt;                        }
+
+//提示
+.co-warn                           {            color: $co-warn          ;                        }
+.co-warn-hover                     {            color: $co-warn-hover    ;                        }
+.co-warn-active                    {            color: $co-warn-active   ;                        }
+
+.bg-warn                           { background-color: $bg-warn          ;   @extend .co-white    }
+.bg-warn-hover                     { background-color: $bg-warn-hover    ;   @extend .co-white    }
+.bg-warn-active                    { background-color: $bg-warn-active   ;   @extend .co-white    }
+.bg-warn-prompt                    { background-color: $bg-warn-prompt   ;                        }
+
+.bc-warn                           {     border-color: $bc-warn          ;                        }
+.bc-warn-hover                     {     border-color: $bc-warn-hover    ;                        }
+.bc-warn-active                    {     border-color: $bc-warn-active   ;                        }
+.bc-warn-prompt                    {     border-color: $bc-warn-prompt   ;                        }
+
+//警告
+.co-danger                          {            color: $co-danger        ;                        }
+.co-danger-hover                    {            color: $co-danger-hover  ;                        }
+.co-danger-active                   {            color: $co-danger-active ;                        }
+
+.bg-danger                          { background-color: $bg-danger        ;   @extend .co-white    }
+.bg-danger-hover                    { background-color: $bg-danger-hover  ;   @extend .co-white    }
+.bg-danger-active                   { background-color: $bg-danger-active ;   @extend .co-white    }
+.bg-danger-prompt                   { background-color: $bg-danger-prompt ;                        }
+
+.bc-danger                          {     border-color: $bc-danger        ;                        }
+.bc-danger-hover                    {     border-color: $bc-danger-hover  ;                        }
+.bc-danger-active                   {     border-color: $bc-danger-active ;                        }
+.bc-danger-prompt                   {     border-color: $bc-danger-prompt ;                        }
+
+
+//顶栏(非必需)
+.co-tobar                          {            color: $co-tobar         ;                        }
+.co-tobar                          {            color: $co-tobar         ;                        }
+.co-tobar                          {            color: $co-tobar         ;                        }
+
+.bg-tobar                          { background-color: $bg-tobar         ;                        }
+.bg-tobar                          { background-color: $bg-tobar         ;                        }
+.bg-tobar                          { background-color: $bg-tobar         ;                        }
+
+.bc-tobar                          {     border-color: $bc-tobar         ;                        }
+.bc-tobar                          {     border-color: $bc-tobar         ;                        }
+.bc-tobar                          {     border-color: $bc-tobar         ;                        }
+
+//头部(非必需)
+.co-header                         {            color: $co-header        ;                        }
+.co-header                         {            color: $co-header        ;                        }
+.co-header                         {            color: $co-header        ;                        }
+
+.bg-header                         { background-color: $bg-header        ;                        }
+.bg-header                         { background-color: $bg-header        ;                        }
+.bg-header                         { background-color: $bg-header        ;                        }
+
+.bc-header                         {     border-color: $bc-header        ;                        }
+.bc-header                         {     border-color: $bc-header        ;                        }
+.bc-header                         {     border-color: $bc-header        ;                        }
+
+//底部(非必需)
+.co-footer                         {            color: $co-footer        ;                        }
+.co-footer-hover                   {            color: $co-footer-hover  ;                        }
+.co-footer-active                  {            color: $co-footer-active ;                        }
+
+.bg-footer                         { background-color: $bg-footer        ;                        }
+.bg-footer-hover                   { background-color: $bg-footer-hover  ;                        }
+.bg-footer-active                  { background-color: $bg-footer-active ;                        }
+
+.bc-footer                         {     border-color: $bc-footer        ;                        }
+.bc-footer-hover                   {     border-color: $bc-footer-hover  ;                        }
+.bc-footer-active                  {     border-color: $bc-footer-active ;                        }
+
+//底栏(非必需)
+.co-fobar                          {            color: $co-fobar         ;                        }
+.co-fobar-hover                    {            color: $co-fobar-hover   ;                        }
+.co-fobar-active                   {            color: $co-fobar-active  ;                        }
+
+.bg-fobar                          { background-color: $bg-fobar         ;                        }
+.bg-fobar-hover                    { background-color: $bg-fobar-hover   ;                        }
+.bg-fobar-active                   { background-color: $bg-fobar-active  ;                        }
+
+.bc-fobar                          {     border-color: $bc-fobar         ;                        }
+.bc-fobar-hover                    {     border-color: $bc-fobar-hover   ;                        }
+.bc-fobar-active                   {     border-color: $bc-fobar-active  ;                        }
+
+//黑色
+.co-black                          {            color: $black            ;                        }
+.bg-black                          { background-color: $black            ;                        }
+.bc-black                          {     border-color: $black            ;                        }
+//白色
+.co-white                          {            color: $white            ;                        }
+.bg-white                          { background-color: $white            ;                        }
+.bc-white                          {     border-color: $white            ;                        }
+
+.co-s{color:$co-s}
+.co-m{color:$co-m}
+.co-l{color:$co-l}

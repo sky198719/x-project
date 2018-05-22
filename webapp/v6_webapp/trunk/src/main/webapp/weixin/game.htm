@@ -1,0 +1,365 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>海岛大作战-新新贷游戏</title>
+    <meta http-equiv="Content-Type" content="text/html"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        html {
+            -ms-touch-action: none;
+        }
+
+        .sbgshow {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            line-height: 1.7em;
+            background: rgba(0, 0, 0, 0.85);
+        }
+
+        .sbgshow .arron {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 100px;
+            height: 100px;
+            background: url(./assets/480/arron.png) no-repeat;
+            background-size: 100px 100px;
+        }
+
+        .sbgshow p {
+            padding-top: 78px;
+        }
+
+        .sbg {
+            display: none;
+            z-index: 9999999;;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 26px;
+            line-height: 1.7em;
+            background: rgba(0, 0, 0, 0.85);
+        }
+
+        .sbg .arron {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 100px;
+            height: 100px;
+            background: url(./assets/480/arron.png) no-repeat;
+            background-size: 100px 100px;
+        }
+
+        .sbg p {
+            padding-top: 78px;
+        }
+        .sbg img{top:10px; right:15px; position:absolute; width:85px; height:85px;}
+    </style>
+</head>
+<body>
+<div id="sbg" class="sbg" onclick="hideSda()">
+    <div class="arron"></div>
+    <p id="msg">请点击右上角<br>点击[分享到朋友圈]<br>中国南海等着你和小伙伴的<br/>归来参战</p>
+	<img src="assets/480/images/object/U_2_PList.Dir/arrow.png" />
+</div>
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+    <img src='../weixin/assets/480/images/share_img.jpg'/>
+</div>
+
+<div style="display:inline-block;width:100%; height:100%;margin: 0 auto; background: black; position:relative;"
+     id="gameDiv">
+    <canvas id="gameCanvas" width="480" height="800" style="background-color: #000000"></canvas>
+</div>
+
+<script src="assets/loligo-min.js"></script>
+<script type="text/javascript" src="../static/js/utils/track.js"></script>
+
+<script>
+    try {
+        var url = window.location.href;
+        //XXD_TRACK._trackPageview({page_url: url});
+    } catch (e) {
+    }
+
+
+    var ih5game = {
+        update: function (info) {
+            this.info = info;
+
+            if (info.score < info.best) {
+                document.title = shareData.desc = '我在《海岛大作战》里轻松砍下' + info.score + '分，干掉' + info.kill + '驾敌机， 你能超过我吗？';
+            }
+            else {
+                document.title = shareData.desc = '我在《海岛大作战》里霸气拿下' + info.score + '分，秒杀' + info.kill + '驾敌机，刷新了最高记录!! 求超越 ~~';
+            }
+
+            saveScore(info.score);
+        },
+        //换了链接，原来的more做分享功能
+        more: function () {
+            document.getElementById("sbg").style.display = "block";
+            setTimeout(function () {
+                document.getElementById("sbg").style.display = 'none';
+            }, 3000);
+        },
+        //换了链接，原来的share做兑换新新币功能
+        share: function () {
+            try {
+                //XXD_TRACK._trackEvent({category: "webapp_game", action: "go_exchange_gold", label: "兑换金币", value: "", custval: ""});
+            } catch (e) {
+            }
+            location.href =  '../#!/static/html/gameExchange/beforeExchange.html';
+        }
+    };
+
+    function saveScore(score) {
+        /** 保存当前分数  begin **/
+        var postData = {
+            "score": score
+        };
+
+        postData = getPostData(postData);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "../gameBWNH/saveGameScore.do", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            var XMLHttpReq = xhr;
+            if (XMLHttpReq.readyState == 4) {
+                if (XMLHttpReq.status == 200) {
+                    var text = XMLHttpReq.responseText;
+                    console.log(text);
+                }
+            }
+        };
+        xhr.send(postData);
+        /** 保存当前分数  end **/
+    }
+
+    function getPostData(obj) { // 转成post需要的字符串.
+        var str = "";
+        for (var prop in obj) {
+            str += prop + "=" + obj[prop] + "&"
+        }
+        return str;
+    }
+
+    //获取地址栏url参数
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)return  decodeURI(r[2]);
+        return null;
+    }
+
+    //加载游戏
+    egret_h5.startGame();
+
+    //加载游戏次数
+    playGame();
+
+    function hideSda() {
+        document.getElementById("sbg").style.display = "";
+    }
+
+    function loadXMoneyPercent() {
+        /** 获取当前可玩的次数  begin **/
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "../gameBWNH/getXMoneyPercent.do", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            var XMLHttpReq = xhr;
+            if (XMLHttpReq.readyState == 4) {
+                if (XMLHttpReq.status == 200) {
+                    var str = XMLHttpReq.responseText;
+                    xMoneyPercent = JSON.parse(str).xMoneyPercent;
+                    startPrompt();
+                }
+            }
+        };
+        xhr.send();
+        /** 获取当前可玩的次数  end **/
+    }
+
+    //点击开始
+    function playGame() {
+
+        /** 获取当前可玩的次数  begin **/
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST",  "../gameBWNH/ifCanPlayGame.do", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            var XMLHttpReq = xhr;
+            if (XMLHttpReq.readyState == 4) {
+                if (XMLHttpReq.status == 200) {
+                    var str = XMLHttpReq.responseText;
+                    if (JSON.parse(str).resultCode != 0) {
+                        alert(JSON.parse(str).resultDesc);
+                    }
+
+                    canPlayGame = JSON.parse(str).canPlayGame;
+                    totalScore = JSON.parse(str).unExchangeScore;
+                    //加载积分兑换比例
+                    loadXMoneyPercent();
+
+                    isLodingVoer = "Y";
+                } else {
+                    alert("系统繁忙，请稍后再试！");
+                }
+            }
+        };
+        xhr.send();
+        /** 获取当前可玩的次数  end **/
+    }
+
+
+    function startPrompt() {
+        alert("~感谢您参与此次活动，活动已经结束，敬请关注我们下次的活动~");
+        /*if (canPlayGame == 0) {
+            var r = confirm("抱歉，您当前已无可玩次数\n当前积分:" + totalScore + "\n可兑换的新新币数:" + (Math.round(totalScore / xMoneyPercent - 0.5))+"\n\n点击确定去兑换新新币吧")
+            if (r == true) {
+                document.location.href = "../#!/static/html/activityRegAndLogin/register01.html"
+            } else {
+                document.getElementById("sbg").style.display = "block";
+            }
+        }*/
+
+    }
+    function clickPlay() {
+        alert("~感谢您参与此次活动，活动已经结束，敬请关注我们下次的活动~");
+        /*try {
+            XXD_TRACK._trackEvent({category: "webapp_game", action: "begin_game", label: "点击开始游戏", value: "", custval: ""});
+        } catch (e) {
+        }
+        if (isLodingVoer == "Y" && canPlayGame == 0) {
+           // alert("想获得更多战斗次数，就邀请好友一起来玩哦。");
+            startPrompt();
+        } else if (isLodingVoer == "Y" && canPlayGame > 0) {
+            canPlayGame = canPlayGame - 1;
+            app.stateMachine.changeState(new FightState);
+            substractGameChances();
+        } else if (isLodingVoer == "N") {
+            alert("请稍后");
+        } */
+    }
+
+    //点击在玩一次时，发送异步请求，减少游戏次数
+    function substractGameChances() {
+        try {
+            //XXD_TRACK._trackEvent({category: "webapp_game", action: "once_more", label: "再来一次", value: "", custval: ""});
+        } catch (e) {
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "../gameBWNH/substractGameChances.do", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+        };
+        xhr.send();
+    }
+
+    function beginGame() {
+        if ("Y" == canPlayGame) {
+            app.stateMachine.changeState(new FightState)
+        } else {
+            alert("今天游戏次数已用完，明天再来吧！");
+        }
+    }
+</script>
+
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var appid;
+    var timestamp;
+    var noncestr;
+    var signature;
+    var wechatId;
+    var urlprefix;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "../gameBWNH/getJsapiSignature.do", false);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+        var XMLHttpReq = xhr;
+        if (XMLHttpReq.readyState == 4) {
+            if (XMLHttpReq.status == 200) {
+                var str = XMLHttpReq.responseText;
+                if (JSON.parse(str).resultCode != 0) {
+                    alert("系统繁忙，请稍后再试！");
+                }
+                appid = JSON.parse(str).appid;
+                timestamp = JSON.parse(str).timestamp;
+                noncestr = JSON.parse(str).noncestr;
+                signature = JSON.parse(str).signature;
+                wechatId = JSON.parse(str).wechatId;
+                urlprefix = JSON.parse(str).urlprefix;
+            } else {
+                alert("系统繁忙，请稍后再试！");
+            }
+        }
+    };
+    xhr.send();
+
+    var descArray = [];
+    descArray.push("玩游戏，赢万元现金，快和小伙伴一起来战斗吧！");
+    descArray.push("这游戏有毒，不仅停不下来，还送“钱”！");
+    descArray.push("新新贷豪礼大放送，每天流量、爱奇艺VIP、购物卡拿不停！");
+    descArray.push("老板送钱了，打飞机就送108红包哦！");
+
+    var index = Math.floor((Math.random()*descArray.length));
+
+
+    window.shareData = {
+        title:descArray[index],
+        desc:'敌机已经来袭，召之即来、来之能战、战之必胜，赶紧加入战斗吧！',
+        link: urlprefix + '/#!/static/html/gameExchange/gameLand.html?state=' + wechatId,
+        imgUrl: urlprefix + '/weixin/assets/480/images/share_img.jpg'
+    };
+
+    wx.config({
+        debug: false,
+        appId: appid,
+        timestamp: timestamp,
+        nonceStr: noncestr,
+        signature: signature,
+        jsApiList: [
+            'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'onMenuShareQZone'
+        ]
+    });
+</script>
+<script src="zepto.min.js"></script>
+<script src="game.js"></script>
+
+</html>

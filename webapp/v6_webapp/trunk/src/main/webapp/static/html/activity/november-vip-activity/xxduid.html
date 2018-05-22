@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>11月会员日</title>
+<style>
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none;}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+.container{width:100%; position:relative; font-family:'微软雅黑';}
+.container img{display:block; border:none; width:100%;}
+.container .btn1{width:5.3rem; height:5.3rem; position:absolute; top:52.7%; left:37%;}
+.container .btn2{width:38%; top:15%; left:10%; position:absolute;}
+.container .btn3{width:38%; top:15%; right:10%; position:absolute;}
+.casebox{width:16.5rem; height:16.5rem; top:29.7%; left:9%; position:absolute;}
+.casebox li{width:5.3rem; height:5.3rem; position:absolute;}
+.casebox li img{width:5.3rem; height:5.3rem; border:none; display:block; top:0; left:0; position:absolute;}
+.casebox #li1{top:0; left:0;}
+.casebox #li2{top:0; left:50%; margin-left:-2.65rem;}
+.casebox #li3{top:0; right:0;}
+.casebox #li4{top:50%; margin-top:-2.65rem; right:0;}
+.casebox #li5{bottom:0; right:0;}
+.casebox #li6{bottom:0; left:50%; margin-left:-2.65rem;}
+.casebox #li7{bottom:0; left:0;}
+.casebox #li8{top:50%; margin-top:-2.65rem; right:0; left:0;}
+.container .list1{width:62%; top:17%; left:32%; position:absolute; margin:0; padding:0;}
+.container .list1 li{width:100%; height:1.7rem; line-height:1.7rem; font-size:0.8rem; color:#ffffff; list-style-type:none;}
+.container .list1 li span{width:50%; height:1.7rem; line-height:1.7rem; font-size:0.8rem; color:#ffffff; float:left; display:inline; text-align:center;}
+.container .list2{width:100%; padding:0; margin:0; top:0; left:0; position:absolute;}
+.container .list2 li{width:100%; height:1.7rem; line-height:1.7rem; font-size:0.8rem; color:#ffffff; list-style-type:none;}
+.container .list2 li span{width:31%; height:1.7rem; line-height:1.7rem; font-size:0.8rem; color:#ffffff; float:left; display:inline; text-align:center;}
+.container .list2 li strong{width:38%; height:1.7rem; line-height:1.7rem; font-size:0.8rem; color:#ffffff; float:left; display:inline; text-align:center; font-weight:normal;}
+.container .con{width:43%; position:absolute; list-style-type:none;}
+.container .con#list1{top:12%; left:6%; width:88%;}
+.container .con#list2{top:36.5%; left:6%;}
+.container .con#list3{top:36.5%; right:6%;}
+.container .con#list4{top:67%; left:6%;}
+.container .con#list5{top:67%; right:6%;}
+.container .infos{width:50%; height:1.5rem; line-height:1.5rem; font-size:0.6rem; text-align:center; display:none; top:15%; left:2.5%; position:absolute; font-size:0.8rem; color:#e9c518;}
+.list2con{height:8.5rem; overflow:hidden; width:88%; top:32%; left:5%; position:absolute; margin:0; padding:0;}
+.layer{width:100%; height:100%; background-color:rgba(0,0,0,0.5); top:0; left:0; position:fixed; display:none;}
+.layer2{width:100%; height:100%; background-color:rgba(0,0,0,0.5); top:0; left:0; position:fixed; display:none;}
+.alerts{width:90%; padding:1.5rem 0; top:50%; margin-top:-3.5rem; left:5%; position:fixed; background:#e9c249; border-radius:5px; color:#131617; text-align:center; display:none; font-family:'微软雅黑';}
+.alerts div{width:90%; line-height:1.5rem; color:#131617; text-align:center; margin-bottom:1rem; font-size:1rem; padding:0 5%;}
+.alerts div em{line-height:1.5rem; color:#131617; font-size:1rem; font-style:normal;}
+.alerts span{width:20%; color:#e9c249; padding:0.2rem 1rem; background:#131617; font-size:0.8rem; border-radius:5px; margin:0 0.5rem;}
+.alerts p{width:20%; color:#e9c249; padding:0.2rem 1rem; background:#131617; font-size:0.8rem; border-radius:5px; margin:0 0.5rem; display:inline;}
+.alerts strong{font-weight:normal; width:20%; padding:0.2rem 1rem; background:#131617; color:#e9c249; font-size:0.8rem; border-radius:5px; margin:0 0.5rem;}
+.alerts ul{width:80%; margin:0 auto; padding:0;}
+.alerts ul li{width:100%; height:1.5rem; list-style-type:none; padding-bottom:1rem;}
+.alerts ul li label{width:30%; height:1.5rem; line-height:1.5rem; font-size:0.8rem; text-align:right; float:left; display:inline; color:#131617;}
+.alerts ul li input{width:60%; float:left; height:1.5rem; line-height:1.5rem; border:none; background:#ffffff; color:#131617; font-size:0.8rem; padding:0 5%;}
+.alerts ul li button{width:70%; height:1.5rem; line-height:1.5rem; font-size:0.8rem; background:#131617; text-align:center; color:#e9c249; border:none; margin-left:30%;}
+.alerts b{width:70%; height:1.5rem; line-height:1.5rem; font-size:0.5rem; background:#131617; text-align:center; color:#ff0000; border:none; margin-left:5%; background:none; display:none;}
+.alerts2{width:90%; padding:1.5rem 0; top:50%; margin-top:-3.5rem; left:5%; position:fixed; background:#e9c249; border-radius:5px; color:#131617; text-align:center; display:none; font-family:'微软雅黑';}
+.alerts2 div{width:90%; line-height:1.5rem; color:#131617; text-align:center; margin-bottom:1rem; font-size:1rem; padding:0 5%;}
+.alerts2 div em{line-height:1.5rem; color:#131617; font-size:1rem; font-style:normal;}
+.alerts2 span{width:20%; color:#e9c249; padding:0.2rem 1rem; background:#131617; font-size:0.8rem; border-radius:5px; margin:0 0.5rem;}
+#alert3{margin-top:-4.3rem;}
+#alert3 div{height:3rem;}
+#alert8{margin-top:-7rem;}
+#alert8 span{width:1rem; height:1rem; float:right; background:none; padding:0; margin:0; margin-top:-1rem; margin-right:0.8rem;}
+#alert8 span img{width:100%; height:100%;}
+#alert8 font{display:block; padding-top:0.7rem; height:1rem; line-height:1rem; overflow:hidden; color:#15161a;}
+#alert8 font a{color:#15161a; font-size:0.8rem;}
+#alert9{margin-top:-8.5rem;}
+#alert9 div{font-weight:bold; font-size:1.2rem;}
+#alert9 ul{width:100%; margin-bottom:1rem; height:7.5rem;}
+#alert9 ul li{text-align:left; height:1.5rem; padding-bottom:0; padding-left:5%; width:95%;}
+#alert9 div strong{margin:0 5%; line-height:1.5rem; color:#eac24a; font-size:0.8rem; font-weight:normal;}
+#alert9 ul li em{margin:0 2%; line-height:1.5rem; color:#15161a; font-size:0.8rem; font-style:normal;}
+#alert9 span{width:1rem; height:1rem; float:right; background:none; padding:0; margin:0; margin-top:-1rem; margin-right:0.8rem;}
+#alert9 span img{width:100%; height:100%;}
+.c1{top:11%; left:10%; font-size:6rem; position:absolute; color:#3b2f06; font-weight:bold;}
+.c2{top:42.5%; left:18%; font-size:4rem; position:absolute; color:#e9c249;}
+.c3{top:42.5%; right:24%; font-size:4rem; position:absolute; color:#e9c249;}
+.c4{top:72.5%; left:18%; font-size:4rem; position:absolute; color:#e9c249;}
+.c5{top:72.5%; right:20%; font-size:4rem; position:absolute; color:#e9c249;}
+</style>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+</head>
+
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+	<div class="container">
+		<img src="img/bg1.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg2.jpg" />
+		<ul class="casebox">
+			<li id="li1">
+				<img src="img/b2.png" />
+				<img src="img/reward1.png" />
+			</li>
+			<li id="li2">
+				<img src="img/b1.png" />
+				<img src="img/reward2.png" />
+			</li>
+			<li id="li3">
+				<img src="img/b1.png" />
+				<img src="img/reward3.png" />
+			</li>
+			<li id="li4">
+				<img src="img/b1.png" />
+				<img src="img/reward4.png" />
+			</li>
+			<li id="li5">
+				<img src="img/b1.png" />
+				<img src="img/reward5.png" />
+			</li>
+			<li id="li6">
+				<img src="img/b1.png" />
+				<img src="img/reward6.png" />
+			</li>
+			<li id="li7">
+				<img src="img/b1.png" />
+				<img src="img/reward7.png" />
+			</li>
+			<li id="li8">
+				<img src="img/b1.png" />
+				<img src="img/reward8.png" />
+			</li>
+		</ul>
+		<img src="img/btn1.png" class="btn1" />
+	</div>
+	<div class="container">
+		<img src="img/bg3.jpg" />
+		<a href="javascript:void(0);"><img src="img/btn2.png" class="btn2" /></a>
+		<a href="javascript:void(0);"><img src="img/btn3.png" class="btn3" /></a>
+		<div class="infos"></div>
+	</div>
+	<div class="container">
+		<img src="img/bg4.jpg" />
+		<div class="list2con">
+			<ul class="list2">
+
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<img src="img/bg5.jpg" />
+		<ul class="list1">
+
+		</ul>
+	</div>
+	<div class="container" id="con1">
+		<img src="img/bg6.jpg" />
+		<a href=""><img src="img/pro1.png" class="con" id="list1" /></a>
+		<a href=""><img src="img/pro2.png" class="con" id="list2" value="1" /></a>
+		<a href=""><img src="img/pro3.png" class="con" id="list3" value="3" /></a>
+		<a href=""><img src="img/pro4.png" class="con" id="list4" value="6" /></a>
+		<a href=""><img src="img/pro5.png" class="con" id="list5" value="12" /></a>
+		<ul class="area4">
+			<li class="c1">
+				<span></span>
+			</li>
+			<li class="c2" value="1">
+				<span></span>
+			</li>
+			<li class="c3" value="3">
+				<span></span>
+			</li>
+			<li class="c4" value="6">
+				<span></span>
+			</li>
+			<li class="c5" value="12">
+				<span></span>
+			</li>
+		</ul>
+	</div>
+	<div class="container">
+		<img src="img/bg7.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg8.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg9.jpg" />
+	</div>
+	<div class="layer"></div>
+	<div class="alerts" id="alert1">
+		<div>网络链接失败，请重试！</div>
+		<span>确认</span>
+	</div>
+	<div class="alerts" id="alert2">
+		<div>请先登录！</div>
+		<p>立即登录</p>
+	</div>
+	<div class="alerts" id="alert3">
+		<div>抽奖次数用完啦，投资新元宝或者日日盈即可获得抽奖次数！</div>
+		<strong>立即投资</strong>
+		<span>知道了</span>
+	</div>
+	<div class="alerts" id="alert4">
+		<div>登录验证已过期，请重新登录！</div>
+		<span>确认</span>
+	</div>
+	<div class="alerts" id="alert5">
+		<div>没抽中，离大奖仅一步之遥~</div>
+		<strong>再抽一次</strong>
+		<span>取消</span>
+	</div>
+	<div class="alerts" id="alert6">
+		<div>中奖啦！抽到<em></em></div>
+		<strong>再抽一次</strong>
+		<span>知道了</span>
+	</div>
+	<div class="alerts" id="alert7">
+		<div></div>
+		<span>确认</span>
+	</div>
+	<div class="alerts" id="alert8">
+		<span><img src="img/close.png" /></span>
+		<div>请登录</div>
+		<ul>
+			<li>
+				<label>用户名：</label><input type="text" id="myusername" />
+			</li>
+			<li>
+				<label>密码：</label><input type="password" id="mypassword" />
+			</li>
+			<li>
+				<button id="mysetok">登录</button>
+				<b>用户名或者密码错误！</b>
+			</li>
+		</ul>
+		<font><a href="../../../../#!/static/html/user/register.html">没有账号？立即注册！</a></font>
+	</div>
+	<div class="alerts" id="alert9">
+		<span><img src="img/close.png" /></span>
+		<div>我的中奖记录</div>
+		<ul>
+
+		</ul>
+		<div>
+			<strong id="pre">上一页</strong>
+			<strong id="next">下一页</strong>
+		</div>
+	</div>
+	<div class="layer2"></div>
+	<div class="alerts2" id="alert10">
+		<div>已经是第一页！</div>
+		<span>确认</span>
+	</div>
+	<div class="alerts2" id="alert11">
+		<div>已经是最后一页！</div>
+		<span>确认</span>
+	</div>
+</div>
+<!--login-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.md5.js"></script>
+<script>
+//获取url中参数的值
+function GetRequest() {
+  var url = location.search; //获取url中"?"符后的字串
+   var theRequest = new Object();
+   if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+         theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+      }
+   }
+   return theRequest;
+}
+
+$(document).ready(function(){
+       try{
+       var request = new Object();
+		request = GetRequest();
+       var gauserId =request["gaid"];
+	 	//XXD_TRACK.track_pageview('memberDayWebApp0922');
+		gaInits(gauserId);
+        //growingIO布码
+        growingIOInits({userId:gauserId});
+	}catch(e){}
+
+});
+
+(function(doc,win,fontSize) {
+	var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function(){
+		var clientWidth = docEl.clientWidth;
+		if (!clientWidth){
+			return;
+		}
+		docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+	};
+	if(!doc.addEventListener){
+		return;
+	}
+	win.addEventListener(resizeEvt,recalc,false);
+	doc.addEventListener('DOMContentLoaded',recalc,false);
+})(document,window,16);
+
+$.each($('.alerts').find('span'),function(){
+	$(this).click(function(){
+		$(this).parent('div').fadeOut(200);
+		$('.layer').fadeOut(200);
+	});
+});
+$.each($('.alerts2').find('span'),function(){
+	$(this).click(function(){
+		$(this).parent('div').fadeOut(200);
+		$('.layer2').fadeOut(200);
+	});
+});
+$('#alert3').find('strong').click(function(){
+	window.location.href = '#con1'
+	$('.layer').fadeOut(0);
+	$('#alert3').fadeOut(0);
+});
+$('#alert2').find('p').click(function(){
+	$('.layer').fadeOut(0);
+	$('#alert2').fadeOut(0);
+	window.location.href = 'xxd://login';
+});
+var pageid = 1;
+var link = '../../../../';
+var linkextra = '?jsonpCallback=?';
+var timer = 0;
+var degs = 0;
+var t;
+var str = window.location.href;
+var index2 = str.indexOf('uid=');
+var index3 = str.indexOf('&sign=');
+var result = str.substring(index2 + 4,index3);
+var result2 = str.substr(index3 + 6,str.length);
+
+function drawplay(){
+	t = setInterval(function(){
+		degs++;
+		if(degs >= 8){
+			degs = 0;
+		}
+		$.each($('.casebox').find('li'),function(){
+			$(this).find('img').eq(0).attr('src','img/b1.png');
+		});
+		$('.casebox').find('li').eq(degs).find('img').eq(0).attr('src','img/b2.png');
+	},1000);
+}
+drawplay();
+
+$('#alert6').find('span').click(function(){
+	$('.layer').fadeOut(0);
+	$('#alert6').fadeOut(0);
+	clearInterval(t);
+	drawplay();
+});
+
+$('.btn2').click(function(){
+	$.ajax({
+		url:link + 'activity/checkActivity.do' + linkextra,
+		type:'get',
+		data:{code:'november-vip-activity'},
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				$('.layer').fadeIn(200);
+				$('#alert7').find('div').html(data.msg);
+				$('#alert7').fadeIn(200);
+				return false;
+			}else{
+				$('.layer').fadeIn(0);
+				$('#alert2').fadeIn(0);
+			}
+		},error:function(){
+			$('.layer').fadeIn(0);
+			$('#alert1').fadeIn(0);
+		}
+	});
+});
+
+$('.btn3').click(function(){
+	$.ajax({
+		url:link + 'activity/checkActivity.do' + linkextra,
+		type:'get',
+		data:{code:'november-vip-activity'},
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				$('.layer').fadeIn(200);
+				$('#alert7').find('div').html(data.msg);
+				$('#alert7').fadeIn(200);
+				return false;
+			}else{
+				$.ajax({
+					url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+					type:'get',
+					dataType:'jsonp',
+					jsonp:"jsoncallback",
+					data:{uid:result,sign:result2},
+					success:function(data){
+						if(data.resultCode == 0){
+							$('.infos').fadeIn(0);
+							$('.btn2').fadeOut(0);
+							$('.layer').fadeIn(0);
+							$('#alert9').fadeIn(0);
+							pageid = 1;
+							$.ajax({
+								url:link + 'memberDay922/queryUserPrizeRecs.do' + linkextra,
+								type:'get',
+								dataType:'jsonp',
+								jsonp:"jsoncallback",
+								data:{currentPage:pageid,uid:result,sign:result2,pageSize:5},
+								success:function(data){
+									if(data.resultCode != 0){
+										$('.layer').fadeIn(200);
+										$('#alert2').fadeIn(200);
+									}else{
+										$('#alert9').find('ul').empty();
+										$.each(data.data,function(index,item){
+											$('#alert9').find('ul').append('<li><em>' + item.time + '</em><em>' + item.reward + '</em></li>');
+										});
+									}
+								},
+								error:function(){
+									$('.layer').fadeIn(200);
+									$('#alert1').fadeIn(200);
+								}
+							});
+						}else{
+							$('.infos').fadeOut(0);
+							$('.btn2').fadeIn(0);
+							$('.layer').fadeIn(0);
+							$('#alert2').fadeIn(0);
+						}
+					},error:function(){
+						$('.layer').fadeIn(0);
+						$('#alert1').fadeIn(0);
+					}
+				});
+			}
+		},error:function(){
+			$('.layer').fadeIn(0);
+			$('#alert1').fadeIn(0);
+		}
+	});
+});
+
+$('#alert6').find('strong').click(function(){
+	$(this).parent('div').fadeOut(0);
+	$('.layer').fadeOut(0);
+	clearInterval(t);
+	drawplay();
+	if($('.infos').css('display') == 'none'){
+		$('.layer').fadeIn(200);
+		$('#alert2').fadeIn(200);
+		return false;
+	}else{
+		$.ajax({
+			url:link + 'activity/checkActivity.do' + linkextra,
+			type:'get',
+			data:{code:'november-vip-activity'},
+			dataType:'jsonp',
+			jsonp:'jsoncallback',
+			success:function(data){
+				if(data.resultCode != 0){
+					$('.layer').fadeIn(200);
+					$('#alert7').find('div').html(data.msg);
+					$('#alert7').fadeIn(200);
+					return false;
+				}else{
+					var myplaytime = 0;
+					$.ajax({
+						url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+						type:'get',
+						dataType:'jsonp',
+						jsonp:"jsoncallback",
+						data:{uid:result,sign:result2},
+						success:function(data){
+							if(data.resultCode == 0){
+								myplaytime = parseInt(data.data[0].playtime);
+								if(myplaytime <= 0){
+									$('.layer').fadeIn(200);
+									$('#alert3').fadeIn(200);
+									return false;
+								}
+								if(myplaytime > 0){
+									if(timer == 0){
+										timer = 1;
+										$.ajax({
+											url:link + 'memberDay922/playStart.do' + linkextra,
+											type:'get',
+											dataType:'jsonp',
+											jsonp:"jsoncallback",
+											data:{uid:result,sign:result2},
+											success:function(data){
+												if(data.resultCode == 0){
+													clearInterval(t);
+													t = setInterval(function(){
+														degs++;
+														if(degs >= 8){
+															degs = 0;
+														}
+														$.each($('.casebox').find('li'),function(){
+															$(this).find('img').eq(0).attr('src','img/b1.png');
+														});
+														$('.casebox').find('li').eq(degs).find('img').eq(0).attr('src','img/b2.png');
+													},30);
+													var rewards = data.data[0].itemName;
+													var rewardid = data.data[0].itemId;
+													setTimeout(function(){
+														clearInterval(t);
+														if(rewards == 'iPhone7'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(0).find('img').eq(0).attr('src','img/b2.png');
+															degs = 0;
+														}else if(rewards == 'Apple Watch'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(1).find('img').eq(0).attr('src','img/b2.png');
+															degs = 1;
+														}else if(rewards == '沃尔玛购物卡'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(2).find('img').eq(0).attr('src','img/b2.png');
+															degs = 2;
+														}else if(rewards == '100元话费直充'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(3).find('img').eq(0).attr('src','img/b2.png');
+															degs = 3;
+														}else if(rewards == '10个新新币'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(4).find('img').eq(0).attr('src','img/b2.png');
+															degs = 4;
+														}else if(rewards == '500个新新币'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(5).find('img').eq(0).attr('src','img/b2.png');
+															degs = 5;
+														}else if(rewards == '2G流量'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(6).find('img').eq(0).attr('src','img/b2.png');
+															degs = 6;
+														}else if(rewards == '京东E卡500元'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(7).find('img').eq(0).attr('src','img/b2.png');
+															degs = 7;
+														}
+														timer = 0;
+														$.ajax({
+															url:link + 'memberDay922/playEnd.do' + linkextra,
+															type:'get',
+															dataType:'jsonp',
+															jsonp:"jsoncallback",
+															data:{uid:result,sign:result2},
+															success:function(data2){
+																if(data2.resultCode == 0){
+																	$('.infos').html('剩余抽奖次数：' +data2.data[0].playtime);
+																	$('#alert6').find('div').find('em').html(rewards)
+																	$('.layer').fadeIn(200);
+																	$('#alert6').fadeIn(200);
+																}else{
+																	$('.layer').fadeIn(200);
+																	$('#alert4').fadeIn(200);
+																	$('.infos').fadeOut(0);
+																	$('.btn2').fadeIn(0);
+
+																}
+															},
+															error:function(){
+																$('.layer').fadeIn(200);
+																$('#alert1').fadeIn(200);
+															}
+														});
+														$.ajax({
+															url:link + 'memberDay922/queryUserPrizeRecs.do' + linkextra,
+															type:'get',
+															dataType:'jsonp',
+															jsonp:"jsoncallback",
+															data:{currentPage:pageid,uid:result,sign:result2,pageSize:5},
+															success:function(data){
+																if(data.resultCode != 0){
+																	$('.layer').fadeIn(200);
+																	$('#alert2').fadeIn(200);
+																}else{
+																	$('#alert9').find('ul').empty();
+																	$.each(data.data,function(index,item){
+																		$('#alert9').find('ul').append('<li><em>' + item.time + '</em><em>' + item.reward + '</em></li>');
+																	});
+																}
+															},
+															error:function(){
+																$('.layer').fadeIn(200);
+																$('#alert1').fadeIn(200);
+															}
+														});
+													},3000);
+												}else{
+													$('.layer').fadeIn(200);
+													$('#alert4').fadeIn(200);
+													$('.infos').fadeOut(0);
+													$('.btn2').fadeIn(0);
+
+												}
+											},
+											error:function(){
+												$('.layer').fadeIn(200);
+												$('#alert1').fadeIn(200);
+											}
+										});
+									}
+								}
+							}else{
+								$('.layer').fadeIn(200);
+								$('#alert4').fadeIn(200);
+								$('.infos').fadeOut(0);
+								$('.btn2').fadeIn(0);
+
+							}
+						},
+						error:function(){
+							$('.layer').fadeIn(200);
+							$('#alert1').fadeIn(200);
+						}
+					});
+				}
+			},
+			error:function(){
+				$('.layer').fadeIn(200);
+				$('#alert1').fadeIn(200);
+			}
+		});
+	}
+});
+
+$('.btn1').click(function(){
+	$.ajax({
+		url:link + 'activity/checkActivity.do' + linkextra,
+		type:'get',
+		data:{code:'november-vip-activity'},
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				$('.layer').fadeIn(200);
+				$('#alert7').find('div').html(data.msg);
+				$('#alert7').fadeIn(200);
+				return false;
+			}else{
+				if($('.infos').css('display') == 'none'){
+					$('.layer').fadeIn(200);
+					$('#alert2').fadeIn(200);
+					return false;
+				}else{
+					var myplaytime = 0;
+					$.ajax({
+						url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+						type:'get',
+						dataType:'jsonp',
+						jsonp:"jsoncallback",
+						data:{uid:result,sign:result2},
+						success:function(data){
+							if(data.resultCode == 0){
+								myplaytime = parseInt(data.data[0].playtime);
+								if(myplaytime <= 0){
+									$('.layer').fadeIn(200);
+									$('#alert3').fadeIn(200);
+									return false;
+								}
+								if(myplaytime > 0){
+									if(timer == 0){
+										timer = 1;
+										$.ajax({
+											url:link + 'memberDay922/playStart.do' + linkextra,
+											type:'get',
+											dataType:'jsonp',
+											jsonp:"jsoncallback",
+											data:{uid:result,sign:result2},
+											success:function(data){
+												if(data.resultCode == 0){
+													clearInterval(t);
+													t = setInterval(function(){
+														degs++;
+														if(degs >= 8){
+															degs = 0;
+														}
+														$.each($('.casebox').find('li'),function(){
+															$(this).find('img').eq(0).attr('src','img/b1.png');
+														});
+														$('.casebox').find('li').eq(degs).find('img').eq(0).attr('src','img/b2.png');
+													},30);
+													var rewards = data.data[0].itemName;
+													var rewardid = data.data[0].itemId;
+													setTimeout(function(){
+														clearInterval(t);
+														if(rewards == 'iPhone7'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(0).find('img').eq(0).attr('src','img/b2.png');
+															degs = 0;
+														}else if(rewards == 'Apple Watch'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(1).find('img').eq(0).attr('src','img/b2.png');
+															degs = 1;
+														}else if(rewards == '沃尔玛购物卡'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(2).find('img').eq(0).attr('src','img/b2.png');
+															degs = 2;
+														}else if(rewards == '100元话费直充'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(3).find('img').eq(0).attr('src','img/b2.png');
+															degs = 3;
+														}else if(rewards == '10个新新币'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(4).find('img').eq(0).attr('src','img/b2.png');
+															degs = 4;
+														}else if(rewards == '500个新新币'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(5).find('img').eq(0).attr('src','img/b2.png');
+															degs = 5;
+														}else if(rewards == '2G流量'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(6).find('img').eq(0).attr('src','img/b2.png');
+															degs = 6;
+														}else if(rewards == '京东E卡500元'){
+															$.each($('.casebox').find('li'),function(){
+																$(this).find('img').eq(0).attr('src','img/b1.png');
+															});
+															$('.casebox').find('li').eq(7).find('img').eq(0).attr('src','img/b2.png');
+															degs = 7;
+														}
+														timer = 0;
+														$.ajax({
+															url:link + 'memberDay922/playEnd.do' + linkextra,
+															type:'get',
+															dataType:'jsonp',
+															jsonp:"jsoncallback",
+															data:{uid:result,sign:result2},
+															success:function(data2){
+																if(data2.resultCode == 0){
+																	$('.infos').html('剩余抽奖次数：' +data2.data[0].playtime);
+																	$('#alert6').find('div').find('em').html(rewards)
+																	$('.layer').fadeIn(200);
+																	$('#alert6').fadeIn(200);
+																}else{
+																	$('.layer').fadeIn(200);
+																	$('#alert4').fadeIn(200);
+																	$('.infos').fadeOut(0);
+																	$('.btn2').fadeIn(0);
+
+																}
+															},
+															error:function(){
+																$('.layer').fadeIn(200);
+																$('#alert1').fadeIn(200);
+															}
+														});
+														$.ajax({
+															url:link + 'memberDay922/queryUserPrizeRecs.do' + linkextra,
+															type:'get',
+															dataType:'jsonp',
+															jsonp:"jsoncallback",
+															data:{currentPage:pageid,uid:result,sign:result2,pageSize:5},
+															success:function(data){
+																if(data.resultCode != 0){
+																	$('.layer').fadeIn(200);
+																	$('#alert2').fadeIn(200);
+																}else{
+																	$('#alert9').find('ul').empty();
+																	$.each(data.data,function(index,item){
+																		$('#alert9').find('ul').append('<li><em>' + item.time + '</em><em>' + item.reward + '</em></li>');
+																	});
+																}
+															},
+															error:function(){
+																$('.layer').fadeIn(200);
+																$('#alert1').fadeIn(200);
+															}
+														});
+													},3000);
+												}else{
+													$('.layer').fadeIn(200);
+													$('#alert4').fadeIn(200);
+													$('.infos').fadeOut(0);
+													$('.btn2').fadeIn(0);
+
+												}
+											},
+											error:function(){
+												$('.layer').fadeIn(200);
+												$('#alert1').fadeIn(200);
+											}
+										});
+									}
+								}
+							}else{
+								$('.layer').fadeIn(200);
+								$('#alert4').fadeIn(200);
+								$('.infos').fadeOut(0);
+								$('.btn2').fadeIn(0);
+
+							}
+						},
+						error:function(){
+							$('.layer').fadeIn(200);
+							$('#alert1').fadeIn(200);
+						}
+					});
+				}
+			}
+		},error:function(){
+			$('.layer').fadeIn(0);
+			$('#alert1').fadeIn(0);
+		}
+	});
+});
+
+$.ajax({
+	url:link + 'activity/checkActivity.do' + linkextra,
+	type:'get',
+	data:{code:'november-vip-activity'},
+	dataType:'jsonp',
+	jsonp:'jsoncallback',
+	success:function(data){
+		if(data.resultCode != 0){
+			$.each($('.con'),function(){
+				$(this).parent('a').attr('href','javascript:void(0);');
+				$(this).click(function(){
+					$('.layer').fadeIn(200);
+					$('#alert7').find('div').html(data.msg);
+					$('#alert7').fadeIn(200);
+				});
+			});
+			$('.infos').fadeOut(0);
+			$('.btn2').fadeIn(0);
+
+			return false;
+		}else{
+			$.ajax({
+				url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+				type:'get',
+				dataType:'jsonp',
+				jsonp:"jsoncallback",
+				data:{uid:result,sign:result2},
+				success:function(data){
+					if(data.resultCode == 0){
+						$('.infos').fadeIn(0);
+						$('.btn2').fadeOut(0);
+
+						$('.infos').html('剩余抽奖次数：' + data.data[0].playtime);
+						$('.con:first').parent('a').attr('href','xxd://list/pdd?selID=1&pdName=ririying');
+						$.each($('.con').not(':first'),function(){
+							var _this = $(this);
+							var closeterms = $(this).attr('value');
+							$.ajax({
+								url:link + 'xplan/getLatestSchemeId.do' + linkextra,
+								type:'get',
+								dataType:'jsonp',
+								jsonp:'jsonpCallback',
+								data:{closeTerm:closeterms},
+								success:function(data){
+									if(data.schemeInfo != null && data.schemeInfo != ""){
+										_this.parent('a').attr('href','xxd://list/pdd?selID=1&pdName=xinyuanbao&xybID=' + data.schemeInfo.SCHEMEID);
+									}
+								},
+								error:function(){
+									$('.layer').fadeIn(200);
+									$('#alert1').fadeIn(200);
+								}
+							});
+						});
+						$.ajax({
+							url:link + 'memberDay922/queryUserPrizeRecs.do' + linkextra,
+							type:'get',
+							dataType:'jsonp',
+							jsonp:"jsoncallback",
+							data:{currentPage:pageid,uid:result,sign:result2,pageSize:5},
+							success:function(data){
+								if(data.resultCode != 0){
+									$('.layer').fadeIn(200);
+									$('#alert2').fadeIn(200);
+								}else{
+									$('#alert9').find('ul').empty();
+									$.each(data.data,function(index,item){
+										$('#alert9').find('ul').append('<li><em>' + item.time + '</em><em>' + item.reward + '</em></li>');
+									});
+								}
+							},
+							error:function(){
+								$('.layer').fadeIn(200);
+								$('#alert1').fadeIn(200);
+							}
+						});
+					}else{
+						$('.infos').fadeOut(0);
+						$('.btn2').fadeIn(0);
+
+						$.each($('.con'),function(){
+							$(this).parent('a').attr('href','javascript:void(0);');
+							$(this).click(function(){
+								$('.layer').fadeIn(200);
+								$('#alert2').fadeIn(200);
+							});
+						});
+					}
+				},
+				error:function(){
+					$('.layer').fadeIn(200);
+					$('#alert1').fadeIn(200);
+				}
+			});
+		}
+	},
+	error:function(){
+		$('.layer').fadeIn(200);
+		$('#alert1').fadeIn(200);
+	}
+});
+
+$.ajax({
+	url:link + 'memberDay922/topList.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:"jsoncallback",
+	success:function(data){
+		$('.list1').html('');
+		$.each(data,function(index,item){
+			$('.list1').append('<li><span>' + item.user + '</span><span>' + item.amount + '</span></li>')
+		});
+	},
+	error:function(){
+		$('.layer').fadeIn(200);
+		$('#alert1').fadeIn(200);
+	}
+});
+
+$.ajax({
+	url:link + 'memberDay922/luckyList.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:"jsoncallback",
+	success:function(data){
+		var x = 0;
+		$('.list2').html('');
+		$.each(data,function(index,item){
+			$('.list2').append('<li><span>' + item.user + '</span><span>' + item.time + '</span><strong>' + item.reward + '</strong></li>');
+		});
+		if($('.list2con').find('ul').find('li').length <= 5){
+			$('.list2con').find('ul').html($('.list2con').find('ul').html());
+		}
+		if($('.list2con').find('ul').find('li').length > 5){
+			$('.list2con').find('ul').html($('.list2con').find('ul').html() + $('.list2con').find('ul').html());
+			setInterval(function(){
+				x++;
+				$('.list2con').find('ul').animate({'top':-parseFloat(1.7*parseInt(x)).toFixed(2) + 'rem'},500);
+				if(x == $('.list2con').find('ul').find('li').length/2){
+					x = 0;
+					$('.list2con').find('ul').animate({'top':-parseFloat(1.7*parseInt(x)).toFixed(2) + 'rem'},0);
+				}
+			},3000);
+		}
+	},
+	error:function(){
+		$('.layer').fadeIn(200);
+		$('#alert1').fadeIn(200);
+	}
+});
+
+$('#pre').click(function(){
+	pageid--;
+	$.ajax({
+		url:link + 'memberDay922/queryUserPrizeRecs.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:"jsoncallback",
+		data:{currentPage:pageid,uid:result,sign:result2,pageSize:5},
+		success:function(data){
+			if(pageid <= 0){
+				$('#alert10').fadeIn(200);
+				$('.layer2').fadeIn(200);
+				pageid = 1;
+				return false;
+			}else{
+				if(data.resultCode != 0){
+					$('.layer').fadeIn(200);
+					$('#alert2').fadeIn(200);
+				}else{
+					$('#alert9').find('ul').empty();
+					$.each(data.data,function(index,item){
+						$('#alert9').find('ul').append('<li><em>' + item.time + '</em><em>' + item.reward + '</em></li>');
+					});
+				}
+			}
+
+		},
+		error:function(){
+			$('.layer').fadeIn(200);
+			$('#alert1').fadeIn(200);
+		}
+	});
+});
+
+$('#next').click(function(){
+	pageid++;
+	$.ajax({
+		url:link + 'memberDay922/queryUserPrizeRecs.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:"jsoncallback",
+		data:{currentPage:pageid,uid:result,sign:result2,pageSize:5},
+		success:function(data){
+			if(pageid > data.pageInfo.totalpage){
+				$('#alert11').fadeIn(200);
+				$('.layer2').fadeIn(200);
+				pageid = data.pageInfo.totalpage;
+				return false;
+			}else{
+				if(data.resultCode != 0){
+					$('.layer').fadeIn(200);
+					$('#alert2').fadeIn(200);
+				}else{
+					$('#alert9').find('ul').empty();
+					$.each(data.data,function(index,item){
+						$('#alert9').find('ul').append('<li><em>' + item.time + '</em><em>' + item.reward + '</em></li>');
+					});
+				}
+			}
+
+		},
+		error:function(){
+			$('.layer').fadeIn(200);
+			$('#alert1').fadeIn(200);
+		}
+	});
+});
+
+$.each($('.area4').find('li').not(':first'),function(){
+	var _this = $(this);
+	var closeterms = $(this).attr('value');
+	$.ajax({
+		url:link + 'xplan/getLatestSchemeId.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsonpCallback',
+		data:{closeTerm:closeterms},
+		success:function(data){
+			if(data.schemeInfo != null && data.schemeInfo != ""){
+				_this.find('span').html(data.schemeInfo.MINAPR);
+			}
+		},
+		error:function(){
+			$('.layer').fadeIn(200);
+			$('#alert1').fadeIn(200);
+		}
+	});
+});
+$.ajax({
+	url:link + 'fund/selectFundInfo.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:'jsonpCallback',
+	success:function(data){
+		$('.area4').find('li').eq(0).find('span').html(data.fundApr.apr + data.fundApr.floatApr);
+	},
+	error:function(){
+		$('.layer').fadeIn(200);
+		$('#alert1').fadeIn(200);
+	}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[xui] .img-gear-02 {
+  border-radius: 50%;
+  background :
+          radial-gradient(at 50% 50%, #fff 20%, #454545 20%, #454545 50%, #454545 54%, transparent 0%),
+          linear-gradient(90deg, transparent 40%, #454545 40%, #454545 60%, transparent 60%),
+          linear-gradient(45deg, transparent 43%, #454545 40%, #454545 57%, transparent 57%),
+          linear-gradient(-45deg, transparent 43%, #454545 40%, #454545 57%, transparent 57%),
+          linear-gradient(0deg, transparent 40%, #454545 40%, #454545 60%, transparent 57%);
+  @include opacity(.8);
+}

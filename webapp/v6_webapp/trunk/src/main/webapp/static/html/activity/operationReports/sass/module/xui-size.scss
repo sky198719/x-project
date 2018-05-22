@@ -1,0 +1,30 @@
+/*
+ * 模块：字号
+ * 模块类型：b(基础模块)
+ * 精度：9 +
+ * 分级：3 +
+ * 适配：桌面 | 平析 | 移动
+ * 兼容：
+ * 版本：v0.0.1
+ * 备注：s->Small 小，m->Middle 中，l->Large 大；
+ */
+
+$sz:12px;
+$rank:'ss', 'sm', 'sl', 'ms,h6', 'mm,h5', 'ml,h4', 'ls,h3', 'lm,h2', 'll,h1';
+%fw300{font-weight: 300;}
+html[size="m"]{ font-size:$sz; }
+
+//粗细
+@for $i from 1 through 7{
+   .fw#{$i}{ font-weight: $i * 100 }
+}
+
+.ss   {font-size:8px}
+.sm   {font-size:9px}
+.sl   {font-size:10px}
+.ms,h6{font-size:11px}
+.mm,h5{font-size:12px}
+.ml,h4{font-size:13px}
+.ls,h3{font-size:14px}
+.lm,h2{font-size:15px}
+.ll,h1{font-size:16px}

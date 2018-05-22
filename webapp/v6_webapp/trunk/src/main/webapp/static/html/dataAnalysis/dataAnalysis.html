@@ -1,0 +1,67 @@
+<div class="navbar no-border">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+    <div class="center sliding">数据统计</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="dataAnalysis" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+		<div class="xxd-content"><img src="static/img/xxd/data-1.png" style="width:100%;"></div>
+        <h5 class="content-block-title text-center">季度成交额&nbsp;(单位：千万元)</h5>
+        <div style="text-align:center;">
+        	<canvas id="DataAnalysisA"></canvas>
+        </div>
+        <div class="list-block media-list" style="margin:0;">
+            <ul>
+                <li>
+                    <div class="item-content">
+                      <div class="item-media"><img src="static/img/xxd/data-ic-1.jpg" width="24"></div>
+                      <div class="item-inner">
+                          <div class="item-subtitle font-grey">累计成交额</div>
+                          <div class="item-title-row">
+                            <div class="item-title"><h3 class="font-dark"><span id="totalDealAmount">0.00</span> <span class="font13">元</span></h3></div>
+                          </div>
+                          
+                      </div>
+                    </div>
+                 </li>
+                 <li>
+                    <div class="item-content">
+                      <div class="item-media"><img src="static/img/xxd/data-ic-2.png" width="30"></div>
+                      <div class="item-inner">
+                          <div class="item-subtitle font-grey">累计为出借人赚取</div>
+                          <div class="item-title-row">
+                            <div class="item-title"><h3 class="font-dark"><span id="totalProfit">0.00</span> <span class="font13">元</span></h3></div>
+                          </div>
+                          
+                      </div>
+                    </div>
+                 </li>
+                 <li>
+                    <div class="item-content">
+                      <div class="item-media"><img src="static/img/xxd/data-ic-3.png" width="24"></div>
+                      <div class="item-inner">
+                          <div class="item-subtitle font-grey">帮助中小企业数</div>
+                          <div class="item-title-row">
+                            <div class="item-title"><h3 class="font-dark"><span id="benefitedBusiness">0</span> <span class="font13">笔</span></h3></div>
+                          </div>
+                          
+                      </div>
+                    </div>
+                 </li>
+            </ul>
+        </div>
+        <div class="xxd-content"><img src="static/img/xxd/data-2.png" style="width:100%;"></div>
+        <h5 class="content-block-title text-center">质保服务专款余额&nbsp;(单位：百万元)</h5>
+        <div style="text-align:center;">
+        	<canvas id="DataAnalysisB"></canvas>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+{{#each list}}
+<li class="swipeout" data-id="{{requestId}}">
+        {{#if status}}
+        <div class="swipeout-content">
+            <div class="bid-mark bidding">
+                <h6>投标中</h6>
+            </div>
+        {{else}}
+        <div class="swipeout-content trade-full">
+            <div class="bid-mark">
+                <h6>已抢完</h6>
+            </div>
+        {{/if}}
+
+        <a href="#" class="item-link item-content tradeRequestList">
+            <div class="item-inner">
+                <div class="item-title-row xxd-item-row mt10">
+                    <div class="item-title">{{borrowName}}</div>
+                </div>
+                <div class="item-subtitle">
+                    <div class="progress">
+                        <div class="progress-bar {{#if status}} {{else}} progress-bar-full {{/if}}" style="width: 0px;"></div>
+                    </div>
+                </div>
+                <div class="item-title-row xxd-item-row mt15">
+                    <div class="item-after font-red"><span class="font18">{{apr}}</span><span class="font13 pt5">%</span></div>
+                    <div class="item-after"><span class="font18">{{remainNumber}}</span><span class="font13 pt5">个月</span></div>
+                    <div class="item-after"><span class="font13 pt5">转让价格</span> <span class="font18">{{rep_fun}}</span> <span class="font13 pt5">元</span></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {{#if status}}
+    <div class="swipeout-actions-right">
+        <a href="#" class="bg-blue bg-green trd_express-bid">快捷投标</a>
+    </div>
+    {{/if}}
+</li>
+{{/each}}

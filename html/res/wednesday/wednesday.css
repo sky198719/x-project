@@ -1,0 +1,104 @@
+.bg1 {
+  width: 100%;
+  height: 776px;
+  background: url(img/bg1.jpg) 50% 0 no-repeat;
+  min-width: 1100px;
+}
+.area1 {
+  width: 1100px;
+  height: 776px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg2 {
+  width: 100%;
+  height: 434px;
+  background: url(img/bg2.jpg) 50% 0 no-repeat;
+  min-width: 1100px;
+}
+.area2 {
+  width: 1100px;
+  height: 434px;
+  margin: 0 auto;
+  position: relative;
+}
+.area2 a {
+  width: 1100px;
+  height: 434px;
+  display: block;
+  background: #000000;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.bg3 {
+  width: 100%;
+  height: 308px;
+  background: url(img/bg3.jpg) 50% 0 no-repeat;
+  min-width: 1100px;
+}
+.area3 {
+  width: 1100px;
+  height: 308px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg4 {
+  width: 100%;
+  height: 541px;
+  background: url(img/bg4.jpg) 50% 0 no-repeat;
+  min-width: 1100px;
+}
+.area4 {
+  width: 1100px;
+  height: 541px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg5 {
+  width: 100%;
+  height: 392px;
+  background: url(img/bg5.jpg) 50% 0 no-repeat;
+  min-width: 1100px;
+}
+.area5 {
+  width: 1100px;
+  height: 392px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg6 {
+  width: 100%;
+  height: 702px;
+  background: url(img/bg6.jpg) 50% 0 no-repeat;
+  min-width: 1100px;
+}
+.area6 {
+  width: 1100px;
+  height: 702px;
+  margin: 0 auto;
+  position: relative;
+}
+.area6 a {
+  background: #000000;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+  display: inline-block;
+  width: 1011px;
+  height: 493px;
+  margin-left: 43px;
+  margin-top: 108px;
+}
+.bg7 {
+  width: 100%;
+  height: 659px;
+  background: url(img/bg7.jpg) 50% 0 no-repeat;
+  min-width: 1100px;
+}
+.area7 {
+  width: 1100px;
+  height: 659px;
+  margin: 0 auto;
+  position: relative;
+}

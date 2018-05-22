@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>新新贷贷款申请</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 , maximum-scale=1.0, user-scalable=0" />
+<link rel="stylesheet" href="styles/library/reset.css" />
+<link rel="stylesheet" href="styles/common/common.css" />
+<link rel="stylesheet" href="styles/custom/info.css" />
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="formBox">
+	<ul>
+		<li id="name">
+			<label>真实姓名</label>
+			<input type="text" placeholder="请输入真实姓名" maxlength=20 value="" />
+		</li>
+		<li id="identity">
+			<label>您的身份</label>
+			<span class="active" value="1"><strong><em></em></strong>工薪</span>
+			<span value="2"><strong><em></em></strong>法人</span>
+		</li>
+		<li id="cityName" alt="选择您的居住城市">
+			<label>居住城市</label>
+			<div value="" alt="">选择您的居住城市</div>
+		</li>
+		<li id="marriage" alt="选择您的婚姻状况">
+			<label>婚姻状况</label>
+			<div value="">选择您的婚姻状况</div>
+		</li>
+		<li id="idCode">
+			<label>身份证号</label>
+			<input type="text" placeholder="请输入您的身份证号" maxlength=18 value="" />
+		</li>
+		<li id="monthlyIncome">
+			<label>税前月收入</label>
+			<input type="text" placeholder="请输入税前月收入" maxlength=8 value="" />
+		</li>
+		<li id="houseProperty">
+			<label>是否有房</label>
+			<span class="active" value="1"><strong><em></em></strong>有房</span>
+			<span value="2"><strong><em></em></strong>无房</span>
+		</li>
+		<li id="houseType" alt="选择您的房屋类型">
+			<label>房屋类型</label>
+			<div value="">选择您的房屋类型</div>
+		</li>
+	</ul>
+	<button>下一步</button>
+</div>
+
+<div class="layer"></div>
+<div class="alertBox">
+	<img src="images/common/alertBox2.png" class="close" />
+	<img src="images/common/alertBox1.png" />
+	<strong></strong>
+	<span>知道了</span>
+</div>
+<div class="scrollBox" id="cityNameBox">
+	<span>
+		<img src="images/common/scrollBox2.png" class="cancel" />
+		<img src="images/common/scrollBox1.png" class="confirm" />
+	</span>
+	<div id="cityBox1">
+		<ul>
+			
+		</ul>
+	</div>
+	<div id="cityBox2">
+		<ul>
+			
+		</ul>
+	</div>
+</div>
+<div class="scrollBox" id="marriageBox">
+	<span>
+		<img src="images/common/scrollBox2.png" class="cancel" />
+		<img src="images/common/scrollBox1.png" class="confirm" />
+	</span>
+	<div>
+		<ul>
+			<li value="1">未婚</li>
+			<li value="2">已婚</li>
+			<li value="3">离异</li>
+			<li value="4">丧偶</li>
+			<li value="5">其他</li>
+		</ul>
+	</div>
+</div>
+<div class="scrollBox" id="houseTypeBox">
+	<span>
+		<img src="images/common/scrollBox2.png" class="cancel" />
+		<img src="images/common/scrollBox1.png" class="confirm" />
+	</span>
+	<div>
+		<ul>
+			<li value="1">清房</li>
+			<li value="2">按揭房</li>
+			<li value="3">抵押给银行</li>
+		</ul>
+	</div>
+</div>
+
+<script src="scripts/library/require.js" data-main="scripts/custom/info"></script>
+</body>
+</html>

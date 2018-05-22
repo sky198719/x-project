@@ -1,0 +1,56 @@
+{{#each list}}
+<li style="border-bottom:1px solid #C8C7CC;">
+	<div class="item-content" style="padding-right:15px;padding-top:8px;padding-bottom:8px;">
+        <div style="width: 35%;">
+            <div class="item-title">{{username}}</div>
+            <div class="item-subtitle">{{phone}}</div>
+        </div>
+        <div style="width: 30%;">
+            <div class="item-title">{{regTimeyyyyMMdd}}</div>
+            <div class="item-subtitle">{{regTimehhmmss}}</div>
+        </div>
+        <div style="width: 17.5%;">
+        	<div class="item-title">
+				{{#if isRealName}}
+                <div style="text-align:center;">
+               		<span>已实名</span>
+                </div>
+                {{else}}
+                <div style="text-align:center;">
+                    <span style="color:#FF6600;">未实名</span>
+                </div>
+                {{/if}}
+			</div>
+        </div>
+        <div style="width: 17.5%;">
+            {{#if isExchange}}
+            <div class="item-title"  style="text-align:center;">
+                	已兑换
+            </div>
+            {{else}}
+            <div class="item-title">
+              <button class="button exchangeButton disable" data-phone="{{phone}}"
+                      data-username="{{username}}">
+                  	兑换
+              </button>
+          	</div>
+            {{/if}}
+        </div>
+     </div>
+     {{#if showStoreName}}
+           <div class="item-content" style="padding-top:0px;padding-bottom:0px;line-height:22px;height:22px;min-height:0px;">
+			   	<div style="max-height: 22px;overflow: hidden;width: 100%;">
+					<div style="padding-left: 15px; max-width: 40%; min-width: 0%"></div>
+					<div style="max-width: 100%; min-width: 40%; text-align: center; overflow: hidden">
+						<span class="goToStorePage" style="color: white; margin: 0 auto; padding: 2px 15px; background-color: #3399ff;"
+						data-storeCode="{{storeCode}}" data-phoneNo="{{phone}}">{{storeName}}</span>
+					</div>
+					<div style="padding-right: 15px;; max-width: 20%; min-width: 0%"></div>
+				</div>
+		    </div>
+     {{else}}
+     {{/if}}
+</li>
+{{/each}}
+
+

@@ -1,0 +1,21 @@
+@media (max-height : 460px) {
+  .swiper-slide12 .com-title3,
+  .swiper-slide13 .com-title3
+  {
+    margin-top    : 1rem;
+    margin-bottom : .5rem;
+  }
+  .swiper-slide12 .page12-text,
+  .swiper-slide13 .page13-text
+  {
+    font-size : 10px;
+  }
+}
+
+@media (min-height : 550px) {
+  .swiper-slide12 .com-title3,
+  .swiper-slide13 .com-title3 {
+    margin-top    : 2rem;
+    margin-bottom : 1rem;
+  }
+}

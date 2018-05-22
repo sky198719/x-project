@@ -1,0 +1,187 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <!-- We have home navbar without left link-->
+        <div class="left"></div>
+        <div class="center">商户分店推广查询</div>
+        <div class="right">
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="storeRegQuery" class="page" directory="activity">
+        <!-- Scrollable page content-->
+        <div class="page-content storeRegQuery pull-to-refresh-content infinite-scroll" style="background:#EFEFEF;">
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="list-block media-list" style="margin-bottom: 8px;margin-top:0px;">
+                <ul>
+                    <li style="padding-right: 15px;padding-left: 15px;">
+                        <div class="item-content" style="padding-left: 0px;">
+                            <div class="item-inner" style="padding-right: 0px;">
+                                <div class="item-title-row">
+                                    <div class="item-title">
+                                        <span class="font-999" style="margin-right: 5px;">商户</span>
+                                        <span class="pName"></span>
+                                    </div>
+                                    <div class="item-after storeRefresh">
+                                        <span class="refresh" style="margin-right: 5px;"></span>
+                                        <span class="font-3399ff">刷新</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content" style="display:block;font-size:15px;padding-left:0px;">
+	                        <div class="item-inner" style="padding-left: 15px;">
+	                        	<div id="effectiveData">
+	                        		<div class="item-title-row" style="padding-top:2px;">
+	                        			<div class="item-title">
+		                        			<span class="font-999">当日有效推广</span>
+		                        			<span class="dayEffectiveNumber" style="color:#FF6600;">0</span>
+		                        			<span class="font-999">人</span>
+	                        			</div>
+	                        		</div>
+	                        		<div class="item-title-row" style="padding-top:2px;">
+	                        			<div class="item-title">
+		                        			<span class="font-999">累计有效推广</span>
+		                        			<span class="cumulativeEffectiveNumber" style="color:#FF6600;">0</span>
+		                        			<span class="font-999">人</span>
+	                        			</div>
+	                        			<div class="item-after">
+	                        				<div class="moreInfo"></div>
+	                        			</div>
+	                        		</div>
+	                            </div>
+	                           	
+	                            <div id="invalidData" class="displayNone" style="padding-top:10px;">
+	                        		<div class="item-title-row" style="padding-top:2px;">
+	                        			<div class="item-title">
+		                        			<span class="font-999">当日无效推广</span>
+		                        			<span class="dayInvalidNumber" style="color:#FF6600;">0</span>
+		                        			<span class="font-999">人</span>
+	                        			</div>
+	                        		</div>
+	                        		<div class="item-title-row" style="padding-top:2px;">
+	                        			<div class="item-title">
+		                        			<span class="font-999">累计无效推广</span>
+		                        			<span class="cumulativeInvalidNumber" style="color:#FF6600;">0</span>
+		                        			<span class="font-999">人</span>
+	                        			</div>
+	                        		</div>
+	                            </div>
+                            </div>
+                        </div>
+                    </li>
+					<li style="padding-right: 15px;">
+						<div class="item-content" style="font-size:15px;padding-top:8px;">
+<!--                                    <div  style="width: 45%;height:43px;border: 1px solid #E4E3E6;"> -->
+<!--                         				<div class="calendar-begin" id="beginDate" style="line-height: 43px;height: 43px;display: inline;color:#999999;padding-left:5px;">开始日期</div> -->
+<!--                         				<div class="clear closeBeginDate" style="display: none;float:right;clear:left;min-width:18px;"></div> -->
+
+<!-- 										<div class="item-title-row"> -->
+<!-- 	                               			<div class="item-title"> -->
+<!-- 	                               				<div class="calendar-begin" id="beginDate" style="line-height: 43px;height: 43px;color:#999999;padding-left:5px;">开始日期</div> -->
+<!-- 	                               			</div> -->
+<!-- 	                               			<div class="item-after" style="width:16px;"> -->
+<!-- 	                               				<div class="clear closeBeginDate" style="display: none;"></div> -->
+<!-- 	                               			</div> -->
+<!-- 	                               		</div> -->
+<!-- 	                               	</div> -->
+									<div style="width: 45%;height:43px;border: 1px solid #E4E3E6;">
+                               				<div class="calendar-begin" id="beginDate" style="line-height: 43px;height: 43px;overflow: hidden;color:#999999;padding-left:5px;">开始日期</div>
+                               		</div>
+                               		<div class="clear closeBeginDate" style="display: none;margin-left:-19px;width:18px;z-index:99999;"></div>
+                                   <div style="line-height:43px;text-align: center;width: 10%;overflow: hidden;">至</div>
+<!--                                    <div  style="width: 45%;height:43px;border: 1px solid #E4E3E6;"> -->
+<!--                         				<div class="calendar-end" id="endDate" style="line-height: 43px;height: 43px;display: inline;color:#999999;padding-left:5px;">截止日期</div> -->
+<!--                         				<div class="clear closeEndDate" style="display: none;float:right;clear:left;min-width:18px;"></div> -->
+<!-- 								    	<div class="item-title-row"> -->
+<!--                              				<div class="item-title"> -->
+<!--                              					<div class="calendar-end" id="endDate" style="line-height: 43px;height: 43px;color:#999999;padding-left:5px;">截止日期</div> -->
+<!--                              				</div> -->
+<!--                              				<div class="item-after" style="width:16px;"> -->
+<!--                              					<div class="clear closeEndDate" style="display: none;"></div> -->
+<!--                              				</div> -->
+<!--                              			</div> -->
+<!--                              		</div> -->
+									<div style="width: 45%;height:43px;border: 1px solid #E4E3E6;">
+                               				<div class="calendar-end" id="endDate" style="line-height: 43px;height: 43px;overflow: hidden;color:#999999;padding-left:5px;">开始日期</div>
+                               		</div>
+                               		<div class="clear closeEndDate" style="display: none;margin-left:-19px;width:18px;z-index:99999;"></div>
+                        </div>
+                        <div class="item-content" id="dateError" style="padding-top:5px;display:none;">
+                        		<div style="color:white;background-color:red;padding:5px 15px 5px 5px;" id="dateErrorMsg">请输入正确的开始结束时间</div>
+                        </div>
+                    </li>
+					<li style="padding-right: 15px;">
+                        <div class="item-content" style="font-size:15px;padding-top:8px;padding-bottom:8px;">
+								<div class="item-input" style="width: 45%; height: 43px; border: 1px solid #E4E3E6;">
+									<input type="tel" placeholder="手机号码后四位" class="phone" id="phoneNo" style="font-size: 15px;" maxlength="4" />
+								</div>
+								<div class="clear clearPhone" style="display: none;margin-left:-19px;width:18px;z-index:99999;"></div>
+								<div style="line-height:43px;text-align: center;width: 10%;"></div>
+								<div class="queryData" style="width: 45%; height: 43px; line-height: 43px; text-align: center;background-color: #3399FF; color: #ffffff; border: 1px solid #E4E3E6;">
+									查询</div>
+						</div>
+                        <div class="item-content" id="phoneNoError" style="padding-bottom:8px;display:none;">
+                         	<div style="color:white;background-color:red;padding:5px 15px 5px 5px;" id="phoneNoErrorMsg">请输入正确的手机号后四位</div>
+                        </div>
+					</li>
+                </ul>
+            </div>
+			<div style="padding-left:15px;display:none;" class="queryDataSum">
+				<div class="item-content" style="display: block; font-size: 16px;">
+					<div class="item-inner">
+						<div id="effectiveData">
+							<div class="item-title-row" style="padding-top: 4px;">
+								<div class="item-title">
+									<span class="font-999">共有效推广</span> 
+									<span class="extensionNumber" style="color: #FF6600;">0</span> 
+									<span class="font-999">人</span>
+								</div>
+							</div>
+							<div class="item-title-row" style="padding-top: 2px;">
+								<div class="item-title">
+									<span class="font-999">共无效推广</span> 
+									<span class="invalidNumber" style="color: #FF6600;">0</span> 
+									<span class="font-999">人</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list-block media-list" style="margin-bottom: 0px;margin-top:0px;">
+                <div class="list-group">
+                    <ul>
+                        <li style="height: 40px;">
+                            <div class="item-content regQueryResultTitle" id="resultTitle">
+                                    <div style="width: 35%;">
+                                        <div class="item-title">姓名&nbsp;|&nbsp;手机号</div>
+                                    </div>
+                                    <div style="width: 30%;">
+                                        <div class="item-title">时间</div>
+                                    </div>
+                                    <div  style="width: 17.5%;">
+                                        <div class="item-title" style="text-align:center;">状态</div>
+                                    </div>
+                                    <div style="width: 17.5%;">
+                                        <div class="item-title" style="text-align:center;">兑奖</div>
+                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <input type="hidden" class="currentPage" value="1"/>
+                <input type="hidden" class="totalPage" value="0"/>
+                <ul class="storeUserList" style="font-size: 15px;">
+                	<li><div class="item-inner row no-gutter"><span style="padding-left:15px;">暂无记录</span></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

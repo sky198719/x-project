@@ -1,0 +1,800 @@
+{
+  "YYP": {
+    "data": {
+      "plannedAnnualRateTo": "10.00",
+      "accumulatedInvestors": "3374人",
+      "mostTenderAmountLabel": "300.00万元",
+      "frozenPeriod": "12个月",
+      "name": "月月派",
+      "floatingRate": "0.00",
+      "leastTenderAmountLabel": "100元",
+      "plannedAnnualRateFrom": "10.00",
+      "leastPeriod": "3",
+      "remark":""
+    },
+    "code": "200000"
+  },
+  "thirtyTender": {
+    "data": {
+      "accumulatedInvestors": "5.03万人",
+      "floatingRate": 5,
+      "id": "RI20180315716",
+      "leastPeriod": 1,
+      "leastPeriodUnit": "个月",
+      "leastTenderAmountLabel": "100元",
+      "limitPurchaseCount": 1,
+      "mostTenderAmountLabel": "10000元",
+      "name": "新元宝(新手专享)",
+      "plannedAnnualRate": 8,
+      "status": {
+        "code": "SOLD_OUT",
+        "message": "已售完"
+      },
+      "remark":""
+    },
+    "code": "200000"
+  },
+  "link": {
+    "data": {
+      "items": [
+        {
+          "textHref": "//www.sfia.org.cn/",
+          "text": "上海金融信息行业协会"
+        },
+        {
+          "textHref": "//www.nifa.org.cn/nifa/index.html",
+          "text": "中国互联网金融协会"
+        },
+        {
+          "textHref": "//www.wdzj.com/",
+          "text": "网贷之家"
+        },
+        {
+          "textHref": "//www.wjchina.org/",
+          "text": "网金中国"
+        },
+        {
+          "textHref": "//www.xinxindai.com",
+          "text": "网贷平台"
+        },
+        {
+          "textHref": "//bbs.xinxindai.com/",
+          "text": "P2P网贷论坛"
+        },
+        {
+          "textHref": "//finance.ifeng.com/itfinance/",
+          "text": "凤凰互联网金融"
+        },
+        {
+          "textHref": "//www.zixinke.com",
+          "text": "资信客"
+        },
+        {
+          "textHref": "//www.xinxindai.com/jijin-229/",
+          "text": "基金资讯"
+        },
+        {
+          "textHref": "//www.shengcai18.com/",
+          "text": "生菜网"
+        },
+        {
+          "textHref": "//www.midaijihua.com/",
+          "text": "米袋计划"
+        },
+        {
+          "textHref": "//www.58jr.cn/mall/main.do",
+          "text": "网投春秋"
+        },
+        {
+          "textHref": "//www.xinxindai.com/daikuan-791/",
+          "text": "贷款资讯"
+        },
+        {
+          "textHref": "//www.xinxindai.com/P2Pwangdaipingtai-1080/",
+          "text": "P2P网贷平台"
+        },
+        {
+          "textHref": "//www.trjcn.com/",
+          "text": "投融界"
+        },
+        {
+          "textHref": "//iof.hexun.com",
+          "text": "和讯互联网金融"
+        },
+        {
+          "textHref": "//www.icaifu.com/",
+          "text": "研报下载"
+        },
+        {
+          "textHref": "//shenzhen.rong360.com/",
+          "text": "深圳贷款"
+        },
+        {
+          "textHref": "//shanghai.roadoor.com/",
+          "text": "上海贷款"
+        },
+        {
+          "textHref": "//www.dimeng.net",
+          "text": "网贷系统"
+        },
+        {
+          "textHref": "//www.xinxindai.com/licaigongju--3/",
+          "text": "理财工具"
+        },
+        {
+          "textHref": "//www.xinxindai.com/licaizhiye--7/",
+          "text": "理财职业"
+        },
+        {
+          "textHref": "//www.xinxindai.com/licaizhishi--2/",
+          "text": "理财知识"
+        },
+        {
+          "textHref": "//www.xinxindai.com/licaipingtai--9/",
+          "text": "理财平台"
+        },
+        {
+          "textHref": "//www.xinxindai.com/yinhanglicai--4/",
+          "text": "银行理财"
+        },
+        {
+          "textHref": "//www.xinxindai.com/diyulicai--6/",
+          "text": "地域理财"
+        },
+        {
+          "textHref": "//www.xinxindai.com/touzilicai--8/",
+          "text": "投资理财"
+        },
+        {
+          "textHref": "//www.xinxindai.com/licairenqun--10/",
+          "text": "理财人群"
+        },
+        {
+          "textHref": "//www.xinxindai.com/licaichanpin--5/",
+          "text": "理财产品"
+        },
+        {
+          "textHref": "//www.jfjinrong.com",
+          "text": "票据理财"
+        },
+        {
+          "textHref": "//www.xinxindai.com/licai-1/",
+          "text": "理财资讯"
+        },
+        {
+          "textHref": "//h.shlxhd.gov.cn/xinxindai.lx",
+          "text": "新新贷党支部"
+        }
+      ]
+    },
+    "code": "200000"
+  },
+  "achievement": {
+    "code": 200000,
+    "data": {
+      "totalRegister": "1,733,481",
+      "securityItem": {
+        "amount": "5年276天15小时",
+        "nvalue": "47208861.79",
+        "unit": "",
+        "code": "SECURITY_TIME",
+        "name": "安全运营时间",
+        "inforName": "质保服务专款余额（元）"
+      },
+      "totalIncomeItem": {
+        "amount": "5.64",
+        "nvalue": "564256440.5",
+        "unit": "亿元",
+        "code": "TOTAL_INCOME",
+        "name": "累计为投资人赚取",
+        "inforName": "累计为投资人赚取"
+      },
+      "totalTradeItem": {
+        "amount": "115.38",
+        "nvalue": "11537894828.88",
+        "unit": "亿元",
+        "code": "TOTAL_TRADE",
+        "name": "累计交易总额",
+        "inforName": "累计交易总额"
+      }
+    }
+  },
+  "XYB": {
+    "data": {
+      "accumulatedInvestors": "12.42万人",
+      "items": [
+        {
+          "id": "OS20170928982",
+          "plannedAnnualRateTo": "7",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "立即抢购",
+            "code": "SELLING"
+          },
+          "mostTenderAmountLabel": "500.00万元",
+          "frozenPeriod": 1,
+          "floatingRate": 0,
+          "leftAmount": "4399700",
+          "leastTenderAmountLabel": "100元",
+          "plannedAnnualRateFrom": "7",
+          "periodName": "201709280102期",
+          "leastPeriod": "1",
+          "remark":""
+        },
+        {
+          "id": "OS20170927975",
+          "plannedAnnualRateTo": "7.5",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "立即抢购",
+            "code": "SELLING"
+          },
+          "mostTenderAmountLabel": "300.00万元",
+          "frozenPeriod": 3,
+          "floatingRate": 0,
+          "leftAmount": "2714600",
+          "leastTenderAmountLabel": "100元",
+          "plannedAnnualRateFrom": "7.5",
+          "periodName": "201709280301期",
+          "leastPeriod": "3",
+          "remark":""
+        },
+        {
+          "id": "OS20170927976",
+          "plannedAnnualRateTo": "8.5",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "立即抢购",
+            "code": "SELLING"
+          },
+          "mostTenderAmountLabel": "300.00万元",
+          "frozenPeriod": 6,
+          "floatingRate": 0,
+          "leftAmount": "2923600",
+          "leastTenderAmountLabel": "100元",
+          "plannedAnnualRateFrom": "8.5",
+          "periodName": "201709280601期",
+          "leastPeriod": "6",
+          "remark":""
+        },
+        {
+          "id": "OS20170928981",
+          "plannedAnnualRateTo": "10.5",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "立即抢购",
+            "code": "SELLING"
+          },
+          "mostTenderAmountLabel": "500.00万元",
+          "frozenPeriod": 12,
+          "floatingRate": 0,
+          "leftAmount": "2197600",
+          "leastTenderAmountLabel": "100元",
+          "plannedAnnualRateFrom": "10.5",
+          "periodName": "201709281202期",
+          "leastPeriod": "12",
+          "remark":""
+        },
+        {
+          "id": "OS20170927978",
+          "plannedAnnualRateTo": "10.8",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "立即抢购",
+            "code": "SELLING"
+          },
+          "mostTenderAmountLabel": "300.00万元",
+          "frozenPeriod": 18,
+          "floatingRate": 0,
+          "leftAmount": "3000000",
+          "leastTenderAmountLabel": "100元",
+          "plannedAnnualRateFrom": "10.8",
+          "periodName": "201709281801期",
+          "leastPeriod": "18",
+          "remark":""
+        },
+        {
+          "id": "OS20170927979",
+          "plannedAnnualRateTo": "11.2",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "立即抢购",
+            "code": "SELLING"
+          },
+          "mostTenderAmountLabel": "300.00万元",
+          "frozenPeriod": 24,
+          "floatingRate": 0,
+          "leftAmount": "2960000",
+          "leastTenderAmountLabel": "100元",
+          "plannedAnnualRateFrom": "11.2",
+          "periodName": "201709282401期",
+          "leastPeriod": "24",
+          "remark":""
+        },
+        {
+          "id": "OS20170927980",
+          "plannedAnnualRateTo": "12",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "立即抢购",
+            "code": "SELLING"
+          },
+          "mostTenderAmountLabel": "300.00万元",
+          "frozenPeriod": 36,
+          "floatingRate": 0,
+          "leftAmount": "2626700",
+          "leastTenderAmountLabel": "100元",
+          "plannedAnnualRateFrom": "12",
+          "periodName": "201709283601期",
+          "leastPeriod": "36",
+          "remark":""
+        }
+      ],
+      "name": "新元宝",
+      "isMemberDay": "false"
+    },
+    "code": "200000"
+  },
+  "BBGS": {
+    "data": {
+      "id": "ST2017092242222",
+      "plannedAnnualRateTo": "10.4",
+      "accumulatedInvestors": "171.78万人",
+      "status": {
+        "message": "立即抢购",
+        "code": "SELLING"
+      },
+      "mostTenderAmountLabel": "100.00万元",
+      "name": "步步高升",
+      "floatingRate": "0",
+      "leastTenderAmountLabel": "100元",
+      "plannedAnnualRateFrom": "6",
+      "leastPeriod": "1",
+      "remark":""
+    },
+    "code": "200000"
+  },
+  "more": {
+    "data": {
+      "items": [
+        {
+          "textHref": "//www.xinxindai.com/html/help/contactus.html",
+          "text": "全国服务",
+          "extendUrl": "//www.xinxindai.com/static/images/public/v5index20140613_r8_c3.png"
+        },
+        {
+          "textHref": "//www.xinxindai.com/security/business_security.html",
+          "text": "100%隐私保护",
+          "extendUrl": "//www.xinxindai.com/static/images/public/v5index20140613_r8_c7.png"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=864",
+          "text": "中国小额信贷联盟P2P行业委员会",
+          "extendUrl": "//www.xinxindai.com/static/images/public/v5index20140613_r8_c13.png"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=816",
+          "text": "上海网络信贷服务业企业联盟成员",
+          "extendUrl": "//www.xinxindai.com/static/images/public/v5index20140613_r8_c18.png"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=746",
+          "text": "上海市信息服务业行业协会理事单位",
+          "extendUrl": "//www.xinxindai.com/static/images/public/v5index20140613_r8_c23.png"
+        },
+        {
+          "textHref": "//www.ceh.com.cn/jjzx/2013/03/179049.shtml",
+          "text": "上海陕西商会副会长单位",
+          "extendUrl": "//www.xinxindai.com/static/images/public/v5index20140613_r8_c28.png"
+        },
+        {
+          "textHref": "//www.sfia.org.cn/",
+          "text": "上海金融信息行业协会",
+          "extendUrl": "//www.xinxindai.com/static/images/public/v5index20140613_r8_c29.png"
+        }
+      ]
+    },
+    "code": "200000"
+  },
+  "RRY": {
+    "data": {
+      "plannedAnnualRateFormat": "1.38",
+      "bonusEnabled": "true",
+      "accumulatedInvestors": "",
+      "productCode": "000001",
+      "mostTenderAmountLabel": "8.00万元",
+      "plannedAnnualRate": 5,
+      "name": "日日盈",
+      "floatingRate": "1.00",
+      "leastTenderAmountLabel": "1元",
+      "leastPeriod": "0",
+      "remark":""
+    },
+    "code": "200000"
+  },
+  "partner": {
+    "data": {
+      "items": [
+        {
+          "textHref": "//www.nifa.org.cn/nifa/index.html",
+          "text": "中国互联网金融协会",
+          "extendUrl": "//www.xinxindai.com/static/admin/image/data/link/ddda8a910ef44e03a005d9bfe7eea0f7.jpg"
+        },
+        {
+          "textHref": "//www.dachengnet.com/",
+          "text": "大成律师事务所",
+          "extendUrl": "//www.xinxindai.com/static/admin//image/data/footer/v5index20140613_r1_c3.jpg"
+        },
+        {
+          "textHref": "//www.fuiou.com/",
+          "text": "上海富友支付服务有限公司",
+          "extendUrl": "//www.xinxindai.com/static/admin//image/data/footer/v5index20140613_r1_c4.jpg"
+        },
+        {
+          "textHref": "//www.pycredit.cn/",
+          "text": "鹏元征信有限公司",
+          "extendUrl": "//www.xinxindai.com/static/admin/image/data/link/2e3396b8d90449c2a2f3202244cb5e75.jpg"
+        },
+        {
+          "textHref": "//www.shanghai-cis.com.cn/index2.aspx",
+          "text": "上海资信有限公司",
+          "extendUrl": "//www.xinxindai.com/static/admin//image/data/footer/v5index20140613_r1_c6.jpg"
+        },
+        {
+          "textHref": "//qhzx.pingan.com/",
+          "text": "前海征信",
+          "extendUrl": "//www.xinxindai.com/static/admin/image/data/link/7c6f83d709ad4e1fb7f60465fb9263bd.png"
+        },
+        {
+          "textHref": "//www.fadada.com/ ",
+          "text": "法大大",
+          "extendUrl": "//www.xinxindai.com/static/admin/image/data/link/88d7f95df1e94e819448ecf211d1516f.jpg"
+        },
+        {
+          "textHref": "//www.99bill.com/",
+          "text": "快钱支付清算信息有限公司",
+          "extendUrl": "//www.xinxindai.com/static/admin/image/data/link/5aa119d4e42240febe9bd8f8b814ea9a.jpg"
+        }
+      ]
+    },
+    "code": "200000"
+  },
+  "announcement": {
+    "data": {
+      "items": [
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1782&newstype=news-1-1.html",
+          "text": "【17-9-28】新新贷发标预告"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1923&newstype=news-1-1.html",
+          "text": "9月会员日活动中奖名单公告及领奖须知"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1919&newstype=news-1-1.html",
+          "text": "【活动预告】9月27日 欢乐星期三"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1915&newstype=news-1-1.html",
+          "text": "【活动预告】9月会员日 庆丰收 送黄金！"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1912&newstype=news-1-1.html",
+          "text": "9月20日欢乐星期三活动告知"
+        }
+      ]
+    },
+    "code": "200000"
+  },
+  "ZQZR": {
+    "data": {
+      "items": [
+        {
+          "id": "TR2017090196567",
+          "transferPrice": "113940",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "已抢完",
+            "code": "SOLD_OUT"
+          },
+          "plannedAnnualRate": "11",
+          "name": "生意周转",
+          "label": "ic-xsd",
+          "transferPriceFormat": "113,940.00",
+          "leastPeriod": "12",
+          "riskGrade": "A"
+        },
+        {
+          "id": "TR2017083086295",
+          "transferPrice": "767400",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "已抢完",
+            "code": "SOLD_OUT"
+          },
+          "plannedAnnualRate": "11",
+          "name": "资金短期周转",
+          "label": "ic-xsd",
+          "transferPriceFormat": "767,400.00",
+          "leastPeriod": "12",
+          "riskGrade": "A"
+        },
+        {
+          "id": "TR2017082981142",
+          "transferPrice": "611000",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "已抢完",
+            "code": "SOLD_OUT"
+          },
+          "plannedAnnualRate": "11",
+          "name": "短期周转 多多支持",
+          "label": "ic-xsd",
+          "transferPriceFormat": "611,000.00",
+          "leastPeriod": "12",
+          "riskGrade": "A"
+        },
+        {
+          "id": "TR2016123037196",
+          "transferPrice": "45455.22",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "已抢完",
+            "code": "SOLD_OUT"
+          },
+          "plannedAnnualRate": "12",
+          "name": "资金周转 扩大经营",
+          "label": "ic-xsd",
+          "transferPriceFormat": "45,455.22",
+          "leastPeriod": "12",
+          "riskGrade": "A"
+        }
+      ],
+      "name": "债权转让"
+    },
+    "code": "200000"
+  },
+  "SBZT": {
+    "data": {
+      "items": [
+        {
+          "id": "BW201709278789",
+          "bidAmount": 10720,
+          "percent": "100",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "已抢完",
+            "code": "SOLD_OUT"
+          },
+          "plannedAnnualRate": "12",
+          "name": "短期经营借款_FR",
+          "leftAmountFormat": "0.00",
+          "leftAmount": 0,
+          "label": "ic-xsd",
+          "leastPeriod": "12",
+          "riskGrade": "A"
+        },
+        {
+          "id": "BW201709278787",
+          "bidAmount": 12060,
+          "percent": "100",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "已抢完",
+            "code": "SOLD_OUT"
+          },
+          "plannedAnnualRate": "12",
+          "name": "短期经营借款_FR",
+          "leftAmountFormat": "0.00",
+          "leftAmount": 0,
+          "label": "ic-xsd",
+          "leastPeriod": "12",
+          "riskGrade": "A"
+        },
+        {
+          "id": "BW201709278764",
+          "bidAmount": 20100,
+          "percent": "100",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "已抢完",
+            "code": "SOLD_OUT"
+          },
+          "plannedAnnualRate": "12",
+          "name": "短期经营借款_FR",
+          "leftAmountFormat": "0.00",
+          "leftAmount": 0,
+          "label": "ic-xsd",
+          "leastPeriod": "12",
+          "riskGrade": "A"
+        },
+        {
+          "id": "BW201709278759",
+          "bidAmount": 216580,
+          "percent": "100",
+          "leastPeriodUnit": "个月",
+          "status": {
+            "message": "已抢完",
+            "code": "SOLD_OUT"
+          },
+          "plannedAnnualRate": "11",
+          "name": "短期经营借款",
+          "leftAmountFormat": "0.00",
+          "leftAmount": 0,
+          "label": "ic-xsd",
+          "leastPeriod": "12",
+          "riskGrade": "A"
+        }
+      ],
+      "name": "散标直投"
+    },
+    "code": "200000"
+  },
+  "news": {
+    "data": {
+      "items": [
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1922&newstype=news-2-1.html",
+          "text": "[最新动态]P2P最新合规成绩单：哪些平台限额最彻底？新新贷用数据告诉你！"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1918&newstype=news-2-1.html",
+          "text": "[最新动态]新新贷受邀出席第十五届中智人力资本调研成果发布会"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1909&newstype=news-2-1.html",
+          "text": "[最新动态]8月网贷平台“百强榜”发布，新新贷位列上海网贷平台第九名"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1905&newstype=news-2-1.html",
+          "text": "[最新动态]新新贷受邀参与《2017上海网络信贷服务业白皮书》编撰工作"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1898&newstype=news-2-1.html",
+          "text": "[最新动态]中国互联网金融协会莅临新新贷考察指导"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1894&newstype=news-2-1.html",
+          "text": "[最新动态]上海西安商会会长刘靖一行莅临中新控股集团调研"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1890&newstype=news-2-1.html",
+          "text": "[最新动态]新新贷受邀“网络借贷信息中介机构业务活动信息披露指引解读”高级研修班"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1889&newstype=news-2-1.html",
+          "text": "[最新动态]新新贷受邀参加上海金融信息行业协会一届三次会员大会暨一届五次理事会"
+        }
+      ]
+    },
+    "code": "200000"
+  },
+  "YJDJ": {
+    "data": {
+      "plannedAmount": 100000,
+      "activitedEndDate": 1506614340000,
+      "status": {
+        "message": "等待发售",
+        "code": "WAIT_TO_SELL"
+      },
+      "activitedEndDateFormat": "23:59",
+      "leftAmount": 100000,
+      "id": "RI20170928913",
+      "leastPeriodUnit": "天",
+      "mostTenderAmountLabel": "3000元",
+      "activitedStartDateFormat": "20:00",
+      "plannedAnnualRate": 15,
+      "name": "月进斗金",
+      "lefTime": 0,
+      "floatingRate": "0.00",
+      "leastTenderAmountLabel": "100元",
+      "activitedStartDate": 1506600000000,
+      "leastPeriod": "31",
+      "periodName": "1",
+      "remark":""
+    },
+    "code": "200000"
+  },
+  "ad": {
+    "data": {
+      "items": [
+        {
+          "id": "1170",
+          "textHref": "//www.xinxindai.com/html/landPages/sevengold.html?utm_source=m6JnAn",
+          "text": "七天大胜加息",
+          "backgroundColor": "",
+          "extendUrl": "//www.xinxindai.com/static/admin/image/data/ppt/4ea0564bd8494d058f827bcc8237162f.jpg"
+        },
+        {
+          "id": "1162",
+          "textHref": "//www.xinxindai.com/html/introduce/guide.html",
+          "text": "新手福利PC",
+          "backgroundColor": "",
+          "extendUrl": "//www.xinxindai.com/static/admin/image/data/ppt/eaf7a4e945e4478b820c1d508beed4e4.jpg"
+        },
+        {
+          "id": "1186",
+          "textHref": "//www.xinxindai.com/html/help/reportAugust.html",
+          "text": "8月运营报告",
+          "backgroundColor": "",
+          "extendUrl": "//www.xinxindai.com/static/admin/image/data/ppt/ccb9335875d74df9b443336756dafa49.jpg"
+        },
+        {
+          "id": "1126",
+          "textHref": "//mp.weixin.qq.com/s/C9dPdKn20OnYIuICLGhrKQ",
+          "text": "新新贷接入互金披露系统",
+          "backgroundColor": "",
+          "extendUrl": "//www.xinxindai.com/static/admin/image/data/ppt/6cfbd204578648f9a4ad93ce73c7e531.jpg"
+        }
+      ]
+    },
+    "code": "200000"
+  },
+  "media": {
+    "data": {
+      "items": [
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1818&newstype=news-2-1.html",
+          "text": "[媒体报道]新新贷：用发展的眼光对待细节"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1768&newstype=news-2-1.html",
+          "text": "[媒体报道]东方卫视：上海：严堵网贷漏洞，探索1+N监管模式"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1767&newstype=news-2-1.html",
+          "text": "[媒体报道]新闻晨报：<新新贷CEO张扬：解读网贷2.0时代互金新格局>"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1766&newstype=news-2-1.html",
+          "text": "[媒体报道]搜狐：新新贷携手“爱的电影”开展观影公益活动"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1733&newstype=news-2-1.html",
+          "text": "[媒体报道]新新贷获中国网消费频道“重点关注宣传示范单位”称号"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1715&newstype=news-2-1.html",
+          "text": "[媒体报道]3.15特讯 | 2017国际消费者权益日，看新新贷如何立于言、践于行"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1697&newstype=news-2-1.html",
+          "text": "[媒体报道]CCTV证券资讯频道： 新新贷副总裁杨军接受中国经济新模式创新与发展峰会的采访"
+        },
+        {
+          "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1696&newstype=news-2-1.html",
+          "text": "[媒体报道]网贷之家：5年只做一件事又何妨 互联网金融“匠心”故事"
+        }
+      ]
+    },
+    "code": "200000"
+  },
+  "investmentRank": {
+    "data": {
+      "items": [
+        {
+          "nickName": "w**伟",
+          "investmentAmount": 24603000
+        },
+        {
+          "nickName": "li****mei",
+          "investmentAmount": 3999400
+        },
+        {
+          "nickName": "YU***NG",
+          "investmentAmount": 3402100
+        },
+        {
+          "nickName": "ko****min",
+          "investmentAmount": 3354000
+        },
+        {
+          "nickName": "A1***00",
+          "investmentAmount": 3321400
+        }
+      ],
+      "currentMonth": "09"
+    },
+    "code": "200000"
+  }
+}

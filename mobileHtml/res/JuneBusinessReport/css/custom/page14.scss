@@ -1,0 +1,99 @@
+
+//page14
+
+
+.chart-ring {
+  margin-top: 20px;
+  position: relative;
+  height: 45vw;
+}
+
+.chart-ring > * {
+  width: 45vw;
+  height: 45vw;
+  position: absolute;
+  right: 0;
+  padding-right: 50%;
+  font-size: 9px;
+}
+
+.chart-ring .co-s {
+  top: 0
+}
+
+.chart-ring .co-m {
+  top: 10%
+}
+
+.chart-ring .co-l {
+  top: 20%
+}
+
+.chart-ring .co-s:before,
+.chart-ring .co-s:after {
+  width: 90%;
+  height: 90%;
+  right: 0;
+  z-index: -1;
+}
+
+.chart-ring .co-m:before,
+.chart-ring .co-m:after {
+  width: 70%;
+  height: 70%;
+  right: 10%;
+  z-index: -1;
+}
+
+.chart-ring .co-l:before,
+.chart-ring .co-l:after {
+  width: 50%;
+  height: 50%;
+  right: 20%;
+  z-index: -1;
+}
+
+.chart-ring .co-s:before {
+  background: linear-gradient(-0deg, #4ceea0 0%, #0dcb6d 100%) 100% 0, linear-gradient(40deg, rgba(0, 0, 0, 0) 62%, #4ceea0 36%) 100% 95%;
+}
+
+.chart-ring .co-m:before {
+  background: linear-gradient(-0deg, #c0df48 0%, #b4c402 100%) 100% 0, linear-gradient(50deg, transparent 37%, #c0df48 36%) 100% 95%;
+}
+
+.chart-ring .co-l:before {
+  background: linear-gradient(0deg, #fece37 0%, #dd8209 100%) 100% 0;
+}
+
+.chart-ring .co-s:after {
+  background: radial-gradient(at 50% 50%, #030712 61%, rgba(0, 0, 0, 0) 62%);
+}
+
+.chart-ring .co-m:after {
+  background: radial-gradient(at 50% 50%, #030712 58%, rgba(0, 0, 0, 0) 59%);
+}
+
+.chart-ring .co-l:after {
+  background: radial-gradient(at 50% 50%, #030712 53%, rgba(0, 0, 0, 0) 54%);
+}
+
+.chart-ring .co-s:before,
+.chart-ring .co-m:before,
+.chart-ring .co-l:before {
+  background-size: 50%;
+}
+
+.chart-ring .co-s:before,
+.chart-ring .co-m:before,
+.chart-ring .co-l:before,
+.chart-ring .co-s:after,
+.chart-ring .co-m:after,
+.chart-ring .co-l:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 2%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  //border:1px solid rgba(255,255,255,.1)
+}

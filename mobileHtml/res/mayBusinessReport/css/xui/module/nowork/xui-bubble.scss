@@ -1,0 +1,35 @@
+.xui-bubble{
+  color:#191919;
+  background: #c58b53;
+  padding: .3rem 1rem;
+  position: relative;
+  border-radius: 1px;
+}
+
+.xui-bubble:before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  right:99%;
+  top:50%;
+  margin-top:-4px;
+  border:4px solid transparent;
+  border-right-color: #c58b53;
+}
+
+.xui-bubble[co="main"]{
+  color:#191919;
+  background: #c58b53;
+}
+.xui-bubble[co="main"]:before{
+  border-right-color: #c58b53;
+}
+.xui-bubble[co="vice"]{
+  color:#c58b53;
+  background: #474747;
+}
+.xui-bubble[co="vice"]:before{
+  border-right-color: #474747;
+}

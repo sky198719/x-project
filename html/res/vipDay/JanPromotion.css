@@ -1,0 +1,675 @@
+@import "css/common.css";
+input,
+input:focus {
+  background: none;
+  outline: none;
+  border: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button {
+  border: none;
+  outline: none;
+}
+input::-webkit-placeholder {
+  font-size: 14px;
+  color: #993333;
+}
+input::placeholder {
+  font-size: 14px;
+  color: #993333;
+}
+.user-verigy .disfont {
+  font-size: 12px !important;
+}
+#J_wrapBody .wrap {
+  width: 1198px;
+  margin: 0 auto;
+  position: relative;
+}
+.wrap-top {
+  width: 100%;
+  height: 2203px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: url("img/Jan/pro-top.jpg") center center no-repeat;
+}
+.wrap-top .content-list {
+  position: absolute;
+  top: 1230px;
+  left: 50%;
+  margin-left: -342px;
+  width: 672px;
+  height: 45px;
+  line-height: 45px;
+}
+.wrap-top .content-list .winData {
+  width: 672px;
+  height: 45px;
+}
+.wrap-top .content-list .winData ul {
+  height: 45px;
+  display: inline-block;
+  overflow: hidden;
+  zoom: 1;
+}
+.wrap-top .content-list .winData ul li {
+  height: 45px;
+  line-height: 46px;
+  font-size: 20px;
+  color: #612900;
+}
+.wrap-top .content-list .winData ul li span {
+  display: inline-block;
+}
+.wrap-top .content-list .winData .active-w {
+  width: 100%;
+  text-align: center;
+}
+.wrap-top .content-list .plus-mar-left {
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.wrap-top .content-list .plus-mar-left ul {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.wrap-top .content-list .plus-mar-left ul li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  text-indent: 15px;
+}
+.wrap-top .rules-twinkle {
+  position: absolute;
+  z-index: 100;
+  top: 1290px;
+  right: 220px;
+  width: 212px;
+  height: 63px;
+  background: url("img/Jan/rule.png") center center no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+  -webkit-animation: flash 3s infinite alternate ease;
+  -moz-animation: flash 3s infinite alternate ease;
+  -ms-animation: flash 3s infinite alternate ease;
+  -o-animation: flash 3s infinite alternate ease;
+  animation: flash 3s infinite alternate ease;
+}
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+@-moz-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+@-ms-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+@-o-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+.wrap-top .person {
+  position: absolute;
+  z-index: 90;
+  top: 1344px;
+  right: 145px;
+  width: 152px;
+  height: 175px;
+  cursor: pointer;
+}
+.wrap-top .activity-gl {
+  position: absolute;
+  z-index: 100;
+  top: 1853px;
+  left: 50%;
+  margin-left: -604px;
+  width: 1218px;
+  height: 296px;
+  background: url("img/Jan/pro-gl.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.wrap-top .register {
+  float: right;
+  margin-top: 60px;
+  padding: 30px;
+  background: url("img/Jan/register-bg.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.wrap-top .register .register-title {
+  margin-bottom: 18px;
+  height: 26px;
+  background: url("img/Jan/register-title.png") center no-repeat;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -ms-background-size: contain;
+}
+.wrap-top .register .user-common {
+  width: 304px;
+  height: 38px;
+  margin: 0 auto 14px;
+}
+.wrap-top .register .user-common input {
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #f0f0f0;
+  text-indent: 6px;
+  font-size: 14px;
+  color: #993333;
+}
+.wrap-top .register .user-num,
+.wrap-top .register .user-psw {
+  width: 304px;
+}
+.wrap-top .register .user-psw {
+  position: relative;
+}
+.wrap-top .register .user-psw .psw-cur {
+  position: absolute;
+  display: inline-block;
+  left: 6px;
+  top: 12px;
+  height: 14px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #993333;
+}
+.wrap-top .register .J-num,
+.wrap-top .register .J-psw {
+  width: 304px;
+  height: 40px;
+  background: #f6f5f5;
+}
+.wrap-top .register .user-verigy {
+  margin: 0 auto 14px;
+}
+.wrap-top .register .verify-special {
+  margin: 0 auto 10px;
+}
+.wrap-top .register .user-voice {
+  text-align: right;
+  margin: 0 auto 14px;
+}
+.wrap-top .register .user-verigy .J-verify,
+.wrap-top .register .user-verigy .J-phoneyzm {
+  float: left;
+  width: 178px;
+  height: 40px;
+  background: #f6f5f5;
+}
+.wrap-top .register .user-verigy .change-verify,
+.wrap-top .register .user-verigy .get-phoneyzm {
+  float: left;
+  margin-left: 8px;
+  width: 116px;
+  height: 40px;
+  background: #f6f5f5;
+  color: #993333;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  behavior: url("css/ie-css3.htc");
+}
+.wrap-top .register .user-voice .J-voiceyzm {
+  font-size: 14px;
+  color: #fff;
+}
+.wrap-top .register .user-verigy .get-phoneyzm {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  line-height: 40px;
+}
+.wrap-top .register .user-agree {
+  width: 302px;
+  margin: 0 auto  16px;
+  position: relative;
+}
+.wrap-top .register .user-agree span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 14px;
+  font-size: 14px;
+  color: #993333;
+  text-indent: 8px;
+}
+.wrap-top .register .user-agree span a {
+  font-size: 14px;
+  color: #cc0033;
+  cursor: pointer;
+}
+.wrap-top .register .user-agree .check-style {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  position: relative;
+}
+.wrap-top .register .user-agree .check-style .user-check {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  margin-top: -8px;
+  left: 50%;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.wrap-top .register .user-agree .check-style .checked {
+  background: url("img/Jan/checked.png") center no-repeat;
+  background-size: 8px 9px;
+}
+.wrap-top .register .have-login {
+  width: 312px;
+  margin: 0 auto;
+  text-align: right;
+  font-size: 14px;
+  color: #993333;
+}
+.wrap-top .register .have-login .logined {
+  text-decoration: underline;
+  color: #cc0033;
+}
+.wrap-top .register .cur {
+  width: 302px;
+  height: 20px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: red;
+}
+.wrap-top .register .cur-special {
+  margin: 0 auto;
+  width: 268px;
+  color: #fff;
+}
+.wrap-top .register .register-btn {
+  display: block;
+  width: 282px;
+  height: 61px;
+  text-align: center;
+  line-height: 61px;
+  margin: 0 auto 14px;
+  background: url("img/Jan/btn.png") center no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.wrap-top .registered h3 {
+  font-size: 16px;
+  color: #cc0033;
+}
+.wrap-top .registered .logo-company {
+  margin: 40px auto 0;
+  width: 125px;
+  height: 125px;
+}
+.wrap-top .registered .logo-company img {
+  margin-left: 8px;
+  width: 100%;
+  height: 100%;
+}
+.wrap-top .registered .activity-info {
+  padding-top: 32px;
+  text-align: center;
+  font-size: 22px;
+  color: #cc0033;
+  font-weight: bold;
+  height: 23px;
+  line-height: 23px;
+}
+.wrap-top .registered .activity-cur {
+  padding-top: 16px;
+  text-align: center;
+  font-size: 20px;
+  color: #cc0033;
+  height: 20px;
+  line-height: 20px;
+}
+.wrap-top .registered .invest {
+  display: block;
+  width: 282px;
+  height: 61px;
+  margin: 36px auto 0;
+  background: url("img/Jan/registered-btn.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.wrap-center {
+  width: 100%;
+  height: 727px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: url("img/Jan/pro-center.jpg") center center no-repeat;
+  overflow: hidden;
+}
+.wrap-center .operate-data {
+  width: 1120px;
+  margin: 134px auto 0;
+  height: 120px;
+}
+.wrap-center .operate-data .advantage-data {
+  width: 1020px;
+  margin: 0 auto;
+  padding-top: 30px;
+  clear: both;
+  overflow: hidden;
+}
+.wrap-center .operate-data .advantage-data li {
+  float: left;
+  width: 210px;
+  color: #fff;
+  text-align: left;
+}
+.wrap-center .operate-data .advantage-data li .advantage-content {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+}
+.wrap-center .operate-data .advantage-data li p {
+  text-align: center;
+  font-size: 25px;
+  color: #fff15c;
+  font-weight: bold;
+  width: 210px;
+}
+.wrap-center .operate-data .advantage-data li p span {
+  font-size: 32px;
+}
+.wrap-center .operate-data .advantage-data .advantage-first {
+  margin-left: 10px;
+  width: 150px;
+}
+.wrap-center .operate-data .advantage-data .advantage-first p {
+  width: 150px;
+}
+.wrap-center .operate-data .advantage-data .advantage-second {
+  margin-left: 94px;
+}
+.wrap-center .operate-data .advantage-data .advantage-third {
+  width: 190px;
+  margin-left: 60px;
+}
+.wrap-center .operate-data .advantage-data .advantage-third p {
+  width: 190px;
+}
+.wrap-bottom {
+  width: 100%;
+  height: 800px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: url("img/Jan/pro-bottom.jpg") center center no-repeat;
+  overflow: hidden;
+}
+.wrap-bottom .product-data {
+  width: 1164px;
+  height: 88px;
+  margin: 230px auto 0;
+}
+.wrap-bottom .product-data .product-common .pro-info {
+  display: inline-block;
+  padding-right: 36px;
+  vertical-align: middle;
+  margin-left: 107px;
+  border-right: 1px solid #993333;
+}
+.wrap-bottom .product-data .product-common .pro-info p {
+  height: 28px;
+  line-height: 28px;
+  font-size: 22px;
+  color: #80451d;
+}
+.wrap-bottom .product-data .product-common .pro-info p span {
+  font-size: 22px;
+  color: #c7131f;
+}
+.wrap-bottom .product-data .product-common .pro-info .info-two {
+  margin-top: 24px;
+}
+.wrap-bottom .product-data .product-common .pro-info .pro-key {
+  font-weight: bolder;
+  font-size: 28px;
+}
+.wrap-bottom .product-data .product-common .pro-data {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 36px;
+}
+.wrap-bottom .product-data .product-common .pro-data .p-apr {
+  font-size: 30px;
+  color: #c7131f;
+  height: 48px;
+  line-height: 48px;
+}
+.wrap-bottom .product-data .product-common .pro-data .p-apr span {
+  font-weight: bolder;
+  font-size: 48px;
+}
+.wrap-bottom .product-data .product-common .pro-data .p-apr i {
+  font-style: normal;
+  font-size: 35px;
+}
+.wrap-bottom .product-data .product-common .p-history {
+  margin-top: 18px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 20px;
+  color: #80451d;
+}
+.wrap-bottom .product-data .xscp-data {
+  float: left;
+  width: 556px;
+  height: 88px;
+  margin: 0 auto;
+}
+.wrap-bottom .product-data .xyb-data {
+  float: right;
+  width: 556px;
+  height: 88px;
+  margin: 0 auto;
+}
+.wrap-bottom .tb-content {
+  width: 1182px;
+  height: 224px;
+  margin: 76px auto 0;
+  background: url("img/Jan/table-bg.png") center center no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+.wrap-bottom .tb-content .product-td {
+  margin: 36px auto 0;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid #cc3333;
+  border-bottom: 1px solid #cc3333;
+  border-left: 1px solid #cc3333;
+}
+.wrap-bottom .tb-content .product-td .td-special {
+  width: 440px;
+}
+.wrap-bottom .tb-content .product-td th {
+  font-size: 20px;
+  width: 228px;
+  height: 46px;
+  color: #fff;
+  background: #d41623;
+  border-left: 2px solid #fff;
+  border-bottom: 1px solid #c7131f;
+  border-top: 1px solid #c7131f;
+}
+.wrap-bottom .tb-content .product-td .th-special {
+  border-left: 1px solid #c7131f;
+}
+.wrap-bottom .tb-content .product-td td {
+  font-size: 22px;
+  width: 228px;
+  height: 46px;
+  color: #80451d;
+  border-left: 2px solid #c7131f;
+  border-bottom: 2px solid #c7131f;
+}
+.wrap-bottom .tb-content .product-td td b {
+  color: #d41623;
+  font-size: 30px;
+  font-weight: 700;
+}
+.wrap-bottom .tb-content .product-td td p {
+  display: inline-block;
+  font-size: 22px;
+  color: #d41623;
+}
+.wrap-bottom .tb-content .product-td td p span {
+  font-size: 30px;
+  font-weight: 700;
+}
+.wrap-bottom .invest-cur {
+  padding-top: 22px;
+  position: relative;
+  width: 1142px;
+  margin: 0 auto;
+}
+.wrap-bottom .invest-cur p {
+  font-size: 16px;
+  color: #ffcccc;
+}
+.wrap-bottom .invest-cur .invest-l {
+  float: left;
+  margin-left: 0;
+}
+.wrap-bottom .invest-cur .invest-r {
+  float: right;
+  margin-right: 0;
+}
+.register-bottom {
+  position: relative;
+  width: 100%;
+  min-width: 1200px;
+  bottom: 110px;
+  height: 110px;
+  background: url("img/Jan/register-bkg.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.bottom-btn {
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 514px;
+  height: 92px;
+  line-height: 92px;
+  left: 50%;
+  top: 50%;
+  margin-left: -257px;
+  margin-top: -46px;
+  background: url("img/Jan/register-btn.png") center center no-repeat;
+  background-size: 100% 100%;
+  font-size: 44px;
+  color: #d33a30;
+  font-weight: 500;
+}
+.special-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 110px;
+  z-index: 999;
+  background: url("img/Jan/register-bkg.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.activity-end {
+  background: url("img/Jan/acitivity-end.png") center center no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  cursor: default;
+}
+.popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+}
+.popup .pop-main {
+  position: fixed;
+  width: 893px;
+  height: 469px;
+  top: 50%;
+  left: 50%;
+  margin-left: -446.5px;
+  margin-top: -234.5px;
+  background: url("img/Jan/activity-rules.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.popup .pop-main .close {
+  position: absolute;
+  top: 496px;
+  left: 50%;
+  margin-left: -30px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("img/Jan/close.png") center center no-repeat;
+  background-size: 100% 100%;
+}

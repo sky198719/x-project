@@ -1,0 +1,13 @@
+.am-hide-ac { animation : am-hide-ac .3s forwards; -webkit-animation : am-hide-ac .3s forwards ; opacity: 1;}
+
+@-webkit-keyframes am-hide-ac {
+  0% { -webkit-transform : scale(1, 1) translateY(0); opacity : 1 }
+  70% { -webkit-transform : scale(.8, .8) translateY(0); opacity : .5 }
+  100% { -webkit-transform : scale(.8, .8) translateY(-100%); opacity : 0 }
+}
+
+@keyframes am-hide-ac {
+  0% { transform : scale(1, 1) translateY(0); opacity : 1 }
+  70% { transform : scale(.8, .8) translateY(0); opacity : .5 }
+  100% { transform : scale(.8, .8) translateY(-100%); opacity : 0 }
+}

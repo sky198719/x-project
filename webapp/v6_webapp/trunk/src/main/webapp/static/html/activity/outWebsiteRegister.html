@@ -1,0 +1,104 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <!-- We have home navbar without left link-->
+        <div class="left" style="padding-top: 6px;"><img src="static/img/xxd/logo.png"></div>
+        <div class="center"></div>
+        <div class="right">
+            <a href="#" name="outWebsiteRegisterLogin">登录</a>
+        </div>
+    </div>
+</div>
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through">
+	<!-- Page, data-page contains page name-->
+	<div data-page="outWebsiteRegister" class="page" directory="activity" id="outWebsiteRegister">
+		<!-- Scrollable page content-->
+		<div class="page-content" style="background:white;padding-bottom:0px;">
+			<!-- banner start-->
+			<div class="swiper-container" name="outWebsiteRegisterSwiper" style="height: 150px;">
+			    <div class="swiper-wrapper" name="outWebsiteRegister_banner">
+			    </div>
+			    <div class="swiper-pagination" style="bottom: 5px;"></div>
+			</div>
+			<input type="hidden" name="registerPath" id="registerPath">
+			<div class="list-block" style="margin: 0px;">
+				<ul>
+					<li>
+						<div class="item-content" style="padding-left: 0px;">
+							<div class="item-inner">
+								<div class="item-media" style="padding-left: 20px;padding-right: 10px;">
+									<div class="icon-phone"></div>
+								</div>
+								<div class="item-input">
+									<input id="phoneNo" type="tel" placeholder="请输入您的手机号，用于接收验证码" maxlength="15" style="font-size:14px;">
+									<span style="color:red;font-size: 13px;padding-left: 5px;display:none;" id="phoneNoErrorMsg">请检查手机号</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content" style="padding-left: 0px;">
+							<div class="item-inner">
+								<div class="item-media" style="padding-left: 20px;padding-right: 10px;">
+									<div class="icon-imgcaptcha"></div>
+								</div>
+								<div class="item-input">
+									<input id="imgCode" type="text" placeholder="请输入图片验证码" style="font-size:14px;">
+									<span style="color:red;font-size: 13px;padding-left: 5px;display:none;" id="imgCodeErrorMsg">请检查图片验证码</span>
+								</div>
+								<div class="item-after">
+									<div class="reCreateImageCode">
+										<img align="absmiddle" id="randImage" src="verify/code.do" width="100"  height="30">
+				                    </div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content" style="padding-left: 0px;">
+							<div class="item-inner">
+								<div class="item-media" style="padding-left: 20px;padding-right: 10px;">
+									<div class="icon-mescaptcha"></div>
+								</div>
+								<div class="item-input">
+									<input id="phoneVerifyCode" type="tel" placeholder="请输入验证码" maxlength="6" style="font-size:14px;">
+									<span style="color:red;font-size: 13px;padding-left: 5px;display:none;" id="phoneVerifyCodeErrorMsg">请检查验证码</span>
+								</div>
+								<div class="item-after">
+									<div class="item-media">
+										<span id="phoneVerifyCodeCountdown"></span>
+										<span id="sendSMSCode" style="color:#007aff;border-bottom:1px solid;">发送验证码</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="background:#EFEFEF;line-height:40px;text-align:right;display:none;" id="voiceCode"><span style="line-height:40px;font-size:14px;color:#999999;padding-right:15px;">收不到短信？<a href="#" style="color:#999999;border-bottom:1px solid;" id="sendVoiceCode">获取语音验证码</a></span></div>
+					</li>
+					<li style="border-bottom:1px solid #EDEDEE;">
+						<div class="item-content" style="padding-left: 0px;">
+							<div class="item-inner">
+								<div class="item-media" style="padding-left: 20px;padding-right: 10px;">
+									<div class="icon-locks"></div>
+								</div>
+								<div class="item-input">
+									<input id="userPassword" type="password" placeholder="6-16位字母数字组合登录密码" maxlength="16" style="font-size:14px;">
+									<span style="color:red;font-size: 13px;padding-left: 5px;display:none;" id="userPasswordErrorMsg">请检查密码</span>
+								</div>
+								<div class="item-after">
+									<div class="icon-closeEye" id="switchPasswordEye"></div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div style="padding:25px 20px 0px 20px;">
+                   <div style="font-size: 18px;height: 40px;line-height: 40px;margin-top: 26px;background-color: #ff7800;border: 1px solid #ff7800;display: block;border-radius: 5px;margin: 0;text-align:center;color:#ffffff" id="submitRegister">注册</div>
+            </div>
+            <p style="padding:0px 20px;color:#999999;font-size:14px;">点击注册代表我已同意<span style="color:#999999;border-bottom:1px solid;" id="loadRegisterAgreement">《新新贷注册协议》</span></p>
+            <p style="text-align: center">新新贷（上海）金融信息服务有限公司</p>
+		</div>
+	</div>
+</div>
+

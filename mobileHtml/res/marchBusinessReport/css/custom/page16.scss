@@ -1,0 +1,13 @@
+
+.photo-new-list td{
+  vertical-align: top;
+  text-align: justify;
+
+  img{
+      max-width: 5.3rem;
+  }
+}
+
+.photo-new-list td:first-child{
+  padding: 0.4rem .5rem 0 0;
+}

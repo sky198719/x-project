@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>风控才是硬实力</title>
+	<style>
+
+		html {
+			font-size: 100%;
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a, img {
+			-webkit-tap-highlight-color: transparent;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+		}
+
+		.container {
+			width: 100%;
+			position: relative;
+			font-family: '微软雅黑';
+		}
+
+		.container img {
+			display: block;
+			border: none;
+			width: 100%;
+		}
+
+		.btn {
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+
+		.handfdd {
+			position: absolute;
+			top: 24%;
+			left: 2%;
+			display: inline-block;
+			width: 95%;
+			height: 42%;
+		}
+	</style>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+</head>
+
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+	<div class="container">
+		<a >
+			<img src="img/bg_01.png"/>
+		</a>
+	</div>
+	<div class="container">
+		<img src="img/bg_02-2.png"/>
+	</div>
+	<div class="container">
+		<img src="img/bg_03.png"/>
+	</div>
+	<div class="container">
+		<img src="img/bg_04.png"/>
+	</div>
+	<div class="container">
+		<img src="img/bg_05.png"/>
+		<img src="img/btn.png" class="btn">
+	</div>
+	<div class="container">
+		<img src="img/bg_06.png"/>
+	</div>
+	<div class="container">
+		<img src="img/bg_07.png"/>
+		<a class="handfdd" onclick="skptofddziy()"></a>
+		<a onclick="skptofinance()"><img src="img/btn.png" class="btn" id=""></a>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+	(function (doc, win, fontSize) {
+		var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) {
+						return;
+					}
+					docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+				};
+		if (!doc.addEventListener) {
+			return;
+		}
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window, 16);
+
+    var link = '../../../../';
+	var linkextra = '?jsonpCallback=?';
+
+	//点击专题页中“新新贷携手法大大”图，跳转至“牵手法大大 新电子签约系统问世”专题页。
+	function skptofddziy() {
+		window.location.href = "../../../../static/html/activity/fadada.html";
+	}
+	//点击“立即投资”按钮，跳转至“理财列表->热门理财”页
+	function skptofinance() {
+		window.location.href = link + "/#!/static/html/popular/financesList.html";
+	}
+	//GA、XA布码
+	$.ajax({
+		url: '../../../../user/getCurrentUser.do',
+		data: {},
+		dataType: 'json',
+		success: function (result) {
+			var gauserId = "";
+			if (result.code == 0) {
+				gauserId = result.data.user.userId;
+			}
+			//XXD_TRACK.track_pageview();
+			gaInits(gauserId);
+			growingIOInits({userId: gauserId});
+		}
+	});
+</script>
+</body>
+</html>

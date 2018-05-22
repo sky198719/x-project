@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <title>新新贷金融，注册送108元红包，出借送流量，最高2G</title>
+    <link rel="shortcut icon" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="Bookmark" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="stylesheet" href="../landPages/givedata.css"/>
+</head>
+<body>
+<div class="wrap" id="J_wrapBody" data-page="givedata">
+    <div class="header">
+        <div class="header-main clearfix">
+            <a class="logo" href="/" target="_blank"></a>
+            <div class="tel">
+                <i class="tel-icon">
+                    <img src="img/tel.png">
+                </i><div class="tel-num">
+                <h3>4000-169-521</h3>
+                <p>（工作日 9:00-18:00）</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="top-main">
+            <div class="top-wrap">
+                <div id="J_register" class="register-main ">
+                    <form id="form">
+                        <div class="register-title"></div>
+                        <!--<h2><span>注册领取</span><span class="color-special">108</span><i>元</i><span>红包</span></h2>-->
+                        <div class="user-common user-num">
+                            <input id="J_num" class="J-num" type="number" name="usern" placeholder="请输入您的手机号码" oninput="if(value.length>11)value=value.slice(0,11)"/>
+                        </div>
+                        <div class="user-common user-psw ">
+                            <input id="J_psw" class="J-psw" type="password" name="userpsw" placeholder="请输入6-16个字符的密码" minlength="6" maxlength="16"/>
+                        </div>
+                        <div class="user-common user-verigy clearfix">
+                            <input id="J_verify"  class="J-verify" type="text" name="uservefiry" placeholder="请输入图片验证码"/>
+                            <img class="change-verify"  src=" /feapi/randCode/createVerifyCode?formtoken=2afb0c26a1135cf0868322dda28b0dd5&v=0.36431611876306214" id="J_getVerify"/>
+                        </div>
+                        <div class="user-common user-verigy">
+                            <input id="J_phoneyzm" class="J-phoneyzm" type="text" name="userphone"  placeholder="请输入手机验证码"/>
+                            <span class="get-phoneyzm" id="J_getPhoneCode">
+                               获取验证码
+                            </span>
+                        </div>
+                        <div class="user-voice disnone">
+                            <a class="J-voiceyzm" href="#">获取语音验证码</a>
+                        </div>
+                        <p class="cur dishidden" id="J_cur"></p>
+                        <div class="user-agree">
+                            <i class="check-style checked" id="agree"></i>
+                            <span>我已阅读并同意&nbsp;<a href="/user/reg-agreement.html" target="_blank">《新新贷使用协议》</a></span>
+                        </div>
+                        <button type="button" class="register-btn" id="J_submit"></button>
+                        <p class="have-login">已有账号 <a class="logined" href="/user/ilogin.html">登录</a></p>
+                    </form>
+                </div>
+                <!--注册成功-->
+                <div class="registered disnone" id="J_registered">
+                    <div class="logo-company">
+                        <img src="img/redpacket/xin.png"/>
+                    </div>
+                    <p class="user-info" id="J_user"></p>
+                    <p class="user-money">可用余额（元）<a href="/usercenter/recharge.html" target="_blank" class="go-money">去充值&nbsp;&gt;</a></p>
+                    <h3 class="all-money" id="J_money"></h3>
+                    <a href="/accountshow/myaccount.html"  target="_blank" class="enter-account"></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-main">
+            <div class="container-wrap">
+                <!--投资-->
+                <div class="invest-flow" id="J_investflow">
+                    <!--数据-->
+                    <p class="datas-num xscp-data"><span class="big" id="J_xscpApr">10</span><span class="small">%</span><span class="center J_addFloat">+</span><span class="big" id="J_xscpfloatApr">5</span><span class="small J_floatPercent">%</span></p>
+                    <p class="datas-num xyb-data"><span class="big" id="J_xybApr">12</span><span class="small">%</span></p>
+                    <p class="xyb-account"><span id="J_xybAccount">100元</span></p>
+                    <p class="xyb-cur">起投</p>
+                    <a class="invest-btn left" id="J_investl" href="#" target="_blank"></a>
+                    <a class="invest-btn right" id="J_investr" href="#" target="_blank"></a>
+                </div>
+                <div class="activity-rule">
+                     <div class="rule" id="J_rule"></div>
+                    <div class="rule-details disnone" id="J_ruledetails">
+                       <div class="rule-btnbkg"><div class="rule-btn" id="J_ruleBtn"></div></div>
+                        <div class="rules-info">
+                            <ul class="details-list">
+                                <li><span class="list-item">活动时间：</span>即日起至2017年12月31日。</li>
+                                <li><span class="list-item">活动渠道：</span>仅限活动期间通过360搜索推广渠道注册并出借的用户。</li>
+                                <li>用户注册并出借任意金额，即<span class="list-item">送108元红包+100M流量，</span>每日限前100名。</li>
+                                <li><span class="list-item">首次出借“新手专享30天”产品</span>历史年化收益<span id="J_xscpTotalApr">14</span>%，锁定期<span id="J_xscpPeriod">30</span>天，1000元送300M，5000元送500M， 10000元送1G，每日限前100名。</li>
+                                <li class="details-listB"><span class="list-item">首次出借“定期标-新元宝”产品，</span>1000元送300M，3000元送500M，10000元及以上送2G，每日限前100名。</li>
+                            </ul>
+
+                        </div>
+                        <div class="rules-common rule-cur">
+                            <h3>温馨提示：</h3>
+                            <ul>
+                                <li>新手注册并出借除“新手专享30天、新元宝”之外的任意产品任意金额即送100M流量，并与前述产品可累计赠送，赠送数量为：100M+定期活动流量1G~2G。</li>
+                                <li>首投新手专享30天和新元宝活动，选其一，不叠加赠送流量；该活动与平台其他活动不叠加。</li>
+                            </ul>
+                        </div>
+                        <div class="rules-common recharge-account">
+                            <h3>充值到账：</h3>
+                            <ul>
+                                <li>活动流量3个工作日内手工充值，月末3天参加活动的用户，流量将在次月2号统一充值；赠送流量当月有效，国内通用（港澳台除外），广东电信部分预付费用户以动态月结周期为流量有效期。</li>
+                                <li>获赠流量需开通上网功能方可正常使用。欠费停机、或名下存在欠费产品的用户、被列入运营商黑名单用户、存在业务在途单（其他业务未受理完成）、未办理实名认证、实名资料未返档用户、携号转网用户、145/147上网卡、170号段虚拟运营商用户、时长计费用户以及其他运营商规则限制的用户均无法领取。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bkg-special"></div>
+                <div class="wrap-content">
+                    <!-- 我们的优势 -->
+                    <div class="advantage-info" id="J_advantageInfo">
+                        <ul class="advantage-data">
+                            <li class="advantage-first"><span class="advantage-content">稳健运营</span><p><span id="J_year">5</span>年<span id="J_totalDay"></span>天</p></li>
+                            <li><span class="advantage-content">成交金额</span><p><span id="J_totalTrade">104.58</span>亿元</p></li>
+                            <li><span class="advantage-content">累计为出借人赚取</span><p><span id="J_totalIncome">4.95</span>亿元</p></li>
+                        </ul>
+                        <p class="advantage-time">截止日期：<span id="J_registerUserDate">2017年6月30日</span></p>
+                    </div>
+                    <!--荣誉墙-->
+                    <div class="certificate" id="J_certificate">
+                        <div class="certificate-main">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="slide-img  mui-preview" _img="img/enterprise/honorb01.png">
+                                            <img src="img/enterprise/honor01.png"/>
+                                        </div>
+                                        <p>
+                                            中国互联网金融协会<br/><strong>首批会员单位</strong>
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-img mui-preview" _img="img/enterprise/honorb02.png">
+                                            <img src="img/enterprise/honor02.png"/>
+                                        </div>
+                                        <p>
+                                            中国互联网协会<br/><strong>信用评级AA级</strong>信用企业
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-img mui-preview" _img="img/enterprise/honorb03.png">
+                                            <img src="img/enterprise/honor03.png"/>
+                                        </div>
+                                        <p>
+                                            互联网金融<strong>信息安全</strong><br/>公共服务平台企业会员
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-img mui-preview" _img="img/enterprise/honorb04.png">
+                                            <img src="img/enterprise/honor04.png"/>
+                                        </div>
+                                        <p>
+                                            中国小额信贷<strong>联盟会员</strong>
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-img mui-preview" _img="img/enterprise/honorb05.png">
+                                            <img src="img/enterprise/honor05.png"/>
+                                        </div>
+                                        <p>
+                                            上海金融信息行业协会<strong>副会长单位</strong>
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-img mui-preview" _img="img/enterprise/honorb06.png">
+                                            <img src="img/enterprise/honor06.png"/>
+                                        </div>
+                                        <p>
+                                            新闻晨报金罗盘-<br/><strong>最稳健</strong>互联网金融平台
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-img mui-preview" _img="img/enterprise/honorb07.png">
+                                            <img src="img/enterprise/honor07.png"/>
+                                        </div>
+                                        <p>
+                                            中国金融科技<br/><strong>最具竞争力</strong>企业
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-img mui-preview" _img="img/enterprise/honorb08.png">
+                                            <img src="img/enterprise/honor08.png"/>
+                                        </div>
+                                        <p>
+                                            中国金融创新榜-<br/><strong>最佳创新力微</strong>金融服务平台
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-img mui-preview" _img="img/enterprise/honorb09.png">
+                                            <img src="img/enterprise/honor09.png"/>
+                                        </div>
+                                        <p>
+                                            中国互联网金融<br/><strong>最佳风险控制</strong>企业
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev btn-common left-btn"></div>
+                            <div class="swiper-button-next btn-common right-btn"></div>
+                        </div>
+                    </div>
+                    <!--明星产品-->
+                    <div class="star-product" id="J_starProduct">
+                        <div class="star-title"></div>
+                        <ul class="product-list">
+                            <li class="yjdj">
+                                <div class="product-data yjdj-data">
+                                    <h4 id="J_yjdjName">月进斗金</h4>
+                                    <p class="product-point">历史年化收益率</p>
+                                    <p class="detail-num"><span class="big" id="J_yjdjApr">15</span><span class="small">%</span></p>
+                                    <span class="list-border"></span>
+                                    <div class="detail-info">
+                                        <div class="info info-left">
+                                            <span class="right-fuhao"></span>
+                                            <p class="info-detail">期限<span id="J_yjdjPeriod">31</span><span class="J_leastPeriodUnit">天</span></p>
+                                        </div>
+                                       <div class="info info-right">
+                                           <span class="right-fuhao"></span>
+                                           <p class="info-detail"><span id="J_yjdjLowestTender">100元</span>起购</p>
+                                       </div>
+                                    </div>
+                                </div>
+                                <a id="J_yjdj" href="#" target="_blank"></a>
+                            </li>
+                            <li class="bbgs">
+                                <div class="product-data bbgs-data">
+                                    <h4 id="J_bbgsName">步步高升</h4>
+                                    <p class="product-point">历史年化收益率</p>
+                                    <p class="detail-num"><span class="big" id="J_bbgsMin">6</span><span class="small">%</span><span class="small">-</span><span class="big" id="J_bbgsMax">10.4</span><span class="small">%</span></p>
+                                    <span class="list-border"></span>
+                                    <div class="detail-info">
+                                        <div class="info info-left">
+                                            <span class="right-fuhao"></span>
+                                            <p class="info-detail">定活两便</p>
+                                        </div>
+                                        <div class="info info-right">
+                                            <span class="right-fuhao"></span>
+                                            <p class="info-detail"><span id="J_bbgsLeastAmount">100</span>元起购</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a id="J_bbgs" href="#" target="_blank"></a>
+                            </li>
+                        </ul>
+                    </div>
+                   <div class="media-content" id="J_media">
+                       <div class="media" ></div>
+                   </div>
+                    <div class="join-in" id="J_people">已有<span id="J_registerPeople"></span>名用户加入了新新贷</div>
+                    <a class="suspend" id="J_suspend"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="suspend-special disnone" id="J_suspendpop"></a>
+    <div class="footer" id="J_footerm"></div>
+    <div id="J_sidebar" class="side-bar">
+        <span class="sider-close" id="J_siderClose">x</span>
+        <h3 id="J_sideRegister">立即注册</h3>
+        <a id="J_getMoney" class="get-money get-disnone" href="/detail/thirtytender.html " target="_blank">马上加入</a>
+        <ul id="J_siderlist">
+            <li class="lighter-location"><a href="#J_investflow">出借赢流量&nbsp;&nbsp;&gt;</a></li>
+            <li><a href="#J_advantageInfo">我们的优势&nbsp;&nbsp;&gt;</a></li>
+            <li><a href="#J_certificate">资质荣誉&nbsp;&nbsp;&gt;</a></li>
+            <li><a href="#J_starProduct">明星产品&nbsp;&nbsp;&gt;</a></li>
+            <li id="J_last"><a href="#J_media">媒体报道&nbsp;&nbsp;&gt;</a></li>
+            <li  class="last" id="J_top"><span>返回顶部&nbsp;&nbsp;&gt;</span></li>
+            <!--<li  class="last" id="J_top"><a href="#top">返回顶部&nbsp;&nbsp;&gt;</a></li>-->
+        </ul>
+    </div>
+</div>
+<!--弹窗注册框-->
+<div class="disgray disnone" id="disgray">
+    <div class="register-pop clearfix" id="register-pop">
+        <i class="close" id="close">x</i>
+    </div>
+</div>
+</body>
+<script src="../landPages/js/combo.js"></script>
+<script src="../landPages/js/combo-givedata.js"></script>
+</html>

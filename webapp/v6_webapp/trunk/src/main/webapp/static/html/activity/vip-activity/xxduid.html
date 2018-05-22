@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>9月会员日</title>
+<style>
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none;}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+.container{width:100%; position:relative; font-family:'微软雅黑';}
+.container img{display:block; border:none; width:100%;}
+.container .btn1{width:50%; top:40.3%; left:27.5%; position:absolute; transform:rotate(0deg);}
+.container .btn2{width:45%; top:0; left:13%; position:absolute;}
+.container .btn3{width:24%; top:0; right:13%; position:absolute;}
+.container .list1{width:57%; top:39%; left:32%; position:absolute; margin:0; padding:0;}
+.container .list1 li{width:100%; height:1.5rem; line-height:1.5rem; font-size:0.6rem; color:#29a2cb; list-style-type:none;}
+.container .list1 li span{width:50%; height:1.5rem; line-height:1.5rem; font-size:0.6rem; color:#29a2cb; float:left; display:inline; text-align:center;}
+.container .list2{width:100%; padding:0; margin:0; top:0; left:0; position:absolute;}
+.container .list2 li{width:100%; height:1.5rem; line-height:1.5rem; font-size:0.6rem; color:#29a2cb; list-style-type:none;}
+.container .list2 li span{width:30%; height:1.5rem; line-height:1.5rem; font-size:0.6rem; color:#29a2cb; float:left; display:inline; text-align:center;}
+.container .list2 li strong{width:40%; height:1.5rem; line-height:1.5rem; font-size:0.6rem; color:#29a2cb; float:left; display:inline; text-align:center; font-weight:normal;}
+.container .con{width:31.25%; position:absolute; list-style-type:none;}
+.container .con#list1{top:22%; left:15%;}
+.container .con#list2{top:22%; right:15%;}
+.container .con#list3{top:60%; left:1%;}
+.container .con#list4{top:60%; left:34.5%;}
+.container .con#list5{top:60%; right:1%;}
+.container .infos{width:100%; height:1rem; line-height:1rem; font-size:0.6rem; text-align:center; display:none; top:0; left:0; position:absolute; font-size:0.8rem;}
+.list2con{height:6rem; overflow:hidden; width:84%; top:38%; left:8%; position:absolute; margin:0; padding:0;}
+.layer{width:100%; height:100%; background-color:rgba(0,0,0,0.3); top:0; left:0; position:fixed; display:none;}
+.alerts{width:90%; padding:1.5rem 0; top:50%; margin-top:-3.5rem; left:5%; position:fixed; background-color:rgba(255,255,255,0.8); border-radius:5px; color:#ffffff; text-align:center; display:none; font-family:'微软雅黑';}
+.alerts div{width:90%; height:1.5rem; line-height:1.5rem; color:#000000; text-align:center; margin-bottom:1rem; font-size:1rem; padding:0 5%;}
+.alerts div em{line-height:1.5rem; color:#000000; font-size:1rem; font-style:normal;}
+.alerts span{width:20%; color:#ffffff; padding:0.2rem 1rem; background:#ffcd24; color:#ffffff; font-size:0.8rem; border-radius:5px; margin:0 0.5rem;}
+.alerts p{width:20%; color:#ffffff; padding:0.2rem 1rem; background:#ffcd24; color:#ffffff; font-size:0.8rem; border-radius:5px; margin:0 0.5rem; display:inline;}
+.alerts strong{font-weight:normal; width:20%; padding:0.2rem 1rem; background:#ffcd24; color:#ffffff; font-size:0.8rem; border-radius:5px; margin:0 0.5rem;}
+.alerts ul{width:80%; margin:0 auto; padding:0;}
+.alerts ul li{width:100%; height:1.5rem; list-style-type:none; padding-bottom:1rem;}
+.alerts ul li label{width:30%; height:1.5rem; line-height:1.5rem; font-size:0.8rem; text-align:right; float:left; display:inline; color:#000000;}
+.alerts ul li input{width:60%; float:left; height:1.5rem; line-height:1.5rem; border:none; background:#ffffff; color:#000000; font-size:0.8rem; padding:0 5%;}
+.alerts ul li button{width:70%; height:1.5rem; line-height:1.5rem; font-size:0.6rem; background:#ffcd24; text-align:center; color:#ffffff; border:none; margin-left:30%;}
+.alerts b{width:70%; height:1.5rem; line-height:1.5rem; font-size:0.5rem; background:#ffcd24; text-align:center; color:#ff0000; border:none; margin-left:5%; background:none; display:none;}
+#alert3{margin-top:-4.3rem;}
+#alert3 div{height:3rem;}
+#alert8{margin-top:-7rem;}
+#alert8 span{width:1rem; height:1rem; float:right; background:none; padding:0; margin:0; margin-top:-1rem; margin-right:0.8rem;}
+#alert8 span img{width:100%; height:100%;}
+#alert8 font{display:block; padding-top:0.7rem; height:1rem; line-height:1rem; overflow:hidden; color:#21b6e8;}
+#alert8 font a{color:#21b6e8; font-size:0.8rem;}
+</style>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+</head>
+
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+	<div class="container">
+		<img src="img/bg1.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg2.jpg" />
+		<img src="img/btn1.png" class="btn1" />
+	</div>
+	<div class="container">
+		<img src="img/bg3.jpg" />
+		<a href="javascript:void(0);"><img src="img/btn2.png" class="btn2" /></a>
+		<a href="javascript:void(0);"><img src="img/btn3.png" class="btn3" /></a>
+		<div class="infos">剩余抽奖次数：0</div>
+	</div>
+	<div class="container">
+		<img src="img/bg4.jpg" />
+		<ul class="list1">
+
+		</ul>
+	</div>
+	<div class="container">
+		<img src="img/bg5.jpg" />
+		<div class="list2con">
+			<ul class="list2">
+
+			</ul>
+		</div>
+	</div>
+	<div class="container" id="con1">
+		<img src="img/bg6.jpg" />
+		<a href="xxd://list/pdd?selID=1&pdName=ririying"><img src="img/pro1.png" class="con" id="list1" /></a>
+		<a href=""><img src="img/pro2.png" class="con" id="list2" value="1" /></a>
+		<a href=""><img src="img/pro3.png" class="con" id="list3" value="3" /></a>
+		<a href=""><img src="img/pro4.png" class="con" id="list4" value="6" /></a>
+		<a href=""><img src="img/pro5.png" class="con" id="list5" value="12" /></a>
+	</div>
+	<div class="container">
+		<img src="img/bg7.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg8.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg9.jpg" />
+	</div>
+	<div class="layer"></div>
+	<div class="alerts" id="alert1">
+		<div>网络链接失败，请重试！</div>
+		<span>确认</span>
+	</div>
+	<div class="alerts" id="alert2">
+		<div>请先登录！</div>
+		<p>立即登录</p>
+	</div>
+	<div class="alerts" id="alert3">
+		<div>抽奖次数用完啦，投资新元宝或者日日盈即可获得抽奖次数！</div>
+		<strong>立即投资</strong>
+		<span>知道了</span>
+	</div>
+	<div class="alerts" id="alert4">
+		<div>登录验证已过期，请重新登录！</div>
+		<span>确认</span>
+	</div>
+	<div class="alerts" id="alert5">
+		<div>没抽中，离大奖仅一步之遥~</div>
+		<strong>再抽一次</strong>
+		<span>取消</span>
+	</div>
+	<div class="alerts" id="alert6">
+		<div>中奖啦！抽到<em></em></div>
+		<strong>再抽一次</strong>
+		<span>知道了</span>
+	</div>
+	<div class="alerts" id="alert7">
+		<div></div>
+		<span>确认</span>
+	</div>
+</div>
+<!--login-->
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.md5.js"></script>
+<script>
+
+$(document).ready(function(){
+       try{
+       var gauserId ="";
+	 	//XXD_TRACK.track_pageview('xxduid');
+		gaInits(gauserId);
+        //growingIO布码
+        growingIOInits({userId:gauserId});
+	}catch(e){}
+       
+});
+
+
+(function(doc,win,fontSize) {
+	var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function(){
+		var clientWidth = docEl.clientWidth;
+		if (!clientWidth){
+			return;
+		}
+		docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+	};
+	if(!doc.addEventListener){
+		return;
+	}
+	win.addEventListener(resizeEvt,recalc,false);
+	doc.addEventListener('DOMContentLoaded',recalc,false);
+})(document,window,16);
+
+$.each($('.alerts').find('span'),function(){
+	$(this).click(function(){
+		$(this).parent('div').fadeOut(200);
+		$('.layer').fadeOut(200);
+	});
+});
+$('#alert3').find('strong').click(function(){
+	window.location.href = '#con1'
+	$('.layer').fadeOut(0);
+	$('#alert3').fadeOut(0);
+});
+$('#alert2').find('p').click(function(){
+	$('.layer').fadeOut(0);
+	$('#alert2').fadeOut(0);
+	window.location.href = 'xxd://login';
+});
+var link = '../../../../';
+var linkextra = '?jsonpCallback=?';
+var timer = 0;
+var degs = 0;
+var str = window.location.href;
+var index2 = str.indexOf('uid=');
+var index3 = str.indexOf('&sign=');
+var result = str.substring(index2 + 4,index3);
+var result2 = str.substr(index3 + 6,str.length);
+$('.btn2').click(function(){
+	$.ajax({
+		url:link + 'activity/checkActivity.do' + linkextra,
+		type:'get',
+		data:{code:'vip-activity'},
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				$('.layer').fadeIn(200);
+				$('#alert7').find('div').html(data.msg);
+				$('#alert7').fadeIn(200);
+				$('.btn2').parent('a').attr('href','javascript:void(0);');
+				$('.btn3').parent('a').attr('href','javascript:void(0);');
+				return false;
+			}else{
+				$('.btn2').parent('a').attr('href','xxd://login');
+				$('.btn3').parent('a').attr('href','xxd://login');
+			}
+		},error:function(){
+			$('.layer').fadeIn(0);
+			$('#alert1').fadeIn(0);
+		}
+	});
+});
+$('.btn3').click(function(){
+	$.ajax({
+		url:link + 'activity/checkActivity.do' + linkextra,
+		type:'get',
+		data:{code:'vip-activity'},
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				$('.layer').fadeIn(200);
+				$('#alert7').find('div').html(data.msg);
+				$('#alert7').fadeIn(200);
+				$('.btn2').parent('a').attr('href','javascript:void(0);');
+				$('.btn3').parent('a').attr('href','javascript:void(0);');
+				return false;
+			}else{
+				$('.btn2').parent('a').attr('href','xxd://login');
+				$('.btn3').parent('a').attr('href','xxd://login');
+			}
+		},error:function(){
+			$('.layer').fadeIn(0);
+			$('#alert1').fadeIn(0);
+		}
+	});
+});
+$('#alert5').find('strong').click(function(){
+	$(this).parent('div').fadeOut(0);
+	$('.layer').fadeOut(0);
+	if($('.infos').css('display') == 'none'){
+		$('.layer').fadeIn(200);
+		$('#alert2').fadeIn(200);
+		return false;
+	}else{
+		$.ajax({
+			url:link + 'activity/checkActivity.do' + linkextra,
+			type:'get',
+			data:{code:'vip-activity'},
+			dataType:'jsonp',
+			jsonp:'jsoncallback',
+			success:function(data){
+				if(data.resultCode != 0){
+					$('.layer').fadeIn(200);
+					$('#alert7').find('div').html(data.msg);
+					$('#alert7').fadeIn(200);
+					return false;
+				}else{
+					var myplaytime = 0;
+					$.ajax({
+						url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+						type:'get',
+						dataType:'jsonp',
+						jsonp:"jsoncallback",
+						data:{uid:result,sign:result2},
+						success:function(data){
+							if(data.resultCode == 0){
+								myplaytime = parseInt(data.data[0].playtime);
+								if(myplaytime <= 0){
+									$('.layer').fadeIn(200);
+									$('#alert3').fadeIn(200);
+									return false;
+								}
+								if(myplaytime > 0){
+									if(timer == 0){
+										timer = 1;
+										$.ajax({
+											url:link + 'memberDay922/playStart.do' + linkextra,
+											type:'get',
+											dataType:'jsonp',
+											jsonp:"jsoncallback",
+											data:{uid:result,sign:result2},
+											success:function(data){
+												if(data.resultCode == 0){
+													var t = setInterval(function(){
+														degs+=10;
+														$('.btn1').css('transform','rotate(' + degs + 'deg)');
+													},1);
+													var rewards = data.data[0].itemName;
+													var rewardid = data.data[0].itemId;
+													setTimeout(function(){
+														clearTimeout(t);
+														if(parseInt(rewardid) == 12){
+															$('.btn1').css('transform','rotate(' + 22.5 + 'deg)');
+														}else if(parseInt(rewardid) == 18){
+															$('.btn1').css('transform','rotate(' + 67.5 + 'deg)');
+														}else if(parseInt(rewardid) == 16){
+															$('.btn1').css('transform','rotate(' + 112.5 + 'deg)');
+														}else if(parseInt(rewardid) == 13){
+															$('.btn1').css('transform','rotate(' + 157.5 + 'deg)');
+														}else if(parseInt(rewardid) == 17){
+															$('.btn1').css('transform','rotate(' + 202.5 + 'deg)');
+														}else if(parseInt(rewardid) == 15){
+															$('.btn1').css('transform','rotate(' + 247.5 + 'deg)');
+														}else if(parseInt(rewardid) == 14){
+															$('.btn1').css('transform','rotate(' + 292.5 + 'deg)');
+														}else if(parseInt(rewardid) == 19){
+															$('.btn1').css('transform','rotate(' + 337.5 + 'deg)');
+														}
+														timer = 0;
+														$.ajax({
+															url:link + 'memberDay922/playEnd.do' + linkextra,
+															type:'get',
+															dataType:'jsonp',
+															jsonp:"jsoncallback",
+															data:{uid:result,sign:result2},
+															success:function(data2){
+																if(data2.resultCode == 0){
+																	$('.infos').html('剩余抽奖次数：' +data2.data[0].playtime);
+																	if(parseInt(rewardid) == 12){
+																		$('.layer').fadeIn(200);
+																		$('#alert5').fadeIn(200);
+																	}else{
+																		$('#alert6').find('div').find('em').html(rewards)
+																		$('.layer').fadeIn(200);
+																		$('#alert6').fadeIn(200);
+																	}
+																}else{
+																	$('.layer').fadeIn(200);
+																	$('#alert4').fadeIn(200);
+																	$('.infos').fadeOut(0);
+																	$('.btn2').fadeIn(0);
+																	$('.btn3').fadeIn(0);
+																}
+															},
+															error:function(){
+																$('.layer').fadeIn(200);
+																$('#alert1').fadeIn(200);
+															}
+														});
+													},3000);
+												}else{
+													$('.layer').fadeIn(200);
+													$('#alert4').fadeIn(200);
+													$('.infos').fadeOut(0);
+													$('.btn2').fadeIn(0);
+													$('.btn3').fadeIn(0);
+												}
+											},
+											error:function(){
+												$('.layer').fadeIn(200);
+												$('#alert1').fadeIn(200);
+											}
+										});
+									}
+								}
+							}else{
+								$('.layer').fadeIn(200);
+								$('#alert4').fadeIn(200);
+								$('.infos').fadeOut(0);
+								$('.btn2').fadeIn(0);
+								$('.btn3').fadeIn(0);
+							}
+						},
+						error:function(){
+							$('.layer').fadeIn(200);
+							$('#alert1').fadeIn(200);
+						}
+					});
+				}
+			},
+			error:function(){
+				$('.layer').fadeIn(200);
+				$('#alert1').fadeIn(200);
+			}
+		});
+	}
+});
+$('#alert6').find('strong').click(function(){
+	$(this).parent('div').fadeOut(0);
+	$('.layer').fadeOut(0);
+	if($('.infos').css('display') == 'none'){
+		$('.layer').fadeIn(200);
+		$('#alert2').fadeIn(200);
+		return false;
+	}else{
+		$.ajax({
+			url:link + 'activity/checkActivity.do' + linkextra,
+			type:'get',
+			data:{code:'vip-activity'},
+			dataType:'jsonp',
+			jsonp:'jsoncallback',
+			success:function(data){
+				if(data.resultCode != 0){
+					$('.layer').fadeIn(200);
+					$('#alert7').find('div').html(data.msg);
+					$('#alert7').fadeIn(200);
+					return false;
+				}else{
+					var myplaytime = 0;
+					$.ajax({
+						url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+						type:'get',
+						dataType:'jsonp',
+						jsonp:"jsoncallback",
+						data:{uid:result,sign:result2},
+						success:function(data){
+							if(data.resultCode == 0){
+								myplaytime = parseInt(data.data[0].playtime);
+								if(myplaytime <= 0){
+									$('.layer').fadeIn(200);
+									$('#alert3').fadeIn(200);
+									return false;
+								}
+								if(myplaytime > 0){
+									if(timer == 0){
+										timer = 1;
+										$.ajax({
+											url:link + 'memberDay922/playStart.do' + linkextra,
+											type:'get',
+											dataType:'jsonp',
+											jsonp:"jsoncallback",
+											data:{uid:result,sign:result2},
+											success:function(data){
+												if(data.resultCode == 0){
+													var t = setInterval(function(){
+														degs+=10;
+														$('.btn1').css('transform','rotate(' + degs + 'deg)');
+													},1);
+													var rewards = data.data[0].itemName;
+													var rewardid = data.data[0].itemId;
+													setTimeout(function(){
+														clearTimeout(t);
+														if(parseInt(rewardid) == 12){
+															$('.btn1').css('transform','rotate(' + 22.5 + 'deg)');
+														}else if(parseInt(rewardid) == 18){
+															$('.btn1').css('transform','rotate(' + 67.5 + 'deg)');
+														}else if(parseInt(rewardid) == 16){
+															$('.btn1').css('transform','rotate(' + 112.5 + 'deg)');
+														}else if(parseInt(rewardid) == 13){
+															$('.btn1').css('transform','rotate(' + 157.5 + 'deg)');
+														}else if(parseInt(rewardid) == 17){
+															$('.btn1').css('transform','rotate(' + 202.5 + 'deg)');
+														}else if(parseInt(rewardid) == 15){
+															$('.btn1').css('transform','rotate(' + 247.5 + 'deg)');
+														}else if(parseInt(rewardid) == 14){
+															$('.btn1').css('transform','rotate(' + 292.5 + 'deg)');
+														}else if(parseInt(rewardid) == 19){
+															$('.btn1').css('transform','rotate(' + 337.5 + 'deg)');
+														}
+														timer = 0;
+														$.ajax({
+															url:link + 'memberDay922/playEnd.do' + linkextra,
+															type:'get',
+															dataType:'jsonp',
+															jsonp:"jsoncallback",
+															data:{uid:result,sign:result2},
+															success:function(data2){
+																if(data2.resultCode == 0){
+																	$('.infos').html('剩余抽奖次数：' +data2.data[0].playtime);
+																	if(parseInt(rewardid) == 12){
+																		$('.layer').fadeIn(200);
+																		$('#alert5').fadeIn(200);
+																	}else{
+																		$('#alert6').find('div').find('em').html(rewards)
+																		$('.layer').fadeIn(200);
+																		$('#alert6').fadeIn(200);
+																	}
+																}else{
+																	$('.layer').fadeIn(200);
+																	$('#alert4').fadeIn(200);
+																	$('.infos').fadeOut(0);
+																	$('.btn2').fadeIn(0);
+																	$('.btn3').fadeIn(0);
+																}
+															},
+															error:function(){
+																$('.layer').fadeIn(200);
+																$('#alert1').fadeIn(200);
+															}
+														});
+													},3000);
+												}else{
+													$('.layer').fadeIn(200);
+													$('#alert4').fadeIn(200);
+													$('.infos').fadeOut(0);
+													$('.btn2').fadeIn(0);
+													$('.btn3').fadeIn(0);
+												}
+											},
+											error:function(){
+												$('.layer').fadeIn(200);
+												$('#alert1').fadeIn(200);
+											}
+										});
+									}
+								}
+							}else{
+								$('.layer').fadeIn(200);
+								$('#alert4').fadeIn(200);
+								$('.infos').fadeOut(0);
+								$('.btn2').fadeIn(0);
+								$('.btn3').fadeIn(0);
+							}
+						},
+						error:function(){
+							$('.layer').fadeIn(200);
+							$('#alert1').fadeIn(200);
+						}
+					});
+				}
+			},
+			error:function(){
+				$('.layer').fadeIn(200);
+				$('#alert1').fadeIn(200);
+			}
+		});
+	}
+});
+
+$('.btn1').click(function(){
+//try{XXD_TRACK._trackEvent({category:"webapp_xxduid_in",action:"prize_btn",label:"抽奖",value:"",custval:""});}catch(e){}
+	$.ajax({
+		url:link + 'activity/checkActivity.do' + linkextra,
+		type:'get',
+		data:{code:'vip-activity'},
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				$('.layer').fadeIn(200);
+				$('#alert7').find('div').html(data.msg);
+				$('#alert7').fadeIn(200);
+				return false;
+			}else{
+				if($('.infos').css('display') == 'none'){
+					$('.layer').fadeIn(200);
+					$('#alert2').fadeIn(200);
+					return false;
+				}else{
+					var myplaytime = 0;
+					$.ajax({
+						url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+						type:'get',
+						dataType:'jsonp',
+						jsonp:"jsoncallback",
+						data:{uid:result,sign:result2},
+						success:function(data){
+							if(data.resultCode == 0){
+								myplaytime = parseInt(data.data[0].playtime);
+								if(myplaytime <= 0){
+									$('.layer').fadeIn(200);
+									$('#alert3').fadeIn(200);
+									return false;
+								}
+								if(myplaytime > 0){
+									if(timer == 0){
+										timer = 1;
+										$.ajax({
+											url:link + 'memberDay922/playStart.do' + linkextra,
+											type:'get',
+											dataType:'jsonp',
+											jsonp:"jsoncallback",
+											data:{uid:result,sign:result2},
+											success:function(data){
+												if(data.resultCode == 0){
+													var t = setInterval(function(){
+														degs+=10;
+														$('.btn1').css('transform','rotate(' + degs + 'deg)');
+													},1);
+													var rewards = data.data[0].itemName;
+													var rewardid = data.data[0].itemId;
+													setTimeout(function(){
+														clearTimeout(t);
+														if(parseInt(rewardid) == 12){
+															$('.btn1').css('transform','rotate(' + 22.5 + 'deg)');
+														}else if(parseInt(rewardid) == 18){
+															$('.btn1').css('transform','rotate(' + 67.5 + 'deg)');
+														}else if(parseInt(rewardid) == 16){
+															$('.btn1').css('transform','rotate(' + 112.5 + 'deg)');
+														}else if(parseInt(rewardid) == 13){
+															$('.btn1').css('transform','rotate(' + 157.5 + 'deg)');
+														}else if(parseInt(rewardid) == 17){
+															$('.btn1').css('transform','rotate(' + 202.5 + 'deg)');
+														}else if(parseInt(rewardid) == 15){
+															$('.btn1').css('transform','rotate(' + 247.5 + 'deg)');
+														}else if(parseInt(rewardid) == 14){
+															$('.btn1').css('transform','rotate(' + 292.5 + 'deg)');
+														}else if(parseInt(rewardid) == 19){
+															$('.btn1').css('transform','rotate(' + 337.5 + 'deg)');
+														}
+														timer = 0;
+														$.ajax({
+															url:link + 'memberDay922/playEnd.do' + linkextra,
+															type:'get',
+															dataType:'jsonp',
+															jsonp:"jsoncallback",
+															data:{uid:result,sign:result2},
+															success:function(data2){
+																if(data2.resultCode == 0){
+																	$('.infos').html('剩余抽奖次数：' +data2.data[0].playtime);
+																	if(parseInt(rewardid) == 12){
+																		$('.layer').fadeIn(200);
+																		$('#alert5').fadeIn(200);
+																	}else{
+																		$('#alert6').find('div').find('em').html(rewards)
+																		$('.layer').fadeIn(200);
+																		$('#alert6').fadeIn(200);
+																	}
+																}else{
+																	$('.layer').fadeIn(200);
+																	$('#alert4').fadeIn(200);
+																	$('.infos').fadeOut(0);
+																	$('.btn2').fadeIn(0);
+																	$('.btn3').fadeIn(0);
+																}
+															},
+															error:function(){
+																$('.layer').fadeIn(200);
+																$('#alert1').fadeIn(200);
+															}
+														});
+													},3000);
+												}else{
+													$('.layer').fadeIn(200);
+													$('#alert4').fadeIn(200);
+													$('.infos').fadeOut(0);
+													$('.btn2').fadeIn(0);
+													$('.btn3').fadeIn(0);
+												}
+											},
+											error:function(){
+												$('.layer').fadeIn(200);
+												$('#alert1').fadeIn(200);
+											}
+										});
+									}
+								}
+							}else{
+								$('.layer').fadeIn(200);
+								$('#alert4').fadeIn(200);
+								$('.infos').fadeOut(0);
+								$('.btn2').fadeIn(0);
+								$('.btn3').fadeIn(0);
+							}
+						},
+						error:function(){
+							$('.layer').fadeIn(200);
+							$('#alert1').fadeIn(200);
+						}
+					});
+				}
+			}
+		},error:function(){
+			$('.layer').fadeIn(0);
+			$('#alert1').fadeIn(0);
+		}
+	});
+});
+$.ajax({
+	url:link + 'activity/checkActivity.do' + linkextra,
+	type:'get',
+	data:{code:'vip-activity'},
+	dataType:'jsonp',
+	jsonp:'jsoncallback',
+	success:function(data){
+		if(data.resultCode != 0){
+			$.each($('.con'),function(){
+				$(this).parent('a').attr('href','javascript:void(0);');
+				$(this).click(function(){
+					$('.layer').fadeIn(200);
+					$('#alert7').find('div').html(data.msg);
+					$('#alert7').fadeIn(200);
+				});
+			});
+			$('.infos').fadeOut(0);
+			$('.btn2').fadeIn(0);
+			$('.btn3').fadeIn(0);
+			return false;
+		}else{
+			$.ajax({
+				url:link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+				type:'get',
+				dataType:'jsonp',
+				jsonp:"jsoncallback",
+				data:{uid:result,sign:result2},
+				success:function(data){
+					if(data.resultCode == 0){
+						$('.infos').fadeIn(0);
+						$('.btn2').fadeOut(0);
+						$('.btn3').fadeOut(0);
+						$('.infos').html('剩余抽奖次数：' + data.data[0].playtime);
+						$('.con:first').parent('a').attr('href','xxd://list/pdd?selID=1&pdName=ririying');
+						$.each($('.con').not(':first'),function(){
+							var _this = $(this);
+							var closeterms = $(this).attr('value');
+							$.ajax({
+								url:link + 'xplan/getLatestSchemeId.do' + linkextra,
+								type:'get',
+								dataType:'jsonp',
+								jsonp:'jsonpCallback',
+								data:{closeTerm:closeterms},
+								success:function(data){
+									if(data.schemeInfo != null && data.schemeInfo != ""){
+										_this.parent('a').attr('href','xxd://list/pdd?selID=1&pdName=xinyuanbao&xybID=' + data.schemeInfo.SCHEMEID);
+									}
+								},
+								error:function(){
+									$('.layer').fadeIn(200);
+									$('#alert1').fadeIn(200);
+								}
+							});
+						});
+					}else{
+						$('.infos').fadeOut(0);
+						$('.btn2').fadeIn(0);
+						$('.btn3').fadeIn(0);
+						$.each($('.con'),function(){
+							$(this).parent('a').attr('href','javascript:void(0);');
+							$(this).click(function(){
+								$('.layer').fadeIn(200);
+								$('#alert2').fadeIn(200);
+							});
+						});
+					}
+				},
+				error:function(){
+					$('.layer').fadeIn(200);
+					$('#alert1').fadeIn(200);
+				}
+			});
+		}
+	},
+	error:function(){
+		$('.layer').fadeIn(200);
+		$('#alert1').fadeIn(200);
+	}
+});
+
+$.ajax({
+	url:link + 'memberDay922/topList.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:"jsoncallback",
+	success:function(data){
+		$('.list1').html('');
+		$.each(data,function(index,item){
+			$('.list1').append('<li><span>' + item.user + '</span><span>' + item.amount + '</span></li>')
+		});
+	},
+	error:function(){
+		$('.layer').fadeIn(200);
+		$('#alert1').fadeIn(200);
+	}
+});
+$.ajax({
+	url:link + 'memberDay922/luckyList.do' + linkextra,
+	type:'post',
+	dataType:'jsonp',
+	jsonp:"jsoncallback",
+	success:function(data){
+		var x = 0;
+		$('.list2').html('');
+		$.each(data,function(index,item){
+			$('.list2').append('<li><span>' + item.user + '</span><span>' + item.time + '</span><strong>' + item.reward + '</strong></li>');
+		});
+		if($('.list2con').find('ul').find('li').length <= 4){
+			$('.list2con').find('ul').html($('.list2con').find('ul').html());
+		}
+		if($('.list2con').find('ul').find('li').length > 4){
+			$('.list2con').find('ul').html($('.list2con').find('ul').html() + $('.list2con').find('ul').html());
+			setInterval(function(){
+				x++;
+				$('.list2con').find('ul').animate({'top':-parseFloat(1.5*parseInt(x)).toFixed(2) + 'rem'},500);
+				if(x == $('.list2con').find('ul').find('li').length/2){
+					x = 0;
+					$('.list2con').find('ul').animate({'top':-parseFloat(1.5*parseInt(x)).toFixed(2) + 'rem'},0);
+				}
+			},3000);
+		}
+	},
+	error:function(){
+		$('.layer').fadeIn(200);
+		$('#alert1').fadeIn(200);
+	}
+});
+</script>
+</body>
+</html>

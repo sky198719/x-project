@@ -1,0 +1,41 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <!-- We have home navbar without left link-->
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center font-blue">新新商城</div>
+        <div class="right">
+        </div>
+    </div>
+</div>
+
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through toolbar-through">
+    <!-- Page, data-page contains page name-->
+    <div data-page="goodsList" class="page" id="goodsList" directory="xxStore">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content infinite-scroll bg-fff" style="padding-top:37px;">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer ">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="list-block  mgpd0" style="margin:0;">
+                <!------------------------商城标题--------------------------------->
+                <div class="item-link item-content bg-feb04b font-white">
+                    <div class="item-inner account_inner ">
+                        <div class="item-title font13  pt4" style="color:white;">您当前可以兑换新新币<span id="myCoins">0</span>个</div>
+                        <div class="item-after font-white pt5"><span class="font13 font-fef500" id="getMoreCoin">赚取更多新新币</span></div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------商城列表 start--------------------------------->
+            <input type="hidden" id="currentPage" value="1"/>
+            <input type="hidden" id="totalPage" value="1"/>
+            <div id="goodsListData">
+            	
+            </div>
+            <!------------------------商城列表 end----------------------------------->
+        </div>
+    </div>
+</div>

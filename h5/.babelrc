@@ -1,0 +1,17 @@
+{
+  "presets": ["next/babel","es2015","react","stage-0"],//12
+  "plugins": [
+    //["import", { "libraryName": "antd-mobile", "style": "css" }]
+//    [
+//      "css-modules-transform", {
+//          "extensions": [".css", ".scss",".sass"],
+//          "append": [ "postcss-cssnext" ],
+//          "extractCss": {
+//              "dir": "./static/css/",
+//              "relativeRoot": "./pages/",
+//              "filename": "[path]/[name].css"
+//          }
+//      }
+//    ]
+  ]
+}

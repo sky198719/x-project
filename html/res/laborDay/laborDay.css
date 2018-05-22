@@ -1,0 +1,99 @@
+.warp-div {
+  width: 100%;
+  min-width: 1217px;
+  background: #b4e66d none no-repeat center;
+}
+.warp-div .inner-div {
+  width: 1217px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg1 {
+  background-image: url(img/01.jpg);
+}
+.bg1 .area1 {
+  height: 731px;
+}
+.bg2 {
+  background-image: url(img/02.jpg);
+}
+.bg2 .area2 {
+  height: 1168px;
+}
+.bg2 .area2 span {
+  display: inline-block;
+  width: 211px;
+  height: 58px;
+  border: 1px solid #ff6761;
+  position: absolute;
+  top: 766px;
+  left: 698px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+.bg3 .area3 {
+  padding-bottom: 40px;
+  text-align: center;
+}
+.bg3 .area3 .wrap-scroll {
+  width: 1217px;
+  height: 655px;
+  background: url("img/scrolbg.png");
+  overflow: hidden;
+}
+.bg3 .area3 .wrap-scroll .scroll {
+  width: 680px;
+  height: 300px;
+  position: absolute;
+  top: 330px;
+  left: 50%;
+  margin-left: -340px;
+  overflow: inherit;
+  overflow: hidden;
+}
+.bg3 .area3 .wrap-scroll ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.bg3 .area3 .wrap-scroll ul li {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+}
+.bg3 .area3 .wrap-scroll ul li span {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  color: #663300;
+  font-size: 20px;
+}
+.bg3 .area3 .wrap-scroll ul li span.mid {
+  margin: 0 70px;
+}
+.rule {
+  background: url("img/rules.png");
+  width: 1212px;
+  height: 739px;
+  margin: auto;
+}
+.dimension {
+  display: inline-block;
+}
+.dimension p {
+  font-size: 30px;
+  color: #fff;
+  margin: 0 0 25px 0;
+}
+.dimension .c_close {
+  width: 42px;
+  height: 42px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 28px;
+  background: url("img/close.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+}

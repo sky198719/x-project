@@ -1,0 +1,52 @@
+{
+    "viewData": {
+        "MainMenu": {
+            "class": "DisplayObjectContainer",
+            "width": 100,
+            "height": 100,
+            "children": [
+                {
+                    "class": "Bitmap",
+                    "y": 828,
+                    "anchorY": 1,
+                    "scaleY": 1.15,
+                    "texturePath": "images/object/U_1_PList.Dir/background.jpg"
+                },
+                {
+                    "name": "hwBtn",
+                    "class": "SimpleButton",
+                    "x": 250,
+                    "y": 410,
+                    "width": 128,
+                    "height": 58,
+                    "anchorX": 0.5,
+                    "anchorY": 0.5
+                },
+                {
+                    "name": "beginBtn",
+                    "class": "SimpleButton",
+                    "x": 240,
+                    "y": 540,
+                    "width": 100,
+                    "height": 100,
+                    "anchorX": 0.5,
+                    "anchorY": 0.5,
+                    "children": [
+                        {
+                            "class": "Bitmap",
+                            "x": 50,
+                            "y": 50,
+                            "anchorX": 0.5,
+                            "anchorY": 0.5,
+                            "texturePath": "images/object/U_2_PList.Dir/bigdown.png"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "resourceData": [
+        "images/object/U_1_PList.Dir/background.jpg",
+        "images/object/U_2_PList.Dir/bigdown.png"
+    ]
+}

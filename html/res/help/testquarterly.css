@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000000;
+}
+.opareta .download {
+  width: 60px;
+  height: 25px;
+  border: 0px;
+  float: left;
+  margin: 2px;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+}
+.swiper-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+}
+.swiper-container .swiper-wrapper {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+  border: 0px;
+  cursor: pointer;
+  margin-top: -30px;
+  top: 50%;
+  text-align: center;
+  line-height: 60px;
+  background: rgba(255, 255, 255, 0.6);
+  color: #000000;
+}
+.swiper-container .swiper-slide {
+  height: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  display: table;
+}

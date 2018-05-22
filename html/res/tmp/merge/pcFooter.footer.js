@@ -1,0 +1,1 @@
+define(["base"],function(n){function t(){var t=n("#J_footerLink");n("#J_moreLink").on("click",function(){n(this);t.toggleClass("close-down")}),i()}function i(){for(var t=n(".j-process"),i=0,e=t.length;i<e;i++){var o=t.eq(i),r=n(o).attr("tipContent");o.attr("title","已投"+r+"%").find("span").animate({width:r+"%"},1500)}}return{init:t,process:i}});

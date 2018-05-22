@@ -1,0 +1,50 @@
+.stress-2 {
+  background-image        : -webkit-gradient(linear, 0 0, 0 bottom, from($co-main), to($co-vice));
+  -webkit-background-clip : text;
+  -webkit-text-fill-color : transparent;
+  font-size               : 24px;
+}
+
+//page3
+.page3-chart1 {
+  background : url(../imgs/page3-chart1.png) no-repeat center !important; background-size : contain !important;
+  position   : relative;
+}
+//page5
+.page3-chart1{
+  width: 100%;
+  height:78vw;
+  max-height: 323px;
+}
+.page3-chart1 > * {
+  width    : 100%;
+  height   : 100%;
+  position : absolute;
+  left     : 0;
+  top      : 0;
+}
+
+#page3-chart-text > * {
+  position  : absolute;
+  font-size : 10px;
+}
+
+#page3-chart-text > *:nth-child(1) { color : #ffb10b; top : 16.5%; right : 0; }
+#page3-chart-text > *:nth-child(2) { color : #f9df18; top : 70.5%; right : 0; }
+#page3-chart-text > *:nth-child(3) { color : #fff182; top : 87%; right : 0; }
+#page3-chart-text > *:nth-child(4) { color : #5762f7; top : 87%; left : 0; }
+#page3-chart-text > *:nth-child(5) { color : #8e95f8; top : 72%; left : 0; }
+#page3-chart-text > *:nth-child(6) { color : #bdc0ed; top : 58.5%; left : 0; }
+#page3-chart-text > *:nth-child(7) { color : #7d97b3; top : 46%; left : 0; }
+#page3-chart-text > *:nth-child(8) { color : #5a8cc4; top : 33%; left : 0; }
+#page3-chart-text > *:nth-child(9) { color : #799fca; top : 18.5%; left : 0; }
+#page3-chart-text > *:nth-child(10){ color : #c7dcf5; top : 0.5%; left : 0; }
+#page3-chart-text > *:nth-child(11){ color : #fffef1; top : 0.5%; right : 0; }
+
+#page3-chart-text > h2 { color : #f9df18; top : 40%; left : 0%;width:100%; text-align : center; }
+
+#page3-chart-text > h2 > *:nth-child(1) { font-size : 12px }
+
+#page3-chart-text > h2 > *:nth-child(2) {line-height: 1; font-size : 25px;font-weight: bolder;    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff180), to(#f9df18));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }

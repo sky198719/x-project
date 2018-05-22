@@ -1,0 +1,1115 @@
+* {
+    font-family: "微软雅黑";
+}
+
+/*登录提示框*/
+.sign-up {
+    display: none;
+    position: fixed;
+    top: 31.25vw;
+    left: 15.625vw;
+    width: 68.75vw;
+    background: rgba(250, 250, 250, 0.8);
+    padding: 7.8125vw 4.6875vw 5.8125vw;
+    box-sizing: border-box;
+    z-index: 100000;
+}
+
+.sign-up p:nth-child(2) {
+    width: 100%;
+    text-align: center;
+    font-size: 3.90625vw;
+    margin-bottom: 2.34375vw;
+}
+
+.sign-up i {
+    float: right;
+    width: 4.6875vw;
+    height: 4.6875vw;
+    background: url(../img/close.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: -6.6875vw;
+    margin-right: -3.5625vw;
+}
+
+.account {
+    width: 100%;
+    height: 6.25vw;
+    margin-bottom: 2.34375vw;
+    font-size: 3.125vw;
+}
+
+.account input {
+    width: 75%;
+    height: 6.25vw;
+}
+
+.password {
+    width: 100%;
+    height: 6.25vw;
+    margin-bottom: 2.34375vw;
+    font-size: 3.125vw;
+}
+
+.password input {
+    width: 75%;
+    height: 6.25vw;
+}
+
+.register {
+    width: 77%;
+    height: 6.25vw;
+    color: deeppink;
+    font-size: 3.90625vw;
+    text-align: center;
+    line-height: 6.25vw;
+    margin-left: 19%;
+    background: cyan;
+}
+
+.registry {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 3.90625vw;
+    margin-top: 2.34375vw;
+}
+
+.no-chance{
+	position: fixed;
+	display: none;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	z-index: 100000;
+}
+.no-chance div{
+	position: absolute;
+	top: 21.25vw;
+	left: 6.71875vw;
+	width: 86.25%;
+	height: 87.1875vw;
+	background: url(../img/chance.png) no-repeat;
+	background-size: 100% 100%;
+}
+.no-chance b{
+	position: absolute;
+	top: 1vw;
+	right: 1.125vw;
+	width: 7.5625vw;
+	height: 8.4375vw;
+}
+.no-chance i{
+	position: absolute;
+	top: 49.3125vw;
+	left: 10.1875vw;
+	width: 65.3125vw;
+	height: 11.5625vw;
+}
+.no-chance a{
+	position: absolute;
+	top: 63vw;
+	left: 10.1875vw;
+	display: block;
+	width: 65.3125vw;
+	height: 11.5625vw;
+}
+/*中奖内容提示框*/
+.prize-alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100000;
+}
+
+.prize-alert-close1 {
+    position: absolute;
+    top: 21.25vw;
+    right: 8.125%;
+    width: 7.5625%;
+    height: 8.4375vw;
+    /*background: cyan;*/
+    z-index: 3;
+}
+
+.prize-alert-close2 {
+    position: absolute;
+    top: 96.15625vw;
+    left: 17.1875%;
+    width: 65.3125%;
+    height: 11.5625vw;
+    /*background: cyan;*/
+    z-index: 3;
+}
+.go-one-close{
+	position: absolute;
+	top: 96.15625vw;
+	left: 17.1875%;
+	width: 65.3125%;
+	height: 11.5625vw;
+	display: none;
+	z-index: 4;
+}
+.back-three-close{
+	position: absolute;
+	top: 96.15625vw;
+	left: 17.1875%;
+	width: 65.3125%;
+	height: 11.5625vw;
+	display: none;
+	display: none;
+	z-index: 4;
+}
+.back-four-close{
+	position: absolute;
+	top: 96.15625vw;
+	left: 17.1875%;
+	width: 65.3125%;
+	height: 11.5625vw;
+	display: none;
+	display: none;
+	z-index: 4;
+}
+.go-two-close{
+	position: absolute;
+	top: 96.15625vw;
+	left: 17.1875%;
+	width: 65.3125%;
+	height: 11.5625vw;
+	display: none;
+	display: none;
+	z-index: 4;
+}
+.money1 {
+    background: url(../img/money1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.money2 {
+    background: url(../img/money2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.money1 p {
+    position: absolute;
+    top: 54.5vw;
+    left: 0;
+    width: 100%;
+    font-size: 4.375vw;
+    line-height: 7vw;
+    color: #a04400;
+    text-align: center;
+}
+.go i{
+	position: absolute;
+	top: 42.1875vw;
+	left: 34.375vw;
+	font-size: 4.84375vw;
+	color: white;
+	font-style: normal;
+}
+.back i{
+	position: absolute;
+	top: 42.1875vw;
+	left: 34.375vw;
+	font-size: 4.84375vw;
+	color: white;
+	font-style: normal;
+}
+
+.alert-base {
+    display: none;
+    position: absolute;
+    top: 21.25vw;
+    left: 6.71875%;
+    width: 86.40625%;
+    height: 96.5625vw;
+}
+
+.go {
+    background: url(../img/go.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.back {
+    background: url(../img/back.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.fifty {
+    background: url(../img/fifty.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.return1 {
+    background: url(../img/return1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.return2 {
+    background: url(../img/return2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.camera {
+    background: url(../img/camera.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.cup {
+    background: url(../img/cup.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.nick {
+    background: url(../img/nick.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.tv {
+    background: url(../img/tv.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.header {
+    width: 100%;
+    height: 163.28125vw;
+    background: url("../img/header.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/*游戏环节*/
+.game {
+    width: 100%;
+    height: 158.28125vw;
+    background: url("../img/game.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.chance {
+    display: none;
+    position: absolute;
+    top: 1.5625vw;
+    right: 6.25%;
+    font-size: 3.75vw;
+    color: #861006;
+    width: 43.75%;
+}
+
+.chance span {
+    float: left;
+}
+
+.rest {
+    display: block;
+    width: 11.875vw;
+    height: 5.9375vw;
+    background: #861006;
+    line-height: 5.9375vw;
+    border-radius: 0.78125vw;
+    text-align: center;
+    color: #fff8aa;
+    margin: 0 2.1875%;
+    margin-top: -1.25vw;
+}
+
+.result {
+    position: absolute;
+    top: 11.9375vw;
+    left: 33.375%;
+    width: 60.15625%;
+    height: 22.125vw;
+    overflow: hidden;
+    font-size: 2.96875vw;
+}
+
+.result ul {
+    width: 100%;
+    position: absolute;
+}
+
+.result ul li {
+    width: 100%;
+   	height: 5.53125vw;
+   	line-height: 5.53125vw;
+   	color: #fff8aa;
+}
+
+.result ul li span:nth-child(1) {
+    margin-right: 1.71875%;
+}
+
+/*总排行*/
+.rank {
+    width: 100%;
+    height: 111.875vw;
+    background: url("../img/rank.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    font-size: 3.4375vw;
+}
+
+.rank ul li {
+    width: 70.3125%;
+    position: absolute;
+    left: 17.5%;
+    color: white;
+}
+
+.rank ul li span {
+    display: block;
+    float: left;
+}
+
+.rank-li-span1 {
+    margin-right: 5vw;
+}
+
+.rank-li-span2 {
+    width: 15.625vw;
+    margin-right: 8.25vw;
+}
+
+.rank-list1 {
+    top: 41.71875vw;
+}
+
+.rank-list2 {
+    top: 48.59375vw;
+}
+
+.rank-list3 {
+    top: 55.46875vw;
+}
+
+.rank-list4 {
+    top: 62.34375vw;
+}
+
+.rank-list5 {
+    top: 69.21875vw;
+}
+
+/*邀请注册*/
+.share {
+    width: 100%;
+    height: 16.875vw;
+    background: url("../img/share.png") no-repeat;
+    background-size: 100% 100%;
+    font-size: 3.75vw;
+    line-height: 16.875vw;
+    text-align: center;
+    color: #8c261e;
+    display: none
+}
+
+.invite {
+    color: #fff786;
+}
+
+.login {
+    color: #fff786;
+}
+
+/*各种产品*/
+.product {
+    width: 100%;
+    height: 124.0625vw;
+    background: url("../img/product.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.product a {
+    display: block;
+    position: absolute;
+    width: 26.5625%;
+    height: 37.5vw;
+}
+
+.pro-list1 {
+    top: 14.84375vw;
+    left: 7.1875%;
+}
+
+.pro-list2 {
+    top: 14.84375vw;
+    left: 36.5625%;
+}
+
+.pro-list3 {
+    top: 14.84375vw;
+    right: 7.34375%;
+}
+
+.pro-list4 {
+    bottom: 28.90625vw;
+    left: 0.71875rem;
+}
+
+.pro-list5 {
+    bottom: 28.90625vw;
+    left: 36.5625%;
+}
+
+.pro-list6 {
+    bottom: 28.90625vw;
+    right: 7.34375%;
+}
+
+/*底部固定导航*/
+.footer {
+    width: 100%;
+    height: 20vw;
+    background: url("../img/footer1.png") no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+.footer-base {
+    float: left;
+    margin-left: 6.5%;
+    margin-top: 4.21875vw;
+    width: 8.59375%;
+    height: 12.5vw;
+}
+
+.strategy {
+
+}
+
+.yprize {
+    display: none;
+}
+
+.click-base {
+    float: right;
+    margin-right: 3.75%;
+    margin-top: 4.0625vw;
+    width: 42.8125%;
+    height: 12.65625vw;
+    line-height: 12.65625vw;
+    font-size: 5.625vw;
+    color: #f9cc16;
+    text-align: center;
+}
+
+.wclick {
+    /*display: none;*/
+}
+
+.ago-click {
+    display: none;
+}
+
+.after-click {
+    display: none;
+}
+
+/*攻略*/
+.strategy-con {
+    display: none;
+    width: 100%;
+    height: 573.75vw;
+    background: url("../img/strategy.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.s-con-close1 {
+    position: absolute;
+    top: 9.375vw;
+    right: 8.75%;
+    width: 6.5625%;
+    height: 8.4375vw;
+}
+
+.s-con-close2 {
+    position: absolute;
+    top: 286.40625vw;
+    left: 24.21875%;
+    width: 51.25%;
+    height: 11.5625vw;
+}
+
+/*我的奖品*/
+.prize-con {
+    display: none;
+    width: 100%;
+    height: 573.75vw;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+}
+
+.prize-box {
+    position: relative;
+    top: 20.78125vw;
+    left: 6.71875%;
+    width: 86.40625%;
+}
+
+.no-prize {
+    display: none;
+    width: 86.40625%;
+    height: 5.15625vw;
+    background: url("../img/noprize.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+
+.prize-top {
+    width: 86.40625%;
+    height: 38.28125vw;
+    background: url("../img/myPrize-top.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+
+.prize-list{
+	width: 86.40625%;
+    height: 34vw;
+	margin: 0 auto;
+	overflow: hidden;
+    background: #ffd44f;
+	position: relative;
+}
+.prize-list ul{
+    position: absolute;
+	width: 100%;
+	top: 0;
+}
+.prize-list ul li{
+	width: 100%;
+	height: 8.4375vw;
+	background: url("../img/myPrize-mid.png") no-repeat;
+	background-size: 100% 100%;
+	margin: 0 auto;
+	font-size: 2.8125vw;
+	color: white;
+	line-height: 9.375vw;
+	text-align: center;
+}
+.prize-list ul li p{
+	width: 74.3125%;
+	height: 6.875vw;
+	margin: 0 auto;
+	text-align: left;
+}
+.prize-bot{
+	width: 86.40625%;
+	height: 38.28125vw;
+	background: url("../img/myPrize-bot.png") no-repeat;
+	background-size: 100% 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-top: 10.125vw;
+	padding: 10.125vw 10.9375% 0;
+	position: relative;
+}
+.prize-bot span{
+	font-size: 5vw;
+	color: white;
+}
+.prize-up{
+	position: absolute;
+    top: 1.5625vw;
+    left: 18.5625vw;
+}
+.prize-down{
+	position: absolute;
+    top: 1.5625vw;
+    left: 42.5625vw;
+}
+.prize-close1 {
+    width: 10%;
+    height: 9.375vw;
+    float: right;
+    margin-top: 0vw;
+}
+
+.prize-close2 {
+    width: 100%;
+    height: 13.40625vw;
+    float: right;
+}
+
+/*活动分享*/
+.give {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 23.4375vw;
+    z-index: 100000;
+}
+
+.give-top {
+    width: 100%;
+    height: 15.625vw;
+    background: cyan;
+    box-sizing: border-box;
+    padding: 0.78125vw 0;
+}
+
+.give-bot {
+    width: 100%;
+    height: 7.8125vw;
+    line-height: 7.8125vw;
+    text-align: center;
+    font-size: 3.75vw;
+    color: red;
+    background: white;
+}
+
+.give-base {
+    width: 14.0625%;
+    height: 14.0625vw;
+    margin: 0 5.46875vw;
+    float: left;
+}
+
+.weichat {
+    background: url(../img/weichat.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.weifrient {
+    background: url(../img/weifrient.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.sina {
+    background: url(../img/sina.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.copy {
+    background: url(../img/copy.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/*筛子*/
+.dice {
+    position: fixed;
+    top: 30vh;
+    left: 13%;
+    width: 68.125%;
+    height: 68.125vw;
+    z-index: 10000000;
+}
+
+/*每个块儿*/
+.singal {
+    display: none;
+    position: absolute;
+    width: 18.4375vw;
+    height: 19.21875vw;
+    background: url(../img/icon.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: -2.03125vw;
+    margin-top: -3.125vw;
+    z-index: 1;
+}
+
+.kuaier {
+    display: block;
+    position: relative;
+}
+
+.kuaier li {
+    width: 14.375%;
+    height: 14.375vw;
+    position: absolute;
+    /*z-index: 10000;*/
+}
+
+.kuaier1 {
+    top: 31.71875vw;
+    left: 7.8125%;
+}
+
+.kuaier2 {
+    top: 48.4375vw;
+    left: 7.8125%;
+}
+
+.kuaier3 {
+    top: 48.4375vw;
+    left: 25.15625%;
+}
+
+.kuaier4 {
+    top: 48.4375vw;
+    left: 42.96875%;
+}
+
+.kuaier5 {
+    top: 48.4375vw;
+    left: 60.46875%;
+}
+
+.kuaier6 {
+    top: 48.4375vw;
+    left: 78.125%;
+}
+
+.kuaier7 {
+    top: 64.0625vw;
+    left: 78.125%;
+}
+
+.kuaier8 {
+    top: 79.6875vw;
+    left: 78.125%;
+}
+
+.kuaier9 {
+    top: 79.6875vw;
+    left: 60.46875%;
+}
+
+.kuaier10 {
+    top: 79.6875vw;
+    left: 44.0625%;
+}
+
+.kuaier11 {
+    top: 79.6875vw;
+    left: 26.25%;
+}
+
+.kuaier12 {
+    top: 79.6975vw;
+    left: 9.6875%;
+}
+
+.kuaier13 {
+    top: 95.625vw;
+    left: 9.6875%;
+}
+
+.kuaier14 {
+    top: 111.25vw;
+    left: 9.6875%;
+}
+
+.kuaier15 {
+    top: 111.25vw;
+    left: 25.46875%;
+}
+
+.kuaier16 {
+    top: 111.25vw;
+    left: 42.65625%;
+}
+
+.kuaier17 {
+    top: 111.25vw;
+    left: 60.15625%;
+}
+
+.kuaier18 {
+    top: 111.25vw;
+    left: 77.5%;
+}
+
+.kuaier19 {
+    top: 127.1875vw;
+    left: 77.5%;
+}
+
+.kuaier20 {
+    top: 143.4375vw;
+    left: 77.5%;
+}
+
+.kuaier21 {
+    top: 143.4375vw;
+    left: 59.6875%;
+}
+
+.kuaier22 {
+    top: 143.4375vw;
+    left: 43.125%;
+}
+
+.kuaier23 {
+    top: 143.4375vw;
+    left: 25.9375%;
+}
+
+.kuaier24 {
+    top: 143.4375vw;
+    left: 8.59375%;
+}
+
+.join {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000000;
+    -webkit-animation: move 0.2s linear;
+}
+
+@-webkit-keyframes move {
+    0% {
+        transform: translateY(100px);
+    }
+    20% {
+        transform: translateY(80px);
+    }
+    40% {
+        transform: translateY(60px);
+    }
+    60% {
+        transform: translateY(40px);
+    }
+    80% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@-moz-keyframes move {
+    0% {
+        transform: translateY(100px);
+    }
+    20% {
+        transform: translateY(80px);
+    }
+    40% {
+        transform: translateY(60px);
+    }
+    60% {
+        transform: translateY(40px);
+    }
+    80% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@-ms-keyframes move {
+    0% {
+        transform: translateY(100px);
+    }
+    20% {
+        transform: translateY(80px);
+    }
+    40% {
+        transform: translateY(60px);
+    }
+    60% {
+        transform: translateY(40px);
+    }
+    80% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@-o-keyframes move {
+    0% {
+        transform: translateY(100px);
+    }
+    20% {
+        transform: translateY(80px);
+    }
+    40% {
+        transform: translateY(60px);
+    }
+    60% {
+        transform: translateY(40px);
+    }
+    80% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.join-base {
+    width: 95%;
+    height: 6.25vw;
+    margin: 0.78125vw auto;
+    line-height: 6.25vw;
+    text-align: center;
+    border: 0.15625vw solid black;
+    font-size: 3.125vw;
+    border-radius: 0.46875vw;
+    color: #22a1fc;
+}
+
+.join-cancel {
+    color: #fc242c;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+}
+
+.layer2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+}
+
+.alerts {
+    z-index: 9999;
+    width: 90%;
+    padding: 3vw 0 6vw 0;
+    top: 50%;
+    margin-top: -3.5rem;
+    left: 5%;
+    position: fixed;
+    background: #e9c249;
+    border-radius: 5px;
+    color: #131617;
+    text-align: center;
+    display: none;
+    font-family: '微软雅黑';
+}
+
+.alerts div {
+    width: 90%;
+    line-height: 7vw;
+    color: #131617;
+    text-align: center;
+    margin-bottom: 2vw;
+    font-size: 4vw;
+    padding: 0 5%;
+    word-break: break-all;
+}
+
+.alerts div em {
+    line-height: 1.5rem;
+    color: #131617;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+.alerts span {
+    width: 20%;
+    color: #e9c249;
+    padding: 1vw 8vw;
+    background: #131617;
+    font-size: 5vw;
+    border-radius: 5px;
+    margin: 0 3vw;
+}
+
+.alerts p {
+    width: 20%;
+    color: #e9c249;
+    padding: 0.2rem 1rem;
+    background: #131617;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    display: inline;
+}
+
+.alerts strong {
+    font-weight: normal;
+    width: 20%;
+    padding: 0.2rem 1rem;
+    background: #131617;
+    color: #e9c249;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+}
+
+.alerts ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.alerts ul li {
+    width: 100%;
+    height: 1.5rem;
+    list-style-type: none;
+    padding-bottom: 1rem;
+}
+
+.alerts ul li label {
+    width: 30%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+    text-align: right;
+    float: left;
+    display: inline;
+    color: #131617;
+}
+
+.alerts ul li input {
+    width: 60%;
+    float: left;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border: none;
+    background: #ffffff;
+    color: #131617;
+    font-size: 0.8rem;
+    padding: 0 5%;
+}
+
+.alerts ul li button {
+    width: 70%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+    background: #131617;
+    text-align: center;
+    color: #e9c249;
+    border: none;
+    margin-left: 30%;
+}
+
+.alerts b {
+    width: 70%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.5rem;
+    background: #131617;
+    text-align: center;
+    color: #ff0000;
+    border: none;
+    margin-left: 5%;
+    background: none;
+    display: none;
+}

@@ -1,0 +1,15 @@
+{{#each list}}
+<li data-id="{{schemeid}}">
+    <a href="#" class="item-link item-content">
+        <div class="item-inner">
+            <div class="item-title-row">
+                <div class="item-title"><h5 class="font-dark">{{pname}}</h5></div>
+                <div class="item-after">{{schemeStatus}}</div>
+            </div>
+            <div class="item-subtitle mt10"><h6 class="font-grey">计划金额：{{account}} 元</h6>
+            </div>
+            <div class="item-text" style="height:30px;"><h6><span>锁定期：{{closeterm}}个月</span><span class="ml20">历史年化收益：{{min_max_apr}}</span></h6></div>
+        </div>
+    </a>
+</li>
+{{/each}}

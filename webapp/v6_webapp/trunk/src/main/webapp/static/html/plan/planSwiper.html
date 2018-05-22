@@ -1,0 +1,36 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link" > <i class="icon icon-back"></i><span>返回</span></a></div>
+        <!-- We have home navbar without left link-->
+        <div class="center sliding">
+            <a href="#" data-popover=".popover-link" class="open-popover popver-arrow-right">新元宝</a>
+        </div>
+        <div class="right sliding">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel" data-panel="right"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="planSwiper" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content xyb-page">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <!-- 无可加入新元宝计划时显示层-->
+            <div class="none-xyb" name="xyb-none-div"></div>
+            <div id="planSwiperContent">
+
+            </div>
+            <a href="#" class="a-link" id="plan_swiper_to_list">
+                <h5>查看往期计划 ></h5>
+            </a>
+        </div>
+    </div>
+</div>

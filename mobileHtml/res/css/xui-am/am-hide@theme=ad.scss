@@ -1,0 +1,13 @@
+.am-hide-ad { animation : am-hide-ad .4s forwards; -webkit-animation : am-hide-ad .4s forwards; transform-origin : 50% 200%; -webkit-transform-origin : 50% 200%; }
+
+@-webkit-keyframes am-hide-ad {
+  0% { -webkit-transform : rotate(0deg); }
+  40% { -webkit-transform : rotate(2deg); }
+  100% { -webkit-transform : rotate(-30deg); }
+}
+
+@keyframes am-hide-ad {
+  0% { transform : rotate(0deg); }
+  40% { transform : rotate(2deg); }
+  100% { transform : rotate(-30deg); }
+}

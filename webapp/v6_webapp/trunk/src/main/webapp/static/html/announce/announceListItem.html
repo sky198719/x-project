@@ -1,0 +1,17 @@
+{{#each list}}
+<li class="swipeout" data-announceId="{{id}}">
+	<div class="swipeout-content">
+		<div class="item-inner pl15">
+			<div class="item-title-row">
+				<div class="item-title text-overflow" style="width: 75%;">
+					{{#if isNew}}<img src="static/img/xxd/redDot.png" style="width: 10px;" id="redDot_{{id}}">{{/if}} <span style="font-size:0.8rem;">{{title}}</span>
+				</div>
+				<div class="item-after" style="">{{time}}</div>
+			</div>
+			<div class="item-subtitle mt5" style="height: 1.5rem;">
+	            <div style="color:#9E9E9E;font-size:0.7rem;" class="announceListItem text-overflow">{{subTitle}}</div>
+	        </div>
+		</div>
+	</div>
+</li>
+{{/each}}

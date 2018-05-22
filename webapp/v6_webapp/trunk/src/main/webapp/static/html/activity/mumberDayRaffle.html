@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>9月会员日</title>
+<link rel="stylesheet" href="../../css/zepto/zepto.alert.css">
+<style>
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.container img {
+    display: block;
+    border: none;
+    width: 100%;
+}
+
+.container .btn1 {
+    width: 50%;
+    top: 40.3%;
+    left: 27.5%;
+    position: absolute;
+    transform: rotate(0deg);
+}
+
+.container .btn2 {
+    width: 45%;
+    top: 0;
+    left: 13%;
+    position: absolute;
+}
+
+.container .btn3 {
+    width: 24%;
+    top: 0;
+    right: 13%;
+    position: absolute;
+}
+
+.container .list1 {
+    width: 57%;
+    top: 39%;
+    left: 32%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.container .list1 li {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
+    color: #29a2cb;
+    list-style-type: none;
+}
+
+.container .list1 li span {
+    width: 50%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
+    color: #29a2cb;
+    float: left;
+    display: inline;
+    text-align: center;
+}
+
+.container .list2 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.container .list2 li {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
+    color: #29a2cb;
+    list-style-type: none;
+}
+
+.container .list2 li span {
+    width: 30%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
+    color: #29a2cb;
+    float: left;
+    display: inline;
+    text-align: center;
+}
+
+.container .list2 li strong {
+    width: 40%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
+    color: #29a2cb;
+    float: left;
+    display: inline;
+    text-align: center;
+    font-weight: normal;
+}
+
+.container .con {
+    width: 31.25%;
+    position: absolute;
+    list-style-type: none;
+}
+
+.container .con#list1 {
+    top: 22%;
+    left: 15%;
+}
+
+.container .con#list2 {
+    top: 22%;
+    right: 15%;
+}
+
+.container .con#list3 {
+    top: 60%;
+    left: 1%;
+}
+
+.container .con#list4 {
+    top: 60%;
+    left: 34.5%;
+}
+
+.container .con#list5 {
+    top: 60%;
+    right: 1%;
+}
+
+.container .infos {
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.6rem;
+    text-align: center;
+    display: none;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-size: 24px;
+}
+
+.list2con {
+    height: 6rem;
+    overflow: hidden;
+    width: 84%;
+    top: 38%;
+    left: 8%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.login-input {
+    width: 50%;
+    border: none;
+    outline: none;
+    line-height: 30px;
+    height: 30px;
+    background: 0;
+    margin-left: 22px;
+    font-size: 15px;
+}
+
+.login-button {
+    border: 1px solid #007aff;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    line-height: 27px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: 0 0;
+    padding: 0 10px;
+    margin: 0;
+    height: 29px;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    background: #3f9bff;
+    border-color: #3f9bff;
+}
+</style>
+</head>
+<body>
+<!--login-->
+<div class="login" style="display: none;">
+    <section style="margin: 20% 10% 0 10%;">
+        <div style="text-align: center;
+            font-size: 18px;">登录新新贷
+        </div>
+        <div style="margin-top: 25px;">
+            <div style="margin-bottom: 2%;">
+                <span style="font-size: 0.7rem;width: 30%;">用  户  名：</span>
+                <span style="width: 70%;"><input id="login-username" type="text" placeholder="用户名/注册手机/邮箱地址" class="login-input"/></span>
+            </div>
+            <div>
+                <span style="font-size: 0.7rem;width: 30%;">登录密码：</span>
+                <span style="width: 70%;"><input id="login-pwd" type="password" placeholder="请输入密码" class="login-input"/></span>
+            </div>
+        </div>
+        <div style="margin-top:5%">
+            <button class="login-button">登录</button>
+        </div>
+        <div style="font-size: 18px;
+            float: right;
+            margin: 25px;
+            color:#3f9bff " id="login-close">关闭
+        </div>
+    </section>
+</div>
+<div class="view" style="overflow:scroll;">
+    <div class="container">
+        <img src="../../img/activity/mumberDayRaffle/bg1.jpg"/>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/mumberDayRaffle/bg2.jpg"/>
+        <img src="../../img/activity/mumberDayRaffle/btn1.png" class="btn1"/>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/mumberDayRaffle/bg3.jpg"/>
+        <img src="../../img/activity/mumberDayRaffle/btn2.png" class="btn2"/>
+        <img src="../../img/activity/mumberDayRaffle/btn3.png" class="btn3"/>
+
+        <div class="infos">剩余抽奖次数：0</div>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/mumberDayRaffle/bg4.jpg"/>
+        <ul class="list1">
+        </ul>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/mumberDayRaffle/bg5.jpg"/>
+
+        <div class="list2con">
+            <ul class="list2">
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="con1">
+        <img src="../../img/activity/mumberDayRaffle/bg6.jpg"/>
+        <img src="../../img/activity/mumberDayRaffle/pro1.png" class="con" id="list1"/>
+        <img src="../../img/activity/mumberDayRaffle/pro2.png" class="con goDetail" id="list2" data-closeTerm="1"/>
+        <img src="../../img/activity/mumberDayRaffle/pro3.png" class="con goDetail" id="list3" data-closeTerm="3"/>
+        <img src="../../img/activity/mumberDayRaffle/pro4.png" class="con goDetail" id="list4" data-closeTerm="6"/>
+        <img src="../../img/activity/mumberDayRaffle/pro5.png" class="con goDetail" id="list5" data-closeTerm="12"/>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/mumberDayRaffle/bg7.jpg"/>
+    </div>
+    <div class="container">
+        <img src="../../img/activity/mumberDayRaffle/bg8.jpg"/>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/jquery/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery/jquery.md5.js"></script>
+<script type="text/javascript" src="../../lib/zepto/zepto.alert.js"></script>
+<script>
+(function (doc, win, fontSize) {
+    var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+            };
+    if (!doc.addEventListener) {
+        return;
+    }
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window, 16);
+var link = '../../../';
+var linkextra = '?jsonpCallback=?';
+var timer = 0;
+var degs = 0;
+var str = window.location.href;
+$(document).ready(function () {
+    inittopList();
+    initluckyList();
+    bindEvent();
+
+    if (isLogin()) {
+        var isAct = isActivity();
+        if(isAct == 0) {
+            loginHandler()
+        } else {
+            $('.infos').show(0);
+           $('.btn2').hide();
+           $('.btn3').hide(0);
+           $('.infos').html('剩余抽奖次数：0');
+        }
+
+    }
+});
+
+function initluckyList() {
+    ajax({
+        url: link + 'memberDay922/luckyList.do' + linkextra,
+        type: 'get',
+        dataType: 'jsonp',
+        jsonp: "jsoncallback",
+        success: function (data) {
+            var x = 0;
+            $('.list2').html('');
+            $.each(data, function (index, item) {
+                $('.list2').append('<li><span>' + item.user + '</span><span>' + item.time + '</span><strong>' + item.reward + '</strong></li>');
+            });
+            if ($('.list2con').find('ul').find('li').length <= 4) {
+                $('.list2con').find('ul').html($('.list2con').find('ul').html());
+            }
+            if ($('.list2con').find('ul').find('li').length > 4) {
+                $('.list2con').find('ul').html($('.list2con').find('ul').html() + $('.list2con').find('ul').html());
+                setInterval(function () {
+                    x++;
+                    $('.list2con').find('ul').animate({'top': -parseFloat(1.5 * parseInt(x)).toFixed(2) + 'rem'}, 500);
+                    if (x == $('.list2con').find('ul').find('li').length / 2) {
+                        x = 0;
+                        $('.list2con').find('ul').animate({'top': -parseFloat(1.5 * parseInt(x)).toFixed(2) + 'rem'}, 0);
+                    }
+                }, 3000);
+            }
+
+        }
+    });
+
+}
+
+function inittopList() {
+    ajax({
+        url: link + 'memberDay922/topList.do' + linkextra,
+        type: 'get',
+        dataType: 'jsonp',
+        jsonp: "jsoncallback",
+        success: function (data) {
+            $('.list1').html('');
+            $.each(data, function (index, item) {
+                $('.list1').append('<li><span>' + item.user + '</span><span>' + item.amount + '</span></li>')
+            })
+        }
+    });
+}
+
+
+function loginHandler() {
+    ajax({
+        url: link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+        type: 'get',
+        dataType: 'jsonp',
+        jsonp: "jsoncallback",
+        success: function (result) {
+            if(result.resultCode == 0) {
+                $('.infos').show(0);
+                $('.btn2').hide();
+                $('.btn3').hide(0);
+                $('.infos').html('剩余抽奖次数：' + result.data[0].playtime);
+            } else {
+                $.dialog({
+                    content: '获取剩余抽奖次数失败，请重新尝试',
+                    title: "warn",
+                    time: 2000
+                });
+            }
+        }
+    });
+}
+
+function isActivity(){
+    var reuslt = 1;
+    ajax({
+        url:'../../../activity/checkActivity.do',
+        dataType:'json',
+        data:{code:'vip-activity'},
+        async:false,
+        success: function (result) {
+            reuslt = result.resultCode;
+        }
+    });
+    return reuslt;
+}
+
+function bindEvent() {
+    $(".goDetail").click(function(){
+        var isAct = isActivity();
+        if(isAct == 1) {
+            $.dialog({
+                content: '活动未开始~',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        } else if(isAct == 2) {
+            $.dialog({
+                content: '活动已结束~',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        }
+
+        var closeTerm = $(this).attr("data-closeTerm");
+        ajax({
+            url: '../../../xplan/getLatestSchemeId.do',
+            data:{
+                "closeTerm": closeTerm
+            },
+            dataType:'json',
+            success: function (result) {
+                if (result.schemeInfo != null && result.schemeInfo != "") {
+                    var schemeInfo = result.schemeInfo;
+                    var planId = schemeInfo.SCHEMEID;
+                    window.location.href = '../../../#!/static/html/plan/planDetailsV2.html?path=plan&planId=' + planId;
+                }
+            }
+        });
+    });
+
+    $("#list1").click(function(){
+        var isAct = isActivity();
+
+        if(isAct == 1) {
+            $.dialog({
+                content: '活动未开始~',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        } else if(isAct == 2) {
+            $.dialog({
+                content: '活动已结束~',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        }
+        window.location.href = '../../../#!/static/html/fund/fundUnInvested.html?path=fund';
+    });
+    $(".btn3").click(function () {
+        var isAct = isActivity();
+        if(isAct == 1) {
+            $.dialog({
+                content: '活动未开始~',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        } else if(isAct == 2) {
+            $.dialog({
+                content: '活动已结束~',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        }
+        if (isLogin()) {
+            $.dialog({
+                content: '您已是登录状态',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        }
+        $(".login").show();
+        $(".view").hide();
+    });
+
+    $(".btn2").click(function () {
+        var isAct = isActivity();
+        if(isAct == 1) {
+            $.dialog({
+                content: '活动未开始~',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        } else if(isAct == 2) {
+            $.dialog({
+                content: '活动已结束~',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        }
+        $.dialog({
+            content: '我的抽奖次数：请登录查看',
+            title: "warn",
+            okText: '登录',
+            ok:function(){
+                $(".login").show();
+                $(".view").hide();
+            }
+        });
+    });
+
+    $("#login-close").click(function () {
+        $(".login").hide();
+        $(".view").show();
+    });
+
+
+    $(".login-button").click(function () {
+        var username = $.trim($("#login-username").val());
+        if (username == '') {
+            $.dialog({
+                content: '请输入用户名/注册手机/邮箱地址',
+                title: "warn",
+                time: 2000
+            });
+            $("#login-username").focus();
+            return;
+        }
+
+        var pwd = $.trim($("#login-pwd").val());
+        if (pwd == '') {
+            $.dialog({
+                content: '请输入密码',
+                title: "warn",
+                time: 2000
+            });
+            $("#login-pwd").focus();
+            return;
+        }
+
+        ajax({
+            url: '../../../user/loginActive.do',
+            data: {
+                username: username,
+                password: $.md5($.md5(pwd))
+            },
+            dataType: 'json',
+            success: function (result) {
+                $('#login-pwd').val('');
+                if (result.resultCode == 0) {
+                    $(".login").hide();
+                    $(".view").show();
+                    loginHandler();
+                } else if (result.resultCode == -1) {
+                    $.dialog({
+                        content: '用户名称不存在，请重新输入',
+                        title: "warn",
+                        time: 2000
+                    });
+                    $("#login-username").focus();
+                } else if (result.resultCode == -2) {
+                    $.dialog({
+                        content: '密码错误，请重新输入',
+                        title: "warn",
+                        time: 2000
+                    });
+                    $("#login-pwd").focus();
+                } else if (result.resultCode == -3 || result.resultCode == -4) {
+                    $.dialog({
+                        content: result.msg,
+                        title: "warn",
+                        time: 2000
+                    });
+                } else if (result.resultCode == -9) {
+                    $.dialog({
+                        content: '登录失败，请重新尝试或者联系客服',
+                        title: "warn",
+                        time: 2000
+                    });
+                } else {
+                    $.dialog({
+                        content: result.msg,
+                        title: "warn",
+                        time: 2000
+                    });
+                }
+            }
+        });
+    });
+    $('.btn1').click(function () {
+		var isAct = isActivity();
+        if(isAct == 1){
+            $.dialog({
+                content: '抱歉，活动未开始',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        } else if(isAct == 2) {
+            $.dialog({
+                content: '抱歉，活动已结束',
+                title: "warn",
+                time: 2000
+            });
+            return;
+        }
+		
+        if (!isLogin()) {
+            $.dialog({
+                content: '请先登录',
+                title: "warn",
+                okText:'立即登录',
+                ok:function(){
+                    $(".login").show();
+                    $(".view").hide();
+                }
+            });
+            return;
+        }
+
+
+        var myplaytime = 0;
+        ajax({
+            url: link + 'memberDay922/getCanPlayTimes.do' + linkextra,
+            type: 'get',
+            dataType: 'jsonp',
+            jsonp: "jsoncallback",
+            success: function (result) {
+                if(result.resultCode != 0) {
+                    $.dialog({
+                        content: '获取剩余抽奖次数失败，请重新尝试',
+                        title: "warn",
+                        time: 2000
+                    });
+                    return;
+                }
+                myplaytime = parseInt(result.data[0].playtime);
+                if (myplaytime <= 0) {
+                    $.dialog({
+                        content: '抽奖次数用完啦，投资新元宝或者日日盈即可获得抽奖次数！',
+                        title: "warn",
+                        okText:'立即投资',
+                         cancelText:'知道了',
+                         ok:function(){
+                             window.scrollTo(0,1500);
+                         },
+                         cancel:function(){
+                         }
+                    });
+                    return false;
+                }
+
+                if (myplaytime > 0) {
+                    var _this = $(this);
+                    if (timer == 0) {
+                        timer = 1;
+                        ajax({
+                            url: link + 'memberDay922/playStart.do' + linkextra,
+                            type: 'get',
+                            dataType: 'jsonp',
+                            jsonp: "jsoncallback",
+                            success: function (result) {
+                                if(result.resultCode != 0) {
+                                    $.dialog({
+                                       content: result.msg,
+                                       title: "warn",
+                                       time: 2000
+                                   });
+                                    return;
+                                }
+
+                                var t = setInterval(function () {
+                                    degs += 10;
+                                    $('.btn1').css('transform', 'rotate(' + degs + 'deg)');
+                                }, 1);
+                                var rewards = result.data[0].itemName;
+                                var rewardid = result.data[0].itemId;
+                                setTimeout(function () {
+                                    clearTimeout(t);
+                                    if (parseInt(rewardid) == 12) {
+                                        $('.btn1').css('transform', 'rotate(' + 22.5 + 'deg)');
+                                    } else if (parseInt(rewardid) == 18) {
+                                        $('.btn1').css('transform', 'rotate(' + 67.5 + 'deg)');
+                                    } else if (parseInt(rewardid) == 16) {
+                                        $('.btn1').css('transform', 'rotate(' + 112.5 + 'deg)');
+                                    } else if (parseInt(rewardid) == 13) {
+                                        $('.btn1').css('transform', 'rotate(' + 157.5 + 'deg)');
+                                    } else if (parseInt(rewardid) == 17) {
+                                        $('.btn1').css('transform', 'rotate(' + 202.5 + 'deg)');
+                                    } else if (parseInt(rewardid) == 15) {
+                                        $('.btn1').css('transform', 'rotate(' + 247.5 + 'deg)');
+                                    } else if (parseInt(rewardid) == 14) {
+                                        $('.btn1').css('transform', 'rotate(' + 292.5 + 'deg)');
+                                    } else if (parseInt(rewardid) == 19) {
+                                        $('.btn1').css('transform', 'rotate(' + 337.5 + 'deg)');
+                                    }
+                                    timer = 0;
+                                    ajax({
+                                        url: link + 'memberDay922/playEnd.do' + linkextra,
+                                        type: 'get',
+                                        dataType: 'jsonp',
+                                        jsonp: "jsoncallback",
+                                        success: function (result1) {
+                                            if(result1.resultCode != 0) {
+                                                $.dialog({
+                                                     content: result1.msg,
+                                                     title: "warn",
+                                                     time: 2000
+                                                 });
+                                            }
+                                            $('.infos').html('剩余抽奖次数：' + result1.data[0].playtime);
+                                            if (parseInt(rewardid) == 12) {
+                                                $.dialog({
+                                                    content: '没抽中，离大奖仅一步之遥~',
+                                                    title: "warn",
+                                                    okText:'【再抽一次】',
+                                                    cancelText:'【取消】',
+                                                    ok:function(){
+
+                                                    },
+                                                    cancel:function(){
+
+                                                    }
+                                                });
+                                            } else {
+                                                $.dialog({
+                                                    content: '中奖啦！抽到' + rewards,
+                                                    title: "ok",
+                                                    okText:'【再抽一次】',
+                                                    cancelText:'【知道了】',
+                                                    ok:function(){
+
+                                                    },
+                                                    cancel:function(){
+
+                                                    }
+                                                });
+                                            }
+                                        }
+                                    });
+                                }, 3000);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    });
+}
+function isLogin() {
+    var result = false;
+    ajax({
+        url: "../../../user/isLogin.do?" + new Date().getTime(),
+        dataType: 'json',
+        async: false,
+        data: {},
+        success: function (data) {
+            if (data.isLogin != null) {
+                result = data.isLogin;
+            }
+        }
+    });
+    return result;
+}
+
+function ajax(options) {
+    var isasync = 'async' in options ? options.async : true;
+    var method = 'type' in options ? options.type : 'GET';
+    var reqData = 'data' in options ? options.data : {};
+    var reqDataType = 'dataType' in options ? options.dataType : 'none';
+    var timeoutNum = 'timeout' in options ? options.timeout : 5000;
+    try {
+        $.ajax({
+            type: method,
+            url: options.url,
+            data: reqData,
+            async: isasync,
+            dataType: reqDataType,
+            timeout: timeoutNum,
+            success: function (resp) {
+                options.success(resp);
+            },
+            error: function (xhr, errorType, error) {
+                if ('error' in options && $.isFunction(options.error)) {
+                    options.error(xhr, errorType, error);
+                } else {
+                    $.dialog({
+                        content: "请求出错[" + xhr.status + "]，请重新尝试或检查您的网络是否正常",
+                        title: "alert",
+                        time: 2000
+                    });
+                }
+            }
+        });
+    } catch (e) {
+        $.dialog({
+            content: "请求出错[" + xhr.status + "]，请重新尝试或联系客服",
+            title: "alert",
+            time: 2000
+        });
+    }
+}
+</script>
+</body>
+</html>

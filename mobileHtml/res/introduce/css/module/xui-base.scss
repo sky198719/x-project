@@ -1,0 +1,55 @@
+//容器
+[xui] .bold, %bold { font-weight : bold }
+
+//对齐
+[xui] .al, [xui] .al-z > *, %al { text-align : left; }
+
+[xui] .ar, [xui] .ar-z > *, %ar { text-align : right; }
+
+[xui] .ac, [xui] .ac-z > *, %ac { text-align : center; }
+
+[xui] .aj, [xui] .aj-z > *, %aj { text-align : justify; }
+
+[xui] .vt, [xui] .vt-z > *, %vt { vertical-align : top; }
+
+[xui] .vc, [xui] .vc-z > *, %vc { vertical-align : middle; }
+
+[xui] .vb, [xui] .vb-z > *, %vb { vertical-align : bottom; }
+
+.hide { display: none;}
+//水平垂直居中
+.hvc {  display : inline-table;  }
+.hvc > * { display: table-cell; vertical-align : middle; text-align: center; height: 100%; width: 100%; position: relative;  }
+
+/*定位*/
+[xui] .pr, [xui] .pr-z > *, %pr { position : relative; }
+
+[xui] .pa, [xui] .pa-z > *, %pa { position : absolute; }
+
+[xui] .pf, [xui] .pf-z > *, %pf { position : fixed; }
+
+/*浮动*/
+[xui] .fl, [xui] .fl-z > *, %fl { float : left; }
+
+[xui] .fr, [xui] .fr-z > *, %fr { float : right; }
+
+[xui] .fn, [xui] .fn-z > *, %fn { float : none; }
+
+[xui] .cb, [xui] .cb-z > *, %cb { clear : both; }
+
+[xui] .cb:after, [xui] .cb-z > *:after, [xui] .box:after, %cb { display : table; content : ""; clear : both; }
+
+[xui] .tobar[xui] .fix { width : 100%; position : fixed; top : 0; }
+
+[xui] .fobar[xui] .fix { width : 100%; position : fixed; bottom : 0; }
+
+%pointer{cursor: pointer}
+
+[xui] .ti2,[xui] .ti2-z>p{
+  text-indent: 2em;
+}
+
+%no-select{
+  -webkit-user-select: none;
+  user-select: none;
+}

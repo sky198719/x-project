@@ -1,0 +1,382 @@
+@media screen and (max-width: 1366px) {
+  .section {
+    img {
+      width: 70%;
+    }
+  }
+}
+@baseHigh:1080; //star 上边距离函数
+@baseWidth:1920;
+.starPosition(@left, @top) {
+  left:percentage(round(@left/@baseWidth, 4));
+  top:percentage(round(@top/@baseHigh, 4));
+}
+.borderRadius(@borderR){
+  border-radius: @borderR;
+  -webkit-border-radius: @borderR;
+  -moz-border-radius: @borderR;
+}
+//给属性加前缀
+.prefixAdd(@name,@val){
+    @{name}:@val;
+  -webkit-@{name}:@val;
+  -moz-@{name}:@val;
+  -o-@{name}:@val;
+  -ms-@{name}:@val;
+}
+.disnone{
+  display: none;
+}
+.bkgT{
+  background: url("img/reportAugust/bkgT.jpg") center no-repeat;
+  background-size: 100% 100%;
+
+}
+.bkgF{
+  background: url("img/reportAugust/bkgF.jpg") center  no-repeat;
+  background-size: 100% 100%;
+}
+.bkg-first{
+  background: url("img/reportAugust/bkg-first.jpg") center no-repeat;
+  background-size: 100% 100%;
+}
+.bkg-special{
+  background: url("img/reportAugust/bkg-special.jpg") center no-repeat;
+  background-size: 100% 100%;
+}
+.section {
+  text-align: center;
+  .spec {
+    width: auto;
+  }
+}
+.section {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+   img{
+     display: block;
+     vertical-align: middle;
+     margin: 0 auto;
+   }
+  .all-stars{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    .common-start{
+      position: absolute;
+      .borderRadius(50%);
+    }
+    .first-star{
+      .starPosition(335,213);
+      width: 18px;
+      height: 18px;
+      background: url("img/reportAugust/first.png") center center/100% 100% no-repeat;
+    }
+    .second-star{
+       .starPosition(514,124);
+      width: 5px;
+      height: 5px;
+      background-color: #189af3;
+
+    }
+    .third-star{
+      .starPosition(649,208);
+      width: 5px;
+      height: 5px;
+      background-color: #1844f2;
+    }
+    .fourth-star{
+       .starPosition(774,160);
+      width: 23px;
+      height: 23px;
+      background: url("img/reportAugust/fourth.png") center center/100% 100% no-repeat;
+    }
+    .fifth-star{
+      .starPosition(973,52);
+      width: 8px;
+      height: 8px;
+      background-color: #189af3;
+    }
+    .sixth-star{
+      .starPosition(1010,203);
+      width: 5px;
+      height: 5px;
+      background-color: #189af3;
+    }
+    .seventh-star{
+      .starPosition(1253,73);
+      width: 8px;
+      height: 8px;
+      background-color: #189af3;
+    }
+    .eighth-star{
+      .starPosition(1359 ,172);
+      width: 5px;
+      height: 5px;
+      background-color: #1539c9;
+    }
+    .ninth-star{
+      .starPosition(1441,280);
+      width: 14px;
+      height: 14px;
+      background: url("img/reportAugust/ninth.png") center center/100% 100% no-repeat;
+    }
+    .tenth-star{
+      .starPosition(1538,73);
+      width: 8px;
+      height: 8px;
+      background-color: #1539c9;
+    }
+    .eleventh-star{
+      .starPosition(1650,203);
+      width: 3px;
+      height: 3px;
+      background-color: #1539c9;
+    }
+    .twelfth-star{
+      .starPosition(1799,122);
+      width: 14px;
+      height: 14px;
+      background:url("img/reportAugust/twelfth.png") center center/100% 100% no-repeat;
+    }
+    //第二部分星星
+    .first-starT{
+      .starPosition(145,618);
+      width: 5px;
+      height: 5px;
+      background:#189af3;
+    }
+    .second-starT{
+      .starPosition(293,442);
+      width: 14px;
+      height: 14px;
+      background:url("img/reportAugust/secondT.png") center center/100% 100% no-repeat;
+    }
+    .third-starT{
+      .starPosition(453,522);
+      width: 3px;
+      height: 3px;
+      background-color: #1539c9;
+    }
+    .fourth-starT{
+      .starPosition(560,392);
+      width: 8px;
+      height: 8px;
+      background-color: #1539c9;
+
+    }
+    .fifth-starT{
+      .starPosition(651,600);
+      width: 14px;
+      height: 14px;
+      background:url("img/reportAugust/twelfthT.png") center center/100% 100% no-repeat;
+    }
+    .sixth-starT{
+      .starPosition(739,490);
+      width: 8px;
+      height: 8px;
+      background-color: #189af3;
+    }
+    .seventh-starT{
+      .starPosition(1091,522);
+      width: 5px;
+      height: 5px;
+      background-color: #189af3;
+    }
+    .eighth-starT{
+      .starPosition(1309 ,479);
+      width: 23px;
+      height: 23px;
+      background:url("img/reportAugust/eighthT.png") center center/100% 100% no-repeat;
+    }
+    .ninth-starT{
+      .starPosition(1452,526);
+      width: 5px;
+      height: 5px;
+      background-color: #1539c9;
+    }
+    .tenth-starT{
+      .starPosition(1518,602);
+      width: 8px;
+      height: 8px;
+      background-color: #189af3;
+    }
+    .eleventh-starT{
+      .starPosition(1587,442);
+      width: 5px;
+      height: 5px;
+      background-color: #1539c9;
+    }
+    .twelfth-starT{
+      .starPosition(1754,532);
+      width: 18px;
+      height: 18px;
+      background:url("img/reportAugust/thirteenthT.png") center center/100% 100% no-repeat;
+    }
+  //  第三部分闪烁
+    .first-starR{
+      .starPosition(248,846);
+      width: 14px;
+      height: 14px;
+      background:url("img/reportAugust/firstR.png") center center/100% 100% no-repeat;
+    }
+    .second-starR{
+      .starPosition(408,926);
+      width: 3px;
+      height: 3px;
+      background-color: #1539c9;
+
+    }
+    .third-starR{
+      .starPosition(515,796);
+      width: 8px;
+      height: 8px;
+      background:url("img/reportAugust/thirdR.png") center center/100% 100% no-repeat;
+    }
+    .fourth-starR{
+      .starPosition(606,1004);
+      width: 14px;
+      height: 14px;
+      background:url("img/reportAugust/fourthR.png") center center/100% 100% no-repeat;
+    }
+    .fifth-starR{
+      .starPosition(694,894);
+      width: 8px;
+      height: 8px;
+      background-color: #189af3;
+    }
+    .sixth-starR{
+      .starPosition(803,796);
+      width: 5px;
+      height: 5px;
+      background-color: #189af3;
+    }
+    .seventh-starR{
+      .starPosition(1046,926);
+      width: 5px;
+      height: 5px;
+      background-color: #1539c9;
+    }
+    .eighth-starR{
+      .starPosition(1080 ,774);
+      width: 8px;
+      height: 8px;
+      background-color: #189af3;
+    }
+    .ninth-starR{
+      .starPosition(1264,893);
+      width: 23px;
+      height: 23px;
+      background:url("img/reportAugust/ninthR.png") center center/100% 100% no-repeat;
+    }
+    .tenth-starR{
+      .starPosition(1407,930);
+      width: 5px;
+      height: 5px;
+      background-color: #1539c9;
+    }
+    .eleventh-starR{
+      .starPosition(1542,846);
+      width: 5px;
+      height: 5px;
+      background-color: #189af3;
+    }
+    .twelfth-starR{
+      .starPosition(1708,936);
+      width: 18px;
+      height: 18px;
+      background:url("img/reportAugust/twelfthR.png") center center/100% 100% no-repeat;
+    }
+    .twinkling{
+      opacity: 0.3;
+      .prefixAdd(animation-name,move-twink-back);
+      .prefixAdd(animation-duration,7s);
+      .prefixAdd(animation-timing-function,ease-out);
+      .prefixAdd(animation-iteration-count,infinite);
+
+     .loop(35)
+    }
+    //延迟时间自动生成
+    .loop(@n,@i:1) when (@i<=@n){
+      &:nth-of-type(@{i}){
+        .prefixAdd(animation-delay,-1*unit(round(`Math.random(20)*10`,4),s));
+      }
+      .loop(@n, (@i + 1));
+    }
+
+    .keyframes(@name,@frames) {
+      @-webkit-keyframes @name {
+        @frames();
+      }
+      @-moz-keyframes @name {
+        @frames();
+      }
+      @-o-keyframes @name {
+        @frames();
+      }
+      @-ms-keyframes @name {
+        @frames();
+      }
+      @keyframes @name {
+        @frames();
+      }
+    }
+    .keyframes(move-twink-back,{
+      5%{
+        opacity: 1;
+      }
+      15%{
+        opacity: 0.3;
+      }
+      68%{
+        opacity: 0;
+      }
+      74%{
+        opacity: 1;
+      }
+      78%{
+        opacity: 0.3;
+      }
+    });
+  }
+}
+
+#menu li {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background:url("img/reportAugust/default.png") no-repeat center;
+  opacity: 80;
+  margin-bottom: 20px;
+}
+
+#menu li.active {
+  background:url("img/reportAugust/active.png") no-repeat center;
+}
+
+#menu li:hover {
+  background: url("img/reportAugust/active.png") no-repeat center;
+}
+
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  text-decoration: none;
+  &:focus{outline:none;}
+}
+
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 474px;
+  margin-top: -237px;
+  z-index: 70;
+}

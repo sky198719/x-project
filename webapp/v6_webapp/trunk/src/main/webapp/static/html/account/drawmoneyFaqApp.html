@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, user-scalable=no"/>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>提现问题说明</title>
+</head>
+<body style="padding: 0.7rem;font-size: 0.7rem;">
+<div style="margin-bottom: 1rem;">
+    <span style="width: 0.2rem;height: 0.9rem;background: #66AFFE;margin-top: 0.4rem;
+        margin-right: 0.2rem;display: block;float: left;"></span><span style="font-size: 1.2rem;font-weight: 600;">工作日提现时间说明</span>
+</div>
+<table style="width: 100%;background: #f5f5f5;text-align: center;border: solid 1px #cac9c9;">
+    <tr>
+        <td style="border-right: solid 1px #cac9c9;border-bottom:solid 1px #cac9c9;padding: 0.4rem;">提现受理时间</td>
+        <td style="border-bottom:solid 1px #cac9c9;">9:00-15:30</td>
+    </tr>
+    <tr>
+        <td style="border-right: solid 1px #cac9c9;padding: 0.4rem;">提现到账时间</td>
+        <td>0-3个工作日内，最快当天到账</td>
+    </tr>
+    <tr>
+        <td colspan="2" style="border-top: solid 1px #cac9c9;padding: 0.4rem;text-align: left;">双休日、节假日提现申请顺延至下一个工作日处理</td>
+    </tr>
+</table>
+
+<div style="padding: 0.7rem 0 0 0;font-size: 0.8rem;">温馨提示：</div>
+
+<div style="padding: 0.6rem 0 0.3rem 0;">1.充值资金在充值到账后24小时内不予提现。</div>
+
+<div style="padding: 0.3rem 0 0.3rem 0;">2.提现资金到银行卡的具体时间，请以银行为准。如节假日遇到银行调整，以最新公告为准。</div>
+
+<div style="padding: 0.3rem 0 0.3rem 0;">3.提现时如遇任何问题，请联系客服：4000-169-521。</div>
+
+<div style="display: none;" id="abc">
+    <p style="font-size: 1.2rem;font-weight: 600;">
+        <span style="width: 0.2rem;height: 0.9rem;background: #66AFFE;margin-top: 0.4rem;
+            margin-right: 0.2rem;display: block;float: left;"></span>提现收费说明</p>
+    <table style="width: 100%;background: #f5f5f5;text-align: center; border: solid 1px #e1e1e1;" cellpadding="0">
+        <tr>
+            <td style="width: 30%;border-right: solid 1px #e1e1e1;padding: 0.4rem;">免费提现次数</td>
+            <td><span class="drawmoneyFaqNum">0</span>次/月(任意金额)</td>
+        </tr>
+    </table>
+
+    <div style="padding: 0.7rem 0 0 0;font-size: 0.8rem;">温馨提示： </div>
+
+    <div style="padding: 0.6rem 0 0.3rem 0;">
+        1.当月提现超过<span class="drawmoneyFaqNum">0</span>次后，每次收取<span class="drawmoneyRtea"></span>%的手续费，最低收费<span
+            class="accountCashMinfee"></span>元，最高收费<span class="accountCashMaxfee">0</span>元。
+    </div>
+
+    <div style="padding: 0.3rem 0 0.3rem 0;">2.每月免费提现次数不可叠加至下月使用。</div>
+</div>
+</body>
+<script src="../../lib/jquery/jquery1.11.1.min.js"></script>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+    $(document).ready(function () {
+        $.ajax({
+            url: '../../../account/getCacheCash.do',
+            dataType: 'json',
+            type: 'get',
+            success: function (data) {
+                var accountCashRate = data.accountCashRate;
+                if (accountCashRate > 0) {
+                    $("#abc").show();
+                    $(".drawmoneyFaqNum").html(data.accountCashFer);
+                    $(".drawmoneyRtea").html(accountCashRate);
+                    $(".accountCashMinfee").html(data.accountCashMinfee);
+                    $(".accountCashMaxfee").html(data.accountCashMaxfee);
+                }
+            }
+        });
+    });
+</script>
+</html>

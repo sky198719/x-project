@@ -1,0 +1,39 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <!-- We have home navbar without left link-->
+        <div class="center sliding">
+            <a href="#" data-popover=".popover-link" class="open-popover popver-arrow-right">债权转让列表</a>
+        </div>
+        <div class="right sliding">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel" data-panel="right"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through">
+    <div class="page" data-page="tradeRequestList">
+        <div class="page-content tradeRequest-list-show pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <input type="hidden" id="tradeRequestCurrentPage" value="1"/>
+            <input type="hidden" id="tradeRequestTotalPage" value="1"/>
+
+            <div class="list-block media-list" style='display: none;'>
+                <ul id="tradeRequestList">
+
+                </ul>
+                <ul>
+                    <!-- 单个通知条目 -->
+                    <li class="notification-item">
+                        <!-- 自定义通知内容 -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

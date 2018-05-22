@@ -1,0 +1,208 @@
+.disnone {
+  display: none;
+}
+.disblock {
+  display: block;
+}
+.dishidden {
+  visibility: hidden;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: ".";
+  visibility: hidden;
+}
+html {
+  width: 100%;
+  height: auto !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+#J_wrapBody {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-width: 1200px;
+}
+.container {
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+}
+.container .minwidth {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.wrap-top {
+  width: 100%;
+  height: 1092px;
+  background: url("../decemberMember/img/top.png") center no-repeat;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.wrap-center {
+  width: 100%;
+  height: 952px;
+  margin: 0 auto;
+  background: url("../decemberMember/img/center.png") center no-repeat;
+}
+.wrap-center .center-l {
+  float: left;
+  margin-left: 130px;
+  margin-top: 280px;
+  width: 570px;
+}
+.wrap-center .center-l ul {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.wrap-center .center-l ul li {
+  float: left;
+  width: 184px;
+  height: 197px;
+  position: relative;
+}
+.wrap-center .center-l ul li div {
+  position: absolute;
+  width: 27px;
+  height: 21px;
+  background: url("img/choice.png") center no-repeat;
+}
+.wrap-center .center-l ul .choice1,
+.wrap-center .center-l ul .choice2,
+.wrap-center .center-l ul .choice3 {
+  height: 188px;
+}
+.wrap-center .center-l ul .choice1 div,
+.wrap-center .center-l ul .choice2 div,
+.wrap-center .center-l ul .choice3 div {
+  top: 156px;
+}
+.wrap-center .center-l ul .choice4,
+.wrap-center .center-l ul .choice5,
+.wrap-center .center-l ul .choice6 {
+  height: 180px;
+  margin-top: 16px;
+}
+.wrap-center .center-l ul .choice4 div,
+.wrap-center .center-l ul .choice5 div,
+.wrap-center .center-l ul .choice6 div {
+  top: 150px;
+}
+.wrap-center .center-l ul .choice7,
+.wrap-center .center-l ul .choice8,
+.wrap-center .center-l ul .choice9 {
+  height: 175px;
+  margin-top: 27px;
+}
+.wrap-center .center-l ul .choice7 div,
+.wrap-center .center-l ul .choice8 div,
+.wrap-center .center-l ul .choice9 div {
+  top: 146px;
+}
+.wrap-center .center-l ul .choice1 div,
+.wrap-center .center-l ul .choice4 div,
+.wrap-center .center-l ul .choice7 div {
+  left: 26px;
+}
+.wrap-center .center-l ul .choice2 div,
+.wrap-center .center-l ul .choice5 div,
+.wrap-center .center-l ul .choice8 div {
+  left: 48px;
+}
+.wrap-center .center-l ul .choice3,
+.wrap-center .center-l ul .choice6,
+.wrap-center .center-l ul .choice9 {
+  margin-left: 16px;
+}
+.wrap-center .center-l ul .choice3 div,
+.wrap-center .center-l ul .choice6 div,
+.wrap-center .center-l ul .choice9 div {
+  left: 54px;
+}
+.wrap-center .center-l ul .choice8 div {
+  left: 42px;
+}
+.wrap-center .center-r {
+  float: right;
+  margin-top: 380px;
+  margin-right: 34px;
+}
+.wrap-center .center-r .winData {
+  width: 370px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+}
+.wrap-center .center-r .winData ul {
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+.wrap-center .center-r .winData ul li {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+}
+.wrap-center .center-r .winData ul li span {
+  display: inline-block;
+  text-align: center;
+}
+.wrap-center .center-r .winData ul li .username {
+  width: 50%;
+  text-align: center;
+}
+.wrap-center .center-r .winData ul li .prizename {
+  width: 50%;
+}
+.wrap-bottom {
+  width: 100%;
+  height: 763px;
+  background: url("../decemberMember/img/bottom.png") center no-repeat;
+  overflow: hidden;
+}
+/*弹窗*/
+.popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+}
+.popup .pop-main {
+  position: fixed;
+  width: 471px;
+  height: 409px;
+  top: 50%;
+  left: 50%;
+  margin-left: -235.5px;
+  margin-top: -204.5px;
+  background: url("img/qr-code.png") center no-repeat;
+}
+.popup .pop-main .close {
+  display: block;
+  float: right;
+  margin-top: -40px;
+  margin-right: -40px;
+  width: 47px;
+  height: 47px;
+  background: url("img/close.png") center no-repeat;
+}

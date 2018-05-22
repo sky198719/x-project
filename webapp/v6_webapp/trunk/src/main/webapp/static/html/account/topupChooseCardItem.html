@@ -1,0 +1,14 @@
+{{#each list}}
+<li>
+	<label class="label-radio item-content topup_bankList" data-id="{{bankId}}" data-code="{{bankCode}}" data-bankName="{{bankName}}" data-bankAccount="{{bankAccount}}" style="line-height: 1.5;">
+		<input type="radio" name="ks-media-radio" value="{{bankId}}" {{#if checked}}checked="checked"{{else}}{{/if}}/>
+		<div class="item-media" style="padding-top:0px;padding-bottom:0px;margin-left: -10px;">
+			<div class="bank {{bankCode}}" style="width:55px;height:55px;background-size:55px;"></div>
+		</div>
+		<div class="item-inner" style="margin-left:5px;">
+			<div class="item-title">{{bankName}}({{bankAccount}})</div>
+			<div class="item-subtitle" style="font-size: 13px;color: #94999E;">该卡单笔限额{{bankLimit.limit}}，单日限额{{bankLimit.dayLimit}}</div>
+		</div>
+	</label>
+</li>
+{{/each}}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>新新贷贷款申请</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 , maximum-scale=1.0, user-scalable=0" />
+<link rel="stylesheet" href="styles/library/reset.css" />
+<link rel="stylesheet" href="styles/common/common.css" />
+<link rel="stylesheet" href="styles/custom/applyPerson.css" />
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="formBox">
+	<div class="borrowBox">
+		<h4>您的预估额度为<span></span>元</h4>
+		<strong>此额度仅供参考，最终额度将根据您提交的资料决定，资料越完整，审核速度越快</strong>
+	</div>
+	<h3>家庭公司信息</h3>
+	<ul>
+		<li id="houseAddress">
+			<label>现居地址</label>
+			<input type="text" placeholder="请输入您的现居地址" maxlength=50 value="" />
+		</li>
+		<li id="houseElectricityfees">
+			<label>电费户号</label>
+			<input type="text" placeholder="请输入现居地址的电费户号" maxlength=50 value="" />
+		</li>
+		<li id="companyAddress">
+			<label>公司地址</label>
+			<input type="text" placeholder="请输入您的公司地址" maxlength=50 value="" />
+		</li>
+	</ul>
+	<h3>联系人</h3>
+	<ul>
+		<li id="relativesName">
+			<label>直系亲属姓名</label>
+			<input type="text" placeholder="请输入一位直系亲属姓名" maxlength=20 value="" />
+		</li>
+		<li id="relativesMobile">
+			<label>直系亲属手机号</label>
+			<input type="text" placeholder="请输入直系亲属手机号" maxlength=11 value="" />
+		</li>
+		<li id="colleagueName">
+			<label>同事姓名</label>
+			<input type="text" placeholder="请输入一位同事姓名" maxlength=20 value="" />
+		</li>
+		<li id="colleagueMobile">
+			<label>同事手机号</label>
+			<input type="text" placeholder="请输入该同事手机号" maxlength=11 value="" />
+		</li>
+	</ul>
+	<h3>借款事项</h3>
+	<ul>
+		<li id="loanAmount">
+			<label>借款金额</label>
+			<input type="text" placeholder="请输入您想借款的金额" maxlength=10 value="" />
+		</li>
+		<li id="loanTerm" alt="请选择借款期限">
+			<label>借款期限</label>
+			<div value="">请选择借款期限</div>
+		</li>
+	</ul>
+	<div class="clause">
+		<img src="images/custom/apply/hook1.png" />
+		我已阅读并同意
+		<span>《借款申请承诺书》</span>
+	</div>
+	<button>下一步</button>
+</div>
+
+<div class="layer"></div>
+<div class="alertBox">
+	<img src="images/common/alertBox2.png" class="close" />
+	<img src="images/common/alertBox1.png" />
+	<strong></strong>
+	<span>知道了</span>
+</div>
+<div class="scrollBox" id="loanTermBox">
+	<span>
+		<img src="images/common/scrollBox2.png" class="cancel" />
+		<img src="images/common/scrollBox1.png" class="confirm" />
+	</span>
+	<div>
+		<ul>
+			<li value="3">3个月</li>
+			<li value="6">6个月</li>
+			<li value="12">12个月</li>
+		</ul>
+	</div>
+</div>
+
+<script src="scripts/library/require.js" data-main="scripts/custom/applyPerson"></script>
+</body>
+</html>

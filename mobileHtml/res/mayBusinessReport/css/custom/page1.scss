@@ -1,0 +1,57 @@
+//page1
+//.swiper-slide1, .swiper-slide15 {
+//  background: url(../imgs/bg1.jpg) no-repeat center / cover
+//}
+.swiper-slide1{
+  width: 100%;
+  //max-width: 340px;
+  height: 100%;
+  background: #242540 url(../imgs/title.png) no-repeat center;
+  background-size: 100%;
+  img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 14rem;
+  }
+}
+.home {
+  ul{
+    margin-top: 2rem;
+  }
+}
+
+.home li {
+  line-height: 1.7rem;
+  color: $co-read;
+  font-size: 0.8rem;
+  span{
+    margin-right: 0.6rem;
+  }
+}
+
+.meteor, .meteor2 {
+  width: 50.5vh;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background: url(../imgs/meteor.png) no-repeat center / contain;
+  z-index: 111;
+}
+
+.meteor2 {
+  top: -5%;
+  left: 15%;
+}
+
+.swiper-slide-active .meteor {
+  animation: am-meteor 5s ease infinite;
+  -webkit-animation: am-meteor 5s ease infinite;
+}
+
+.swiper-slide-active .meteor2 {
+  animation: am-meteor 2s ease infinite;
+  -webkit-animation: am-meteor 2s ease infinite;
+}

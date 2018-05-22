@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script type="text/javascript" src="../../js/utils/track.js"></script>
+    <script type="text/javascript" src="../../js/utils/analytics_plugin.js"></script>
+    <title>中秋佳节</title>
+    <style>
+        .outer {
+            background: #efeff4;
+        }
+
+        .outer * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            font-family: '微软雅黑';
+        }
+
+        html {
+            font-size: 100%;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+        }
+
+        .container img {
+            display: block;
+            border: none;
+            width: 100%;
+        }
+
+        .bg3 ul {
+            list-style: none;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .bg3 ul li {
+            width: 50%;
+            display: inline-block;
+            float: left;
+        }
+
+        .bg3 ul li img {
+            width: 6.6rem;
+            height: 1.6rem;
+        }
+
+        .bg3 ul li img.img1 {
+            padding-left: 22%;
+        }
+
+        .bg3 ul li img.img2 {
+            padding-left: 14%;
+        }
+
+        .btn3 {
+            position: absolute;
+            top: 88%;
+            width: 36%;
+            left: 9%;
+        }
+
+        .btn4 {
+            position: absolute;
+            top: 88%;
+            width: 36%;
+            left: 55%;
+        }
+    </style>
+</head>
+
+<body style="margin: 0;padding:0;">
+<div class="view outer" style="overflow:scroll;">
+    <div class="page">
+        <div class="container">
+            <img src="../../img/activity/zhongqiuApp/bg_01.png"/>
+        </div>
+        <div class="container">
+            <img src="../../img/activity/zhongqiuApp/bg_02.png"/>
+        </div>
+        <div class="container bg3">
+            <img src="../../img/activity/zhongqiuApp/bg_03.png"/>
+                <a class="btn3" style="top: 89%;" id="a1"><img src="../../img/activity/zhongqiuApp/zq_btn.png" class="img1" id="one"></a>
+                <a class="btn4" style="top: 89%;" id="a3"><img src="../../img/activity/zhongqiuApp/zq_btn.png" class="img2" id="three"></a>
+        </div>
+        <div class="container bg3">
+            <img src="../../img/activity/zhongqiuApp/bg_04.png"/>
+            <a class="btn3" id="a6"><img src="../../img/activity/zhongqiuApp/zq_btn.png" class="img1" id="six"></a>
+            <a class="btn4" id="a12"><img src="../../img/activity/zhongqiuApp/zq_btn.png" class="img2" id="twelve"></a>
+        </div>
+
+        <div class="container">
+            <img src="../../img/activity/zhongqiuApp/bg_05.png"/>
+        </div>
+        <div class="container">
+            <img src="../../img/activity/zhongqiuApp/bg_06.jpg"/>
+        </div>
+
+    </div>
+</div>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script src="../../../static/lib/zepto/zepto.min.js"></script>
+<script type="text/javascript" src="../../lib/zepto/zepto.md5.js"></script>
+<script>
+    $(document).ready(function () {
+        selectPlan(1);
+        selectPlan(3);
+        selectPlan(6);
+        selectPlan(12);
+        try {
+            //XXD_TRACK.track_pageview('zhongqiuApp');
+            var gauserId = "";
+            gaInits(gauserId);
+        } catch (e) {
+        }
+
+    });
+
+    function selectPlan(closeTerm) {
+        $.ajax({
+            url: "../../../xplan/getLatestSchemeId.do",
+            data: {
+                currentPage: 1,
+                closeTerm: closeTerm,
+                pageSize: 10
+            },
+            dataType: 'json',
+            success: function (data) {
+                if (data != null && data.schemeInfo != null) {
+                    var planId = data.schemeInfo.SCHEMEID;
+                    $("#a" + closeTerm).attr("href", "xxd://list/pdd?selID=1&pdName=xinyuanbao&xybID=" + planId);
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

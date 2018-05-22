@@ -1,0 +1,106 @@
+
+//page5
+.page3-chart1 {
+  width: 100%;
+  height: 80vw;
+}
+.page5-text1{
+  position: relative;
+  height: 10rem;
+}
+.page5-text1 p {
+  color: #c58b53;
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  background: #404040;
+  left: 0;
+  padding: 1rem 1rem 6.5rem 2rem;
+}
+.page5-text1 p:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  background: $co-main;
+  left: 0;
+  top: 10%;
+}
+.page5-text1 p:after{
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 1rem;
+  background: #262626;
+  left: 2rem;
+  bottom: 0;
+  right: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.page5-text1 h1 {
+  font-size: 3rem;
+  position: absolute;
+  height: 5rem;
+  display: inline-block;
+  background: #c58b53;
+  color: #252525;
+  left: 2rem;
+  top: 2.8rem;
+  right: 2px;
+}
+.page5-text1 h1:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 65%;
+  background: #404040;
+  right: 0;
+  top: 17.5%;
+}
+
+.page5-text2 > * {
+  margin: 2rem 0;
+}
+
+.page5-text2 p {
+  display: inline-block;
+  color: #191919;
+  background: #c58b53;
+  text-align: center;
+  line-height: 2rem;
+  padding: 0 1rem .2rem;
+  overflow: hidden;
+}
+.page5-text2 p.theme-vice{
+  color: #c58b53;
+  background: $bg-vice;
+}
+.page5-text2 p span{
+  position: relative;
+}
+.page5-text2 p span:before{
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  width: 1000%;
+  height: 1px;
+  //background: #191919;
+  background: 	linear-gradient(0deg, rgba(0,0,0,0) 30%, rgba(25,25,25,1.00) 70%);
+  opacity: .8;
+  right: 0;
+  bottom:-.3rem;
+}
+.page5-text2 p.theme-vice span:before{
+  //background: $co-main;
+  background: 	linear-gradient(0deg, rgba(0,0,0,0) 30%, $co-main 70%);
+}
+
+.page5-text2 h1 {
+  font-size: 2.2rem;
+  float: right;
+  line-height: 2rem;
+}

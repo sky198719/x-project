@@ -1,0 +1,68 @@
+{{#each list}}
+{{#if status}}
+<li class="swipeout" data-id="{{requestId}}" data-tradeApr="{{tradeApr}}" data-remainNumber="{{remainNumber}}" data-tenderId = "{{tenderId}}">
+    <div class="swipeout-content">
+        <div class="item-inner pl15">
+            <div class="item-title-row">
+                <div class="item-title font16 font-3A3939">
+                    <span class="font18 hl20">{{borrowName}}</span>
+                </div>
+                <div class="item-after font-999 font14">
+                    <span class="hl20">转让价格</span>
+                    <span class="hl20">{{rep_fun}}</span>
+                </div>
+            </div>
+            <div class="item-text mt15" style="height: 50px;display: list-item;">
+                <span style="float: left;width: 33%">
+                    {{apr}}
+                    <br>
+                    <span style="line-height: 28px;">年化收益</span>
+                </span>
+                <span style="float: left;width: 33%;line-height: 26px;">
+                    <span class="font18 font-3A3939">{{remainNumber}}个月</span>
+                    <br>
+                    <span style="line-height: 28px;">剩余期限</span>
+                </span>
+                <span style="float: right;width: 33%;text-align: right;">
+                    <button class="button qg-btn" style="display: inline;">立即抢购</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="swipeout-actions-right">
+        <a href="#" class="bg-blue bg-green trd_express-bid">快捷投标</a>
+    </div>
+</li>
+{{else}}
+<li class="swipeout" data-id="{{requestId}}">
+    <div class="swipeout-content" >
+        <div class="item-inner pl15">
+            <div class="item-title-row">
+                <div class="item-title font16 font-3A3939">
+                    <span class="font18 hl20">{{borrowName}}</span>
+                </div>
+            </div>
+            <div class="item-text mt15" style="height: 50px;display: list-item;">
+                <span style="float: left;width: 33%">
+                    {{apr}}
+                    <br>
+                    <span style="line-height: 28px;">年化收益</span>
+                </span>
+                <span style="float: left;width: 33%;line-height: 26px;">
+                    <span class="font18 font-3A3939">{{remainNumber}}个月</span>
+                    <br>
+                    <span style="line-height: 28px;">剩余期限</span>
+                </span>
+                <span style="float: left;width: 33%;line-height: 26px;">
+                    <span class="font18 font-3A3939">{{rep_fun}}</span>
+                    <br>
+                    <span style="line-height: 28px;">转让价格</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</li>
+{{/if}}
+{{/each}}
+
+

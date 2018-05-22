@@ -1,0 +1,50 @@
+@border-color-default:#333;
+@border-color-active:#33ffff;
+@media screen and (max-width: 1366px) {
+  .section {
+    img {
+      width: 70%;
+    }
+  }
+  .bkgL{
+    img{
+      width: 40%;
+    }
+  }
+}
+body{
+  background: url("img/reportNov/bkg.jpg") 0 0 no-repeat;
+}
+.section {
+  text-align: center;
+}
+#menu li {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background:url("img/reportNov/default.png") no-repeat center;
+  opacity: 80;
+  margin-bottom: 20px;
+}
+#menu li.active,#menu li:hover{
+  background: url("img/reportNov/active.png") no-repeat center;
+}
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  text-decoration: none;
+  &:focus{outline:none;}
+}
+
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 516px;
+  margin-top: -258px;
+  z-index: 70;
+}

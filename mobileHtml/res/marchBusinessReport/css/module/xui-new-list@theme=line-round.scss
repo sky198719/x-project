@@ -1,0 +1,43 @@
+.xui-new-list[theme="line"],
+.xui-new-list[theme="line-round"]
+{
+  //background: linear-gradient(0deg, #191919 8px, transparent 8px, transparent 97%, #191919 97%),linear-gradient(90deg, transparent 3px, #675441 3px, #675441 4px, transparent 4px);
+  background: linear-gradient(90deg, transparent 2px, #675441 2px, #675441 3px, transparent 3px);
+}
+.xui-new-list>*{
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1rem;
+  margin: .5rem 0;
+}
+.xui-new-list>*.list-title{
+  margin:1rem 0;
+}
+
+.xui-new-list[theme="line-round"]>*:before{
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.xui-new-list[theme="line"]>*.list-title:before,
+.xui-new-list[theme="line-round"]>*.list-title:before{
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 1rem;
+  background: #c58b53;
+  position: absolute;
+  border-radius: 0;
+  top: 2px;
+  left: 0;
+}
+
+
+.xui-new-list>*[co="main"]:before{ background: #c58b53 !important;}
+.xui-new-list>*[co="vice"]:before{ background: #474747 !important;}

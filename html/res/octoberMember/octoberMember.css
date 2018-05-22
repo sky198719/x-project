@@ -1,0 +1,123 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  min-width: 1200px;
+  height: 2950px;
+}
+.container .top {
+  height: 724px;
+  background: url("img/bg1.jpg") center no-repeat;
+}
+.container .wrap-first {
+  height: 800px;
+  background: url("img/bg2.jpg") center no-repeat;
+}
+.container .wrap-first .main-container {
+  height: 800px;
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.container .wrap-first .content-list {
+  position: absolute;
+  top: 424px;
+  right: 81px;
+  width: 446px;
+  height: 257px;
+}
+.container .wrap-first .content-list .winData {
+  width: 446px;
+  height: 257px;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+}
+.container .wrap-first .content-list .winData ul {
+  width: 96%;
+  padding: 0;
+  margin: 0 4%!important;
+  position: relative;
+}
+.container .wrap-first .content-list .winData ul li {
+  width: 100%;
+  height: 54px;
+  line-height: 43px;
+  color: #df0b2e;
+  font-size: 20px;
+  position: relative;
+}
+.container .wrap-first .content-list .winData ul li span {
+  display: inline-block;
+  text-align: center;
+}
+.container .wrap-first .content-list .winData ul li .username {
+  width: 30%;
+  text-align: left;
+}
+.container .wrap-first .content-list .winData ul li .time {
+  width: 29%;
+}
+.container .wrap-first .content-list .winData ul li .prizename {
+  width: 38%;
+  margin-right: 2%;
+}
+.container .wrap-second {
+  height: 1426px;
+  background: url("img/bg3.jpg") center no-repeat;
+  overflow: hidden;
+}
+.container .wrap-second .second-lists {
+  width: 868px;
+  height: 394px;
+  margin: 148px auto 0;
+  background: url("img/product.jpg") center no-repeat;
+  background-size: 100% 100%;
+}
+.container .wrap-second .second-lists .list {
+  display: inline-block;
+  width: 368px;
+  height: 394px;
+  cursor: pointer;
+}
+.container .wrap-second .second-lists .list .list-title {
+  width: 100%;
+  margin: 107px auto 0;
+  text-align: center;
+  font-size: 24px;
+}
+.container .wrap-second .second-lists .list .detail-num {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  overflow: hidden;
+  margin: 6px auto 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+.container .wrap-second .second-lists .list .detail-num .big {
+  font-size: 70px;
+}
+.container .wrap-second .second-lists .list .detail-num .small {
+  font-size: 26px;
+}
+.container .wrap-second .second-lists .list-l .detail-num,
+.container .wrap-second .second-lists .list-l .list-title {
+  color: #ffc42c;
+}
+.container .wrap-second .second-lists .list-r {
+  margin-left: 132px;
+}
+.container .wrap-second .second-lists .list-r .detail-num,
+.container .wrap-second .second-lists .list-r .list-title {
+  color: #ea473d;
+}

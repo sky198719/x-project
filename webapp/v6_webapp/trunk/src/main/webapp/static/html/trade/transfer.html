@@ -1,0 +1,132 @@
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">转出债权</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="#"
+                                                                                   class="link icon-only open-panel"> <i
+                class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="transfer" class="page" directory="trade" id="transfer">
+        <input type="hidden" name="fundsMoney" id="fundsMoney" value="0">
+        <input type="hidden" name="rate" id="rate" value="">
+        <input type="hidden" name="funds" id="funds" value="0">
+        <input type="hidden" name="transferLowerFee" id="transferLowerFee" value="">
+        <input type="hidden" name="receivedNumber" id="receivedNumber" value="">
+        <input type="hidden" name="repaymentAmount" id="repaymentAmount" value="">
+        <input type="hidden" name="q_tenderId" id="q_tenderId" value="">
+        <input type="hidden" name="repayCapital" id="repayCapital"/>
+        <input type="hidden" name="transferpattern" id="transferpattern" value="select"/>
+        <input type="hidden" name="totalAmount" id="totalAmount" value="0"/>
+
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block">
+                <div class="content-block-inner" id="q_form"></div>
+            </div>
+            <div class="content-block-title">转让优惠或加价</div>
+            <div class="list-block accordion-list">
+                <ul>
+                    <li>
+                        <div class="item-content" style="padding-left:0">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label" style="padding-right:15px">转让模式：</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="" id="q_picker_device" value="请选择">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="display: none;" id="li_fundsMoney">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label font-grey">金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：
+                                </div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="让利或加价金额" id="q_fundsMoney" data-type="money">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="display: none;" id="li_fundsRate">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label font-grey">幅&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：
+                                </div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="让利或加价金额比例" id="q_fundsRate" value="0"
+                                           data-type="rate">
+                                </div>
+                                <div class="item-after">%</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block-title"><h6>转让总价：<span class="font-red font24 dmp_content_spa" id="q_totalAmount">0.00</span> 元
+                <span class="font-grey ml10" id="q_totalFee">手续费：0.00 元</span></h6></div>
+            <form class="mb20">
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">支付密码：</div>
+                                <div class="item-input login-item">
+                                    <input type="password" placeholder="请输入支付密码" id="q_paypwd">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">验&nbsp;&nbsp;证&nbsp;码：</div>
+                                <div class="item-input login-item">
+                                    <input type="tel" placeholder="请输入验证码" id="q_verifyCode">
+                                </div>
+                                <div class="item-after">
+                                    <a class="ic-blue disable" id="rand-code-countdown" style="display:none;"></a>
+                                    <a href="#" class="ic-blue" id="q_code">发送验证码</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content" style="display: none;" id="voice_sms">
+                            <div class="item-inner">
+					             <div>收不到验证码？
+<!-- 					            	<a class="disable" style="display: none;" id="voiceCode-countdown" ></a> -->
+					            	<a href="#" id="voiceCode">获取语音验证码</a>
+					            </div>
+					      </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-input item-inline">
+                                        <label class="label-switch">
+                                            <input type="checkbox" checked="checked" id="q_agreement">
+
+                                            <div class="checkbox"></div>
+                                        </label>
+                                    </div>
+                                    <a href="#" class="open-popup" id="transferAgreement">我已阅读并同意《债权转让协议》</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <div class="mr10 ml10">
+                <a href="#" class="button button-51 active dmp-click" id="q_submitButton" dmp_type="click" dmp_event="redeem" dmp_target_type="1" dmp_target_id="8">确认转出</a>
+            </div>
+            <div class="content-block-title">
+              <span>
+                <h6 style="white-space: pre-wrap; line-height: 25px;">温馨提示<br>让利转让：您出让部分利益给接盘人，让利部分将从您转出成功所得金额中扣除；选择让利转让可提高债权转出的成功率<br>加价转让：您向购买您债权者收取一定比例的利益，加价所得将于转出成功后归入您的账户<br>手续费：债权转让手续费为转让金额的千分之五，最低2元<br></h6>
+              </span>
+            </div>
+        </div>
+    </div>
+</div>

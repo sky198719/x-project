@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>借款详情</title>
+    <link href="../agreement/detailscombo.css" rel="stylesheet">
+</head>
+<body>
+<div class='container'>
+    <div>
+        <h2>买车借款</h2>
+        <h5>还款方式</h5>
+        <span>等额本息，按月付息，到期还本</span>
+        <h5>借款期限</h5>
+        <span>1，3，6，12，18，24月</span>
+        <h5>年化利率</h5>
+        <span>7% - 12%</span>
+        <h5>借款金额范围</h5>
+        <span>5000 - 10000元</span>
+    </div>
+    <div class='describe'>
+        <h3>产品描述</h3>
+        <div class='info'>
+            <p>某是新新贷推出的7天期、高收益体验型理财计划，每日24小时开放投资，随时可投。该产品100元起投，投资上限10000元， 每人限投一次。该产品一旦投资成功，不支持提前赎回。
+                该产品债权对接平台的优质短期借款标的。</p>
+            <p>某是新新贷推出的7天期、高收益体验型理财计划，每日24小时开放投资，随时可投。该产品100元起投，投资上限10000元， 每人限投一次。该产品一旦投资成功，不支持提前赎回。
+                该产品债权对接平台的优质短期借款标的。</p>
+        </div>
+    </div>
+</div>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = fontSize * (clientWidth / 375) + 'px';
+            };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script src="../agreement/combodetails.js"></script>
+</body>
+</html>

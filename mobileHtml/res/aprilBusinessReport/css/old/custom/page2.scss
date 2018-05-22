@@ -1,0 +1,75 @@
+//page2
+.stress-1 {
+  position: relative;
+  top: .1rem;
+}
+
+.stress-2 {
+  position: relative;
+  top: .1rem;
+}
+
+#am_number1,
+#am_number2 {
+  font-size: 2.4rem;
+}
+
+.page2-text2 {
+  margin-bottom: 1rem;
+}
+
+.page1-chart1 {
+  position: relative;
+  margin: 5vh 0 9vh 0;
+  height: 60vw;
+  max-height: 248px;
+
+  .grid-data li {
+    width: 25%
+  }
+
+}
+
+.page1-chart1 .chart-bar1 {
+  left: 7%;
+  color: #af8b65;
+}
+
+.page1-chart1 .chart-bar2 {
+  left: 27%;
+  color: #af8b65;
+}
+
+.page1-chart1 .chart-bar3 {
+  right: 28%;
+  color: #af8b65;
+}
+
+.page1-chart1 .chart-bar4 {
+  right: 7%;
+  color: #c58b53;
+}
+
+.page1-chart1 .chart-bar4 h5 {
+  background: #c58b53 !important;
+}
+
+.swiper-slide-active .page1-chart1 li.chart-bar1 {
+  height: 12%;
+}
+
+.swiper-slide-active .page1-chart1 li.chart-bar2 {
+  height: 24%
+}
+
+.swiper-slide-active .page1-chart1 li.chart-bar3 {
+  height: 58%
+}
+
+.swiper-slide-active .page1-chart1 li.chart-bar4 {
+  height: 98%
+}
+
+.page2-text3 {
+  margin-top: .5rem;
+}

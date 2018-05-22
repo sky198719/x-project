@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>欢乐星期三</title>
+</head>
+<body style="margin:0px;">
+<img style="width:100%;" src="../../../static/img/activity/happyWed/happywedAppJune.jpg" alt="欢乐星期三"
+     id="happywedAppJune">
+<img style="width:100%;display: none;" src="../../../static/img/activity/happyWed/happywedAppJune_0609.jpg" alt="欢乐星期三"
+     id="happywedAppJune_0609">
+</body>
+<script type="text/javascript" src="../../lib/jquery/jquery1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: 'GET',
+            url: '../../../currentDate.do',
+            data: {},
+            dataType: 'json',
+            success: function (data) {
+                var date = new Date(Date.parse(data.currentDate.replace(/-/g,"/")));
+                var temp = formatyyyyMMdd(date);
+                if ('20160608' <= temp) {
+                    $("#happywedAppJune").hide();
+                    $("#happywedAppJune_0609").show();
+                }
+            }
+        });
+    });
+
+    function formatyyyyMMdd(data) {
+        var year = data.getFullYear();
+        var month = data.getMonth() + 1;
+        var day = data.getDate();
+        return year + '' + (month < 10 ? "0" + month : month) + "" + (day < 10 ? "0" + day : day);
+    }
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+//am-arrow
+@-webkit-keyframes am-arrow {
+  0%, 30% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -10px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, 8px);
+  }
+}
+
+@keyframes am-arrow {
+  0%, 30% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+}

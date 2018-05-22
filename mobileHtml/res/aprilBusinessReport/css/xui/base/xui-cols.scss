@@ -1,0 +1,12 @@
+.row { position : relative; }
+
+//栅格数
+$cols : 12;
+%col {
+  float : left;
+  &:after { display : table; content : " "; clear : both; }
+}
+
+@for $i from 1 through $cols {
+  .col-#{$i} { width : $i / $cols * 100%; @extend %col; }
+}

@@ -1,0 +1,161 @@
+//page8
+
+.swiper-slide8{
+  background: #242540;
+}
+
+
+.se-hack1 {
+  height   : 48vw;
+  max-height: 199px;
+  overflow : hidden;
+}
+
+.page8-chart1 {
+  background: url(../imgs/page8.png) no-repeat center !important;
+  background-size: 100% 110% !important;
+  position: relative;
+  width: 100%;
+  height: 40vw;
+  max-height: 190px;
+}
+
+.page8-chart1 > * {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.8rem;
+}
+
+#page8-chart-text > * {
+  position: absolute;
+}
+
+#page8-chart-text > *:nth-child(1) {
+  color: #fff;
+  top: 33%;
+  left: 8%;
+  font-weight: normal;
+}
+
+#page8-chart-text > *:nth-child(2) {
+  color: #fff;
+  top: 68%;
+  left: 8%;
+  font-weight: normal;
+}
+
+#page8-chart-text > *:nth-child(3) {
+  color: #1cc1ff;
+  top: 10%;
+  left: 38%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+#page8-chart-text > *:nth-child(4) {
+  color: #1cc1ff;
+  top: 52%;
+  left: 38%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+#page8-chart-text > *:nth-child(5) {
+  color: #fffe81;
+  top: -1%;
+  left: 62%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+#page8-chart-text > *:nth-child(6) {
+  color: #fffe81;
+  top: 65%;
+  left: 62%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.page8-time{
+  font-size: 0.8rem;
+  span{
+    position: absolute;
+    margin-top: 0.1rem;
+  }
+  span:nth-child(1){
+    left: 30%;
+    color: #1cc1ff;
+  }
+  span:nth-child(2){
+    left: 60%;
+    color: #fffe81;
+  }
+}
+.swiper-slide8 .page-data{
+  line-height: 1.2rem;
+}
+#page8-chart2 {
+  height   : 18vh;
+  max-height: 158px;
+  position : relative;
+  margin-bottom: 2.5rem;
+
+  .grid-data li em {
+    bottom: -1.5rem;
+  }
+
+  .grid-text {
+    width : 18%;
+    li {
+      height : 9%;
+    }
+  }
+
+  .img-grid {
+    width : 82%
+  }
+
+  .chart-bar1 {
+    left             : 7%;
+    border-radius    : 3px;
+    background-color : rgba(65,67,141,.7);
+    color            : rgb(65,67,141);
+  }
+
+  .chart-bar2 {
+    left             : 39%;
+    border-radius    : 3px;
+    background-color : rgba(18,195,185,.7);
+    color            : rgb(18,195,185);
+  }
+
+  .chart-bar3 {
+    right            : 7%;
+    border-radius    : 3px;
+    background-color : rgba(255,254,111,.9);
+    color            : rgb(255,254,111);
+  }
+
+}
+#page8-chart2 .grid-data li {
+  width              : 21%;
+}
+
+.swiper-slide-active #page8-chart2 .grid-data li.chart-bar1 {
+  height : 32%
+}
+
+.swiper-slide-active #page8-chart2 .grid-data li.chart-bar2 {
+  height : 48%
+}
+
+.swiper-slide-active #page8-chart2 .grid-data li.chart-bar3 {
+  height : 70%
+}
+
+
+.xui-chart-bar .grid-data li b{
+  font-size: 0.9rem;
+  right: -3%;
+}

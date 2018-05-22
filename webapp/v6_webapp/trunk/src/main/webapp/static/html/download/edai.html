@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>E贷通下载页</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        html {
+            font-size: 100%;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+        }
+
+        .container img {
+            width: 100%;
+            display: block;
+        }
+
+        .container .android {
+            width: 12%;
+            top: 0;
+            left: 44%;
+            position: absolute;
+            display: block;
+            border: none;
+        }
+        .container .btn_android {
+            width: 34%;
+            top: 62%;
+            left: 33%;
+            position: absolute;
+            display: block;
+            border: none;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="view" style="overflow:scroll;">
+    <div class="container">
+        <img src="../../img/xxd/edai/hor_img.png">
+        <a><img src="../../img/xxd/edai/hor_btn.png" class="btn_android"></a>
+    </div>
+</div>
+
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<script type="text/javascript" src="../../lib/jquery/jquery1.11.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".btn_android").click(function(){
+              window.location.href = "http://download-cdn.xinxindai.com/xxd-e-loan.apk";
+        });
+    });
+</script>
+</body>
+</html>

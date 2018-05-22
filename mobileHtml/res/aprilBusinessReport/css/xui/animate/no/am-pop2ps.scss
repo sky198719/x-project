@@ -1,0 +1,35 @@
+@-webkit-keyframes am-pop2ps {
+  0%, 30% {
+    -webkit-transform: scale(0);
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+  }
+  70% {
+    -webkit-transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes am-pop2ps {
+  0%, 30% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

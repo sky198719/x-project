@@ -1,0 +1,12 @@
+/*! mcLayer v1.0.0 | (c) Junbo | http://webmcui.com/plugins  请和mc-layer.js配合使用*/
+.mc-layer { width : 100%; height : 100%; position : absolute; left : 0; top : 0; z-index : 999; display : inline-table }
+
+.mc-layer:before { content : ""; display : block; width : 100%; height : 100%; background : rgba(0, 0, 0, 0.7); position : fixed }
+
+.mc-layer > * { display : table-cell; vertical-align : middle; text-align : center; height : 100%; width : 100%; position : relative }
+
+.mc-layer > * > * { display : inline-block !important }
+
+.layer-ban { position : fixed; width : 100%; height : 100% }
+
+.mc-layer-pop { background : #fff; padding : 1em; border-radius : 3px }

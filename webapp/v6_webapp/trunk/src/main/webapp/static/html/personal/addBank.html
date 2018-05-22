@@ -1,0 +1,180 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">添加银行卡</div>
+        <div class="right sliding">
+            <a href="#" class="link icon-only open-panel"  data-panel="right"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="addBank" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <form id="my-form" class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">真实姓名：</div>
+                                <div class="item-input">
+                                    <input type="text" value="" disabled="disabled" id="addBank_userName">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">银行卡号：</div>
+                                <div class="item-input">
+                                    <input type="tel"  id="addBank_bankAccount" placeholder="请填写银行卡号" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">开户银行：</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="请选择"  id="picker-device">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">开户支行：</div>
+                                <div class="item-input">
+                                    <input type="text" id="addBank_branch" placeholder="开户行所在省市及支行全名">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">支行省市：</div>
+                                <div class="item-input">
+                                     <input type="text" id="addBank_provinceAndCity" placeholder="开户支行所在省市">
+                                     <input type="hidden" id="addBank_province">
+                                     <input type="hidden" id="addBank_city">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">支付密码：</div>
+                                <div class="item-input">
+                                    <input type="password" id="addBank_password" placeholder="请输入支付密码">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-50" id="addBank_submit"><a href="#" class="button button-big button-fill color-green">确认添加</a></div>
+                    <div class="col-50" id="addBank_submit_def"><a href="#" class="button button-big button-fill color-orange">添加并默认</a></div>
+                </div>
+            </div>
+            <div class="content-block-title">
+                 <span>
+                   <h6 style="white-space: pre-wrap; line-height: 25px;">温馨提示：<br>1.不支持添加信用卡。<br>2.请正确填写开户行所在省市及支行全名。<br>如您遗忘了开户支行名称，可致电当地发卡机构查询，错误的开户行所在省市或支行全名可能导致您的提现失败</h6>
+                 </span>
+             </div>
+
+            <div style="position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 10600;
+                visibility: hidden;
+                opacity: 0;
+                -webkit-transition-duration: 400ms;
+                transition-duration: 400ms;visibility: visible;
+                    opacity: 1;" name="iknowPar2"></div>
+
+            <div name="iknowPar" style="
+                width: 270px;
+                position: absolute;
+                z-index: 11000;
+                left: 50%;
+                margin-left: -135px;
+                margin-top: 0;
+                top: 25%;
+                text-align: center;
+                border-radius: 7px;
+                    opacity: 1;">
+                <div style="    padding: 15px;
+                         border-radius: 7px 7px 0 0;
+                         position: relative;
+                         background: #fff;">
+                        <div style="    font-weight: 500;
+                            font-size: 18px;
+                            text-align: center;">友情提示</div>
+                        <div style="margin-top: 5px;">新新理财移动端遵循同卡进出原则，全程保障您的资金安全</div>
+                </div>
+                <div style="
+                      border-top: 1px solid #E6E4E4;
+                  height: 44px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;">
+                      <span style="    width: 100%;
+                          padding: 0 5px;
+                          height: 44px;
+                          font-size: 17px;
+                          line-height: 44px;
+                          text-align: center;
+                          color: #007aff;
+                          background: #fff;
+                          display: block;
+                          position: relative;
+                          white-space: nowrap;
+                          text-overflow: ellipsis;
+                          overflow: hidden;
+                          cursor: pointer;
+                          box-sizing: border-box;
+                          -webkit-box-flex: 1;
+                              border-radius: 0 0 7px 7px;" name="iknow">我知道了</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <style>
+     .model11{
+
+     }
+     .model11:after {
+         content: '';
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         right: auto;
+         top: auto;
+         height: 1px;
+         width: 100%;
+         background-color: #b5b5b5;
+         display: block;
+         z-index: 15;
+         -webkit-transform-origin: 50% 100%;
+         transform-origin: 50% 100%;
+     }
+ </style>

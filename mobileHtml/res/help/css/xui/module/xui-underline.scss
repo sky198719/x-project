@@ -1,0 +1,17 @@
+/*
+ * 组件：按钮
+ * 组件注册编号：02-0002
+ * 标准结构1级
+ * 属性：
+ * sz    规格（默认：m   s | m | l）
+ * co    颜色 (默认：read  read | back | main | vice | info | success | warn | error)
+ * 示例：
+ *  <span class="xui-btn" mc="02-0002"></span> 默认的这样就行了
+ *  <div class="xui-btn" mc="02-0002" btn-sz="s"></div> 小号的这样写
+ * 关联：html+css
+ */
+
+.xui-underline{
+  display: inline-block;
+  border-bottom: 1px solid #999;
+}

@@ -1,0 +1,20 @@
+.xui-blanks[theme="001"] {
+  width: 100%;
+  & > * {
+    display: table;
+    list-style: none;
+
+    &>*{
+      display: table-cell;
+      height: 100%;
+      border-collapse: separate;
+      white-space: nowrap;
+    }
+    &>*:last-child{
+      width: 100%;
+      border-bottom: 1px solid #e8e8e8;
+      //background: #fff linear-gradient(0deg,rgba(0,0,0,.2) .5px,transparent .5px);
+      padding-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,684 @@
+@import "css/common.css";
+
+//注册背景颜色
+@register-bkg-color:rgba(0,0,0,.4);
+@read-register-rule:#cc0033;
+@user-agree-color:#ccc;
+@input-color:#9e9b8d;
+@get-yzm-color:#993333;
+
+//默认属性
+input,input:focus{
+  background:none;
+  outline:none;
+  border:0;
+  -webkit-appearance:none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button{
+  border: none;
+  outline: none;
+}
+input::-webkit-placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+input::placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+.user-verigy .disfont{
+  font-size: 12px !important;
+}
+//给属性加前缀
+.prefixAdd(@name,@val){
+    @{name}:@val;
+  -webkit-@{name}:@val;
+  -moz-@{name}:@val;
+  -o-@{name}:@val;
+  -ms-@{name}:@val;
+}
+.borderRadius(@borderR){
+  border-radius: @borderR;
+  -webkit-border-radius: @borderR;
+  -moz-border-radius: @borderR;
+  //兼容IE8以下的border-radius
+  behavior:url("css/ie-css3.htc");
+}
+#J_wrapBody{
+  .wrap{
+    width: 1198px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+//top
+.wrap-top{
+  width: 100%;
+  height: 1639px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: url("img/Feb/pro-top.png") center center no-repeat;
+  //数据
+  .content-list{
+    position:absolute;
+    top:1092px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 709px;
+    height:37px;
+    line-height: 37px;
+    .winData{
+      width: 709px;
+      height:37px;
+      ul{
+        height: 37px;
+        display: inline-block;
+        overflow:hidden;
+        zoom: 1;
+        li{
+          height: 37px;
+          line-height: 37px;
+          font-size: 16px;
+          color: #ffdb00;
+          span{
+            display: inline-block;
+          }
+        }
+      }
+      .active-w{
+        width: 100%;
+        text-align:center;
+      }
+    }
+    .plus-mar-left {
+      overflow: hidden;
+      word-break: keep-all;
+      white-space: nowrap;
+      ul {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        li {
+          display: inline-block;
+          *display: inline;
+          zoom: 1;
+          text-indent: 15px;
+        }
+      }
+    }
+  }
+  .rules-twinkle{
+    position: absolute;
+    top: 840px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #ed1b24;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  //谈话框动画
+  .keyframesFlash(flash,{
+    from, 50%, to {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0.5;
+    }
+  });
+  .keyframesFlash (@name, @frames) {
+    @-webkit-keyframes @name {@frames();}
+    @-moz-keyframes @name {@frames(); }
+    @-ms-keyframes @name {@frames();}
+    @-o-keyframes @name {@frames();}
+    @keyframes @name { @frames();}
+  }
+  //动画函数
+  .animation(@attr){
+    -webkit-animation:@attr;
+    -moz-animation:@attr;
+    -ms-animation:@attr;
+    -o-animation:@attr;
+    animation:@attr;
+  }
+}
+//注册模块
+.wrap-top .register{
+  width: 260px;
+  //height: 355px;
+  float: right;
+  margin-top: 60px;
+  padding: 30px;
+  background: url("img/Feb/register-bg.png") center center no-repeat;
+  background-size: 100% 100%;
+  margin-right: 20px;
+  .register-title{
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #cf2b38;
+    text-align: center;
+    span{
+      font-size: 32px;
+      font-weight: bolder;
+    }
+  }
+  .user-common{
+      width: 260px;
+      height: 38px;
+      margin:0 auto 8px;
+      input{
+        height: 36px;
+        line-height: 36px;
+        border: 1px solid #f0f0f0;
+        text-indent: 6px;
+        font-size:14px;
+        color: @input-color;
+      }
+    }
+    .user-num,.user-psw{
+      width: 260px;
+    }
+    .user-psw{
+      position: relative;
+      .psw-cur{
+        position: absolute;
+        display: inline-block;
+        left:6px;
+        top: 12px;
+        height: 14px;
+        line-height: 14px;
+        font-size: 14px;
+        color: @input-color;
+      }
+    }
+    .J-num,.J-psw{
+      width:260px;
+      height: 40px;
+      background: #ededed;
+    }
+    //验证码
+    .user-verigy{
+      margin:0 auto 12px;
+      position: relative;
+    }
+    .verify-special{
+      margin:0 auto 8px;
+    }
+    .user-voice{
+      text-align: right;
+      margin:0 auto 14px;
+    }
+    .user-verigy .J-verify,.user-verigy .J-phoneyzm{
+      float: left;
+      width: 260px;
+      height: 40px;
+      background:#ededed;
+    }
+    .user-verigy .change-verify,.user-verigy .get-phoneyzm{
+      float: left;
+      margin-left: 8px;
+      width: 80px;
+      height: 30px;
+      background:#f6f5f5;
+      color:  @get-yzm-color;
+      cursor: pointer;
+      .borderRadius(4px);
+      position: absolute;
+      right: 0;
+      margin-top: 6px;
+    }
+    //语音验证码
+    .user-voice .J-voiceyzm{
+      font-size: 14px;
+      color: #fff;
+    }
+    .user-verigy .get-phoneyzm{
+      text-align: center;
+      font-size: 14px;
+      color: #e02a00;
+      line-height: 30px;
+      background: #ffdd27;
+      margin: 5px 4px 0 0;
+      width: auto;
+      padding: 0 5px;
+    }
+    //同意协议
+    .user-agree{
+      width: 302px;
+      margin: 0 auto  16px;
+      position: relative;
+      span{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 14px;
+        font-size: 14px;
+        color: #cf2b38;
+        text-indent: 8px;
+        a{
+          font-size: 14px;
+          color: @read-register-rule;
+          cursor: pointer;
+        }
+      }
+    }
+    .user-agree .check-style{
+      display: inline-block;
+      vertical-align: middle;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #cf2b38;
+      position: relative;
+      .user-check{
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        margin-top: -8px;
+        left: 50%;
+        margin-left: -8px;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+      .checked{
+        background: url("img/Feb/checked.png") center no-repeat;
+        background-size: 8px 9px;
+      }
+    }
+    .have-login{
+      width: 260px;
+      margin: 0 auto;
+      text-align: right;
+      font-size: 14px;
+      color: @input-color;
+    }
+    .have-login .logined{
+      text-decoration: underline;
+      color: @read-register-rule;
+    }
+    .cur{
+      width: 260px;
+      height: 20px;
+      padding-bottom: 5px;
+      margin: 0 auto;
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow:ellipsis;
+      font-size: 14px;
+      color: red;
+    }
+    .cur-special{
+      margin: 0 auto;
+      width: 260px;
+      color: #fff;
+    }
+    .register-btn{
+      display: block;
+      width: 260px;
+      height: 50px;
+      text-align: center;
+      line-height: 46px;
+      margin:0 auto 10px;
+      cursor: pointer;
+      background: #cf2b38;
+      border-bottom: 4px solid #87000b;
+      cursor: pointer;
+      color: #ffe827;
+      font-size: 24px;
+      .borderRadius(4px);
+    }
+}
+.wrap-top .registered{
+  height: 355px;
+  h3{
+    font-size: 18px;
+    color: #cc0033;
+    margin: 15px 0 40px 0;
+  }
+  .logo-company{
+    margin: 40px auto 0;
+    width: 125px;
+    height: 125px;
+    img{
+      margin-left: 8px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .activity-info{
+    padding-top: 15px;
+    text-align: center;
+     font-size: 24px;
+    color: #cc0033;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+  }
+  .activity-cur{
+    padding-top: 25px;
+    text-align: center;
+    font-size: 16px;
+    color: #cc0033;
+    height: 20px;
+    line-height: 20px;
+  }
+  .invest{
+    display: block;
+    width: 240px;
+    height: 50px;
+    margin: 50px auto 0;
+    text-align: center;
+    line-height: 46px;
+    background: #cf2b38;
+    border-bottom: 4px solid #87000b;
+    cursor: pointer;
+    color: #ffe827;
+    font-size: 24px;
+    .borderRadius(4px);
+  }
+}
+
+
+//center
+.wrap-center{
+  width: 100%;
+  height: 627px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: url("img/Feb/pro-center.png") center center no-repeat;
+  overflow: hidden;
+  .operate-data{
+    width: 947px;
+    margin: 187px auto 0;
+    height: 120px;
+    .advantage-data{
+      width: 947px;
+      margin: 0 auto;
+      padding-top:40px;
+      clear: both;
+      overflow: hidden;
+      li{
+        float: left;
+        width: 236px;
+        color: #fff6db;
+        text-align: left;
+        .advantage-content{
+          display: block;
+          font-size: 18px;
+          text-align:center;
+        }
+        p{
+          text-align:center;
+          font-size: 25px;
+          color:  #fff;
+          font-weight: bold;
+          width: 236px;
+          span{
+            font-size: 40px;
+            color: #ffeb0c;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+//bottom
+.wrap-bottom{
+  width: 100%;
+  height: 921px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: url("img/Feb/pro-bottom.png") center center no-repeat;
+  overflow:hidden;
+  .product-data{
+    width: 947px;
+    height: 237px;
+    margin:230px auto 0;
+    text-align: center;
+    .product-common{
+     .pro-info{
+       vertical-align: middle;
+       p{
+         height: 28px;
+         line-height: 28px;
+         font-size: 16px;
+         color: #f9fec8;
+       }
+       .info-two{
+         margin-top: 75px;
+       }
+     }
+     .pro-data{
+       vertical-align: middle;
+       margin-top: 25px;
+       .p-apr{
+         display: inline-block;
+         font-size: 30px;
+         color: #ffed1f;
+         height: 48px;
+         line-height: 48px;
+         position: relative;
+         top: 5px;
+         span{
+           font-weight: bolder;
+           font-size: 50px;
+         }
+         i{
+           font-style: normal;
+           font-size: 35px;
+         }
+       }
+       a{
+         display: inline-block;
+         width: 172px;
+         height: 66px;
+         line-height:55px;
+         background: url("img/Feb/investBtn.png") center center no-repeat;
+         background-size: 100% 100%;
+         font-size: 28px;
+         color: #db0a0e;
+         font-weight: bold;
+         float:right;
+       }
+     }
+      .p-history{
+        margin-top: 10px;
+        font-size: 12px;
+        color: #ffed1f;
+      }
+    }
+    .xscp-data{
+      float: left;
+      width: 50%;
+      height: 237px;
+      margin: 0 auto;
+      a{
+        margin-right: 40px;
+      }
+    }
+    .xyb-data{
+      float: right;
+      width: 50%;
+      height: 237px;
+      margin: 0 auto;
+      a{
+        margin-right: 50px;
+      }
+    }
+  }
+  .tb-content{
+    width: 947px;
+    height: 190px;
+    margin: 30px auto 0;
+    overflow: hidden;
+    .product-td{
+      margin: 0 auto ;
+      width: 886px;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      padding: 5px;
+      background: #ed2226;
+      border: 2px solid #f9fec8;
+      border-radius:8px;
+      -webkit-border-radius:8px;
+      -moz-border-radius:8px;
+      -o-border-radius:8px;
+      .td-special{
+        width: 480px;
+      }
+      th{
+        font-size: 20px;
+        width: 170px;
+        height: 46px;
+        color: #f9fec8;
+        border-bottom: 1px solid #fb5e61;
+        &:nth-child(1){
+          width: 160px;
+        }
+      }
+      .th-special{
+        border-left:1px solid #fb5e61;
+      }
+      td{
+        font-size: 20px;
+        width: 228px;
+        height: 59px;
+        color: #f9fec8;
+        border-bottom: 1px solid #fb5e61;
+        b{
+          color: #f9fec8;
+          font-weight: 700;
+        }
+        p{
+          display:inline-block;
+          font-size: 20px;
+          color: #ffed1f;
+          span{
+            font-weight: 700;
+          }
+        }
+      }
+      tr{
+        &:nth-child(3){
+          td{
+            border-bottom: none;
+          }
+        }
+        &:nth-child(2){
+          td{
+            &:nth-child(3){
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .invest-cur{
+    padding-top: 22px;
+    position: relative;
+    width: 1142px;
+    margin: 0 auto;
+    p{
+      font-size: 16px;
+      color: #ffcccc;
+    }
+    .invest-l{
+      float: left;
+      margin-left: 0;
+    }
+    .invest-r{
+      float: right;
+      margin-right: 0;
+    }
+  }
+}
+//悬浮按钮
+.register-bottom{
+  position: relative;
+  width: 100%;
+  min-width: 1200px;
+  bottom: 110px;
+  height: 110px;
+  background: #73191a;
+}
+.bottom-btn{
+  display: block;
+  position: absolute;
+  text-align:center;
+  width: 483px;
+  height: 81px;
+  line-height:70px;
+  left: 50%;
+  top: 50%;
+  margin-left: -257px;
+  margin-top: -40px;
+  background: url("img/Feb/register-btn.png") center center no-repeat;
+  background-size: 100% 100%;
+  font-size: 42px;
+  color: #fff;
+  font-weight: 500;
+}
+.special-bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 110px;
+  z-index: 999;
+  background: #73191a;
+}
+.activity-end{
+  background: url("img/Feb/acitivity-end.png") center center no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  cursor: default;
+}
+//弹窗
+.popup{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background:rgba(0,0,0,0.6);
+  .pop-main{
+    position: fixed;
+    width: 890px;
+    height: 451px;
+    top:50%;
+    left:50%;
+    margin-left: -446.5px;
+    margin-top: -234.5px;
+    background: url("img/Feb/activity-rules.png") center center no-repeat;
+    background-size: 100% 100%;
+    .close{
+      position:absolute;
+      top: -50px;
+      right: 0;
+      margin-left: -30px;
+      display: block;
+      width: 37px;
+      height: 37px;
+      background: url("img/Feb/close.png") center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}

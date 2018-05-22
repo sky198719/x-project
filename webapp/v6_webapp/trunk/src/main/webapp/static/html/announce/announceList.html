@@ -1,0 +1,53 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link" > <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding" id="announce_pageTitle">我的消息</div>
+        <div class="right">
+            <span style="font-size: 13px;color: #999999;" id="readAll">全部已读</span>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="announceList" class="page announceList" directory="announce">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content infinite-scroll"  style="padding-bottom:5px;">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <input type="hidden" id="currentPage" value="1"/>
+            <input type="hidden" id="totalPage" value="1"/>
+
+            <!-- tab -->
+            <div class="content-block">
+                <!-- tabs控制面板 -->
+                <div class="buttons-row theme-blue">
+                    <!-- 关联到第一个tab, 默认激活 -->
+                    <a href="#announceTab" class="tab-link active button">最新公告</a>
+                    <!-- 关联到第二个tab -->
+                    <a href="#activityTab" class="tab-link button">近期活动</a>
+                </div>
+                <input id="currentTab" type="hidden" value="1"/>
+            </div>
+            <!-- tabs start -->
+            <div class="tabs">
+            	<!--收益中-->
+                <div id="announceTab" class="tab active">
+                	<div class="list-block media-list" >
+		                <ul id="announceList"></ul>
+            		</div>
+                </div>
+                <!--已完成-->
+                <div id="activityTab" class="tab">
+                	<div class="list-block media-list" >
+		                <ul id="activityList"></ul>
+            		</div>
+                </div>
+            </div>
+            <!-- tabs over -->
+        </div>
+    </div>
+</div>

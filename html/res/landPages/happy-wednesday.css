@@ -1,0 +1,491 @@
+@import "css/swiper2.min.css";
+input::-webkit-placeholder {
+  font-size: 14px;
+  color: #908f8f;
+}
+input::placeholder {
+  font-size: 14px;
+  color: #908f8f;
+}
+input {
+  background: none;
+  outline: none;
+  border: 0px;
+  -webkit-appearance: none;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button {
+  border: 0 none;
+  outline: none;
+  background-image: none;
+  text-shadow: none;
+}
+.disnone {
+  display: none;
+}
+.disblock {
+  display: block;
+}
+.dishidden {
+  visibility: hidden;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: ".";
+  visibility: hidden;
+}
+.user-verigy .disfont {
+  font-size: 12px !important;
+}
+html {
+  width: 100%;
+  height: auto !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body {
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+#J_wrapBody {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  overflow-y: auto;
+}
+.wrap {
+  margin: 0 auto;
+}
+/*//header start*/
+.header {
+  width: 100%;
+  height: 93px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+.header-main {
+  width: 1200px;
+  height: 93px;
+  margin: 0 auto;
+}
+.header .logo {
+  display: inline-block;
+  width: 368px;
+  height: 93px;
+  background: url("img/logo.png") center no-repeat;
+}
+.tel {
+  float: right;
+  height: 93px;
+  margin-right: 0;
+}
+.tel-icon {
+  display: inline-block;
+  height: 93px;
+  line-height: 93px;
+  vertical-align: middle;
+}
+.tel-icon img {
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+.tel-num {
+  display: inline-block;
+  border-left: 1px solid #d9d9d9;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 18px;
+  padding-left: 18px;
+}
+.tel-num h3 {
+  font-size: 24px;
+  color: #004682;
+}
+.tel-num p {
+  font-size: 16px;
+  color: #7b7a7a;
+}
+/*固定导航条*/
+.header-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  height: 72px;
+}
+.header-fixed .logo {
+  height: 72px;
+}
+.header-fixed .tel {
+  height: 72px;
+}
+.header-fixed .tel-icon {
+  height: 72px;
+  line-height: 72px;
+}
+/*header end*/
+.detail-footer .prompt {
+  text-align: right;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #ff9936;
+}
+.detail-footer .prompt span {
+  display: inline-block;
+  margin-right: 12px;
+  width: 68px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 18px;
+  border: 1px solid #ff9936;
+}
+.no-checkBkg {
+  background-color: #999 !important;
+}
+.mui-preview {
+  background-color: transparent !important;
+}
+.cur {
+  width: 302px;
+  height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: red;
+}
+.cur-special {
+  width: 268px;
+  color: #fff;
+}
+.footer {
+  width: 100%;
+  height: 119px;
+  background: url("img/footer.png") center no-repeat;
+}
+/*container start*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.top-main {
+  width: 100%;
+  height: 511px;
+  margin: 0 auto;
+  background: url("img/happy-wednesday/banner.png") center no-repeat;
+}
+/*注册 register*/
+.top-wrap {
+  width: 1200px;
+  height: 754px;
+  margin: 0 auto;
+  overflow: hidden;
+  /*registered*/
+}
+.top-wrap .register-main {
+  float: right;
+  width: 240px;
+  margin-top: 62px;
+  padding: 20px;
+  margin-right: 46px;
+}
+.top-wrap .register-main .register-title {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #006a60;
+}
+.top-wrap .register-main .user-common {
+  height: 38px;
+  margin-bottom: 8px;
+}
+.top-wrap .register-main .user-common input {
+  border: 1px solid #006a60;
+  text-indent: 6px;
+  color: #a9a9a9;
+}
+.top-wrap .register-main .user-num,
+.top-wrap .register-main .user-psw {
+  width: 240px;
+}
+.top-wrap .register-main .J-num,
+.top-wrap .register-main .J-psw {
+  width: 240px;
+  height: 36px;
+  background: #fff;
+}
+.top-wrap .register-main .user-verigy {
+  margin-bottom: 8px;
+  position: relative;
+}
+.top-wrap .register-main .user-voice {
+  text-align: right;
+  margin-bottom: 18px;
+}
+.top-wrap .register-main .user-verigy .J-verify,
+.top-wrap .register-main .user-verigy .J-phoneyzm {
+  float: left;
+  width: 100%;
+  height: 36px;
+  background: #fff;
+}
+.top-wrap .register-main .user-verigy .change-verify,
+.top-wrap .register-main .user-verigy .get-phoneyzm {
+  float: right;
+  margin-left: 8px;
+  background: #f2821b;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.top-wrap .register-main .change-verify,
+.top-wrap .register-main .get-phoneyzm {
+  position: absolute;
+  right: 2px;
+  top: 5px;
+}
+.top-wrap .register-main .change-verify {
+  width: 80px;
+  height: 27px;
+}
+.top-wrap .register-main .get-phoneyzm {
+  width: 90px;
+  height: 28px;
+  color: #fff;
+  line-height: 28px;
+}
+.top-wrap .register-main .user-voice .J-voiceyzm {
+  font-size: 14px;
+  color: #ff523a;
+}
+.top-wrap .register-main .user-verigy .get-phoneyzm {
+  text-align: center;
+  font-size: 14px;
+}
+.top-wrap .register-main .user-agree {
+  margin-bottom: 10px;
+  position: relative;
+}
+.top-wrap .register-main .user-agree span {
+  display: inline-block;
+  font-size: 13px;
+  color: #f2821b;
+  text-indent: 8px;
+}
+.top-wrap .register-main .user-agree span a {
+  font-size: 13px;
+  color: #f2821b;
+  cursor: pointer;
+}
+.top-wrap .register-main .user-agree .check-style {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13px;
+  height: 13px;
+}
+.top-wrap .register-main .user-agree .no-check {
+  background: url("img/check.png") no-repeat;
+  background-size: 100% 100%;
+}
+.top-wrap .register-main .user-agree .checked {
+  background: url("img/checked.png") no-repeat;
+  background-size: 100% 100%;
+}
+.top-wrap .register-main .register-btn {
+  width: 240px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  margin: 0 auto 10px;
+  cursor: pointer;
+  background: #006a60;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Microsoft Yahei", "微软雅黑", Arial, Tahoma;
+}
+.top-wrap .register-main .have-login {
+  text-align: right;
+  font-size: 14px;
+  color: #3a3a3a;
+  padding-right: 3px;
+}
+.top-wrap .register-main .have-login .logined {
+  text-decoration: underline;
+  color: #0c6e81;
+}
+.top-wrap .registered {
+  float: right ;
+  margin-top: 70px;
+  background-color: #fff;
+  padding: 40px 30px;
+  text-align: center;
+}
+.top-wrap .logo-company {
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  background-color: #ee262e;
+  margin: 0 auto 40px;
+}
+.top-wrap .logo-company img {
+  display: inline-block;
+  width: 48px;
+  height: 58px;
+  left: 50%;
+  top: 50%;
+  margin-top: 22px;
+}
+.top-wrap .user-info {
+  font-size: 16px;
+  color: #3a3a3a;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+.top-wrap .user-money {
+  font-size: 16px;
+  color: #909090;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.top-wrap .user-money .go-money {
+  font-size: 16px;
+  color: #fe454d;
+  cursor: pointer;
+}
+.top-wrap .all-money {
+  padding-bottom: 30px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+.top-wrap .enter-account {
+  display: block;
+  width: 304px;
+  height: 48px;
+  margin: 0 auto;
+  cursor: pointer;
+  background: url("img/happy-wednesday/registered-btn.png") center no-repeat;
+}
+/*container-main start*/
+.container-main {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.container-main .part1 {
+  width: 100%;
+  height: 1176px;
+  background: url("img/happy-wednesday/part1.png") center no-repeat;
+}
+.container-main .part1 .investBtn {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 577px;
+  text-align: right;
+}
+.container-main .part1 .investBtn p {
+  width: 230px;
+  height: 50px;
+  background: url("img/happy-wednesday/toInvest.png") center no-repeat;
+  display: inline-block;
+  cursor: pointer;
+}
+.container-main .part1 .investBtn #xyb1m {
+  margin-right: 89px;
+}
+.container-main .part1 .investBtn #xyb12m {
+  margin-right: 55px;
+}
+.container-main .part1 .rateInfo {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 260px;
+  text-align: left;
+}
+.container-main .part1 .rateInfo > span {
+  font-size: 40px;
+  color: #006a60;
+}
+.container-main .part1 .rateInfo .rate {
+  margin-left: 85px;
+}
+.container-main .part1 .rateInfo .closeTerm {
+  margin-left: 90px;
+  font-size: 38px;
+  font-weight: 300;
+}
+.container-main .part1 .rateInfo p {
+  width: 363px;
+  margin-left: 360px;
+  display: inline-block;
+  font-size: 40px;
+  color: #006a60;
+}
+.container-main .part2 {
+  width: 100%;
+  height: 1010px;
+  background: url("img/happy-wednesday/part2.png") center no-repeat;
+}
+.suspend {
+  display: block;
+  width: 100%;
+  height: 111px;
+  background: url("img/happy-wednesday/bg.png") center no-repeat;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+.suspend span {
+  display: inline-block;
+  width: 525px;
+  height: 100%;
+  cursor: pointer;
+  background: url("img/happy-wednesday/toRegister.png") center no-repeat;
+  margin: 0 auto;
+}
+.suspend-special {
+  width: 100%;
+  height: 111px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 800;
+  background: url("img/happy-wednesday/bg.png") center no-repeat;
+  text-align: center;
+}
+.suspend-special span {
+  display: inline-block;
+  width: 525px;
+  height: 100%;
+  cursor: pointer;
+  background: url("img/happy-wednesday/toRegister.png") center no-repeat;
+  margin: 0 auto;
+}
+/*container-main end*/
+.mui-dialog .mui-dialog-inner {
+  text-align: center;
+}
+.cur {
+  width: 100%;
+  font-size: 12px;
+}
+.numberBox {
+  margin-bottom: 0!important;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>注册</title>
+
+
+</head>
+<script src="../js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript">
+    var loginToken;
+    var regToken;
+    $(document).ready(function () {
+
+        $.ajax({
+            url: 'http://172.16.14.38/feapi/users/formToken',
+            dataType: 'json',
+            type: 'GET',
+            data: {},
+            success: function (result) {
+                loginToken = result.token;
+                $("#img").attr("src", "http://172.16.14.38/feapi/randCode/createVerifyCode?formtoken=" + loginToken);
+            }
+        });
+
+        $.ajax({
+            url: 'http://172.16.14.38/biz/bulletin/operationData',
+            headers: {
+                s: 'www',
+                clientId: '001',
+                clientTime: '12212121'
+            },
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+            }
+        });
+        $.ajax({
+            url: 'http://172.16.14.38/feapi/users/formToken',
+            dataType: 'json',
+            type: 'GET',
+            data: {},
+            success: function (result) {
+                regToken = result.token;
+                $("#reg_img").attr("src", "http://172.16.14.38/feapi/randCode/createVerifyCode?formtoken=" + regToken);
+            }
+        });
+
+
+        $("#login").on("click", function () {
+            $.ajax({
+                url: 'http://172.16.14.38/feapi/users/login',
+                dataType: 'json',
+                type: 'POST',
+                data: {
+                    username: $("#username").val(),
+                    password: $("#password").val(),
+                    imgcode: $("#imgcode").val(),
+                    formtoken: loginToken
+                },
+                success: function (result) {
+                    console.log(result);
+                }
+            });
+        });
+
+
+        $("#reg").on("click", function () {
+            $.ajax({
+                url: 'http://172.16.14.38/feapi/users/regV3',
+                dataType: 'json',
+                type: 'POST',
+                data: {
+                    formtoken: regToken,
+                    mobile: $("#reg_mobile").val(),
+                    password: $("#reg_password").val(),
+                    smscode: $("#reg_smsCode").val()
+                },
+                success: function (result) {
+                    console.log(result);
+                }
+            });
+        });
+
+        $("#reg_sendSms").on("click", function () {
+            $.ajax({
+                url: 'http://172.16.14.38/feapi/users/checkMobile',
+                dataType: 'json',
+                type: 'POST',
+                data: {
+                    formtoken: regToken,
+                    mobile: $("#reg_mobile").val()
+                },
+                success: function (result) {
+                    console.log(result);
+                    if (result.code == 1) {
+                        $.ajax({
+                            url: 'http://172.16.14.38/feapi/users/sendSMS',
+                            dataType: 'json',
+                            type: 'POST',
+                            data: {
+                                formtoken: regToken,
+                                imgcode: $("#reg_imgCode").val(),
+                                mobile: $("#reg_mobile").val()
+                            },
+                            success: function (result) {
+                                console.log(result);
+                            }
+                        });
+                    }
+                }
+            });
+        });
+    });
+
+
+</script>
+
+<body>
+<span style="font-size: 20px;font-weight: bold;">登录</span> <br/>
+用户名：<input type="input" id="username"/><br/>
+密码：<input type="input" id="password"/><br/>
+验证码：<input type="input" id="imgcode"/><br/>
+<img id="img"/><br/>
+<input type="button" value="提交" id="login"/>
+<br/><br/><br/><br/>
+<span style="font-size: 20px;font-weight: bold;">注册</span> <br/>
+手机号码：<input type="input" id="reg_mobile"/><br>
+密码：<input type="input" id="reg_password"/><br>
+短信验证码：<input type="input" id="reg_smsCode"/><br>
+<input type="button" value="发送短信" id="reg_sendSms"/> <br>
+图片验证码:<input type="input" id="reg_imgCode"/><br>
+<img id="reg_img"/><br>
+<input type="button" value="提交" id="reg"/>
+
+</body>
+</html>

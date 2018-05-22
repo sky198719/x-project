@@ -1,0 +1,92 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">
+            <a href="#" data-popover=".popover-link" class="open-popover popver-arrow-right">热门理财</a>
+        </div>
+        <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through toolbar-through">
+    <div data-page="planListV2" class="page">
+        <div class="page-content pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="list-block media-list" id="pv2_fundList">
+                <ul>
+                    <li class="swipeout">
+                        <div class="swipeout-content">
+                            <!-- 活期 -->
+                            <div class="dq-blue">
+                                <img src="static/img/xxd/hq-blue.png" width="25px" height="50px;">
+                            </div>
+                            <a href="#" class="item-link">
+                                <div class="item-content" style="padding-left: 40px;">
+                                    <div class="item-inner pb0 ">
+                                        <div class="item-title-row xxd-item-row">
+                                            <div class="item-title font-3A3939">
+                                                <span class="font18">日日盈</span>
+                                                <span class="inn-title ml10 font16 font-666" id="pv2_leastAmount">0</span>
+                                                <span class="font16 font-666">元起投，每日复利</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-content" style="padding-left: 40px;">
+                                    <div class="item-inner">
+                                        <div class="item-title-row xxd-item-row">
+                                            <div class="item-title font-red">
+                                                <span id="pv2_fundApr"><span class="font28">0</span><span
+                                                        class="font16">.00</span></span>
+                                                <span class="font16">% </span>
+                                            </div>
+                                        </div>
+                                        <div class="item-subtitle ">
+                                            <span class="font-999">年化收益</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-inner" style="position:static;">
+                                        <div class="item-title-row xxd-item-row">
+                                            <div class="item-title "><span class="font18 font-3A3939"
+                                                                           style="line-height: 36px;"><span
+                                                    id="pv2_perMillion">0.00</span>{{closeterm}}元/日</span></div>
+                                        </div>
+                                        <div class="item-subtitle">
+                                            <span class="font-999">万元收益</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-inner" id="pv2_fundOP">
+                                        <div class="item-title-row xxd-item-row width100">
+                                            <input type="hidden" name="pv2_fund_join">
+                                            <button class="button qg-btn-disable mt18" id="planv2_fundJoin">立即抢购</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="list-block media-list">
+                    <ul>
+                        <li class="backgroundGrey">
+                            <div class="content-block-title text-center font-999 font14 mb15">
+                                <p class="mgpd0 clearfix">
+                                    <span class="left-solid-border"></span>
+                                    <span class="lock-content"><img src="static/img/xxd/xx_07.png" width="16"
+                                                                    height="16"></span>
+                                    <span class="center-content">新元宝 每日早上10:00开抢</span>
+                                    <span class="right-solid-border"></span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul id="planListV2"></ul>
+            </div>
+        </div>
+    </div>
+</div>

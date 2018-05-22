@@ -1,0 +1,300 @@
+@import "css/index";
+
+/*右侧内容区域*/
+.g-right {
+  width: 970px;
+  float: right;
+  .m-con-wrap {
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    background: #fff;
+    .m-con-hd {
+      height: 52px;
+      line-height: 52px;
+      padding-left: 26px;
+      font-size: 18px;
+      color: #000;
+      border-bottom: 1px solid #eee;
+      span {
+        display: inline-block;
+        height: 52px;
+        line-height: 52px;
+        padding: 0 5px;
+        margin-right: 35px;
+        cursor: pointer;
+        &:hover {
+          cursor: pointer;
+        }
+        &.active {
+          border-bottom: 2px solid #57a;
+        }
+      }
+    }
+    .m-con-bd {
+      width: 922px;
+      margin: 0 auto;
+      border-bottom: 1px solid #eee;
+      p {
+        padding-left: 17px;
+        font-size: 14px;
+        color: #666;
+        line-height: 30px;
+      }
+
+    }
+
+  }
+}
+
+.m-con-hd {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  height: 52px;
+  line-height: 52px;
+}
+.g-right .m-con-wrap .m-con-bd{
+  border-bottom: 0;
+}
+.help-title {
+  li {
+    float: left;
+    border-right: 1px solid #eee;
+    height: 52px;
+    &.last {
+      border-right: 0;
+    }
+  }
+  a {
+    float: left;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    width: 241px;
+    height: 52px;
+    line-height: 52px;
+    &:hover {
+      border-bottom: 2px solid #57a8ff;
+    }
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+    &.active {
+      a {
+        border-bottom: 2px solid #57a8ff;
+      }
+    }
+  }
+}
+
+.table-box {
+  padding:28px 40px;
+  background: #FFF;
+  margin-bottom: 15px;
+  border:1px solid #eee;
+  table {
+    border: 1px solid #eeeeee;
+    width: 698px;
+    height: 48px;
+    border-collapse: collapse;
+    margin:0 auto 28px;
+    tr {
+      text-align: center;
+    }
+    th {
+      background: #f9f9f9;
+      height: 48px;
+      font: 500 16px/28px "microsoft yahei";
+      color: #333333;
+    }
+    td {
+      background: #fefefe;
+      border: 1px solid #eeeeee;
+      width: 499px;
+      height: 48px;
+      font: 300 16px/28px "microsoft yahei";
+      span{
+        display: block;
+      }
+    }
+    .w600 {
+      width: 80%;
+    }
+  }
+  &.top-manager{
+    table{
+      th,td{
+        padding-left: 20px;
+      }
+      a{
+        font-size:14px;
+        color:#57a8ff;
+        &:hover{
+          color: #00498a;
+        }
+      }
+    }
+  }
+}
+
+//公司证照
+.comp-licen {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: none;
+  .comintr-cert {
+    width: 840px;
+    margin: 0 auto;
+    li {
+      display: inline-block;
+      width: 380px;
+      a {
+        display: inline-block;
+        width: 380px;
+        height: 538px;
+        .border(#dcdcdc);
+        text-align: center;
+        cursor: pointer;
+      }
+      a.license {
+        background: url('@{imgurl}license.png') no-repeat center 5px;
+      }
+      a.busin-cert {
+        background: url('@{imgurl}busin-cert.png') no-repeat center 5px;
+
+      }
+      p {
+        font-size: @font14px;
+        color: @col-666;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 15px;
+      }
+      &.right{
+        margin-right: 36px;
+      }
+    }
+
+  }
+}
+
+.scale-img{
+  width: 603px;
+  height: 276px;
+  margin:0 auto 60px;
+  background: url('@{imgurl}scale-img.png') no-repeat center 5px;
+}
+.organization-title{
+  border:0;
+  border-bottom: 1px solid #eee;
+}
+//组织架构
+.compro-frame {
+  width: 625px;
+  height: 376px;
+  background: url("@{imgurl}compro-frame.png") no-repeat center;
+  margin: 0 auto;
+  padding: 25px 0 45px 0;
+}
+
+/*员工信息*/
+.g-right {
+  .m-con-wrap {
+    //员工概况
+    .emp-pro {
+      padding-top: 20px;
+      border: none;
+      p {
+        padding-left: 0;
+      }
+    }
+    //团队概况
+    .emp-tem {
+      padding-top: 50px;
+      border: none;
+      p {
+        padding-left: 0;
+      }
+    }
+    .m-con-bd {
+      //图表
+      .charts {
+        width: 670px;
+        margin: 0 auto;
+        li {
+          width: 250px;
+          margin-bottom: 60px;
+        }
+      }
+
+      .deadline {
+        margin-top: 15px;
+        margin-bottom: 7px;
+        text-align: right;
+        color: @col-999;
+      }
+    }
+  }
+}
+//分公司地址
+.brancom-site {
+  width: 874px;
+  border-bottom: none;
+  margin-top: 20px !important;
+  .areas {
+    li {
+      float: left;
+      display: inline-block;
+      width: 83px;
+      height: 28px;
+      margin-right: 45px;
+      line-height: 28px;
+      font-size: @font14px;
+      color: @col-57a;
+      text-align: center;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      border: 1px solid @col-57a;
+      background-color: @col-fff;
+      &.active, &:hover {
+        color: @col-fff;
+        background-color: @col-57a;
+        cursor: pointer;
+      }
+      &.last {
+        margin-right: 0;
+      }
+    }
+  }
+  .adresses {
+    .mr100 {
+      margin-right: 100px;
+    }
+    ul {
+      float: left;
+      width: 364px;
+      margin-top: 30px;
+      li {
+        font-size: @font14px;
+        color: @col-666;
+        line-height: 30px;
+        &.name {
+          font-size: @font18px;
+          color: @col-000;
+        }
+        span {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .paging-info {
+    margin: 45px auto;
+    text-align: center;
+    .pagination {
+      .pag();
+    }
+  }
+}

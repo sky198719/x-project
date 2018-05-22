@@ -1,0 +1,316 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <!-- We have home navbar without left link-->
+        <div class="left"><img src="static/img/xxd/logo.png"></div>
+        <div class="center"></div>
+        <div class="right">
+<!--             <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a> -->
+            <a href="#" class="link icon-only open-panel"> <img src="static/img/xxd/panel.png" width="21px" class="indexMenuIcon" /></a>
+        </div>
+    </div>
+</div>
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through">
+<!-- Page, data-page contains page name-->
+<div data-page="home" class="page" directory="home">
+<!-- Scrollable page content-->
+<div class="page-content" style="background:#EFEFEF;">
+<!-- banner start-->
+<div class="swiper-container" name="indexSwiper" style="height: 150px;">
+    <div class="swiper-wrapper" name="index_banner">
+    </div>
+    <div class="swiper-pagination" style="bottom: 15px;"></div>
+</div>
+<div class="index-marquee" name="indexNotice"></div>
+<div class="content-block-index">
+    <div class="index-row" name="index_sevenDays">
+        <ul class="home-ul">
+            <li class="home-li" style="width: 7%">
+                <div class="bg-3f9bff iv-c" style="line-height : 1.346em;">
+                    新<br>手<br>专<br>享
+                </div>
+            </li>
+            <li class="home-li" style="width: 29%;">
+                <div class="item-inner br-pl mt5">
+                    <div class="item-title-row">
+                        <div class="item-title">
+                            新手专享30天
+                        </div>
+                    </div>
+                    <div class="item-subtitle mt5">
+                        <img src="static/img/xxd/home/iv1.png" width="50" height="50" class="ml23">
+                    </div>
+                </div>
+            </li>
+            <li class="home-li" style="width: 30%">
+            <span style="position: absolute;margin-top:2px;margin-left:30px;display: none;" class="newhandActivityHome animated fadeInLeft">
+                                    <img src="static/img/xxd/thirtytip.png" height="20">
+                                </span>
+                <div class="min-width-100 width100">
+                    <div class="mgpd0 font17 font-3f9bff">
+                        <span class="font34" name="7dApr">0</span>%<span
+                            class="font-blue" name="7d_floatApr" data-deployId=""></span>
+
+                    </div>
+                    <div class="font-666 mgpd0 font-white" style="margin-top: -5px;display: none;"><span class="newhand_add_apr">限购一次</span></div>
+                    <div class="font12 mgpd0 font-666">历史年化收益</div>
+                </div>
+            </li>
+            <li class="home-li" style="width: 34%;">
+                <div class="item-inner min-width-100 width100">
+                    <div class="item-title-row">
+                        <div class="item-title text-right">
+                            <p class="singlesday"><img  src="static/img/xxd/1111day.png" style="height: 15px;"/></p>
+                            <p class="font-666 singlesdayTwo" name="7d_closeTerm" >30<span class="font12">天</span>&nbsp;<span
+                                    name="7d_leastAmount">0.00</span><span
+                                    class="font12">元起投</span></p>
+                        </div>
+                    </div>
+                    <div class="item-subtitle">
+                   <span class="font-999 mtf4"><button class="button blue-btn" name="index_7dJoin">立即抢购
+                   </button></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+<div class="index-row stepUpwardHome" style="display:none;">
+    <ul class="home-ul" >
+        <li class="home-li" style="width: 7%">
+            <div class="bg-f9ac3a iv-c" style="line-height : 1.346em;">
+                逐<br>月<br>增<br>息
+            </div>
+        </li>
+        <li class="home-li" style="width: 25%;">
+            <div class="item-inner br-pl mt5">
+                <div class="item-title-row">
+                    <div class="item-title itemName">步步高升</div>
+                </div>
+                <div class="item-subtitle mt5">
+                    <img src="static/img/xxd/home/iv7.png" width="50" height="50" class="ml23">
+                </div>
+            </div>
+        </li>
+        <li class="home-li"  style="width: 34%">
+            <div class="min-width-100 width100">
+            	<div class="mgpd0 font17 font-3f9bff home_stepUpwardApr" style="position:relative;font-size:27px;margin-top: 16px;">
+                    <span class="stepUpwardMinApr">0</span><span class="stepUpwardAprPercent" style="font-size:17px;">%</span>
+                    -
+                    <span class="stepUpwardMaxApr">0</span><span class="stepUpwardAprPercent" style="font-size:17px;">%</span>
+                </div>
+                <div class="font-666 mgpd0 font-white" style="margin-top: -5px;display: none;" id="indexSuActivity"><span class="mobile_onl">移动端专享</span></div>
+                <div class="font-666 mgpd0 font-white activityLabel_step" style="margin-top: -5px;display: none;"></div>
+                <div class="font-666" style="font-size:12px;">历史年化收益</div>
+                
+            </div>
+        </li>
+        <li class="home-li"  style="width: 34%">
+            <div class="item-inner min-width-100 width100">
+            <input type="hidden" name="stepMinApr" id="stepMinApr">
+            <input type="hidden" name="stepId" id="stepId">
+            <input type="hidden" name="stepMaxApr" id="stepMaxApr">
+                <div class="item-title-row">
+                    <div class="item-title text-right">
+                        <p class="singlesday"><img  src="static/img/xxd/1111day.png" style="height: 15px;"/></p>
+                        <p class="font-666 singlesdayTwo" style="white-space:nowrap;">1<span style="font-size:12px;">个月起</span> <span class="tenderStartAmount">0</span><span style="font-size: 12px;">元起投</span></p>
+                    </div>
+                </div>	
+                <div class="item-subtitle text-left">
+                    <span class="font-999 mtf4"><button class="button blue-btn" id="stepUpwardHomeTenderBtn">立即抢购</button></span>
+                </div>
+            </div>
+        </li>
+  </ul>
+</div>
+
+<div class="index-row monthFinanceHome" style="display: none;">
+    <ul class="home-ul" >
+        <li class="home-li" style="width: 7%">
+            <div class="bg-ff7365 iv-c" style="line-height : 1.346em;">
+                限<br>时<br>秒<br>杀
+            </div>
+        </li>
+        <li class="home-li" style="width: 25%;">
+            <div class="item-inner br-pl mt5">
+                <div class="item-title-row">
+                    <div class="item-title" id="itemName">月进斗金</div>
+                </div>
+                <div class="item-subtitle mt5">
+                    <img src="static/img/xxd/home/iv4.png" width="50" height="50" class="ml23">
+                </div>
+            </div>
+        </li>
+        <li class="home-li"  style="width: 34%">
+            <div class="item-inner min-width-100 width100">
+                <div class="item-title-row">
+                    <div class="item-title">
+                        <p class=" mgpd0  font17 font-3f9bff"><span class="font34" id="monthFinanceApr">0</span>%
+                        </p>
+                    </div>
+                </div>
+                <div class="item-subtitle">
+                    <p class="font-666 mgpd0 " style="font-size:12px;">历史年化收益</p>
+                    <p class="font-999 mgpd0" style="font-size:10px;">每天10:00、20:00发售</p>
+                </div>
+            </div>
+        </li>
+        <li class="home-li"  style="width: 34%">
+            <div class="item-inner min-width-100 width100">
+                <div class="item-title-row">
+                    <div class="item-title text-right">
+                        <p class="singlesday"><img  src="static/img/xxd/1111day.png" style="height: 15px;"/></p>
+                        <p class="font-666 singlesdayTwo"><span id="monthFinanceDays" data-terms="" data-deployId="">0</span><span style="font-size:12px;">天</span> <span id="tenderStartAmount">0</span><span style="font-size: 12px;">元起投</span></p>
+                    </div>
+                </div>
+                <div class="item-subtitle text-left">
+                    <span class="font-999 mtf4"><button class="button blue-btn" id="monthFinanceHomeTenderBtn">立即抢购</button></span>
+                </div>
+            </div>
+        </li>
+  </ul>
+</div>
+
+<div class="index-row indexPlan">
+    <ul class="home-ul">
+        <li class="home-li" style="width: 7%">
+            <div class="bg-f9ac3a iv-c indexPlanTitle" style="line-height : 1.346em;">自<br>动<br>复<br>投</div>
+        </li>
+        <li class="home-li" style="width: 25%">
+            <div class="item-inner br-pl mt5">
+                <div class="item-title-row">
+                    <div class="item-title ">
+                        新元宝
+                        <input type="hidden" id="indexPlanId" value="">
+                    </div>
+                </div>
+                <div class="item-subtitle mt5">
+                    <img src="static/img/xxd/home/iv3.png" width="50" height="50" class="ml23" name="indexPlanImg">
+                </div>
+            </div>
+        </li>
+        <li class="home-li" style="width: 34%">
+            <div class="min-width-100 width100 mt15">
+
+                <div class="mgpd0 font17 font-3f9bff" style="margin-top: -12px;position:relative;">
+                    <img src="static/img/activity/womensDay/top.png" width="15"  style="position: absolute;margin-left:2px;display: none;" name="womensDayTopImg"/>
+                    <span class="font34" id="indexPlanApr">0</span>%
+                    <span class="font18 increaseApr displayNone" style="color: #f9ac3a;"></span>
+                </div>
+                <div class="font-666 mgpd0 font-white" style="margin-top: -5px;display: none;" name="indexPlanDiv1"><span class="mobile_onl">移动端专享</span></div>
+                <div class="font-666 mgpd0 font-white activityLabel_xyb" style="margin-top: -5px;display: none;"></div>
+                <div class="font-666" style="font-size:12px;">历史年化收益</div>
+            </div>
+        </li>
+        <li class="home-li" style="width: 34%">
+            <div class="item-inner min-width-100 width100">
+                <div class="item-title-row">
+                    <div class="item-title text-right">
+                        <p class="singlesday"><img  src="static/img/xxd/1111day.png" style="height: 15px;"/></p>
+                        <p class="font-666 singlesdayTwo"><span id="indexPlanCloseTerm" data-pname="" data-type="">12</span><span class="font12">个月</span></p>
+                    </div>
+                </div>
+                <div class="item-subtitle">
+                    <span class="font-999 mtf4"><button class="button blue-btn" id="indexPlanTenderBtn">立即抢购
+                    </button></span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="index-row yypIndex displayNone">
+    <ul class="home-ul">
+        <li class="home-li" style="width: 7%">
+            <div class="bg-f9ac3a iv-c indexYypTitle" style="line-height : 1.346em;">每<br>月<br>派<br>息</div>
+        </li>
+        <li class="home-li" style="width: 25%">
+            <div class="item-inner br-pl mt5">
+                <div class="item-title-row">
+                    <div class="item-title ">
+                        月月派
+                    </div>
+                </div>
+                <div class="item-subtitle mt5">
+                    <img src="static/img/xxd/home/yyp-home.png" width="50" height="50" class="ml23" name="indexYypImg">
+                </div>
+            </div>
+        </li>
+        <li class="home-li" style="width: 34%">
+            <div class="min-width-100 width100 mt15">
+                <div class="mgpd0 font17 font-3f9bff" style="margin-top: -12px;position:relative;">
+                    <img src="static/img/activity/womensDay/top.png" width="15"  style="position: absolute;margin-left:2px;display: none;" name="womensDayTopImg"/>
+                    <span class="font34" id="indexYypApr">0</span>%</div>
+                <div class="font-666 mgpd0 font-white activityLabel_yyp" style="margin-top: -5px;display: none;"></div>
+                <div class="font-666" style="font-size:12px;">历史年化收益</div>
+            </div>
+        </li>
+        <li class="home-li" style="width: 34%">
+            <div class="item-inner min-width-100 width100">
+                <div class="item-title-row">
+                    <div class="item-title text-right">
+                        <p class="singlesday"><img  src="static/img/xxd/1111day.png" style="height: 15px;"/></p>
+                        <p class="font-666 singlesdayTwo">
+                        	<span id="indexYypCloseTerm" data-pname="" data-type=""></span><span class="font12">个月</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="item-subtitle">
+                    <span class="font-999 mtf4">
+                    	<button class="button blue-btn" id="indexYypTenderBtn"></button>
+                    </span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="row no-gutter mt5 index-activity">
+    <div class="col-50">
+        <a href="#" class="font-grey link-active" name="index_financeList" style="margin-right: 5px;">
+            <img src="static/img/xxd/home/iv6.png" class="left" width="50"style="margin-right: 8%;">
+            <h5 class="left text-left">
+                <span class="font-dark">热门理财</span><br>
+                <span class="font12">人气抢购</span>
+            </h5>
+        </a>
+    </div>
+    <div class="col-50">
+        <a href="#" class="font-grey link-active" name="index_borrowListUrl" style="margin-left: 5px;">
+            <img src="static/img/xxd/home/iv5.png" class="left" width="50" style="margin-right: 8%;">
+            <h5 class="left text-left">
+                <span class="font-dark">散标直投</span><br>
+                <span class="font12">灵活投资</span>
+            </h5>
+        </a>
+    </div>
+</div>
+
+<div class="text-center font-grey font13 mt20 pb20" style="color: #999">
+    <span>V6.7.5</span>
+    |
+    <a href="http://www.xinxindai.com/index.html" class="external font-grey" style="color: #3f9bff"
+       target="_blank">电脑版</a>
+    |
+    <span style="color: #3f9bff;" name="home_help">帮助中心</span>
+    <div>新新贷（上海）金融信息服务有限公司</div>
+</div>
+
+</div>
+</div>
+
+<div id="pop" class="pop index_download" style="display: none;">
+    <div class="pop-content">
+        <div class="pop-main">
+            <div class="mt-downclient">
+                <div class="mt-downclient-title">新新贷理财<br>以信相贷，用新服务</div>
+                <img class="mt-downclient-img" src="static/img/xxd/home/iv-logo.png"/>
+                <button class="button mt-download-btn"  name="home_download">下载APP</button>
+                <img src="static/img/xxd/home/iv-close.png" width="20" class="ivc_po" name="home_downloadClose"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>

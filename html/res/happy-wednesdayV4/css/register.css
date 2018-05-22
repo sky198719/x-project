@@ -1,0 +1,158 @@
+/*注册 register*/
+input::-webkit-placeholder {
+  font-size: 14px;
+  color: #908f8f;
+}
+input::placeholder {
+  font-size: 14px;
+  color: #908f8f;
+}
+input {
+  background: none;
+  outline: none;
+  border: 0px;
+  -webkit-appearance: none;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button {
+  border: 0 none;
+  outline: none;
+  background-image: none;
+  text-shadow: none;
+}
+.user-verigy .disfont {
+  font-size: 12px !important;
+}
+.register-main {
+  float: right;
+  width: 242px;
+  padding: 20px;
+}
+.register-main .register-title {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 900;
+}
+.register-main .user-common {
+  height: 38px;
+  margin-bottom: 8px;
+}
+.register-main .user-common input {
+  background-color: rgba(204, 204, 204, 0.6);
+  text-indent: 6px;
+  color: #a9a9a9;
+}
+.register-main .user-num,
+.register-main .user-psw {
+  width: 240px;
+}
+.register-main .J-num,
+.register-main .J-psw {
+  width: 240px;
+  height: 36px;
+  background: #fff;
+}
+.register-main .user-verigy {
+  margin-bottom: 8px;
+  position: relative;
+}
+.register-main .user-voice {
+  text-align: right;
+  margin-bottom: 18px;
+}
+.register-main .user-verigy .J-verify,
+.register-main .user-verigy .J-phoneyzm {
+  float: left;
+  width: 100%;
+  height: 36px;
+}
+.register-main .user-verigy .change-verify,
+.register-main .user-verigy .get-phoneyzm {
+  float: right;
+  margin-left: 8px;
+  background: #ffcc33;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.register-main .change-verify,
+.register-main .get-phoneyzm {
+  position: absolute;
+  right: 2px;
+  top: 5px;
+}
+.register-main .change-verify {
+  width: 80px;
+  height: 27px;
+}
+.register-main .get-phoneyzm {
+  width: 90px;
+  height: 28px;
+  color: #cc3300;
+  line-height: 28px;
+}
+.register-main .user-voice .J-voiceyzm {
+  font-size: 14px;
+  color: #ff523a;
+}
+.register-main .user-verigy .get-phoneyzm {
+  text-align: center;
+  font-size: 14px;
+}
+.register-main .user-agree {
+  margin-bottom: 10px;
+  position: relative;
+}
+.register-main .user-agree span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #cc3300;
+  text-indent: 2px;
+}
+.register-main .user-agree span a {
+  font-size: 14px;
+  color: #cc3300;
+  cursor: pointer;
+}
+.register-main .user-agree .check-style {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+}
+.register-main .user-agree .no-check {
+  background: url("css/i/check.png") no-repeat;
+  background-size: 100% 100%;
+}
+.register-main .user-agree .checked {
+  background: url("css/i/checked.png") no-repeat;
+  background-size: 100% 100%;
+}
+.register-main .register-btn {
+  width: 240px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  margin: 0 auto 5px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Microsoft Yahei", "微软雅黑", Arial, Tahoma;
+}
+.register-main .have-login {
+  text-align: right;
+  font-size: 14px;
+  color: #3a3a3a;
+  padding-right: 3px;
+}
+.register-main .have-login .logined {
+  text-decoration: underline;
+  color: #0c6e81;
+}

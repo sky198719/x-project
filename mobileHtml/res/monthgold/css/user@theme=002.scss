@@ -1,0 +1,210 @@
+#user {
+  width : 80vw;
+  //background : #ff9f17;
+  background: #ff9f17 url("../imgs/login.png") no-repeat top/contain;
+  border-radius : .8vw;
+  padding : 4.6vw 0 3vw 0;
+  position : relative
+}
+
+#user #login, #user #reg {
+  width : 100%;
+  text-align : center;
+  display : none
+}
+
+#user #login h1, #user #reg h1 {
+  font-size : 5.6vw;
+  color : #fb295d;
+  line-height : 1;
+  padding-bottom : 3vw;
+  margin-bottom: 2vh;
+}
+
+#user #login > p, #user #reg > p {
+  background : #ffc0d0;
+  margin : 2vw 0
+}
+
+#user #login > p span, #user #reg > p span {
+  display : none;
+  line-height : 12.9vw;
+}
+
+#user #login > p span.show, #user #reg > p span.show {
+  display : inline-block
+}
+
+#user #login ul, #user #reg ul {
+  padding : 0 4.4666666vw 0 4.4666666vw
+}
+
+#user #login li, #user #reg li {
+  padding : 1.333333vw 0;
+  position : relative
+}
+
+#user #login li #reg_msg, #user #login li #login_msg, #user #reg li #reg_msg, #user #reg li #login_msg {
+  font-size : 3.7333333vw;
+  color : #c10a0a;
+  display : inline-block;
+  height : 4.529333vw
+}
+
+#user #login li p, #user #reg li p {
+  font-size : 4.2666666667vw;
+  color : #535353;
+  padding-top : 1vw
+}
+
+#user #login input, #user #reg input {
+  width : 100%;
+  height : 12.9vw;
+  border : 1px solid #cacaca;
+  border-radius : 0.4vw;
+  font-size : 3.7333333vw;
+  padding : 0 3.333333vw
+}
+
+#user #login .ui-login-v-code-img, #user #login .ui-register-v-code-img, #user #reg .ui-login-v-code-img, #user #reg .ui-register-v-code-img {
+  width : 22vw;
+  height : 8.5vw;
+  position : absolute;
+  top : 1.2vw;
+  right : 0;
+  display : inline-block;
+  background-clip : padding-box;
+  background-size : 100% 100%;
+  background-repeat : no-repeat;
+  user-select : none;
+  -webkit-user-select : none;
+  background-color : #f5f5f5;
+  border : 2.5vw solid transparent;
+  box-sizing : content-box;
+  -webkit-box-sizing : content-box
+}
+
+#user #login .xui-m-code, #user #reg .xui-m-code {
+  background : #7b5ae9;
+  display : block;
+  color : #fff;
+  z-index : 1;
+  line-height : 9vw;
+  user-select : none;
+  -webkit-user-select : none;
+  position : absolute;
+  right : 0;
+  top : 1vw;
+  font-weight : 400;
+  font-size : 3.7333333vw;
+  min-width : 19vw;
+  height : 9vw;
+  padding : 0 1.5vw;
+  box-sizing : content-box;
+  -webkit-box-sizing : content-box;
+  border : 2.5vw solid transparent;
+  background-clip : padding-box;
+  -webkit-background-clip : padding-box;
+  border-radius: 2vw
+}
+
+#user #login button, #user #reg button {
+  margin-top : 2vw;
+  width : 100%;
+  height : 12.9vw;
+  line-height : 12.9vw;
+  background : #7b5ae9;
+  font-size : 5.6vw;
+  position : relative;
+  color : #fff;
+  border-radius : 6vw;
+  transition : all .05s
+}
+
+#user #login button:active, #user #reg button:active {
+  transform : scale(0.99, 0.95)
+}
+
+#user.login #login, #user.reg #reg {
+  display : inline-block
+}
+
+.co-vice {
+  color : #ff7844
+}
+
+.user-close {
+  width : 14.135vw;
+  height : 14.135vw;
+  position : absolute;
+  right: -7.0675vw;
+  top: -7.0675vw;
+  padding : 3.5vw;
+  display : block
+}
+
+.user-close > * {
+  display : block;
+  width : 100%;
+  height : 100%;
+  background : #ff9f17 ;
+  padding: 1.35vw;
+  border-radius: 50%;
+}
+.user-close > *:after {
+  content:"";
+  display : block;
+  width : 100%;
+  height : 100%;
+  background : linear-gradient(45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%), linear-gradient(-45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%)
+}
+
+#user #reg #reg-agreement input {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  margin-right: .5rem;
+  border: 0;
+}
+.xui-login .login-title,
+.xui-register .reg-title,
+.xui-login .reg-title,
+.xui-register .login-title
+{
+  display: block;
+  //background: url("../imgs/title.png") no-repeat center/contain;
+  text-align: center;
+  margin: 0 auto;
+  width: pxTorem(170px);
+  height: pxTorem(58px);
+}
+input::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+input:-ms-input-placeholder {
+  color: #c5c5c5;
+}
+input:-moz-placeholder {
+  color: #c5c5c5;
+}
+input::-moz-placeholder {
+  color: #c5c5c5;
+}
+#o_login span,#o_reg span{
+  color : #fd6159!important;
+  text-decoration: underline;
+}
+#read-agreement{
+  font-size: 0.75rem;
+
+}
+#agreement p{
+    font-size: 0.8rem;
+}
+#operationData p{
+  color: #fff!important;
+}

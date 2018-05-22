@@ -1,0 +1,126 @@
+body,html{
+  padding:0;
+  margin:0;
+}
+li{
+  list-style: none;
+}
+.container{
+  width:100%;
+  min-width:1200px;
+  height: 2950px;
+  .top{
+    height: 724px;
+    background: url("img/bg1.jpg") center no-repeat;
+  }
+  .wrap-first{
+    height: 800px;
+    background: url("img/bg2.jpg") center no-repeat;
+    .main-container{
+      height: 800px;
+      position: relative;
+      width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .content-list{
+      position: absolute;
+      top: 424px;
+      right: 81px;
+      width: 446px;
+      height: 257px;
+      .winData{
+        width: 446px;
+        height: 257px;
+        overflow: hidden;
+        position: relative;
+        cursor: default;
+        ul{
+          width: 96%;
+          padding:0;
+          margin:0 4%!important;
+          position: relative;
+          li{
+            width: 100%;
+            height: 54px;
+            line-height: 43px;
+            color: #df0b2e;
+            font-size:20px;
+            position: relative;
+            span{
+
+              display: inline-block;
+              text-align:center;
+            }
+            .username{
+              width: 30%;
+              text-align: left;
+            }
+            .time{
+              width: 29%;
+            }
+            .prizename{
+              width: 38%;
+              margin-right: 2%;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .wrap-second{
+    height: 1426px;
+    background: url("img/bg3.jpg") center no-repeat;
+    overflow: hidden;
+    .second-lists{
+      width: 868px;
+      height:394px;
+      margin: 148px auto 0;
+      background: url("img/product.jpg") center no-repeat;
+      background-size: 100% 100%;
+      .list{
+        display: inline-block;
+        width: 368px;
+        height: 394px;
+        cursor: pointer;
+        .list-title{
+          width: 100%;
+          margin: 107px auto 0;
+          text-align: center;
+          font-size: 24px;
+        }
+        .detail-num{
+          position: relative;
+          width: 100%;
+          height:70px;
+          line-height:70px;
+          overflow:hidden;
+          margin:6px auto 0;
+          text-align: center;
+          font-size: 40px;
+          font-weight: bold;
+          .big{
+            font-size: 70px;
+          }
+          .small{
+            font-size: 26px;
+          }
+        }
+      }
+      .list-l{
+        .detail-num,.list-title{
+          color: #ffc42c;
+        }
+      }
+      .list-r{
+        .detail-num,.list-title{
+          color: #ea473d;
+        }
+        margin-left: 132px;
+      }
+
+    }
+
+  }
+}

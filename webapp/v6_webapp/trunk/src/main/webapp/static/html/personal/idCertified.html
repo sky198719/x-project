@@ -1,0 +1,66 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">实名认证</div>
+        <div class="right sliding">
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="idCertified" class="page">
+        <input type="hidden" id="uploadIdCardPicFlag" name="uploadIdCardPicFlag" value="0">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block-title mt20">
+                <h6>如无法认证请上传身份证照片审核；<br /><br />实名信息一经认证成功无法更改</h6>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">真实姓名</div>
+                                <div class="item-input">
+                                    <input type="text" id="realname" name="realname" placeholder="请键入真实姓名"/>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">身份证</div>
+                                <div class="item-input">
+                                    <input type="text" id="idCardNo" name="idCardNo" placeholder="请键入身份证号码"/>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="realNameImg_page" style="display: none;">
+                <div class="content-block-title mt20">
+                    <h6>上传您的身份证照片,上传图片格式为jpg、gif、<br/><br/>png、bmp、jpeg,不能大于2M.</h6>
+                </div>
+                <div class="row mlr5">
+                    <div class="col-50 id-box">
+                        <span class="bg-id-front" id="upImg"><img src="static/img/xxd/id-front.png" width="80"></span>
+                        <h6 id="upFileName">上传身份证正面</h6>
+                        <input id="frontFile" type="file" accept="image/*" name="file">
+                    </div>
+                    <div class="col-50 id-box">
+                        <span class="bg-id-front" id="backImg"><img src="static/img/xxd/id-front.png" width="80"></span>
+                        <h6 id="backFileName">上传身份证反面</h6>
+                        <input id="backFile" type="file" accept="image/*" name="file" >
+                    </div>
+                </div>
+            </div>
+            <div class="mt20 mr10 ml10">
+                <a href="#" class="button button-51 active" id="id-certified-start">认证</a>
+            </div>
+        </div>
+    </div>
+</div>

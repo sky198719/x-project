@@ -1,0 +1,1 @@
+require.config({paths:{common:"../common/common"}}),require(["common"],function(o){o.headerLoad("提示",5,!1,"",!1,"")});

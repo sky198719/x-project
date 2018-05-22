@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+}
+.container .wrap-first {
+  height: 1308px;
+  background: url("img/bg1.jpg") center no-repeat;
+}
+.container .wrap-second {
+  height: 3023px;
+  background: url("img/bg2.jpg") center no-repeat;
+}
+.container .wrap-third {
+  height: 253px;
+  background: url("img/bg3.jpg") center no-repeat;
+}

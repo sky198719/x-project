@@ -1,0 +1,58 @@
+@media screen and (max-width: 1366px) {
+  .section img {
+    width: 70%;
+  }
+  .bkgL img {
+    width: 40%;
+  }
+}
+.section {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background: url("img/reportOctober/bkg.jpg") center no-repeat;
+  background-size: 100% 100%;
+}
+.section img {
+  display: block;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+.bkgF,
+.bkgL {
+  background: url("img/reportOctober/bkgT.jpg") center no-repeat;
+  background-size: 100% 100%;
+}
+#menu li {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url("img/reportOctober/default.png") no-repeat center;
+  opacity: 80;
+  margin-bottom: 20px;
+}
+#menu li.active,
+#menu li:hover {
+  background: url("img/reportOctober/active.png") no-repeat center;
+}
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  text-decoration: none;
+}
+#menu li a:focus,
+#menu li.active a:focus {
+  outline: none;
+}
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 516px;
+  margin-top: -258px;
+  z-index: 70;
+}

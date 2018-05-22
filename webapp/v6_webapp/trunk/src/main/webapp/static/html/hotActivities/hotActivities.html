@@ -1,0 +1,28 @@
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">热门活动</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through">
+    <div class="page" data-page="hotActivities">
+        <div class="page-content hotActivity-list-show pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <input type="hidden" id="currentPage" value="1"/>
+            <input type="hidden" id="totalPage" value="1"/>
+            <div class="list-block media-list" style='display: none;'>
+                <ul id="tenderList"></ul>
+                <ul>
+                    <li class="notification-item"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

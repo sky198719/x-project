@@ -1,0 +1,51 @@
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding  ffam">新新推广</div>
+        <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div>
+    </div>
+</div>
+<div class="pages">
+    <div class="page navbar-through toolbar-through" data-page="myActivity">
+        <div class="page-content pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="xxd-content-block ">
+                <div style="width: 100%; background: #FFFFFF; height: 252px;">
+                    <div class="bgtop">
+                        <div class="pbg">
+                            <p class="tipPos sth"> 累计推广人数 </p><span class="font-red numPos "><label
+                                style="font-size:36px;margin-left: 3%;" id="totalSize">0</label>人 </span>
+                        </div>
+                    </div>
+                    <div style="width: 96%;margin:8px auto;height: 50px;">
+                        <div class="popularize left" style="width: 49%;position:relative;" id="exclusiveLink">
+                            <img src="static/img/xxd/popularizeLink.png" width="23"
+                                 style="margin-top:12px;margin-left: -60%">
+                            <span style="position:absolute;display:block;top:2px; left:32%;" class="">我的专属链接</span>
+                        </div>
+                        <div class="popularize right" style="width: 49%;position:relative;" id="inviteCode">
+                            <img src="static/img/xxd/popularizeUser.png" width="23"
+                                 style="margin-top:12px;margin-left: -60%">
+                            <span style="position:absolute;display:block;top:2px; left:32%;" class=""> 我的邀请码</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-block-title">
+                    <h5>被邀请的客户</h5>
+                </div>
+                <input type="hidden" id="currentPage" value="1"/>
+                <input type="hidden" id="totalPages" value="1"/>
+            </div>
+            <div id="activityUserList"></div>
+        </div>
+        <div class="fixedBarBox">
+            <section class="fixedBar">
+                <div class="popularize ac-3" id="popularizeShareBtn">发邀请赢奖金</div>
+            </section>
+        </div>
+    </div>
+</div>

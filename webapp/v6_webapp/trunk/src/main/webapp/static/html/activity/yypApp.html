@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>月月派专题页</title>
+<style>
+	body{
+	        margin: 0px;
+	    	padding: 0px;
+	    }
+.container{width:100%; position:relative;}
+.container img{display:block; border:none; width:100%;}
+.container .btn{width:83.5%; top:88%; left:50%; margin-left:-41.25%; position:absolute;}
+</style>
+</head>
+
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+	<div class="container">
+		<img src="../../img/activity/yyp/app/bg_01.jpg" />
+	</div>
+	<div class="container">
+		<img src="../../img/activity/yyp/app/bg_02.jpg" />
+	</div>
+	<div class="container">
+		<img src="../../img/activity/yyp/app/bg_03.jpg" />
+	</div>
+	<div class="container">
+		<img src="../../img/activity/yyp/app/bg_04.jpg" />
+	</div>
+	<div class="container">
+		<img src="../../img/activity/yyp/app/bg_05.jpg" />
+		<a href="javascript:void(0)" onclick="skipto();"><img src="../../img/activity/yyp/app/btn.jpg" class="btn" /></a>
+	</div>
+	<div class="container">
+		<img src="../../img/activity/yyp/app/bg_06.jpg" />
+	</div>
+<!-- 	<div class="container"> -->
+<!-- 		<img src="../../img/activity/yyp/app/bg_07.jpg" /> -->
+<!-- 	</div> -->
+</div>
+<script>
+(function(doc,win,fontSize) {
+	var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function(){
+		var clientWidth = docEl.clientWidth;
+		if (!clientWidth){
+			return;
+		}
+		docEl.style.fontSize = fontSize * (clientWidth / 60) + 'px';
+	};
+	if(!doc.addEventListener){
+		return;
+	}
+	win.addEventListener(resizeEvt,recalc,false);
+	doc.addEventListener('DOMContentLoaded',recalc,false);
+})(document,window,16);
+</script>
+<!--login-->
+<script>
+    function skipto() {
+        window.location.href = "xxd://list?selID=1";
+    }
+</script>
+</body>
+</html>

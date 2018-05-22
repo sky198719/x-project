@@ -1,0 +1,147 @@
+@import "css/index";
+
+/*安全保障*/
+.g-right {
+  .m-con-wrap {
+    margin-bottom: 50px;
+    border: 1px solid #eee;
+    .m-con-bd {
+      margin-bottom: 50px;
+      width: 846px;
+      border-bottom: none;
+      .safe-content {
+        width: 570px;
+        p {
+          font-size: @font15px;
+          color: @col-8484;
+        }
+        p.title {
+          margin-bottom: 10px;
+          font-size: @font26px;
+          color: @col-57a;
+          font-weight: bold;
+        }
+      }
+      .safe-control{
+        background: url("@{imgurl}ss-control.png") no-repeat center;
+        width: 268px;
+        height: 201px;
+      }
+      //华瑞银行存管
+      .bank-storage{
+        margin-right: 70px;
+        width: 155px;
+        height: 174px;
+        background: url("@{imgurl}ss-storage.png") no-repeat center;
+      }
+      .safe-cash {
+        background: url("@{imgurl}ss-cashs.png") no-repeat center;
+        width: 247px;
+        height: 181px;
+      }
+      .safe-sign {
+        background: url("@{imgurl}ss-sign.png") no-repeat center;
+        width: 240px;
+        height: 233px;
+      }
+      .safe-protection {
+        background: url("@{imgurl}ss-protection.png") no-repeat center;
+        width: 231px;
+        height: 209px;
+      }
+      .safe-24h {
+        background: url("@{imgurl}ss-24h.png") no-repeat center;
+        width: 237px;
+        height: 166px;
+      }
+    }
+    //相关专题
+    .resubject {
+      width: 884px;
+      margin: 0 auto;
+      text-align: center;
+      fieldset {
+        position: relative;
+        width: 100%;
+        border: none;
+        border-top: 1px solid #e3e3e3;
+        text-align: center;
+        legend {
+          padding: 0 30px;
+          font-size: 28px;
+          color: #57a8ff;
+          text-align: center;
+          position: absolute;
+          top: -24px;
+          margin-left: -86px;
+          left: 50%;
+          background: #fff;
+        }
+        span {
+          position: absolute;
+          top: 20px;
+          left: 50%;
+          margin-left: -60px;
+          display: inline-block;
+          width: 120px;
+          height: 3px;
+          background: #ff683a;
+        }
+      }
+      .focus {
+        width: 100%;
+        margin-top: 55px;
+        ul {
+          margin-bottom: 15px;
+          li {
+            float: left;
+            display: inline-block;
+            width: 208px;
+            margin-right: 17px;
+            span {
+              display: inline-block;
+              width: 208px;
+              height: 114px;
+              background: none no-repeat center;
+            }
+            p {
+              font-size: @font16px;
+              color: @col-666;
+              text-align: center;
+              line-height: 30px;
+            }
+            &.last {
+              margin-right: 0;
+            }
+          }
+        }
+        ol {
+          display: inline-block;
+          margin-bottom: 75px;
+          li {
+            float: left;
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: #cecece;
+            margin: 0 5px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+            &.active {
+              background: @col-57a;
+            }
+          }
+
+        }
+      }
+    }
+  }
+  .safe-topbg {
+    background: url("@{imgurl}safesec-top.jpg") no-repeat center;
+    width: 970px;
+    height: 239px;
+    margin-bottom: 40px;
+  }
+}

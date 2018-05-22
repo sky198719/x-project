@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xui="0.0.1" frame="mobile3" browser="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="xinxindai">
+    <meta name="author" content="UI Manxiaoman | Front-end Junbo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>债权转让协议</title>
+    <link href="../css/main.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="n1e bg-white">
+    <h1 class="ac s1e5 bold mb1e">债权转让协议</h1>
+    <div class="xui-text">
+        <ul class="xui-blanks mh10x-z" theme="001">
+            <li><em>甲方（债权转让人）：</em><span class="dt_a_real_name"></span></li>
+            <li><em>证件类型：</em><span class="dt_a_id_card_desc">其他</span></li>
+            <li><em>证件号码：</em><span class="dt_a_id_card_no"></span></li>
+            <li><em>新新贷用户名：</em><span class="dt_a_user_name"></span></li>
+
+            <li><em>乙方（债权受让人）：</em><span class="dt_b_real_name"></span></li>
+            <li><em>证件类型：</em><span class="dt_b_id_card_desc">其他</span></li>
+            <li><em>证件号码：</em><span class="dt_b_id_card_no"></span></li>
+            <li><em>新新贷用户名：</em><span class="dt_b_user_name"></span></li>
+        </ul>
+        <ul class="mt1e mh5x-z">
+            <li>丙方：<span>新新贷（上海）金融信息服务有限公司</span></li>
+            <li>联系电话：<span>4000 169 521</span></li>
+            <li>注册地址：<span>上海市虹口区四川北路859号中信广场28楼</span></li>
+        </ul>
+        <div class="aj mt1e">鉴于：甲方系丙方运营的新新贷平台（www.xinxindai.com）的资金出借人，甲方拟通过新新贷平台（域名为www.xinxindai.com）转让其合法所有的债权，乙方拟通过新新贷平台受让前述债权。现双方根据平等、自愿的原则，就上述债权转让事宜达成如下协议。</div>
+
+        <h4 class="mt2e bold">第一条债权转让信息</h4>
+        <h5 class="mt1e mb6x">1、甲方标的债权主要信息。</h5>
+        <div>
+            <table class="xui-table mm" data-theme="001" sz="s">
+                <tr>
+                    <td class="cus-w35">借款本金（元）</td>
+                    <td>人民币：<span class="dt_borrow_amount"></span></td>
+                </tr>
+                <tr>
+                    <td>借款年化利率</td>
+                    <td><span class="dt_borrow_apr"></span>%</td>
+                </tr>
+                <tr>
+                    <td>借款期限</td>
+                    <td><span class="dt_borrow_period"></span>个月，自<span class="dt_borrow_start_time"></span>起，至<span class="dt_borrow_end_time"></span>止</td>
+                </tr>
+                <tr>
+                    <td>还款日</td>
+                    <td class="aj">合同生成日期起，每月<span class="dt_repayment_day"></span>号（若当月没有该日，则还款日为当月最后一日，节假日不顺延）</td>
+                </tr>
+                <tr>
+                    <td>剩余借款本金（元）</td>
+                    <td>人民币：<span class="dt_remaining_amount"></span></td>
+                </tr>
+                <tr>
+                    <td>剩余还款期数</td>
+                    <td class="aj"><span class="dt_remaining_repay_period"></span>个月，自<span class="dt_repay_start_time"></span>起，至<span class="dt_repay_end_time"></span>止</td>
+                </tr>
+            </table>
+        </div>
+        <h5 class="mt1e mb6x">2、标的债权转让信息。</h5>
+        <div>
+            <table class="xui-table mm" data-theme="001" sz="s">
+                <tr>
+                    <td class="cus-w35">标的债权金额（元）</td>
+                    <td>人民币：<span class="dt_tender_amount"></span></td>
+                </tr>
+                <tr>
+                    <td>转让总额（元）</td>
+                    <td>人民币：<span class="dt_request_amount"></span></td>
+                </tr>
+                <tr>
+                    <td>转让服务费（元）</td>
+                    <td>人民币：<span class="dt_request_service_fee"></span></td>
+                </tr>
+                <tr>
+                    <td>剩余还款期数</td>
+                    <td class="aj"><span class="dt_trade_remaining_repay_period"></span>个月，自<span class="dt_trade_repay_start_time"></span>起，至<span class="dt_trade_repay_end_time"></span>止</td>
+                </tr>
+                <tr>
+                    <td>转让日期</td>
+                    <td><span class="dt_request_time"></span></td>
+                </tr>
+            </table>
+        </div>
+
+        <h4 class="mt2e bold">第二条 债权转让的法律效力</h4>
+        <div class="aj-z">
+            <p>1、甲乙双方同意并确认，双方通过自行或授权有关方根据新新贷网站有关规则和说明，在新新贷网站进行债权转让和受让操作等方式来确认签署本协议。</p>
+            <p>
+                2、除本协议另有约定外，自标的债权转让之日起（包括转让日），甲方基于标的债权所享有的标的债权及其附属的一切权利、利益将悉数转给乙方，且该等权利和利益包括但不限于：标的债权的附属所有权（现时的和未来的、现实的和或有的）和相关权益（包括但不限于担保权益以及其他权利或利益）；标的债权相关的滞纳金、违约金、延期补偿金等权利；获得标的的债权被转让、被出售、被拍卖或者以其他方式处置所获得的全部款项的权利；以诉讼或其他形式请求、收回、接受与标的债权相关的全部应偿付款项的权利；债权文件项下甲方享有除标的债权及上述各项权利以外的其他一切权利和利益。</p>
+            <p>3、本协议项下的标的债权转让将通过丙方平台站内消息的方式通知到债务人，且站内消息一经发送即视为送达。</p>
+            <p>
+                4、乙方应于标的债权转让之日起一次性向甲方支付转让价款。且乙方在此不可撤销地授权丙方，通过与其合作的第三方支付机构于本协议成立时，将本协议项下的标的债权转让价款全部划转至甲方在丙方网站的帐户中，划转完毕即视为本协议项下的标的债权转让成功。</p>
+        </div>
+
+        <h4 class="mt2e bold">第三条 承诺与保证</h4>
+        <div class="aj-z">
+            <p>
+                1、甲方保证其系标的债权的合法所有者，且有权转让该标的债权；甲方自身所拥有的标的债权系合法、真实、有效，且不存在任何的转让限制。同时甲方保证其所转让的债权免遭其他任何第三人的追索。否则，甲方将承担由此而引起的所有经济和法律责任。</p>
+            <p>
+                2、乙方保证其用于受让本协议项下的标的债权的资金系乙方合法所有或享有绝对支配权的财产，且前述资金与其他任何个人、法人或其他组织不存在法律上的任何纠纷。如果任何第三方对资金归属、合法性等问题发生争议，将由乙方自行负责解决。如若因此给甲方或丙方造成任何损害的，乙方需赔偿甲方和（或）丙方遭受的全部损失。</p>
+            <p>3、甲方同意且不可撤销地授权丙方委托与其合作的第三方支付机构从乙方向其支付的转让对价中，划扣相应的债权转让费至丙方。</p>
+            <p>4、自债权转让成功后，乙方同意且授权丙方委托与其合作的第三方支付机构在每期还款日将相应款项，划转至乙方在丙方网站的账户中。</p>
+            <p>5、自本协议生效且债权转让成功后，双方特此委托丙方将债权的转让事项及有关信息通过站内信等形式通知与标的债权对应的借款人。</p>
+            <p>6、自本协议项下的标的债权转让成功之日起，乙方立即成为该标的债权的债权人，承继出借人相应的权利及义务。</p>
+        </div>
+
+        <h4 class="mt2e bold">第四条 税费的承担</h4>
+        <div class="aj-z">
+            <p>1、除各方签订的其他协议另有约定外，本协议项下的各方应严格按照法律法规中相应的规定，各自承担其因签订和履行本协议而产生的相应税费。</p>
+            <p>2、因处置标的债权、担保物（如有）而产生的所有税费适用相应的债权文件的约定。</p>
+        </div>
+
+        <h4 class="mt2e bold">第五条 免责条款</h4>
+        <div class="aj-z">
+            <p>1、甲方应妥善保管其在丙方注册的用户名、密码等全部用户信息。通过甲方在丙方注册的账号发送的债权转让信息均视为甲方发出，由甲方承担相应的责任。</p>
+            <p>2、甲方已完全知悉债权转让的性质和后果，债权转让是甲乙双方真实的意思表示。因债权转让行为产生的任何纠纷均由甲乙双方自行解决，与丙方无关；丙方在甲乙双方提出书面要求时，可提供由丙方网站保存的相关材料。</p>
+            <p>3、在发起债权转让时，甲方应确认转让的详细信息，包括但不限于转让债权的金额、对价等。若因甲方操作失误造成任何损失的，则由甲方自行承担后果，丙方不承担任何责任。</p>
+        </div>
+
+        <h4 class="mt2e bold">第六条 违约责任</h4>
+        <div class="aj-z">
+            <p>1、甲乙双方一致同意，如果一方违反其在本协议中所作的保证、承诺或任何其他义务，致使其他方遭受或发生损害、损失等责任，违约方须向守约方赔偿守约方因此遭受的一切经济损失。</p>
+            <p>2、 双方均有过错的，应根据双方实际过错程度，分别承担各自的违约责任。</p>
+        </div>
+
+        <h4 class="mt2e bold">第七条 其他事项</h4>
+        <div class="aj-z">
+            <p>1、乙方将标的债权转让价款成功支付至甲方在丙方网站的帐户时，本协议立即生效。</p>
+            <p>2、本协议的任何修改、补充均须以丙方平台电子文本形式作出。经过双方签署的有关本协议的修改协议和补充协议是本协议组成部分，具有与本协议同等的法律效力。</p>
+            <p>3、如果本协议的任何条款因任何原因无效，该条款的无效不影响本协议其他条款有效性，各方应当继续履行本协议其他条款。</p>
+            <p>4、丙方网站上公示的有关债权转让规则等文件，是本协议不可缺少的组成部分，与本协议具有同等法律效力。甲乙双方已认真阅读并接受。且本协议项下无约定的事项以丙方平台公布的相关规则为准。</p>
+            <p>5、本协议中所使用的定义及规则，除非在上下文中另有明确定义外，应与丙方平台官网公布的信息中定义的含义一致，若出现歧义，则以丙方官网信息为准。</p>
+            <p>6、各方因履行本协议或与本协议有关的所有争议首先以协商解决，协商不成的，任何一方均可向本协议签订地上海市虹口区人民法院提起诉讼。</p>
+        </div>
+    </div>
+    <div class="mh1e-z">
+        <p>甲方（转让方）：<span class="dt_a_real_name"></span></p>
+        <p>乙方（受让方）：<span class="dt_b_real_name"></span></p>
+        <p class="stamp nt2e">丙方（服务方）：新新贷（上海）金融信息服务有限公司</p>
+    </div>
+</div>
+<script src="../js/trade-agreement.js"></script>
+</body>
+</html>

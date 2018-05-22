@@ -1,0 +1,58 @@
+{{#each list}}
+{{#if is_activityLabel}}
+<div style="text-align:right;">
+        <span style="
+            color:#fff;
+            display: inline-block;
+            font-size: 0.7rem;
+            height: 1.3rem;
+            line-height: 1.3rem;
+            position: relative;
+            padding: 0 5px 0 20px;
+            background: #ff7365;
+            /*clip-path  : polygon(20px 0%,100% 0,100% 100%,0 100%);*/
+            clip-path  : polygon(14.275px 2.711px, 15.409px 1.513px,16.502px 0.786px,17.619px 0.318px ,21px 0%,100% 0,100% 100%,0 100%);
+            -webkit-clip-path: polygon(14.275px 2.711px, 15.409px 1.513px,16.502px 0.786px,17.619px 0.318px ,21px 0%,100% 0,100% 100%,0 100%);
+">{{activityLabel}}</span>
+</div>
+{{/if}}
+<li class="swipeout" data-id="{{yypId}}" data-yypName='{{name}}' data-terms='{{terms}}' data-apr='{{apr}}'>
+    <div class="swipeout-content">
+        <!-- 定期-->
+        <div class="dq-blue">
+            <img src="{{fixedImg}}" width="25px" height="50px;">
+        </div>
+        <div class="item-inner pl40">
+            <div class="item-title-row">
+                <div class="item-title text-overflow" style="width: 55%;">
+                    月月派{{terms}}个月 - {{name}}
+                </div>
+                <div class="item-after">计划金额：{{account}} 万</div>
+            </div>
+            <div class="item-text mt20" style="height: 50px;display: list-item;">
+                    <span style="float: left;width: 40%">
+                        {{apr}}
+                        <br>
+                        <span style="line-height: 28px;">历史年化收益</span>
+                    </span>
+                    <span style="float: left;width: 25%;line-height: 25px;">
+                        <span class="font18 font-3A3939">{{terms}}个月</span>
+                        <br>
+                        <span style="line-height: 28px;">期限</span>
+                    </span>
+                    <span style="float: right;width: 35%;text-align: right;">
+                        {{#if isClose}}
+                        <img src="static/img/xxd/buy-none.png" width="50px;" height="50px" class="game-over-rmlc">
+                        {{else}}
+                        <button class="button {{buttonClass}} " style="display: inline;"
+                                name="{{buttonName}}" data-id="{{yypId}}" data-pname='{{name}}'
+                                data-closeterm='{{terms}}' data-minapr='{{apr}}'data-status="{{status}}">
+                            {{buttonName}}
+                        </button>
+                        {{/if}}
+                     </span>
+            </div>
+        </div>
+    </div>
+</li>
+{{/each}}

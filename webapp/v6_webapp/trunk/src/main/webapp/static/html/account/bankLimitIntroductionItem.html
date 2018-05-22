@@ -1,0 +1,25 @@
+<div style="    padding: 10px 0 10px 20px;
+    border-bottom: solid 1px #c8c7cc;
+    /* color: #c8c7cc; */
+    font-size: 13px;
+    color: #94999E;">实际限额信息以银行最新发布的为准</div>
+{{#each list}}
+<li style="border-bottom: 1px solid #EAEAEA;">
+	<div class="item-content">
+		<div class="item-media" style="padding-top:0px;padding-bottom:0px;margin-left: -5px;">
+			<div class="bank {{bankCode}}" style="width:50px;height:50px;background-size:50px;"></div>
+		</div>
+		<div class="item-inner item-inner-clearAfter" style="margin-left:10px;">
+			<div class="item-title-row">
+				<div class="item-title">{{bankName}}储蓄卡</div>
+				<div class="item-after">
+					<a href="tel://{{telephone}}" class="external index-item-link">
+						<img src="static/img/xxd/telephone.png" width="28px">
+					</a>
+				</div>
+			</div>
+			<div class="item-subtitle" style="font-size: 13px;color: #94999E;">单笔{{limit}}，单日{{dayLimit}}，单月{{monthLimit}}</div>
+		</div>
+	</div>
+</li>
+{{/each}}

@@ -1,0 +1,25 @@
+{{#each list}}
+<div class="list-block inset">
+    <ul >
+        </li>
+        <li class="item-content">
+            <div class="item-inner">
+                <div class="item-title"><h5 class="font-bold">新手专享30天</h5></div>
+                <div class="item-after"><h5 class="font-blue">{{#if isCompleted}}收益中{{else}}已完成{{/if}}</h5></div>
+            </div>
+        </li>
+        <li class="item-content">
+            <div class="item-inner">
+                <div class="font-grey" style="width:100%">
+                    <h6 class="mt5">投资金额：{{money}}&nbsp;元</h6>
+                    <h6 class="mt5">历史年化收益：{{aprhtml}}</h6>
+                    <h6 class="mt5">投资时间：{{addtime}}<span class="right">锁定期</span></h6>
+                    <h6 class="mt5">历史收益：{{interest}}&nbsp;元<span class="right font-red">{{timelimit}}天</span></h6>
+                    <h6 class="mt5">债权列表：<span class="color-blue userTradeList" data-joinid="{{joinId}}">点击查看</span></h6>
+                    <h6 class="mt5">于&nbsp;{{endtime}}&nbsp;到期 本金和收益{{#if isCompleted}}已{{else}}将{{/if}}返回至新新贷账户</h6>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{{/each}}

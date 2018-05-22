@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>圣诞淘金记 赢千倍金币</title>
+<style>
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none; font-family:'微软雅黑';}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+input{outline:none;}
+button{outline:none;}
+.container{width:100%; position:relative;}
+.container img{display:block; border:none; width:100%;}
+#gameInfo{width:31%; height:2.4rem; padding:0.2rem 0; background:#fff0a5; border:0.1rem solid #e94529; top:4rem; right:5%; position:absolute; border-radius:10px; display:none;}
+#gameInfo ul{width:90%; padding:0 5%; height:2.4rem;}
+#gameInfo ul li{width:100%; height:0.8rem; line-height:0.8rem; font-size:0.5rem; color:#f74423; text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; -webkit-text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; -moz-text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; *filter:Glow(color=#ffffff, strength=2); font-weight:bold;}
+#btn1{width:42%; top:0; left:50%; margin-left:-21%; position:absolute; display:none;}
+#btn1_1{width:42%; top:0; left:50%; margin-left:-21%; position:absolute; display:none;}
+#btn1_2{width:42%; top:0; left:50%; margin-left:-21%; position:absolute; display:none;}
+#info1{width:100%; height:1rem; line-height:1rem; top:3rem; left:0; position:absolute; text-align:center; font-size:0.7rem; color:#f74423; text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; -webkit-text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; -moz-text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; *filter:Glow(color=#ffffff, strength=2); font-weight:bold; display:none;}
+#info2{width:100%; height:1rem; line-height:1rem; font-size:1rem; color:#ffffff; text-align:center; top:3rem; left:0; position:absolute; display:none;}
+#info2 span{padding:0 2%; line-height:1rem; color:#f74927; background:#ffffff; margin-right:1%;}
+#info2 strong{font-weight:normal;}
+#info2 em{margin:0 2%; font-size:1rem; font-style:normal;}
+#game{width:82%; top:5.3rem; left:9%; position:absolute;}
+#game li{width:32%; height:4.1rem; position:absolute;}
+#game li img{width:100%; height:100%;}
+#game li .c{display:none;}
+#game li .b{display:block;}
+#game .current .c{display:block;}
+#game .current .b{display:none;}
+#game #li1{top:0; left:1%;}
+#game #li2{top:0; left:34%;}
+#game #li3{top:0; right:1%;}
+#game #li4{top:4.2rem; left:1%;}
+#game #li5{top:4.2rem; left:34%;}
+#game #li6{top:4.2rem; right:1%;}
+#btn2{width:42%; top:15rem; left:50%; margin-left:-21%; position:absolute; display:none;}
+#btn2_1{width:42%; top:15rem; left:50%; margin-left:-21%; position:absolute; display:none;}
+#btn2_2{width:42%; top:15rem; left:50%; margin-left:-21%; position:absolute; display:none;}
+#info3{width:100%; height:1rem; line-height:1rem; font-size:0.8rem; color:#ffffff; text-align:center; top:18rem; left:0; position:absolute; font-weight:bold; display:none;}
+#list1{width:80%; height:3rem; top:0.35rem; left:10%; position:absolute; overflow:hidden;}
+#list1 ul{width:100%;}
+#list1 ul li{width:100%; height:1rem; line-height:1rem; font-size:0.7rem; color:#ffffff;}
+#list1 ul li span{width:30%; display:inline-block; line-height:1rem;}
+#list1 ul li strong{font-weight:normal; width:15%; display:inline-block; line-height:1rem;}
+#list1 ul li em{font-style:normal; display:inline-block; line-height:1rem;}
+#list1 ul li b{font-weight:normal; display:inline-block; line-height:1rem;}
+#list1 ul li p{display:inline-block; line-height:1rem; margin:0 2%;}
+#pro{width:100%; top:0; left:0; position:absolute;}
+#pro li{width:30%; height:10rem; position:absolute;}
+#pro li img{width:100%; height:100%;}
+#pro #li1{top:0; left:4.5%;}
+#pro #li2{top:0; left:35%;}
+#pro #li3{top:0; right:4.5%;}
+#pro #li4{top:10.5rem; left:4.5%;}
+#pro #li5{top:10.5rem; left:35%;}
+#pro #li6{top:10.5rem; right:4.5%;}
+#list2{width:75%; height:3rem; top:4.8rem; left:16%; position:absolute; overflow:hidden;}
+#list2 ul{width:100%;}
+#list2 ul li{width:100%; height:1rem; line-height:1rem; font-size:0.7rem; color:#a6a6a6;}
+#list2 ul li span{width:40%; display:inline-block; line-height:1rem;}
+#list2 ul li strong{font-weight:normal; width:30%; display:inline-block; line-height:1rem;}
+#list2 ul li em{font-style:normal; display:inline-block; line-height:1rem;}
+#info4{width:100%; height:1rem; line-height:1rem; font-size:0.75rem; color:#ffffff; text-align:center; top:0.25rem; left:0; position:absolute; display:none;}
+#info5{width:100%; height:1rem; line-height:1rem; font-size:0.7rem; color:#ffffff; text-align:center; top:3.2rem; left:0; position:absolute; display:none;}
+#info5 strong{font-weight:normal;}
+.nav{width:96%; height:2rem; padding:0.25rem 2%; background:#df1d01; bottom:0; left:0; position:fixed;}
+.nav li{height:2rem; line-height:2rem; background:#ffffff; color:#b06a24; text-align:center; font-size:0.7rem; margin-right:2%; float:left; display:inline; font-weight:bold;}
+.nav #li1{width:18%;}
+.nav #li2{width:28%;}
+.nav #li3{width:18%;}
+.nav #li4{width:30%; margin-right:0; background:#ffe562; color:#fe543a;}
+.tip{width:100%; height:1.5rem; line-height:1.5rem; background-color:rgba(0,0,0,0.5); text-align:center; font-size:0.8rem; color:#ffffff; top:0; left:0; position:fixed; z-index:10; display:none;}
+.layer{width:100%; height:100%; top:0; left:0; position:fixed; background-color:rgba(0,0,0,0.5); z-index:5; display:none;}
+.alerts{width:75%; left:50%; margin-left:-37.5%; position:fixed; background:#fff0a5; box-sizing:border-box; border:3px solid #ff3819; border-radius:10px; z-index:5; display:none;}
+.alerts .closes{width:10%; right:9%; position:fixed;}
+#gameresult{top:12rem;}
+#gameresult .pic{width:66%; height:10rem; top:3.6rem; left:17%; position:fixed;}
+#gameresult .closes{top:11rem;}
+#gameresult p{width:100%; font-size:1.2rem; color:#ff811b; line-height:1.5rem; text-align:center; display:block; padding-top:3rem;}
+#gameresult p span{font-size:1rem;}
+#gameresult p span strong{font-size:1rem; font-weight:normal;}
+#gameresult #se{width:100%; font-size:0.8rem; color:#f74423; text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; -webkit-text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; -moz-text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; *filter:Glow(color=#ffffff, strength=2); font-weight:bold; line-height:1.5rem; text-align:center; display:block; padding-top:1rem; line-height:1.2rem;}
+#gameresult #se span{font-size:0.8rem;}
+#gameresult ul{text-align:center; padding:1rem 0; overflow:hidden; zoom:1;}
+#gameresult ul li{width:60%; display:inline-block;}
+#gameresult ul li span{width:90%; display:block; margin:0 auto;}
+#gameresult ul li span img{width:100%;}
+#gameresult .ssli li{width:50%; float:left; display:inline;}
+#gameresult .ssli li img{width:100%; margin:0 auto;}
+#gameover{top:12rem;}
+#gameover .pic{width:66%; height:10rem; top:3.6rem; left:17%; position:fixed;}
+#gameover .closes{top:11rem;}
+#gameover p{width:100%; font-size:1.2rem; color:#ff811b; line-height:1.5rem; text-align:center; display:block; padding-top:3rem;}
+#gameover p span{font-size:1rem;}
+#gameover ul{text-align:center; padding:1rem 0;}
+#gameover ul li{width:100%; margin-bottom:0.2rem;}
+#gameover ul li span{width:60%; display:block; margin:0 auto;}
+#gameover ul li span img{width:100%;}
+#rule{bottom:2.5rem; height:6.75rem; background:#df1d01; left:0; position:fixed; z-index:1; width:21.5%; display:none;}
+#rule ul{width:82%; margin:0 auto;}
+#rule ul li{width:100%; height:2rem; line-height:2rem; margin:0.25rem 0; background:#ffffff; color:#b06a24; font-size:0.7rem; font-weight:bold; text-align:center;}
+#rule1{top:5rem;}
+#rule1 .info1{width:90%; margin:0 auto; display:block; padding:0.7rem 0;}
+#rule1 .closes{top:4rem;}
+#rule2{top:5rem;}
+#rule2 .info2{width:90%; margin:0 auto; display:block; padding:0.7rem 0;}
+#rule2 .closes{top:4rem;}
+#rule4{top:5rem;}
+#rule4 .info4{width:90%; margin:0 auto; display:block; padding:0.7rem 0;}
+#rule4 .closes{top:4rem;}
+#rewardList{top:10rem;}
+#rewardList .closes{top:9rem;}
+#rewardList .info3{width:90%; margin:0 auto; display:block; padding:0.7rem 0;}
+#rewardList #info6{width:100%; height:1rem; line-height:1rem; font-size:0.8rem; color:#ff3c1f; text-align:center; padding-bottom:0.7rem; display:none;}
+#rewardList #info7{width:100%; height:1rem; line-height:1rem; font-size:0.8rem; color:#ff3c1f; text-align:center; padding-bottom:0.7rem; margin-top:1rem; margin-bottom:1rem; display:none;}
+#rewardList ul{width:80%; margin:0 auto; padding-bottom:1rem; height:7rem; display:none;}
+#rewardList ul li{width:100%; height:1rem; line-height:1rem; color:#b06a24; font-size:0.65rem;}
+#rewardList ul li span{margin-right:2%; float:left; display:inline; line-height:1rem;}
+#rewardList ul li strong{font-weight:normal; float:left; display:inline; line-height:1rem;}
+#rewardList .page{font-size:0.8rem; text-align:center; width:100%; height:1rem; line-height:1rem; padding-bottom:1rem; display:none;}
+#rewardList .page .pre{margin:0 2%; color:#ff3c1f;}
+#rewardList .page .next{margin:0 2%; color:#ff3c1f;}
+#rewardList .page .negtive{color:#bfb998;}
+#sharebox{display:none; width:80%; line-height:1rem; font-size:0.8rem; padding:1rem 5%; background:#ffffff; color:#0b8645; top:50%; margin-top:-2rem; left:50%; margin-left:-45%; position:fixed; z-index:10; word-break:break-all;}
+.sharebox{bottom:0; left:0; width:100%; position:fixed; z-index:10; background:#ffffff; padding:0.8rem 0 0.5rem; display:none;}
+.sharebox ul{width:90%; margin:0 auto; border-radius:5px; border:1px solid #c4c4c4; border-top:none; border-left:none; margin-bottom:0.5rem; overflow:hidden;}
+.sharebox ul li{width:100%; height:1.5rem; line-height:1.5rem; background:#ffffff; border:1px solid #c4c4c4; border-bottom:0; border-right:none; color:#4aa1fe; font-size:0.8rem; text-align:center;}
+.sharebox ul:last-child li{color:#fb0019;}
+#register{top:2.5rem;}
+#register .pic{width:66%; height:3.5rem; top:1rem; left:17%; position:fixed;}
+#register .closes{top:2rem;}
+#register ul{width:88%; margin:0 auto; padding-top:2rem;}
+#register ul li{width:100%; overflow:hidden; zoom:1; margin-bottom:0.5rem; background:#ffffff; border:1px solid #af6a27; border-radius:3px; height:2rem;}
+#register ul li label{display:none;}
+#register ul li input{box-sizing:border-box; width:100%; height:2rem; line-height:2rem; color:#666666; font-size:0.8rem; border:none; background:none; padding:0 5%; float:left; display:inline;}
+#register ul #registerImageCode input{width:58%;}
+#register ul #codeUrl1{width:40%; float:left; display:inline; margin-top:0.2rem; height:1.6rem;}
+#register ul #registerMobileCode input{width:58%;}
+#register ul span{width:40%; height:1.6rem; margin-top:0.2rem; float:left; display:inline; background:#1ab662; color:#ffffff; border-radius:3px; text-align:center; font-size:0.7rem; line-height:1.6rem;}
+#register ul .negative{background:#dddddd;}
+#register ul #sli2{height:1.5rem; margin-bottom:0.5rem; border:none; background:none;}
+#register ul #sli2 p{width:0.8rem; height:0.8rem; float:left; display:inline; margin:0.3rem 0.3rem 0 0; box-sizing:border-box; border:1px solid #333333; background:#ffffff;}
+#register ul #sli2 p img{width:100%; display:none;}
+#register ul #sli2 .current img{display:block;}
+#register ul #sli2 b{float:left; display:inline; line-height:1rem; font-size:0.8rem; font-weight:normal; line-height:1.5rem; color:#b06625;}
+#register ul #sli2 .current{border:1px solid #4483e1; background:#1ab662;}
+#register ul #sli3{background:none; border:none; height:auto; margin-bottom:0;}
+#register ul #sli3 button{border:none; background:none; width:100%;}
+#register ul #sli3 button img{width:55%; margin:0 auto;}
+#register ul #sli{height:1.5rem; line-height:1.5rem; margin-bottom:0.5rem; background:none; border:none; text-align:center; font-size:0.9rem; text-align:center; color:#b06625;}
+#register ul #sli strong{font-weight:normal; color:#ff3c22;}
+#login{top:2.5rem;}
+#login .pic{width:66%; height:3.5rem; top:1rem; left:17%; position:fixed;}
+#login .closes{top:2rem;}
+#login ul{width:95%; margin:0 auto; padding-top:2rem;}
+#login ul li{width:100%; overflow:hidden; zoom:1; margin-bottom:0.5rem;}
+#login ul li label{width:30%; float:left; display:inline; line-height:1.5rem; font-size:0.8rem; color:#f74423; text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; -webkit-text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; -moz-text-shadow:#ffffff 2px 0 0,#ffffff 0 2px 0,#ffffff -2px 0 0,#ffffff 0 -2px 0; *filter:Glow(color=#ffffff, strength=2); font-weight:bold; text-align:right; margin-right:5%;}
+#login ul li input{width:55%; height:1.5rem; line-height:1.5rem; box-sizing:border-box; background:#ffffff; border:2px solid #8f8f8f; float:left; display:inline; border-radius:8px; font-size:0.8rem; padding:0 5%;}
+#login ul #loginImageCode input{width:25%;}
+#login ul #loginImageCode img{width:27%; height:1.2rem; margin-top:0.15rem; float:left; display:inline; margin-left:2%;}
+#login ul li button{width:50%; background:none; border:none; margin:0 auto; display:block;}
+#login ul li button img{width:100%;}
+#login ul #sli{text-align:center; font-size:0.8rem; color:#2f23fa;}
+#register ul .bss{width:100%; height:1rem; line-height:1rem; font-size:0.6rem; color:#ff0000; display:none; background:none; border:none; text-align:center;}
+#login ul .bss{width:100%; height:1rem; line-height:1rem; font-size:0.6rem; color:#ff0000; display:none; background:none; border:none; text-align:center;}
+#btn18{width:60%; margin-left:20%; display:block; margin-bottom:0.5rem; display:none;}
+#btn19{width:60%; margin-left:20%; display:block; margin-bottom:1rem; display:none;}
+#intellless{width:100%; height:100%; top:0; left:0; position:fixed; overflow:scroll; background:#ffffff; color:#000; text-align:left; padding:1rem; box-sizing:border-box; display:none; z-index:100;}
+#intellless div{width:100%; height:3rem; line-height:3rem; color:#ffffff; font-size:1rem; text-align:center; background:#ff7800; bottom:0; left:0; position:fixed;}
+#intellless strong{margin-top:0.5rem;}
+#intellless p{color:#000; line-height:1.2rem; text-align:justify;}
+#intellless p span{color:#000; font-weight:bold;}
+</style>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+</head>
+
+<body>
+<div>
+	<div class="container">
+		<img src="img/bg1.jpg" />
+	</div>
+	<div class="container" id="bg2">
+		<img src="img/bg2.jpg" />
+		<div id="gameInfo">
+			<ul>
+				<li>累计摇树数：<span></span>次</li>
+				<li>今日摇树金币：<span></span>个</li>
+				<li>累计金币数：<span></span>个</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<img src="img/bg3.jpg" />
+		<img src="img/btn1.png" id="btn1" />
+		<img src="img/btn9.png" id="btn1_1" />
+		<img src="img/btn10.png" id="btn1_2" />
+		<div id="info1">今日还可摇树：<span></span>次</div>
+	</div>
+	<div class="container" id="mo1">
+		<img src="img/bg4.jpg" />
+	</div>
+	<div class="container" id="bg5">
+		<img src="img/bg5.jpg" />
+		<div id="info2">当前金币：<span></span>个<em>x</em><strong>?</strong>倍</div>
+		<ul id="game">
+			<li id="li1"><img src="img/reward1_b.png" class="b" /><img src="img/reward1.png" class="c" /></li>
+			<li id="li2"><img src="img/reward2_b.png" class="b" /><img src="img/reward2.png" class="c" /></li>
+			<li id="li3"><img src="img/reward3_b.png" class="b" /><img src="img/reward3.png" class="c" /></li>
+			<li id="li4"><img src="img/reward4_b.png" class="b" /><img src="img/reward4.png" class="c" /></li>
+			<li id="li5"><img src="img/reward5_b.png" class="b" /><img src="img/reward5.png" class="c" /></li>
+			<li id="li6"><img src="img/reward6_b.png" class="b" /><img src="img/reward6.png" class="c" /></li>
+		</ul>
+		<img src="img/btn2.png" id="btn2" />
+		<img src="img/btn9.png" id="btn2_1" />
+		<img src="img/btn10.png" id="btn2_2" />
+		<div id="info3">今日还可翻倍：<span></span>次</div>
+	</div>
+	<div class="container">
+		<img src="img/bg6.jpg" />
+		<div id="list1">
+			<ul>
+
+			</ul>
+		</div>
+	</div>
+	<div class="container" id="bg7">
+		<img src="img/bg7.jpg" />
+		<ul id="pro">
+			<li id="li1"><a href="../../../../#!/static/html/popular/financesList.html"><img src="img/pro1.png" /></a></li>
+			<li id="li2"><a href="../../../../#!/static/html/popular/financesList.html"><img src="img/pro2.png" /></a></li>
+			<li id="li3"><a href="../../../../#!/static/html/monthFinance/monthFinanceTender.html"><img src="img/pro3.png" /></a></li>
+			<li id="li4"><a href="../../../../#!/static/html/newHand/sevenDaysDetail.html?path=newHand"><img src="img/pro4.png" /></a></li>
+			<li id="li5"><a href="../../../../#!/static/html/fund/fundUnInvested.html?path=fund"><img src="img/pro5.png" /></a></li>
+			<li id="li6"><a href="../../../../#!/static/html/stepUpward/stepUpwardTender.html"><img src="img/pro6.png" /></a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<img src="img/bg8.jpg" />
+		<div id="list2">
+			<ul>
+
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<img src="img/bg9.jpg" />
+		<div id="info4">我的年化投资额：<span></span></div>
+		<div id="info5">我已邀请<span></span>人注册，投资<strong></strong>人</div>
+	</div>
+	<div class="container">
+		<img src="img/bg10.jpg" />
+	</div>
+</div>
+<ul class="nav">
+	<li id="li1" class="ga-xa-event" ga_pro1="看攻略已登录" ga_pro2="看攻略未登录" xa_pro1="Christmas_raiders" xa_pro2="看攻略">看攻略</li>
+	<li id="li2" class="ga-xa-event" ga_pro1="邀好友得奖励已登录" ga_pro2="邀好友得奖励未登录" xa_pro1="Christmas_reward" xa_pro2="邀好友得奖励">邀好友得奖励</li>
+	<li id="li3" class="ga-xa-event" ga_pro1="查金币已登录" ga_pro2="查金币未登录" xa_pro1="Christmas_checkGold" xa_pro2="查金币">查金币</li>
+	<li id="li4" class="ga-xa-event" ga_pro1="去翻倍已登录" ga_pro2="去翻倍未登录" xa_pro1="Christmas_toDouble" xa_pro2="去翻倍">去翻倍</li>
+</ul>
+<div class="tip"></div>
+<div class="layer"></div>
+<div class="alerts" id="gameresult">
+	<p>Merry Christmas<br/><span><strong></strong></span></p>
+	<p id="se">今日累计<span></span>个金币<br/>点击翻倍有机会翻1000倍哦</p>
+	<ul>
+		<li><span><img src="img/btn5.png" id="btn5" class="ga-xa-event" ga_pro1="我知道了" xa_pro1="Congratulations_know" xa_pro2="我知道了"  /></span></li>
+		<li><span><img src="img/btn6.png" id="btn6" class="ga-xa-event" ga_pro1="我要去翻倍" xa_pro1="Congratulations_toDouble" xa_pro2="我要去翻倍" /></span></li>
+		<li><span><img src="img/btn17.png" id="btn17" /></span></li>
+	</ul>
+	<img src="img/pic3.png" class="pic" />
+	<img src="img/close.png" class="closes ga-xa-event" ga_pro1="恭喜你-弹框关闭" xa_pro1="Congratulations_close" xa_pro2="恭喜你-弹框关闭" />
+</div>
+<div class="alerts" id="gameover">
+	<p>Merry Christmas<br/><span></span></p>
+	<ul>
+		<li><span><img src="img/btn5.png" id="btn5_1" /></span></li>
+		<li><span><img src="img/btn6.png" id="btn6_1" /></span></li>
+		<li><span><img src="img/btn7.png" id="btn7" class="ga-xa-event" ga_pro1="投资得机会" xa_pro1="Unfortunately_investChance" xa_pro2="投资得机会" /></span></li>
+		<li><span><img src="img/btn8.png" id="btn8" class="ga-xa-event" ga_pro1="邀请好友得机会" xa_pro1="Unfortunately_friendChance" xa_pro2="邀请好友得机会" /></span></li>
+	</ul>
+	<img src="img/pic4.png" class="pic" />
+	<img src="img/close.png" class="closes ga-xa-event" ga_pro1="很遗憾-弹框关闭" xa_pro1="Unfortunately_close" xa_pro2="很遗憾-弹框关闭" />
+</div>
+<div id="rule">
+	<ul>
+		<li id="btn11" class="ga-xa-event" ga_pro1="摇金币已登录" ga_pro2="摇金币未登录" xa_pro1="Christmas_goldCoin" xa_pro2="摇金币">摇金币</li>
+		<li id="btn12" class="ga-xa-event" ga_pro1="翻倍金币已登录" ga_pro2="翻倍金币未登录" xa_pro1="Christmas_doubleGold" xa_pro2="翻倍金币">翻倍金币</li>
+		<li id="btn13" class="ga-xa-event" ga_pro1="注意事项已登录" ga_pro2="注意事项未登录" xa_pro1="Christmas_attention" xa_pro2="注意事项">注意事项</li>
+	</ul>
+</div>
+<div class="alerts" id="rule1">
+	<img src="img/info1.png" class="info1" />
+	<img src="img/close.png" class="closes" />
+</div>
+<div class="alerts" id="rule2">
+	<img src="img/info2.png" class="info2" />
+	<img src="img/close.png" class="closes" />
+</div>
+<div class="alerts" id="rule4">
+	<img src="img/info4.png" class="info4" />
+	<img src="img/close.png" class="closes" />
+</div>
+<div class="alerts" id="rewardList">
+	<img src="img/info3.png" class="info3" />
+	<div id="info6">累计金币总数：<span></span>个</div>
+	<div id="info7">还未获得金币</div>
+	<img src="img/btn7.png" id="btn18" />
+	<img src="img/btn8.png" id="btn19" />
+	<ul>
+
+	</ul>
+	<div class="page"><span class="pre">上一页</span><span class="next">下一页</span></div>
+	<img src="img/close.png" class="closes" />
+</div>
+<div id="sharebox"></div>
+<div class="sharebox">
+    <ul>
+        <li id="sina" class="ga-xa-event" ga_pro1="分享到微博" xa_pro1="Christmas_share_twitter" xa_pro2="分享到微博">分享到微博</li>
+        <li id="message" class="ga-xa-event" ga_pro1="发送短信" xa_pro1="Christmas_send_sms" xa_pro2="发送短信">发送短信</li>
+        <li id="copylink" class="ga-xa-event" ga_pro1="复制链接" xa_pro1="Christmas_copy_link" xa_pro2="复制链接">复制链接</li>
+    </ul>
+    <ul>
+        <li id="closeshare" class="ga-xa-event" ga_pro1="取消" xa_pro1="Christmas_cancle" xa_pro2="取消">取消</li>
+    </ul>
+</div>
+<div class="alerts" id="register">
+	<ul>
+		<li id="registerUserName"><label>手机号</label><input type="text" maxlength=11 id="mobile" placeholder="请输入手机号" /></li>
+		<li id="registerPassWord"><label>密码</label><input type="password" maxlength=20 id="password" placeholder="请设置密码" /></li>
+		<li id="registerImageCode"><label>验证码</label><input type="text" maxlength=4 id="vCode" placeholder="图片验证码" /><img src="" id="codeUrl1" /></li>
+		<li id="registerMobileCode"><label>手机验证</label><input type="text" maxlength=4 id="mCode" placeholder="手机验证码" /><span class="ga-xa-event" ga_pro2="获取验证码" xa_pro1="Christmas_get_code" xa_pro2="获取验证码">获取验证码</span></li>
+		<li id="sli2"><p class="current"><img src="img/right.png" /></p><b>我已阅读并同意新新贷协议</b></li>
+		<li id="sli3"><button><img src="img/btn3.png" id="btn3" class="ga-xa-event" ga_pro2="马上注册" xa_pro1="Christmas_reg_btn" xa_pro2="马上注册" /></button></li>
+		<li class="bss" id="rbss"></li>
+		<li id="sli" class="ga-xa-event" ga_pro2="立即登录" xa_pro1="Christmas_log_btn" xa_pro2="立即登录">已有账号？<strong>立即登录</strong></li>
+	</ul>
+	<img src="img/pic2.png" class="pic" />
+	<img src="img/close.png" class="closes ga-xa-event" ga_pro2="摇金币注册框关闭" xa_pro1="Christmas_reg_close" xa_pro2="摇金币注册框关闭" />
+</div>
+<div class="alerts" id="login">
+	<ul>
+		<li id="loginUserName"><label>账号：</label><input type="text" id="lmobile" /></li>
+		<li id="loginPassWord"><label>密码：</label><input type="password" id="lpassword" /></li>
+		<li id="loginImageCode"><label>验证码：</label><input type="text" maxlength=4 id="lvCode" /><img src="" id="codeUrl2" /></li>
+		<li><button><img src="img/btn4.png" id="btn4" /></button></li>
+		<li class="bss" id="lbss"></li>
+		<li id="sli">没有账号？请注册</li>
+	</ul>
+	<img src="img/pic1.png" class="pic" />
+	<img src="img/close.png" class="closes" />
+</div>
+<div id="intellless">
+    <h3>新新贷注册使用协议</h3>
+    <p>本服务协议双方为新新贷（上海）金融信息服务有限公司（下称"新新贷"）与新新贷用户，本服务协议具有合同效力。</p>
+    <p>本网站由新新贷（上海）金融信息服务有限公司负责运营(以下本网站均指新新贷网站)。用户注册成为新新贷用户前请务必仔细阅读以下条款。一旦注册，则用户接受新新贷的服务时必须受以下条款的约束。若用户不接受以下条款，请立即离开本网站。</p>
+    <p>本服务协议内容包括以下条款及已经发布的或将来可能发布的各类规则。所有规则为协议不可分割的一部分，与协议正文具有同等法律效力。本协议是由您与本网站共同签订的，适用于您在本网站的全部活动。在您注册成为用户时，您已经阅读、理解并接受本协议的全部条款及各类规则，并承诺遵守中国现行的法律、法规、规章及其他政府规定，如有违反而导致任何法律后果的发生，您将以自己的名义独立承担所有相应的法律责任。</p>
+    <p><span>本网站有权根据需要不时地制定、修改本协议或各类规则，如本协议及规则有任何变更，本网站将在网站上刊载公告，经修订的协议、规则一经在公布后，立即自动生效。您应不时地注意本协议及附属规则地变更，若您不同意相关变更，本网站有权不经任何告知终止、中止本协议或者限制您进入本网站的全部或者部分板块且不承担任何法律责任。</span>您确认本服务协议后，本服务协议即在您和本网站之间产生法律效力。您只要在注册页面协议链接前方的选择框内打勾，并按照本网站规定的注册程序成功注册为用户，您的行为既表示同意并签署了本服务协议。本服务协议不涉及您与本网站的其他用户之间因网上交易而产生的法律关系及法律纠纷。</p>
+    <strong>一、使用限制</strong>
+    <p>本网站中的全部内容的版权均属于本网站所有，该等内容包括但不限于文本、数据、文章、设计、源代码、软件、图片、照片及其他全部信息(以下称"网站内容")。网站内容受中华人民共和国著作权法及各国际版权公约的保护。未经本网站事先书面同意，您承诺不以任何方式、不以任何形式复制、模仿、传播、出版、公布、展示网站内容，包括但不限于电子的、机械的、复印的、录音录像的方式和形式等。您承认网站内容是属于本网站的财产。未经本网站书面同意，您亦不得将本网站包含的资料等任何内容镜像到任何其他网站或者服务器。任何未经授权对网站内容的使用均属于违法行为，本网站将追究您的法律责任。您承诺合法使用本网站提供的服务及网站内容。禁止在本网站从事任何可能违反中国现行的法律、法规、规章和政府规范性文件的行为或者任何未经授权使用本网站的行为，如擅自进入本网站的未公开的系统、不正当的使用密码和网站的任何内容等。本网站接受中国大陆以及香港特区、澳门特区及台湾地区的18周岁以上的具有完全民事行为能力的自然人成为网站用户。如您不符合前述资格，请勿注册。本网站保留中止或终止您用户资格的权利。您注册成功后，不得将本网站的用户名转让给第三方或者授权给第三方使用。您确认，您用您的用户名和密码登录本网站后在本网站的一切行为均代表您并由您承担相应的法律后果。您有义务在注册时提供自己的真实资料，并保证诸如电子邮件地址、联系电话、联系地址、邮政编码等内容的有效性及安全性。如您因网上交易与其他用户产生诉讼的，用户有权通过司法部门要求网站提供相关资料。经国家生效法律文书或行政处罚决定确认您存在违法行为，或者本网站有足够事实依据可以认定您存在违法或违反本服务协议的行为的或者您借款逾期未还的，本网站有权在互联网络上公布您的违法、违约行为，并将有关该内容记入任何与您相关的信用资料和档案。本网站的网站内容可能涉及由第三方所有、控制或者运营的其他网站(以下称"第三方网站")。本网站不能保证也没有义务保证第三方网站上的信息的真实性和有效性。您确认按照第三方网站的服务协议使用第三方网站，而不是按照本协议。<span>第三方网站不是本网站推荐或者介绍的，第三方网站的内容、产品、广告和其他任何信息均由您自行判断并承担风险，而与本网站无关。</span></p>
+    <strong>二、涉及第三方网站</strong>
+    <p>本网站的网站内容可能涉及由第三方所有、控制或者运营的其他网站(以下称"第三方网站")。本网站不能保证也没有义务保证第三方网站上的信息的真实性和有效性。您确认按照第三方网站的服务协议使用第三方网站，而不是按照本协议。第三方网站不是本网站推荐或者介绍的，第三方网站的内容、产品、广告和其他任何信息均由您自行判断并承担风险，而与本网站无关。</p>
+    <strong>三、不保证</strong>
+    <p>本网站提供的服务中不带有对本网站中的任何用户、任何交易的任何保证或条件，无论是明示、默示或法定的，因此本网站及其股东、创建人、高级职员、董事、代理人、关联公司、母公司、子公司和雇员(以下称"本网站方")不保证网站内容的真实性、充分性、及时性、可靠性、完整性和有效性，并且免除任何由此引起的法律责任。</p>
+    <strong>四、责任限制</strong>
+    <p><span>在任何情况下，本网站对您使用本网站服务而产生的任何形式的的直接或间接损失均不承担法律责任，包括但不限于资金损失、利润损失、营业中断损失等。因为本网站或者涉及的第三方网站的设备、系统存在缺陷或者因为计算机病毒造成的损失，本网站均不负责赔偿，您的补救措施只能是与本网站终止本协议并停止使用本网站。但是，中国现行法律、法规另有规定的除外。</span>
+    </p>
+    <strong>五、网站内容监测</strong>
+    <p>本网站没有义务监测网站内容，但是您确认并同意本网站有权不时地根据法律、法规、政府要求透露、修改或者删除必要的、合适的信息，以便更好地运营本网站并保护自身及本网站的其他合法用户。</p>
+    <strong>六、授权条款</strong>
+    <p>1、为进一步加强用户在本网站进行投资、借款、债权转让等操作时所签电子合同的法律效力，本网站与深圳法大大网络科技有限公司或其他第三方CA认证机构及专业于电子签约技术的第三方机构合作（以下简称“电子签约合作机构”），从而引进电子签约系统；在此，您同意并授权本网站代其向电子签约合作机构提出CA认证申请，并向上述机构提供CA认证所需的您在本网站提供的实名信息，您承诺该实名信息真实、完整、有效，并自行承担相应的法律后果。</p>
+    <p>2、为提高用户体验，在保障电子合同法律效力的前提下简化用户操作流程，本网站有权选择开通电子签约合作机构开发的“用户自动签约功能”；在此，您授权本网站在开通此功能后，本网站有权在您点击确认投标或点击确认借款时，通过系统自动在相应电子合同上生成您的电子签名。您对上述电子签名的效力无异议。</p>
+    <strong>七、隐私规则</strong>
+    <p>本网站对于用户提供的、自行收集的、经认证的个人信息将按照本规则予以保护、使用或者披露。</p>
+    <p>1、用户身份限制</p>
+    <p>本网站要求未成年人（年龄18周岁以下人士）、外籍人士（不含港澳台人士）及除自然人以外的其他组织等不要向本网站提交任何个人资料。</p>
+    <p>2、涉及的个人资料</p>
+    <p>用户提供给本网站的个人资料及本网站自行收集的个人资料的主要目的在于向用户提供一个顺利、有效和度身订造的交易经历。本网站仅收集本网站认为就此目的及达成本目标所必须的关于用户的个人资料。经用户本人书面同意后，本网站可以公开用户私人资料来源并收集用户的额外资料，以更好地了解本网站用户，并为其度身订造本网站服务、解决争议并有助确保在网站进行安全交易。本网站按照用户在本网站网址上的行为自动追踪关于用户的某些资料。本网站利用这些资料进行有关本网站之用户的人口统计、兴趣及行为的内部研究，以更好地了解用户及向用户和本网站的用户社区提供更好的服务。本网站在本网站的某些网页上使用诸如"Cookies"的资料收集装置。如果用户将个人通讯信息交付给本网站，或如果其他用户或第三方向本网站发出关于用户在本网站上的活动或登录事项的通讯信息，本网站可以将这些资料收集在用户的专门档案中。</p>
+    <p>3、本网站对用户的资料的使用</p>
+    <p>用户同意本网站可使用关于用户的个人资料（包括但不限于本网站持有的有关用户的档案中的资料，及本网站从用户目前及以前在本网站上的活动所获取的其他资料）以解决争议、对纠纷进行调停、有助于确保在本网站进行安全交易，并执行本网站的服务协议。本网站有时候可能调查多个用户以识别问题或解决争议，特别是本网站可审查用户的资料以区分使用多个用户名或别名的用户。为禁止用户在本网站上的欺诈、非法或其他刑事犯罪活动，使本网站免受其害，用户同意本网站可通过人工或自动程序对用户的个人资料进行评价。用户同意本网站可以使用用户的个人资料以改进本网站的推广和促销工作、分析网站的使用率、改善本网站的内容和产品推广形式，并使本网站的网站内容、设计和服务更能符合用户的要求。这些使用能改善本网站的网页，以调整本网站的网页使其更能符合用户的需求，从而使用户在使用本网站服务时得到更为顺利、有效、安全及度身订造的交易体验。用户同意本网站利用用户的资料与用户联络并向用户传递（在某些情况下）针对用户的兴趣而提供的信息，例如：有针对性的广告条、行政管理方面的通知、产品提供以及有关用户使用本网站的通讯。</p>
+    <p>4、本网站对用户的资料的披露</p>
+    <p>本网站有义务根据有关法律要求向司法机关和政府部门提供用户的个人资料。如用户的借款逾期超过30天的，本网站有权对用户提供的及本网站自行收集的用户的个人信息和资料编辑入网站黑名单。</p>
+    <p>5、用户对其他用户的资料的使用</p>
+    <p>在本网站提供的交易活动中，用户无权要求本网站提供其他用户的个人资料，除非符合以下条件：</p>
+    <p>（a）用户已向法院起诉其他用户的在本网站活动中的违约行为；</p>
+    <p>（b）接受用户贷款的借款人逾期未归还借款本息；</p>
+    <p>（c）本网站被吊销营业执照、解散、清算、宣告破产或者其他有碍于用户收回借款本息的情形。</p>
+    <p>6、电子邮件和群组</p>
+    <p>用户不得使用本网站提供的站内信服务、群组服务或其他电子邮件转发服务发出垃圾邮件、信息或其他可能违反本网站的服务协议的内容。如果您利用本网站的服务向没有在本网站内注册的电子邮件地址发出电子邮件，本网站除了利用该电子邮件地址发出用户的电子邮件之外将不作任何其他用途。本网站不会出租或出售这些电子邮件地址。本网站不会永久储存电子邮件信息或电子邮件地址。</p>
+    <p>7.密码的安全性</p>
+    <p>用户须对使用用户的用户名和密码所采取的一切行为负责。因此，用户不要向任何第三方披露用户在本网站的用户名和密码，否则由此造成的损失由用户自行承担。</p>
+    <strong>八、补偿</strong>
+    <p><span>就任何第三方提出的，由于您违反本协议的条款和规则或您违反任何法律、法规或侵害第三方的权利而产生或引起的任何索赔、要求、诉讼、损失和损害(实际的、特别的及有后果的)，无论是已知或未知的，包括但不限于因此所产生的律师费、诉讼费、差旅费等，您同意就此对本网站和(如适用)本网站的母公司、子公司、关联公司、高级职员、董事、代理人和雇员进行补偿并使其免受损害。</span>
+    </p>
+    <strong>九、终止</strong>
+    <p>除非本网站终止本协议或者您申请终止本协议且经本网站同意，否则本协议始终有效。本网站有权在不通知您的情况下在任何时间终止本协议或者限制您使用本网站。</p>
+    <strong>十、适用法律和管辖</strong>
+    <p>因本网站提供服务所产生的争议均适用中华人民共和国法律，并由本网站住所地的上海市虹口区人民法院管辖。</p>
+    <strong>十一、附加条款</strong>
+    <p>在本网站的某些部分或页面中可能存在除本协议以外的单独的附加服务条款，当这些条款存在冲突时，在该些部分和页面中附加条款优先适用。</p>
+    <strong>十二、条款的独立性</strong>
+    <p style="padding-bottom:3.5rem;">若本协议的部分条款被认定为无效或者无法实施时，本协议中的其他条款仍然有效。</p>
+    <div id="regSure">继续注册</div>
+</div>
+<input type="hidden" id="channel" />
+<input type="hidden" id="invited" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.md5.js"></script>
+<script type="text/javascript" src="js/default.js"></script>
+</body>
+</html>
+
+<script>
+var str = window.location.href;
+var index2 = str.indexOf('?channel=');
+var index3 = str.indexOf('index.html');
+var result = str.substring(0,index2);
+var result2 = str.substring(0,index3);
+// 统一关闭
+$('.closes').click(function(){
+	$('.alerts').fadeOut(0);
+	$('.layer').fadeOut(0);
+});
+$('#btn8').click(function(){
+	$('.alerts').fadeOut(0);
+	$('.layer').fadeIn(0);
+	$('.sharebox').fadeIn(0);
+});
+$('#btn5').click(function(){
+	$('.alerts').fadeOut(0);
+	$('.layer').fadeOut(0);
+});
+$('#btn5_1').click(function(){
+	$('.alerts').fadeOut(0);
+	$('.layer').fadeOut(0);
+});
+$('#btn16').click(function(){
+	$('.alerts').fadeOut(0);
+	$('.layer').fadeOut(0);
+});
+$('#btn19').click(function(){
+	$('.nav #li2').click();
+});
+$('.container').click(function(){
+	$('#rule').fadeOut(0);
+	$('.layer').fadeOut(0);
+});
+$('#closeshare').click(function(){
+    $('.layer').fadeOut(0);
+    $('.sharebox').fadeOut(0);
+    $('#sharebox').fadeOut(0);
+});
+$('#register').find('#sli2').find('b').click(function(){
+	$('#intellless').fadeIn(0);
+});
+$('#regSure').click(function(){
+	$('#intellless').fadeOut(0);
+});
+// 跳转
+function linkChange(obj,url){
+	$(obj).click(function(){
+		window.location.href = url;
+		$('.alerts').fadeOut(0);
+		$('.layer').fadeOut(0);
+	});
+}
+linkChange('#btn7','#bg7');
+linkChange('.nav #li4','#bg5');
+linkChange('#btn6','#bg5');
+linkChange('#btn6_1','#bg5');
+linkChange('#btn18','#bg7');
+// 报错信息提示框
+var tip;
+function tipTime(msg){
+	$('.tip').html('');
+	clearTimeout(tip);
+	$('.tip').html(msg);
+	$('.tip').fadeIn(0);
+	tip = setTimeout(function(){
+		$('.tip').fadeOut(0);
+	},3000);
+}
+// 打开普通弹窗
+function alertBox(ctr,obj){
+	$(ctr).click(function(){
+		$.each($('.alerts'),function(){
+			$(this).fadeOut(0);
+		});
+		$(obj).fadeIn(0);
+		$('.layer').fadeIn(0);
+		$('#rule').fadeOut(0);
+	});
+}
+alertBox('#btn11','#rule2');
+alertBox('#btn12','#rule1');
+alertBox('#btn13','#rule4');
+alertBox('#mo1','#rule2');
+$('.nav #li1').click(function(){
+	$('#rule').fadeIn(0);
+});
+// 刷新验证码
+var ran = Math.random();
+$('#codeUrl1').click(function(){
+	ran = Math.random();
+	$('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+});
+$('#codeUrl2').click(function(){
+	ran = Math.random();
+	$('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+});
+// 打开登录弹窗
+var imgLink2 = '';
+function loginBox(ctr){
+	$(ctr).click(function(){
+		$.each($('.alerts'),function(){
+			$(this).fadeOut(0);
+		});
+		$('#login').fadeIn(0);
+		$('.layer').fadeIn(0);
+		$.ajax({
+	        url:link + 'randCode/getImageCodeUrl.do' + linkextra,
+	        type:'get',
+	        dataType:'jsonp',
+	        jsonp:'jsoncallback',
+	        success:function(data){
+	        	ran = Math.random();
+	            imgLink2 = data.verifcodeUrl;
+	            $('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+	        },
+	        error:function(){
+	            tipTime('网络异常，请重试！');
+	        }
+	    });
+	});
+}
+loginBox('#register #sli');
+// 打开注册弹窗
+var imgLink1 = '';
+function registerBox(ctr){
+	$(ctr).click(function(){
+		$.each($('.alerts'),function(){
+			$(this).fadeOut(0);
+		});
+		$('#register').fadeIn(0);
+		$('.layer').fadeIn(0);
+		$.ajax({
+	        url:link + 'randCode/getImageCodeUrl.do' + linkextra,
+	        type:'get',
+	        dataType:'jsonp',
+	        jsonp:'jsoncallback',
+	        success:function(data){
+	            imgLink1 = data.verifcodeUrl;
+	            ran = Math.random();
+	            $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+	        },
+	        error:function(){
+	            tipTime('网络异常，请重试！');
+	        }
+	    });
+	});
+}
+registerBox('#login #sli');
+// 自动弹窗
+function autoBox(obj){
+	$(obj).fadeIn(0);
+	$('.layer').fadeIn(0);
+}
+// 老虎机效果
+var game;
+var index = 0;
+function gameTime(timer){
+	clearInterval(game);
+	$('#game').find('li').removeClass('current').eq(index).addClass('current');
+	game = setInterval(function(){
+		index++;
+		if(index >= 6){
+			index = 0;
+		}
+		$('#game').find('li').removeClass('current').eq(index).addClass('current');
+	},timer);
+}
+// 老虎机定点
+function gameOut(met){
+	index = parseInt(met);
+	clearInterval(game);
+	$('#game').find('li').removeClass('current').eq(index).addClass('current');
+}
+// 初始化未登录状态
+function unLogin(){
+	$('#gameInfo').fadeOut(0);
+	$('#info1').fadeOut(0);
+	$('#info2').fadeOut(0);
+	$('#info3').fadeOut(0);
+	$('#info4').fadeOut(0);
+	$('#info5').fadeOut(0);
+	loginBox('#btn1');
+	loginBox('#btn2');
+	loginBox('.nav #li2');
+	loginBox('.nav #li3');
+	$.each($('#pro li'),function(){
+		$(this).find('a').attr('href','javascript:void(0);');
+		loginBox(this);
+	});
+}
+// 摇树游戏进行中
+function treeGameOn(){
+	$.ajax({
+		url:link + 'christmas/shakeConfirm.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				// tipTime(data.msg);
+			}else{
+				$('#gameresult').find('p').eq(0).find('strong').html('- 您本次摇得' + data.data.rewardGold + '个金币 -');
+				$('#gameresult').find('#se').fadeIn(0);
+				$('#gameresult').find('#se').find('span').html(data.data.todayGold);
+				$('#gameresult').find('#btn6').fadeIn(0);
+				$('#gameresult').find('#btn17').fadeOut(0);
+				$('#gameresult').find('ul').addClass('ssli');
+				autoBox('#gameresult');
+				$('#gameInfo').find('li').eq(1).find('span').html(data.data.todayShakeGold);
+				$('#gameInfo').find('li').eq(2).find('span').html(data.data.totalGold);
+				$('#info1').find('span').html(data.data.currentGame);
+				$('#info2').find('span').html(data.data.todayGold);
+				$('#info6').find('span').html(data.data.totalGold);
+			}
+		},
+		error:function(){
+			tipTime('网络异常，请重试！');
+		}
+	});
+}
+// 摇树游戏
+function treeGame(){
+	$.ajax({
+		url:link + 'christmas/shake.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode == 1){
+				$('#gameover').find('p').find('span').html('- 啊欧，今日摇树机会已用完 -');
+				$('#gameover').find('#btn5_1').fadeOut(0);
+				$('#gameover').find('#btn6_1').fadeOut(0);
+				$('#gameover').find('#btn7').fadeIn(0);
+				$('#gameover').find('#btn8').fadeIn(0);
+				autoBox('#gameover');
+			}else if(data.resultCode == 2){
+				$('#gameover').find('p').find('span').html('- 每天最多获得5000个金币哦 -<br/>- 快快让金币翻倍吧~ -');
+				$('#gameover').find('#btn5_1').fadeOut(0);
+				$('#gameover').find('#btn6_1').fadeIn(0);
+				$('#gameover').find('#btn7').fadeOut(0);
+				$('#gameover').find('#btn8').fadeOut(0);
+				autoBox('#gameover');
+			}else if(data.resultCode == 0){
+				treeGameOn();
+			}else{
+				// tipTime(data.msg);
+				unLogin();
+			}
+		},
+		error:function(){
+			tipTime('网络异常，请重试！');
+		}
+	});
+}
+var treeGameFlag = 0;
+$('#btn1').click(function(){
+	if(treeGameFlag == 0){
+		treeGameFlag = 1;
+		treeGame();
+		setTimeout(function(){
+			treeGameFlag = 0;
+		},2000);
+	}
+});
+// 翻倍游戏进行中
+function rateGameOn(){
+	$.ajax({
+		url:link + 'christmas/multiplierConfirm.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode != 0){
+				// tipTime(data.msg);
+			}else{
+				gameTime(50);
+				if(data.data.rewardRate == 1000){
+					gameOut(0);
+				}else if(data.data.rewardRate == 10){
+					gameOut(1);
+				}else if(data.data.rewardRate == 5){
+					gameOut(2);
+				}else if(data.data.rewardRate == 2){
+					gameOut(3);
+				}else if(data.data.rewardRate == 1.3){
+					gameOut(4);
+				}else{
+					gameOut(5);
+				}
+				$('#gameresult').find('p').eq(0).find('strong').html('- 恭喜，翻到了' + data.data.rewardRate + '倍~！ -');
+				$('#gameresult').find('#se').fadeOut(0);
+				$('#gameresult').find('#btn6').fadeOut(0);
+				$('#gameresult').find('#btn17').fadeIn(0);
+				$('#gameresult').find('ul').addClass('ssli');
+				autoBox('#gameresult');
+				$('#gameInfo').find('li').eq(1).find('span').html(data.data.todayShakeGold);
+				$('#gameInfo').find('li').eq(2).find('span').html(data.data.totalGold);
+				$('#info2').find('span').html(data.data.todayGold);
+				$('#info3').find('span').html(data.data.currentRate);
+				$('#info6').find('span').html(data.data.totalGold);
+			}
+		},
+		error:function(){
+			tipTime('网络异常，请重试！');
+		}
+	});
+}
+// 翻倍游戏
+function rateGame(){
+	$.ajax({
+		url:link + 'christmas/multiplier.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		success:function(data){
+			if(data.resultCode == 1){
+				$('#gameover').find('p').find('span').html('- 啊欧，今日没有翻倍机会了 -');
+				$('#gameover').find('#btn5_1').fadeOut(0);
+				$('#gameover').find('#btn6_1').fadeOut(0);
+				$('#gameover').find('#btn7').fadeIn(0);
+				$('#gameover').find('#btn8').fadeOut(0);
+				autoBox('#gameover');
+			}else if(data.resultCode == 0){
+				rateGameOn();
+			}else{
+				// tipTime(data.msg);
+				unLogin();
+			}
+		},
+		error:function(){
+			tipTime('网络异常，请重试！');
+		}
+	});
+}
+var rateGameFlag = 0;
+$('#btn2').click(function(){
+	if(rateGameFlag == 0){
+		if($('#gameInfo').find('li').eq(1).find('span').html() == 0){
+			tipTime('您当日没有获得过金币！');
+			return false;
+		}else{
+			rateGameFlag = 1;
+			rateGame();
+			setTimeout(function(){
+				rateGameFlag = 0;
+			},4000);
+		}
+	}
+});
+$('#btn17').click(function(){
+	$('.layer').fadeOut(0);
+	$('#gameresult').fadeOut(0);
+	window.location.href = '#bg5';
+	if(rateGameFlag == 0){
+		if($('#gameInfo').find('li').eq(1).find('span').html() == 0){
+			tipTime('您当日没有获得过金币！');
+			return false;
+		}else{
+			rateGameFlag = 1;
+			rateGame();
+			setTimeout(function(){
+				rateGameFlag = 0;
+			},4000);
+		}
+	}
+});
+// 判断活动时间
+$.ajax({
+	url:link + 'activity/checkActivity.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:'jsoncallback',
+	data:{code:'christmas-activity'},
+	success:function(data){
+		if(data.resultCode == 1){
+			$('#btn1').fadeOut(0);
+			$('#btn1_1').fadeIn(0);
+			$('#btn1_2').fadeOut(0);
+			$('#btn2').fadeOut(0);
+			$('#btn2_1').fadeIn(0);
+			$('#btn2_2').fadeOut(0);
+			$('.nav #li2').click(function(){
+				tipTime('活动未开始');
+			});
+			$('.nav #li3').click(function(){
+				tipTime('活动未开始');
+			});
+		}else if(data.resultCode == 2){
+			$('#btn1').fadeOut(0);
+			$('#btn1_2').fadeIn(0);
+			$('#btn1_1').fadeOut(0);
+			$('#btn2').fadeOut(0);
+			$('#btn2_2').fadeIn(0);
+			$('#btn2_1').fadeOut(0);
+			$('.nav #li2').click(function(){
+				tipTime('活动已结束');
+			});
+			$('.nav #li3').click(function(){
+				tipTime('活动已结束');
+			});
+		}else if(data.resultCode == 0){
+			$('#btn1').fadeIn(0);
+			$('#btn1_2').fadeOut(0);
+			$('#btn1_1').fadeOut(0);
+			$('#btn2').fadeIn(0);
+			$('#btn2_2').fadeOut(0);
+			$('#btn2_1').fadeOut(0);
+			init();
+		}else{
+			tipTime(data.msg);
+		}
+	},
+	error:function(){
+		tipTime('网络异常，请重试！');
+	}
+});
+// 初始化
+var loginLink;
+function init(){
+	$.ajax({
+		url:link + 'christmas/initialize.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		data:{activityCode:'christmas-activity'},
+		success:function(data){
+			if(data.resultCode != 0){
+				unLogin();
+			}else{
+				$('#gameInfo').find('li').eq(0).find('span').html(data.data.totalGame);
+				$('#gameInfo').find('li').eq(1).find('span').html(data.data.todayShakeGold);
+				$('#gameInfo').find('li').eq(2).find('span').html(data.data.totalGold);
+				$('#info1').find('span').html(data.data.currentGame);
+				$('#info2').find('span').html(data.data.todayGold);
+				$('#info3').find('span').html(data.data.currentRate);
+				$('#info4').find('span').html(data.data.investment);
+				$('#info5').find('span').html(data.data.invited);
+				$('#info5').find('strong').html(data.data.invest);
+				$('#info6').find('span').html(data.data.totalGold);
+				$('#invited').val(data.data.invitation);
+				$('#gameInfo').fadeIn(0);
+				$('#info1').fadeIn(0);
+				$('#info2').fadeIn(0);
+				$('#info3').fadeIn(0);
+				$('#info4').fadeIn(0);
+				$('#info5').fadeIn(0);
+				$('.nav #li2').click(function(){
+					$('.alerts').fadeOut(0);
+					$('.layer').fadeIn(0);
+					$('.sharebox').fadeIn(0);
+				});
+				$('.nav #li3').click(function(){
+					$('.layer').fadeIn(0);
+					$('#rewardList').fadeIn(0);
+					pageChange(0);
+				});
+				if(str.indexOf('?channel=') == -1){
+					loginLink = result2 + 'reg.html?channel=' + data.data.invitation;
+					$('#sharebox').html(result2 + 'reg.html?channel=' + data.data.invitation + '&utmsource=shengdan4-wap');
+				}else{
+					loginLink = result2 + '?channel=' + data.data.invitation;
+					$('#sharebox').html(result2 + 'reg.html?channel=' + data.data.invitation + '&utmsource=shengdan4-wap');
+				}
+			}
+		},
+		error:function(){
+			tipTime('网络异常，请重试！');
+		}
+	});
+}
+// 倍率列表
+var liLength = 0;
+var maxLength = 0;
+$.ajax({
+	url:link + 'christmas/showPrizeRecs.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:'jsoncallback',
+	success:function(data){
+		if(data.resultCode != 0){
+			tipTime(data.msg);
+		}else{
+			$('#list1').find('ul').empty();
+			if(data.data == ''){
+				return false;
+			}else{
+				maxLength = data.data.length;
+				if(maxLength <= 3){
+					$.each(data.data,function(index,item){
+						$('#list1').find('ul').append('<li><span>' + item.nickName + '</span><strong>' + item.gameTime + '</strong>获得<em>' + item.todayGold + '</em>个金币<p>x</p><b>' + item.rewardRate + '</b></li>');
+					});
+				}else{
+					$.each(data.data,function(index,item){
+						$('#list1').find('ul').append('<li><span>' + item.nickName + '</span><strong>' + item.gameTime + '</strong>获得<em>' + item.todayGold + '</em>个金币<p>x</p><b>' + item.rewardRate + '</b></li>');
+					});
+					$('#list1').find('ul').html($('#list1').find('ul').html() + $('#list1').find('ul').html());
+					setInterval(function(){
+						liLength++;
+						if(liLength > $('#list1').find('ul').find('li').length/2){
+							liLength = 0;
+							$('#list1').find('ul').animate({'margin-top':-1 * parseInt(liLength) + 'rem'},0);
+						}
+						$('#list1').find('ul').animate({'margin-top':-1 * parseInt(liLength) + 'rem'},500);
+					},3000);
+				}
+			}
+		}
+	},
+	error:function(){
+		tipTime('网络异常，请重试！');
+	}
+});
+// 投资排行
+$.ajax({
+	url:link + 'christmas/investTop3.do' + linkextra,
+	type:'get',
+	dataType:'jsonp',
+	jsonp:'jsoncallback',
+	success:function(data){
+		if(data.resultCode != 0){
+			tipTime(data.msg);
+		}else{
+			$('#list2').find('ul').empty();
+			$.each(data.data,function(index,item){
+				$('#list2').find('ul').append('<li><span>用户：' + item.nickName + '</span><strong>年化投资额</strong><em>' + item.account + '</em>元</li>');
+			});
+		}
+	},
+	error:function(){
+		tipTime('网络异常，请重试！');
+	}
+});
+// 我的奖品
+var pageid = 1;
+var totalPage = 0;
+function pageChange(pageid){
+	$.ajax({
+		url:link + 'christmas/myPrize.do' + linkextra,
+		type:'get',
+		dataType:'jsonp',
+		jsonp:'jsoncallback',
+		data:{pageSize:'7',currentPage:pageid},
+		success:function(data){
+			if(data.resultCode != 0){
+				if(data.resultCode == 1){
+					$('#info6').fadeOut(0);
+					$('#info7').fadeIn(0);
+					$('.page').fadeOut(0);
+					$('#rewardList').find('ul').fadeOut(0);
+					$('#btn18').fadeIn(0);
+					$('#btn19').fadeIn(0);
+				}else{
+					$('#info6').fadeIn(0);
+					$('#info7').fadeOut(0);
+					$('.page').fadeIn(0);
+					$('#rewardList').find('ul').fadeIn(0);
+					$('#btn18').fadeOut(0);
+					$('#btn19').fadeOut(0);
+					tipTime(data.msg);
+				}
+			}else{
+				$('#info6').fadeIn(0);
+				$('#info7').fadeOut(0);
+				$('.page').fadeIn(0);
+				$('#rewardList').find('ul').fadeIn(0);
+				$('#btn18').fadeOut(0);
+				$('#btn19').fadeOut(0);
+				$('#rewardList').find('ul').empty();
+				$.each(data.data,function(index,item){
+					$('#rewardList').find('ul').append('<li><span>' + item.gameTime + '</span><strong>' + item.rewardInfo + '</strong></li>');
+				});
+				totalPage = data.totalPage;
+			}
+		},
+		error:function(){
+			tipTime('网络异常，请重试！');
+		}
+	});	
+}
+$('.pre').click(function(){
+	pageid--;
+	if(pageid < 1){
+		pageid = 1;
+		tipTime('已经是第一页！');
+	}
+	pageChange(pageid);
+});
+$('.next').click(function(){
+	pageid++;
+	if(pageid > parseInt(totalPage)){
+		pageid = parseInt(totalPage);
+		tipTime('已经是最后一页！');
+	}
+	pageChange(pageid);
+});
+// 分享
+var sinaTitle;
+var sinaUrl;
+var sinaPic;
+$('#sina').click(function(){
+    sinaTitle = '圣诞老人帮你来淘金，快快加入一起来赢千倍现金大奖！' + loginLink;
+    sinaTitle += '&utmsource=shengdan2-wap';
+    sinaUrl = loginLink;
+    sinaUrl += '&utmsource=shengdan2-wap';
+    sinaPic = result2 + 'img/sina.jpg';
+    window.open('http://service.weibo.com/share/share.php?title=' + sinaTitle + '&url=' + sinaUrl + '&pic=' + sinaPic);
+});
+// 短信
+$("#message").click(function () {
+    var share = loginLink;
+    share += '&utmsource=shengdan3-wap';
+    share = escape(share);
+    var content = "圣诞老人帮你来淘金，快快加入一起来赢千倍现金大奖！" + share;
+    var symbol = "";
+    var u = navigator.userAgent;
+    if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+        symbol = "?";
+    } else if (u.indexOf('iPhone') > -1) {
+        if (u.match(/OS [4-7]_\d[_\d]* like Mac OS X/i)) {
+            symbol = ";"
+        } else {
+            symbol = "&"
+        }
+    }
+    var url = "sms:" + symbol + "body=" + content;
+    window.location.href = url;
+});
+// 复制弹窗
+$('#copylink').click(function(){
+    $('#sharebox').fadeIn(0);
+});
+// 登录错误提示
+function lred(msg){
+	$('#lbss').fadeIn(0);
+	$('#lbss').html(msg);
+}
+// 注册错误提示
+function rred(msg){
+	$('#rbss').fadeIn(0);
+	$('#rbss').html(msg);
+}
+// 非空验证
+function emptyCheck(obj,msg){
+   var _value = $(obj).val().replace(/(^\s+)|(\s+$)/g,"");
+   if(_value == ''){
+   		tipTime(msg + '不能为空！');
+        return 1;
+   }else{
+        return 0;
+   }
+}
+function emptyCheckr(obj,msg){
+   var _value = $(obj).val().replace(/(^\s+)|(\s+$)/g,"");
+   if(_value == ''){
+   		$('#rbss').fadeIn(0);
+		$('#rbss').html(msg + '不能为空！');
+        return 1;
+   }else{
+        return 0;
+   }
+}
+function emptyCheckl(obj,msg){
+   var _value = $(obj).val().replace(/(^\s+)|(\s+$)/g,"");
+   if(_value == ''){
+   		$('#lbss').fadeIn(0);
+		$('#lbss').html(msg + '不能为空！');
+        return 1;
+   }else{
+        return 0;
+   }
+}
+// 协议部分
+var isPass = 0;
+$('#sli2').find('p').click(function(){
+    if(isPass == 0){
+        $(this).removeClass('current');
+        isPass = 1;
+    }else{
+        $(this).addClass('current');
+        isPass = 0;
+    }
+});
+// 发送短信验证码
+var regMobile = /^1[34578]\d{9}$/;
+var timer = 60;
+var clickFlag = 0;
+var passWordtest = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/;
+var t;
+$('#register').find('span').click(function(){
+    if(clickFlag == 0){
+        if(!regMobile.test($('#mobile').val())){
+            rred('手机号码格式错误！');
+            return false;
+        }else if(!passWordtest.test($('#password').val())){
+            rred('密码必须是6-16位数字、字母组合');
+            return false;
+        }else if(emptyCheckr('#mobile','手机号码') == 1 || emptyCheckr('#password','登录密码') == 1 || emptyCheckr('#vCode','图片验证码') == 1){
+            return false;
+        }else{
+            $.ajax({
+                url:link + 'randCode/checkVerifyCode.do' + linkextra,
+                type:'post',
+                dataType:'jsonp',
+                jsonp:'jsoncallback',
+                data:{imgCode:$('#vCode').val()},
+                success:function(data){
+                    if(data.resultCode != 0){ // 图片验证码是否通过
+                    	if(data.resultCode == 1){
+                    		rred('图片验证码错误！');
+                    	}else{
+                    		rred(data.msg);
+                    	}
+                        ran = Math.random();
+                        $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+                        return false;
+                    }else{
+                        $.ajax({ // 发送短信验证码
+                            url:link + 'user/sendSMS.do' + linkextra,
+                            type:'get',
+                            dataType:'jsonp',
+                            jsonp:'jsoncallback',
+                            data:{phone:$('#mobile').val(),type:1,imgCode:$('#vCode').val()},
+                            success:function(data){
+                                if(data.resultCode == 0){
+                                    clickFlag = 1;
+                                    $('#register').find('span').addClass('negative');
+                                    $('#register').find('span').html(timer + '秒后重发');
+                                    $('#rbss').fadeOut(0);
+                                    clearInterval(t);
+                                    t = setInterval(function(){
+                                        timer--;
+                                        $('#register').find('span').html(timer + '秒后重发');
+                                        if(timer <= 0){
+                                            clearInterval(t);
+                                            $('#register').find('span').html('获取验证码');
+                                            $('#register').find('span').removeClass('negative');
+                                            timer = 60;
+                                            clickFlag = 0;
+                                        }
+                                    },1000);
+                                }else{
+                                	rred('发送失败，请重试！');
+                                    ran = Math.random();
+                                    $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+                                }
+                            },
+                            error:function(){
+                                tipTime('网络异常，请重试！');
+                            }
+                        });
+                    }
+                },
+                error:function(){
+                    tipTime('网络异常，请重试！');
+                }
+            });
+        }
+    }else{
+        return false;
+    }
+});
+// 提交注册
+var channel;
+if(str.indexOf('?channel=') == -1){
+    channel = 'xinxindai';
+}else{
+    if(str.indexOf('&') == -1){
+        channel = str.substr(str.indexOf('?channel=') + 9,str.length);
+    }else{
+        channel = str.substring(str.indexOf('?channel=') + 9,str.indexOf('&'));
+    } 
+}
+$('#channel').val(channel);
+$('#btn3').click(function(){
+    if(!regMobile.test($('#mobile').val())){
+    	rred('手机号码格式错误！');
+        return false;
+    }else if(isPass == 1){
+        rred('请先阅读并同意《新新贷使用协议》！');
+        return false;
+    }else if(emptyCheckr('#mobile','手机号码') == 1 || emptyCheckr('#password','登录密码') == 1 || emptyCheckr('#mCode','短信验证码') == 1){
+        ran = Math.random();
+        $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+        return false;
+    }else{
+        $.ajax({
+            url:link + 'user/regV3.do' + linkextra,
+            type:'post',
+            dataType:'jsonp',
+            jsonp:'jsoncallback',
+            data:{smsCode:$('#mCode').val(),phone:$('#mobile').val(),password:$.md5($.md5($('#password').val())),uuid:$('#channel').val(),actCode:'christmas-activity',regsource:7},
+            success:function(data){
+                if(data.resultCode != 0){
+                	rred(data.msg);
+                    ran = Math.random();
+                    $('#codeUrl1').attr('src',imgLink1 + '?' + ran);
+                    return false;
+                }else{
+                	if(data.regResultCode == 103){
+                		rred(data.regDesc);
+                		return false;
+                	}else{
+                		rred('注册成功！');
+                		window.location.reload();
+                	}
+					var userId = data.user.userId;
+					//XXD_TRACK._trackEvent( {category:"webapp_doubleFestival_reg", action:"reg_success_webapp" , label:"注册成功", value:userId,custval:"1" });
+					//注册ga布码
+					ga('set', 'dimension1', '注册用户');
+					ga('send', 'event','注册', '圣诞活动注册成功', window.location.href);
+                }
+            },
+            error:function(){
+                tipTime('网络异常，请重试！');
+            }
+        });
+    }
+});
+// 登录
+$('#btn4').click(function(){
+    if(emptyCheckl('#lmobile','手机号码') == 1 || emptyCheckl('#lpassword','登录密码') == 1 || emptyCheckl('#lvCode','图片验证码') == 1){
+        ran = Math.random();
+        $('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+        return false;
+    }else{
+        $.ajax({
+            url:link + 'user/login.do' + linkextra,
+            type:'post',
+            dataType:'jsonp',
+            jsonp:'jsoncallback',
+            data:{imgCode:$('#lvCode').val(),username:$('#lmobile').val(),password:$.md5($.md5($('#lpassword').val()))},
+            success:function(data){
+                if(data.resultCode != 0){
+                	if(data.resultCode == -1){
+                		lred('账号或者密码错误！');
+                	}else{
+                		lred(data.msg);
+                	}
+                    ran = Math.random();
+                    $('#codeUrl2').attr('src',imgLink2 + '?' + ran);
+                    return false;
+                }else{
+                    lred('登录成功！');
+					var userId = data.user.userId;
+					//XXD_TRACK._trackEvent( {category:"webapp_Christmas_reg", action:"login_success_webapp" , label:"登录成功", value:userId,custval:"1" });
+					ga('send', 'event','登录', "登录成功", window.location.href);
+                    window.location.reload();
+                }
+            },
+            error:function(){
+                tipTime('网络异常，请重试！');
+            }
+        });
+    }
+});
+//GA、XA布码
+$.ajax({
+	url: '../../../../user/getCurrentUser.do',
+	data: {},
+	dataType: 'json',
+	success: function (data) {
+		if(data.code == 0){
+			var userId = data.data.user.userId;
+		}else{
+			var userId ="";
+		}
+//		function clickXaEvent(xa_pro1,xa_pro2) {
+//			XXD_TRACK._trackEvent({
+//				category: "webapp_Christmas_reg",
+//				action: xa_pro1,
+//				label: xa_pro2,
+//				value:userId,
+//				custval: ""
+//			});
+//		}
+		function clickGaEvent(ga_pro) {
+			ga('send', 'event','圣诞节活动', ga_pro, window.location.href);
+		}
+		$(".ga-xa-event").on("click", function () {
+			var $this = $(this);
+			var ga_pro1 = $this.attr('ga_pro1');
+			var ga_pro2 = $this.attr('ga_pro2');
+//			var xa_pro1 = $this.attr("xa_pro1");
+//			var xa_pro2 = $this.attr("xa_pro2");
+			if(data.code == 0){
+				clickGaEvent(ga_pro1);
+			}else{
+				clickGaEvent(ga_pro2);
+			}
+//			clickXaEvent(xa_pro1,xa_pro2);
+		});
+		//XXD_TRACK.track_pageview('christmas');
+		gaInits(userId);
+		growingIOInits({userId:userId});
+	}
+});
+</script>

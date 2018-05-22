@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>互金协会专题页</title>
+<style>
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none;}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+.container{width:100%; position:relative; font-family:'微软雅黑';}
+.container img{display:block; border:none; width:100%;}
+</style>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+</head>
+
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+	<div class="container">
+		<img src="img/bg_01.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_02.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_03.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_04.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_05.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_06.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_07.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_08.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_09.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_10.jpg" />
+	</div>
+	<div class="container">
+		<img src="img/bg_11.jpg" />
+	</div>
+</div>
+<!--login-->
+<script>
+//获取url中参数的值
+function GetRequest() {
+  var url = location.search; //获取url中"?"符后的字串
+   var theRequest = new Object();
+   if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+         theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+      }
+   }
+   return theRequest;
+}
+
+$(document).ready(function(){
+       try{
+       var request = new Object();
+		request = GetRequest();
+       var gauserId =request["gaid"];
+	 	//XXD_TRACK.track_pageview('memberDayWebApp0922');
+		gaInits(gauserId);
+        //growingIO布码
+        growingIOInits({userId:gauserId});
+	}catch(e){}
+       
+});
+
+(function(doc,win,fontSize) {
+	var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function(){
+		var clientWidth = docEl.clientWidth;
+		if (!clientWidth){
+			return;
+		}
+		docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+	};
+	if(!doc.addEventListener){
+		return;
+	}
+	win.addEventListener(resizeEvt,recalc,false);
+	doc.addEventListener('DOMContentLoaded',recalc,false);
+})(document,window,16);
+
+</script>
+</body>
+</html>

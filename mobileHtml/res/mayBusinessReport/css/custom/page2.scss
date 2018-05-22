@@ -1,0 +1,179 @@
+//page2
+.swiper-slide2{
+  background: #242540;
+}
+.stress-1 {
+  position: relative;
+  top: .1rem;
+}
+
+.stress-2 {
+  position: relative;
+  top: .1rem;
+}
+
+#am_number1,
+#am_number2 {
+  font-size: 2.3rem;
+}
+.page2-text1 {
+  span{
+    margin-left: 0.1rem;
+  }
+}
+.page2-text2 {
+  margin: 1rem 0 1rem ;
+  color: #1afaf0;
+  span{
+    margin-left: 0.1rem;
+  }
+}
+.co-back{
+  color: #555998;
+}
+//图表
+.page2-chart1 {
+  position: relative;
+  margin: 3rem 0 4rem 0;
+  height: 26rem;
+  max-height: 230px;
+
+  .grid-text {
+    opacity  : .2;
+    width    : 15%;
+    height   : 100%;
+    position : absolute;
+    top      : -1%;
+    left     : 0;
+  }
+
+  .img-grid {
+    width : 83%;
+    left  : 15%;
+  }
+
+  .grid-data li {
+    width : 10%;
+  }
+
+  .grid-text li {
+    height: 8%;
+  }
+
+}
+
+.page2-chart1 .chart-bar1 {
+  left             : 4%;
+  border-radius    : 3px;
+  background-color : rgba(65,67,141,.65);
+  color            : #6363ab;
+}
+
+.page2-chart1 .chart-bar2 {
+  left             : 20%;
+  border-radius    : 3px;
+  background-color : rgba(73,76,155,.72);
+  color            : #6363ab;
+}
+
+.page2-chart1 .chart-bar3 {
+  left             : 36%;
+  border-radius    : 3px;
+  background-color : rgba(47,145,116,.7);
+  color            : #229c82;
+}
+
+.page2-chart1 .chart-bar4 {
+  left             : 52%;
+  border-radius    : 3px;
+  background-color : rgba(58,146,130,.8);
+  color            : #229c82;
+}
+
+.page2-chart1 .chart-bar5 {
+  left             : 69%;
+  border-radius    : 3px;
+  background-color : rgba(73,169,158,.72);
+  color            : #229c82;
+}
+
+.page2-chart1 .chart-bar6 {
+  left             : 86%;
+  border-radius    : 3px;
+  background-color : rgb(28,193,255);
+  color            : #1cc1ff;
+}
+
+//.page2-chart1 .chart-bar6 em {
+//  color : #f9df18
+//}
+
+.swiper-slide-active .page2-chart1 .grid-data li.chart-bar1 {
+  height : 90%
+}
+
+.swiper-slide-active .page2-chart1 .grid-data li.chart-bar2 {
+  height : 93%
+}
+
+.swiper-slide-active .page2-chart1 .grid-data li.chart-bar3 {
+  height : 95%
+}
+
+.swiper-slide-active .page2-chart1 .grid-data li.chart-bar4 {
+  height : 96%
+}
+
+.swiper-slide-active .page2-chart1 .grid-data li.chart-bar5 {
+  height : 98%
+}
+
+.swiper-slide-active .page2-chart1 .grid-data li.chart-bar6 {
+  height : 101%
+}
+
+
+
+//圆形提示
+.page-chart-tsk {
+  width         : 6rem;
+  height        : 6rem;
+  border        : 2px solid #f9df18;
+  border-radius : 50%;
+  display       : inline-block;
+  position      : absolute;
+  bottom        : 100%;
+  right         : 50%;
+  font-size     : 9px;
+  margin-bottom : 3rem;
+  margin-right  : -3rem;
+  padding       : 14px 5px;
+  color         : #f9df18;
+
+  -webkit-transform: scale(0);
+  -webkit-transform-origin:50% 100%;
+  transform: scale(0);
+  transform-origin:50% 100%;
+
+
+
+  &:before {
+    content           : " ";
+    display           : inline-block;
+    width             : 1rem;
+    height            : 1.5rem;
+    background        : #f9df18;
+    position          : absolute;
+    top               : 100%;
+    left              : 50%;
+    margin-left       : -.5rem;
+    clip-path         : polygon(30% 0%, 70% 0, 50% 100%);
+    -webkit-clip-path : polygon(30% 0%, 70% 0, 50% 100%);
+  }
+}
+
+.swiper-slide-active .page-chart-tsk {
+  animation: am-bouncing .6s ease-in 1.5s forwards;
+  -webkit-animation: am-bouncing .6s ease-in 1.5s forwards;
+}
+

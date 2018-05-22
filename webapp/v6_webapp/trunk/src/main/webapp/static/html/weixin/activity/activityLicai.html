@@ -1,0 +1,70 @@
+<div data-page="activity" class="page">
+    <!-- Slider -->
+    <div class="swiper-container" id="questionPage">
+        <div class="swiper-wrapper" >
+            <div class="swiper-slide">
+                <div class="parallax-bg img-01">
+                    <dl>
+                       <dt> Q1：有一件衣服很漂亮，但是你已<br/>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经穿了很久，你会？ </dt>
+                        <dd><input type="radio" name="qone"  id="qoneA" value="A"> <label for="qoneA"> A：经常穿 </label></dd>
+                        <dd><input type="radio" name="qone"  id="qoneB" value="B"> <label for="qoneB" > B：偶尔穿 </label></dd>
+                        <dd><input type="radio" name="qone"  id="qoneC" value="C"> <label for="qoneC" > C：放箱子里不穿了 </label></dd>
+                    </dl>
+                </div>
+                <div></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="parallax-bg img-02" >
+                    <dl>
+                        <dt> Q2：有一件有趣的新产品上市了，<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你会？  </dt>
+                        <dd><input type="radio" name="qtwo" id="qtwoA" value="A"> <label for="qtwoA"> A：了解一下情况再买 </label></dd>
+                        <dd><input type="radio" name="qtwo" id="qtwoB" value="B"> <label for="qtwoB" > B：不关心 </label></dd>
+                        <dd><input type="radio" name="qtwo" id="qtwoC" value="C"> <label for="qtwoC" > C：只要有钱马上买 </label></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="parallax-bg img-03">
+                    <dl>
+                        <dt> Q3：遇到缺钱的时候，你会？ </dt>
+                        <dd><input type="radio" name="qthree"  id="qthreeA" value="A"> <label for="qthreeA"> A：减少开支，吃方便面，熬过去 </label></dd>
+                        <dd><input type="radio" name="qthree" id="qthreeB" value="B"> <label for="qthreeB" > B：向亲人朋友借 </label></dd>
+                        <dd><input type="radio" name="qthree" id="qthreeC" value="C"> <label for="qthreeC" > C：跟银行借钱，刷爆信用卡在所不惜 </label></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="parallax-bg img-04">
+                    <dl>
+                        <dt style="padding-bottom:0"> Q4：如果睡过头了，上班可能迟<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到，你会？ </dt>
+                        <dd style="height: 35px"><input type="radio" name="qfour" id="qfourA" value="A"> <label for="qfourA"> A：测算路上的时间，加快出行速度 </label></dd>
+                        <dd style="height: 35px"><input type="radio" name="qfour" id="qfourB" value="B"> <label for="qfourB" > B：出门就打车 </label></dd>
+                        <dd><input type="radio" name="qfour" id="qfourC" value="C"> <label for="qfourC" > C：迟到就迟到不怕  </label></dd>
+                        <div><a href="#" class="button button-round active" id="showResult">查看测试结果</a></div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id="resultPage" style="display: none">
+        <div class="fixedbg"  style="display: none;" id="fixedbg">
+            <img src="static/img/activity/share.png" style="margin-top: 5%;width:100%;">
+        </div>
+        <div class="centen">
+            <div id="typeImg">
+            </div>
+            <ul>
+                <li id="typeTest"></li>
+                <li class="img-a" id="atvImg"></li>
+                <li class="img-a"><div class="row">
+                    <div class="col-50"><a href="http://www.xinxindai.com/indexppt.html?bannerType=App" class="external button button-big button-fill color-red" id="goIndexppt">去赚钱</a></div>
+                    <div class="col-50"><a href="#" class="button button-big button-fill color-green" id="gofixedbg">去炫耀</a></div>
+                </div></li>
+            </ul>
+        </div>
+    </div>
+</div>

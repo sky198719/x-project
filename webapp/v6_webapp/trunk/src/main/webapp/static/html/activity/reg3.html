@@ -1,0 +1,265 @@
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8"/>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- Your app title -->
+    <title>新新贷-扫码注册壕礼来</title>
+    <link rel="stylesheet" type="text/css" href="../../css/mdialog/mdialog.css?20151231">
+    <link rel="stylesheet" type="text/css" href="../../css/animate.min.css?20151231">
+    <link href="../../img/favicon.ico" rel="shortcut icon">
+    <style type="text/css">
+        * {
+            font-family: "微软雅黑";
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="spinner" id="animateReg">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+<div class="outer" id="merchantReg" style="display: none;">
+    <div style="display: none;" id="regDiv">
+        <img src="../../../static/img/xxd/quick-logo.png" class="top-img w100" id="regBottomImg">
+        <section class="section_div regTop" style="margin-top: 10%;">
+            <!--输入手机号 -->
+            <div class="input-div">
+                <div class="trans-div"></div>
+                <div class="ico-phone ico-pos">
+                    <input class="standard-input" type="tel" id="mobile-no" placeholder="请输入手机号码" maxlength="15"/>
+                </div>
+            </div>
+
+            <!--输入图片验证码-->
+            <div class="input-div">
+                <div class="trans-div"></div>
+                <div class="ico-imgcaptcha ico-pos">
+                    <input class="standard-input" type="text" id="img-code" placeholder="请输入图片验证码"/>
+                </div>
+                <p class="reg-xieyi resend" style="top: 12%;">
+                    <img align="absmiddle" id="randImage" src="../../../verify/code.do" width="100"  height="30">
+                </p>
+            </div>
+
+            <!--输入短信验证码-->
+            <div class="input-div">
+                <div class="trans-div"></div>
+                <div class="ico-mescaptcha ico-pos">
+                    <input class="standard-input" type="tel" placeholder="请输入短信验证码" id="rand-code" maxlength="6"/>
+                </div>
+                <p class="reg-xieyi resend">
+                    <!--60秒后重新发送-->
+                    <a class="ic-blue disable" id="rand-code-countdown" style="display:none;"></a>
+                    <a href="javascript:void(0)" class="button resend-btn" id="send-rand-code">发送验证码</a>
+                </p>
+            </div>
+            <p class="reg-xieyi" id="voice_sms">收不到短信？<a href="javascript:void(0)" class="font-ff3" id="voiceCode">获取语音验证码</a>
+            </p>
+            <!--设置密码-->
+            <div class="input-div" style="margin-top: 30px;">
+                <div class="trans-div"></div>
+                <div class="ico-locks ico-pos">
+                    <input class="standard-input" type="password" placeholder="请设置6-16位数字字母组合密码" id="password"/>
+                </div>
+                <!-- #######目前页面上眼睛的样式为开启状态；眼睛关闭样式  ico-closeeye########-->
+                <a class="eye-pos ico-closeeye" id="pwdShow"></a>
+            </div>
+
+            <p class="font-fff mt6 font13">点击领取红包代表我已同意<a href="javascript:void(0)" class="font-fff "
+                                                          id="reg-agreement">《新新贷注册协议》</a></p>
+
+            <div class="w100 ">
+                <a href="javascript:void(0)" class="button button-40 border-fff bottom0-pos btn-style reg-btn-pos"
+                   id="reg">注册</a>
+            </div>
+
+        </section>
+
+    </div>
+</div>
+<input type="hidden" id="uuid"/>
+<!-- 遮罩层，注册协议-->
+<div class="xxd-xy " style="  padding-top: 20%;overflow-y: scroll;z-index: 2222;display:none" id="agreement">
+    <h3 class="text-center">新新贷注册使用协议</h3>
+
+    <div class="v6-layout font333">
+        <p>本服务协议双方为新新贷（上海）金融信息服务有限公司（下称"新新贷"）与新新贷用户，本服务协议具有合同效力。</p>
+
+        <p class="text-indent">
+            本网站由新新贷（上海）金融信息服务有限公司负责运营(以下本网站均指新新贷网站)。用户注册成为新新贷用户前请务必仔细阅读以下条款。一旦注册，则用户接受新新贷的服务时必须受以下条款的约束。若用户不接受以下条款，请立即离开本网站。</p>
+
+        <p>
+            本服务协议内容包括以下条款及已经发布的或将来可能发布的各类规则。所有规则为协议不可分割的一部分，与协议正文具有同等法律效力。本协议是由您与本网站共同签订的，适用于您在本网站的全部活动。在您注册成为用户时，您已经阅读、理解并接受本协议的全部条款及各类规则，并承诺遵守中国现行的法律、法规、规章及其他政府规定，如有违反而导致任何法律后果的发生，您将以自己的名义独立承担所有相应的法律责任。
+        </p>
+
+        <p><b>本网站有权根据需要不时地制定、修改本协议或各类规则，如本协议及规则有任何变更，本网站将在网站上刊载公告，经修订的协议、规则一经在公布后，立即自动生效。您应不时地注意本协议及附属规则地变更，若您不同意相关变更，本网站有权不经任何告知终止、中止本协议或者限制您进入本网站的全部或者部分板块且不承担任何法律责任。</b>您确认本服务协议后，本服务协议即在您和本网站之间产生法律效力。您只要在注册页面协议链接前方的选择框内打勾，并按照本网站规定的注册程序成功注册为用户，您的行为既表示同意并签署了本服务协议。本服务协议不涉及您与本网站的其他用户之间因网上交易而产生的法律关系及法律纠纷。
+        </p>
+
+        <h3>一、使用限制</h3>
+
+        <p class="text-indent">
+            本网站中的全部内容的版权均属于本网站所有，该等内容包括但不限于文本、数据、文章、设计、源代码、软件、图片、照片及其他全部信息(以下称"网站内容")。网站内容受中华人民共和国著作权法及各国际版权公约的保护。未经本网站事先书面同意，您承诺不以任何方式、不以任何形式复制、模仿、传播、出版、公布、展示网站内容，包括但不限于电子的、机械的、复印的、录音录像的方式和形式等。您承认网站内容是属于本网站的财产。未经本网站书面同意，您亦不得将本网站包含的资料等任何内容镜像到任何其他网站或者服务器。任何未经授权对网站内容的使用均属于违法行为，本网站将追究您的法律责任。您承诺合法使用本网站提供的服务及网站内容。禁止在本网站从事任何可能违反中国现行的法律、法规、规章和政府规范性文件的行为或者任何未经授权使用本网站的行为，如擅自进入本网站的未公开的系统、不正当的使用密码和网站的任何内容等。本网站接受中国大陆以及香港特区、澳门特区及台湾地区的18周岁以上的具有完全民事行为能力的自然人成为网站用户。如您不符合前述资格，请勿注册。本网站保留中止或终止您用户资格的权利。您注册成功后，不得将本网站的用户名转让给第三方或者授权给第三方使用。您确认，您用您的用户名和密码登录本网站后在本网站的一切行为均代表您并由您承担相应的法律后果。您有义务在注册时提供自己的真实资料，并保证诸如电子邮件地址、联系电话、联系地址、邮政编码等内容的有效性及安全性。如您因网上交易与其他用户产生诉讼的，用户有权通过司法部门要求网站提供相关资料。经国家生效法律文书或行政处罚决定确认您存在违法行为，或者本网站有足够事实依据可以认定您存在违法或违反本服务协议的行为的或者您借款逾期未还的，本网站有权在互联网络上公布您的违法、违约行为，并将有关该内容记入任何与您相关的信用资料和档案。本网站的网站内容可能涉及由第三方所有、控制或者运营的其他网站(以下称"第三方网站")。本网站不能保证也没有义务保证第三方网站上的信息的真实性和有效性。您确认按照第三方网站的服务协议使用第三方网站，而不是按照本协议。<b>第三方网站不是本网站推荐或者介绍的，第三方网站的内容、产品、广告和其他任何信息均由您自行判断并承担风险，而与本网站无关。</b>
+        </p>
+
+        <h3>二、涉及第三方网站</h3>
+
+        <p class="red text-indent">
+            本网站的网站内容可能涉及由第三方所有、控制或者运营的其他网站(以下称"第三方网站")。本网站不能保证也没有义务保证第三方网站上的信息的真实性和有效性。您确认按照第三方网站的服务协议使用第三方网站，而不是按照本协议。第三方网站不是本网站推荐或者介绍的，第三方网站的内容、产品、广告和其他任何信息均由您自行判断并承担风险，而与本网站无关。</p>
+
+        <h3>三、不保证</h3>
+
+        <p class="text-indent">
+            本网站提供的服务中不带有对本网站中的任何用户、任何交易的任何保证或条件，无论是明示、默示或法定的，因此本网站及其股东、创建人、高级职员、董事、代理人、关联公司、母公司、子公司和雇员(以下称"本网站方")不保证网站内容的真实性、充分性、及时性、可靠性、完整性和有效性，并且免除任何由此引起的法律责任。</p>
+
+        <h3>四、责任限制</h3>
+
+        <p class="text-indent"><span class="red">在任何情况下，本网站对您使用本网站服务而产生的任何形式的的直接或间接损失均不承担法律责任，包括但不限于资金损失、利润损失、营业中断损失等。因为本网站或者涉及的第三方网站的设备、系统存在缺陷或者因为计算机病毒造成的损失，本网站均不负责赔偿，您的补救措施只能是与本网站终止本协议并停止使用本网站。但是，中国现行法律、法规另有规定的除外。</span>
+        </p>
+
+        <h3>五、网站内容监测</h3>
+
+        <p class="text-indent">
+            本网站没有义务监测网站内容，但是您确认并同意本网站有权不时地根据法律、法规、政府要求透露、修改或者删除必要的、合适的信息，以便更好地运营本网站并保护自身及本网站的其他合法用户。</p>
+
+        <h3>六、授权条款</h3>
+        <p class="text-indent">
+            1、为进一步加强用户在本网站进行投资、借款、债权转让等操作时所签电子合同的法律效力，本网站与深圳法大大网络科技有限公司或其他第三方CA认证机构及专业于电子签约技术的第三方机构合作（以下简称“电子签约合作机构”），从而引进电子签约系统；在此，您同意并授权本网站代其向电子签约合作机构提出CA认证申请，并向上述机构提供CA认证所需的您在本网站提供的实名信息，您承诺该实名信息真实、完整、有效，并自行承担相应的法律后果。</p>
+        <p class="text-indent">
+            2、为提高用户体验，在保障电子合同法律效力的前提下简化用户操作流程，本网站有权选择开通电子签约合作机构开发的“用户自动签约功能”；在此，您授权本网站在开通此功能后，本网站有权在您点击确认投标或点击确认借款时，通过系统自动在相应电子合同上生成您的电子签名。您对上述电子签名的效力无异议。</p>
+
+        <h3>七、隐私规则</h3>
+
+        <p class="text-indent">本网站对于用户提供的、自行收集的、经认证的个人信息将按照本规则予以保护、使用或者披露。</p>
+
+        <p>1、用户身份限制</p>
+
+        <p class="text-indent">本网站要求未成年人（年龄18周岁以下人士）、外籍人士（不含港澳台人士）及除自然人以外的其他组织等不要向本网站提交任何个人资料。</p>
+
+        <p>2、涉及的个人资料</p>
+
+        <p class="text-indent">
+            用户提供给本网站的个人资料及本网站自行收集的个人资料的主要目的在于向用户提供一个顺利、有效和度身订造的交易经历。本网站仅收集本网站认为就此目的及达成本目标所必须的关于用户的个人资料。经用户本人书面同意后，本网站可以公开用户私人资料来源并收集用户的额外资料，以更好地了解本网站用户，并为其度身订造本网站服务、解决争议并有助确保在网站进行安全交易。本网站按照用户在本网站网址上的行为自动追踪关于用户的某些资料。本网站利用这些资料进行有关本网站之用户的人口统计、兴趣及行为的内部研究，以更好地了解用户及向用户和本网站的用户社区提供更好的服务。本网站在本网站的某些网页上使用诸如"Cookies"的资料收集装置。如果用户将个人通讯信息交付给本网站，或如果其他用户或第三方向本网站发出关于用户在本网站上的活动或登录事项的通讯信息，本网站可以将这些资料收集在用户的专门档案中。</p>
+
+        <p>3、本网站对用户的资料的使用</p>
+
+        <p class="text-indent">
+            用户同意本网站可使用关于用户的个人资料（包括但不限于本网站持有的有关用户的档案中的资料，及本网站从用户目前及以前在本网站上的活动所获取的其他资料）以解决争议、对纠纷进行调停、有助于确保在本网站进行安全交易，并执行本网站的服务协议。本网站有时候可能调查多个用户以识别问题或解决争议，特别是本网站可审查用户的资料以区分使用多个用户名或别名的用户。为禁止用户在本网站上的欺诈、非法或其他刑事犯罪活动，使本网站免受其害，用户同意本网站可通过人工或自动程序对用户的个人资料进行评价。用户同意本网站可以使用用户的个人资料以改进本网站的推广和促销工作、分析网站的使用率、改善本网站的内容和产品推广形式，并使本网站的网站内容、设计和服务更能符合用户的要求。这些使用能改善本网站的网页，以调整本网站的网页使其更能符合用户的需求，从而使用户在使用本网站服务时得到更为顺利、有效、安全及度身订造的交易体验。用户同意本网站利用用户的资料与用户联络并向用户传递（在某些情况下）针对用户的兴趣而提供的信息，例如：有针对性的广告条、行政管理方面的通知、产品提供以及有关用户使用本网站的通讯。</p>
+
+        <p>4、本网站对用户的资料的披露</p>
+
+        <p class="text-indent">
+            本网站有义务根据有关法律要求向司法机关和政府部门提供用户的个人资料。如用户的借款逾期超过30天的，本网站有权对用户提供的及本网站自行收集的用户的个人信息和资料编辑入网站黑名单。</p>
+
+        <p>5、用户对其他用户的资料的使用</p>
+
+        <p class="text-indent">在本网站提供的交易活动中，用户无权要求本网站提供其他用户的个人资料，除非符合以下条件：</p>
+
+        <p class="text-indent">（a）用户已向法院起诉其他用户的在本网站活动中的违约行为；</p>
+
+        <p class="text-indent">（b）接受用户贷款的借款人逾期未归还借款本息；</p>
+
+        <p class="text-indent">（c）本网站被吊销营业执照、解散、清算、宣告破产或者其他有碍于用户收回借款本息的情形。</p>
+
+        <p>6、电子邮件和群组</p>
+
+        <p class="text-indent">
+            用户不得使用本网站提供的站内信服务、群组服务或其他电子邮件转发服务发出垃圾邮件、信息或其他可能违反本网站的服务协议的内容。如果您利用本网站的服务向没有在本网站内注册的电子邮件地址发出电子邮件，本网站除了利用该电子邮件地址发出用户的电子邮件之外将不作任何其他用途。本网站不会出租或出售这些电子邮件地址。本网站不会永久储存电子邮件信息或电子邮件地址。</p>
+
+        <p>7.密码的安全性</p>
+
+        <p class="text-indent">
+            用户须对使用用户的用户名和密码所采取的一切行为负责。因此，用户不要向任何第三方披露用户在本网站的用户名和密码，否则由此造成的损失由用户自行承担。</p>
+
+        <h3>八、补偿</h3>
+
+        <p class="text-indent"><b>就任何第三方提出的，由于您违反本协议的条款和规则或您违反任何法律、法规或侵害第三方的权利而产生或引起的任何索赔、要求、诉讼、损失和损害(实际的、特别的及有后果的)，无论是已知或未知的，包括但不限于因此所产生的律师费、诉讼费、差旅费等，您同意就此对本网站和(如适用)本网站的母公司、子公司、关联公司、高级职员、董事、代理人和雇员进行补偿并使其免受损害。</b>
+        </p>
+
+        <h3>九、终止</h3>
+
+        <p class="text-indent">
+            除非本网站终止本协议或者您申请终止本协议且经本网站同意，否则本协议始终有效。本网站有权在不通知您的情况下在任何时间终止本协议或者限制您使用本网站。</p>
+
+        <h3>十、适用法律和管辖</h3>
+
+        <p class="text-indent">因本网站提供服务所产生的争议均适用中华人民共和国法律，并由本网站住所地的上海市虹口区人民法院管辖。</p>
+
+        <h3>十一、附加条款</h3>
+
+        <p class="text-indent">在本网站的某些部分或页面中可能存在除本协议以外的单独的附加服务条款，当这些条款存在冲突时，在该些部分和页面中附加条款优先适用。</p>
+
+        <h3>十二、条款的独立性</h3>
+
+        <p class="text-indent">若本协议的部分条款被认定为无效或者无法实施时，本协议中的其他条款仍然有效。</p>
+
+        <p><a href="javascript:void(0)" class="font16 right underline-none" id="agree-back"
+              style="margin-bottom: 20px;">返回</a></p>
+    </div>
+</div>
+<div id="Disabled1" style="
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;">
+</div>
+<div id="Disabled2" style="
+    display: none;
+    width: 90%;
+    height: 220px;
+    font-family: 'Microsoft Yahei', '微软雅黑', Arial, Tahoma;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 8px;
+    position: fixed;
+    left: 5%;
+    top: 30%;
+    z-index: 1001;
+    -webkit-animation: alertAnimation .3s ease-in-out 0 1;
+    -moz-animation: alertAnimation .3s ease-in-out 0 1;
+    animation: alertAnimation .3s ease-in-out 0 1
+">
+    <div style="text-align: center;">
+        <img src="../../img/xxd/xiaohong.png" width="200" style="margin-top: -50px;"/>
+
+        <div style="font-size: 16px;
+            text-align: center;
+            color: #666;
+            line-height: 26px;
+            padding: 5px 0 10px 0;">
+            本次活动结束，更多活动敬请期待！
+        </div>
+    </div>
+    <button id="disabledButton" style="width: 80%;
+                display: block;
+                height: 35px;
+                margin: 0 auto;
+                border: 0;
+                padding: 0;
+                border-radius: 5px;
+                background: #ff6c00;
+                color: #fff;
+                font-size: 22px;
+                margin-top: 10px;">确定
+    </button>
+</div>
+<script type="text/javascript" src="../../lib/zepto/zepto.min.js"></script>
+<script type="text/javascript" src="../../lib/zepto/zepto.md5.js"></script>
+<script type="text/javascript" src="../../js/utils/mdialog.js"></script>
+<script type="text/javascript" src="../../js/utils/cardReg.js"></script>
+<script type="text/javascript" src="../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../js/activity/reg3.js?20151231"></script>
+</body>
+</html>

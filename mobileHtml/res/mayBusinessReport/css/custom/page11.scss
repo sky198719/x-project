@@ -1,0 +1,57 @@
+.swiper-slide11,.swiper-slide12{
+  background: #242540;
+  .page8-line{
+    background: linear-gradient(90deg,rgba(94,97,160,0) 0,rgba(94,97,160,.3) 20%,rgba(94,97,160,.3) 80%,rgba(94,97,160,0) 100%);
+  }
+  p{
+    font-size: 0.8rem;
+    margin: 0.8rem 0;
+    color: #fffe81;
+  }
+  .content-bottom{
+    li{
+      font-size: 0.8rem;
+      color: #9294be;
+    }
+    li:nth-child(2){
+      float: left;
+      width: 4rem;
+      margin: 1rem 2rem 1rem 4rem;
+    }
+    li:nth-child(3){
+      float: left;
+      width: 8rem;
+      margin: 1rem 0;
+    }
+  }
+  .page11-bottom{
+    font-size: 0.8rem;
+    width: 100%;
+    color: #9294be;
+    img {
+      float: right;
+      vertical-align: top;
+      width: 8rem;
+      margin: 0.2rem;
+    }
+  }
+}
+#page12-2{
+  width: 8rem;
+  margin-left: 1.8rem;
+  margin-right: 1.5rem;
+}
+.swiper-slide12{
+  .page12-top{
+    li{
+      width: 58%;
+      font-size: 0.8rem;
+      color: #9294be;
+      margin: 0;
+    }
+    li:nth-child(2){
+      width: 40%;
+      padding: 4% 0 0 2%;
+    }
+  }
+}

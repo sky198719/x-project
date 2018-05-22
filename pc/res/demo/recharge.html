@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>快捷充值_新新贷</title>
+    <link rel="shortcut icon" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="Bookmark" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="stylesheet" href="../../pages/build/css/reset.css">
+     <link rel="stylesheet" href="../../pages/build/mods/user/recharge/_.css"/>
+</head>
+<body>
+<div id="J_wrapBody">
+    <div id="J_header" class="header"></div>
+    <div class="g-top">
+        <div class="g-top-con">
+            <div class="container-1200">
+                <a href="http://www.xinxindai.com/">首页</a> &gt; <a href="javascript:void(0);">我的新新贷</a> &gt; <a
+                    href="javascript:void(0);">资金记录</a> &gt; <a href="javascript:void(0);">充值</a>
+            </div>
+        </div>
+    </div>
+    <div class="info-contaner clearfix">
+        <div class="g-left">
+            <div class="menu">
+                <h2>我的新新贷</h2>
+                <ul>
+                    <li><a class="active" href="javascript:void(0);">资金记录</a>
+                        <div class="sub">
+                            <a href="javascript:void(0);"><strong>交易明细</strong></a>
+                            <a href="rechargeIdentity.html"><i></i><strong>充值</strong></a>
+                            <a href="withdraw.html"><strong>提现</strong></a>
+                            <a href="javascript:void(0);"><strong>新新币</strong></a>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);">投资管理</a>
+                        <div class="sub">
+                            <a href="javascript:void(0);"><strong>齐天大胜</strong></a>
+                            <a href="javascript:void(0);"><strong>月进斗金</strong></a>
+                            <a href="javascript:void(0);"><strong>日日盈</strong></a>
+                            <a href="javascript:void(0);"><strong>新元宝</strong></a>
+                            <a href="javascript:void(0);"><strong>步步高升</strong></a>
+                            <a href="javascript:void(0);"><strong>月月派</strong></a>
+                            <a href="javascript:void(0);"><strong>散标直投</strong></a>
+                            <a href="javascript:void(0);"><strong>债权转让</strong></a>
+                            <a href="javascript:void(0);"><strong>自动投标设置</strong></a>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);">借款管理</a>
+                        <div class="sub">
+                            <a href="javascript:void(0);"><strong>借款申请</strong></a>
+                            <a href="javascript:void(0);"><strong>还款明细</strong></a>
+                            <a href="javascript:void(0);"><strong>资料上传</strong></a> </div>
+                    </li>
+                    <li><a href="javascript:void(0);">个人资料</a>
+                        <div class="sub">
+                            <a href="javascript:void(0);"><strong>我的资料</strong></a>
+                            <a href="bundled.html"><strong>银行设置</strong></a>
+                            <a href="javascript:void(0);"><strong>安全设置</strong></a>
+                            <a href="javascript:void(0);"><strong>调查问卷</strong></a>
+                            <a href="javascript:void(0);"><strong>签约管理</strong></a>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);">互动管理</a>
+                        <div class="sub">
+                            <a href="javascript:void(0);"><strong>新新推广</strong></a>
+                            <a href="javascript:void(0);"><strong>我的礼券</strong></a>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);">消息管理</a>
+                        <div class="sub">
+                            <a href="javascript:void(0);"><strong>站内信</strong></a>
+                            <a href="javascript:void(0);"><strong>用户消息设置</strong></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧内容区域-->
+        <div class="g-right">
+            <div class="m-con-wrap ">
+                <div class="m-con-hd clearfix">
+                    <a href="javascript:;" class='active quick-btn'>快捷充值</a>
+                    <a href="javascript:;" class='banking-btn'>网银充值</a>
+                    <!--线下充值 目前没有 暂时隐藏 start-->
+                    <!--<a href="javascript:;" class='offline-btn '>线下充值</a>-->
+                    <!--线下充值 目前没有 暂时隐藏 end-->
+                    <a class="rechargeRecord" href="#">充值记录</a>
+                </div>
+                <!--快捷充值-->
+                <div class='quick-recharge recharge-list'>
+                    <div class="m-con-bd">
+                        <div class="filed-user">
+                            <span class="threetxt">我的银行卡</span>
+                            <p class="openbank"><span class="defaullogos"><img
+                                    src="../img/bklogo_js.png">(0089)</span><i
+                                    onclick="window.location.href='bundled.html'">更换</i></p>
+                            <div class="bluetipexc">
+                                <i class="bluetip"></i>
+                                <strong><label>单笔限额5000元，单日限额20000元，单月险恶20000元。</label></strong>
+                            </div>
+                        </div>
+                        <div class="filed-user">
+                            <span class="threetxt">充值金额</span>
+                            <input type="text" placeholder="请输入充值金额"> 元(免手续费)
+                        </div>
+                        <div class="wrong_tip wt_pos">错误提示</div>
+                        <a class='next' id="quickBtn">确认充值</a>
+                    </div>
+                </div>
+                <!--网银充值-->
+                <div class='banking-recharge recharge-list'>
+                    <div class="m-con-bd">
+                        <div class="filed-user">
+                            <span class="threetxt">充值金额</span>
+                            <input id="drawmoneynum" type="text" placeholder="请输入充值金额"> 元(免手续费)
+                        </div>
+                        <div class="wrong_tip wt_pos">错误提示</div>
+                        <a class='next'>确认充值</a>
+                    </div>
+                </div>
+
+                <div class="warmth-warn">
+                    <p>温馨提示：</p>
+                    <p>1.新新贷使用的是银行资金存管模式,网贷客户交易结算资金账户是完全属于您个人的独立账户,实现平台和资金安全隔离,
+                        资金上银行存管更加安全,新新贷会根据您的授权划拨资金给借款人,除此之外无权动用。</p>
+                    <p>2.严禁洗钱、信用卡套现,一经发现将予以处罚,包括但不限于：冻结账户、永久停止服务,并可能会影响银行征信记录。
+                    </p>
+                </div>
+
+                <!--线下充值 目前没有 暂时隐藏 start-->
+                <div class='offline-recharge recharge-list disnone'>
+                    <div class="m-con-bd">
+                        <div class="filed-user">
+                            <span class="threetxt">线下充值</span>
+                            <img src="../img/fuiou.png" alt="">
+                        </div>
+                        <div class="filed-user deposit">
+                            <span class="fivetxt">第三方托管账户</span>
+                            <select name="bankNum" id="bankNum" class='bankNum'>
+                                <option value="FYYX">富友涌信 2062 0600 0100 6696</option>
+                                <option value="FYYH">富友涌弘 2062 0600 0068 5839</option>
+                                <option value="ZHSPZH">招商银行上海四平支行 6214 8502 1528 9379</option>
+                                <option value="ZHYDZH">招商银行上海延东支行 4100 6221 4941 1888</option>
+                                <option value="GHTMZH">工行上海天目东路支行 6222 0810 0101 0832 271</option>
+                                <option value="GDLCZH">光大银行隆昌支行 3690 0188 0000 1898 9</option>
+                            </select>
+                        </div>
+                        <div class="filed-user">
+                            <span class="threetxt">账单流水</span>
+                            <input id="bill-flow" type="text" placeholder='请输入账单流水号'>
+                        </div>
+                        <div class="filed-user">
+                            <span class="threetxt">充值金额</span>
+                            <input id="amount" type="text" placeholder="请输入充值金额"> 元(免手续费)
+                        </div>
+                        <div class="wrong_tip wt_pos">错误提示</div>
+                        <input type="button" class='next' value='确认充值'>
+                    </div>
+                </div>
+                <!--线下充值 目前没有 暂时隐藏 end-->
+            </div>
+        </div>
+        <!--弹框提示充值成功,已隐藏-->
+        <div class='supernatant'>
+            <p>提示</p>
+            <span>充值成功 !</span>
+            <input type="button" value='确认'>
+        </div>
+    </div>
+    <div id="J_footer" class="footer"></div>
+</div>
+<!--[if lt IE 9]>
+<iframe id="ifr_cover" frameborder="0" class="hide" scrolling="no"></iframe>
+<div id="alertBoxWrap" class="hide"></div>
+<![endif]-->
+</body>
+<script type="text/javascript" src="../../pages/build/mods/user/recharge/_.js"></script>
+</html>

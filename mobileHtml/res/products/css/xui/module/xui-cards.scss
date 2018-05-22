@@ -1,0 +1,46 @@
+/*
+ * 组件：区块列表
+ * 组件注册编号：02-0002
+ * 标准结构1级
+ * 属性：
+ * sz    规格（默认：m   s | m | l）
+ * co    颜色 (默认：read  read | back | main | vice | info | success | warn | error)
+ * 示例：
+ *  <span class="xui-btn" mc="02-0002"></span> 默认的这样就行了
+ *  <div class="xui-btn" mc="02-0002" btn-sz="s"></div> 小号的这样写
+ * 关联：html+css
+ */
+
+.xui-cards{
+  width: 100%;
+  position: relative;
+  //padding: .5rem 0;
+}
+.xui-cards:after{
+  @extend .cb;
+}
+.xui-cards>*{
+  background: #fff;
+  position: relative;
+  margin: 10px 0;
+  padding: 1rem;
+  //background:#fff linear-gradient(0deg, rgba(0, 0, 0, 0.15) .5px, transparent .5px);
+}
+/*
+.xui-cards>*:active{
+  -webkit-box-shadow: inset 0 0 1000px rgba(0,0,0,.05);
+  box-shadow: inset 0 0 1000px rgba(0,0,0,.05);
+}
+.xui-cards>*:before{
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 50%, $bc-back 50%, $bc-back 100%);
+}
+.xui-cards>*:last-child:before{
+  display: none;
+}*/

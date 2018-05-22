@@ -1,0 +1,29 @@
+//page13
+.column-title { min-width : 102px; text-align : center; font-size : 16px; color : #fff; text-shadow : 1px 1px 1px rgba(0, 87, 43, 0.3); background : linear-gradient(to bottom, #27e08a, #00c260); position : relative; margin-top : 15px; display : inline-block; padding : 5px 20px; }
+
+.column-title:before { content : " "; display : inline-block; position : absolute; width : 100%; height : 100%; border : 2px solid #2ce28e; top : -20%; left : 7%; z-index : -1; }
+
+.new-title { font-size : 12px; margin: 2vh 0 1vh 0; padding-left : 10px; position : relative; text-align : justify }
+.new-title:after {
+  content: attr(data-note);
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  font-size: .8em;
+  margin-top: .2em;
+  color: #888888;
+}
+.new-title:after {
+  color: #016c37;
+}
+.new-title.co-white:after {
+  color: #888888;
+}
+
+.new-title:before { content : " "; display : inline-block; width : 4px; height : 11px; background : #02c665; top : 3px; left : 1px; position : absolute; }
+
+.new-title.co-white:before { background : #fff; }
+
+.new-text { font-size : 11px; max-width : 100%; padding-left : 10px; }
+
+.new-text img { max-width : 100%; }

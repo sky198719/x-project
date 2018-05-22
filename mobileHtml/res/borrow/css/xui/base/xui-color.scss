@@ -1,0 +1,347 @@
+//主体
+$co-main                           : #13aaf6;
+$co-main-hover                     : #39c5ff;
+$co-main-active                    : #1194e3;
+
+$bg-main                           : #15bbfa;
+$bg-main-hover                     : #3fd5ff;
+$bg-main-active                    : #13a3ee;
+
+$bc-main                           : #17c7fc;
+$bc-main-hover                     : #45dfff;
+$bc-main-active                    : #15b0f3;
+
+//辅助
+$co-vice                           : #7fc121;
+$co-vice-hover                     : #8cd224;
+$co-vice-active                    : #699b19;
+
+$bg-vice                           : #7fc121;
+$bg-vice-hover                     : #8cd224;
+$bg-vice-active                    : #699b19;
+
+$bc-vice                           : #7fc121;
+$bc-vice-hover                     : #8cd224;
+$bc-vice-active                    : #699b19;
+
+//阅读(默认)
+$co-read                           : #333333;
+$co-read-hover                     : #666666;
+$co-read-active                    : #252525;
+
+$bg-read                           : #fafafa;
+$bg-read-hover                     : #fbfbfb;
+$bg-read-active                    : #f0f0f0;
+
+$bc-read                           : #b5b5b5;
+$bc-read-hover                     : #cccccc;
+$bc-read-active                    : #999999;
+
+//远景
+$co-back                           : #999999;
+$co-back-hover                     : #c3c3c3;
+$co-back-active                    : #a2a2a2;
+
+$bg-back                           : #f9f9f9;
+$bg-back-hover                     : #fcfcfc;
+$bg-back-active                    : #efefef;
+
+$bc-back                           : #e8e8e8;
+$bc-back-hover                     : #eee;
+$bc-back-active                    : #e0e0e0;
+
+//信息
+$co-info                           : #468dd7;
+$co-info-hover                     : #4a9deb;
+$co-info-active                    : #3986c3;
+
+$bg-info                           : #2eb4f0;
+$bg-info-hover                     : #2eafef;
+$bg-info-active                    : #2e95d1;
+$bg-info-prompt                    : #f8f5fd;
+
+$bc-info                           : #1ca2e3;
+$bc-info-hover                     : #2eb1ef;
+$bc-info-active                    : #2c98d1;
+$bc-info-prompt                    : #52a9ff;
+
+//成功
+$co-success                        : #3caf62;
+$co-success-hover                  : #40c877;
+$co-success-active                 : #35a05c;
+
+$bg-success                        : #3cc477;
+$bg-success-hover                  : #40d281;
+$bg-success-active                 : #36aa65;
+$bg-success-prompt                 : #f7fcf3;
+
+$bc-success                        : #3caf62;
+$bc-success-hover                  : #40c877;
+$bc-success-active                 : #35a05c;
+$bc-success-prompt                 : #a1d97c;
+
+//提示
+$co-warn                           : #ff7700;
+$co-warn-hover                     : #ff9900;
+$co-warn-active                    : #ff6600;
+
+$bg-warn                           : #ffa500;
+$bg-warn-hover                     : #ffca54;
+$bg-warn-active                    : #ff9815;
+$bg-warn-prompt                    : #ffffe1;
+
+$bc-warn                           : #ff9000;
+$bc-warn-hover                     : #ffb020;
+$bc-warn-active                    : #ff8f14;
+$bc-warn-prompt                    : #ffc061;
+
+//警告
+$co-danger                          : #ff3838;
+$co-danger-hover                    : #ff4848;
+$co-danger-active                   : #ff2828;
+
+$bg-danger                          : #ff6868;
+$bg-danger-hover                    : #ff7878;
+$bg-danger-active                   : #ff5858;
+$bg-danger-prompt                   : #fff8f8;
+
+$bc-danger                          : #ff5858;
+$bc-danger-hover                    : #ff6868;
+$bc-danger-active                   : #ff4848;
+$bc-danger-prompt                   : #ffa9a9;
+
+
+//顶栏(非必需)
+$co-tobar                          : #ffffff;
+$co-tobar-hover                    : #ffffff;
+$co-tobar-active                   : #ffffff;
+
+$bg-tobar                          : #ffffff;
+$bg-tobar-hover                    : #ffffff;
+$bg-tobar-active                   : #ffffff;
+
+$bc-tobar                          : #ffffff;
+$bc-tobar-hover                    : #ffffff;
+$bc-tobar-active                   : #ffffff;
+
+//头部(非必需)
+$co-header                         : #ffffff;
+$co-header-hover                   : #ffffff;
+$co-header-active                  : #ffffff;
+
+$bg-header                         : #090723;
+$bg-header-hover                   : #ffffff;
+$bg-header-active                  : #ffffff;
+
+$bc-header                         : #ffffff;
+$bc-header-hover                   : #ffffff;
+$bc-header-active                  : #ffffff;
+
+//底部(非必需)
+$co-footer                         : #ffffff;
+$co-footer-hover                   : #ffffff;
+$co-footer-active                  : #ffffff;
+
+$bg-footer                         : #ffffff;
+$bg-footer-hover                   : #ffffff;
+$bg-footer-active                  : #ffffff;
+
+$bc-footer                         : #ffffff;
+$bc-footer-hover                   : #ffffff;
+$bc-footer-active                  : #ffffff;
+
+//底栏(非必需)
+$co-fobar                          : #ffffff;
+$co-fobar-hover                    : #ffffff;
+$co-fobar-active                   : #ffffff;
+
+$bg-fobar                          : #ffffff;
+$bg-fobar-hover                    : #ffffff;
+$bg-fobar-active                   : #ffffff;
+
+$bc-fobar                          : #ffffff;
+$bc-fobar-hover                    : #ffffff;
+$bc-fobar-active                   : #ffffff;
+
+//黑色
+$black                             : #000000;
+
+//白色
+$white                             : #ffffff;
+
+
+//主 $白色
+[xui] .co-main                           {            color: $co-main          ;                        }
+[xui] .co-main-hover                     {            color: $co-main-hover    ;                        }
+[xui] .co-main-active                    {            color: $co-main-active   ;                        }
+
+[xui] .bg-main                           { background-color: $bg-main          ;   @extend .co-white    }
+[xui] .bg-main-hover                     { background-color: $bg-main-hover    ;   @extend .co-white    }
+[xui] .bg-main-active                    { background-color: $bg-main-active   ;   @extend .co-white    }
+
+[xui] .bc-main                           {     border-color: $bc-main          ;                        }
+[xui] .bc-main-hover                     {     border-color: $bc-main-hover    ;                        }
+[xui] .bc-main-active                    {     border-color: $bc-main-active   ;                        }
+
+//辅助
+[xui] .co-vice                           {            color: $co-vice          ;                        }
+[xui] .co-vice-hover                     {            color: $co-vice-hover    ;                        }
+[xui] .co-vice-active                    {            color: $co-vice-active   ;                        }
+
+[xui] .bg-vice                           { background-color: $bg-vice          ;   @extend .co-white    }
+[xui] .bg-vice-hover                     { background-color: $bg-vice-hover    ;   @extend .co-white    }
+[xui] .bg-vice-active                    { background-color: $bg-vice-active   ;   @extend .co-white    }
+
+[xui] .bc-vice                           {     border-color: $bc-vice          ;                        }
+[xui] .bc-vice-hover                     {     border-color: $bc-vice-hover    ;                        }
+[xui] .bc-vice-active                    {     border-color: $bc-vice-active   ;                        }
+
+//阅读(默认)
+body,
+[xui] .co-read                           {            color: $co-read          ;                        }
+[xui] .co-read-hover                     {            color: $co-read-hover    ;                        }
+[xui] .co-read-active                    {            color: $co-read-active   ;                        }
+
+[xui] .bg-read                           { background-color: $bg-read          ;                        }
+[xui] .bg-read-hover                     { background-color: $bg-read-hover    ;                        }
+[xui] .bg-read-active                    { background-color: $bg-read-active   ;                        }
+
+[xui] .bc-read                           {     border-color: $bc-read          ;                        }
+[xui] .bc-read-hover                     {     border-color: $bc-read-hover    ;                        }
+[xui] .bc-read-active                    {     border-color: $bc-read-active   ;                        }
+
+//远景
+[xui] .co-back                           {            color: $co-back          ;                        }
+[xui] .co-back-hover                     {            color: $co-back-hover    ;                        }
+[xui] .co-back-active                    {            color: $co-back-active   ;                        }
+
+[xui] .bg-back                           { background-color: $bg-back          ;                        }
+[xui] .bg-back-hover                     { background-color: $bg-back-hover    ;                        }
+[xui] .bg-back-active                    { background-color: $bg-back-active   ;                        }
+
+[xui] .bc-back                           {     border-color: $bc-back          ;                        }
+[xui] .bc-back-hover                     {     border-color: $bc-back-hover    ;                        }
+[xui] .bc-back-active                    {     border-color: $bc-back-active   ;                        }
+
+//信息
+[xui] .co-info                           {            color: $co-info          ;                        }
+[xui] .co-info-hover                     {            color: $co-info-hover    ;                        }
+[xui] .co-info-active                    {            color: $co-info-active   ;                        }
+
+[xui] .bg-info                           { background-color: $bg-info          ;   @extend .co-white    }
+[xui] .bg-info-hover                     { background-color: $bg-info-hover    ;   @extend .co-white    }
+[xui] .bg-info-active                    { background-color: $bg-info-active   ;   @extend .co-white    }
+[xui] .bg-info-prompt                    { background-color: $bg-info-prompt   ;                        }
+
+[xui] .bc-info                           {     border-color: $bc-info          ;                        }
+[xui] .bc-info-hover                     {     border-color: $bc-info-hover    ;                        }
+[xui] .bc-info-active                    {     border-color: $bc-info-active   ;                        }
+[xui] .bc-info-prompt                    {     border-color: $bc-info-prompt   ;                        }
+
+//成功
+[xui] .co-success                        {            color: $co-success       ;                        }
+[xui] .co-success-hover                  {            color: $co-success-hover ;                        }
+[xui] .co-success-active                 {            color: $co-success-active;                        }
+
+[xui] .bg-success                        { background-color: $bg-success       ;   @extend .co-white    }
+[xui] .bg-success-hover                  { background-color: $bg-success-hover ;   @extend .co-white    }
+[xui] .bg-success-active                 { background-color: $bg-success-active;   @extend .co-white    }
+[xui] .bg-success-prompt                 { background-color: $bg-success-prompt;                        }
+
+[xui] .bc-success                        {     border-color: $bc-success       ;                        }
+[xui] .bc-success-hover                  {     border-color: $bc-success-hover ;                        }
+[xui] .bc-success-active                 {     border-color: $bc-success-active;                        }
+[xui] .bc-success-prompt                 {     border-color: $bc-success-prompt;                        }
+
+//提示
+[xui] .co-warn                           {            color: $co-warn          ;                        }
+[xui] .co-warn-hover                     {            color: $co-warn-hover    ;                        }
+[xui] .co-warn-active                    {            color: $co-warn-active   ;                        }
+
+[xui] .bg-warn                           { background-color: $bg-warn          ;   @extend .co-white    }
+[xui] .bg-warn-hover                     { background-color: $bg-warn-hover    ;   @extend .co-white    }
+[xui] .bg-warn-active                    { background-color: $bg-warn-active   ;   @extend .co-white    }
+[xui] .bg-warn-prompt                    { background-color: $bg-warn-prompt   ;                        }
+
+[xui] .bc-warn                           {     border-color: $bc-warn          ;                        }
+[xui] .bc-warn-hover                     {     border-color: $bc-warn-hover    ;                        }
+[xui] .bc-warn-active                    {     border-color: $bc-warn-active   ;                        }
+[xui] .bc-warn-prompt                    {     border-color: $bc-warn-prompt   ;                        }
+
+//警告
+[xui] .co-danger                          {            color: $co-danger        ;                        }
+[xui] .co-danger-hover                    {            color: $co-danger-hover  ;                        }
+[xui] .co-danger-active                   {            color: $co-danger-active ;                        }
+
+[xui] .bg-danger                          { background-color: $bg-danger        ;   @extend .co-white    }
+[xui] .bg-danger-hover                    { background-color: $bg-danger-hover  ;   @extend .co-white    }
+[xui] .bg-danger-active                   { background-color: $bg-danger-active ;   @extend .co-white    }
+[xui] .bg-danger-prompt                   { background-color: $bg-danger-prompt ;                        }
+
+[xui] .bc-danger                          {     border-color: $bc-danger        ;                        }
+[xui] .bc-danger-hover                    {     border-color: $bc-danger-hover  ;                        }
+[xui] .bc-danger-active                   {     border-color: $bc-danger-active ;                        }
+[xui] .bc-danger-prompt                   {     border-color: $bc-danger-prompt ;                        }
+
+
+//顶栏(非必需)
+[xui] .co-tobar                          {            color: $co-tobar         ;                        }
+[xui] .co-tobar-hover                    {            color: $co-tobar-hover   ;                        }
+[xui] .co-tobar-active                   {            color: $co-tobar-active  ;                        }
+
+[xui] .bg-tobar                          { background-color: $bg-tobar         ;                        }
+[xui] .bg-tobar-hover                    { background-color: $bg-tobar-hover   ;                        }
+[xui] .bg-tobar-active                   { background-color: $bg-tobar-active  ;                        }
+
+[xui] .bc-tobar                          {     border-color: $bc-tobar         ;                        }
+[xui] .bc-tobar-hover                    {     border-color: $bc-tobar-hover   ;                        }
+[xui] .bc-tobar-active                   {     border-color: $bc-tobar-active  ;                        }
+
+//头部(非必需)
+[xui] .co-header                         {            color: $co-header        ;                        }
+[xui] .co-header                         {            color: $co-header        ;                        }
+[xui] .co-header                         {            color: $co-header        ;                        }
+
+[xui] .bg-header                         { background-color: $bg-header        ;                        }
+[xui] .bg-header                         { background-color: $bg-header        ;                        }
+[xui] .bg-header                         { background-color: $bg-header        ;                        }
+
+[xui] .bc-header                         {     border-color: $bc-header        ;                        }
+[xui] .bc-header                         {     border-color: $bc-header        ;                        }
+[xui] .bc-header                         {     border-color: $bc-header        ;                        }
+
+//底部(非必需)
+[xui] .co-footer                         {            color: $co-footer        ;                        }
+[xui] .co-footer-hover                   {            color: $co-footer-hover  ;                        }
+[xui] .co-footer-active                  {            color: $co-footer-active ;                        }
+
+[xui] .bg-footer                         { background-color: $bg-footer        ;                        }
+[xui] .bg-footer-hover                   { background-color: $bg-footer-hover  ;                        }
+[xui] .bg-footer-active                  { background-color: $bg-footer-active ;                        }
+
+[xui] .bc-footer                         {     border-color: $bc-footer        ;                        }
+[xui] .bc-footer-hover                   {     border-color: $bc-footer-hover  ;                        }
+[xui] .bc-footer-active                  {     border-color: $bc-footer-active ;                        }
+
+//底栏(非必需)
+[xui] .co-fobar                          {            color: $co-fobar         ;                        }
+[xui] .co-fobar-hover                    {            color: $co-fobar-hover   ;                        }
+[xui] .co-fobar-active                   {            color: $co-fobar-active  ;                        }
+
+[xui] .bg-fobar                          { background-color: $bg-fobar         ;                        }
+[xui] .bg-fobar-hover                    { background-color: $bg-fobar-hover   ;                        }
+[xui] .bg-fobar-active                   { background-color: $bg-fobar-active  ;                        }
+
+[xui] .bc-fobar                          {     border-color: $bc-fobar         ;                        }
+[xui] .bc-fobar-hover                    {     border-color: $bc-fobar-hover   ;                        }
+[xui] .bc-fobar-active                   {     border-color: $bc-fobar-active  ;                        }
+
+//黑色
+[xui] .co-black                          {            color: $black            ;                        }
+[xui] .bg-black                          { background-color: $black            ;                        }
+[xui] .bc-black                          {     border-color: $black            ;                        }
+//白色
+[xui] .co-white                          {            color: $white            ;                        }
+[xui] .bg-white                          { background-color: $white            ;                        }
+[xui] .bc-white                          {     border-color: $white            ;                        }
+

@@ -1,0 +1,227 @@
+//宽
+.w100,.w100-z >* {width:100%;}
+//高 / 行高
+.h100, .h100-z > * { height : 100%; }
+
+/*@for $i from 1 to 10 {
+  .h#{$i}e,
+  .h#{$i}e-z > * { height : $sz * $i }
+
+  .h#{$i}e.vc,
+  .h#{$i}e-z.vc > *,
+  .v#{$i}e,
+  .v#{$i}e-z > * { line-height : $sz * $i }
+
+  .h#{$i}e5,
+  .h#{$i}e5-z > * { height : round($sz * ($i + .5)) }
+
+  .h#{$i}e5.vc,
+  .h#{$i}e5-z.vc > *,
+  .v#{$i}e5,
+  .v#{$i}e5-z > * { line-height : round($sz * ($i + .5)) }
+}
+
+@for $i from 10 to 31 {
+  .h#{$i}e,
+  .h#{$i}e-z > * { height : $sz * $i }
+}
+
+!*图层*!
+@for $i from 1 to 10 {
+  .z#{$i} { z-index : $i }
+}*/
+
+//内边距
+@for $i from 1 to 16 {
+  .n#{$i}x,
+  .n#{$i}x-z >* ,
+  .nw#{$i}x,
+  .nw#{$i}x-z >* ,
+  .nl#{$i}x,
+  .nl#{$i}x-z >* {padding-left:#{$i}px;}
+  .n#{$i}x,
+  .n#{$i}x-z >* ,
+  .nw#{$i}x,
+  .nw#{$i}x-z >* ,
+  .nr#{$i}x,
+  .nr#{$i}x-z >* {padding-right:#{$i}px;}
+  .n#{$i}x,
+  .n#{$i}x-z >* ,
+  .nh#{$i}x,
+  .nh#{$i}x-z >* ,
+  .nt#{$i}x,
+  .nt#{$i}x-z >* {padding-top:#{$i}px;}
+  .n#{$i}x,
+  .n#{$i}x-z >* ,
+  .nh#{$i}x,
+  .nh#{$i}x-z >* ,
+  .nb#{$i}x,
+  .nb#{$i}x-z >* {padding-bottom:#{$i}px;}
+
+}
+/*
+@for $i from 1 to 5 {
+  .n#{$i}e,
+  .n#{$i}e-z >*,
+  .nw#{$i}e,
+  .nw#{$i}e-z >* ,
+  .nl#{$i}e,
+  .nl#{$i}e-z >* {padding-left:$sz * $i}
+  .n#{$i}e,
+  .n#{$i}e-z >*,
+  .nw#{$i}e,
+  .nw#{$i}e-z >* ,
+  .nr#{$i}e,
+  .nr#{$i}e-z >* {padding-right:$sz * $i}
+  .n#{$i}e,
+  .n#{$i}e-z >*,
+  .nh#{$i}e,
+  .nh#{$i}e-z >* ,
+  .nt#{$i}e,
+  .nt#{$i}e-z >* {padding-top:$sz * $i}
+  .n#{$i}e,
+  .n#{$i}e-z >*,
+  .nh#{$i}e,
+  .nh#{$i}e-z >* ,
+  .nb#{$i}e,
+  .nb#{$i}e-z >* {padding-bottom:$sz * $i}
+
+  .n#{$i}e5,
+  .n#{$i}e5-z >* ,
+  .nw#{$i}e5,
+  .nw#{$i}e5-z >* ,
+  .nl#{$i}e5,
+  .nl#{$i}e5-z >* {padding-left:$sz * ($i + .5)}
+  .n#{$i}e5,
+  .n#{$i}e5-z >* ,
+  .nw#{$i}e5,
+  .nw#{$i}e5-z >* ,
+  .nr#{$i}e5,
+  .nr#{$i}e5-z >* {padding-right:$sz * ($i + .5)}
+  .n#{$i}e5,
+  .n#{$i}e5-z >* ,
+  .nh#{$i}e5,
+  .nh#{$i}e5-z >* ,
+  .nt#{$i}e5,
+  .nt#{$i}e5-z >* {padding-top:$sz * ($i + .5)}
+  .n#{$i}e5,
+  .n#{$i}e5-z >* ,
+  .nh#{$i}e5,
+  .nh#{$i}e5-z >* ,
+  .nb#{$i}e5,
+  .nb#{$i}e5-z >* {padding-bottom:$sz * ($i + .5)}
+
+}*/
+
+//外边距
+@for $i from 1 to 16 {
+  .m#{$i}x,
+  .m#{$i}x-z >* ,
+  .mw#{$i}x,
+  .mw#{$i}x-z >* ,
+  .ml#{$i}x,
+  .ml#{$i}x-z >* {margin-left:#{$i}px;}
+  .m#{$i}x,
+  .m#{$i}x-z >* ,
+  .mw#{$i}x,
+  .mw#{$i}x-z >* ,
+  .mr#{$i}x,
+  .mr#{$i}x-z >* {margin-right:#{$i}px;}
+  .m#{$i}x,
+  .m#{$i}x-z >* ,
+  .mh#{$i}x,
+  .mh#{$i}x-z >* ,
+  .mt#{$i}x,
+  .mt#{$i}x-z >* {margin-top:#{$i}px;}
+  .m#{$i}x,
+  .m#{$i}x-z >* ,
+  .mh#{$i}x,
+  .mh#{$i}x-z >* ,
+  .mb#{$i}x,
+  .mb#{$i}x-z >* {margin-bottom:#{$i}px;}
+
+}
+/*
+@for $i from 1 to 5 {
+  .m#{$i}e,
+  .m#{$i}e-z >* ,
+  .mw#{$i}e,
+  .mw#{$i}e-z >* ,
+  .ml#{$i}e,
+  .ml#{$i}e-z >* {margin-left:$sz * $i}
+  .m#{$i}e,
+  .m#{$i}e-z >* ,
+  .mw#{$i}e,
+  .mw#{$i}e-z >* ,
+  .mr#{$i}e,
+  .mr#{$i}e-z >* {margin-right:$sz * $i}
+  .m#{$i}e,
+  .m#{$i}e-z >* ,
+  .mh#{$i}e,
+  .mh#{$i}e-z >* ,
+  .mt#{$i}e,
+  .mt#{$i}e-z >* {margin-top:$sz * $i}
+  .m#{$i}e,
+  .m#{$i}e-z >* ,
+  .mh#{$i}e,
+  .mh#{$i}e-z >* ,
+  .mb#{$i}e,
+  .mb#{$i}e-z >* {margin-bottom:$sz * $i}
+
+  .m#{$i}e5,
+  .m#{$i}e5-z >* ,
+  .mw#{$i}e5,
+  .mw#{$i}e5-z >* ,
+  .ml#{$i}e5,
+  .ml#{$i}e5-z >* {margin-left:$sz * ($i + .5)}
+  .m#{$i}e5,
+  .m#{$i}e5-z >* ,
+  .mw#{$i}e5,
+  .mw#{$i}e5-z >* ,
+  .mr#{$i}e5,
+  .mr#{$i}e5-z >* {margin-right:$sz * ($i + .5)}
+  .m#{$i}e5,
+  .m#{$i}e5-z >* ,
+  .mh#{$i}e5,
+  .mh#{$i}e5-z >* ,
+  .mt#{$i}e5,
+  .mt#{$i}e5-z >* {margin-top:$sz * ($i + .5)}
+  .m#{$i}e5,
+  .m#{$i}e5-z >* ,
+  .mh#{$i}e5,
+  .mh#{$i}e5-z >* ,
+  .mb#{$i}e5,
+  .mb#{$i}e5-z >* {margin-bottom:$sz * ($i + .5)}
+
+  //@debug margin $sz * $i;
+}*/
+/*
+
+//边框
+%bs{border-style: solid}
+@for $i from 1 to 2 {
+  .b#{$i}x,
+  .b#{$i}x-z >* ,
+  .bw#{$i}x,
+  .bw#{$i}x-z >* ,
+  .bl#{$i}x,
+  .bl#{$i}x-z >* {border-left-width:#{$i}px; @extend %bs;}
+  .b#{$i}x,
+  .b#{$i}x-z >* ,
+  .bw#{$i}x,
+  .bw#{$i}x-z >* ,
+  .br#{$i}x,
+  .br#{$i}x-z >* {border-right-width:#{$i}px; @extend %bs;}
+  .b#{$i}x,
+  .b#{$i}x-z >* ,
+  .bh#{$i}x,
+  .bh#{$i}x-z >* ,
+  .bt#{$i}x,
+  .bt#{$i}x-z >* {border-top-width:#{$i}px; @extend %bs;}
+  .b#{$i}x,
+  .b#{$i}x-z >* ,
+  .bh#{$i}x,
+  .bh#{$i}x-z >* ,
+  .bb#{$i}x,
+  .bb#{$i}x-z >* {border-bottom-width:#{$i}px; @extend %bs;}
+}*/

@@ -1,0 +1,23 @@
+{{#each list}}
+	<li>
+		<div style="display: list-item;overflow: hidden;padding: 5px 5px 5px 5px;/*border-bottom: 1px solid #ececec;*/">
+           <span style="float: left;width: 30%;text-align: center;word-wrap: break-word;">
+               {{quitTime}}
+               	{{#if showQuitStatus}}
+					<br>({{quitStatus}})
+				{{else}}
+					
+				{{/if}}
+           </span>
+           <span style="float: left;width: 20%;text-align: center;word-wrap: break-word;">
+               {{quitapr}}%
+           </span>
+           <span style="float: left;width: 30%;text-align: center;word-wrap: break-word;">
+               {{quitAccount}}
+           </span>
+           <span style="float: left;width: 20%;text-align: center;word-wrap: break-word;">
+               {{interest}}
+           </span>
+   		</div>
+	</li>
+{{/each}}

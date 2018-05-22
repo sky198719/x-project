@@ -1,0 +1,111 @@
+{{#each list}}
+	<li class="swipeout">
+		<div class="card">
+			<div class="card-header" name="showPlanDetail" data-stepId="{{stepId}}" data-stepJoinId="{{stepJoinId}}">
+				<span class="font16 text-overflow" style="color:#333;">步步高升<a href="javascript:void(0)" style="color:#333;">{{sjoin}}</a></span>
+				{{#if isFinished}}
+					<span style="margin-right: 5px;font-size:12px;">已全部退出</span>
+				{{else}}
+					<span class="quitStepUpward dmp-click" style="margin-right: 5px;font-size:14px;color:#007aff;" data-holdAmount="{{remacapital}}" data-stepJoinId="{{stepJoinId}}" data-stepId="{{stepId}}" data-isInLocked="{{isInLocked}}"
+                          dmp_type="click" dmp_event="redeem" dmp_target_type="1" dmp_target_id="6">
+					{{#if isInLocked}}
+						提前退出
+					{{else}}
+						退出
+					{{/if}}
+					</span>
+				{{/if}}
+			</div>
+			<div class="card-content">
+				<div class="card-content-inner">
+					{{#if isFinished}}
+						<div class="width100 mb5">
+							<span>投资总额：</span><span style="margin-left:10px;">{{account}}&nbsp;元</span>
+						</div>
+						<div class="width100 mb5" style="display: none;">
+							<span>退出年化：</span><span style="margin-left:10px;color:red;">{{lastQuitApr}}%</span>
+						</div>
+						<div class="width100 mb5">
+							<span>累计收益：</span><span style="margin-left:10px;">{{interest}}&nbsp;元</span>
+						</div>
+						<div class="width100 mb5">
+							<span>计息天数：</span><span style="margin-left:10px;">{{outDay}}&nbsp;天</span>
+						</div>
+						<div class="width100 mb5">
+							<span>投资时间：</span><span style="margin-left:10px;color:#333333;">{{addTime}}</span>
+						</div>
+						<div class="width100 mb5">
+							债权列表：<span class="color-blue setpUpwardUserTradeList" data-joinid="{{joinId}}">点击查看</span>
+						</div>
+					{{else}}
+						<div class="width100 mb5">
+							<span>当前持有：</span><span style="margin-left:10px;color:red;">{{remacapital}}&nbsp;元</span>
+						</div>
+						<div class="width100 mb5">
+							<span>当前年化：</span>
+							<span style="margin-left:10px;color:red;">
+								{{#if isInLocked}}
+									锁定期
+								{{else}}
+									{{currentApr}}%
+								{{/if}}
+							</span>
+						</div>
+						<div class="width100 mb5">
+							<span>待收收益：</span><span style="margin-left:10px;">{{collectInterest}}&nbsp;元</span>
+						</div>
+						<div class="width100 mb5">
+							<span>已计息天数：</span><span style="margin-left:10px;">{{day}}&nbsp;天</span>
+						</div>
+						<div class="width100 mb5">
+							<span>投资时间：</span><span style="margin-left:10px;color:#333333;">{{addTime}}</span>
+						</div>
+						<div class="width100 mb5">
+							<span>投资总额：</span><span style="margin-left:10px;">{{account}}&nbsp;元</span>
+						</div>
+						<div class="width100 mb5">
+							债权列表：<span class="color-blue setpUpwardUserTradeList" data-joinid="{{joinId}}">点击查看</span>
+						</div>
+					{{/if}}
+				</div>
+			</div>
+			<div class="card-footer" style="padding-top:0px;padding-left:0px;padding-right:0px;">
+				<div class="list-block accordion-list width100" style="font-size:13px;">
+					<ul style="padding-left:0px;">
+						<li class="accordion-item">
+							<a href="#" class="item-link item-content getQuitRecords"  style="padding-left:15px;padding-right:15px;" data-stepJoinId="{{stepJoinId}}" data-showStatus="0">
+								<div class="item-inner">
+									<div class="item-title" style="white-space: normal;color:#7597ae">{{#if isFinished}}全部退出时间：{{endDate}}{{else}}查看退出记录{{/if}}</div>
+								</div>
+							</a>
+							<div class="accordion-item-content">
+								<div class="list-block" style="font-size:12px;">
+									<ul>
+										<li>
+											<div style="display: list-item;overflow: hidden;padding: 5px 5px 5px 5px;border-bottom: 1px solid #ececec;background-color:#749BB7;color:white;">
+									           <span style="float: left;width: 30%;text-align: center;">
+									               	退出时间
+									           </span>
+									           <span style="float: left;width: 20%;text-align: center;">
+									               	退出年化
+									           </span>
+									           <span style="float: left;width: 30%;text-align: center;">
+									              	退出本金
+									           </span>
+									           <span style="float: left;width: 20%;text-align: center;">
+									               	退出利息
+									           </span>
+									   		</div>
+										</li>
+									</ul>
+									<ul class="quitList_{{stepJoinId}}">
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</li>
+{{/each}}

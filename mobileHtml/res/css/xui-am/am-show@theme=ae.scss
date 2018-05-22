@@ -1,0 +1,15 @@
+.am-show-ae { animation : am-show-ae .5s forwards .3s; -webkit-animation : am-show-ae .5s forwards .3s;-webkit-transform : scale(0.8, 0.8) translateX(100%);transform : scale(0.8, 0.8) translateX(100%); opacity : 0}
+
+@-webkit-keyframes am-show-ae {
+  0% { -webkit-transform : scale(0.8, 0.8) translateX(100%); opacity : 0 }
+  45% { -webkit-transform : scale(.8, .8) translateX(0); opacity : .5 }
+  50% { -webkit-transform : scale(.8, .8) translateX(0); opacity : 1 }
+  100% { -webkit-transform : scale(1, 1) translateX(0); opacity : 1 }
+}
+
+@keyframes am-show-ae {
+  0% { transform : scale(0.8, 0.8) translateX(100%); opacity : 0 }
+  45% { transform : scale(.8, .8) translateX(0); opacity : .5 }
+  50% { transform : scale(.8, .8) translateX(0); opacity : 1 }
+  100% { transform : scale(1, 1) translateX(0); opacity : 1 }
+}

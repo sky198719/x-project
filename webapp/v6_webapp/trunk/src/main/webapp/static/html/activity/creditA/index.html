@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>互联网金融企业A+</title>
+    <style>
+        html {
+            font-size: 100%;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            font-family: '微软雅黑';
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a, img {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+
+        input, button {
+            outline: none;
+        }
+
+        img {
+            display: block;
+            border: none;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+        }
+
+        .container img {
+            width: 100%;
+        }
+
+        .btn1 {
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <img src="images/bg1.jpg"/>
+</div>
+<div class="container">
+    <img src="images/bg2.jpg"/>
+</div>
+<div class="container">
+    <img src="images/bg3.jpg"/>
+</div>
+<div class="container">
+    <div class="num-income" style="position: absolute;
+        top: 32%;
+        left: 14%;
+        color: red;
+        font-size: 2.7rem"></div>
+    <div class="TOTAL_COUNT" style="    position: absolute;
+        top: 32%;
+        left: 52%;
+        font-size: 2.7rem;
+        color: red;"></div>
+    <div class="num-trade" style="position: absolute;
+        top: 63%;
+        left: 15%;
+        font-size: 2.7rem;
+        color: red;"></div>
+    <div class="venture_balance" style="position: absolute;
+            top: 63%;
+            left: 52%;
+            font-size: 2.7rem;
+            color: red;"></div>
+    <img src="images/bg4.jpg"/>
+</div>
+<div class="container">
+    <img src="images/bg5.jpg"/>
+</div>
+<div class="container" style="padding-bottom:3.5rem;" id="riskmanagement">
+    <img src="images/bg6.jpg"/>
+</div>
+<img src="images/btn1.png" class="btn1"/>
+
+<script src="js/jquery.js"></script>
+<script src="js/default.js"></script>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 640) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script>
+
+    /*var msg = '{"code":"200000","data":{"investUserDate":"2017年02月28日","items":[{"code":"VENTURE_BALANCE","inforName":"质保服务专款（元）","nvalue":"44224965.68"},{"code":"TOTAL_COUNT","inforName":"累计交易总笔数（笔）","nvalue":"26819"},{"code":"TOTAL_FINANCING_USER","inforName":"融资人总数（人）","nvalue":"16562"},{"code":"TOTAL_INVEST_USER","inforName":"投资人总数（人）","nvalue":"120903"},{"code":"TOTAL_REGISTER_USER","inforName":"累计注册人数（人）","nvalue":"1602016"},{"code":"TOTAL_INCOME","inforName":"累计为投资人赚取（元）","nvalue":"440345888.85"},{"code":"TOTAL_TRADE","inforName":"累计交易总额（元）","nvalue":"9626799912.62"}],"registerUserDate":"2017年02月28日","time":"5年23天15小时"},"message":"操作成功"}';
+     msg = JSON.parse(msg);
+     console.log(msg); */
+
+    $.ajax({
+        url: "/biz/bulletin/operationData",
+        contentType: "application/json",
+        dataType: "json",
+        type: "get",
+        beforeSend: function (request) {
+            request.setRequestHeader("s", "www");
+            request.setRequestHeader("clientId", "001");
+            request.setRequestHeader("clientTime", "001");
+        },
+        success: function (msg) {
+            if (msg && msg.code == 200000) {
+                for (var i = 0; i < msg.data.items.length; i++) {
+                    if (msg.data.items[i].code == 'VENTURE_BALANCE') {
+                        var VENTURE_BALANCE = msg.data.items[i].nvalue;
+                        VENTURE_BALANCE = VENTURE_BALANCE / 10000;
+                        $('.venture_balance').html('<span style="color:#0e284d">' + VENTURE_BALANCE.toFixed(2) + '</span>&nbsp;万元');
+                    }
+                    if (msg.data.items[i].code == 'TOTAL_TRADE') {
+                        var TOTAL_TRADE = msg.data.items[i].nvalue;
+                        TOTAL_TRADE = TOTAL_TRADE / 100000000;
+                        $('.num-trade').html('<span style="color:#0e284d">' + TOTAL_TRADE.toFixed(2) + '</span>&nbsp;亿元');
+                    }
+                    if (msg.data.items[i].code == 'TOTAL_INCOME') {
+                        var TOTAL_INCOME = msg.data.items[i].nvalue;
+                        TOTAL_INCOME = TOTAL_INCOME / 100000000;
+                        $('.num-income').html('<span style="color:#0e284d">' + TOTAL_INCOME.toFixed(2) + '</span>&nbsp;亿元');
+                    }
+                    if (msg.data.items[i].code == 'TOTAL_COUNT') {
+                        var TOTAL_COUNT = msg.data.items[i].nvalue;
+                        $(".TOTAL_COUNT").html('<span style="color:#0e284d">' + TOTAL_COUNT + '</span>&nbsp;笔');
+                    }
+                }
+            }
+        },
+        error: function (data) {
+            console.error(data.code);
+        }
+    });
+</script>
+</body>
+</html>

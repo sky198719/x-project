@@ -1,0 +1,38 @@
+{{#each list}}
+<div class="list-block accordion-list inset">
+    <ul>
+        <li class="accordion-item">
+            <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                    <div class="item-title"><h5>用户名：<span class="font-red">{{userName}}</span></h5></div>
+                </div>
+            </a>
+            <div class="accordion-item-content">
+                <div class="content-block font-grey">
+                    <h6 class="mt10">最近理财时间：{{lastTenderTime}}</h6>
+                    <h6 class="mt5" style="height: 25px;">认证状态：
+                        {{#if realName}}
+                        <img src="static/img/xxd/ID1.png" width="25" style="margin-bottom:-8px;"/>&nbsp;已认证
+                        {{else}}
+                        <img src="static/img/xxd/ID2.png" width="25" style="margin-bottom:-8px;"/>&nbsp;未认证
+                        {{/if}}
+                        {{#if mobile}}
+                        <img src="static/img/xxd/mobile1.png" width="25" style="margin-bottom:-8px;height: 25px;"/>&nbsp;已认证
+                        {{else}}
+                        <img src="static/img/xxd/mobile2.png" width="25" style="margin-bottom:-8px;height: 25px;"/>&nbsp;未认证
+                        {{/if}}
+                    </h6>
+                </div>
+            </div>
+        </li>
+        <li class="accordion-item">
+            <div class="item-inner pl15">
+                <div class="item-title-row width100">
+                    <div class="item-title left font-grey"><h6>注册时间：<span class="font-blue">{{registerDate}}</span>&nbsp;&nbsp;{{registerTime}}</h6></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{{/each}}
+

@@ -1,0 +1,38 @@
+
+//page5
+.page3-chart1 {
+  width: 100%;
+  height: 80vw;
+}
+
+.page5-text1 h1 {
+  font-size: 13vw;
+}
+
+.stress-1{
+
+}
+
+.page5-text2 > * {
+  width: 100%;
+  margin-top: 3vh;
+}
+
+.page5-text2 > * > *:first-child{
+  width: 16%;
+  float: left;
+
+  img{
+    max-width: 100%;
+  }
+}
+.page5-text2 > * > *:last-child{
+  width: 79%;
+  float: left;
+  margin-left: 5%;
+}
+
+.page5-text2 h1 {
+  font-size: 2.5rem;
+  line-height: 2rem;
+}

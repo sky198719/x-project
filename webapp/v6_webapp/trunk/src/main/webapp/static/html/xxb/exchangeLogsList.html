@@ -1,0 +1,22 @@
+{{#each list}}
+<li>
+<div class="item-content">
+    <div class="item-inner">
+        <div class="item-title-row">
+            <span style="float: left;width: 55%">
+                    <span class="font-grey">{{remark}}</span>
+                </span>
+                <span style="float: left;width: 20%;line-height: 26px;">
+                    <span class="font-grey">{{amount}}元</span>
+                </span>
+                <span style="float: right;width: 25%;line-height: 26px;">
+                    <span class="font-red" style="float:right">-{{changeNum}}个</span>
+                </span>
+        </div>
+        <div class="item-subtitle"><span class="font-grey-A9">{{changeTime}}</span></div>
+    </div>
+</div>
+</li>
+{{/each}}
+
+

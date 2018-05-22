@@ -1,0 +1,73 @@
+@import "../tmp/merge/reset.reset.css";
+/*@base:(750/375)*20;*/
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.qt-ds {
+  position: relative;
+  width: 100%;
+  /*750px*/
+  height: 100%;
+  /*1640px*/
+  background: url("../noiveRedenv/img/bkg.png") repeat;
+  background-size: 100% 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/*top part start*/
+.top {
+  /*width: 17.5rem; /*720px*/
+  height: 9.0rem;
+  /*435px*/
+  margin: 0 auto;
+  padding: 0.8rem 0.6rem 0;
+}
+.top img {
+  width: 100%;
+  height: 100%;
+}
+/*top part end*/
+.contain {
+  padding: 0 0.5rem 1.0rem;
+  position: relative;
+}
+.main-contain {
+  margin: 0 auto;
+  padding-bottom: 1.2rem;
+}
+.second {
+  width: 100%;
+  margin: 0 auto;
+}
+.second img {
+  width: 100%;
+  height: 100%;
+}
+.third {
+  padding-top: 0.4rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.third img {
+  width: 100%;
+  height: 100%;
+}
+.four {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.5rem 0 0.4rem;
+}
+.four img {
+  width: 100%;
+  height: 100%;
+}
+.submit {
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 2.8rem;
+  background: url("../noiveRedenv/img/snap_up.png") no-repeat center;
+  background-size: cover;
+}

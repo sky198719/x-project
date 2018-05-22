@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xui="0.0.1" size="m" frame="mobile3" browser="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="xinxindai">
+    <meta name="author" content="UI | Front-end Junbo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>信息披露</title>
+    <link href="css/main.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<img style="width:100%" src="imgs/datadisclose/datadis-top.png" />
+<ul class="xui-cards ac nw10x" theme="003">
+    <li class="m-con-bd">
+        <div id="J_datadisclos_trade">
+            <i class="logo1"></i>
+            <p class="number">8,862,776,216.12</p>
+            <p class="describe">累计交易总额(元)</p>
+        </div>
+        <div class="xui-line mh1e"></div>
+        <div id="J_datadisclos_count">
+            <i class="logo2"></i>
+            <p class="number">24,697</p>
+            <p class="describe">累计交易总笔数(笔)</p>
+        </div>
+        <div class="xui-line mh1e"></div>
+        <div id="J_datadisclos_investuser">
+            <i class="logo3"></i>
+            <p class="number">16,813</p>
+            <p class="describe">融资人总数(人</p>
+        </div>
+        <div class="xui-line mh1e"></div>
+        <div class="last" id="J_datadisclos_financinguser">
+            <i class="logo4"></i>
+            <p class="number">107,406</p>
+            <p class="describe">投资人总数(人)</p>
+        </div>
+        <p class="deadline" id="J_datadisclos_tradedate">截止日期：2016年11月底</p>
+    </li>
+    <li>
+        <div class="m-con-bd">
+            <h1 class="outcomes bold">运营数据</h1>
+            <p class="servicetime">安全运营时间：<span id="J_datadisclos_servicetime">4年360天16小时</span></p>
+            <ul class="clearfix data2">
+                <li id="J_datadisclos_reguser">
+                    <i class="logo5"></i>
+                    <p class="number">1,550,762</p>
+                    <p class="describe">累计注册用户(人)</p>
+                </li>
+                <li id="J_datadisclos_income">
+                    <i class="logo6"></i>
+                    <p class="number">390,145,541.28</p>
+                    <p class="describe">累计为投资人赚取(元)</p>
+                </li>
+                <li class="last" id="J_datadisclos_balance">
+                    <i class="logo7"></i>
+                    <p class="number">42,534,102.51</p>
+                    <p class="describe">质保服务专款(元)</p>
+                </li>
+            </ul>
+            <p class="deadline" id="J_datadisclos_operatedate">截止日期：2016年11月底</p>
+        </div>
+    </li>
+    <!--成交量数据-->
+    <li>
+        <div class="m-con-bd">
+            <h1 class="bold">成交量数据</h1>
+            <p class="co-back">月度成交量趋势</p>
+            <div class="voldata"></div>
+
+            <p class="selectdate"><select id="J_datadisclos_tradeyear">
+            </select></p>
+            <p class="deadline" id="J_datadisclos_monthdeadline">截止日期：2016年11月底</p>
+        </div>
+    </li>
+    <!--投资用户分析-->
+    <li>
+        <div class="m-con-bd">
+            <h1 class="outcomes bold mb1e">投资用户分析</h1>
+            <ul class="voteuser cb">
+                <li class="sides fl" id="J_datadisclos_voteperson"></li>
+                <li class="middle ss aj">
+                    <p>1万以下</p>
+                    <p>1万-5万</p>
+                    <p>5万-10万</p>
+                    <p>10万-20万</p>
+                    <p>20万-50万</p>
+                    <p>50万-100万</p>
+                    <p>100万以上</p>
+                </li>
+                <li class="sides fr" id="J_datadisclos_vote_money"></li>
+            </ul>
+            <ul class="usertype cb">
+                <li class="age" id="J_datadisclos_age"></li>
+                <li class="sex" id="J_datadisclos_sex"></li>
+            </ul>
+            <h2 class="mt3e mb1e">月度新增用户数</h2>
+            <div class="mothdata"></div>
+            <p class="selectdate"><select id="J_datadisclos_useryear">
+            </select></p>
+            <p class="deadline" id="J_datadisclos_userdeadline">截止日期：2016年11月底</p>
+        </div>
+    </li>
+    <!--借款数据-->
+    <li>
+        <div class="m-con-bd">
+            <h1 class="outcomes bold">借款数据</h1>
+            <div class="m-con-bd" style="display:none">
+                <ul class="clearfix data1 data3">
+                    <li id="J_datadisclos_unreceived">
+                        <i class="logo10"></i>
+                        <p class="number"></p>
+                        <p class="describe"></p>
+                    </li>
+                    <li id="J_datadisclos_overamunt">
+                        <i class="logo8"></i>
+                        <p class="number"></p>
+                        <p class="describe"></p>
+                    </li>
+                    <li id="J_datadisclos_projectoverrate">
+                        <i class="logo9"></i>
+                        <p class="number"></p>
+                        <p class="describe"></p>
+                    </li>
+                    <li class="last" id="J_datadisclos_amountoverrate">
+                        <i class="logo11"></i>
+                        <p class="number"></p>
+                        <p class="describe"></p>
+                    </li>
+                </ul>
+                <p class="deadline" id="J_datadisclos_borrdate"></p>
+            </div>
+            <p class="servicetime-pad-t">资金投向的地域分布</p>
+            <ul class="borrowdata clearfix">
+                <li class="tabledata">
+                    <table cellpadding="0" cellspacing="0" id="J_datadisclos_rank">
+                        <tr>
+                            <td class="head">投资地域</td>
+                            <td class="head">金额占比</td>
+                        </tr>
+                    </table>
+                </li>
+                <li id="china" class="map"></li>
+            </ul>
+
+            <p class="deadline" id="J_datadisclos_mapdate">截止日期：2016年11月底</p>
+            <ul class="borrowtype clearfix">
+                <li class="age" id="J_datadisclos_timelimit"></li>
+                <li class="sex" id="J_datadisclos_industry"></li>
+            </ul>
+            <p class="deadline" id="J_datadisclos_industrydate">截止日期：2016年11月底</p>
+        </div>
+    </li>
+</ul>
+<script src="js/datadisclos.js"></script>
+</body>
+</html>

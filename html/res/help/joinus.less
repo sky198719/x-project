@@ -1,0 +1,96 @@
+@import "css/index";
+
+/*加入我们*/
+.g-right {
+  .m-con-wrap {
+    .mb40{
+      margin-bottom: 40px;
+    }
+    .m-con-bd {
+      border-bottom: 1px dashed #eeeeee;
+      padding: 20px 0 20px 20px;
+      p.jobname {
+        font-size: @font18px;
+        color: @col-000;
+        padding-left: 0;
+        span {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          vertical-align: middle;
+          margin-right: 20px;
+          cursor: pointer;
+          &.job_down {
+            background: url("@{imgurl}job_down.png") no-repeat center;
+          }
+          &.job_up {
+            background: url("@{imgurl}job_up.png") no-repeat center;
+          }
+        }
+
+      }
+      ul.jobdescr {
+        padding-left: 45px;
+        li {
+          font-size: @font14px;
+          color: @col-666;
+          line-height: 30px;
+          &.jobname {
+            font-size: @font18px;
+            color: @col-000;
+          }
+          &.tit {
+            font-size: @font16px;
+            color: @col-000;
+          }
+        }
+      }
+      &.last{
+        padding-left:65px;
+        border-bottom: none
+      }
+      .mb15 {
+        margin-bottom: 15px;
+      }
+    }
+    .empfare {
+      border-bottom: none;
+      margin: 25px 0;
+      ul.welfare {
+        width: 904px;
+        height: 224px;
+        li {
+          float: left;
+          display: inline-block;
+          margin-right: 16px;
+          width: 168px;
+          height: 224px;
+          &.wf1 {
+            background: url("@{imgurl}welfare1.png") no-repeat center;
+          }
+          &.wf2 {
+            background: url("@{imgurl}welfare2.png") no-repeat center;
+          }
+          &.wf3 {
+            background: url("@{imgurl}welfare3.png") no-repeat center;
+          }
+          &.wf4 {
+            background: url("@{imgurl}welfare4.png") no-repeat center;
+          }
+          &.wf5 {
+            background: url("@{imgurl}welfare5.png") no-repeat center;
+          }
+          &.last {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .joinus-topbg {
+    background: url("@{imgurl}joinus-top.png") no-repeat center;
+    width: 970px;
+    height: 200px;
+  }
+}

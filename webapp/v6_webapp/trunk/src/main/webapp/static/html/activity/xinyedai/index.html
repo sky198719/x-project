@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>新新贷贷款申请</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 , maximum-scale=1.0, user-scalable=0" />
+<link rel="stylesheet" href="styles/library/reset.css" />
+<link rel="stylesheet" href="styles/common/common.css" />
+<link rel="stylesheet" href="styles/custom/index.css" />
+</head>
+
+<body>
+<div class="header"></div>
+
+<img src="images/custom/index/logo.png" class="logo" />
+<div class="formBox">
+	<ul>
+		<li id="mobile">
+			<label>手机号</label>
+			<input type="text" placeholder="请输入手机号" maxlength=11 value="" />
+		</li>
+		<li id="verifyCode">
+			<label>图片验证码</label>
+			<input type="text" placeholder="请输入图片验证码" maxlength=4 value="" />
+			<img src="" />
+		</li>
+		<li id="messageCode">
+			<label>短信验证码</label>
+			<input type="text" placeholder="请输入短信验证码" maxlength=6 value="" />
+			<span>发送验证码</span>
+		</li>
+	</ul>
+	<button>下一步</button>
+</div>
+
+<div class="layer"></div>
+<div class="alertBox">
+	<img src="images/common/alertBox2.png" class="close" />
+	<img src="images/common/alertBox1.png" />
+	<strong></strong>
+	<span>知道了</span>
+</div>
+
+<script src="scripts/library/require.js" data-main="scripts/custom/index"></script>
+</body>
+</html>

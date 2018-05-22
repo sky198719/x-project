@@ -1,0 +1,34 @@
+{{#each list}}
+	<div class="row">
+		{{#item1}}
+	    <div class="col-50 xxstore_col50 goodsItem" style="margin-left: 9px; " data-goodsId="{{id}}">
+	        <div class="card ks-card-header-pic xxstore_card">
+	            <div style="background-image:url(static/img/activity/game/awardPic/{{goodsNum}}.jpg)" valign="bottom" class="card-header no-border forexam"></div>
+	            <div class="card-content">
+	                <div class="card-content-inner card-xxstore-inner">
+	                    <p class="font15 font-666 mb5" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{goodsName}}</p>
+	
+	                    <p class="reletive mgpd0"><a class="xxstore_btn">{{xinxinCoinTotalPay}}新新币</a></p>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    {{/item1}}
+	    {{#if flag2}}
+		    {{#item2}}
+		    <div class="col-50 xxstore_col50 goodsItem" style="margin-right:3px; " data-goodsId="{{id}}">
+		        <div class="card ks-card-header-pic xxstore_card">
+		            <div style="background-image:url(static/img/activity/game/awardPic/{{goodsNum}}.jpg)" valign="bottom" class="card-header no-border forexam"></div>
+		            <div class="card-content">
+		                <div class="card-content-inner card-xxstore-inner">
+		                    <p class="font15 font-666 mb5" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{goodsName}}</p>
+		
+		                    <p class="reletive mgpd0"><a class="xxstore_btn">{{xinxinCoinTotalPay}}新新币</a></p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    {{/item2}}
+	    {{/if}}
+	</div>
+{{/each}}

@@ -1,0 +1,222 @@
+
+body{
+  background:#060024 url(../imgs/full-bg.png) no-repeat center / 100% 100%;
+}
+
+/*------共用-背景星点------*/
+@-webkit-keyframes rotate {
+  0% {-webkit-transform:rotate(0deg)}
+  100% {-webkit-transform:rotate(360deg)}}
+@-moz-keyframes rotate {0% {-moz-transform:rotate(0deg)}
+  100% {-moz-transform:rotate(360deg)}}
+@-o-keyframes rotate {0% {-o-transform:rotate(0deg)}
+  100% {-o-transform:rotate(360deg)}}
+@keyframes rotate {0% {transform:rotate(0deg)}
+  100% {transform:rotate(360deg)}}
+
+/*------ 共用-背景星点 end ------*/
+
+#star {
+  width: 120vh;
+  height: 120vh;
+  background: url(../imgs/star2.png) no-repeat center/cover;
+  position: fixed;
+  top: -10vh;
+  left: -20vh;
+  animation: rotate 50s linear infinite; -webkit-animation: rotate 50s linear infinite;
+  opacity: .5;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+}
+
+
+//容器
+.swiper-container, .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  padding: 1vh 6vw;;
+  overflow: hidden;
+}
+
+//未用到，保留
+//.swiper-pagination-bullet {width: 5px;height: 5px;background: #fff;opacity: .2; }
+//.swiper-pagination-bullet-active { opacity: .5; }
+
+//箭头
+.ui-arrow {
+  display: inline-block;
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  z-index: 9;
+  animation: am-arrow 1.5s infinite ease-in-out;
+  -webkit-animation: am-arrow 1.5s infinite ease-in-out;
+  bottom: 0;
+  left: 50%;
+  margin-left: -.8rem;
+  overflow: hidden;
+}
+
+.ui-arrow:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #20d080;
+  transform: rotate(45deg) translate(-50%, -50%);
+  -webkit-transform: rotate(45deg) translate(-50%, -50%);
+}
+
+.ui-arrow.isend:before {
+  display: none;
+}
+.ui-arrow.isend:after{
+  content: attr(data-end);
+  opacity: 0;
+  color:#20d080;
+}
+
+//内容容器+垂直居中
+.vc {
+  width: 100%;
+  max-width: 414px;
+  position: relative;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+//图表动态过注-全局共用
+.swiper-slide-active .xui-chart-bar .chart-bar {
+  transition: all 1s ease .3s;
+  -webkit-transition: all 1s ease .3s;
+}
+
+//二级标题-全局共用
+
+
+.mix-title2 {
+  display: inline-block;
+  color: #191919;
+  background: #c58b53;
+  text-align: center;
+  line-height: 2rem;
+  padding: 0 1rem .2rem;
+  overflow: hidden;
+}
+.mix-title2 > span{
+  position: relative;
+}
+.mix-title2 > span:before{
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  width: 1000%;
+  height: 1px;
+  //background: #191919;
+  background: 	linear-gradient(0deg, rgba(0,0,0,0) 30%, rgba(25,25,25,1.00) 70%);
+  right: 0;
+  bottom:-.3rem;
+}
+
+.mix-title1 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(90deg,#191919 1%,rgba(158,78,254,0) 1%,rgba(101,125,254,0) 99%,#191919 99%),linear-gradient(90deg,#4ea1c2 11%,#21cf81 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2.5rem;
+  padding: 1rem 0 0 1.7rem;
+}
+
+
+.mix-title1>i{
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../imgs/title.png) no-repeat center;
+  background-size: contain;
+}
+
+//暂时放一下
+//page18
+
+.mix-title3 {
+  //font-size: 12px;
+  margin: 2vh 0 1vh 0;
+  padding-left: 1.3rem;
+  position: relative;
+  text-align: justify
+}
+
+.mix-title3:after {
+  content: attr(data-note);
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  font-size: .8em;
+  margin-top: .2em;
+  color: #888888;
+}
+
+.mix-title3.co-white:after {
+  color: #888888;
+}
+
+.mix-title3:before {
+  content: " ";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  top: 50%;
+  margin-top: -.5em;
+  left: 1px;
+  position: absolute;
+  border: 1px solid $bg-back;
+
+}
+
+
+.mix-title3.co-white:before {
+  background: #fff;
+}
+
+.mix-title3.co-read:before {
+  background: #cccccc;
+}
+
+.mix-title4{
+  display: inline-block;
+  //position: absolute;
+  //right: 0;
+  font-size: .8em;
+  margin-top: .2em;
+  color: #888888;
+}
+
+.new-text {
+  max-width: 100%;
+}
+
+.new-text img {
+  max-width: 100%;
+}
+
+
+.com-title4[co=main] {
+  background-image: linear-gradient(0deg, rgba(119,77,255,1.00) 18%, rgba(32,208,128,1.00) 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

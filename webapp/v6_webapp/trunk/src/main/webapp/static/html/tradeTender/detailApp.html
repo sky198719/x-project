@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>散标债权详情页</title>
+    <style>
+        body {
+            font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            font-size: 14px;
+            line-height: 1.4;
+            width: 100%;
+            -webkit-text-size-adjust: 100%;
+            overflow: hidden;
+            background: #efeff4;
+            overflow: auto;
+        }
+
+        .content-block-title {
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #6d6d72;
+            margin: 15px 15px 0px;
+            font-weight: bold;
+        }
+
+        .list-block {
+            margin: 15px 0;
+            font-size: 0.8rem;
+        }
+
+        .list-block ul {
+            background: #fff;
+            list-style: none;
+            padding: 0;
+            margin: 10px;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .list-block li {
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .list-block .item-content {
+            box-sizing: border-box;
+            min-height: 50px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .list-block .item-inner {
+            padding-right: 15px;
+            position: relative;
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: 7px;
+            min-height: 44px;
+            box-sizing: border-box;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            overflow: hidden;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -ms-flex-item-align: stretch;
+            -webkit-align-self: stretch;
+            align-self: stretch;
+        }
+
+        .list-block .item-title {
+            -webkit-flex-shrink: 1;
+            -ms-flex: 0 1 auto;
+            flex-shrink: 1;
+            min-width: 0;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            margin-left: 15px;
+        }
+
+        .list-block .item-after {
+            white-space: nowrap;
+            color: #8e8e93;
+            -webkit-flex-shrink: 0;
+            -ms-flex: 0 0 auto;
+            flex-shrink: 0;
+            margin-left: 5px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .list-block .item-inner:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: auto;
+            top: auto;
+            height: 1px;
+            width: 100%;
+            background-color: #f2f2f5;
+            display: block;
+            z-index: 15;
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
+
+        .rectangle {
+            width: 5px;
+            height: 0.9rem;
+            background: #3f9bff;
+            position: absolute;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content-block-title">
+    <span class="rectangle"></span>
+    <span style="margin-left: 10px;">原始标的借款详情</span>
+</div>
+<div class="list-block">
+    <ul>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">标的状态</div>
+                    <div class="item-after" id="statusValue"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">起投金额</div>
+                    <div class="item-after"><span id="lowesttender">0</span>元</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">预计起息日</div>
+                    <div class="item-after">满标日计息</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">资金用途</div>
+                    <div class="item-after"><span id="use"></span></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="content-block-title">
+    <span class="rectangle"></span>
+    <span style="margin-left: 10px;">费用说明</span>
+</div>
+<div class="list-block">
+    <ul>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">充值费</div>
+                    <div class="item-after"><span id="rechargeFee">0元</span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">提现费</div>
+                    <div class="item-after" style="max-width: 60%;white-space:pre-wrap;" id="accountCash">
+                        每月可免费提现0次，超出将按提现金额的0%收取手续费，每笔最低2元，最高50元(当月免费提现次数不可叠加至次月使用)
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">收益管理费</div>
+                    <div class="item-after" id="revenueManagementFee">应收利息的0%</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">债权转让手续费</div>
+                    <div class="item-after" style="max-width: 60%;white-space:pre-wrap;word-break: break-all;"
+                         id="tradeRequest">
+                        VIP用户转让手续费为本金的0%，非VIP用户为0%，最低为人民币0元
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="content-block-title" id="userType_1_1" style="display: none;">
+    <span class="rectangle"></span>
+    <span style="margin-left: 10px;">借款人信息</span>
+</div>
+<div class="list-block" id="userType_1_2" style="display: none;">
+    <ul>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">发布者</div>
+                    <div class="item-after"><span id="nickName"></span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">借款人姓名</div>
+                    <div class="item-after"><span id="realName"></span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">身份证号码</div>
+                    <div class="item-after"><span id="idCardNo"></span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">信用等级</div>
+                    <div class="item-after"><span id="creditLevel"></span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">成功借款次数</div>
+                    <div class="item-after"><span id="borrowCount"></span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">逾期次数</div>
+                    <div class="item-after"><span id="overdue"></span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">逾期总金额</div>
+                    <div class="item-after"><span id="overdueAccount"></span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">所在地</div>
+                    <div class="item-after" style="max-width: 60%;white-space: pre-wrap;word-break: break-all;"
+                         id="nativePlace"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">每月收入</div>
+                    <div class="item-after"><span id="income"></span></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">住房条件</div>
+                    <div class="item-after" id="isHousePurchase"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">是否购车</div>
+                    <div class="item-after" id="isCarPurchase"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">借款描述</div>
+                    <div class="item-after"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title" id="content" style="white-space: pre-wrap;word-break: break-all;"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="content-block-title" id="userType_2_1" style="display: none;">
+    <span class="rectangle"></span>
+    <span style="margin-left: 10px;">借款企业信息</span>
+</div>
+<div class="list-block" id="userType_2_2" style="display: none;">
+    <ul>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">企业名称</div>
+                    <div class="item-after" id="companyName"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">注册资本</div>
+                    <div class="item-after" id="registeredCapital"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">注册地址</div>
+                    <div class="item-after" id="registeredAddress"
+                         style="max-width: 60%;white-space: pre-wrap;word-break: break-all;"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">成立时间</div>
+                    <div class="item-after" id="registrationTime"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">法定代表人</div>
+                    <div class="item-after" id="comRepName"></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">办公地点</div>
+                    <div class="item-after" id="companyAddress"
+                         style="max-width: 60%;white-space: pre-wrap;word-break: break-all;"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="content-block-title" id="quotaMange" style="display: none;">
+    <span class="rectangle"></span>
+    <span style="margin-left: 10px;">限额管理</span>
+</div>
+<div class="list-block" id="quotaMange_1" style="display: none;">
+    <ul>
+        <li>
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title" id="quotaMange_1_com" style="white-space: pre-wrap;
+                        word-break: break-all;"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="../../lib/jquery/jquery1.11.1.min.js"></script>
+<script type="text/javascript">
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script type="text/javascript">
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)return  decodeURI(r[2]);
+        return null;
+    }
+    $(document).ready(function () {
+        var borrowId = GetQueryString("borrowId");
+
+        //标详情
+        borrowDetail(borrowId);
+        accountCost();
+    });
+
+    function accountCost() {
+        $.ajax({
+            url: '../../../account/cost.do',
+            dataType: 'json',
+            success: function (data) {
+                //充值费
+                var rechargeFee = data.accountCost.rechargeFee;
+                $("#rechargeFee").html(rechargeFee + '元');
+
+                //提现费率手续费
+                var accountCashRate = data.accountCost.accountCashRate;
+                $("#accountCashRate").html(accountCashRate);
+
+                //免费提现次数
+                var accountCashFree = data.accountCost.accountCashFree;
+                $("#accountCashFree").html(accountCashFree);
+
+                //最低手续费:2元
+                var accountCashMinfee = data.accountCost.accountCashMinfee;
+                accountCashMinfee = accountCashMinfee == undefined ? 0 : accountCashMinfee;
+
+                //最高手续费
+                var accountCashMaxfee = data.accountCost.accountCashMaxfee;
+                accountCashMaxfee = accountCashMaxfee == undefined ? 0 : accountCashMaxfee;
+
+                if (accountCashFree == 0) {
+                    $("#accountCash").html("0.00元");
+                } else {
+                    $("#accountCash").html("每月可免费提现" + accountCashFree + "次，超出将按提现金额的" + accountCashRate + "%收取手续费，每笔最低" + accountCashMinfee + "元，最高" + accountCashMaxfee + "元(当月免费提现次数不可叠加至次月使用)");
+
+                }
+
+                //收益管理费
+                var revenueManagementFee = data.accountCost.revenueManagementFee;
+                revenueManagementFee = revenueManagementFee * 100;
+                $("#revenueManagementFee").html("应收利息的" + revenueManagementFee + "%");
+
+                //债权转让手续费VIP
+                var tradeRequestVipFee = data.accountCost.tradeRequestVipFee;
+                tradeRequestVipFee = tradeRequestVipFee * 100;
+
+                //债权转让手续费非vip
+                var tradeRequestFee = data.accountCost.tradeRequestFee;
+                tradeRequestFee = tradeRequestFee * 100;
+
+                //债权转让手续费最低
+                var tradeRequestMinFee = data.accountCost.tradeRequestMinFee;
+
+                $("#tradeRequest").html("VIP用户转让手续费为本金的" + tradeRequestVipFee + "%，非VIP用户为" + tradeRequestFee + "%，最低为人民币" + tradeRequestMinFee + "元");
+            }
+        });
+    }
+    function borrowDetail(borrowId) {
+        $.ajax({
+            url: "../../../borrow/detail/" + borrowId + ".do",
+            data: {},
+            dataType: 'json',
+            success: function (data) {
+                var lowesttender = data.borrow.LOWESTTENDER;
+                $("#lowesttender").html(lowesttender);
+
+                var use = data.borrow.USE;
+                $("#use").html(use);
+
+                var userType = data.baseInfo.userType;
+                var account = data.borrow.ACCOUNT;
+                //个人
+                if (userType == 1 && account <= 200000) {
+                    $("#quotaMange").show();
+                    $("#quotaMange_1").show();
+                    $("#quotaMange_1_com").show();
+                    $("#quotaMange_1_com").html("该自然人在本平台借款余额未超过人民币20万元，在不同网络借贷信息中介机构平台借款总余额未超过人民币100万元。");
+                } else if (userType == 2 && account <= 1000000) {
+                    $("#quotaMange").show();
+                    $("#quotaMange_1").show();
+                    $("#quotaMange_1_com").show();
+                    $("#quotaMange_1_com").html("该法人或其他组织在本平台借款余额未超过人民币100万元，在不同网络借贷信息中介机构平台借款总余额未超过人民币500万元。");
+                }
+
+                var statusValue = data.borrow.STATUSVALUE;
+                $("#statusValue").html(statusValue);
+
+                var userType = data.baseInfo.userType;
+                if (userType == 1) {
+                    var nickName = data.borrowDetail.nickName;
+                    $("#nickName").html(nickName);
+
+                    var realName = data.baseInfo.realName;
+                    $("#realName").html(realName);
+
+                    var idCardNo = data.baseInfo.idCardNo;
+                    $("#idCardNo").html(idCardNo);
+
+                    var creditLevel = data.borrowDetail.creditLevel;
+                    $("#creditLevel").html(creditLevel);
+
+                    var borrowCount = data.borrowCount;
+                    borrowCount = borrowCount == undefined ? 0 : borrowCount;
+                    $("#borrowCount").html(borrowCount + '次');
+
+                    var overdue = data.overdue;
+                    overdue = overdue == undefined ? 0 : overdue;
+                    $("#overdue").html(overdue + '次');
+
+                    var overdueAccount = data.overdueAccount;
+                    overdueAccount = overdueAccount == undefined ? 0 : overdueAccount;
+                    $("#overdueAccount").html(overdueAccount + '元');
+
+                    var nativePlace = data.provinceCity;
+                    $("#nativePlace").html(nativePlace);
+
+                    var income = data.baseInfo.income;
+                    income = income == undefined ? '无' : income;
+                    $("#income").html(income);
+
+                    var isHousePurchase = data.isHousePurchase;
+                    if (isHousePurchase != undefined && isHousePurchase == 1) {
+                        $("#isHousePurchase").html("购房")
+                    } else {
+                        $("#isHousePurchase").html("租房")
+                    }
+
+                    var isCarPurchase = data.isCarPurchase;
+                    if (isCarPurchase != undefined && isCarPurchase == 1) {
+                        $("#isCarPurchase").html("是");
+                    } else {
+                        $("#isCarPurchase").html("否");
+                    }
+
+                    var content = data.borrowDetail.content;
+                    $("#content").html(content);
+
+                    $("#userType_1_1").show();
+                    $("#userType_1_2").show();
+                } else {
+
+                    var companyName = data.companyInfo.companyName;
+                    $("#companyName").html(companyName);
+
+                    var registeredAddress = data.companyInfo.registeredAddress;
+                    $("#registeredAddress").html(registeredAddress);
+
+                    var registeredCapital = data.companyInfo.registeredCapital;
+                    registeredCapital = registeredCapital == undefined ? 0 : registeredCapital;
+                    $("#registeredCapital").html(registeredCapital + "万元");
+
+                    var registrationTime = data.companyInfo.registrationTime;
+                    $("#registrationTime").html(getMyDate(registrationTime));
+
+                    var comRepName = data.companyInfo.comRepName;
+                    $("#comRepName").html(comRepName);
+
+                    var companyAddress = data.companyInfo.companyAddress;
+                    $("#companyAddress").html(companyAddress);
+
+                    $("#userType_2_1").show();
+                    $("#userType_2_2").show();
+                }
+            }
+        });
+    }
+    function getMyDate(str) {
+        var oDate = new Date(str),
+                oYear = oDate.getFullYear(),
+                oMonth = oDate.getMonth() + 1,
+                oDay = oDate.getDate(),
+                oHour = oDate.getHours(),
+                oMin = oDate.getMinutes(),
+                oSen = oDate.getSeconds(),
+                oTime = oYear + '-' + getzf(oMonth) + '-' + getzf(oDay);//最后拼接时间
+        return oTime;
+    }
+    //补0操作
+    function getzf(num) {
+        if (parseInt(num) < 10) {
+            num = '0' + num;
+        }
+        return num;
+    }
+</script>
+</body>
+</html>

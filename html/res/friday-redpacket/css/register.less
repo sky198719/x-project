@@ -1,0 +1,228 @@
+//注册背景颜色
+@register-bkg-color:rgba(0,0,0,.4);
+@read-register-rule:#ffcc66;
+@user-agree-color:#ccc;
+@input-color:#999;
+@get-yzm-color:#666666;
+
+//默认属性
+input,input:focus{
+  background:none;
+  outline:none;
+  border:0;
+  -webkit-appearance:none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button{
+  border: none;
+  outline: none;
+}
+::-webkit-placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+::-moz-placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+::-o-placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+:-ms-placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+::placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+.user-verigy .disfont{
+  font-size: 12px !important;
+}
+//给属性加前缀
+.prefixAdd(@name,@val){
+    @{name}:@val;
+  -webkit-@{name}:@val;
+  -moz-@{name}:@val;
+  -o-@{name}:@val;
+  -ms-@{name}:@val;
+}
+.borderRadius(@borderR){
+  border-radius: @borderR;
+  -webkit-border-radius: @borderR;
+  -moz-border-radius: @borderR;
+  //兼容IE8以下的border-radius
+  behavior:url("css/ie-css3.htc");
+}
+//注册模块
+.register{
+  float:right;
+  position:relative;
+  z-index:30;
+  margin-top: 126px;
+  margin-right: 6px;
+  padding: 20px 30px;
+  background: @register-bkg-color;
+  .borderRadius(4px);
+  .register-title{
+    margin-bottom: 12px;
+    height: 37px;
+    background: url("img/register-title.png") center no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+  }
+  .user-common{
+    height: 38px;
+    margin-bottom: 14px;
+    input{
+      height: 38px;
+      line-height: 38px;
+      border: 1px solid #f0f0f0;
+      text-indent: 6px;
+      font-size:14px;
+      color: @input-color;
+    }
+  }
+  .user-num,.user-psw{
+    width: 302px;
+  }
+  .user-psw{
+    position: relative;
+    .psw-cur{
+      position: absolute;
+      display: inline-block;
+      left:6px;
+      top: 12px;
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      color: @input-color;
+    }
+  }
+  .J-num,.J-psw{
+    width:302px;
+    height: 38px;
+    background: #f6f5f5;
+  }
+  //验证码
+  .user-verigy{
+    margin-bottom: 14px;
+  }
+  .user-voice{
+    text-align: right;
+    margin-bottom: 18px;
+  }
+  .user-verigy .J-verify,.user-verigy .J-phoneyzm{
+    float: left;
+    width: 178px;
+    height: 38px;
+    background:#f6f5f5;
+
+  }
+  .user-verigy .change-verify,.user-verigy .get-phoneyzm{
+    float: right;
+    margin-left: 8px;
+    width: 116px;
+    height: 38px;
+    background:#f6f5f5;
+    color:  @get-yzm-color;
+    cursor: pointer;
+    .borderRadius(4px);
+  }
+  //语音验证码
+  .user-voice .J-voiceyzm{
+    font-size: 14px;
+    color: #fff;
+  }
+  .user-verigy .get-phoneyzm{
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    line-height: 38px;
+  }
+  //同意协议
+  .user-agree{
+    margin-bottom: 16px;
+    position: relative;
+    span{
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 14px;
+      font-size: 14px;
+      color: @user-agree-color;
+      text-indent: 8px;
+      a{
+        font-size: 14px;
+        color: @read-register-rule;
+        cursor: pointer;
+      }
+    }
+  }
+  .user-agree .check-style{
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    position: relative;
+    .user-check{
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      margin-top: -8px;
+      left: 50%;
+      margin-left: -8px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    .checked{
+      background: url("img/checked.png") center no-repeat;
+      background-size: 16px 16px;
+    }
+  }
+  .have-login{
+    text-align: right;
+    font-size: 14px;
+    color: #fff;
+  }
+  .have-login .logined{
+    text-decoration: underline;
+    color: @read-register-rule;
+  }
+  .cur{
+    width: 302px;
+    height: 20px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    font-size: 14px;
+    color: #fff;
+  }
+  .cur-special{
+    width: 268px;
+    color: #fff;
+  }
+}
+.register-btn{
+  width: 304px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  margin:0 auto 14px;
+  cursor: pointer;
+  background: url("img/register-btn.png") center no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}

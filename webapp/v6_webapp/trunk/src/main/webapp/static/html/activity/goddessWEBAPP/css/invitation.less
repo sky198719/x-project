@@ -1,0 +1,267 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "MicroSoft YaHei" !important;
+}
+
+/*基调色*/
+@mainColor: #ff4e97;
+/*根字体函数*/
+@baseFontSize: 64;
+.px2rem(@name,@px) {
+    @{name}: @px/@baseFontSize *1rem;
+}
+
+/*字体DPR适配*/
+.font-size(@px) {
+  font-size: round(@px /2)*1px;
+  [data-dpr="2"] & {
+    font-size: @px *1px;
+  }
+  [data-dpr="2.5"] & {
+    font-size: round(@px *2.5/2)*1px;
+  }
+  [data-dpr="2.75"] & {
+    font-size: round(@px *2.75/2)*1px;
+  }
+  [data-dpr="3"] & {
+    font-size: round(@px /2*3)*1px;
+  }
+  [data-dpr="4"] & {
+    font-size: @px *2px;
+  }
+}
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "MicroSoft YaHei", "sans-serif";
+}
+ul, ol,li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: @mainColor;
+}
+a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
+}
+input, textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+img{
+  vertical-align: bottom;
+  display: block;
+}
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+.clearfix::after, .clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.m_r10 {
+  margin-right: 10/64rem;
+}
+.m_l10 {
+  margin-left: 10/64rem;
+}
+.m_t10 {
+  margin-top: 10/64rem;
+}
+.m_b10 {
+  margin-bottom: 10/64rem;
+}
+.center{
+  margin: 0 auto;
+  text-align: center;
+}
+/*顶部*/
+header {
+  width: 100%;
+  .px2rem(height, 1057rem);
+  background: url("../img/in-header.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.about {
+  width: 100%;
+  .px2rem(height, 574rem);
+  background: url("../img/in-about.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.red-raiders {
+  width: 100%;
+  .px2rem(height, 571rem);
+  background: url("../img/red-raiders.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.footer-box{
+  width: 100%;
+  .px2rem(height, 100rem);
+}
+footer {
+  width: 100%;
+  .px2rem(height, 100rem);
+  background: url("../img/in-footer.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  bottom:0;
+  left:0;
+  a {
+    display: block;
+    width: 100%;
+    .px2rem(height, 100rem);
+  }
+}
+
+.pop-up {
+  position: absolute;
+  top:0;
+  left:0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  .px2rem(height,2302rem);
+  overflow: hidden;
+  z-index: 10000;
+  display: none;
+  .box {
+    .px2rem(width, 488rem);
+    margin-top:20%;
+    margin-left:14%;
+    background: url("../img/popup-userLogin-bg.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    border:6/64rem solid @mainColor;
+    border-radius: 20/64rem;
+    position: relative;
+  }
+  .title{
+    .px2rem(height,58rem);
+    .px2rem(width,264rem);
+    background: url("../img/title.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    .px2rem(margin-top,20rem);
+    .px2rem(margin-bottom,20rem);
+  }
+  .close {
+    background: url("../img/close.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    .px2rem(height, 58rem);
+    .px2rem(width, 58rem);
+    position: absolute;
+    .px2rem(right, -30rem);
+    .px2rem(top, -30rem);
+    z-index:3;
+  }
+    .top-input, .input-box {
+      margin: 0 auto;
+      display: block;
+      .px2rem(width, 427rem);
+      .px2rem(height, 60rem);
+      .px2rem(line-height, 60rem);
+      border: 1/64rem solid @mainColor;
+      .px2rem(margin-bottom, 6rem);
+      .px2rem(margin-top, 6rem);
+      .px2rem(border-radius, 5rem);
+      .px2rem(padding-left, 18rem);
+    }
+    .input-box {
+      position: relative;
+      background: #ffffff;
+      .validata-img, .input-btn {
+        .px2rem(width, 152rem);
+        .px2rem(height, 48rem);
+        position: absolute;
+        .px2rem(top, 5rem);
+        .px2rem(right, 8rem);
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .input-btn {
+        background: @mainColor;
+        .px2rem(border-radius, 5rem);
+        color: #fff;
+        .font-size(23px);
+        text-align: center;
+        .px2rem(line-height,48rem);
+      }
+      .input-time{
+        .px2rem(margin-left,-20rem);
+      }
+    }
+  .agreement {
+    .px2rem(margin-top, 14rem);
+    .px2rem(margin-left, 20rem);
+    .px2rem(height, 30rem);
+    .px2rem(line-height, 30rem);
+    overflow: hidden;
+    #cbox {
+      display: none;
+    }
+    label {
+      display: inline-block;
+      .px2rem(height, 30rem);
+      .px2rem(width, 30rem);
+      background: @mainColor;
+      .px2rem(border-radius, 5rem);
+
+    }
+    input[type=checkbox]:checked + label {
+      &:after{
+        display: block;
+        content: '';
+        .px2rem(height, 30rem);
+        .px2rem(width, 30rem);
+        background: url("../img/checkbox.png") 0 0 no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    span {
+      display: inline-block;
+      .px2rem(margin-left, 14rem);
+      color: #c67596;
+    }
+  }
+  .login-error{
+    .px2rem(height,40rem);
+    .px2rem(line-height,40rem);
+    display: none;
+  }
+  .sign {
+    display: block;
+    .px2rem(height, 66rem);
+    .px2rem(width, 224rem);
+    .px2rem(margin-top,16rem);
+    background: url("../img/sign-up.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+  .immediately{
+    .px2rem(margin-top,20rem);
+    .px2rem(margin-bottom,20rem);
+    span:first-child{
+      color: #c67596;
+      .px2rem(margin-right,18rem);
+    }
+    a:link,a:visited,a:hover,a:active{
+      text-decoration: none;
+    }
+  }
+}

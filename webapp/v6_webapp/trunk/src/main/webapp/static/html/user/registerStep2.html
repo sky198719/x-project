@@ -1,0 +1,68 @@
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a>
+        </div>
+        <div class="center sliding">注册新新贷</div>
+    </div>
+</div>
+<!--register-->
+<div class="register-step2-screen">
+    <div class="page" data-page="registerStep2" id="register-step2" directory="user">
+        <div class="page-content register-step2-content">
+            <form>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">登录密码</div>
+                                <div class="item-input">
+                                    <input type="password" name="password" placeholder="请设置登录密码" id="password">
+                                </div>
+                                <div class="item-after"><img src="static/img/xxd/eye-close.png" width="30" id="pwdShow"/></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">用户名</div>
+                                <div class="item-input login-item">
+                                    <input type="text" name="username" placeholder="请设置用户名" id="username">
+                                </div>
+                                <div class="item-after">(选填项)</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block" style="margin-top:0;">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-input item-inline">
+                                        <label class="label-switch">
+                                            <input type="checkbox" checked="checked" id="reg-agreement">
+
+                                            <div class="checkbox"></div>
+                                        </label>
+                                    </div>
+                                    <input type="hidden" id="uuid"/>
+                                    <a href="#"
+                                       class="reg-popup a-xy" style="font-size: 0.7rem;">我已同意《<span style="color:#3f9bff;">新新贷注册使用协议</span>》</a ><a class="zijin-popup a-xy" style="font-size: 0.7rem;">《<span style="color:#3f9bff;">资金出借风险提示函</span>》</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li class="mr10 ml10"><a href="#" class="button button-51 active" id="reg-submit">完成注册</a></li>
+                    </ul>
+                    <div class="list-block-label">
+                        <p class="mt20"><a href="#" class="back link right" id="close-reg">关闭</a></p>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

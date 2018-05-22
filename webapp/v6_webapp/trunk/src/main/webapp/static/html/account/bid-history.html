@@ -1,0 +1,120 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">投资记录</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="bidHistory" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <input type="hidden" id="bcurrentPage" value="1"/>
+            <input type="hidden" id="btotalPage" value="1"/>
+
+            <div class="content-block account_tit">
+                <div class="list-block media-list">
+                    <ul>
+                        <li class="swipeout">
+                            <div class="swipeout-content" style="background-color: #ffba5f;padding: 3%;">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title font20">累计投资(元)</div>
+                                        <div class="item-after"><span id="btenderSum"
+                                                                      class="font-white font20">0.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="list-block" style="margin-top:15px;">
+                <ul>
+                    <li>
+                        <a href="#" class="item-link item-content ic-stepUpward" id="stepUpward">
+                            <div class="item-inner">
+                                <div class="item-title font-grey"><h5>步步高升</h5></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content ic-monthFinance" id="monthFinance">
+                            <div class="item-inner">
+                                <div class="item-title font-grey"><h5>月进斗金</h5></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li style="display: none">
+                        <a href="#" class="item-link item-content ic-sevenDays" id="sevenDays">
+                            <div class="item-inner">
+                                <div class="item-title font-grey"><h5>七天大胜</h5></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li style="display: none;">
+                        <a href="#" class="item-link item-content ic-thirtyDays" id="thirtyDays">
+                            <div class="item-inner">
+                                <div class="item-title font-grey"><h5>新手专享30天</h5></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="#" class="item-link item-content ic-fund" name="planHistory">
+                           <div class="item-inner">
+                               <div class="item-title font-grey"><h5>新元宝</h5></div>
+                           </div>
+                       </a>
+                   </li>
+                    <li>
+                       <a href="#" class="item-link item-content ic-yyp" id="yypHistory">
+                           <div class="item-inner">
+                               <div class="item-title font-grey"><h5>月月派</h5></div>
+                           </div>
+                       </a>
+                   </li>
+                    <li>
+                       <a href="#" class="item-link item-content ic-borrow" name="borrowHistory">
+                           <div class="item-inner">
+                               <div class="item-title font-grey"><h5>散标直投</h5></div>
+                           </div>
+                       </a>
+                   </li>
+                    <li>
+                         <a href="#" class="item-link item-content ic-trade" name="tradeTransfer">
+                             <div class="item-inner">
+                                 <div class="item-title font-grey"><h5>债权转让</h5></div>
+                             </div>
+                         </a>
+                     </li>
+                    <li>
+                        <a href="#" class="item-link item-content ic-daydayEarnings" id="daydayEarnings">
+                            <div class="item-inner">
+                                <div class="item-title font-grey"><h5>日日盈</h5></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content ic-xinshou" name="xinshou">
+                            <div class="item-inner">
+                                <div class="item-title font-grey"><h5>新手标</h5></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

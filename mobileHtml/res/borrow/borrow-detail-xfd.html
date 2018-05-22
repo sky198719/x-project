@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xui="0.0.1" frame="mobile3" browser="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="xinxindai">
+    <meta name="author" content="UI Manxiaoman | Front-end Junbo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>借款详情</title>
+    <link href="css/main.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="n1e">
+    <h5 class="xui-title" theme="003">标的借款详情</h5>
+</div>
+<ul class="xui-list cus-detail-list n1e-z" theme="002">
+    <li class="ew ew-fix">
+        <em>起投金额</em>
+        <em><span id="lowesttender"></span>元</em>
+    </li>
+    <li class="ew ew-fix">
+        <em>预计起息日</em>
+        <em>满标日计息</em>
+    </li>
+    <li>
+        <em>资金用途</em>
+        <em><span id="use"></span></em>
+    </li>
+    <li>
+        <em>还款方式</em>
+        <em><span id="repayment"></span></em>
+    </li>
+</ul>
+
+<div class="n1e"><h5 class="xui-title" theme="003">费用说明</h5></div>
+<ul class="xui-list cus-detail-list n1e-z" theme="002">
+    <li>
+        <em>充值费</em>
+        <em id="rechargeFee"></em>
+    </li>
+    <li>
+        <em>提现费</em>
+        <em id="accountCash"></em>
+    </li>
+    <li>
+        <em>收益管理费</em>
+        <em id="revenueManagementFee"></em>
+    </li>
+    <li>
+        <em>债权转让手续费</em>
+        <em id="tradeRequest" class="aj"></em>
+    </li>
+</ul>
+
+<div id="personal" class="hide">
+    <div class="n1e"><h5 class="xui-title" theme="003">借款人信息</h5></div>
+    <ul class="xui-list cus-detail-list n1e-z" theme="002">
+        <li>
+            <em>发布者</em>
+            <em id="nickName"></em>
+        </li>
+        <li>
+            <em>借款人姓名</em>
+            <em id="realName"></em>
+        </li>
+        <li>
+            <em>身份证号码</em>
+            <em id="idCardNo"></em>
+        </li>
+        <li>
+            <em>信用等级</em>
+            <em id="creditLevel"></em>
+        </li>
+        <li>
+            <em>成功借款次数</em>
+            <em id="borrowCount"></em>
+        </li>
+        <li>
+            <em>逾期次数</em>
+            <em id="overdue"></em>
+        </li>
+        <li>
+            <em>逾期总金额</em>
+            <em id="overdueAccount"></em>
+        </li>
+        <li>
+            <em>所在地</em>
+            <em id="nativePlace"></em>
+        </li>
+        <!--<li>
+            <em>每月收入</em>
+            <em id="income"></em>
+        </li>-->
+        <li>
+            <em>住房条件</em>
+            <em id="isHousePurchase"></em>
+        </li>
+        <!--<li>
+            <em>是否购车</em>
+            <em id="isCarPurchase"></em>
+        </li>-->
+        <li>
+            <em>借款描述</em>
+            <em></em>
+        </li>
+        <li>
+            <em id="content"></em>
+        </li>
+    </ul>
+</div>
+
+<div id="enterprise" class="hide">
+    <div class="n1e"><h5 class="xui-title" theme="003">借款企业信息</h5></div>
+    <ul class="xui-list cus-detail-list n1e-z" theme="002">
+        <li>
+            <em>企业名称</em>
+            <em id="companyName"></em>
+        </li>
+        <li>
+            <em>注册资本</em>
+            <em id="registeredCapital"></em>
+        </li>
+        <li>
+            <em>注册地址</em>
+            <em id="registeredAddress"></em>
+        </li>
+        <li>
+            <em>成立时间</em>
+            <em id="registrationTime"></em>
+        </li>
+        <li>
+            <em>法定代表人</em>
+            <em id="comRepName"></em>
+        </li>
+        <li>
+            <em>办公地点</em>
+            <em id="companyAddress"></em>
+        </li>
+    </ul>
+</div>
+
+
+<div class="n1e" id="quotaMange"><h5 class="xui-title" theme="003">限额管理</h5></div>
+<ul id="quotaMange_1" class="xui-list cus-detail-list n1e-z" theme="002">
+    <li>
+        <em id="quotaMange_1_com" class="aj"></em>
+    </li>
+</ul>
+<script src="js/borrow-detail-app.js"></script>
+</body>
+</html>

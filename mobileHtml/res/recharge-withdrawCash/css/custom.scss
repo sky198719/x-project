@@ -1,0 +1,27 @@
+@import "module/xui-color";
+.success-img{
+  display: inline-block;
+  width: 7rem;
+  height: 7rem;
+  background: url(../imgs/success-img.png) no-repeat center / contain;
+}
+.error-img{
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background: url(../imgs/error-img.png) no-repeat center / contain;
+}
+
+
+.sign-success-img{
+  display: inline-block;
+  width: 7rem;
+  height: 7rem;
+  background: url(../imgs/sign-success-img.gif) no-repeat center / contain;
+}
+.sign-error-img{
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background: url(../imgs/sign-error-img.gif) no-repeat center / contain;
+}

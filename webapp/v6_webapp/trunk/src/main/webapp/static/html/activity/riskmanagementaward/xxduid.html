@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>新新贷荣获-最佳金融风险管理奖</title>
+<style>
+html{font-size:100%;}
+*{padding:0; margin:0; list-style-type:none;}
+a{text-decoration:none;}
+a,img{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; -webkit-user-select:none;}
+.container{width:100%; position:relative; font-family:'微软雅黑';}
+.container img{display:block; border:none; width:100%;}
+.btn {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+</style>
+<script type="text/javascript" src="../../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../../js/utils/analytics_plugin.js"></script>
+<script src="js/jquery.js"></script>
+</head>
+<body>
+<div class="view" style="overflow:scroll;">
+	<div class="container">
+		<img src="img/bg_01.jpg" />
+	</div>
+	<div class="container">
+        <a href="javascript:void(0);" onclick="skptop2p()"><img src="img/bg_02.jpg" onclick="" /></a>
+	</div>
+	<div class="container">
+		<img src="img/bg_03.jpg" />
+        <a href="javascript:void(0);"  onclick="skptormlc()"><img src="img/btn.png" class="btn" id=""></a>
+	</div>
+</div>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 320) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+
+    var link = '../../../../';
+
+    //风控获奖专题页“了解更多”区域，用户点击后跳转至APP首批会员单位专题页面
+    function skptop2p() {
+        window.location.href = "../../../../static/html/activity/p2p-app/xxduid.html";
+    }
+    //点击“立即投资”按钮，跳转至“理财列表->热门理财”页
+    function skptormlc() {
+        window.location.href = "xxd://list?selID=1";
+    }
+    //GA、XA布码
+    $.ajax({
+        url: '../../../../user/getCurrentUser.do',
+        data: {},
+        dataType: 'json',
+        success: function (result) {
+            var gauserId = "";
+            if (result.code == 0) {
+                gauserId = result.data.user.userId;
+            }
+            //XXD_TRACK.track_pageview();
+            gaInits(gauserId);
+            growingIOInits({userId: gauserId});
+        }
+    });
+</script>
+</body>
+</html>

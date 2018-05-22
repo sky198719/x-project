@@ -1,0 +1,52 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding" id="xxbDetail-title">新新币明细</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <div><span style="font-size: 14px;">筛选</span><img src="static/img/xxd/arrow-down.png" width="15px" id="arrow"/></div>
+        </div>
+        <!-- Sub navbar -->
+        <div class="subnavbar sliding" style="display: none;" id="tabBlock">
+            <a href="#xxbAllList" class="button-xxb xxb-button1 button-xxb-active tab-link" id="xxbAllBtn">全部</a>
+            <a href="#xxbExchangeList" class="button-xxb xxb-button2 button-xxb-inactive tab-link" id="xxbExchangeBtn">新新币兑换</a>
+            <a href="#xxbRewardList" class="button-xxb xxb-button3 button-xxb-inactive tab-link" id="xxbRewardBtn">新新币奖励</a>
+
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <div class="page" data-page="xxbDetail" id="xxb-detail" directory="xxb">
+        <div class="page-content pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <input type="hidden" id="el-currentPage" value="1"/>
+            <input type="hidden" id="el-totalPage" value="1"/>
+            <!--div class="content-block-inner" style="background-color:#F7F7F8;width:95%;height: 30px;display: none;" id="tabBlock">
+                <a href="#xxbAllList" class="button-xxb xxb-button1 button-xxb-active tab-link" id="xxbAllBtn">全部</a>
+                <a href="#xxbExchangeList" class="button-xxb xxb-button2 button-xxb-inactive tab-link" id="xxbExchangeBtn">新新币兑换</a>
+                <a href="#xxbRewardList" class="button-xxb xxb-button3 button-xxb-inactive tab-link" id="xxbRewardBtn">新新币奖励</a>
+            </div-->
+            <div class="tabs">
+                <div id="xxbAllList" class="tab active">
+                    <div class="list-block media-list">
+                    <ul></ul>
+                    </div>
+                </div>
+                <div id="xxbExchangeList" class="tab">
+                    <div class="list-block media-list">
+                        <ul></ul>
+                    </div>
+                </div>
+                <div id="xxbRewardList" class="tab">
+                    <div class="list-block media-list">
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+html[frame="mobile3"][browser="web"] body {
+  padding-top : 48px;
+}
+
+.tobar {
+  display    : inline-block;
+  width      : 100%;
+  height     : 48px;
+  top        : 0;
+  left       : 0;
+  position   : absolute;
+  z-index    : 10;
+  //background: #f7f7f8;
+  background : #f7f7f8 linear-gradient(0deg, rgba(0, 0, 0, 0.15) .5px, transparent .5px);
+}
+
+.tobar.fix {
+  position : fixed;
+}
+
+.tobar[data-co="white"] { background : #fff linear-gradient(0deg, rgba(0, 0, 0, 0.15) .5px, transparent .5px); }
+
+html:before {
+  content  : "";
+  display  : block;
+  width    : 100%;
+  height   : 1000%;
+  position : fixed;
+  //background: #efeff4;
+  top      : -500%;
+  z-index  : -1000;
+}

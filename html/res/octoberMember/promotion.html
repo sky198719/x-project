@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>十月会员日推广落地页</title>
+    <link rel="shortcut icon" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="Bookmark" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="stylesheet" href="../octoberMember/octoberMember.css"/>
+    <link rel="stylesheet" href="../octoberMember/octoberPromotion.css"/>
+</head>
+<body>
+<div id="J_wrapBody">
+    <div class="header">
+        <div class="header-main clearfix">
+            <a class="logo" href="/" target="_blank"></a>
+            <div class="tel">
+                <i class="tel-icon">
+                    <img src="img/tel.png">
+                </i><div class="tel-num">
+                <h3>4000-169-521</h3>
+                <p>（工作日 9:00-18:00）</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="top">
+            <div class="top-wrap">
+                <div class="register" id="J_register">
+                    <form id="form">
+                        <div class="register-title"></div>
+                        <div class="user-common user-num">
+                            <label for="J_num">手&nbsp;机&nbsp;号&nbsp;码</label><input id="J_num"  class="J-num" type="number" name="usern" placeholder="请输入手机号码" oninput="if(value.length>11)value=value.slice(0,11)"/>
+                        </div>
+                        <div class="user-common user-psw ">
+                            <label for="J_psw">登&nbsp;录&nbsp;密&nbsp;码</label><input id="J_psw" class="J-psw" type="password" name="userpsw" placeholder="请输入登录密码" minlength="6" maxlength="16"/>
+                        </div>
+                        <div class="user-common user-verigy clearfix">
+                            <label for="J_verify" class="user-img">图片验证码</label> <input id="J_verify" class="J-verify" type="text" name="uservefiry" />
+                            <img class="change-verify"  src="/feapi/randCode/createVerifyCode?formtoken=2afb0c26a1135cf0868322dda28b0dd5&v=0.36431611876306214" id="J_getVerify"/>
+                            <span class="yzm-refresh" id="J_yzmRefresh"></span>
+                        </div>
+                        <div class="user-common user-verigy user-special">
+                            <label for="J_phoneyzm">短信验证码</label> <input id="J_phoneyzm" class="J-phoneyzm" type="text" name="userphone"/>
+                            <span class="get-phoneyzm" id="J_getPhoneCode">
+                           获取验证码
+                       </span>
+                        </div>
+                        <p class="cur cur-special dishidden" id="J_cur"></p>
+                        <div class="user-agree">
+                            <i class="check-style" id="agree"><span class="user-check checked"></span></i>
+                            <span class="check-info">我已阅读并同意<a href="/user/reg-agreement.html" target="_blank">《新新贷使用协议》</a></span>
+                        </div>
+                        <button type="button" class="get-red" id="J_submit"></button>
+                        <p class="have-login">已有账号？ <a class="logined" href="/user/ilogin.html">马上登录</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-first">
+            <div class="main-container">
+                <div class="content-list">
+                    <div class="winData myscroll">
+                        <ul>
+                            <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">周生生黄金耳环</span></li>-->
+                            <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">周生生黄金耳环</span></li>-->
+                            <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">100元话费直充</span></li>-->
+                            <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">SK-II小灯泡礼盒</span></li>-->
+                            <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">周生生黄金耳环</span></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-second">
+            <div class="second-lists">
+                <a class="list list-l" id="J_xyb" href="#J_register">
+                    <h3 class="list-title">年化收益</h3>
+                    <p class="detail-num"><span class="big" id="J_xybForm">7</span><span class="small">%</span>~<span class="big" id="J_xybTo">12</span><span class="small">%</span></p>
+                </a>
+                <a class="list list-r" id="J_bbgs" href="#J_register">
+                    <h3 class="list-title">年化收益</h3>
+                    <p class="detail-num"><span class="big" id="J_bbgsApr">6</span><span class="small">%</span>~<span class="big" id="J_bbgsfloatApr">15</span><span class="small">%</span></p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="warp-div register-bottom">
+        <a class="register-btn" id="J_registerBottom" href="#J_register"></a>
+    </div>
+    <div class="warp-div special-bottom disnone" id="J_lastRegister">
+        <a class="register-btn" id="J_specialBtn" href="#J_register"></a>
+    </div>
+    <div class="footer"></div>
+</div>
+<!--[if lt IE 9]>
+<iframe id="ifr_cover" frameborder="0" class="hide" scrolling="no"></iframe>
+<div id="alertBoxWrap" class="hide"></div>
+<![endif]-->
+<script src="../octoberMember/js/combo-promotion.js"></script>
+<script src="../octoberMember/js/vticker.js"></script>
+</body>
+</html>

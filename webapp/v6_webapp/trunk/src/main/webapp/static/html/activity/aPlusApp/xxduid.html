@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>A+</title>
+    <style>
+        .container {
+            width: 100%;
+            position: relative;
+        }
+
+        .container img {
+            display: block;
+            border: none;
+            width: 100%;
+        }
+
+        .container img.pro {
+            width: 39.3%;
+            display: block;
+            position: absolute;
+            top: 0;
+        }
+
+        .pro1 {
+            left: 8%;
+
+        }
+
+        .pro2 {
+            right: 8%;
+        }
+
+        .container img.pro3 {
+            width: 32.3%;
+            left: 1%;
+
+        }
+
+        .container img.pro4 {
+            width: 32.3%;
+            left: 33.9%;
+
+        }
+
+        .container img.pro5 {
+            width: 32.3%;
+            right: 1%;
+        }
+
+        .redsqu {
+            border-radius: 10px;
+            background-color: rgb(247, 55, 72);
+            position: absolute;
+            top: 2%;
+            width: 20%;
+            height: 95%;
+        }
+
+        .redsqu p {
+            text-align: center;
+            margin: 0;
+        }
+
+        .redsqu1 {
+            left: 4%;
+        }
+
+        .redsqu2 {
+            left: 28%;
+        }
+
+        .redsqu3 {
+            left: 52%;
+        }
+
+        .redsqu4 {
+            left: 76%;
+        }
+
+        .redsqu p.p1 {
+            font-size:1.1rem;
+            padding-top: 9%;
+            color: #feff97
+        }
+
+        .redsqu p.p2 {
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container img.pipi {
+            width: 18%;
+            position: absolute;
+            top: 75%;
+            left: 53%;
+        }
+    </style>
+</head>
+
+<body>
+<!--login-->
+<div class="view" style="overflow:scroll;">
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bgg_01.png"/>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bgg_02.png"/>
+
+        <div class="redsqu redsqu1">
+            <p class="p1">线上成交额</p>
+
+            <p class="p2"><span id="totalTrans">00.00</span>亿元</p>
+        </div>
+        <div class="redsqu redsqu2">
+            <p class="p1">累计赚取收益</p>
+
+            <p class="p2"><span id="totalIncome">0</span>亿元</p>
+        </div>
+        <div class="redsqu redsqu3">
+            <p class="p1">累积帮助客户数</p>
+
+            <p class="p2"><span id="total_count">0</span>笔</p>
+        </div>
+        <div class="redsqu redsqu4">
+            <p class="p1">质保服务专款余额</p>
+
+            <p class="p2"><span id="riskMoney">0</span>万元</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bgg_03.png"/>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bg_02.png"/>
+        <a href="http://v.youku.com/v_show/id_XMTc1NjAwNTYxNg==.html">
+            <img src="../../../img/activity/aPlusApp/pipi_04.png" class="pipi">
+        </a>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bg_03.png"/>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bg_04.png"/>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bg_05.png"/>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bg_06.png"/>
+        <img src="../../../img/activity/aPlusApp/pro1.png" class="pro pro1" id="bubugao"/>
+        <img src="../../../img/activity/aPlusApp/pro2.png" class="pro pro2" id="xinyuanbao"/>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bg_07.png"/>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bg_08.jpg"/>
+
+        <a href="javascript:void(0)"><img src="../../../img/activity/aPlusApp/pro3.png" class="pro pro3"
+                                          id="qitian"/></a>
+
+        <a href="javascript:void(0)"><img src="../../../img/activity/aPlusApp/pro4.png" class="pro pro4"
+                                          id="yuejin"/></a>
+
+        <a href="javascript:void(0)"><img src="../../../img/activity/aPlusApp/pro5.png" class="pro pro5" id="ririying"/></a>
+
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/bg_09.png"/>
+    </div>
+    <div class="container">
+        <img src="../../../img/activity/aPlusApp/pipi2.jpg"/>
+    </div>
+</div>
+<script type="text/javascript" src="../../../lib/jquery/jquery1.11.1.min.js"></script>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontSize * (clientWidth / 720) + 'px';
+                };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window, 16);
+</script>
+<script>
+    $(document).ready(function () {
+        $("#bubugao").click(function () {
+            window.location.href = 'xxd://list/pdd?selID=1&pdName=bubugaosheng';
+        });
+
+        $("#xinyuanbao").click(function () {
+            $.ajax({
+                url: '../../../../xplan/getLatestSchemeId.do',
+                data: {
+                    "closeTerm": "12"
+                },
+                dataType: 'JSON',
+                success: function (result) {
+                    if (result.schemeInfo != null && result.schemeInfo != "") {
+                        var schemeInfo = result.schemeInfo;
+                        var planId = schemeInfo.SCHEMEID;
+                        window.location.href = 'xxd://list/pdd?selID=1&pdName=xinyuanbao&xybID=' + planId;
+                    } else {
+                        xxdApp.alert("系统异常，请稍后重试", '抱歉');
+                    }
+                }
+            });
+        });
+
+        $("#ririying").click(function () {
+            window.location.href = 'xxd://list/pdd?selID=1&pdName=ririying';
+        });
+
+        $("#qitian").click(function () {
+            window.location.href = 'xxd://list/pdd?selID=1&pdName=qitiandasheng';
+        });
+
+        $("#yuejin").click(function () {
+            window.location.href = 'xxd://list/pdd?selID=1&pdName=yuejindoujin';
+        });
+
+        $.ajax({
+            url: '../../../../getInforMap.do',
+            data: {},
+            dataType: 'JSON',
+            success: function (result) {
+                try {
+                    if (result.resultCode == 0) {
+                        var inforMap = result.inforMap;
+                        //累计成交额
+                        $("#totalTrans").html(inforMap.TOTAL_TRADE[0].nvalue);
+                        //累计为投资人赚取
+                        $("#totalIncome").html(inforMap.TOTAL_INCOME[0].nvalue);
+                        //风险准本金余额
+                        $("#riskMoney").html(inforMap.VENTURE_BALANCE[0].nvalue);
+                        //累计帮助客户数
+                        $("#total_count").html(inforMap.TOTAL_COUNT.nvalue);
+                    }
+                } catch (e) {
+                    console.log(e.message);
+                }
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

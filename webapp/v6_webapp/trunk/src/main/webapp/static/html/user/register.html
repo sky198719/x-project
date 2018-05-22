@@ -1,0 +1,70 @@
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a>
+        </div>
+        <div class="center sliding">注册新新贷</div>
+    </div>
+</div>
+<!--register-->
+<div class="register-screen">
+    <div class="page" data-page="register" id="register" directory="user">
+        <div class="page-content register-content">
+            <form>
+                <div class="list-block" style="margin-bottom:2px;">
+                    <div id="regTopImg" style="display: none;">
+                        <img src="static/img/activity/registerRed/reg.png" style="width: 100%;height: auto;"/>
+                    </div>
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label" style="width: 25%;">手机号码</div>
+                                <div class="item-input login-item">
+                                    <input type="tel" name="mobile-no" placeholder="请键入手机号" id="mobile-no"  maxlength="11">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label" style="width: 25%;">图片验证码</div>
+                                <div class="item-input login-item">
+                                    <input type="text" name="mobile-no" placeholder="请键入图片验证码" class="reg_imgCode">
+                                </div>
+                                <div class="item-after">
+                                    <img align="absmiddle" src="verify/code.do" width="100"  height="30" class="reg_img_code">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label" style="width: 25%;">验证码</div>
+                                <div class="item-input">
+                                    <input type="tel" name="rand-code" placeholder="请键入验证码" id="rand-code">
+                                </div>
+                                <div class="item-after">
+                                    <a class="ic-blue disable" id="rand-code-countdown" style="display:none;"></a>
+                                    <a href="#" class="ic-blue" id="send-rand-code">发送短信验证码</a>
+                                    <input type="hidden" id="uuid"/>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block-label" style="padding: 0 15px;" id="voice_sms">
+		             <div style="text-align:right;">
+<!-- 		            	<a class="disable" style="display: none;" id="voiceCode-countdown" ></a> -->
+		            	<span id="voiceCode" class="span-link">获取语音验证码</span>
+		            </div>
+		       </div>
+                <div class="mt15 mr10 ml10">
+                    <a href="#" class="button button-51 active" id="reg_next">下一步</a>
+                </div>
+                <div class="list-block-label" style="padding: 0 15px;">
+                    <p>已经有账号了？<a href="#" class="back link open-login-screen">登录</a></p>
+                    <p class="mt20"><a href="#" class="back link right" id="register-close">关闭</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--register-->

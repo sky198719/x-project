@@ -1,0 +1,22 @@
+{{#each list}}
+<li class="swipeout" style="background: #fff;margin-bottom: 10px;">
+    <div class="swipeout-content">
+        <a href="#" class="item-link item-content tradeListContract" data-bid="{{borrowId}}" data-type="{{type}}">
+            <div class="item-inner">
+                <div class="item-title-row">
+                    <div class="item-title">{{loanName}}</div>
+                    <div class="item-after">查看合同</div>
+                </div>
+                <div class="item-subtitle" style="margin:10px 0 10px 0;color:#cfcfd2;">
+                    <span>借款期限：{{loanPeriod}}{{loanPeriodUnit}}</span>
+                    <span style="float: right;margin-right: 10%;">借款利率：{{loanApr}}%</span>
+                </div>
+                <div class="item-text" style="height: 20px;color:#cfcfd2;">投资金额：{{loanAmount}}元</div>
+            </div>
+        </a>
+        <a href="#" style="text-align: center" class="tradeListItemLink" data-bid="{{borrowId}}"  data-type="{{type}}">
+            <div style="margin: 10px;">查看详情</div>
+        </a>
+    </div>
+</li>
+{{/each}}

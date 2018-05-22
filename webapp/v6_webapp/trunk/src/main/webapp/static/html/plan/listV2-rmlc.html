@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>新新贷触屏版</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app-xs.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal xxd-panel">
+		<div class="content-block" style="padding:0;">
+            <div class="panel_head">
+                <div class="center"><img src="img/xxd/19.jpg"></div>
+                <h4 class="text-center mb20">James</h4>
+            </div>
+            <div class="list-block xxd-listblock">
+                <ul>
+                    <li>
+                        <a href="new-index.html" class="close-panel item-link">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">首页</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<h4 class="title">热门理财</h4>
+            <div class="list-block xxd-listblock">
+                <ul>
+                    <li>
+                        <a href="bid-detail.html" class="close-panel item-link">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">热门理财</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<h4 class="title">我的账户</h4>
+            <div class="list-block xxd-listblock">
+                <ul>
+                    <li>
+                        <a href="account.html" class="close-panel item-link">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">我的新新贷</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="topup.html" class="close-panel item-link">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">充值</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        	<h4 class="title">设置</h4>
+        <div class="list-block xxd-listblock">
+        	<ul>
+            	<li>
+                	<a href="security.html" class="close-panel item-link">
+                    	<div class="item-content">
+                        	<div class="item-inner">
+                            	<div class="item-title">安全设置</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#" class="close-panel item-link">
+                    	<div class="item-content">
+                        	<div class="item-inner">
+                            	<div class="item-title">退出</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!--login-->
+    <div class="login-screen">
+		<div class="view">
+            <div class="page">
+              <div class="page-content login-screen-content">
+              <div class="login-screen-title">登录新新贷</div>
+              <form>
+                <div class="list-block">
+                  <ul>
+                    <li class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">用户名</div>
+                        <div class="item-input login-item">
+                          <input type="text" name="username" placeholder="用户名/注册手机/注册邮箱">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">登录密码</div>
+                        <div class="item-input">
+                          <input type="password" name="password" placeholder="请键入密码">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list-block">
+                  <ul>
+                    <li><a href="bid-detail.html" class="item-link btn-standard">登录</a></li>
+                  </ul>
+                  <div class="list-block-label">
+                    <p><a href="register.html" class="close-login-screen">注册新账号</a> | <a href="forgetpw.html" class="close-login-screen">忘记密码？</a></p>
+                    <p class="mt20"><a href="#" class="close-login-screen right">关闭</a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+			</div>
+        </div>
+      </div>
+      <!--login-->
+    
+    
+    
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center"><a href="#" data-popover=".popover-types" class="link open-popover font-black">热门理财</a></div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content pull-to-refresh-content">
+            	<!-- 默认的下拉刷新层 -->
+                <div class="pull-to-refresh-layer">
+                  <div class="preloader"></div>
+                  <div class="pull-to-refresh-arrow"></div>
+                </div>
+              	<div class="content-block-title">热门理财</div>
+				
+              	<div class="list-block media-list">
+					 <ul id="tenderList">
+						<li class="swipeout">
+								
+							<div class="swipeout-content  ">  
+								<!-- 活期 -->
+								<div class="dq-blue">
+									<img src="img/xxd/hq-blue.png"  width="18px" height="44px;">
+								</div>
+								<a href="#" class="item-link"> 
+								
+									<!-- 第一行内容 start -->
+									<div class="item-content">
+										<div class="item-inner pb0 pl10 ">
+											<div class="item-title-row xxd-item-row mt10">
+												<div class="item-title font16 font-3A3939">
+													<span class="font16">日日盈</span> 
+													<span class="inn-title ml10 font-666">一元起投，每日复利</span> 
+												</div> 
+											</div>
+										</div>
+									</div>
+									<!-- 第一行内容 end --> 
+									
+									<!-- 第二行内容 start -->
+									<div class="item-content pb10" style="padding-left:26px;"> 
+										
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row">
+												<div class="item-title font-red"><span class="font28">12</span><span class="font16">.33% </span></div> 
+											</div>
+											<div class="item-subtitle ">
+												<span class="font-999">年化收益</span>
+											</div>
+										</div>
+										
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row">
+												<div class="item-title ">
+													<span class="font16 font-666" style="line-height: 46px;">2.22</span>
+													<span class="font16 font-666 letter-s2" >元/日</span>
+												</div> 
+											</div>
+											<div class="item-subtitle"> 
+												<span  class="font-999 mtf4">万元收益 </span>
+											</div>
+										</div> 
+										
+										<div class="item-inner">
+											<!-- 已结束logo -->
+											<div class="game-suc ">
+												<img src="img/xxd/buy-none1.png" width="68px" height="68px;">
+											</div>
+										</div>
+										 
+									</div>
+									<!-- 第二行内容 end -->
+									
+								</a>
+							</div> 
+							
+							<div class="swipeout-actions-right" data-id="BW201511193598">
+								<a href="#" class="bg-green express-bid">快捷投标</a>
+							</div> 
+							
+						</li>
+						 <li>
+							<div class="content-block-title text-center font-999 font14 mb15">
+								<p class="mgpd0 clearfix">
+									<span class="left-solid-border"></span>
+									<span class="lock-content"><img src="img/xxd/xx_07.png" width="16" height="16"></span>
+									<span class="center-content">新元宝 每日早上10:00开抢</span> 
+									<span class="right-solid-border"></span>
+								</p>
+							</div>
+						 </li>
+						<li class="swipeout">
+								
+							<div class="swipeout-content  ">  
+								<!-- 定期 -->
+								<div class="dq-blue">
+									<img src="img/xxd/dq-blue.png" width="18px" height="44px;">
+								</div>
+								<a href="#" class="item-link"> 
+								
+									<!-- 第一行内容 start -->
+									<div class="item-content">
+										<div class="item-inner pb0 pl10 ">
+											<div class="item-title-row xxd-item-row mt10">
+												<div class="item-title font16 font-3A3939">
+													<span class="font16 hl20">新元宝-年年盈</span> 
+													<span class="inn-title ml10 font-666 hl20">计划金额5万</span> 
+												</div> 
+											</div>
+										</div>
+									</div>
+									<!-- 第一行内容 end --> 
+									
+									<!-- 第二行内容 start -->
+									<div class="item-content  " style="padding-left:26px;">
+										<div class="item-inner"> 
+											<div class="item-title-row xxd-item-row" >
+												<div class="item-title width100">
+													<div class="progress">
+														<div class="progress-bar" style="width: 62.78756692913385826771653543307086614173%;"></div>
+													</div> 
+												</div>
+												<div class="item-after">
+													<span class="pro-tag">60%</span>
+												</div>
+											</div>  
+										</div> 
+									</div>
+									<!-- 第二行内容 end -->
+									
+									<!-- 第三行内容 start -->
+									<div class="item-content pb10" style="padding-left:26px;">		
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row">
+												<div class="item-title font-red"><span class="font28">12</span><span class="font16">.33% </span></div> 
+											</div>
+											<div class="item-subtitle ">
+												<span class="font-999">年化收益</span>
+											</div>
+										</div>
+										
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row">
+												<div class="item-title "><span class="font18 font-3A3939" style="line-height: 46px;">12个月</span></div>
+											</div>
+											<div class="item-subtitle"> 
+												<span  class="font-999 mtf4">期限</span>
+											</div>
+										</div>
+										
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row width100">
+												<button class="button qg-btn  mt18" >立即抢购</button>
+											</div>
+										</div>
+									</div>
+									<!-- 第三行内容 end -->
+									
+								</a>
+							</div> 
+							
+							<div class="swipeout-actions-right" data-id="BW201511193598">
+								<a href="#" class="bg-green express-bid">快捷投标</a>
+							</div> 
+							
+						</li>
+						
+						<!-- 开抢状态 start -->
+						<li class="swipeout">
+								
+							<div class="swipeout-content  "> 
+								<!-- 定期 -->
+								<div class="dq-blue">
+									<img src="img/xxd/dq-blue.png"  width="18px" height="44px;">
+								</div>
+								<a href="#" class="item-link"> 
+								
+									<!-- 第一行内容 start -->
+									<div class="item-content">
+										<div class="item-inner pb0 pl10 ">
+											<div class="item-title-row xxd-item-row mt10">
+												<div class="item-title font16 font-3A3939">
+													<span class="font16 hl20">新元宝-年年盈</span> 
+													<span class="inn-title ml10 font-666 hl20">计划金额5万</span> 
+												</div> 
+											</div>
+										</div>
+									</div>
+									<!-- 第一行内容 end -->  
+									
+									<!-- 第三行内容 start -->
+									<div class="item-content pb10" style="padding-left:26px;">		
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row">
+												<div class="item-title font-red"><span class="font28">12</span><span class="font16">.33% </span></div> 
+											</div>
+											<div class="item-subtitle ">
+												<span class="font-999">年化收益</span>
+											</div>
+										</div>
+										
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row">
+												<div class="item-title "><span class="font18 font-3A3939" style="line-height: 46px;">12个月</span></div>
+											</div>
+											<div class="item-subtitle"> 
+												<span  class="font-999 mtf4">期限</span>
+											</div>
+										</div>
+										
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row width100">
+												<button class="button qg-btn  mt18 qg-btn-waiting" >10:00开抢</button>
+											</div>
+										</div>
+									</div>
+									<!-- 第三行内容 end -->
+									
+								</a>
+							</div> 
+							
+							<div class="swipeout-actions-right" data-id="BW201511193598">
+								<a href="#" class="bg-green express-bid">快捷投标</a>
+							</div> 
+							
+						</li>
+						<!-- 开抢状态 end -->
+						<!-- 已抢光状态  start-->
+						<li class="swipeout">
+								
+							<div class="swipeout-content  "> 
+								 <!-- 定期 -->
+								 <div class="dq-gray">
+									<img src="img/xxd/dq-gray.png"  width="18px" height="44px;">
+								</div>
+								 
+								<a href="#" class="item-link"> 
+								
+									<!-- 第一行内容 start -->
+									<div class="item-content">
+										<div class="item-inner pb0 pl10 ">
+											<div class="item-title-row xxd-item-row mt10">
+												<div class="item-title font16 font-3A3939">
+													<span class="font16 hl20">新元宝-年年盈</span> 
+													<span class="inn-title ml10 font-666 hl20">计划金额5万</span> 
+												</div> 
+											</div>
+										</div>
+									</div>
+									<!-- 第一行内容 end -->  
+									
+									<!-- 第三行内容 start -->
+									<div class="item-content pb10" style="padding-left:26px;">		
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row">
+												<div class="item-title font-red"><span class="font28">12</span><span class="font16">.33% </span></div> 
+											</div>
+											<div class="item-subtitle ">
+												<span class="font-999">年化收益</span>
+											</div>
+										</div>
+										
+										<div class="item-inner">
+											<div class="item-title-row xxd-item-row">
+												<div class="item-title "><span class="font18 font-3A3939" style="line-height: 46px;">12个月</span></div>
+											</div>
+											<div class="item-subtitle"> 
+												<span  class="font-999 mtf4">期限</span>
+											</div>
+										</div> 
+										
+										<div class="item-inner">
+											 <!-- 已抢光 -->
+											<div class="game-over-rmlc">
+												<img src="img/xxd/buy-none.png" width="68px" height="68px">
+											</div>
+										</div>
+										
+									</div>
+									<!-- 第三行内容 end -->
+									
+								</a>
+							</div> 
+							
+							<div class="swipeout-actions-right" data-id="BW201511193598">
+								<a href="#" class="bg-green express-bid">快捷投标</a>
+							</div> 
+							
+						</li>
+						<!-- 已抢光状态  end--> 
+					</ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popover popover-types">
+          <div class="popover-angle"></div>
+          <div class="popover-inner">
+            <div class="list-block">
+              <ul>
+                <li><a href="list.html" class="list-button item-link">热门理财</a></li>
+                <li><a href="#" class="list-button item-link">热门理财</a></li>
+                <li><a href="list-xyb.html" class="list-button item-link">新元宝</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="popup popup-agreement" style="z-index:11001">
+            <div class="content-block" style="color:#333; padding-top:50px;">
+            	<h3 class="text-center">资金出借风险提示函</h3>
+            </div>
+            <div class="v6-layout pd10">
+                <p>出借人应认真阅读《新新贷网站服务协议》、资金出借相关协议（《借款合同》、《热门理财协议》、《新新贷•P2P体验计划（新新宝）用户协议书》等）、本函内容及本网站（<a href="http://www.xinxindai.com">www.xinxindai.com</a>）关于资金出借、资费介绍、标的说明等操作规则，充分了解在本网站上出借资金的法律意义及相关风险，并根据自身的出借经验、出借目的、出借剩余期限、自身资产状况等判断所选择的借款标的是否与自身的风险承受能力相当。 <br>
+                    出借人的资金在出借过程中可能面临各种风险，包括但不限于市场风险、信用风险、利率风险、流动性风险以及战争、自然灾害等不可抗力导致的出借资金损失。 <br>
+                    主要风险说明如下： <br>
+                </p><h4>一、政策风险 </h4>国家宏观政策、财政政策、货币政策、行业政策、地区发展政策的变动可能会对出借方执行产生不利影响，对此新新贷（上海）金融信息服务有限公司不承担责任。 <br>
+                <br>
+                <br>
+                <h4>二、借款方信用风险</h4><strong> </strong> 当借款方因突发事件或其他不可预见的事件，导致短期或者长期丧失还款能力 (包括但不限于借款人收入情况、财产状况发生变化、人身出现意外、发生疾病、死亡等情况)，或者借款人的还款意愿发生变化时，出借人的资金可能无法按时回收。如果出借人所投借款标的属于质保服务专款专用账户保障范围内的类型，则当借款人逾期还款时，出借人的资金将根据本网站公示的质保服务专款规则得到补偿；若质保服务专款专用账户余额不足以弥补当期所有的逾期借款人的违约金额时，出借人当期应得到的回款可能延迟回收。 <br>
+                <br>
+                <br>
+                <h4>三、资金流动性风险</h4><strong> </strong>出借人按照约定将资金出借给借款人使用，在借款人不主动提前还款的情况下，借款人将按照约定的剩余期限分期偿还出借人的本金和利息，出借人的出借资金将分期回收，因此资金回收需要一定的周期；若出借人需要提前回收出借资金，则本网站将在出借人提出需要以及其他对出借人有利的时机，帮助出借人寻找、向出借人推荐愿意受让出借人债权资产的第三方，但不能确保一定能够在出借人需求的时间协助出借人寻找到合适的债权受让人。 <br>
+                <br>
+                <br>
+                <h4>四、不可抗力的风险 </h4>由于战争、动乱、罢工、自然灾害等不可抗力因素的出现，可能导致出借人的出借资金受到损失。 <br>
+                <br>
+                <br>
+                <h4>五、其他风险 </h4>本风险提示函的揭示事项仅为列举性质，未能详尽列明出借人所面临的全部风险和可能导致出借人资产损失的所有因素。 <br>
+                出借人在出借资金前，应认真阅读并理解相关业务规则、标的说明书、网站服务协议、电子借款合同及本风险提示函的全部内容，并确信自身已做好足够的风险评估与财务安排，避免因出借资金而遭受难以承受的损失。 <p></p>
+                <p>注：本函中 “出借人”是指在本网站注册，并以其自有合法资金通过本网站提供的信息服务获取收益的用户，包括网站各类借款标的投标人、新新宝体验计划参与人、债权受让人等。 </p>
+                <p align="left">&nbsp;</p>
+                <h2 class="text-center">出借人声明 </h2><p><br>
+                出借资金为本人合法管理的资产，本人保证出借资金的来源及用途符合国家有关规定，承诺提供给新新贷网站的所有信息资料均合法、真实、准确、完整，没有任何虚假陈述、重大遗漏和误导。 <br>
+                <br>
+                在签署相关协议前，本人已认真阅读《新新贷网站服务协议》、资金出借相关协议（《借款合同》、《热门理财协议》、《新新贷•P2P体验计划（新新宝）用户协议书》等）、资金出借风险提示函及新新贷网站（<a href="http://www.xinxindai.com">www.xinxindai.com</a>）关于资金出借、资费介绍、标的说明等操作规则及其他相关文件，充分了解在该网站上出借资金的法律意义及相关风险，同意遵守上述文件内容，并愿意承担相关风险。并已就此（在需要时）获取过独立的法律咨询。 <br>
+                特此声明！ </p>
+                <p><a href="#" class="close-popup right pb20">返回</a></p>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/framework7.min.js"></script>
+    	<script type="text/javascript" src="js/Chart.min.js"></script>
+    	<script type="text/javascript" src="js/my-app.js"></script>
+        
+  </body>
+</html>

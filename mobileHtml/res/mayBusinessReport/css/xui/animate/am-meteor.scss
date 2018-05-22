@@ -1,0 +1,18 @@
+//流星
+@-webkit-keyframes am-meteor {
+  0% {
+    -webkit-transform: translate(120%, -50%);
+  }
+  100% {
+    -webkit-transform: translate(-120%, 50%);
+  }
+}
+
+@keyframes am-meteor {
+  0% {
+    transform: translate(120%, -50%);
+  }
+  100% {
+    transform: translate(-120%, 50%);
+  }
+}

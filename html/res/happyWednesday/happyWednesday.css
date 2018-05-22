@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+  height: 2192px;
+  background: url("img/bg.jpg") center no-repeat;
+}
+.container .main {
+  width: 1200px;
+  height: 2192px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.container .main .immediate-btn {
+  width: 800px;
+  margin: 732px auto 0;
+}
+.container .main .immediate-btn a {
+  display: block;
+  width: 318px;
+  height: 71px;
+  cursor: pointer;
+}
+.container .main .immediate-btn .on-btn {
+  background: url("img/btn1.png") center center / 100% 100% no-repeat;
+}
+.container .main .immediate-btn .overtime-btn {
+  background: url("img/btn2.png") center center / 100% 100% no-repeat;
+}
+.container .main .immediate-btn .left-btn {
+  float: left;
+  margin-left: 30px;
+}
+.container .main .immediate-btn .right-btn {
+  float: right;
+  margin-right: 30px;
+}
+.container .main .qt-code {
+  width: 487px;
+  height: 257px;
+  margin-top: 32px;
+  margin-left: 602px;
+  background: url("img/two-dimension.png") center center / 100% 100% no-repeat;
+}
+.container .main .product-list {
+  position: absolute;
+  width: 1066px;
+  bottom: 120px;
+  left: 50%;
+  margin-left: -533px;
+  overflow: hidden;
+}
+.container .main .product-list a {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 152px;
+}
+.container .main .product-list .qtds-product {
+  margin-top: 30px;
+}
+.disnone {
+  display: none;
+}

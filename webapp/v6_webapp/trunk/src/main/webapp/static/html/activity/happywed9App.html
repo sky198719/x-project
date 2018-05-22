@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>欢天喜地 又逢三</title>
+<style>
+.container{width:100%; position:relative;}
+.container img{display:block; border:none; width:100%;}
+.container .btn{width:40%; position:absolute;}
+.container .btn#btn1{top:18%; left:7%;}
+.container .btn#btn2{top:18%; right:7%;}
+.container .btn#btn3{bottom:5%; left:7%;}
+.container .btn#btn4{bottom:5%; right:7%;}
+</style>
+<script type="text/javascript" src="../../js/utils/track.js"></script>
+<script type="text/javascript" src="../../js/utils/analytics_plugin.js"></script>
+</head>
+<body style="margin: 0;padding: 0">
+<!--login-->
+<div class="view" style="overflow:scroll;">
+	<div class="container">
+		<img src="../../img/activity/happywed9/bg1.jpg" />
+	</div>
+	<div class="container">
+		<img src="../../img/activity/happywed9/bg2.jpg" />
+	</div>
+	<div class="container">
+		<img src="../../img/activity/happywed9/bg3.jpg" />
+		<a href="javascript:void(0)" id="a1"><img src="../../img/activity/happywed9/btn1.png" class="btn" id="btn1" /></a>
+		<a href="javascript:void(0)"  id="a3"><img src="../../img/activity/happywed9/btn2.png" class="btn" id="btn2" /></a>
+		<a href="javascript:void(0)"  id="a6"><img src="../../img/activity/happywed9/btn3.png" class="btn" id="btn3" /></a>
+		<a href="javascript:void(0)"  id="a12"><img src="../../img/activity/happywed9/btn4.png" class="btn" id="btn4" /></a>
+	</div>
+	<div class="container">
+		<img src="../../img/activity/happywed9/bg4.jpg" />
+	</div>
+	<div class="container">
+		<img src="../../img/activity/happywed9/bg5.jpg" />
+	</div>
+	<div class="container">
+		<img src="../../img/activity/happywed9/bg6.jpg" />
+	</div>
+</div>
+<script type="text/javascript" src="../../lib/zepto/zepto.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        selectPlan(1);
+        selectPlan(3);
+        selectPlan(6);
+        selectPlan(12);
+    });
+
+    function selectPlan(closeTerm) {
+        ajax({
+            url: "../../../xplan/getLatestSchemeId.do",
+            data: {
+                currentPage: 1,
+                closeTerm: closeTerm,
+                pageSize: 10
+            },
+            dataType: 'json',
+            indicator: true,
+            success: function (data) {
+                if(data!=null && data.schemeInfo!=null) {
+                    var planId=data.schemeInfo.SCHEMEID;
+                    $("#a"+closeTerm).attr("href","xxd://list/pdd?selID=1&pdName=xinyuanbao&xybID="+planId);
+                }
+            }
+        });
+    }
+
+    function ajax(options) {
+        var isasync = 'async' in options ? options.async : true;
+        var method = 'type' in options ? options.type : 'GET';
+        var reqData = 'data' in options ? options.data : {};
+        var reqDataType = 'dataType' in options ? options.dataType : 'none';
+        var timeoutNum = 'timeout' in options ? options.timeout : 5000;
+        try {
+            $.ajax({
+                type: method,
+                url: options.url,
+                data: reqData,
+                async: isasync,
+                dataType: reqDataType,
+                timeout: timeoutNum,
+                success: function (resp) {
+                    options.success(resp);
+                },
+                error: function (xhr, errorType, error) {
+                    if ('error' in options && $.isFunction(options.error)) {
+                        options.error(xhr, errorType, error);
+                    } else {
+
+                    }
+                }
+            });
+        } catch (e) {
+
+        }
+    }
+</script>
+</body>
+<script type="text/javascript" src="../../lib/zepto/zepto.min.js"></script>
+<script type="text/javascript" src="../../lib/zepto/zepto.md5.js"></script>
+<script>
+$(function(){
+	try{
+	 //XXD_TRACK.track_pageview('fundNineApp');
+		var gauserId = "";
+		gaInits(gauserId);
+	}catch(e){}
+});
+</script>
+</html>

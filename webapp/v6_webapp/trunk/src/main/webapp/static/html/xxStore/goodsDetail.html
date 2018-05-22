@@ -1,0 +1,49 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <!-- We have home navbar without left link-->
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center font-blue">礼品介绍</div>
+        <div class="right">
+        </div>
+    </div>
+</div>
+
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through toolbar-through">
+    <!-- Page, data-page contains page name-->
+    <div data-page="goodsDetail" class="page" id="goodsDetail" directory="xxStore">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content bg-fff" style="padding-top:37px;">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer ">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+
+            <div class="content-block  mgpd0 mt7">
+                <div class="xxsinner_top">
+                    <img id="goodsImg" src="static/img/xxd/quick_03.png" class="w100p mbf6">
+                </div>
+
+                <!------------------------商城内页标题--------------------------------->
+                <div style="background-color: #fff;height: 38px;">
+                    <div class="item-inner">
+                        <div class="item-title  pt8 pl15"><span id="goodsTitle" class="font-666 pr15" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">50元移动充值卡</span><a class="font-3f9bff right mr15"><span id="goodsPrice">0</span>新新币</a></div>
+                    </div>
+                </div>
+                <div class="pt10 pb26 bg-efeff4 reletive">
+                    <span class=" invest-jian ml15" id="minusBtn">-</span>
+                    <input type="text" class="invest-input " value="1" id="buyAmount">
+                    <span class=" invest-jia" id="addBtn">+</span>
+                    <a class="xxstore_btn xxinner_btn right mr15" id="goBuy">立即兑换</a>
+                    <p class="xhb">需消耗<span class="font-666 plr4" id="totalCost">0</span>新新币</p>
+                </div>
+
+                <div class="xxstore_info" id="goodsRemark" style="padding-left: 15px; padding-right: 15px;color: #666;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

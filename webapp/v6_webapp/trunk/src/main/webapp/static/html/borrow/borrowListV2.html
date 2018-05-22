@@ -1,0 +1,33 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <!-- We have home navbar without left link-->
+        <div class="center sliding">
+            <a href="#" data-popover=".popover-link" class="open-popover popver-arrow-right">散标投资列表</a>
+        </div>
+        <div class="right sliding">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel" data-panel="right"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through">
+    <div class="page" data-page="borrowV2" directory="borrow">
+        <div class="page-content borrow-list-showV2 pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <input type="hidden" id="currentPageV2" value="1"/>
+            <input type="hidden" id="totalPageV2" value="1"/>
+            <div class="list-block media-list" style='display: none;'>
+                <ul id="tenderListV2"></ul>
+                <ul>
+                    <li class="notification-item"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

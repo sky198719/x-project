@@ -1,0 +1,18 @@
+{
+    "urls": [
+        "index/home.html",
+         "trade/tradeRequestList.html",
+         "borrow/borrowListV2.html",
+         "fund/fundUnInvested.html",
+         "fund/fundHelp.html",
+         "plan/planDetail.html",
+         "dataAnalysis/dataAnalysis.html",
+         "hotActivities/hotActivities.html",
+         "common/help.html",
+         "user/register.html",
+         "user/registerStep2.html",
+         "user/registerReturn.html",
+         "security/forgetpwLogin.html",
+         "common/about-us.html"
+    ]
+}

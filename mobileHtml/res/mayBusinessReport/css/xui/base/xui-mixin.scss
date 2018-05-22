@@ -1,0 +1,105 @@
+//透明度
+@mixin opacity($n) {
+  filter       : alpha(opacity=$n*100);
+  -moz-opacity : $n;
+  opacity      : $n;
+}
+//过渡
+@mixin transition($a,$b,$c,$d) {
+  transition         : $a $b $c $d;
+  -moz-transition    : $a $b $c $d;
+  -webkit-transition : $a $b $c $d;
+  -o-transition      : $a $b $c $d;
+}
+//变化
+@mixin translate($x,$y) {
+  transform         : translate($x, $y);
+  -ms-transform     : translate($x, $y);
+  -webkit-transform : translate($x, $y);
+  -o-transform      : translate($x, $y);
+  -moz-transform    : translate($x, $y);
+}
+//定义 2D 转换，沿着 X 轴移动元素。
+@mixin translateX($x) {
+  transform         : translateX($x);
+  -ms-transform     : translateX($x);
+  -webkit-transform : translateX($x);
+  -o-transform      : translateX($x);
+  -moz-transform    : translateX($x);
+}
+//定义 2D 转换，沿着 Y 轴移动元素。
+@mixin translateY($y) {
+  transform         : translateY($y);
+  -ms-transform     : translateY($y);
+  -webkit-transform : translateY($y);
+  -o-transform      : translateY($y);
+  -moz-transform    : translateY($y);
+}
+@mixin rotate($n) {
+  transform         : rotate(#{$n}deg);
+  -ms-transform     : rotate(#{$n}deg);
+  -webkit-transform : rotate(#{$n}deg);
+  -o-transform      : rotate(#{$n}deg);
+  -moz-transform    : rotate(#{$n}deg);
+}
+@mixin scale($w,$h) {
+  transform         : scale($w, $h);
+  -ms-transform     : scale($w, $h);
+  -webkit-transform : scale($w, $h);
+  -o-transform      : scale($w, $h);
+  -moz-transform    : scale($w, $h);
+}
+//定义 2D 缩放转换，改变元素的宽度。
+@mixin scaleX($w) {
+  transform         : scaleX($w);
+  -ms-transform     : scaleX($w);
+  -webkit-transform : scaleX($w);
+  -o-transform      : scaleX($w);
+  -moz-transform    : scaleX($w);
+}
+//定义 2D 缩放转换，改变元素的高度。
+@mixin scaleY($h) {
+  transform         : scaleY($h);
+  -ms-transform     : scaleY($h);
+  -webkit-transform : scaleY($h);
+  -o-transform      : scaleY($h);
+  -moz-transform    : scaleY($h);
+}
+@mixin skew($a,$b) {
+  transform         : skew(#{$a}deg, #{$b}deg);
+  -ms-transform     : skew(#{$a}deg, #{$b}deg);
+  -webkit-transform : skew(#{$a}deg, #{$b}deg);
+  -o-transform      : skew(#{$a}deg, #{$b}deg);
+  -moz-transform    : skew(#{$a}deg, #{$b}deg);
+}
+//定义 2D 倾斜转换，沿着 X 轴。
+@mixin skewX($n) {
+  transform         : skewX(#{$n}deg);
+  -ms-transform     : skewX(#{$n}deg);
+  -webkit-transform : skewX(#{$n}deg);
+  -o-transform      : skewX(#{$n}deg);
+  -moz-transform    : skewX(#{$n}deg);
+}
+//定义 2D 倾斜转换，沿着 Y 轴。
+@mixin skewY($n) {
+  transform         : skewY(#{$n}deg);
+  -ms-transform     : skewY(#{$n}deg);
+  -webkit-transform : skewY(#{$n}deg);
+  -o-transform      : skewY(#{$n}deg);
+  -moz-transform    : skewY(#{$n}deg);
+}
+//变化基点
+@mixin origin($x,$y) {
+  transform-origin         : $x, $y;
+  -ms-transform-origin     : $x, $y;
+  -webkit-transform-origin : $x, $y;
+  -moz-transform-origin    : $x, $y;
+  -o-transform-origin      : $x, $y;
+}
+
+@mixin user-select(){
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}

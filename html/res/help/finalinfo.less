@@ -1,0 +1,199 @@
+@import "css/index";
+/*财务信息*/
+.g-right {
+  .m-con-wrap {
+    //财务信息
+    .finalinfo {
+      margin:50px 0;
+      text-align: center;
+      li {
+        display: inline-block;
+        width: 750px;
+        height: 1060px;
+        border: 4px solid #bcdcff;
+        &.auditing1 {
+          background: url("@{imgurl}auditing1.png") no-repeat center;
+        }
+        &.auditing2 {
+          background: url("@{imgurl}auditing2.png") no-repeat center;
+          margin-top: 14px;
+        }
+        &.auditing1 {
+          background: url("@{imgurl}auditing1.png") no-repeat center;
+        }
+        &.auditing11 {
+          background: url("@{imgurl}auditing11.png") no-repeat center;
+        }
+        &.auditing20161 {
+          background: url("@{imgurl}auditing20161.png") no-repeat center;
+        }
+        &.auditing20162 {
+          background: url("@{imgurl}auditing20162.png") no-repeat center;
+          margin-top: 14px;
+        }
+        &.auditing20171 .fReport{
+          background: url("@{imgurl}auditing20171.png") no-repeat center;
+          background-size: 100% 100%;
+          background-origin: content-box;
+        }
+        &.auditing20172 {
+          margin:0 10px;
+          .fReport{
+            background: url("@{imgurl}auditing20172.png") no-repeat center;
+            background-size: 100% 100%;
+            background-origin: content-box;
+          }
+        }
+        &.auditing20173 .fReport{
+          background: url("@{imgurl}auditing20173.png") no-repeat center;
+          background-size: 100% 100%;
+          background-origin: content-box;
+        }
+        &.auditing20174 .fReport{
+          background: url("@{imgurl}auditing20174.png") no-repeat center;
+          background-size: 100% 100%;
+          background-origin: content-box;
+        }
+        &.auditing20175 {
+          margin:0 10px;
+          .fReport{
+            background: url("@{imgurl}auditing20175.png") no-repeat center;
+            background-size: 100% 100%;
+            background-origin: content-box;
+          }
+        }
+        &.auditing20176 .fReport{
+          background: url("@{imgurl}auditing20176.png") no-repeat center;
+          background-size: 100% 100%;
+          background-origin: content-box;
+
+        }
+        &.auditing20177 .fReport{
+          background: url("@{imgurl}auditing20177.png") no-repeat center;
+          background-size: 100% 100%;
+          background-origin: content-box;
+        }
+      }
+    }
+    .finalinfo2017{
+      margin:20px 25px 50px;
+      text-align: left;
+      li {
+        position:relative;
+        display: inline-block;
+        width: 287px;
+        height: 405px;
+        margin:25px 0 0;
+        padding: 5px;
+        text-align: center;
+        border: 1px solid #dcdcdc;
+        a{
+          width:100%;
+          height: 405px;
+          border: none;
+          text-align: center;
+          cursor: pointer;
+        }
+        span.page-num{
+          position:absolute;
+          bottom: -20px;
+          left:50%;
+        }
+      }
+    }
+    .mt-20{
+      margin-top: 20px;
+    }
+    .compliance-content,.keyLink-content{
+      min-height: 500px;
+      margin: 20px 25px 50px;
+    }
+    .finalinfo_f{
+      span{
+        display: inline-block;
+        border-radius: 5px;
+        height: 26px;
+        text-align: center;
+        font: 400 14px/26px "microsoft yahei";
+        padding: 0 10px;
+        margin: 0 10px;
+        border: 1px solid #eee;
+        color: #000;
+        cursor:pointer;
+      }
+      span.active{
+        background: #57a8ff;
+        color: #fff;
+        border: 1px solid #57a8ff;
+      }
+    }
+  }
+
+
+}
+//多图预览样式
+.morePreview{
+  display: none;
+}
+.mui-dialog .mui-dialog-inner{
+  height:88%;
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  color: rgb(0, 0, 0);
+  position: relative;
+  z-index: 10002;
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  .pre-img,.next-img{
+    position: absolute;
+    top:50%;
+    margin-top: -25px;
+    cursor: pointer;
+    width: 50px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    border:1px solid #ddd;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+  }
+  .pre-img{
+    left: 20px;
+    background: url("@{imgurl}/pre_icon.png") no-repeat center / 20px 20px;
+  }
+  .next-img{
+    right: 20px;
+    background: url("@{imgurl}/next_icon.png") no-repeat center / 20px 20px;
+  }
+  .close{
+    position: absolute;
+    right: 8px;
+    top: -5px;
+    color: #999;
+    text-shadow: 0 1px 0 #fff;
+    font: 700 20px/46px "microsoft yahei";
+  }
+  .close:hover{
+    color:#000;
+  }
+}
+.mui-morePreview {
+  position: relative;
+  display: inline-block;
+  width: 750px;
+  height: 100%;
+  text-align: center;
+  background: #fff;
+  overflow: hidden;
+  img{
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 100%;
+    max-width: 700px;
+  }
+  .close{
+    cursor: pointer;
+  }
+}

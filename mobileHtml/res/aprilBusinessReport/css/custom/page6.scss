@@ -1,0 +1,90 @@
+//page6
+.page6-img img {
+  width    : 80%;
+  left     : 10%;
+  position : relative;
+}
+
+.page6-chart1 {
+  background : url(../imgs/page6-chart-line.png) no-repeat center !important; background-size : contain !important;
+  position   : relative;
+  width: 100%;
+  height: 38vw;
+  max-height: 157px;
+}
+
+.page6-chart1 > * {
+  width    : 100%;
+  height   : 100%;
+  position : absolute;
+  left     : 0;
+  top      : 0;
+}
+
+#page6-chart-text > * {
+  position  : absolute;
+  font-size : 10px;
+}
+#page6-chart-text > *:nth-child(1) { color : #f9df18; top : -11%; right : 0; }
+#page6-chart-text > *:nth-child(2) { color : #fff182; top : 34%; right : 0; }
+#page6-chart-text > *:nth-child(3) { color : #85a0be; top : 83%; right : 0; }
+#page6-chart-text > *:nth-child(4) { color : #9ea5ff; top : 83%; left : 0; }
+#page6-chart-text > *:nth-child(5) { color : #5762f7; top : -11%; left : 0; }
+
+
+#page6-chart-text > h2 { color :$co-vice; top : 33%; left : 1.5%;width: 100%;  text-align : center; }
+
+#page6-chart-text > h2 > *:nth-child(1) { font-size : 12px }
+
+#page6-chart-text > h2 > *:nth-child(2) {line-height: 1; font-size : 21px;font-weight: bolder;    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from($co-main), to($co-vice));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.page6-chart2{
+  width: 60%;
+  left: 20%;
+  top:5%;
+  position: relative;
+}
+.page6-chart2-img{
+  width: 100%;
+  height: 0;
+  padding-top: 54%;
+  position: relative;
+  background: linear-gradient(90deg, #f9df18 35%, #5d66ef 65%);
+}
+.page6-chart2-img:after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  left: -5%;
+  top:-5%;
+  background: url(../imgs/page6-chart2.png) no-repeat center;
+  background-size: contain;
+}
+.page6-chart2-text{position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+}
+
+.page6-chart2-text p:nth-child(1){
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from($co-main), to($co-vice));
+  bottom: -5%;
+  left: 10%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+}
+.page6-chart2-text p:nth-child(2){
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from($co-tag2), to($co-tag3));
+  top: -5%;
+  right: 10%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+}

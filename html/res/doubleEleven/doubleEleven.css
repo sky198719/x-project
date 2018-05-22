@@ -1,0 +1,110 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.wrap {
+  width: 100%;
+  min-width: 1200px;
+}
+.part-top {
+  height: 1198px;
+  background: url("img/bg1.jpg") center no-repeat;
+}
+.main-content {
+  width: 1110px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.content-r {
+  width: 400px;
+  height: 452px;
+  margin-top: 662px;
+  margin-left: 626px;
+}
+.content-r h2 {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding: 26px 0 30px;
+}
+.content-r .red-title {
+  width: 342px;
+  margin: 0 auto;
+  font-size: 16px;
+  height: 30px;
+}
+.content-r .red-title li {
+  float: left;
+  font-size: 16px;
+  color: #fff;
+}
+.content-r .red-title .red-name {
+  margin-left: 18px;
+}
+.content-r .red-title .red-time {
+  margin-left: 70px;
+}
+.content-r .red-title .red-money {
+  margin-left: 38px;
+}
+.content-r .winData {
+  width: 342px;
+  height: 300px !important;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+  margin: 0 auto;
+}
+.content-r .winData ul {
+  width: 90%;
+  padding: 0;
+  margin: 0 5%!important;
+  position: relative;
+}
+.content-r .winData ul .active-w {
+  text-align: center;
+}
+.content-r .winData ul li {
+  width: 100%;
+  height: 50px;
+  line-height: 48px;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+}
+.content-r .winData ul li span {
+  display: inline-block;
+}
+.content-r .winData ul li .username {
+  width: 30%;
+  text-align: left;
+}
+.content-r .winData ul li .time {
+  width: 34%;
+  text-align: center;
+  margin-left: 2%;
+}
+.content-r .winData ul li .prizename {
+  width: 34%;
+  text-align: center;
+}
+.part-center {
+  height: 629px;
+  background: url("img/bg2.jpg") center no-repeat;
+}
+.part-bottom {
+  height: 1032px;
+  background: url("img/bg3.jpg") center no-repeat;
+}
+.btn {
+  display: block;
+  margin: 405px auto 0;
+  width: 268px;
+  height: 78px;
+  background: url("img/btn1.png") center no-repeat;
+}

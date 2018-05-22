@@ -1,0 +1,93 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <!-- We have home navbar without left link-->
+        <div class="left"></div>
+        <div class="center"><img src="static/img/xxd/logo.png" height="30px"></div>
+        <div class="right">
+        </div>
+    </div>
+</div>
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through">
+	<!-- Page, data-page contains page name-->
+	<div data-page="financialClient" class="page" directory="activity" id="financialClient">
+		<!-- Scrollable page content-->
+		<div class="page-content" style="background:white;padding-bottom:0px;">
+			<!-- banner start-->
+            <img src="static/img/activity/financialClient/banner.png" style="width: 100%;height: 150px;"/>
+			<div class="list-block" style="margin: 0px;">
+				<ul>
+                    <li>
+                        <div class="item-content" style="padding-left: 0px;">
+                            <div class="item-inner">
+                                <div class="item-media" style="padding-left: 20px;padding-right: 10px;">
+                                    <div class="icon-user"></div>
+                                </div>
+                                <div class="item-input">
+                                    <input id="userName" type="text" placeholder="请输入您的真实姓名" maxlength="15" style="font-size:14px;">
+                                    <span style="color:red;font-size: 13px;padding-left: 5px;display:none;" id="userNameErrorMsg"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+					<li>
+						<div class="item-content" style="padding-left: 0px;">
+							<div class="item-inner">
+								<div class="item-media" style="padding-left: 20px;padding-right: 10px;">
+									<div class="icon-phone"></div>
+								</div>
+								<div class="item-input">
+									<input id="phoneNo" type="tel" placeholder="请输入您的手机号，用于接收验证码" maxlength="11" style="font-size:14px;">
+									<span style="color:red;font-size: 13px;padding-left: 5px;display:none;" id="phoneNoErrorMsg"></span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content" style="padding-left: 0px;">
+							<div class="item-inner">
+								<div class="item-media" style="padding-left: 20px;padding-right: 10px;">
+									<div class="icon-imgcaptcha"></div>
+								</div>
+								<div class="item-input">
+									<input id="imgCode" type="text" placeholder="请输入图片验证码" maxlength="4" style="font-size:14px;">
+									<span style="color:red;font-size: 13px;padding-left: 5px;display:none;" id="imgCodeErrorMsg"></span>
+								</div>
+								<div class="item-after">
+									<div class="reCreateImageCode">
+				                        <img src="randCode/createVerifyCode.do" id="randImage">
+				                    </div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content" style="padding-left: 0px;">
+							<div class="item-inner">
+								<div class="item-media" style="padding-left: 20px;padding-right: 10px;">
+									<div class="icon-mescaptcha"></div>
+								</div>
+								<div class="item-input">
+									<input id="phoneVerifyCode" type="tel" placeholder="请输入验证码" maxlength="6" style="font-size:14px;">
+									<span style="color:red;font-size: 13px;padding-left: 5px;display:none;" id="phoneVerifyCodeErrorMsg">请检查验证码</span>
+								</div>
+								<div class="item-after">
+									<div class="item-media">
+										<span id="phoneVerifyCodeCountdown"></span>
+										<span id="sendSMSCode" style="color:#007aff;border-bottom:1px solid;">发送验证码</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div style="padding:25px 20px 0px 20px;">
+                   <div style="font-size: 18px;height: 40px;line-height: 40px;margin-top: 26px;background-color: #3f9bff;border: 1px solid #3f9bff;display: block;border-radius: 5px;margin: 0;text-align:center;color:#ffffff" id="submitRegister">提交</div>
+            </div>
+            <p style="text-align: center">新新贷（上海）金融信息服务有限公司</p>
+		</div>
+	</div>
+</div>
+

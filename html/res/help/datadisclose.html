@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>平台数据_新新贷</title>
+    <link rel="shortcut icon" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="Bookmark" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="stylesheet" href="../help/datadisclose.css">
+</head>
+<body>
+<div id="J_wrapBody">
+    <div id="J_header" class="header"></div>
+    <div class="g-top">
+        <div class="g-top-con">
+            <div class="container-1200">
+                <a href="http://www.xinxindai.com/">首页</a> &gt; <a href="record.html">信息披露</a> &gt; 平台数据
+            </div>
+        </div>
+    </div>
+    <div class="info-contaner clearfix">
+        <div class="g-left">
+            <div class="menu">
+                <h2>信息披露<i></i></h2>
+                <ul>
+                    <li><a href="record.html">备案信息</a></li>
+                    <li><a href="organization.html">组织信息</a></li>
+                    <li><a href="finalinfo.html">审核信息</a></li>
+                    <li><a href="major.html">重大事项</a></li>
+                    <li><a href="information.html">平台信息</a></li>
+                    <li><a class='active' href="datadisclose.html">平台数据</a></li>
+                    <li><a href="runreports.html">运营报告</a></li>
+                    <li><a href="commitment.html">承诺书</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <h2>安全合规<i></i></h2>
+                <ul>
+                    <li><a href="/html/storagepage/index.html" target='_blank'>银行存管</a></li>
+                    <li><a href="safesecurity.html">安全保障</a></li>
+                    <li><a href="complirun.html">合规运营</a></li><li><a href="riskmanager.html">风险管理</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <h2>关于我们<i></i></h2>
+                <ul>
+                    <li><a href="compprofile.html">公司简介</a></li>
+                    <li><a href="teammanager.html">管理团队</a></li>
+                    <li><a href="enterculture.html">企业文化</a></li>
+                    <li><a href="develphistory.html">发展历程</a></li>
+                    <li><a href="qualihonor.html">资质荣誉</a></li>
+                    <li><a href="platform.html">平台公告</a></li>
+                    <li><a href="newsreport.html">新闻报道</a></li>
+                    <li><a href="partner.html">合作伙伴</a></li>
+                    <li><a href="joinus.html">加入我们</a></li>
+                    <li><a href="contactus.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="g-right">
+            <div class='data-box'>
+                <div class='j_tabContent'>
+                    <div class="m-con-wrap" id="nav-con-warp">
+                        <span id="eventTime"></span>
+                    </div>
+                    <!--<div class="m-con-wrap" style="border:none; border-bottom:none; margin-bottom:0;">
+                        <div class="m-con-hd" style="border-bottom:none;">运营数据</div>
+                    </div>-->
+                    <div class='table-box'>
+                        <table>
+                            <!--<tr class='title'>
+                                <th colspan='2'>运营数据</th>
+                            </tr>-->
+                            <tr>
+                                <td style="width:300px;">累计交易总额(元)</td>
+                                <td id="totalTradeAmount">0</td>
+                            </tr>
+                            <tr>
+                                <td>累计交易笔数(笔)</td>
+                                <td id="totalTradeNumber">0</td>
+                            </tr>
+                            <tr>
+                                <td>累计借款人数量(人)</td>
+                                <td id="totalBorrower">0</td>
+                            </tr>
+                            <tr>
+                                <td>累计出借人数量(人)</td>
+                                <td id="totalLender">0</td>
+                            </tr>
+                            <tr>
+                                <td>当前借款人数量(人)</td>
+                                <td id="currentBorrower">0</td>
+                            </tr>
+                            <tr>
+                                <td>当前出借人数量(人)</td>
+                                <td id="currentLender">0</td>
+                            </tr>
+                            <tr>
+                                <td>借贷余额(元)</td>
+                                <td id="loanBalanceAmount">0</td>
+                            </tr>
+                            <tr>
+                                <td>借贷余额笔数(笔)</td>
+                                <td id="loanBalanceNumber">0</td>
+                            </tr>
+                            <tr>
+                                <td>利息余额(元)</td>
+                                <td id="interestBalanceAmount">0</td>
+                            </tr>
+                            <tr>
+                                <td>前十大借款人待还金额占比(%)</td>
+                                <td id="no10BorrowerPercent">0</td>
+                            </tr>
+                            <tr>
+                                <td>最大单一借款人待还金额占比(%)</td>
+                                <td id="no1BorrowerPercent">0</td>
+                            </tr>
+                            <tr>
+                                <td>关联关系借款余额(元)</td>
+                                <td id="relatedLoanBalanceAmount">0</td>
+                            </tr>
+                            <tr>
+                                <td>关联关系借款余额笔数(笔)</td>
+                                <td id="relatedLoanBalanceNumber">0</td>
+                            </tr>
+                            <tr>
+                                <td>逾期金额(元)<span style="font-size:14px; line-height:13px; color:#ccc; display:block; margin-bottom:5px;">注：出借人到期未收</span></td>
+                                <td id="overdueAmount">0</td>
+                            </tr>
+                            <tr>
+                                <td>逾期笔数(笔)<span style="font-size:14px; line-height:13px; color:#ccc; display:block; margin-bottom:5px;">注：出借人到期未收</span></td>
+                                <td id="overdueNumber">0</td>
+                            </tr>
+                            <tr>
+                                <td>逾期90天以上金额(元)<span style="font-size:14px; line-height:13px; color:#ccc; display:block; margin-bottom:5px;">注：出借人到期未收</span></td>
+                                <td id="overdue90Amount">0</td>
+                            </tr>
+                            <tr>
+                                <td>逾期90天以上笔数(笔)<span style="font-size:14px; line-height:13px; color:#ccc; display:block; margin-bottom:5px;">注：出借人到期未收</span></td>
+                                <td id="overdue90Number">0</td>
+                            </tr>
+                            <tr>
+                                <td>代偿金额(元)</td>
+                                <td id="compensatoryAmount">0</td>
+                            </tr>
+                            <tr>
+                                <td>代偿笔数(笔)</td>
+                                <td id="compensatoryNumber">0</td>
+                            </tr>
+                        </table>
+                        <p class="deadline" style="font-size:16px; text-align:right;">截止日期：<span id="myDate"></span></p>
+                    </div>
+                    <!--<div class="m-con-wrap" style="border:none; border-bottom:none; margin-bottom:0;">
+                        <div class="m-con-hd" style="border-bottom:none;">收费标准</div>
+                    </div>-->
+                    <div class='table-box'>
+                        <table>
+                            <tr class='title'>
+                                <th colspan='3'>收费标准</th>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>业务类型</td>
+                                <td>收费标准</td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>用户注册</td>
+                                <td>免费</td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>开通存管账户</td>
+                                <td>免费</td>
+                            </tr>
+                            <tr>
+                                <td rowspan='2'>投标</td>
+                                <td>散标</td>
+                                <td rowspan='2'>免费</td>
+                            </tr>
+                            <tr>
+                                <td>月进斗金、新元宝、<br/>月月派</td>
+                            </tr>
+                            <tr>
+                                <td rowspan='2'>回款到账<br/>(自动退出)</td>
+                                <td>散标</td>
+                                <td>收益管理费为应收利息的<span id="percent1">0</span>%</td>
+                            </tr>
+                            <tr>
+                                <td>月进斗金、新元宝、<br/>月月派</td>
+                                <td>免费</td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>债权转让(散标)</td>
+                                <td>已绑定专属财富顾问债权转让手续费为本金的<span id="percent2">0</span>%<br/>未绑定专属财富顾问债权转让手续费为本金的<span id="percent3">0</span>%<br/>最低为人名币<span id="amount1">2</span>元</td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>提前退出</td>
+                                <td>新元宝和月月派收取提前退出手续费，手续费为本金的<span id="percent4">0</span>%</td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>充值</td>
+                                <td>免费</td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>提现</td>
+                                <td>免费</td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>借款人收费</td>
+                                <td>对借款人收费不超过<span id="percent5">0</span>%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layer"></div>
+    <div class="show-img"></div>
+    <div id="J_footer" class="footer"></div>
+</div>
+<!--[if lt IE 9]>
+<iframe id="ifr_cover" frameborder="0" class="hide" scrolling="no"></iframe>
+<div id="alertBoxWrap" class="hide"></div>
+<![endif]-->
+<input type="hidden" value="1" id="J_mapmark"/>
+<script src="../help/js/combo-datadisclos.js"></script>
+<script src="../help/js/combo.js"></script>
+</body>
+</html>

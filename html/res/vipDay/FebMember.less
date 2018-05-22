@@ -1,0 +1,511 @@
+.disnone{
+  display: none;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  height: 0;
+  content: ".";
+  visibility: hidden;
+}
+html{
+  width: 100%;
+  height: auto !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body{
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+#J_wrapBody{
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-width: 1200px;
+}
+.main-content{
+  width: 100%;
+  height: 1184px;
+  min-width: 1200px;
+  background: url("img/Feb/bkg-top.png") center center no-repeat;
+}
+
+.wrap{
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  //数据
+  .content-list{
+    position:absolute;
+    top:1092px;
+    left:50%;
+    z-index: 98;
+    margin-left:-336px;
+    width: 709px;
+    height:37px;
+    line-height: 37px;
+    border: 2px solid #8a1f03;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    background: #d62216;
+    .winData{
+      width: 672px;
+      height:37px;
+      ul{
+        height: 37px;
+        display: inline-block;
+        overflow:hidden;
+        zoom: 1;
+        li{
+          height: 37px;
+          line-height: 37px;
+          font-size: 16px;
+          color: #ffdb00;
+          span{
+            display: inline-block;
+          }
+        }
+      }
+      .active-w{
+       width: 100%;
+        text-align:center;
+      }
+    }
+    .plus-mar-left {
+      overflow: hidden;
+      word-break: keep-all;
+      white-space: nowrap;
+      ul {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        li {
+          display: inline-block;
+          *display: inline;
+          zoom: 1;
+          text-indent: 15px;
+        }
+      }
+    }
+  }
+
+  .rules-rock{
+    cursor: pointer;
+    //动画
+    .animation(flash 3s  infinite alternate ease);
+  }
+  //谈话框动画
+  .keyframesFlash(flash,{
+    from, 50%, to {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0.5;
+    }
+  });
+  .keyframesFlash (@name, @frames) {
+    @-webkit-keyframes @name {@frames();}
+    @-moz-keyframes @name {@frames(); }
+    @-ms-keyframes @name {@frames();}
+    @-o-keyframes @name {@frames();}
+    @keyframes @name { @frames();}
+  }
+  //transformOrigin 位置
+  .transformOrigin(@attr){
+    -webkit-transform-origin:@attr;
+    -moz-transform-origin:@attr;
+    -o-transform-origin:@attr;
+    -ms-transform-origin:@attr;
+    transform-origin:@attr;
+  }
+  //动画函数
+  .animation(@attr){
+    -webkit-animation:@attr;
+    -moz-animation:@attr;
+    -ms-animation:@attr;
+    -o-animation:@attr;
+    animation:@attr;
+  }
+
+  //小人keyframes函数
+  .keyframes(move,webkit,{
+    .transform(-webkit-);
+  });
+  .keyframes(move,moz,{
+    .transform(-moz-);
+  });
+  .keyframes(move,o,{
+    .transform(-o-);
+  });
+  .keyframes(move,ms,{
+    .transform(-ms-);
+  });
+  .keyframes(move,def,{
+    .transform('');
+  });
+
+  .keyframes (@name,@prefix,@frames) when (@prefix=def){
+    @keyframes @name { @frames(); }
+  }
+  .keyframes (@name,@prefix,@frames) when (@prefix=webkit){
+    @-webkit-keyframes @name { @frames(); }
+  }
+  .keyframes (@name,@prefix,@frames) when (@prefix=moz){
+    @-moz-keyframes @name { @frames(); }
+  }
+  .keyframes (@name,@prefix,@frames) when (@prefix=o){
+    @-o-keyframes @name { @frames(); }
+  }
+  .keyframes (@name,@prefix,@frames) when (@prefix=ms){
+    @-ms-keyframes @name { @frames(); }
+  }
+  //keyframes中transform动画详情
+  .transform(@attr) when (@attr=''){
+    0% {
+     transform: rotate(0deg);
+    }
+    33% {
+      transform: rotate(-5deg);
+    }
+    66% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .transform(@attr) when not (@attr=''){
+    0% {
+        @{attr}transform: rotate(0deg);
+    }
+    33% {
+        @{attr}transform: rotate(-5deg);
+    }
+    66% {
+        @{attr}transform: rotate(5deg);
+    }
+    100% {
+        @{attr}transform: rotate(0deg);
+    }
+  }
+}
+.main-middle{
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 505px;
+  min-width: 1200px;
+  background: url("img/Feb/bkg-middle.png") center center no-repeat;
+  overflow:hidden;
+}
+.main-bottom{
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 614px;
+  min-width: 1200px;
+  background: url("img/Feb/bkg-bottom.png") center center no-repeat;
+  overflow:hidden;
+}
+/*弹窗*/
+.popup{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background:rgba(0,0,0,0.6);
+  .pop-main{
+    position: fixed;
+    width: 480px;
+    height: 467px;
+    top:50%;
+    left:50%;
+    margin-left: -240px;
+    margin-top: -233.5px;
+    background: url("img/Feb/pop.png") center no-repeat;
+    background-size: 100% 100%;
+    .close{
+      position:absolute;
+      top: 460px;
+      left: 50%;
+      margin-left: -30px;
+      display: block;
+      width: 60px;
+      height: 60px;
+      background: url("img/Feb/close.png") center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+//
+
+
+.lighter{
+  position: absolute;
+  left: 0;
+  right:0;
+  margin: 0 auto;
+  top:210px;
+  width: 877px;
+  height: 889px;
+  background: url("img/Feb/lighter.png") center center no-repeat;
+  background-size: 100% 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+  -webkit-perspective:1000;
+  perspective:1000;
+  .transformOrigin(center,center);
+  .animation(lighter 3s linear infinite);
+}
+.blessing{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  //z-index: 100;
+  top:0;
+  width: 470px;
+  height: 470px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+  -webkit-perspective:1000;
+  perspective:1000;
+  .transformOrigin(center,center);
+}
+.flip{
+  clear:both;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 496px;
+  height: 515px;
+  margin: 0 auto;
+  //z-index: 100;
+  top:399px;
+}
+.front{
+  width: 496px;
+  z-index: 100;
+  height: 515px;
+  background: url("img/Feb/fu.png") center center no-repeat;
+  background-size: contain;
+}
+.behind{
+  width: 0;
+  z-index: 0;
+  height: 515px;
+  background: url("img/Feb/dimension.png") center center no-repeat;
+  background-size: contain;
+}
+.mask{
+  position: absolute;
+  top:165px;
+  width: 250px;
+  height:210px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index:100;
+}
+.drawShake{
+  .animation(shake 1s ease 3 both);
+}
+.drawRotate{
+  .animation(drawRotate 0.4s linear both);
+}
+.lion-common{
+  position: absolute;
+  z-index: 90;
+  top: 534px;
+  width: 390px;
+  height: 565px;
+
+}
+.lion-left{
+  left: 0;
+  background: url("img/Feb/lion-left.png") center center no-repeat;
+  background-size: contain;
+}
+.lion-right{
+  right: 0;
+  background: url("img/Feb/lion-right.png") center center no-repeat;
+  background-size: contain;
+}
+.prizes{
+  position: absolute;
+  left: 0;
+  right:0;
+  margin: 0 auto;
+  top:877px;
+  z-index: 95;
+  width: 764px;
+  height: 246px;
+  background: url("img/Feb/prizes.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.transformOrigin(@v,@h){
+  -webkit-transform-origin:@v @h;
+  -moz-transform-origin:@v @h;
+  -ms-transform-origin:@v @h;
+  -o-transform-origin:@v @h;
+  transform-origin:@v @h;
+}
+
+.animation(@attr){
+  -webkit-animation:@attr;
+  -moz-animation:@attr;
+  -ms-animation:@attr;
+  -o-animation:@attr;
+  animation:@attr;
+}
+
+//  灯光动画
+.keyframes(lighter,webkit,{
+  .transform(-webkit-);
+});
+.keyframes(lighter,moz,{
+  .transform(-moz-);
+});
+.keyframes(lighter,o,{
+  .transform(-o-);
+});
+.keyframes(lighter,ms,{
+  .transform(-ms-);
+});
+.keyframes(lighter,def,{
+  .transform('');
+});
+
+.keyframes (@name,@prefix,@frames) when (@prefix=def){
+  @keyframes @name { @frames(); }
+}
+.keyframes (@name,@prefix,@frames) when (@prefix=webkit){
+  @-webkit-keyframes @name { @frames(); }
+}
+.keyframes (@name,@prefix,@frames) when (@prefix=moz){
+  @-moz-keyframes @name { @frames(); }
+}
+.keyframes (@name,@prefix,@frames) when (@prefix=o){
+  @-o-keyframes @name { @frames(); }
+}
+.keyframes (@name,@prefix,@frames) when (@prefix=ms){
+  @-ms-keyframes @name { @frames(); }
+}
+//keyframes中transform动画详情
+.transform(@attr) when (@attr=''){
+  from { /*动画起始状态*/
+    transform: rotateZ(0deg);
+  }
+  to { /*动画结束状态*/
+    transform: rotateZ(360deg);
+  }
+}
+.transform(@attr) when not (@attr=''){
+  from { /*动画起始状态*/
+    transform: rotateZ(0deg);
+  }
+  to { /*动画结束状态*/
+    transform: rotateZ(360deg);
+  }
+}
+//  福字抖动
+.keyframes(shake,webkit,{
+  .transformBless(-webkit-);
+});
+.keyframes(shake,moz,{
+  .transformBless(-moz-);
+});
+.keyframes(shake,o,{
+  .transformBless(-o-);
+});
+.keyframes(shake,ms,{
+  .transformBless(-ms-);
+});
+.keyframes(shake,def,{
+  .transformBless('');
+});
+//keyframes中transform动画详情
+.transformBless(@attr) when (@attr=''){
+  0%{
+    transform:scale(1);
+  }
+  10%,20%{
+    transform:scale(1) rotate(-3deg);
+  }
+  30%,50%,70%,90%{
+    transform:scale(1.1) rotate(3deg);
+  }
+  40%,60%,80%{
+    transform:scale(1.1) rotate(-3deg);
+  }
+  100%{
+    transform:scale(1) rotate(0deg);
+  }
+}
+.transformBless(@attr) when not (@attr='') {
+  0% {
+    transform: scale(1);
+  }
+  10%, 20% {
+    transform: scale(1) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+//  福字旋转
+.keyframes(drawRotate,webkit,{
+  .transformDraw(-webkit-);
+});
+.keyframes(drawRotate,moz,{
+  .transformDraw(-moz-);
+});
+.keyframes(drawRotate,o,{
+  .transformDraw(-o-);
+});
+.keyframes(drawRotate,ms,{
+  .transformDraw(-ms-);
+});
+.keyframes(drawRotate,def,{
+  .transformDraw('');
+});
+
+.transformDraw(@attr) when (@attr=''){
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform: rotate(180deg);
+  }
+}
+.transformDraw(@attr) when not (@attr='') {
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform: rotate(180deg);
+  }
+}

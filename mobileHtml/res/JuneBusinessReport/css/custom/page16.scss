@@ -1,0 +1,37 @@
+
+.new-list > * {
+  margin-bottom: 10px;
+}
+
+.new-list > * > * {
+  float: left;
+  position: relative;
+}
+
+.new-list > *:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.new-list > * > * img {
+  max-width: 100%;
+}
+
+.new-list > * > *:nth-child(1) {
+  width: 33%;
+}
+
+.new-list > * > *:nth-child(2) {
+  width: 67%;
+  padding-left: 10px;
+  //font-size: 10px;
+}
+
+.new-list.list2 > * > *:nth-child(1) {
+  width: 32%;
+}
+
+.new-list.list2 > * > *:nth-child(2) {
+  width: 68%;
+}

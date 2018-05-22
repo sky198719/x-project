@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="双11领红包，最高1111元！">
+    <meta name="description" content="为回馈广大新老用户，增加注册人数及投资额，新新贷特推出双11活动以提高其投资活跃度">
+    <title>双11领红包，最高1111元！</title>
+    <link rel="shortcut icon" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="Bookmark" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="stylesheet" href="../doubleEleven/doublePromotion.css">
+</head>
+<body>
+<div id="J_wrapBody">
+    <div class="header">
+        <div class="header-main clearfix">
+            <a class="logo" href="/" target="_blank"></a>
+            <div class="tel">
+                <i class="tel-icon">
+                    <img src="img/tel.png">
+                </i><div class="tel-num">
+                <h3>4000-169-521</h3>
+                <p>（工作日 9:00-18:00）</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap part-top">
+        <div class="main-content">
+            <!--注册框-->
+                <div class="register clearfix" id="J_register">
+                    <form id="form">
+                        <div class="register-title"></div>
+                        <div class="user-common user-num">
+                           <input id="J_num"  class="J-num" type="number" name="usern" placeholder="请输入您的手机号码" oninput="if(value.length>11)value=value.slice(0,11)"/>
+                        </div>
+                        <div class="user-common user-psw ">
+                            <input id="J_psw" class="J-psw" type="password" name="userpsw" placeholder="请设置6-16位数字，字母组合密码" minlength="6" maxlength="16"/>
+                        </div>
+                        <div class="user-special clearfix">
+                            <input id="J_verify" class="J-verify" type="text" name="uservefiry" placeholder="请输入图片验证码"/>
+                            <img class="change-verify"  src="/feapi/randCode/createVerifyCode?formtoken=2afb0c26a1135cf0868322dda28b0dd5&v=0.36431611876306214" id="J_getVerify"/>
+                            <!--<span class="yzm-refresh" id="J_yzmRefresh"></span>-->
+                        </div>
+                        <div class="user-verigy user-special">
+                           <input id="J_phoneyzm" class="J-phoneyzm" type="text" name="userphone" placeholder="请输入手机验证码"/>
+                            <span class="get-phoneyzm" id="J_getPhoneCode">获取验证码</span>
+                        </div>
+                        <p class="cur cur-special dishidden" id="J_cur"></p>
+                        <div class="user-agree">
+                            <i class="check-style" id="agree"><span class="user-check checked"></span></i>
+                            <span class="check-info">我已阅读并同意<a href="/user/reg-agreement.html" target="_blank">《新新贷使用协议》</a></span>
+                        </div>
+                        <button type="button" class="get-red" id="J_submit"></button>
+                        <p class="have-login">已有账号？ <a class="logined" href="/user/ilogin.html">马上登录</a></p>
+                    </form>
+                </div>
+            <a class="content-l" id="J_contentL" href="#J_register"></a>
+            <div class="content-r">
+                <h2>红包领取</h2>
+                <ul class="red-title"><li class="red-name">用户名</li><li class="red-time">获奖时间</li><li class="red-money">红包金额</li></ul>
+                <div class='winData myscroll' id="J_winData">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap part-center">
+        <div class="main-content">
+            <a class="btn" id="J_btn" href="#J_register"></a>
+        </div>
+    </div>
+    <div class="wrap part-bottom">
+        <ul class="advantage-data">
+            <li><span class="advantage-content">稳健运营</span><p><span id="J_year">5</span>年<span id="J_totalDay">241</span>天</p></li>
+            <li  class="advantage-second"><span class="advantage-content">累计成交金额</span><p><span id="J_totalTrade">104.58</span>亿元</p></li>
+            <li  class="advantage-third"><span class="advantage-content">累计为出借人赚取</span><p><span id="J_totalIncome">4.95</span>亿元</p></li>
+        </ul>
+        <p class="advantage-time">截止日期：<span id="J_registerUserDate">2017年6月30日</span></p>
+    </div>
+    <div class="wrap register-bottom">
+        <a class="register-btn" id="J_registerBottom" href="#J_register"></a>
+    </div>
+    <div class="wrap special-bottom disnone" id="J_lastRegister">
+        <a class="register-btn" id="J_specialBtn" href="#J_register"></a>
+    </div>
+    <div id="J_footer" class="footer"></div>
+</div>
+<!--[if lt IE 9]>
+<iframe id="ifr_cover" frameborder="0" class="hide" scrolling="no"></iframe>
+<div id="alertBoxWrap" class="hide"></div>
+<![endif]-->
+</body>
+<script src="../doubleEleven/js/combo-promotion.js"></script>
+<script src="../doubleEleven/js/vticker.js"></script>
+</html>

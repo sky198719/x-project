@@ -1,0 +1,334 @@
+/*
+ * 模块：提示框
+ * 模块类型：b(基础模块)
+ * 精度：9 +
+ * 分级：3 +
+ * 适配：平板 | 移动
+ * 兼容：
+ * 版本：v0.0.1
+ * 备注：
+ * dim (true 开 | false 关)；是否开启暗层（默认关闭）
+ * pos (tl 上左 | tc 上中 | tr 上右 | cl 中左 |cc 中中 | cr 中右 | bl 下左 | bc 下中 | br 下右)；提示框位置（默认中中）
+ * time (number 显示时间) 设计一个数字（默认3秒）
+ * icon (success 成功 | warning 警告 | error 错误) 非必需（默认无图标）
+ * msg (提示内容)
+ */
+
+.prompt-o-hide {
+    position: fixed;
+    overflow: hidden;
+}
+
+.xui-prompt[theme=tobar] {
+    display: inline-table;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}
+
+.xui-prompt[theme=tobar] > * {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/*暗层（默认开启）*/
+.xui-prompt[theme=tobar] .xui-prompt-dim,
+    /*暗层开启*/
+.xui-prompt[theme=tobar][dim="true"] .xui-prompt-dim {
+    background: rgba(0, 0, 0, .2);
+}
+
+/*暗层关闭*/
+.xui-prompt[theme=tobar][dim="false"] .xui-prompt-dim {
+    background: rgba(0, 0, 0, 0);
+}
+
+.xui-prompt[theme=tobar] > * {
+    vertical-align: top;
+    text-align: center
+}
+
+.xui-prompt[theme=tobar] .xui-prompt-content {
+    display: inline-block;
+    background: rgba(149, 226, 115, 0.95);
+    color: #fff;
+    padding: 1em;
+    width: 100%;
+    min-width: 6rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.xui-prompt[theme=tobar] .xui-prompt-content * {
+    margin: 0;
+    word-break: break-all;
+}
+
+.xui-prompt[theme=tobar] .prompt-icon {
+    text-align: center;
+    /* padding: 5px; */
+    margin: 0;
+    height: 1rem;
+    display: inline-block;
+}
+
+.xui-prompt[theme=tobar] .prompt-icon > * {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 1px;
+    margin-right: .5rem;
+    /* line-height: 1rem; */
+    border-radius: 50%;
+    background: radial-gradient(at 50% 50%, rgba(255, 255, 255, 0) 62%, #fff 63%);
+    text-align: center;
+    position: relative;
+    vertical-align: top;
+}
+
+.xui-prompt[theme=tobar] .xui-prompt-msg{
+    display: inline-block;
+}
+
+@keyframes rotate0-360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate0-360 {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/*风格1*/
+/*
+.prompt-icon[icon="loading"] > * {
+    animation: rotate0-360 1.5s linear infinite;
+    -webkit-animation: rotate0-360 1.5s linear infinite;
+    background:
+            radial-gradient(circle at 93% 50%, rgba(255, 255, 255, 1) 3.5%, rgba(255, 255, 255, 0) 1.5%),
+            radial-gradient(circle at 90% 34%, rgba(255, 255, 255, .96) 3.3%, rgba(255, 255, 255, 0) 1.5%),
+            radial-gradient(circle at 81% 20%, rgba(255, 255, 255, .94) 3.1%, rgba(255, 255, 255, 0) 1.5%),
+            radial-gradient(circle at 67% 11%, rgba(255, 255, 255, .90) 2.9%, rgba(255, 255, 255, 0) 1.5%),
+            radial-gradient(circle at 50% 7%, rgba(255, 255, 255, .86) 2.7%, rgba(255, 255, 255, 0) 1.0%),
+
+            radial-gradient(circle at 33% 10.5%, rgba(255, 255, 255, .82) 2.5%, rgba(255, 255, 255, 0) 1.5%),
+            radial-gradient(circle at 20% 19%, rgba(255, 255, 255, .78) 2.3%, rgba(255, 255, 255, 0) 1.0%),
+            radial-gradient(circle at 12% 30%, rgba(255, 255, 255, .74) 2.1%, rgba(255, 255, 255, 0) 1.5%),
+            radial-gradient(circle at 8% 42%, rgba(255, 255, 255, .70) 1.95%, rgba(255, 255, 255, 0) 1.0%),
+            radial-gradient(circle at 7.5% 55%, rgba(255, 255, 255, .66) 1.9%, rgba(255, 255, 255, 0) 1.5%),
+
+            radial-gradient(circle at 11% 68.5%, rgba(255, 255, 255, .62) 1.85%, rgba(255, 255, 255, 0) 1.0%),
+            radial-gradient(circle at 18% 79%, rgba(255, 255, 255, .58) 1.8%, rgba(255, 255, 255, 0) 1.5%),
+            radial-gradient(circle at 27% 86.5%, rgba(255, 255, 255, .54) 1.75%, rgba(255, 255, 255, 0) 1.0%),
+            radial-gradient(circle at 38% 91.5%, rgba(255, 255, 255, .50) 1.7%, rgba(255, 255, 255, 0) 1.0%),
+            radial-gradient(circle at 50% 93%, rgba(255, 255, 255, .46) 1.65%, rgba(255, 255, 255, 0) 1.0%),
+
+            radial-gradient(circle at 63% 91.3%, rgba(255, 255, 255, .4) 1.6%, rgba(255, 255, 255, 0) 1.0%),
+            radial-gradient(circle at 74% 86%, rgba(255, 255, 255, .3) 1.55%, rgba(255, 255, 255, 0) 1.0%),
+            radial-gradient(circle at 83% 78%, rgba(255, 255, 255, .2) 1.5%, rgba(255, 255, 255, 0) 1.0%);
+            !*radial-gradient(at 50% 50%, rgba(51, 204, 255, .3) 61%, rgba(228, 62, 254, .3) 57%)*!
+
+}*/
+
+/*风格2*/
+.xui-prompt[theme=tobar]  .prompt-icon[icon="loading2"] > * {
+    animation: rotate0-360 1.5s linear infinite;
+    -webkit-animation: rotate0-360 1.5s linear infinite;
+    background:none;
+
+}
+.xui-prompt[theme=tobar]  .prompt-icon[icon="loading2"] > *:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -5%;
+    background:
+            radial-gradient(circle at 50% 7%, rgba(255, 255, 255, 1) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 32% 11%, rgba(255, 255, 255, .96) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 19% 20%, rgba(255, 255, 255, .94) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 10% 34%, rgba(255, 255, 255, .90) 3.5%, rgba(255, 255, 255, 0) 3%),
+
+            radial-gradient(circle at 7% 50%, rgba(255, 255, 255, .86) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 10% 66.5%, rgba(255, 255, 255, .82) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 19% 80%, rgba(255, 255, 255, .78) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 33% 89%, rgba(255, 255, 255, .74) 3.5%, rgba(255, 255, 255, 0) 3%),
+
+            radial-gradient(circle at 50% 93%, rgba(255, 255, 255, .66) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 68% 89%, rgba(255, 255, 255, .62) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 81% 80%, rgba(255, 255, 255, .56) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 90% 66.5%, rgba(255, 255, 255, .5) 3.5%, rgba(255, 255, 255, 0) 3%),
+
+            radial-gradient(circle at 93% 50%, rgba(255, 255, 255, .4) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 90% 34%, rgba(255, 255, 255, .3) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 81% 20%, rgba(255, 255, 255, .2) 3.5%, rgba(255, 255, 255, 0) 3%),
+            radial-gradient(circle at 68% 11%, rgba(255, 255, 255, .1) 3.5%, rgba(255, 255, 255, 0) 3%);
+/*radial-gradient(at 50% 50%, rgba(51, 204, 255, .3) 61%, rgba(228, 62, 254, .3) 57%);*/
+
+}
+
+/*风格3*/
+.xui-prompt[theme=tobar]  .prompt-icon[icon="loading"] > * {
+    animation: rotate0-360 1.5s linear infinite;
+    -webkit-animation: rotate0-360 1.5s linear infinite;
+}
+
+.xui-prompt[theme=tobar]  .prompt-icon[icon="loading"] > *:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -5%;
+    background: radial-gradient(circle at 93% 50%, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 0) 6.5%)
+}
+
+.xui-prompt[theme=tobar] .prompt-icon[icon="success"] > *:before,
+.xui-prompt[theme=tobar] .prompt-icon[icon="success"] > *:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-radius: 10%;
+}
+
+.xui-prompt[theme=tobar] .prompt-icon[icon="success"] > *:before {
+    width: 50%;
+    height: 50%;
+    transform: rotate(-52deg);
+    -webkit-transform: rotate(-52deg);
+    bottom: 39%;
+    left: 20%;
+    background: linear-gradient(0deg, #fff 17%, rgba(255, 255, 255, 0) 18%);
+}
+
+.xui-prompt[theme=tobar] .prompt-icon[icon="success"] > *:after {
+    width: 35%;
+    height: 35%;
+    transform: rotate(49deg);
+    -webkit-transform: rotate(49deg);
+    bottom: 36%;
+    left: 32%;
+    background: linear-gradient(0deg, #fff 20%, rgba(255, 255, 255, 0) 21%);
+}
+
+.xui-prompt[theme=tobar] .prompt-icon[icon="warning"] > *:before {
+    content: ' ';
+    display: inline-block;
+    width: 100%;
+    height: 38%;
+    line-height: 3rem;
+    font-size: 2rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 47.5%, rgba(255,255,255,1.00) 49%, rgba(255,255,255,1.00) 51%, rgba(255,255,255,0) 52.5%);;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    top: 22%;
+    left: 0;
+
+}
+.xui-prompt[theme=tobar] .prompt-icon[icon="warning"] > *:after {
+    content: ' ';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 72%, rgba(255,255,255,1.00) 3%, rgba(255,255,255,0) 4%);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.xui-prompt[theme=tobar] .prompt-icon[icon="error"] > *:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    width: 55%;
+    height: 55%;
+    top: 22.5%;
+    left: 22.5%;
+    background: linear-gradient(45deg, transparent 47%, #fff 48%, #fff 52%, transparent 53%), linear-gradient(-45deg, transparent 47%, #fff 48%, #fff 52%, transparent 53%);
+}
+
+@keyframes nowifi {
+    0%,19% {
+        background: radial-gradient(circle at 50% 52%, rgba(255,255,255,1.00) 4%, rgba(255,255,255,0) 5%),radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 27%,rgba(255,255,255,.2) 28%, rgba(255,255,255,.2) 33%,rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 46%, rgba(255,255,255,.2) 47%, rgba(255,255,255,.2) 52%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 64%, rgba(255,255,255,.2) 66%);
+    }
+    20%,39% {
+        background: radial-gradient(circle at 50% 52%, rgba(255,255,255,1.00) 4%, rgba(255,255,255,0) 5%),radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 27%,rgba(255,255,255,.5) 28%, rgba(255,255,255,.5) 33%,rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 46%, rgba(255,255,255,.2) 47%, rgba(255,255,255,.2) 52%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 64%, rgba(255,255,255,.2) 66%);
+    }
+    40%,59% {
+        background: radial-gradient(circle at 50% 52%, rgba(255,255,255,1.00) 4%, rgba(255,255,255,0) 5%),radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 27%,rgba(255,255,255,.5) 28%, rgba(255,255,255,.5) 33%,rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 46%, rgba(255,255,255,.5) 47%, rgba(255,255,255,.5) 52%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 64%, rgba(255,255,255,.2) 66%);
+    }
+    60%,80% {
+        background: radial-gradient(circle at 50% 52%, rgba(255,255,255,1.00) 4%, rgba(255,255,255,0) 5%),radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 27%,rgba(255,255,255,.5) 28%, rgba(255,255,255,.5) 33%,rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 46%, rgba(255,255,255,.5) 47%, rgba(255,255,255,.5) 52%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 64%, rgba(255,255,255,.5) 66%);
+    }
+}
+
+@-webkit-keyframes nowifi {
+    0%,19% {
+        background: radial-gradient(circle at 50% 52%, rgba(255,255,255,1.00) 4%, rgba(255,255,255,0) 5%),radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 27%,rgba(255,255,255,.2) 28%, rgba(255,255,255,.2) 33%,rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 46%, rgba(255,255,255,.2) 47%, rgba(255,255,255,.2) 52%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 64%, rgba(255,255,255,.2) 66%);
+    }
+    20%,39% {
+        background: radial-gradient(circle at 50% 52%, rgba(255,255,255,1.00) 4%, rgba(255,255,255,0) 5%),radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 27%,rgba(255,255,255,.5) 28%, rgba(255,255,255,.5) 33%,rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 46%, rgba(255,255,255,.2) 47%, rgba(255,255,255,.2) 52%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 64%, rgba(255,255,255,.2) 66%);
+    }
+    40%,59% {
+        background: radial-gradient(circle at 50% 52%, rgba(255,255,255,1.00) 4%, rgba(255,255,255,0) 5%),radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 27%,rgba(255,255,255,.5) 28%, rgba(255,255,255,.5) 33%,rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 46%, rgba(255,255,255,.5) 47%, rgba(255,255,255,.5) 52%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 64%, rgba(255,255,255,.2) 66%);
+    }
+    60%,80% {
+        background: radial-gradient(circle at 50% 52%, rgba(255,255,255,1.00) 4%, rgba(255,255,255,0) 5%),radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 27%,rgba(255,255,255,.5) 28%, rgba(255,255,255,.5) 33%,rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 46%, rgba(255,255,255,.5) 47%, rgba(255,255,255,.5) 52%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 64%, rgba(255,255,255,.5) 66%);
+    }
+}
+
+.prompt-icon[icon="nowifi"] > *:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    top: 25%;
+    left: 10%;
+    background:
+            radial-gradient(circle at 50% 52%, rgba(255,255,255,1.00) 4%, rgba(255,255,255,0) 4%),radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 27%,rgba(255,255,255,.2) 28%, rgba(255,255,255,.2) 33%,rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0) 46%, rgba(255,255,255,.2) 47%, rgba(255,255,255,.2) 52%, rgba(255, 255, 255, 0) 53%, rgba(255, 255, 255, 0) 64%, rgba(255,255,255,.2) 66%);
+
+    -webkit-clip-path: polygon(-20% -20%, 120% -20%, 57% 60%,57% 65%, 43% 65%,43% 45%,57% 45%, 57% -5%, 43% -5%,43% 60%);
+    clip-path: polygon(-20% -20%, 120% -20%, 57% 60%,57% 65%, 43% 65%,43% 45%,57% 45%, 57% -5%, 43% -5%,43% 60%);
+
+    animation: nowifi 3s linear infinite;
+    -webkit-animation: nowifi 3s linear infinite;
+}
+
+.prompt-icon[icon="nowifi"] > *:after {
+    content: ' ';
+    display: inline-block;
+    width: 80%;
+    height: 32%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 47.5%, rgba(255,255,255,1.00) 49%, rgba(255,255,255,1.00) 51%, rgba(255,255,255,0) 52.5%);;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}

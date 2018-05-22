@@ -1,0 +1,69 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">交易明细</div>
+        <div class="right sliding">
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="#"
+                                                                                   class="link icon-only open-panel">
+            <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="credit" class="page" id="credit">
+    <!-- Scrollable page content-->
+    <div class="page-content pull-to-refresh-content infinite-scroll">
+      <!-- 默认的下拉刷新层 -->
+      <div class="pull-to-refresh-layer">
+          <div class="preloader"></div>
+          <div class="pull-to-refresh-arrow"></div>
+      </div>
+      <input type="hidden" id="tcurrentPage" value="1"/>
+      <input type="hidden" id="ttotalPage" value="1"/>
+      <div class="content-block account_tit">
+        <div class="list-block media-list">
+        	<ul>
+            	<li class="swipeout">
+                	<div class="swipeout-content">
+                    	<div class="item-link item-content bg-blue">
+                			<div class="item-inner" style="border-bottom:0;">
+                                <div class="item-title"><h6>可用余额(元)</h6></div>
+                  				<div class="item-text  mt10" style="height:auto; font-size:24px;">
+                                    <span class="font-white" id="cUserMoney">0.00</span>
+                  				</div>
+                			</div>
+                        </div>
+                    </div>
+              	</li>
+                <li class="swipeout">
+                	<div class="swipeout-content">
+                        <div class="item-inner font-grey" style="padding-left:15px;">
+                            <div class="item-title-row">
+                                <div class="item-title"><h6>冻结金额(元)</h6></div>
+                                <div class="item-after" id="cFrozen">0.00</div>
+                            </div>
+                        </div>
+                    </div>
+              	</li>
+                <li class="swipeout">
+                	<div class="swipeout-content">
+                        <div class="item-inner font-grey" style="padding-left:15px;">
+                            <div class="item-title-row">
+                                <div class="item-title"><h6>新新币(个)</h6></div>
+                                <div class="item-after" id="cXxb">0</div>
+                            </div>
+                        </div>
+                    </div>
+              	</li>
+            </ul>
+        </div>
+      </div>
+    <!--交易流水列表-->
+    <div id="creditList">
+
+    </div>
+    </div>
+  </div>
+</div>

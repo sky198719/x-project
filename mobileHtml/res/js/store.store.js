@@ -1,0 +1,1 @@
+define(["base"],function(e){var t,r=window.GLOBAL_STATIC_DATA,d=e.Map(),i=null,u=[];if(r&&(t=r.userDO)&&(userId=t.id)&&(window.userId=userId,d.put("userDO",t)),r&&(i=r.ad)&&"200000"==i.code)for(var n=i.data.items&&i.data.items,a=0,s=n.length;a<s;a++){var l=n[a],o={imgurl:l.extendUrl,linkurl:l.textHref,title:l.text,imgId:l.id,content:""};u.push(o)}return d.put("rotate",u),d});

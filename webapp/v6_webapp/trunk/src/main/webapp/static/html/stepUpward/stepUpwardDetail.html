@@ -1,0 +1,86 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">
+            <span id="itemName">步步高升</span>
+        </div>
+        <div class="right" id="stepUpwardCalc"><img src="static/img/xxd/calculater_bule.png" width="28px"></img>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through toolbar-through">
+    <div data-page="stepUpwardDetail" class="page" directory="stepUpward">
+        <div class="page-content pull-to-refresh-content infinite-scroll stepUpwardDetail">
+        	<!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="content-block-inner mt10 pr0">
+                <div class="row no-gutter" style="margin: 10px 0 10px 0;">
+                    <div style="width:40%">
+                        <div class="tongue" style="background-color:#3f9bff;">
+                            <span style="position: absolute; margin-top: 3px; margin-left: 55px; display:none;" id="stepActivityTip_detail">
+                            	<img src="static/img/activity/md_cj_detail.png" height="20">
+                            </span>
+                        	<span style="position: absolute; margin-top: 5px; margin-left: 75px; display: none;" class="suActivity">
+                            	<img src="static/img/xxd/detail_onlyForPhone.png" height="20">
+                            </span>
+                            <div style="font-size: 35px;padding-top: 6px;" class="detailApr">
+	                            <span id="tenderMinApr">0</span><span style="font-size:15px;">%</span>
+	                            -
+	                            <span id="tenderMaxApr">0</span><span style="font-size:15px;">%</span>
+                            </div>
+                            <div style="padding-right: 8px;">历史年化收益</div>
+                          </div>
+                    </div>
+                    <div style="width:60%">
+                        <div class="item-content" style="padding:3px 0 0 5%;min-width: 150px;">
+                            <div class="item-title-row displayNone singlesdayDetails">
+                                <div class="item-title">
+                                    <img src="static/img/xxd/1111day.png" height="20px"/>
+                                </div>
+                            </div>
+                            <div class="item-title-row">
+                                <div class="item-title font-666">起投金额：<span id="tenderStartAmount">0</span>元</div>
+                            </div>
+                            <div class="item-title-row">
+                                 <div class="item-title font-666">投资期限：1个月起</div>
+                            </div>
+                            <div class="item-title-row activityLabel_step_detail" style="display: none;">
+                                <div class="item-title font-666 activityLabel_step_detail_text"></div>
+                            </div>
+                            <div class="item-title-row" style="display: none;">
+                                 <div class="item-title font-666">保障范围：本金+利息</div>
+                            </div>
+                            <div class="item-title-row">
+                                风险提示：<a id="fenxiantishi" href="#">《风险提示函》</a>
+                            </div>
+                            <div class="item-title-row">
+                                债权列表：<a id="tradeList" href="#">点击查看</a>
+                            </div>
+                            <div class="item-title-row">
+                                <div class="item-title font-red" style="font-size:14px;">逐月增息&nbsp;每月一次退出机会</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block-inner mt10 pr0" style="min-height:300px;">
+                    <ul class="nav nav-tabs" style="margin-top: 0px;">
+                    <li id="introduction" class="active"><a style="background: transparent;">产品介绍</a></li>
+                    <li id="questions"><a style="background: transparent;">常见问题</a></li>
+                    <li id="joinHistory"><a style="background: transparent;">加入记录&nbsp;<span class="joinTimes" style="font-size: 10px;"></span></a></li>
+                    <input type="hidden" id="currentPage" value="1"/>
+                    <input type="hidden" id="totalPage" value="1"/>
+                </ul>
+				<div id="tabContent" style="color:#6d6d72;"></div>
+            </div>
+        </div>
+
+        <div class="toolbar no-border" style="height: 55px;">
+            <div class="stepUpward-button dmp-click" id="detail_submitTender" style="color:#fff;" eventType="jump" dev_id="bbgs" target_id="步步高升">立即抢购</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">提现</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="#"
+                                                                                   class="link icon-only open-panel"> <i
+                class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="drawmoney" class="page" id="drawMoney">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block-title mt20" id="realName" style="text-transform: none;height: 20px;">持卡人：<span class="drawmoneyReName"></span></div>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">提现银行卡</div>
+                                <div class="item-after" id="defaultBank"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block-title mt20" id="useMoney">可用余额：0.00</div>
+            <div class="content-block-title" id="couldCashMoney">此卡可提现余额：0.00</div>
+            <input type="hidden" value="" id="ccmValue">
+            <form id="drawmoney-form" method="post" action="" style="height:100%;">
+                <div class="list-block" style="margin-bottom:2px;">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="drawmoneyRateCharge item-inner">
+                                    <div class="item-title label">提现金额：</div>
+                                       <div class="item-input">
+                                           <input type="number" placeholder="最少5元起哦" id="drawmoneyNum" name="drawmoneyNum" class="dmp_content_input" />
+                                       </div>
+                                       <div class="item-after">
+                                           <a class="link drawmoneyTip" href="#"><img src="static/img/xxd/yiwen.png" style="height: 20px;margin-right: 10px;" /> </a>
+                                       </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="display: none;" class="cashFaeLi">
+                            <div class="item-content">
+                                <div class="item-inner cashFae" style="color: #3F9BFF;min-height: 20px;font-size: 13px;">
+                                    当月剩余可提现：0次
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt20 ml10 mr10">
+                    <a href="#" class="button button-51 active dmp-click" id="draw_money" dmp_type="click" dmp_event="drawmoney" dmp_target_type="4">确认提现</a>
+                </div>
+            </form>
+            <div class="drawmoneylayers displayNone">
+               <div class="alertbox">
+                   <div class="info">
+                       <img src="static/img/xxd/tishi.png">
+                   </div>
+                   <div class="tishi">提示</div>
+                   <div class="tishi_info">
+                       <p class="">本月可免费提现次数剩余<span id="drawmoneylayersNumber">0</span>次，该</p>
+                       <p>笔提现将收取手续费<span id="drawmoneylayersCost">0.00</span>元，实际</p>
+                       <p>到账<span id="drawmoneylayersActual">0.00</span>元</p>
+                   </div>
+                   <a class="iknone">
+                         <span style="
+                           width: 50%;
+                           display: inline-block;
+                           float: left;
+                       " id="drawmoneylayersOk">知道了</span>
+                         <span style="
+                           width: 50%;
+                           display: inline-block;
+                           background-color: #999;
+                           line-height: 2.2;
+                       " id="drawmoneylayersNo">取消</span>
+                   </a>
+                   <span class="closes"></span>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>

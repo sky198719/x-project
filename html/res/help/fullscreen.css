@@ -1,0 +1,49 @@
+@media screen and (max-width: 1366px) {
+  .section img {
+    width: 70%;
+  }
+}
+.section {
+  text-align: center;
+  background: #030712;
+}
+.section .spec {
+  width: auto;
+}
+.sectionbg {
+  background: url("img/0bg.png") no-repeat center;
+}
+#menu li {
+  display: block;
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #24262b;
+  opacity: 80;
+  margin-bottom: 20px;
+}
+#menu li.active {
+  background: #aaa;
+}
+#menu li:hover {
+  background: #aaa;
+}
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  text-decoration: none;
+}
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 440px;
+  margin-top: -220px;
+  z-index: 70;
+}

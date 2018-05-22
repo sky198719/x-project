@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>十一月会员日推广</title>
+    <link rel="shortcut icon" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="Bookmark" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="stylesheet" href="../novemberMember/novemberPromotion.css">
+</head>
+<body>
+ <div id="J_wrapBody">
+    <div class="header">
+        <div class="header-main clearfix">
+            <a class="logo" href="/" target="_blank"></a>
+            <div class="tel">
+                <i class="tel-icon">
+                    <img src="img/tel.png">
+                </i><div class="tel-num">
+                <h3>4000-169-521</h3>
+                <p>（工作日 9:00-18:00）</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--中间-->
+     <div class="wrap part-top">
+         <div class="main-content">
+             <!--注册框-->
+             <div class="register clearfix" id="J_register">
+                 <form id="form">
+                     <div class="register-title"></div>
+                     <div class="user-common user-num">
+                         <input id="J_num"  class="J-num" type="number" name="usern" placeholder="请输入您的手机号码" oninput="if(value.length>11)value=value.slice(0,11)"/>
+                     </div>
+                     <div class="user-common user-psw ">
+                         <input id="J_psw" class="J-psw" type="password" name="userpsw" placeholder="请设置6-16位数字，字母组合密码" minlength="6" maxlength="16"/>
+                     </div>
+                     <div class="user-special clearfix">
+                         <input id="J_verify" class="J-verify" type="text" name="uservefiry" placeholder="请输入图片验证码"/>
+                         <img class="change-verify"  src="/feapi/randCode/createVerifyCode?formtoken=2afb0c26a1135cf0868322dda28b0dd5&v=0.36431611876306214" id="J_yzmRefresh"/>
+                     </div>
+                     <div class="user-verigy user-special">
+                         <input id="J_phoneyzm" class="J-phoneyzm" type="text" name="userphone" placeholder="请输入手机验证码"/>
+                         <span class="get-phoneyzm" id="J_getPhoneCode">获取验证码</span>
+                     </div>
+                     <p class="cur cur-special dishidden" id="J_cur"></p>
+                     <div class="user-agree">
+                         <i class="check-style" id="agree"><span class="user-check checked"></span></i>
+                         <span class="check-info">我已阅读并同意<a href="/user/reg-agreement.html" target="_blank">《新新贷使用协议》</a></span>
+                     </div>
+                     <button type="button" class="get-red" id="J_submit"></button>
+                     <p class="have-login">已有账号？ <a class="logined" href="/user/ilogin.html">马上登录</a></p>
+                 </form>
+             </div>
+
+         </div>
+     </div>
+     <!--轮播-->
+     <div class="wrap part-center">
+         <div class="main-content clearfix">
+             <a class="content-l" id="J_contentL" href="#J_register"></a>
+             <div class="content-r">
+                 <div class='winData myscroll' id="J_winData">
+                     <ul>
+                         <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">多功能跑步机</span></li>-->
+                         <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">多功能跑步机</span></li>-->
+                         <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">多功能跑步机</span></li>-->
+                         <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">多功能跑步机</span></li>-->
+                         <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">多功能跑步机</span></li>-->
+                         <!--<li><span class="username">13*******89</span><span class="time">23:00:00</span><span class="prizename">多功能跑步机</span></li>-->
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="wrap part-bottom">
+        <div class="operate-data">
+            <h3>安全保障 值得信赖</h3>
+            <ul class="advantage-data clearfix">
+                <li><span class="advantage-content">稳健运营</span><p><span id="J_year"></span>年<span id="J_totalDay"></span>天</p></li>
+                <li  class="advantage-second"><span class="advantage-content">累计注册人数</span><p><span id="J_registerNum"></span>万人</p></li>
+                <li  class="advantage-second"><span class="advantage-content">累计成交金额</span><p><span id="J_totalTrade"></span>亿元</p></li>
+                <li  class="advantage-third"><span class="advantage-content">累计为出借人赚取</span><p><span id="J_totalIncome"></span>亿元</p></li>
+            </ul>
+            <p class="advantage-time">截止日期：<span id="J_registerUserDate"></span></p>
+        </div>
+         <div class="product-data">
+             <div class="main-content">
+                 <h3>新手福利 不容错过</h3>
+                 <div class="product-common product-l">
+                     <div class="product-pad">
+                         <div class="pro-detail">
+                             <h4>七天大胜</h4>
+                             <p>出借一万<br/>预期日赚4.1元</p>
+                         </div>
+                         <div class="pro-data">
+                             <p><span id="J_qtdsApr"></span>%+<span id="J_qtdsFloatApr"></span>%</p>
+                             <span class="history">历史年化收益</span>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="product-common product-r">
+                     <div class="product-pad  product-special">
+                         <div class="pro-detail">
+                             <h4>新元宝</h4>
+                             <p>期限任选<br/>可用108元红包</p>
+                         </div>
+                         <div class="pro-data">
+                             <p><span id="J_xybForm"></span>%-<span id="J_xybTo"></span>%</p>
+                             <span class="history">历史年化收益</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="product-list">
+              <table class="product-td"  cellspacing="0" cellpadding="0">
+                  <tr>
+                      <th>新手速赚攻略</th>
+                      <th class="td-special">出借组合攻略</th>
+                      <th>新手红包</th>
+                      <th>出借总收益</th>
+                  </tr>
+                  <tr>
+                      <td><p><span>1</span>万元</p>小赚</td>
+                      <td>七天大胜(首投)+新元宝30天</td>
+                      <td rowspan="2"><b>108</b>元新手红包</td>
+                      <td><p><span>195.50</span>元</p></td>
+                  </tr>
+                  <tr>
+                      <td><p><span>5</span>万元</p>爆赚</td>
+                      <td>七天大胜(首投)+新元宝90天</td>
+                      <td><p><span>1074.67</span>元</p></td>
+                  </tr>
+
+              </table>
+         </div>
+         <div class="invest-cur clearfix">
+             <div class="main-content">
+                 <p class="invest-l">* 新用户可使用新手红包，敬请关注规则</p>
+                 <p class="invest-r">市场有风险，出借需谨慎</p>
+             </div>
+         </div>
+     </div>
+     <div class="wrap register-bottom">
+         <a class="register-btn" id="J_registerBottom" href="#J_register"></a>
+     </div>
+     <div class="wrap special-bottom disnone" id="J_lastRegister">
+         <a class="register-btn" id="J_specialBtn" href="#J_register"></a>
+     </div>
+     <!--底部-->
+     <div class="footer">
+         <div class='container'>
+             <p>Copyright @新新贷（上海）金融信息服务有限公司 沪ICP备12026657号-1 版权所有，未经许可不得复制、转载或摘编，违者必究V6.6.1</p>
+             <p><a href="/static/images/permission/permission_B2-20151008.jpg ">增值电信业务经营许可证B2-20151008</a>&nbsp;&nbsp;
+                 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902001060"><i></i>沪公网安备 31010902001060号</a></p>
+             <ul>
+                 <li class='law'><a href="http://www.shjbzx.cn/"></a></li>
+                 <li class='integrity'><a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1057638558"></a></li>
+                 <li class='dependable'><a href="https://ss.knet.cn/verifyseal.dll?sn=e14050731010948597brpb000000&comefrom=trust&trustKey=dn&trustValue=www.xinxindai.com"></a></li>
+                 <li class='honesty'><a href="https://search.szfw.org/cert/l/CX20140224003875003530"></a></li>
+                 <li class='record'><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902001060"></a></li>
+             </ul>
+         </div>
+     </div>
+ </div>
+<!--[if lt IE 9]>
+<iframe id="ifr_cover" frameborder="0" class="hide" scrolling="no"></iframe>
+<div id="alertBoxWrap" class="hide"></div>
+<![endif]-->
+</body>
+<script src="../novemberMember/js/combo-promotion.js"></script>
+<script src="../novemberMember/js/vticker.js"></script>
+</html>

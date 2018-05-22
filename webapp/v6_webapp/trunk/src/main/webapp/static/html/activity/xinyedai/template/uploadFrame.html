@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 , maximum-scale=1.0, user-scalable=0" />
+<title></title>
+<script src="../scripts/library/zepto.js"></script>
+</head>
+
+<body>
+<form action="" method="post" enctype="multipart/form-data">
+	<input type="file" name="file" />
+</form>
+</body>
+</html>
+
+<script>
+var fileSize = 0;
+$('form').find('input').change(function(){
+	fileSize = this.files[0].size / 1024 / 1024;
+	if(fileSize > 5){
+		$('body',window.parent.document).find('.layer').show();
+		$('body',window.parent.document).find('.alertBox').show();
+		$('body',window.parent.document).find('.alertBox strong').html('上传文件大小不能超过5M');
+		$(this).val('');
+	}else{
+		$('body',window.parent.document).find('.layer').show();
+		$('body',window.parent.document).find('.alertBox').show();
+		$('body',window.parent.document).find('.alertBox strong').html('上传中，请稍后');
+		$('form').submit();
+	}
+});
+</script>

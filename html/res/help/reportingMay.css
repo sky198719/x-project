@@ -1,0 +1,86 @@
+@media screen and (max-width: 1366px) {
+  .section img {
+    width: 70%;
+  }
+}
+.section {
+  text-align: center;
+  background: #24263F;
+}
+.section .spec {
+  width: auto;
+}
+#fullpage {
+  width: 100%;
+  position: absolute;
+}
+.sectiontopbg {
+  background: url("img/reportingMaybg1.png") no-repeat center;
+}
+.sectionbottombg {
+  background: url("img/reportingMaybg2.png") no-repeat center;
+  position: relative;
+}
+.sectionbottombg span {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: url("img/reportingMayLine.png") no-repeat center;
+  width: 108px;
+  height: 72px;
+}
+.sectionbottombg .two {
+  top: 100px;
+  left: 722px;
+}
+.sectionbottombg .three {
+  top: 400px;
+  left: 80px;
+}
+.sectionbottombg .four {
+  top: 50px;
+  left: 1200px;
+}
+.sectionbottombg .five {
+  top: 600px;
+  left: 600px;
+}
+#menu li {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url("img/default.png") no-repeat center;
+  opacity: 80;
+  margin-bottom: 15px;
+}
+#menu li.active {
+  background: url("img/active.png") no-repeat center;
+}
+#menu li:hover {
+  background: url("img/active.png") no-repeat center;
+}
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  text-decoration: none;
+}
+#menu li a:focus,
+#menu li.active a:focus {
+  outline: none;
+}
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 440px;
+  margin-top: -220px;
+  z-index: 70;
+}
+.firstImg {
+  margin-top: 7px;
+}

@@ -1,0 +1,46 @@
+<!Doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="xinxindai">
+    <meta name="author" content="UI Lijuan | Front-end *">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>银行存管震撼上线</title>
+    <link href="../storagePage/combo.css" rel="stylesheet">
+</head>
+<body>
+<div class='container'>
+    <img src="imgs/bg1.png" alt="">
+    <img src="imgs/bg2.png" alt="">
+    <img src="imgs/bg3.png" alt="">
+    <img src="imgs/bg4.png" alt="">
+    <img src="imgs/bg5.png" alt="">
+    <img src="imgs/bg6.png" alt="">
+    <a id="toUrl"></a>
+</div>
+</body>
+<script>
+    (function (doc, win, fontSize) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = fontSize * (clientWidth / 375) + 'px';
+            };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+
+
+    })(document, window, 16);
+</script>
+<script src="../storagePage/comboxxduid.js"></script>
+</html>

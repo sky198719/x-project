@@ -1,0 +1,26 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <!-- We have home navbar without left link-->
+        <div class="center sliding">新新币兑换记录</div>
+    </div>
+</div>
+<div class="pages navbar-through">
+    <div class="page" data-page="xxbExchangeLogs" directory="xxb">
+        <div class="page-content pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <input type="hidden" id="el-currentPage" value="1"/>
+            <input type="hidden" id="el-totalPage" value="1"/>
+            <div id="exchangeLogsList">
+                <div class="list-block media-list">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

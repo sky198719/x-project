@@ -1,0 +1,163 @@
+﻿<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8"/>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../../img/favicon.ico" rel="shortcut icon">
+    <!-- Your app title -->
+    <title>新新贷-扫码注册壕礼来-注册成功</title>
+    <style type="text/css">
+        * {
+            font-family: "微软雅黑";
+            margin: 0;
+            padding: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .w100 {
+            width: 100%;
+        }
+
+        .button {
+            border: 1px solid #007aff;
+            color: #007aff;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            border-radius: 5px;
+            line-height: 27px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            background: 0 0;
+            padding: 0 10px;
+            margin: 0;
+            height: 29px;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .button-46 {
+            font-size: 20px;
+            height: 46px;
+            line-height: 46px;
+            background-color: #2096e9;
+            border-color: #2096e9;
+            color: #fff;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .font-p {
+            position: absolute;
+            top: 12%;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+        }
+
+        .top6p {
+            top: 20%;
+        }
+
+        .btn-start {
+            position: absolute;
+            top: 30%;
+            width: 86%;
+            margin-left: 7%;
+            margin-right: 7%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="relative">
+        <img src="../../img/xxd/quick-suc_01.png" class="w100">
+
+        <P class="font-p"><span id="succTip">正在校验注册，请稍等...</span></P>
+
+        <p class="font-p top6p" id="liping" style="display: none;"> 可领取壕礼一份！</p>
+    </div>
+    <div class="relative">
+        <img src="../../img/xxd/quick-suc_02.png" class="w100">
+        <button class="button button-46 btn-start w100" id="goInvest">开始投资之旅</button>
+    </div>
+</div>
+<script type="text/javascript" src="../../lib/zepto/zepto.min.js"></script>
+<script type="text/javascript">
+    var name = "";
+    var phone = "";
+    var pCode = '';
+    //获取地址栏url参数
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)return  decodeURI(r[2]);
+        return null;
+    }
+    $(document).ready(function () {
+        $('#goInvest').click(function () {
+            goInvest();
+        });
+
+        if (GetQueryString("pCode") != undefined) {
+            pCode = GetQueryString("pCode");
+        }
+        //name
+        if (GetQueryString("name") != undefined) {
+            name = GetQueryString("name");
+        }
+        //phone
+        if (GetQueryString("phone") != undefined) {
+            phone = GetQueryString("phone");
+        }
+
+        $.ajax({
+            type: 'GET',
+            url: '../../../activity/store/getStoreListData.do',
+            data: {
+                pCode: pCode,
+                currentPage: 1,
+                pageSize: 10,
+                phoneNo: phone
+            },
+            dataType: 'json',
+            timeout: 15000,
+            success: function (data) {
+                if(data.resultCode == 0 && data.sumNumber != undefined && data.sumNumber > 0) {
+                    $('#succTip').html("恭喜注册成功，"+name+" "+phone);
+                    $("#liping").show();
+                } else {
+                    $('#succTip').html("抱歉，您的注册信息有相关认证未通过不满足兑换条件");
+                }
+            },
+            error: function (xhr, errorType, error) {
+                $('#succTip').html("抱歉，校验您的注册信息失败，请刷新页面尝试");
+            }
+        });
+    })
+    function goInvest() {
+        window.location.href = "../../../";
+    }
+</script>
+</body>
+</html>

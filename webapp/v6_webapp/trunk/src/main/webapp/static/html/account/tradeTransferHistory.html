@@ -1,0 +1,58 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">债权转让记录</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="tradeTransferHistory" class="page" id="tradeTransferHistoryPage">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content infinite-scroll">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+
+            <div class="list-block media-list" id="tradeTransfer">
+                <ul>
+                    <li>
+                        <a href="#" class="item-link item-content" name="tradeTransfering">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title"><h5><span class="font-dark">转让中的债权：</span><span
+                                            id="tradeTransferingCount">0</span></h5>
+                                    </div>
+                                    <div class="item-after">查看明细</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content" name="tradeTransferOut">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title"><h5><span class="font-dark">已转出的债权：</span><span
+                                            id="tradeTransferOutCount">0</span></h5>
+                                    </div>
+                                    <div class="item-after">查看明细</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 持有的债权 -->
+            <div class="content-block-title"><h6>我持有的债权</h6></div>
+            <div id="tradeTransferList">
+
+            </div>
+        </div>
+    </div>
+</div>

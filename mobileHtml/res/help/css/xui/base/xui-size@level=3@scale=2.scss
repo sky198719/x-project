@@ -1,0 +1,92 @@
+/*
+ * 模块：字号
+ * 模块类型：b(基础模块)
+ * 精度：9 +
+ * 分级：3 +
+ * 适配：桌面 | 平析 | 移动
+ * 兼容：
+ * 版本：v0.0.1
+ * 备注：s->Small 小，m->Middle 中，l->Large 大；
+ */
+
+
+$rank: 'ss', 'sm', 'sl', 'ms,h6', 'mm,h5', 'ml,h4', 'ls,h3', 'lm,h2', 'll,h1';
+
+[size="s"]{
+
+  $sz: 12px;
+  font-size: $sz;
+
+  @each $i in $rank {
+    @if index($rank,$i) < 4 {
+      .#{$i} {
+        font-size: $sz - (8-(index($rank,$i)*2));
+        @debug $sz - (8-(index($rank,$i)*2));
+      }
+    } @else {
+      .#{$i} {
+        font-size: $sz + (index($rank,$i)-4)*2;
+        @debug $sz + (index($rank,$i)-4)*2;
+      }
+    }
+  }
+
+}
+
+[size="m"]{
+
+  $sz: 14px;
+  font-size: $sz;
+
+  @each $i in $rank {
+    @if index($rank,$i) < 4 {
+      .#{$i} {
+        font-size: $sz - (8-(index($rank,$i)*2));
+        @debug $sz - (8-(index($rank,$i)*2));
+      }
+    } @else {
+      .#{$i} {
+        font-size: $sz + (index($rank,$i)-4)*2;
+        @debug $sz + (index($rank,$i)-4)*2;
+      }
+    }
+  }
+
+}
+
+
+[size="l"]{
+
+  $sz: 16px;
+  font-size: $sz;
+
+  @each $i in $rank {
+    @if index($rank,$i) < 4 {
+      .#{$i} {
+        font-size: $sz - (8-(index($rank,$i)*2));
+        @debug $sz - (8-(index($rank,$i)*2));
+      }
+    } @else {
+      .#{$i} {
+        font-size: $sz + (index($rank,$i)-4)*2;
+        @debug $sz + (index($rank,$i)-4)*2;
+      }
+    }
+  }
+
+}
+
+//倍率字号
+@for $i from 1 to 10 {
+  [xui] .s#{$i}e { font-size : #{$i}rem }
+  [xui] .s#{$i}e5 { font-size : #{($i + .5)}rem }
+}
+
+
+[xui] .fw1{ font-weight: 100}
+[xui] .fw2{ font-weight: 200}
+[xui] .fw3{ font-weight: 300}
+[xui] .fw4{ font-weight: 400}
+[xui] .fw5{ font-weight: 500}
+[xui] .fw6{ font-weight: 600}
+[xui] .fw7{ font-weight: 700}

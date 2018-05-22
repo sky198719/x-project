@@ -1,0 +1,47 @@
+{{#each list}}
+<div class="list-block media-list">
+    <ul>
+        <li>
+            {{#if status}}
+            <label class="label-radio item-content" style="line-height: 2;padding-left: 10px;">
+                <div class="item-media" style="display: list-item;text-align: center;">
+                    <div style="color:red;line-height: 1;font-size: 1.3rem;font-weight: bold;">{{faceValue}}元</div>
+                    <div style="font-size: 0.7rem;">满{{quota}}元可用</div>
+                </div>
+                <div class="item-inner" style="margin-left: 10px;padding-right: 5px;">
+                    <div class="item-title-row">
+                        <div class="item-title" style="font-size: 0.8rem;">{{name}}</div>
+                    </div>
+                    <div class="item-subtitle" style="font-size: 0.7rem;color:#8e8e93;">{{bengDate}}至{{validDate}}</div>
+                    <div class="item-text" style="font-size: 0.7rem;height:auto;min-height: 60px;">
+                        <div>{{usrDesc}}</div><div>{{usr}}</div>
+                    </div>
+                </div>
+                <div class="item-inner redpactTender" style="width: 150px;">
+                    <a href="#" class="button active" style="background: #3f9bff;margin-top: 40px;border-color: #3f9bff;font-size: 0.8rem;padding:0;height: 50px;width: 80%;float: right;">
+                        <div style="height: 20px;">立即</div>
+                        <div>使用</div>
+                    </a>
+                </div>
+            </label>
+            {{else}}
+            <label class="label-radio item-content" style="line-height: 2;padding-left: 10px;">
+                <div class="item-media" style="display: list-item;text-align: center;width: 30%;">
+                    <div style="color:red;line-height: 1;font-size: 1.3rem;font-weight: bold;">{{faceValue}}元</div>
+                    <div style="font-size: 0.7rem;">满{{quota}}元可用</div>
+                </div>
+                <div class="item-inner">
+                    <div class="item-title-row">
+                        <div class="item-title" style="font-size: 0.8rem;">{{name}}</div>
+                    </div>
+                    <div class="item-subtitle" style="font-size: 0.7rem;color:#8e8e93;">{{bengDate}}至{{validDate}}</div>
+                    <div class="item-text" style="font-size: 0.7rem;height:auto;min-height: 60px;">
+                        <div>{{usrDesc}}</div><div>{{usr}}</div>
+                    </div>
+                </div>
+            </label>
+            {{/if}}
+        </li>
+    </ul>
+</div>
+{{/each}}

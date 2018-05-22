@@ -1,0 +1,676 @@
+@import "css/common.css";
+
+//注册背景颜色
+@register-bkg-color:rgba(0,0,0,.4);
+@read-register-rule:#cc0033;
+@user-agree-color:#ccc;
+@input-color:#993333;
+@get-yzm-color:#993333;
+
+//默认属性
+input,input:focus{
+  background:none;
+  outline:none;
+  border:0;
+  -webkit-appearance:none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button{
+  border: none;
+  outline: none;
+}
+input::-webkit-placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+input::placeholder {
+  font-size: 14px;
+  color: @input-color;
+}
+.user-verigy .disfont{
+  font-size: 12px !important;
+}
+//给属性加前缀
+.prefixAdd(@name,@val){
+    @{name}:@val;
+  -webkit-@{name}:@val;
+  -moz-@{name}:@val;
+  -o-@{name}:@val;
+  -ms-@{name}:@val;
+}
+.borderRadius(@borderR){
+  border-radius: @borderR;
+  -webkit-border-radius: @borderR;
+  -moz-border-radius: @borderR;
+  //兼容IE8以下的border-radius
+  behavior:url("css/ie-css3.htc");
+}
+#J_wrapBody{
+  .wrap{
+    width: 1198px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+//top
+.wrap-top{
+  width: 100%;
+  height: 2203px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: url("img/Jan/pro-top.jpg") center center no-repeat;
+  //数据
+  .content-list{
+    position:absolute;
+    top:1230px;
+    left:50%;
+    margin-left:-342px;
+    width: 672px;
+    height:45px;
+    line-height: 45px;
+    .winData{
+      width: 672px;
+      height:45px;
+      ul{
+        height: 45px;
+        display: inline-block;
+        overflow:hidden;
+        zoom: 1;
+        li{
+          height: 45px;
+          line-height: 46px;
+          font-size: 20px;
+          color: #612900;
+          span{
+            display: inline-block;
+          }
+        }
+      }
+      .active-w{
+        width: 100%;
+        text-align:center;
+      }
+    }
+    .plus-mar-left {
+      overflow: hidden;
+      word-break: keep-all;
+      white-space: nowrap;
+      ul {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        li {
+          display: inline-block;
+          *display: inline;
+          zoom: 1;
+          text-indent: 15px;
+        }
+      }
+    }
+  }
+  .rules-twinkle{
+    position: absolute;
+    z-index: 100;
+    top: 1290px;
+    right: 220px;
+    width: 212px;
+    height: 63px;
+    background: url("img/Jan/rule.png") center center no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    //动画
+    .animation(flash 3s  infinite alternate ease);
+  }
+  //谈话框动画
+  .keyframesFlash(flash,{
+    from, 50%, to {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0.5;
+    }
+  });
+  .keyframesFlash (@name, @frames) {
+    @-webkit-keyframes @name {@frames();}
+    @-moz-keyframes @name {@frames(); }
+    @-ms-keyframes @name {@frames();}
+    @-o-keyframes @name {@frames();}
+    @keyframes @name { @frames();}
+  }
+  //动画函数
+  .animation(@attr){
+    -webkit-animation:@attr;
+    -moz-animation:@attr;
+    -ms-animation:@attr;
+    -o-animation:@attr;
+    animation:@attr;
+  }
+  .person{
+    position: absolute;
+    z-index: 90;
+    top: 1344px;
+    right: 145px;
+    width: 152px;
+    height: 175px;
+    cursor: pointer;
+  }
+  .activity-gl{
+    position: absolute;
+    z-index: 100;
+    top: 1853px;
+    left: 50%;
+    margin-left: -604px;
+    width: 1218px;
+    height: 296px;
+    background: url("img/Jan/pro-gl.png") center center no-repeat;
+    background-size:100% 100%;
+  }
+}
+//注册模块
+.wrap-top .register{
+  float: right;
+  margin-top: 60px;
+  padding: 30px;
+  background: url("img/Jan/register-bg.png") center center no-repeat;
+  background-size: 100% 100%;
+  .register-title{
+    margin-bottom: 18px;
+    height: 26px;
+    background: url("img/Jan/register-title.png")  center no-repeat;
+    .prefixAdd(background-size,contain);
+  }
+  .user-common{
+      width: 304px;
+      height: 38px;
+      margin:0 auto 14px;
+      input{
+        height: 38px;
+        line-height: 38px;
+        border: 1px solid #f0f0f0;
+        text-indent: 6px;
+        font-size:14px;
+        color: @input-color;
+      }
+    }
+    .user-num,.user-psw{
+      width: 304px;
+    }
+    .user-psw{
+      position: relative;
+      .psw-cur{
+        position: absolute;
+        display: inline-block;
+        left:6px;
+        top: 12px;
+        height: 14px;
+        line-height: 14px;
+        font-size: 14px;
+        color: @input-color;
+      }
+    }
+    .J-num,.J-psw{
+      width:304px;
+      height: 40px;
+      background: #f6f5f5;
+    }
+    //验证码
+    .user-verigy{
+      margin:0 auto 14px;
+    }
+    .verify-special{
+      margin:0 auto 10px;
+    }
+    .user-voice{
+      text-align: right;
+      margin:0 auto 14px;
+    }
+    .user-verigy .J-verify,.user-verigy .J-phoneyzm{
+      float: left;
+      width: 178px;
+      height: 40px;
+      background:#f6f5f5;
+
+    }
+    .user-verigy .change-verify,.user-verigy .get-phoneyzm{
+      float: left;
+      margin-left: 8px;
+      width: 116px;
+      height: 40px;
+      background:#f6f5f5;
+      color:  @get-yzm-color;
+      cursor: pointer;
+      .borderRadius(4px);
+    }
+    //语音验证码
+    .user-voice .J-voiceyzm{
+      font-size: 14px;
+      color: #fff;
+    }
+    .user-verigy .get-phoneyzm{
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      line-height: 40px;
+    }
+    //同意协议
+    .user-agree{
+      width: 302px;
+      margin: 0 auto  16px;
+      position: relative;
+      span{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 14px;
+        font-size: 14px;
+        color: @input-color;
+        text-indent: 8px;
+        a{
+          font-size: 14px;
+          color: @read-register-rule;
+          cursor: pointer;
+        }
+      }
+    }
+    .user-agree .check-style{
+      display: inline-block;
+      vertical-align: middle;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #000;
+      position: relative;
+      .user-check{
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        margin-top: -8px;
+        left: 50%;
+        margin-left: -8px;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+      .checked{
+        background: url("img/Jan/checked.png") center no-repeat;
+        background-size: 8px 9px;
+      }
+    }
+    .have-login{
+      width: 312px;
+      margin: 0 auto;
+      text-align: right;
+      font-size: 14px;
+      color: @input-color;
+    }
+    .have-login .logined{
+      text-decoration: underline;
+      color: @read-register-rule;
+    }
+    .cur{
+      width: 302px;
+      height: 20px;
+      padding-bottom: 5px;
+      margin: 0 auto;
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow:ellipsis;
+      font-size: 14px;
+      color: red;
+    }
+    .cur-special{
+      margin: 0 auto;
+      width: 268px;
+      color: #fff;
+    }
+    .register-btn{
+      display: block;
+      width: 282px;
+      height: 61px;
+      text-align: center;
+      line-height: 61px;
+      margin:0 auto 14px;
+      cursor: pointer;
+      background: url("img/Jan/btn.png") center no-repeat;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+}
+.wrap-top .registered{
+  h3{
+    font-size: 16px;
+    color: #cc0033;
+  }
+  .logo-company{
+    margin: 40px auto 0;
+    width: 125px;
+    height: 125px;
+    img{
+      margin-left: 8px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .activity-info{
+    padding-top: 32px;
+    text-align: center;
+     font-size: 22px;
+    color: #cc0033;
+    font-weight: bold;
+    height: 23px;
+    line-height: 23px;
+  }
+  .activity-cur{
+    padding-top: 16px;
+    text-align: center;
+    font-size: 20px;
+    color: #cc0033;
+    height: 20px;
+    line-height: 20px;
+  }
+  .invest{
+    display: block;
+    width: 282px;
+    height: 61px;
+    margin: 36px auto 0;
+    background:url("img/Jan/registered-btn.png") center center no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+
+//center
+.wrap-center{
+  width: 100%;
+  height: 727px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: url("img/Jan/pro-center.jpg") center center no-repeat;
+  overflow: hidden;
+  .operate-data{
+    width: 1120px;
+    margin: 134px auto 0;
+    height: 120px;
+    .advantage-data{
+      width: 1020px;
+      margin: 0 auto;
+      padding-top:30px;
+      clear: both;
+      overflow: hidden;
+      li{
+        float: left;
+        width: 210px;
+        color: #fff;
+        text-align: left;
+        .advantage-content{
+          display: block;
+          font-size: 20px;
+          text-align:center;
+        }
+        p{
+          text-align:center;
+          font-size: 25px;
+          color:  #fff15c;
+          font-weight: bold;
+          width: 210px;
+          span{
+            font-size: 32px;
+          }
+        }
+      }
+      .advantage-first{
+        margin-left: 10px;
+        width: 150px;
+          p{
+            width: 150px;
+          }
+      }
+      .advantage-second{
+        margin-left: 94px;
+      }
+      .advantage-third{
+          width: 190px;
+          p{
+            width: 190px;
+          }
+        margin-left: 60px;
+      }
+    }
+  }
+}
+
+
+
+//bottom
+.wrap-bottom{
+  width: 100%;
+  height: 800px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: url("img/Jan/pro-bottom.jpg") center center no-repeat;
+  overflow:hidden;
+  .product-data{
+    width: 1164px;
+    height: 88px;
+     margin:230px auto 0;
+    .product-common{
+     .pro-info{
+       display: inline-block;
+       padding-right: 36px;
+       vertical-align: middle;
+       margin-left: 107px;
+       border-right: 1px solid #993333;
+       p{
+         height: 28px;
+         line-height: 28px;
+         font-size: 22px;
+         color: #80451d;
+         span{
+           font-size: 22px;
+           color: #c7131f;
+         }
+       }
+       .info-two{
+         margin-top: 24px;
+       }
+       .pro-key{
+         font-weight: bolder;
+         font-size: 28px;
+       }
+     }
+     .pro-data{
+       display: inline-block;
+       vertical-align: middle;
+       padding-left: 36px;
+       .p-apr{
+         font-size: 30px;
+         color: #c7131f;
+         height: 48px;
+         line-height: 48px;
+         span{
+           font-weight: bolder;
+           font-size: 48px;
+         }
+         i{
+           font-style: normal;
+           font-size: 35px;
+         }
+       }
+     }
+      .p-history{
+        margin-top: 18px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 20px;
+        color: #80451d;
+      }
+    }
+    .xscp-data{
+      float: left;
+      width: 556px;
+      height: 88px;
+      margin: 0 auto;
+    }
+    .xyb-data{
+      float: right;
+      width: 556px;
+      height: 88px;
+      margin: 0 auto;
+    }
+  }
+  .tb-content{
+    width: 1182px;
+    height: 224px;
+    margin: 76px auto 0;
+    background: url("img/Jan/table-bg.png") center center no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    .product-td{
+      margin: 36px auto 0;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      border: 2px solid #cc3333;
+      border-bottom: 1px solid #cc3333;
+      border-left: 1px solid #cc3333;
+      .td-special{
+        width: 440px;
+      }
+      th{
+        font-size: 20px;
+        width: 228px;
+        height: 46px;
+        color: #fff;
+        background: #d41623;
+        border-left:2px solid #fff;
+        border-bottom: 1px solid #c7131f;
+        border-top: 1px solid #c7131f;
+      }
+      .th-special{
+        border-left:1px solid #c7131f;
+      }
+      td{
+        font-size: 22px;
+        width: 228px;
+        height: 46px;
+        color: #80451d;
+        border-left:2px solid #c7131f;
+        border-bottom: 2px solid #c7131f;
+        b{
+          color: #d41623;
+          font-size:30px;
+          font-weight: 700;
+        }
+        p{
+          display:inline-block;
+          font-size: 22px;
+          color: #d41623;
+          span{
+            font-size: 30px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  .invest-cur{
+    padding-top: 22px;
+    position: relative;
+    width: 1142px;
+    margin: 0 auto;
+    p{
+      font-size: 16px;
+      color: #ffcccc;
+    }
+    .invest-l{
+      float: left;
+      margin-left: 0;
+    }
+    .invest-r{
+      float: right;
+      margin-right: 0;
+    }
+  }
+}
+//悬浮按钮
+.register-bottom{
+  position: relative;
+  width: 100%;
+  min-width: 1200px;
+  bottom: 110px;
+  height: 110px;
+  background: url("img/Jan/register-bkg.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.bottom-btn{
+  display: block;
+  position: absolute;
+  text-align:center;
+  width: 514px;
+  height: 92px;
+  line-height:92px;
+  left: 50%;
+  top: 50%;
+  margin-left: -257px;
+  margin-top: -46px;
+  background: url("img/Jan/register-btn.png") center center no-repeat;
+  background-size: 100% 100%;
+  font-size: 44px;
+  color: #d33a30;
+  font-weight: 500;
+}
+.special-bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 110px;
+  z-index: 999;
+  background: url("img/Jan/register-bkg.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.activity-end{
+  background: url("img/Jan/acitivity-end.png") center center no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  cursor: default;
+}
+//弹窗
+.popup{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background:rgba(0,0,0,0.6);
+  .pop-main{
+    position: fixed;
+    width: 893px;
+    height: 469px;
+    top:50%;
+    left:50%;
+    margin-left: -446.5px;
+    margin-top: -234.5px;
+    background: url("img/Jan/activity-rules.png") center center no-repeat;
+    background-size: 100% 100%;
+    .close{
+      position:absolute;
+      top: 496px;
+      left: 50%;
+      margin-left: -30px;
+      display: block;
+      width: 60px;
+      height: 60px;
+      background: url("img/Jan/close.png") center center no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}

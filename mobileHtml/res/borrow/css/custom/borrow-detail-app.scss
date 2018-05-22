@@ -1,0 +1,11 @@
+.cus-detail-list li > *:nth-child(2) { text-align : right; color : $co-back; width : 1.5%; }
+
+.cus-detail-list li {
+  @extend .ew, .ew-fix;
+}
+
+.cus-detail-list li > *.aj:nth-child(2) { text-align : justify; }
+
+#quotaMange {
+  display : none;
+}

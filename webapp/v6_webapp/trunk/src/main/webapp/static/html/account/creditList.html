@@ -1,0 +1,32 @@
+{{#each list}}
+<div class="list-block accordion-list inset">
+    <ul >
+        <li class="accordion-item">
+            <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                    <div class="item-title"><h5>{{operatorType}}</h5></div>
+                </div>
+            </a>
+            <div class="accordion-item-content">
+                <div class="content-block font-grey">
+                    <h6 class="mt10" style="text-decoration:none; outline:0 none;">{{remark}}</h6>
+                </div>
+            </div>
+        </li>
+        <li class="accordion-item">
+            <div class="item-inner pl15">
+                <div class="item-title-row width100">
+                    <div class="item-title left font-grey"><h6>{{addTime}}</h6></div>
+                    <div class="item-after right">
+                        {{#if moneyTypeDouble}}
+                            <h6 class="font-green">{{moneyType}} {{workMoney}}</h6>
+                        {{else}}
+                            <h6 class="font-red">{{moneyType}} {{workMoney}}</h6>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{{/each}}

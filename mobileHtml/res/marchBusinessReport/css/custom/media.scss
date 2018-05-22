@@ -1,0 +1,53 @@
+@media (max-height: 460px) {
+  .page2-text2 {
+    margin-bottom: 1rem;
+  }
+  .page5-text2 {
+    margin: 3vh 0;
+  }
+
+  .page5-text1 h1 {
+    font-size: 10vw;
+  }
+  .page5-text2 h1 {
+    font-size: 7vw;
+  }
+
+  .page16-imgs {
+    padding: 1vh 15%;
+  }
+
+  .swiper-slide12 .new-text, .swiper-slide13 .new-text {
+    font-size: 10px;
+  }
+}
+
+@media (max-height: 450px) {
+
+  .swiper-slide {
+    padding: 3vh 8vw;
+  }
+  .chart {
+    position: relative;
+    margin: 4vh 0 8vh 0;
+    height: 60vw;
+  }
+
+  .page5-text2 {
+    margin: 5vh 0;
+  }
+  .page4-img {
+    height: 33vh;
+  }
+
+  .page13-chart1 {
+    margin-bottom: 5vh;
+  }
+  .chart.chart8 {
+    height: 27vh;
+  }
+
+  .swiper-slide6 .new-title, .swiper-slide9 .new-title, .swiper-slide10 .new-title, .swiper-slide11 .new-title, .swiper-slide12 .new-title, .swiper-slide13 .new-title {
+    margin: 5vh 0 1vh 0;
+  }
+}

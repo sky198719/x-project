@@ -1,0 +1,58 @@
+/*主体*/
+/*辅助*/
+/*辅助*/
+/*阅读(默认)*/
+/*辅助阅读*/
+/*信息*/
+/*成功*/
+/*提醒/警告*/
+/*错误/强调*/
+/*黑色*/
+/*白色*/
+/*---xui-table[data-theme="001"] (css)---STA*/
+.xui-table[data-theme="001"] {
+  width: 100%;
+}
+.xui-table[data-theme="001"] tr:hover {
+  background: #f9f9f9;
+}
+.xui-table[data-theme="001"] th {
+  border: 2px solid #e8e8e8;
+  line-height: 1.5rem;
+  padding: 1rem 1em;
+  vertical-align: top;
+}
+.xui-table[data-theme="001"] td {
+  border: 1px solid #e8e8e8;
+  line-height: 1.5rem;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.15) .5px, transparent .5px);
+  vertical-align: top;
+}
+/*read*/
+.xui-table[data-theme="001"][data-co=read] tr:hover {
+  background: #f5f5f5;
+}
+.xui-table[data-theme="001"][data-co=read] th {
+  border-bottom-color: #dfdfdf;
+}
+.xui-table[data-theme="001"][data-co=read] td {
+  border-bottom-color: #dfdfdf;
+
+}
+.xui-table[data-theme="001"][sz="s"] th,
+.xui-table[data-theme="001"][sz="s"] td {
+  line-height: 1.5rem;
+  padding:.5rem 1em;
+}
+.xui-table[data-theme="001"][sz="m"] th,
+.xui-table[data-theme="001"][sz="m"] td {
+  line-height: 1.5rem;
+  padding:1rem 1em;
+}
+.xui-table[data-theme="001"][sz="l"] th,
+.xui-table[data-theme="001"][sz="l"] td {
+  line-height: 1.5rem;
+  padding:1.5rem 1em;
+}

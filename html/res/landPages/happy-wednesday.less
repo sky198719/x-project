@@ -1,0 +1,333 @@
+@import "css/swiper2.min.css";
+@import "css/index";
+
+/*container start*/
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+.top-main{
+  width: 100%;
+  height:511px;
+  margin: 0 auto;
+  background: url("img/happy-wednesday/banner.png") center no-repeat;
+}
+/*注册 register*/
+.top-wrap{
+  width: 1200px;
+  height: 754px;
+  margin: 0 auto;
+  overflow: hidden;
+  .register-main{
+    float:right;
+    width: 240px;
+    margin-top: 62px;
+    padding: 20px;
+    margin-right: 46px;
+    .register-title{
+      margin-bottom: 12px;
+      font-size: 24px;
+      font-weight: 900;
+      color: #006a60;
+    }
+    .user-common{
+      height: 38px;
+      margin-bottom: 8px;
+      input{
+        border: 1px solid #006a60;
+        text-indent: 6px;
+        color: #a9a9a9;
+      }
+    }
+    .user-num,.user-psw{
+      width: 240px;
+    }
+    .J-num,.J-psw{
+      width:240px;
+      height: 36px;
+      background: #fff;
+    }
+    //验证码
+    .user-verigy{
+      margin-bottom: 8px;
+      position: relative;
+    }
+    .user-voice{
+      text-align: right;
+      margin-bottom: 18px;
+    }
+    .user-verigy .J-verify,.user-verigy .J-phoneyzm{
+      float: left;
+      width: 100%;
+      height: 36px;
+      background: #fff;
+    }
+    .user-verigy .change-verify,.user-verigy .get-phoneyzm{
+      float: right;
+      margin-left: 8px;
+      background: #f2821b;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .change-verify,.get-phoneyzm{
+      position: absolute;
+      right: 2px;
+      top: 5px;
+    }
+    .change-verify{
+      width: 80px;
+      height: 27px;
+    }
+    .get-phoneyzm{
+      width: 90px;
+      height: 28px;
+      color: #fff;
+      line-height: 28px;
+    }
+    //语音验证码
+    .user-voice .J-voiceyzm{
+      font-size: 14px;
+      color: #ff523a;
+    }
+    .user-verigy .get-phoneyzm{
+      text-align: center;
+      font-size: 14px;
+    }
+    //同意协议
+    .user-agree{
+      margin-bottom: 10px;
+      position: relative;
+      span{
+        display: inline-block;
+        font-size: 13px;
+        color: #f2821b;
+        text-indent: 8px;
+        a{
+          font-size: 13px;
+          color: #f2821b;
+          cursor: pointer;
+        }
+      }
+    }
+    .user-agree .check-style{
+      display: inline-block;
+      vertical-align: middle;
+      width: 13px;
+      height: 13px;
+    }
+    .user-agree .no-check{
+      background: url("img/check.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    .user-agree .checked{
+      background: url("img/checked.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    .register-btn{
+      width: 240px;
+      height: 46px;
+      text-align: center;
+      line-height: 46px;
+      margin:0 auto 10px;
+      cursor: pointer;
+      background: #006a60;
+      font-size: 24px;
+      color:#fff;
+      font-weight: 500;
+      font-family: "Microsoft Yahei", "微软雅黑", Arial, Tahoma;
+    }
+    .have-login{
+      text-align: right;
+      font-size: 14px;
+      color: #3a3a3a;
+      padding-right: 3px;
+    }
+    .have-login .logined{
+      text-decoration: underline;
+      color: #0c6e81;
+    }
+  }
+  /*registered*/
+  .registered{
+    float:right ;
+    margin-top: 70px;
+    background-color: #fff;
+    padding: 40px 30px;
+    text-align: center;
+  }
+  .logo-company{
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background-color: #ee262e;
+    margin: 0 auto 40px;
+  }
+  .logo-company img{
+    display: inline-block;
+    width: 48px;
+    height:58px;
+    left:50%;
+    top:50%;
+    margin-top:22px;
+  }
+  .user-info{
+    font-size: 16px;
+    color: #3a3a3a;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight:300;
+  }
+  .user-money{
+    font-size: 16px;
+    color: #909090;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .user-money .go-money{
+    font-size: 16px;
+    color: #fe454d;
+    cursor: pointer;
+  }
+  .all-money{
+    padding-bottom: 30px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #3a3a3a;
+  }
+  .enter-account{
+    display: block;
+    width: 304px;
+    height: 48px;
+    margin:0 auto;
+    cursor: pointer;
+    background: url("img/happy-wednesday/registered-btn.png") center no-repeat;
+
+  }
+}
+
+/*container-main start*/
+.container-main{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  .part1{
+    width: 100%;
+    height: 1176px;
+    background: url("img/happy-wednesday/part1.png") center no-repeat;
+    .investBtn{
+      width: 1200px;
+      margin: 0 auto;
+      padding-top: 577px;
+      text-align: right;
+      p{
+        width: 230px;
+        height: 50px;
+        background: url("img/happy-wednesday/toInvest.png") center no-repeat;
+        display: inline-block;
+        cursor: pointer;
+      }
+      #xyb1m{
+        margin-right: 89px;
+      }
+      #xyb12m{
+        margin-right: 55px;
+      }
+    }
+    .rateInfo{
+      width: 1200px;
+      margin: 0 auto;
+      padding-top: 260px;
+      text-align: left;
+      >span{
+        font-size: 40px;
+        color: #006a60;
+      }
+      .rate{
+        margin-left: 85px;
+      }
+      .closeTerm{
+        margin-left: 90px;
+        font-size: 38px;
+        font-weight: 300;
+      }
+      p{
+        width: 363px;
+        margin-left: 360px;
+        display: inline-block;
+        font-size: 40px;
+        color: #006a60;
+      }
+    }
+  }
+  .part2{
+    width: 100%;
+    height: 1010px;
+    background: url("img/happy-wednesday/part2.png") center no-repeat;
+  }
+}
+.suspend{
+  display: block;
+  width:100%;
+  height: 111px;
+  background: url("img/happy-wednesday/bg.png") center no-repeat;
+  text-align: center;
+  position: absolute;
+  bottom:0;
+  span{
+    display: inline-block;
+    width: 525px;
+    height: 100%;
+    cursor: pointer;
+    background: url("img/happy-wednesday/toRegister.png") center no-repeat;
+    margin: 0 auto;
+  }
+}
+
+.suspend-special{
+  width:100%;
+  height: 111px;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right:0;
+  z-index:800;
+  background: url("img/happy-wednesday/bg.png") center no-repeat;
+  text-align: center;
+  span{
+    display: inline-block;
+    width: 525px;
+    height: 100%;
+    cursor: pointer;
+    background: url("img/happy-wednesday/toRegister.png") center no-repeat;
+    margin: 0 auto;
+  }
+}
+/*container-main end*/
+.mui-dialog .mui-dialog-inner{
+  text-align: center;
+}
+.cur{
+  width: 100%;
+  font-size: 12px;
+}
+.numberBox{
+  margin-bottom: 0!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

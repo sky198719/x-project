@@ -1,0 +1,72 @@
+@import "css/index";
+
+/*平台公告*/
+.g-right {
+  .m-con-wrap {
+    .m-con-bd {
+      border-bottom: none;
+      p.title {
+          height: 35px;
+          line-height: 35px;
+          background: #f4f5f9;
+          border-bottom: none;
+          margin-top: 10px;
+          span.tit {
+            display: inline-block;
+            width: 720px;
+            .ecli();
+          }
+          span.time{
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+            padding-right: 85px;
+            float: right;
+          }
+          &:hover {
+            color: @col-666;
+            cursor: default;
+
+          }
+      }
+      ul.notice {
+        li,a {
+          display: inline-block;
+          width: 100%;
+          height: 48px;
+          line-height: 48px;
+          border-bottom: 1px dashed @col-eee;
+          font-size: @font14px;
+          color: @col-666;
+          &:hover {
+            color: @col-57a;
+            cursor: pointer;
+
+          }
+          span.tit {
+            display: inline-block;
+            width: 720px;
+            .ecli();
+          }
+          span.time {
+            display: inline-block;
+            width: 80px;
+            text-align: center;
+            padding-right: 85px;
+            float: right;
+          }
+        }
+        li.last {
+          border-bottom: none;
+        }
+      }
+      .paging-info {
+        margin: 45px auto;
+        text-align: center;
+        .pagination {
+          .pag();
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,246 @@
+.disnone {
+  display: none;
+}
+.dishidden {
+  visibility: hidden;
+}
+.container {
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+}
+.container .minwidth {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.top {
+  width: 100%;
+  height: 1650px;
+  background: url("img/top.jpg") center no-repeat;
+  overflow: hidden;
+}
+.top .top-main {
+  margin: 968px auto 0;
+}
+.top .top-main .title-main {
+  margin-left: 296px;
+  width: 736px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 24px;
+  color: #993333;
+}
+.top .top-main .list-container {
+  width: 1068px;
+  margin: 57px auto 0;
+  overflow: hidden;
+}
+.top .top-main .list-container .show-container {
+  float: left;
+  width: 716px;
+}
+.top .top-main .list-container .show-container .show-common {
+  width: 100%;
+}
+.top .top-main .list-container .show-container .show-common li {
+  float: left;
+  width: 175px;
+  height: 239px;
+  margin-left: 5px;
+  overflow: hidden;
+}
+.top .top-main .list-container .show-container .show-common li .show-wrap {
+  width: 156px;
+  margin-left: 5px;
+  height: 100%;
+  overflow: hidden;
+}
+.top .top-main .list-container .show-container .show-common li p {
+  width: 135px;
+  height: 40px;
+  text-align: center;
+  margin: 42px auto 0;
+}
+.top .top-main .list-container .show-container .show-common li a {
+  display: block;
+  width: 74px;
+  height: 74px;
+  cursor: pointer;
+  margin: 36px auto 0;
+}
+.top .top-main .list-container .show-container .show-common .common-1,
+.top .top-main .list-container .show-container .show-common .common-5 {
+  margin-left: 0;
+}
+.top .top-main .list-container .show-container .show-common .common-1 p {
+  background: url("img/title.png") 0px 0px no-repeat;
+}
+.top .top-main .list-container .show-container .show-common .common-2 p {
+  background: url("img/title.png") 0px -50px no-repeat;
+}
+.top .top-main .list-container .show-container .show-common .common-3 p {
+  background: url("img/title.png") 0px -100px no-repeat;
+}
+.top .top-main .list-container .show-container .show-common .common-4 p {
+  background: url("img/title.png") 0px -150px no-repeat;
+}
+.top .top-main .list-container .show-container .show-common .common-5 p {
+  background: url("img/title.png") 0px -200px no-repeat;
+}
+.top .top-main .list-container .show-container .show-common .common-6 p {
+  background: url("img/title.png") 0px -250px no-repeat;
+}
+.top .top-main .list-container .show-container .show-common .common-7 p {
+  background: url("img/title.png") 0px -300px no-repeat;
+}
+.top .top-main .list-container .show-container .show-common .common-8 p {
+  background: url("img/title.png") 0px -350px no-repeat;
+}
+.top .top-main .list-container .show-container .start-status li {
+  position: relative;
+}
+.top .top-main .list-container .show-container .start-status li .btn-start {
+  background: url("img/start.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.top .top-main .list-container .show-container .start-status li .btn-end {
+  background: url("img/end.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.top .top-main .list-container .show-container .start-status li .shift-front,
+.top .top-main .list-container .show-container .start-status li .shift-behind {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.top .top-main .list-container .show-container .start-status li .shift-front {
+  width: 175px;
+  height: 239px;
+  z-index: 100;
+  background: url("img/red-start.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.top .top-main .list-container .show-container .start-status li .shift-behind {
+  width: 175px;
+  height: 239px;
+  z-index: 0;
+  background: url("img/red-process.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.top .top-main .list-container .show-container .start-status li .shift-behind img {
+  display: block;
+  width: 126px;
+  height: 126px;
+  margin: 28px auto 0;
+}
+.top .top-main .list-container .show-container .start-status li .shift-behind span {
+  display: block;
+  width: 112px;
+  height: 30px;
+  margin: 10px auto 0;
+  background: url("img/sm.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.top .top-main .list-container .show-list {
+  float: right;
+  width: 328px;
+  margin-right: 6px;
+}
+.top .top-main .list-container .show-list .winData-title {
+  width: 100%;
+  padding-top: 114px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 22px;
+  color: #ffff99;
+}
+.top .top-main .list-container .show-list .winData-title span {
+  display: inline-block;
+}
+.top .top-main .list-container .show-list .winData-title .user-name {
+  margin-left: 56px;
+}
+.top .top-main .list-container .show-list .winData-title .priname {
+  margin-left: 80px;
+}
+.top .top-main .list-container .show-list .winData {
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  position: relative;
+}
+.top .top-main .list-container .show-list .winData ul {
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+.top .top-main .list-container .show-list .winData ul li {
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  color: #993333;
+  font-size: 20px;
+  position: relative;
+}
+.top .top-main .list-container .show-list .winData ul li span {
+  display: inline-block;
+  text-align: center;
+}
+.top .top-main .list-container .show-list .winData ul li .username {
+  width: 55%;
+}
+.top .top-main .list-container .show-list .winData ul li .prizename {
+  width: 43%;
+  margin-right: 2%;
+}
+.top .top-main .show-people {
+  width: 1068px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 24px;
+  font-size: 20px;
+  color: #993333;
+}
+.top .top-main .show-people span {
+  color: #ff3333;
+}
+.bottom {
+  width: 100%;
+  height: 495px;
+  background: url("img/bottom.jpg") center no-repeat;
+}
+.bottom .activity-rules {
+  padding: 90px 0 0 60px;
+  margin: 0 auto;
+}
+.bottom .activity-rules h3 {
+  font-size: 24px;
+  color: #993333;
+  text-align: left;
+}
+.bottom .activity-rules dl {
+  margin-top: 28px;
+  width: 1070px;
+}
+.bottom .activity-rules dl dt {
+  float: left;
+  width: 22px;
+  height: 22px;
+  font-size: 18px;
+  color: #ff3333;
+  text-align: center;
+  line-height: 22px;
+  background: url("img/circle.png") center center / 100% 100% no-repeat;
+  margin-top: 4px;
+}
+.bottom .activity-rules dl dd {
+  font-size: 18px;
+  color: #993333;
+  width: 1034px;
+  margin-left: 35px;
+  margin-bottom: 15px;
+}

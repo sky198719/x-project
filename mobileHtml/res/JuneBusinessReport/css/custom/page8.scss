@@ -1,0 +1,127 @@
+.page8-chart1{
+  width: 100%;
+  position: relative;
+  margin: 2vh 0 9vh 0;
+  height: 65vw;
+  max-height: 270px;
+
+  .grid-data li {
+    width: 36%
+  }
+
+  .grid-text li {
+    height: 12%;
+  }
+
+}
+
+.page8-chart1.xui-chart-bar .grid-data li em{
+  bottom: -2.5rem;
+}
+
+.page8-chart1.xui-chart-bar .grid-data li b{
+  left: 50%;
+  right:auto;
+  font-size: 14px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.page8-chart1 .chart-bar3 h5 {
+  background: linear-gradient(0deg,rgba(85,50,239,.7) 0,rgba(37,193,138,.7) 100%)!important;
+}
+
+.page8-chart1 .chart-bar1 {
+  left: 5%;
+  color: #7975ff;
+}
+
+.page8-chart1 .chart-bar2 {
+  left: 31%;
+  color: #7975ff;
+}
+
+.page8-chart1 .chart-bar3 {
+  right: 6%;
+  color: #7975ff;
+}
+
+.swiper-slide-active .page8-chart1 li.chart-bar1 {
+  height: 42%
+}
+
+.swiper-slide-active .page8-chart1 li.chart-bar2 {
+  height: 68%
+}
+
+.swiper-slide-active .page8-chart1 li.chart-bar3 {
+  height: 85%
+}
+
+.page8-text1{
+  position: relative;
+  height: 5.5rem;
+}
+.page8-text1 p {
+  color: #c58b53;
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  background: #404040;
+  left: 0;
+  width: 9rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  /* padding: 1rem 1rem 1rem 2rem; */
+}
+.page8-text1 p:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  background: $co-main;
+  left: 0;
+  top: 10%;
+}
+.page8-text1 p:after{
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: .5rem;
+  background: #262626;
+  right: 0;
+  top: 0;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.page8-text1 h1 {
+  font-size: 3rem;
+  position: absolute;
+  height: 4rem;
+  line-height: 4rem;
+  display: inline-block;
+  background: linear-gradient(0deg,rgba(85,50,239,.7) 0,rgba(37,193,138,.7) 100%)!important;
+  color: #252525;
+  left: 8rem;
+  top: .5rem;
+  text-align: center;
+  right: 2px;
+}
+.page8-text1 h1:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 65%;
+  background: #404040;
+  right: 0;
+  top: 17.5%;
+}
+
+.se-hack1 {
+  height: 11rem;
+}

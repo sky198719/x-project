@@ -1,0 +1,21 @@
+html,div,p,a，b,span,em,strong,h1,h2,
+h3,h4,h5,h6,ul,li,ol,dl,dd,dt,table,
+tr,th,td,img,button,form,link,label,
+input,textarea,select,option
+{
+	margin: 0px;
+	padding: 0px;
+}
+img{
+	/*display: block;*/
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style:none; 
+}
+body{
+	margin: 0px;
+	padding: 0px;
+}

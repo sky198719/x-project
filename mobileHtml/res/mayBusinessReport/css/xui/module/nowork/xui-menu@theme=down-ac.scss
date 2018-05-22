@@ -1,0 +1,53 @@
+/*
+ * 模块：下拉菜单
+ * 模块类型：p(插件模块)
+ * 精度：*
+ * 分级：*
+ * 适配：平板 | 移动
+ * 兼容：
+ * 版本：v0.0.1
+ * 备注：
+ * dim (true 开 | false 关)；是否开启暗层（默认关闭）
+ * pos (tl 上左 | tc 上中 | tr 上右 | cl 中左 |cc 中中 | cr 中右 | bl 下左 | bc 下中 | br 下右)；提示框位置（默认中中）
+ * time (number 显示时间) 设计一个数字（默认3秒）
+ * icon (success 成功 | warning 警告 | error 错误) 非必需（默认无图标）
+ * msg (提示内容)
+ */
+
+.xui-menu[theme="down-ac"]{position: relative}
+.xui-menu[theme=down-ac]>*:last-child {
+  position: absolute;
+  top: 100%;
+  background: #fff;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 3px;
+  min-width: 100%;
+}
+.xui-menu[theme=down-ac]>*:last-child:before{
+  content: " ";
+  display: block;
+}
+
+.xui-menu[theme=down-ac]>*:last-child:after{
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  left: 50%;
+  bottom:100%;
+  margin: auto auto -.3rem -1rem;
+  -webkit-clip-path: polygon(50% 50%,100% 100%,0% 100%);
+  clip-path: polygon(50% 50%,100% 100%,0% 100%);
+}
+
+.xui-menu[theme=down-ac]>*:last-child>*:not(:last-child){
+  background:#fff linear-gradient(0deg, rgba(0, 0, 0, 0.15) .5px, transparent .5px);
+  line-height: 3.5rem;
+}

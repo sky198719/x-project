@@ -1,0 +1,121 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">
+            <span id="itemName">月进斗金</span>-<span id="itemTerm" style="font-size: 14px;margin-top: 2px;">20160101期</span>
+        </div>
+        <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through toolbar-through">
+    <div data-page="monthFinanceDetails" class="page" directory="monthFinance">
+        <div class="page-content pull-to-refresh-content infinite-scroll monthFinanceDetails">
+        	<!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <div class="content-block-inner mt10 pr0">
+                <div class="row no-gutter" style="margin: 10px 0 10px 0;">
+                    <div style="width:35%">
+                        <div class="tongue" style="background: #3f9bff;">
+                            <div><span style="font-size: 40px;" id="tenderApr">0</span>%</div>
+                            <div style="padding-right: 8px;">历史年化收益</div>
+                          </div>
+                    </div>
+                    <div style="width:65%">
+                        <div class="item-content" style="padding:5px 0 0 5%;min-width: 150px;">
+                            <div class="item-title-row displayNone singlesdayDetails">
+                                <div class="item-title">
+                                    <img src="static/img/xxd/1111day.png" height="20px"/>
+                                </div>
+                            </div>
+                            <div class="item-title-row" style="padding: 2px 0 2px 0;">
+                                <div class="item-title font-666">起投金额：<span id="tenderStartAmount">0</span>元</div>
+                            </div>
+                            <div class="item-title-row" style="padding: 2px 0 2px 0;">
+                                <div class="item-title font-666">锁定期限：<span id="lockDays">0</span>天</div>
+                            </div>
+                            <div class="item-title-row" style="padding: 2px 0 2px 0;display: none;">
+                                 <div class="item-title font-666">适用：质保服务专款计划</div>
+                             </div>
+                            <div class="item-title-row">
+                                风险提示：<a id="fenxiantishi" href="#">《风险提示函》</a>
+                            </div>
+                            <div class="item-title-row">
+                                债权列表：<a id="tradeList" href="#">点击查看</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block-inner mt10 pr0">
+                <div class="row no-gutter" style="margin: 3%;">
+                    <div class="row col-75" >
+                        <div class="col-50">
+                            <div href="#" class="amountText">
+                                <span class="font-red" id="tenderRemainderAmount">0.00</span>
+                                <h5 class="mt10">剩余额度</h5>
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <div href="#" class="amountText">
+                               <span id="tenderTotalAmount">0.00</span>
+                               <h5 class="mt10">开放总额</h5>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-25">
+                        <div class="progress-ring" data-color="#efeff4,#ff7365" data-duration="6" data-percent="0"></div>
+                    </div>
+                </div>
+
+
+                <div class="row no-gutter" style="border-top: 1px solid #E3E2E8;" id="countDownTime">
+                   <div class="col-50">
+                       <span style="display: block;padding: 15% 0 8% 0;text-align: center;color: #666;"><h5>距本次抢购结束还剩：</h5></span>
+                   </div>
+                    <div class="col-50">
+                        <div style="display: block;padding: 8% 0 8% 0;text-align: center;min-width: 150px;">
+                            <span class="countdown">
+                                <div class="text hour">00</div>
+                                <div class="text">时</div>
+                            </span>
+                            <span style="float:left;margin-left: 5px;margin-right: 5px;">
+                                <span style="font-size: 30px;color:#8E8C8C;">:</span>
+                            </span>
+                            <span class="countdown">
+                              <div class="text minute">00</div>
+                              <div class="text">分</div>
+                            </span>
+                            <span style="float:left;margin-left: 5px;margin-right: 5px;">
+                                <span style="font-size: 30px;color:#8E8C8C;">:</span>
+                            </span>
+                            <span class="countdown">
+                                 <div class="text second">00</div>
+                                 <div class="text">秒</div>
+                           </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block-inner mt10 pr0" style="min-height:300px;">
+                <ul class="nav nav-tabs" style="margin-top: 0px;">
+                    <li id="introduction" class="active"><a style="background: transparent;"> 产品介绍</a></li>
+                    <li id="questions"><a style="background: transparent;"> 常见问题</a></li>
+                    <li id="joinHistory"><a style="background: transparent;"> 加入记录</a></li>
+                   	<input type="hidden" id="currentPage" value="1"/>
+          			<input type="hidden" id="totalPage" value="1"/>
+                </ul>
+				<div id="tabContent" style="color:#6d6d72;"></div>
+            </div>
+        </div>
+
+        <div class="toolbar no-border" style="height: 55px;">
+            <div class="monthFinance-button" id="submitTender" style="color:#fff;">立即抢购</div>
+        </div>
+    </div>
+</div>

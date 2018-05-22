@@ -1,0 +1,84 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">修改银行卡</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="#"
+                                                                                   class="link icon-only open-panel"> <i
+                class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="updBank" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <form id="my-form" class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">真实姓名：</div>
+                                <div class="item-input">
+                                    <input type="text" value="" disabled="disabled" id="bank_userName">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">银行卡号：</div>
+                                <div class="item-input">
+                                    <input type="text" value="" disabled="disabled" id="bank_bankAccount">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">开户银行：</div>
+                                <div class="item-input">
+                                    <input type="text" value="" disabled="disabled" id="bank_Name">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">开户支行：</div>
+                                <div class="item-input">
+                                    <input type="text" id="bank_branch">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">支行省市：</div>
+                                <div class="item-input">
+                                    <input type="text" id="bank_provinceAndCity" placeholder="开户支行所在省市">
+                                    <input type="hidden" id="bank_province">
+                                    <input type="hidden" id="bank_city">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <div class="col-40" id="bank_submit" style="padding: 0 5%;"><a href="#"
+                                                                           class="button active button-51">确认</a></div>
+            <div class="content-block-title">
+              <span>
+                <h6 style="white-space: pre-wrap;line-height: 20px;">温馨提示：<br>1.请正确填写开户行所在省市及支行全名。<br>如您遗忘了开户支行名称，可致电当地发卡机构查询，错误的开户行所在省市或支行全名可能导致您的提现失败
+                </h6>
+              </span>
+            </div>
+        </div>
+    </div>
+</div>

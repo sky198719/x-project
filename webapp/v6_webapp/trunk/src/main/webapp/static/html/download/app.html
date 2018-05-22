@@ -1,0 +1,611 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>新新贷-以信相贷用新服务</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="mobileOptimized" content="width">
+<meta name="handheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="flexible" content="initial-dpr=1"/>
+<link href="../../img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<style type="text/css">
+html {
+    font-family: 'Microsoft YaHei', 'Heiti SC', simhei, 'Lucida Sans Unicode', 'Myriad Pro', 'Hiragino Sans GB', Verdana;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0;
+    font-family: 'Microsoft YaHei', 'Heiti SC', simhei, 'Lucida Sans Unicode', 'Myriad Pro', 'Hiragino Sans GB', Verdana
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block
+}
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden], template {
+    display: none
+}
+
+a {
+    background-color: transparent
+}
+
+a:active, a:hover {
+    outline: 0
+}
+
+abbr[title] {
+    border-bottom: 1px dotted
+}
+
+b, strong {
+    font-weight: 700
+}
+
+dfn {
+    font-style: italic
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+mark {
+    background: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup {
+    top: -.5em
+}
+
+sub {
+    bottom: -.25em
+}
+
+img {
+    border: 0
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0
+}
+
+pre {
+    overflow: auto
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+button {
+    overflow: visible
+}
+
+button, select {
+    text-transform: none
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled], html input[disabled] {
+    cursor: default
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+input {
+    line-height: normal
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+
+legend {
+    border: 0;
+    padding: 0
+}
+
+textarea {
+    overflow: auto
+}
+
+optgroup {
+    font-weight: 700
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td, th {
+    padding: 0
+}
+
+@charset "utf-8";
+html {
+    color: #000;
+    background: #fff;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+html, body {
+    font-family: sans-serif
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0
+}
+
+input, select, textarea {
+    font-size: 100%
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal
+}
+
+del {
+    text-decoration: line-through
+}
+
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: 500
+}
+
+ol, ul {
+    list-style: none
+}
+
+caption, th {
+    text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 500
+}
+
+q:before, q:after {
+    content: ''
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup {
+    top: -.5em
+}
+
+sub {
+    bottom: -.25em
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+ins, a {
+    text-decoration: none
+}</style>
+
+<style>body {
+    background-color: #fff;
+    font-family: 'Microsoft YaHei', 'Heiti SC', simhei, 'Lucida Sans Unicode', 'Myriad Pro', 'Hiragino Sans GB', Verdana
+}
+
+a:hover, a:visited {
+    text-decoration: none
+}
+
+.top {
+    position: relative
+}
+
+.top img {
+    width: 100%;
+    /*height: 113vw;*/
+}
+
+.top h2 {
+    position: absolute;
+    top: 1rem;
+    width: 100%;
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 400
+}
+
+.links-wrap {
+    margin-top: .2rem;
+    clear: both;
+    overflow: hidden;
+}
+
+.links-wrap .links {
+    text-align: center;
+    float: left;
+    margin: .4rem auto;
+    width: 100%
+}
+
+.links-wrap .btn {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 53px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 18px;
+    min-width: 230px;
+}
+
+.links-wrap .btn img {
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.links-wrap .btn span.label {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    line-height: 55px;
+    height: 45px;
+}
+
+.links-wrap .btn.dow {
+    text-align: center;
+    background: #94c11c;
+}
+    .content{
+        text-align: center;
+        background: #dcdcdc;
+    }
+    .content div{
+        margin-bottom:3.5vw;
+        padding:0 6.5vw 3vw;
+        background: #fff;
+    }
+    .content h3{
+        font-size: large;
+        color: #101010;
+    }
+    .mb10{
+        margin-bottom: 10px;
+    }
+    .mb20{
+        margin-bottom: 20px!important;
+    }
+    .content p{
+        color: #1d1d1d;
+        line-height: 25px;
+    }
+    .content-top .check{
+        color: #1f96e8;
+        margin-bottom: 25px;
+        line-height: 30px;
+    }
+    .content-top a{
+        color: #626262;
+        width: 100%;
+        display: inline-block;
+    }
+    .content-top img{
+        width: 47.5%;
+
+    }
+    .content-bottom{
+      padding-top: 30px!important;
+    }
+
+    .content-bottom img{
+        width: 84.3%;
+        margin-bottom: 9vw;
+    }
+    .al{
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+<div class="top">
+    <img src="../../img/xxd/download/down_page_3.png" alt="">
+</div>
+<div class="links-wrap">
+    <div class="links">
+        <a class="btn dow" href="javascript:download()">
+            <img src="../../img/xxd/download/download-icon.png" width="35"/>
+            <span class="label">最新版下载</span>
+        </a>
+    </div>
+    <div style="text-align: center;display: none;">
+        <span style="color: #3f3f3f;margin-top: 20px;font-size: 15px;">建议用微信扫一扫下载</span>
+    </div>
+</div>
+<div class="content">
+    <div class="content-top">
+        <p class="check mb10">点击查看安装步骤</p>
+        <p class="al mb10">若无法下载，请您可以尝试以下两种方式：</p>
+        <p class="al mb10">1. 复制下载地址并用Safari打开，即可安装</p>
+        <a class="al mb10" href="itms-services://?action=download-manifest&url=https://download-cdn.xinxindai.com/xxdnew/manifest.plist">itms-services://?action=download-manifest&url=https://download-cdn.xinxindai.com/xxdnew/manifest.plist</a>
+        <p class="al mb10">2. 截屏后扫码安装</p>
+        <img class="mb10" src="../../img/xxd/download/dimension.png" alt="" />
+    </div>
+    <div class="content-bottom">
+        <h3 class="mb10">苹果手机用户安装步骤</h3>
+        <p class="al mb10">因苹果公司的政策原因，苹果手机首次安装企业版 应用时，会出现“未受信任的企业级开发者”提示：</p>
+        <img src="../../img/xxd/download/instruction1.png" alt="" />
+        <p class="al mb10">解决方法如下： </p>
+        <p class="al mb10">1.在手机中打开“设置”，选择“通用”</p>
+        <img src="../../img/xxd/download/instruction2.png" alt="" />
+        <p class="al mb10">2.在通用中，选择“设备管理”功能</p>
+        <img src="../../img/xxd/download/instruction3.png" alt="" />
+        <p class="al mb10">3.在设备管理分类中，选择要安装的企业应用文件名称(Shanghai Xinxindai Services Co., LTD)， 点击进入</p>
+        <img src="../../img/xxd/download/instruction4.png" alt="" />
+        <p class="al mb10">4. 进入企业签名页面后，确认企业签名中的公司名称与应用名称后，点击信任“Shanghai Xinxindai Services Co., LTD”</p>
+        <img class="mb20" src="../../img/xxd/download/instruction5.png" alt="" />
+        <img  src="../../img/xxd/download/instruction6.png" alt="" />
+        <p class="al mb10">5.回到桌面重新打开应用即可使用。</p>
+    </div>
+</div>
+<div id="disabled1" style="
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .8;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;">
+</div>
+<div id="disabled2" style="
+    display: none;
+    position: fixed;
+    width: 100%;
+    left: 15%;
+    top: 5%;
+    z-index: 1001;
+">
+    <img src="../../img/xxd/download/live.png" style="width: 70%;"/>
+</div>
+<script type="text/javascript" src="../../lib/jquery/jquery-3.2.0.min.js"></script>
+<script type="application/javascript">
+    if(ios()) {
+        $(".content").show();
+    }else{
+        $(".content").hide();
+    }
+    var iosDownLoadUrl = '';
+    var androidDownLoadUrl = '';
+    var androidSourceDownLoadUrl = '';
+    $(document).ready(function () {
+        $("#disabled1").click(function () {
+            $("#disabled1").hide();
+            $("#disabled2").hide();
+        });
+        $("#disabled2").click(function () {
+            $("#disabled1").hide();
+            $("#disabled2").hide();
+        });
+
+
+        $.ajax({
+            type: 'GET',
+            url: '../../../getCache.do',
+            data: {
+                key: 'APP_IOS_DOWNLOAD'
+            },
+            async: false,
+            dataType: 'json',
+            timeout: 8000,
+            success: function (resp) {
+                iosDownLoadUrl = resp.value;
+            }
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: '../../../getCache.do',
+            data: {
+                key: 'APP_ANDROID_DOWNLOAD'
+            },
+            async: false,
+            dataType: 'json',
+            timeout: 8000,
+            success: function (resp) {
+                androidDownLoadUrl = resp.value;
+            }
+        });
+
+
+        var androidType = GetQueryString("androidType");
+        if('yilabao' == androidType) {
+            androidDownLoadUrl = 'http://www.xinxindai.com/static/download/shichangbudituiyilabao_release_new.apk';
+        }
+
+        if (isWeixin()) {
+            $("#disabled1").show();
+            $("#disabled2").show();
+        } else {
+            var model = GetQueryString("model");
+            if(model == 'auto') {
+                download();
+            }
+        }
+    });
+
+    function download() {
+        if (isWeixin()) {
+            $("#disabled1").show();
+            $("#disabled2").show();
+        } else {
+            if(iosDownLoadUrl == '' || androidDownLoadUrl == '') {
+                alert("抱歉，APP的下载地址为空，请刷新页面重新尝试");
+                return;
+            }
+            if(ios()) {
+                // window.location.href = iosDownLoadUrl;
+                window.location.href = 'itms-services://?action=download-manifest&url=https://download-cdn.xinxindai.com/xxdnew/manifest.plist';
+            } else {
+                var dmp_app_source = GetQueryString("dmp_app_source");
+                $.ajax({
+                    type: 'GET',
+                    url: '//dmpadmin.xinxindai.com/api/xxlc/getAppPackage?utmSource=' + dmp_app_source,
+                    async: true,
+                    dataType: 'json',
+                    success: function (data) {
+                        if ( data.flag == 0){
+                            androidSourceDownLoadUrl = data.data[0].downloadUrl;
+                            window.location.href = androidSourceDownLoadUrl;
+                        }else {
+                            window.location.href = androidDownLoadUrl;
+                        }
+
+                    },
+                    error : function (data) {
+                        window.location.href = androidDownLoadUrl;
+                        console.error(data.msg);
+                    }
+                });
+            }
+        }
+    }
+
+    function isWeixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function ios() {
+        var ua = navigator.userAgent;
+        var ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
+        var ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/);
+        var iphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/);
+        if (ipad || iphone || ipod) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //获取地址栏url参数k
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)return  decodeURI(r[2]);
+        return null;
+    }
+
+    //
+    $('.check').click(function () {
+        $('html,body').animate({'scrollTop': $('.content-bottom')[0].offsetTop}, 500);
+    });
+</script>
+</body>
+</html>

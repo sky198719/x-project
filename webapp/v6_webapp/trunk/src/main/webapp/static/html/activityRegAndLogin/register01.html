@@ -1,0 +1,77 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"></div>
+        <div class="center">注册成功即可获得新新币</div>
+        <div class="right">
+            <a href="#"></a>
+        </div>
+    </div>
+</div>
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through">
+	<!-- Page, data-page contains page name-->
+	<div data-page="register01" class="page" directory="activityRegAndLogin" id="register01" style="padding-top: 55px;margin: 0;padding-bottom:0px;overflow-x:hidden;overflow-y:auto;">
+			<div class="outer">
+			    <!--top (如果此处图片有变化，只需切除透明图片替换top.png即可。)start-->
+			    <img src="static/img/activity/game/top.png" class="top_img">
+			    <!--top end-->
+			    <section class="section_div">
+			        <!--输入手机号 -->
+			        <div class="input-div trans-div-dis">
+			            <div class="trans-div"></div>
+			            <div class="ico-phone ico-pos">
+			                <input class="standard-input" id="phoneNo" type="tel" maxlength="15" placeholder="请输入手机号码，用于接收验证码"/>
+			            </div>
+			        </div>
+			
+			        <!--输入图片验证码-->
+			        <div class="input-div trans-div-dis">
+			            <div class="trans-div"></div>
+			            <div class="ico-imgcaptcha ico-pos">
+			                <input class="standard-input" id="imgCode" type="text" maxlength="4" placeholder="请输入图片验证码"/>
+			            </div>
+			            <p class=" hl34 eye-pos reCreateImageCode" style="left: 76%;">
+				            <img src="randCode/createVerifyCode.do" id="randImage">
+			            </p>
+			        </div>
+			
+			        <!--输入短信验证码-->
+			        <div class="input-div trans-div-dis" style="margin-bottom: 1%;">
+			            <div class="trans-div"></div>
+			            <div class="ico-mescaptcha ico-pos">
+			                <input class="standard-input" id="phoneVerifyCode" type="tel" maxlength="6" placeholder="请输入短信验证码"/>
+			            </div>
+			            <!--如需去除不可用样式，只需移除 disabled-a 即可-->
+			            <p class="reg-xieyi resend " style="text-align: right;">
+			                <span class="font-999" id="phoneVerifyCodeCountdown" style="display:none;"> 60秒后重新发送</span>
+			                <!--发送验证码 -->
+			                <span id="sendSMSCode"><span style="color:#007aff;border-bottom:1px solid;">发送验证码</span></span>
+			            </p>
+			        </div>
+			        <div class="getmessage">
+			            <p class="reg-xieyi">收不到短信？<a href="#" class="font-ff3"  id="sendVoiceCode">获取语音验证码</a></p>
+			        </div>
+			
+			
+			        <!--设置密码-->
+			        <div class="input-div trans-div-dis">
+			            <div class="trans-div trans-div-dis"></div>
+			            <div class="ico-locks ico-pos">
+			                <input id="userPassword" class="standard-input" type="password" placeholder="请设置6-16位数字字母组合密码"/>
+			            </div>
+			        </div>
+			    </section>
+			
+			    <section class="section_div mtp7 text-center">
+			        <p class="font-fff mt6 font13 ">点击注册代表我已同意<a href="#" class="font-fff " id="loadRegisterAgreement">《新新贷注册协议》</a></p>
+			
+			        <div class="w100 ">
+			            <!--如需不可点击样式 直接新增 disabled-a 即可-->
+			            <a href="#" class="button_01 button-40 border-fff bottom0-pos btn-style reg-btn-pos " id="submitRegister">注册</a>
+			        </div>
+			        <p class="font-fff mt6 font13 "><a href="#" class="font-fff " id="toLogin01">使用已有账号登录</a></p>
+			    </section>
+			</div>
+	</div>
+</div>

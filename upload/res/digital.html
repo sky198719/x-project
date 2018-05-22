@@ -1,0 +1,122 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/common/reset.css" />
+<link rel="stylesheet" href="styles/custom/digital.css" />
+<title>新新贷影像后台</title>
+</head>
+
+<body>
+<div class="mainContainer">
+	<div class="topNav">
+		<h1>影像资料</h1>
+		<span class="orderId">进件单号：<span id="orderId"></span></span>
+		<span id="toZip">打包下载</span>
+		<span id="downloadList">查看打包下载列表</span>
+	</div>
+</div>
+<div class="mainContainer">
+	<div class="leftBar">
+		<strong>影像资料分类</strong>
+		<ul id="navList" >
+
+		</ul>
+	</div>
+	<div class="rightCon">
+		<h2><span>*</span>上传文件大小不得大于500M</h2>
+		<ul id="fileList">
+
+		</ul>
+	</div>
+</div>
+
+<div class="layer"></div>
+<div class="alerts confirm">
+	<b></b>
+	<span>删除之后，重新打包可能要花费您更多的时间！ </span>
+	<div>
+		<button class="btn1">删除</button>
+		<button class="btn2 close">返回</button>
+	</div>
+</div>
+<div class="alerts error">
+	<b></b>
+	<span>非常抱歉，上传失败了！ </span>
+	<ul>
+		<li>请确定您的文件为以下格式并小于500M：</li>
+		<li>图片：jpg、jpeg、bmp、png</li>
+		<li>文档：doc、docx、xls、xlsx、ppt、pptx、pdf</li>
+		<li>视频/音频：avi、rmvb、mp4、mp3</li>
+	</ul>
+	<div>
+		<button class="btn2 close">返回</button>
+	</div>
+</div>
+<div class="alerts upload">
+	<span>文件上传中，请稍等！</span>
+	<div id="upload">
+		<em id="uploadProgress">0%</em>
+		<b id="b1" class="hasUpload"></b>
+		<b id="b2"></b>
+		<b id="b3"></b>
+		<b id="b4"></b>
+		<b id="b5"></b>
+		<b id="b6"></b>
+		<b id="b7"></b>
+		<b id="b8"></b>
+		<b id="b9"></b>
+		<b id="b10"></b>
+		<b id="b11"></b>
+		<b id="b12"></b>
+	</div>
+	<strong>上传期间请勿刷新网页</strong>
+</div>
+<div class="alerts zipList">
+	<div class="t">
+		<span class="close"></span>
+	</div>
+	<div class="c">
+		<h3><span>*</span>文件打包中需要稍作等待，可点击右上角刷新按钮刷新打包状态<strong id="ziplistReflash">刷新</strong></h3>
+	</div>
+	<ul class="m" id="zipList">
+
+	</ul>
+	<div class="b">
+		<span class="pre" id="downloadPre">&nbsp;</span>
+		<em id="downloadPage">0/0</em>
+		<span class="next" id="downloadNext">&nbsp;</span>
+	</div>
+</div>
+<div class="alerts picReview">
+	<div class="t">
+		<span class="close"></span>
+		<strong>旋转</strong>
+		<em><a href="" target="_blank">下载</a></em>
+	</div>
+	<div class="m">
+		<img src="" />
+	</div>
+</div>
+<div class="alerts videoReview">
+	<span class="close"></span>
+	<video class="video" width="800" height="450" controls preload autoplay>
+		
+	</video>   
+</div>
+<div class="alerts audioReview">
+	<span class="close"></span>
+	<audio class="audio" controls preload autoplay>
+		
+	</audio>
+</div>
+<div class="loading"><div>请求处理中，请稍后...</div></div>
+
+<div id="subjectId"></div>
+<div id="userId"></div>
+
+<script src="javascripts/library/require.js" data-main="javascripts/custom/digital"></script>
+</body>
+</html>

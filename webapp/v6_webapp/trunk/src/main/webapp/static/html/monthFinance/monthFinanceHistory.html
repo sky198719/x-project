@@ -1,0 +1,54 @@
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link" > <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">月进斗金投资记录</div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="monthFinanceHistory" class="page" directory="monthFinance">
+        <!-- Scrollable page content-->
+        <div class="page-content pull-to-refresh-content infinite-scroll" id="monthFinanceHistory">
+            <!-- 默认的下拉刷新层 -->
+            <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+                <div class="pull-to-refresh-arrow"></div>
+            </div>
+            <input type="hidden" id="currentPage" value="1"/>
+            <input type="hidden" id="totalPage" value="1"/>
+
+            <!-- tab -->
+            <div class="content-block">
+                <!-- tabs控制面板 -->
+                <div class="buttons-row theme-blue">
+                    <!-- 关联到第一个tab, 默认激活 -->
+                    <a href="#progressingTab" class="tab-link active button">锁定期</a>
+                    <!-- 关联到第二个tab -->
+                    <a href="#completedTab" class="tab-link button">已完成</a>
+                </div>
+                <input id="currentTab" type="hidden" value="progressingTab"/>
+            </div>
+            <!-- tabs start -->
+            <div class="tabs">
+            	<!--收益中-->
+                <div id="progressingTab" class="tab active">
+                	<div class="list-block media-list" >
+		                <ul id="progressingList" style="background:#EFEFF4"></ul>
+            		</div>
+                </div>
+                <!--已完成-->
+                <div id="completedTab" class="tab">
+                	<div class="list-block media-list" >
+		                <ul id="completedList" style="background:#EFEFF4"></ul>
+            		</div>
+                </div>
+            </div>
+            <!-- tabs over -->
+        </div>
+    </div>
+</div>

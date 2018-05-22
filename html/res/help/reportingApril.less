@@ -1,0 +1,63 @@
+@media screen and (max-width: 1366px) {
+  //当屏幕尺寸小于1366ppx时，应用下面的CSS样式/
+  .section {
+    img {
+      width: 70%;
+    }
+  }
+}
+.section {
+  text-align: center;
+  background: #141414;
+  .spec {
+    width: auto;
+  }
+}
+
+#fullpage{
+  width: 100%;
+  position: absolute;
+}
+.sectiontopbg {
+  background: url("img/reportingAprilbg1.png") no-repeat center;
+}
+.sectionbottombg {
+  background: url("img/reportingAprilbg2.png") no-repeat center;
+}
+
+#menu li {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background:url("img/default.png") no-repeat center;
+  opacity: 80;
+  margin-bottom: 15px;
+}
+
+#menu li.active {
+  background:url("img/active.png") no-repeat center;
+}
+
+#menu li:hover {
+  background: url("img/active.png") no-repeat center;
+}
+
+#menu li a,
+#menu li.active a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  text-decoration: none;
+  &:focus{outline:none;}
+}
+
+#menu {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  width: 15px;
+  height: 440px;
+  margin-top: -220px;
+  z-index: 70;
+}

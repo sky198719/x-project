@@ -1,0 +1,15 @@
+.xui-title[theme="001"]{
+  background:#fff linear-gradient(0deg, rgba(0, 0, 0, 0.15) .5px, transparent .5px);
+}
+.xui-title[theme="001"]:before{
+  content: "";
+  display: inline-block;
+  width: .5rem;
+  height: 1rem;
+  background: $bg-main;
+  vertical-align: middle;
+  top: -2px;
+  position: relative;
+  margin-right: 3px;
+  border-radius: 1px;
+}

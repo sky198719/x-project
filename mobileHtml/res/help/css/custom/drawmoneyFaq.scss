@@ -1,0 +1,27 @@
+#count,.dt_prompt{
+  display: none;
+}
+
+#count.show,
+.dt_prompt.show{
+  display: block;
+}
+body{
+ background: #fff;
+}
+#tip{
+  li{
+    //height: 5rem;
+    line-height: 2rem;
+    padding: 0 0.1rem;
+  }
+}
+p{
+  margin: 0.6rem 0;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}

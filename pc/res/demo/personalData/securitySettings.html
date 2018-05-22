@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>我的新新贷_安全设置</title>
+    <link rel="shortcut icon" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="Bookmark" href="//static.xinxindai.com/pc/1.0.2/build/css/i/favicon.ico">
+    <link rel="stylesheet" href="../../../pages/build/mods/user/personalData/securitySettings/_.css"/>
+</head>
+<body>
+<div id="J_wrapBody">
+    <!--头部 start-->
+    <div id="J_header" class="header"></div>
+    <!--头部 end-->
+
+    <div class="g-top">
+        <div class="g-top-con">
+            <div class="container-1200">
+                <a href="http://www.xinxindai.com/">首页</a> &gt; <a href="javascript:void(0);">我的新新贷</a> &gt; <a
+                    href="javascript:void(0);">个人资料</a> &gt; <a href="javascript:void(0);">安全设置</a>
+            </div>
+        </div>
+    </div>
+    <div class="info-contaner clearfix">
+        <div class="g-left">
+            <div class="menu">
+                <h2>我的新新贷</h2>
+                <ul>
+                    <li><a href="javascript:void(0);">资金记录</a></li>
+                    <li><a class="active" href="javascript:void(0);">个人资料</a>
+                        <div class="sub">
+                            <a href="personalInfo.html"><strong>我的资料</strong></a>
+                            <a href="bundled.html"><strong>银行设置</strong></a>
+                            <a href="securitySettings.html"><i></i><strong>安全设置</strong></a>
+                        </div>
+                    </li>
+                    <li><a href="javascript:void(0);">互动管理</a></li>
+                    <li><a href="javascript:void(0);">消息管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="g-right">
+            <div class="m-con-wrap">
+                <div class="m-con-hd user-title" id='J_tabs'>
+                    <li class='active'><a href="#">修改登录密码</a></li>
+                    <li><a href="#">修改支付密码</a></li>
+                    <li><a href="#">密保设置</a></li>
+                </div>
+                <div class="m-con-bd">
+                    <div class='j_tabContent'>
+                        <div class="filed-user"><span>当前登录密码</span><input type="text" placeholder=""></div>
+                        <div class="filed-user"><span>新的登录密码</span><input type="text" placeholder=""></div>
+                        <div class="filed-user"><span>确认登录密码</span><input type="text" placeholder=""></div>
+                        <div class="wrong_tip wt_pos">错误提示....</div>
+                        <div class="filed-user">
+                            <a class="btn">确认修改</a>
+                        </div>
+                        <div class='filed-user change-tip'>
+                            <p>密码修改说明：</p>
+                            <p>1、请定期修改登录密码,密码不要少于六位。</p>
+                            <p>2、初始的支付密码（支付密码）与您的帐户登录密码相同,更改后的支付密码不能与登录密码相同。</p>
+                            <p>3、设置密保问题后，即使忘记支付密码，亦可通过“重置支付密码”进行修改。</p>
+                        </div>
+                    </div>
+                    <div class='j_tabContent hide'>
+                        <div class="filed-user"><span class='mr'>选择修改方式</span> <select id="J_payPwdWays">
+                            <option value='1' selected>使用当前密码修改</option>
+                            <option value='2'>使用密保问题修改</option>
+                        </select></div>
+                        <!--使用当前密码修改-->
+                        <div class="updateByPwd">
+                            <div class="filed-user"><span>当前支付密码</span><input type="text" placeholder=""><a>忘记支付密码？</a>
+                            </div>
+                            <div class="filed-user"><span>新的支付密码</span><input type="text" placeholder=""></div>
+                            <div class="filed-user"><span>确认支付密码</span><input type="text" placeholder=""></div>
+                            <div class="filed-user clearfix h40"><span class="spec">手机验证码</span>
+                                <div class="enterPhone clearfix">
+                                    <input type="text" class="phoneno clearfix" value="" placeholder="请输入手机验证码"> <a
+                                        class="message clearfix">获取验证码</a>
+                                </div>
+                                <a class="voice">语音验证码</a>
+                            </div>
+                            <div class="wrong_tip wt_pos">错误提示....</div>
+                            <div class="filed-user">
+                                <a class="btn">确认修改</a>
+                            </div>
+                        </div>
+                        <!--使用密保问题修改-->
+                        <div class="updateBySecurity disnone">
+                            <div class="filed-user"><span>您的密保问题</span><input type="text" value="你爸爸的名字叫什么？"
+                                                                              class="meignTxt"></div>
+                            <div class="filed-user"><span>输入您的回答</span><input type="text" placeholder=""></div>
+                            <div class="filed-user"><span>新的支付密码</span><input type="text" placeholder=""></div>
+                            <div class="filed-user"><span>确认支付密码</span><input type="text" placeholder=""></div>
+                            <div class="wrong_tip wt_pos">错误提示....</div>
+                            <div class="filed-user">
+                                <a class="btn">确认修改</a>
+                            </div>
+                        </div>
+                        <div class='filed-user change-tip'>
+                            <p>密码修改说明：</p>
+                            <p>1、请定期修改登录密码,密码不要少于六位。</p>
+                            <p>2、初始的支付密码（支付密码）与您的帐户登录密码相同,更改后的支付密码不能与登录密码相同。</p>
+                            <p>3、设置密保问题后，即使忘记支付密码，亦可通过“重置支付密码”进行修改。</p>
+                        </div>
+                    </div>
+                    <div class='j_tabContent hide'>
+                        <div class="filed-user"><span>您的密保问题</span><select>
+                            <option value='1' selected>你爸爸的名字叫什么？</option>
+                        </select></div>
+                        <div class="filed-user"><span>输入您的回答</span><input type="text" placeholder=""></div>
+                        <div class="filed-user"><span>您的密保问题</span><select>
+                            <option value='1' selected>你妈妈的名字叫什么？</option>
+                        </select></div>
+                        <div class="filed-user"><span>输入您的回答</span><input type="text" placeholder=""></div>
+                        <div class="wrong_tip wt_pos">错误提示....</div>
+                        <div class="filed-user">
+                            <a class="btn" id="J_setSecurity">确认修改</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--提示框-->
+    <div class='tankuang1 hide'>
+        <div class='neibu1'>
+            <div class='dimension operate-tip'>
+                <i class='c_close'>×</i>
+                <h5>提示</h5>
+                <div class='tip-content'>
+                    <p>您还没有初始密保问题，我们将帮您跳转到初始密保问题页面！</p>
+                    <p>密保设置成功！</p>
+                    <a href="#" class='btn'>确认</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--尾部 start-->
+    <div id="J_footer" class="footer"></div>
+    <!--尾部 end-->
+</div>
+<!--[if lt IE 9]>
+<iframe id="ifr_cover" frameborder="0" class="hide" scrolling="no"></iframe>
+<div id="alertBoxWrap" class="hide"></div>
+<![endif]-->
+</body>
+<script src="../../../pages/build/mods/user/personalData/securitySettings/_.js"></script>
+</html>

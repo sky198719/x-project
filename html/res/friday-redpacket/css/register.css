@@ -1,0 +1,210 @@
+input,
+input:focus {
+  background: none;
+  outline: none;
+  border: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button {
+  border: none;
+  outline: none;
+}
+::-webkit-placeholder {
+  font-size: 14px;
+  color: #999;
+}
+::-moz-placeholder {
+  font-size: 14px;
+  color: #999;
+}
+::-o-placeholder {
+  font-size: 14px;
+  color: #999;
+}
+:-ms-placeholder {
+  font-size: 14px;
+  color: #999;
+}
+::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+.user-verigy .disfont {
+  font-size: 12px !important;
+}
+.register {
+  float: right;
+  position: relative;
+  z-index: 30;
+  margin-top: 126px;
+  margin-right: 6px;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  behavior: url("css/ie-css3.htc");
+}
+.register .register-title {
+  margin-bottom: 12px;
+  height: 37px;
+  background: url("img/register-title.png") center no-repeat;
+  background-size: contain;
+  -webkit-background-size: contain;
+  -o-background-size: contain;
+}
+.register .user-common {
+  height: 38px;
+  margin-bottom: 14px;
+}
+.register .user-common input {
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #f0f0f0;
+  text-indent: 6px;
+  font-size: 14px;
+  color: #999;
+}
+.register .user-num,
+.register .user-psw {
+  width: 302px;
+}
+.register .user-psw {
+  position: relative;
+}
+.register .user-psw .psw-cur {
+  position: absolute;
+  display: inline-block;
+  left: 6px;
+  top: 12px;
+  height: 14px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #999;
+}
+.register .J-num,
+.register .J-psw {
+  width: 302px;
+  height: 38px;
+  background: #f6f5f5;
+}
+.register .user-verigy {
+  margin-bottom: 14px;
+}
+.register .user-voice {
+  text-align: right;
+  margin-bottom: 18px;
+}
+.register .user-verigy .J-verify,
+.register .user-verigy .J-phoneyzm {
+  float: left;
+  width: 178px;
+  height: 38px;
+  background: #f6f5f5;
+}
+.register .user-verigy .change-verify,
+.register .user-verigy .get-phoneyzm {
+  float: right;
+  margin-left: 8px;
+  width: 116px;
+  height: 38px;
+  background: #f6f5f5;
+  color: #666666;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  behavior: url("css/ie-css3.htc");
+}
+.register .user-voice .J-voiceyzm {
+  font-size: 14px;
+  color: #fff;
+}
+.register .user-verigy .get-phoneyzm {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  line-height: 38px;
+}
+.register .user-agree {
+  margin-bottom: 16px;
+  position: relative;
+}
+.register .user-agree span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 14px;
+  font-size: 14px;
+  color: #ccc;
+  text-indent: 8px;
+}
+.register .user-agree span a {
+  font-size: 14px;
+  color: #ffcc66;
+  cursor: pointer;
+}
+.register .user-agree .check-style {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff;
+  position: relative;
+}
+.register .user-agree .check-style .user-check {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  margin-top: -8px;
+  left: 50%;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.register .user-agree .check-style .checked {
+  background: url("img/checked.png") center no-repeat;
+  background-size: 16px 16px;
+}
+.register .have-login {
+  text-align: right;
+  font-size: 14px;
+  color: #fff;
+}
+.register .have-login .logined {
+  text-decoration: underline;
+  color: #ffcc66;
+}
+.register .cur {
+  width: 302px;
+  height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: #fff;
+}
+.register .cur-special {
+  width: 268px;
+  color: #fff;
+}
+.register-btn {
+  width: 304px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  margin: 0 auto 14px;
+  background: url("img/register-btn.png") center no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}

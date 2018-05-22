@@ -1,0 +1,14 @@
+{{#each list}}
+	<li>
+		<p class="mg0 relative p_no{{level}}_team" data-teamId="{{id}}" data-voteType="{{level}}">
+			<span class="eurocup_circle_pos  eurocup_circle_{{id}}"></span> 
+			<span class="eurocup_circle_pos  eurocup_default_circle no{{level}}_team{{id}}"></span>
+		</p>
+	
+		<p class="mg0  font16 font-fff mt33" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{name}}</p>
+	
+		<p class="mg0 font12 font-fff ">
+			支持率<span class="font-fff000 ml3p">{{#js_compare "this.level === 1"}}{{championSupportRate}}{{else}}{{runnerSupportRate}}{{/js_compare}}%</span>
+		</p>
+	</li>
+{{/each}}

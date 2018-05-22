@@ -1,0 +1,7 @@
+//容器
+/*样式4*/
+.icon-bag4 { display : inline-block; width : 80px; height : 100px; border-radius : 10% 10% 18% 18%; position : relative; overflow : hidden; background : linear-gradient(87deg, rgba(0, 0, 0, 0) 10%, #ff2f3d 11%), linear-gradient(-87deg, rgba(0, 0, 0, 0) 10%, #ff2f3d 11%) 95% 0; background-size : 50% 200%; background-repeat : no-repeat; background-position-y : 100%; }
+.icon-bag4:before,
+.icon-bag4:after { content : " "; display : inline-block; position : absolute; }
+.icon-bag4:before { width : 95%; height : 25%; left : 3%; top : 22%; border-radius : 0 0 100% 100%; border-bottom : 3px solid #ffac58; box-shadow : 0 2px 3px rgba(0, 0, 0, .2); }
+.icon-bag4:after { content : attr(data-text); width : 30px; height : 30px; text-align : center; line-height : 30px; background : #ffdb70; color : #ff2f3d; border-radius : 50%; left : 50%; top : 32%; margin-left : -15px; font-size : 16px; }

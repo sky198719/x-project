@@ -1,0 +1,105 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar no-border">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">确认投资</div>
+        <div class="right sliding">
+            <!-- Right link contains only icon - additional "icon-only" class-->
+            <a href="#" class="link icon-only open-panel" data-panel="right">
+            <i class="icon icon-bars"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages navbar-through">
+    <!-- Page, data-page contains page name-->
+    <div data-page="monthFinanceTender" class="page monthFinanceTender" directory="monthFinance">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block">
+                <div class="content-block-inner" id="quicktender">
+                    <h4 id="itemName"></h4>
+                    <h5 class="font-grey mt10">您的个人剩余可投额度：<span class="font-red font24" id="availableLimitShow">0.00</span> 元</h5>
+                    <input type="hidden" id="monthFinanceId" value=""/>
+                    <input type="hidden" id="availableLimit" value=""/>
+                    <input type="hidden" id="tenderMinAmount" value=""/>
+                    <input type="hidden" id="tenderMaxAmount" value=""/>
+                    <input type="hidden" id="tenderTotalAmount" value=""/>
+                    <input type="hidden" id="tenderRemainderAmount" value=""/>
+                    <input type="hidden" id="tenderIncreaseRadix" value=""/>
+                    <input type="hidden" id="tenderApr" value=""/>
+                    <input type="hidden" id="tenderDays" value=""/>
+                </div>
+            </div>
+            
+            <div class="list-block accordion-list">
+                <ul>
+                    <li class="accordion-item">
+                        <a href="#" class="item-content item-link" id="topup_step">
+                            <div class="item-inner">
+                                <div class="item-title font-grey" style="font-size:15px">账户余额：<span class="font-blue" id="showUserAccount">0.00</span>元</div>
+                                <input id="userAccount" type="hidden" value="0"/>
+                                <div class="item-after" style="color:#007aff">充值</div>
+                            </div>
+                        </a>
+                        <div class="accordion-item-content"></div>
+                    </li>
+                    <li class="accordion-item">
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="text" id="tenderAmount" placeholder="请输入投标金额"  style="font-size:15px"/>
+                                </div>
+                                <div class="item-after"> 元</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item-content"></div>
+                    </li>
+                    <li class="accordion-item">
+                        <div class="item-content">
+                            <div class="item-inner" style="color:#999999;font-size:15px">
+                                <div class="item-title"> 历史收益：<span class="font-red" id="expectedRevenue">0.00</span>元</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item-content"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-block">
+                <ul>
+                	 <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-input item-inline" style="display: inline-block;margin-right: 10px;">
+                                    <label class="label-switch">
+                                        <input type="checkbox" checked="checked" id="agreement">
+                                        <div class="checkbox"></div>
+                                    </label>
+                                </div>
+                                <div style="display: inline-block;">
+                                    <a class="open-popup monthFinanceAgreementPopup" style="font-size: 0.7rem;color: black;">我已同意《<span style="color:#3f9bff;">月进斗金服务协议</span>》</a><a class="open-popup monthFinancedAmi" style="font-size: 0.7rem;color: black;">《<span style="color:#3f9bff;">自动配标委托书</span>》</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+	                            <div class="item-title"></div>
+                                <div class="item-after">实际支付：<span class="font-blue dmp_content_spa" id="realPayAmountShow"> 0.00 </span>&nbsp; 元</div>
+                                <input type="hidden" id="realPayAmount" value=""/>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mr10 ml10">
+                <a href="#" class="button button-51 active dmp-click" id="confirmTender" dmp_type="click" dmp_event="buy" dmp_target_type="1" dmp_target_id="2">确认投资</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,151 @@
+@import "css/index";
+
+/*运营报告*/
+.g-right {
+  .m-con-wrap {
+    .m-con-bd {
+      border-bottom: none;
+      .reports-type {
+        margin: 20px 0 35px 0;
+        li {
+          display: inline-block;
+          width: 86px;
+          height: 31px;
+          line-height: 31px;
+          text-align: center;
+          color: @col-57a;
+          border: 1px solid @col-57a;
+          margin-right: 40px;
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          border-radius: 6px;
+          &:hover {
+            color: @col-fff;
+            background: @col-57a;
+            cursor: pointer;
+          }
+          &.active {
+            color: @col-fff;
+            background: @col-57a;
+          }
+        }
+      }
+      .reports-info {
+        width: 762px;
+        margin: 0 auto;
+        text-align: center;
+        ul {
+          li {
+            display: inline-block;
+            float: left;
+            margin-bottom: 30px;
+            .fulls {
+              position: relative;
+              display: inline-block;
+              width: 210px;
+              height: 262px;
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 210px;
+                height: 220px;
+              }
+              p {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: inline-block;
+                width: 210px;
+                padding-left: 0;
+                text-align: center;
+                color: @col-666;
+                font-size: @font14px;
+              }
+              &:hover {
+                cursor: pointer;
+                p {
+                  color: @col-57a;
+                }
+              }
+
+            }
+            div.replacea {
+              position: relative;
+              display: inline-block;
+              width: 210px;
+              height: 262px;
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 210px;
+                height: 220px;
+              }
+              p {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: inline-block;
+                width: 210px;
+                padding-left: 0;
+                text-align: center;
+                color: @col-666;
+                font-size: @font14px;
+              }
+              .flip {
+                width: 210px;
+                height: 220px;
+                text-align: center;
+                position: relative;
+                img {
+
+                  &.front {
+                    width: 210px;
+                    z-index: 1;
+                    height: 220px;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    background-color: #000;
+                    color: #fff;
+                  }
+                  &.behind {
+                    width: 0;
+                    height: 220px;
+                    z-index: 0;
+                    position: absolute;
+                    left: 110px;
+                    top: 0;
+                    background-color: #ccc;
+                    color: #fff;
+                  }
+                }
+              }
+              &:hover {
+                cursor: pointer;
+                p {
+                  color: @col-57a;
+                }
+              }
+
+            }
+
+            &.mid {
+              margin: 0 60px;
+            }
+          }
+        }
+        .paging-info {
+          margin: 45px auto;
+          text-align: center;
+          .pagination {
+            .pag();
+          }
+        }
+      }
+    }
+  }
+}

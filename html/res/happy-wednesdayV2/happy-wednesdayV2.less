@@ -1,0 +1,102 @@
+.container{
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+  height:2518px;
+  background: url("img/bg.png")  center no-repeat;
+  .main{
+    width: 1200px;
+    height:2518px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    .immediate-btn{
+       width: 655px;
+       //margin: 924px auto 0;
+      margin-top: 924px;
+      float: right;
+      div{
+        width: 236px;
+        height: 275px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        img{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          &.front {
+            width: 236px;
+            z-index: 1;
+            height: 215px;
+          }
+          &.behind {
+            width: 0;
+            height: 215px;
+            z-index: 0;
+          }
+        }
+      }
+      .btn-left{
+        margin-left: 48px;
+      }
+      .btn-right{
+        float: right;
+        margin-right: 52px;
+      }
+      a{
+        display: inline-block;
+        width: 230px;
+        height: 50px;
+        cursor: pointer;
+        margin-top: 225px;
+      }
+      .on-btn{
+        background: url("img/btn1.png") center center/100% 100% no-repeat;
+      }
+      .overtime-btn{
+        background: url("img/btn2.png") center center/100% 100% no-repeat;
+      }
+      .left-btn{
+        float: left;
+        margin-left: 4px;
+      }
+      .right-btn{
+        float: right;
+        margin-right: 3px;
+      }
+    }
+    //.qt-code{
+    //  width: 487px;
+    //  height: 257px;
+    //  margin-top: 32px;
+    //  margin-left: 602px;
+    //  background: url("img/two-dimension.png") center center/100% 100% no-repeat;
+    //}
+    .product-list{
+      position: absolute;
+      width: 1173px;
+      height: 302px;
+      bottom:191px;
+      left:10px;
+      margin: 0 auto;
+      a{
+        cursor: pointer;
+        display: inline-block;
+        width: 49.5%;
+        height: 100%;
+      }
+      .bbgs-product{
+        float: left;
+      }
+      .qtds-product{
+        float: right;
+      }
+    }
+  }
+}
+.disnone{
+  display:none;
+}

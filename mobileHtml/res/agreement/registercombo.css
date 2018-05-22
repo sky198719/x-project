@@ -1,0 +1,102 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "MicroSoft YaHei";
+}
+.bodyhidden {
+  overflow: hidden !important;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+img {
+  vertical-align: bottom;
+  display: block;
+}
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+.container {
+  width: 94%;
+  margin: 0.7rem auto 1rem;
+  -webkit-box-shadow: 0 2px 8px -3px #000;
+  box-shadow: 0 2px 8px -3px #000;
+}
+.container h3 {
+  width: 100%;
+  text-align: center;
+  height: 2rem;
+  line-height: 2rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  background: -webkit-linear-gradient(left, #7bc8ff, #4483ff);
+  background: linear-gradient(to right, #7bc8ff, #4483ff);
+}
+.container .info {
+  width: 100%;
+  padding: 1rem;
+}
+.container .info p {
+  text-indent: 2em;
+  color: #808080;
+  font-weight: 200;
+  font-size: 1rem;
+}
+.container .info p b {
+  font-weight: 400;
+}
+.container .info h5 {
+  color: #808080;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.container .info h6 {
+  color: #808080;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
