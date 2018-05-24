@@ -1,0 +1,1 @@
+define(["base"],function(e){return{init:function(n){e.isPlaceholderSupport()||(n instanceof e||(n=e("input[component*='placeholder'],textarea[component*='placeholder']")),n.length)}}});
