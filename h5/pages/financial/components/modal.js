@@ -40,7 +40,7 @@ export default class extends Component {
                         <div className="alert-bg"></div>
                         <p>新手专享，更多优质产品等您临幸!</p>
                     </div>
-                    <div className="div-btn"><button className="xxd-xl-btn" onClick={ this.goApp }>立即前往新新贷APP</button></div>
+                    <div className="div-btn"><button className="xxd-xl-btn" onClick={ this.goApp }>立即前往_APP</button></div>
                 </div>
             </div>
         )

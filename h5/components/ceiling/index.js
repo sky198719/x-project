@@ -26,7 +26,7 @@ class ceiling extends Component {
                         <img src="/static/html/home/imgs/app-logo@3x.png" alt="app-logo" />
                     </div>
                     <div className="header-tit">
-                        <p className="app-name">新新贷金融</p>
+                        <p className="app-name">_金融</p>
                         <p className="app-slogan">以信相贷，用新服务</p>
                     </div>
                 </div>

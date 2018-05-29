@@ -71,7 +71,7 @@ require(['base', 'float', 'trackBase', 'store', 'header', 'footer', 'backTop', "
                          if(r.data.scheme!=-1){
                              location.href='/xplan/detail/'+r.data.scheme+'.html';
                          }else{
-                             float.alert({content:'来晚啦，新元宝已经抢完啦'});
+                             float.alert({content:'来晚啦，_已经抢完啦'});
                          }
                      }
                  }
@@ -84,7 +84,7 @@ require(['base', 'float', 'trackBase', 'store', 'header', 'footer', 'backTop', "
                          if(r.data.scheme!=-1){
                              location.href='/xplan/detail/'+r.data.scheme+'.html';
                          }else{
-                             float.alert({content:'来晚啦，新元宝已经抢完啦'});
+                             float.alert({content:'来晚啦，_已经抢完啦'});
                          }
                      }
                  }

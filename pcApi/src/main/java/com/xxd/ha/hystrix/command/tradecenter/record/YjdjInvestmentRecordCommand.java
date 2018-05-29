@@ -9,7 +9,7 @@ import com.xxd.ha.hystrix.support.FallbackWithCacheHystrixCommand;
 import com.xxd.ha.hystrix.vo.tradecenter.detail.InvestProductRecordVo;
 
 /**
- * 月进斗金投资记录
+ * _投资记录
  */
 public class YjdjInvestmentRecordCommand extends FallbackWithCacheHystrixCommand {
 

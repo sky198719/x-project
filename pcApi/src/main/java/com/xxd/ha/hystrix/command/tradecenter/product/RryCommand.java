@@ -12,7 +12,7 @@ import com.xxd.ha.hystrix.vo.tradecenter.product.RRYVo;
 import java.math.BigDecimal;
 
 /**
- * 日日盈
+ * _
  */
 public class RryCommand extends MultiLevelCacheHystrixCommand {
 

@@ -70,7 +70,7 @@ export default class extends Component {
                     <Header title="风险能力评估结果" url={this.state.url } />
                     <div className="risk-container riskresult-container position-a ">
                         <div className="result-score">
-                            <p>您的新新贷出借者风险承受能力与偏好 测试问卷结果</p>
+                            <p>您的_出借者风险承受能力与偏好 测试问卷结果</p>
                             <span>{ result.totalScore }分</span>
                         </div>
                         <div className="result-type">

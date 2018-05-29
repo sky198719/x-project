@@ -110,7 +110,7 @@ require(['base', 'float', 'trackBase', 'store', 'header', 'footer', 'backTop', "
         return obj.toFixed(2);
     }
 
-    // 新元宝抵扣红包
+    // _抵扣红包
     function xybChange(obj){
         var amount = 0;
         if(obj >= 100 && obj < 500){

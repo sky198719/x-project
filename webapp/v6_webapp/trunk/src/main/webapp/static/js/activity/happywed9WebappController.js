@@ -49,15 +49,15 @@ define(['js/utils/date'], function () {
 		                        var pName = "";
 		                   	 	var type =data.schemeInfo.TYPE;
 			       	           	 if(type == 1){
-			       	           		  pName = "新元宝3个月 - "+ data.schemeInfo.PNAME;
+			       	           		  pName = "_3个月 - "+ data.schemeInfo.PNAME;
 			       	           	 }else if(type == 2){
-			       	           		 pName = "新元宝6个月 - "+ data.schemeInfo.PNAME;
+			       	           		 pName = "_6个月 - "+ data.schemeInfo.PNAME;
 			       	           	 }else if(type == 3){
-			       	           		 pName = "新元宝12个月 - "+ data.schemeInfo.PNAME;
+			       	           		 pName = "_12个月 - "+ data.schemeInfo.PNAME;
 			       	           	 }else if(type == 4){
-			       		    		 pName = "新元宝1个月 - "+ data.schemeInfo.PNAME;
+			       		    		 pName = "_1个月 - "+ data.schemeInfo.PNAME;
 			       		    	 }
-			       	           	 var category = "新元宝/"+apr+"%/"+data.schemeInfo.CLOSETERM+"个月";
+			       	           	 var category = "_/"+apr+"%/"+data.schemeInfo.CLOSETERM+"个月";
 			       	           	 product_click({id:planId,name:pName,category:category,list:"星期三活动列表"});
                     	 }catch(e){}
                         GS.loadPage('plan/planDetailsV2_act.html?previousPage=happywed9Webapp&planId=' + planId);

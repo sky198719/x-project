@@ -46,7 +46,7 @@ require(['base', 'requirejs', 'trackBase', 'com'], function ($, requirejs, track
                             $('.dt_a_id_card_desc').text(oRequestUser.idCardDesc);
                             // 证件号码	tradeRequestUserInfo.idcardno
                             $('.dt_a_id_card_no').text(oRequestUser.idCardNo);
-                            // 新新贷用户名	tradeRequestUserInfo.userName
+                            // _用户名	tradeRequestUserInfo.userName
                             $('.dt_a_user_name').text(oRequestUser.userName);
                         }
 
@@ -57,7 +57,7 @@ require(['base', 'requirejs', 'trackBase', 'com'], function ($, requirejs, track
                             $('.dt_b_id_card_desc').text(oPackUser.idCardDesc);
                             // 证件号码	tradePackUserInfo.idcardno
                             $('.dt_b_id_card_no').text(oPackUser.idCardNo);
-                            // 新新贷用户名	tradePackUserInfo.userName
+                            // _用户名	tradePackUserInfo.userName
                             $('.dt_b_user_name').text(oPackUser.userName);
                         }
 

@@ -2,7 +2,7 @@
  * Created by chaihuangqi on 2015/8/14.
  */
 /**
- * 日日盈转入成功页面
+ * _转入成功页面
  */
 define(['js/utils/date','js/utils/dayController'], function (DateHandle,dayController) {
     var tenderAmount = 0;

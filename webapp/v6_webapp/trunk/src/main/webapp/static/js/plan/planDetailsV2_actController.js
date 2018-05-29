@@ -177,16 +177,16 @@ define(['chart', 'chartDoughnut','js/utils/date','js/plan/planDetailsV2View','js
 	                		//产品详情
 	                		var xplanType = resultData.type;
 	                		if(xplanType == 1){
-	                			pname = "新元宝3个月";
+	                			pname = "_3个月";
 	                		}else if(xplanType == 2){
-	                			pname = "新元宝6个月";
+	                			pname = "_6个月";
 	                		}else if(xplanType == 3){
-	                			pname = "新元宝12个月";
+	                			pname = "_12个月";
 	                		}else if(xplanType == 4){
-	                			pname = "新元宝1个月 ";
+	                			pname = "_1个月 ";
 	       		    	 	}
 	                		 pname = pname+"-"+resultData.pname;
-	                		 category = "新元宝/"+resultData.minApr+"%/"+resultData.closeterm+"个月";
+	                		 category = "_/"+resultData.minApr+"%/"+resultData.closeterm+"个月";
 	                		try{product_detail({id:planId,name:pname,category:category});}catch(e){}
 	                		
 
@@ -241,7 +241,7 @@ define(['chart', 'chartDoughnut','js/utils/date','js/plan/planDetailsV2View','js
 	                		xxdApp.addNotification({
 			                    title: '温馨提示',
 			                    hold:3000,
-			                    message: '获取新元宝产品信息失败，请稍后重试...'
+			                    message: '获取_产品信息失败，请稍后重试...'
 			                });
 	                	}
 	                    if(selectedTab == null || selectedTab == ""){
@@ -257,7 +257,7 @@ define(['chart', 'chartDoughnut','js/utils/date','js/plan/planDetailsV2View','js
                 		xxdApp.addNotification({
                             title: '抱歉',
                             hold: 3000,
-                            message: '获取新元宝产品信息失败，请稍后重试...'
+                            message: '获取_产品信息失败，请稍后重试...'
                         });
         			}finally{
 	                    // 加载完毕需要重置
@@ -265,13 +265,13 @@ define(['chart', 'chartDoughnut','js/utils/date','js/plan/planDetailsV2View','js
 					}   
                 },
                 error: function(xhr, type){
-                	console.log("获取新元宝产品加入记录失败,ajax error...");
+                	console.log("获取_产品加入记录失败,ajax error...");
 	                // 加载完毕需要重置
 	                xxdApp.pullToRefreshDone();
                     xxdApp.addNotification({
                         title: '抱歉',
                         hold: 3000,
-                        message: '获取新元宝产品信息失败，请稍后重试...'
+                        message: '获取_产品信息失败，请稍后重试...'
                     });
                 }
             });
@@ -337,11 +337,11 @@ define(['chart', 'chartDoughnut','js/utils/date','js/plan/planDetailsV2View','js
         joinHistory:function(currentPage,pageSize,type){
         	//产品ID是否为空
         	if (planId == null || planId == "") {
-        		console.log("新元宝产品ID为空");
+        		console.log("_产品ID为空");
         		xxdApp.addNotification({
                     title: '温馨提示',
                     hold:3000,
-                    message: '获取新元宝产品加入记录失败，请稍后重试...'
+                    message: '获取_产品加入记录失败，请稍后重试...'
                 });
                 return;
         	}
@@ -393,12 +393,12 @@ define(['chart', 'chartDoughnut','js/utils/date','js/plan/planDetailsV2View','js
 				    		}
 	                		planDetailsV2View.showJoinHistory({"dataList":data,"type":type});
 	                	}else{
-	                		console.log("获取新元宝产品加入记录失败");
+	                		console.log("获取_产品加入记录失败");
 	                		$$(".planDetailsV2 #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
 	                		xxdApp.addNotification({
 			                    title: '温馨提示',
 			                    hold:3000,
-			                    message: '获取新元宝产品加入记录失败，请稍后重试...'
+			                    message: '获取_产品加入记录失败，请稍后重试...'
 			                });
 	                	}
 	                }catch (e) {
@@ -406,17 +406,17 @@ define(['chart', 'chartDoughnut','js/utils/date','js/plan/planDetailsV2View','js
                 		xxdApp.addNotification({
                             title: '抱歉',
                             hold: 3000,
-                            message: '获取新元宝产品加入记录失败，请稍后重试...'
+                            message: '获取_产品加入记录失败，请稍后重试...'
                         });
         			}
                 },
                 error: function (result){
-                	console.log("获取新元宝产品加入记录失败,ajax error...");
+                	console.log("获取_产品加入记录失败,ajax error...");
                 	$$(".planDetailsV2 #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
                 	xxdApp.addNotification({
 	                    title: '温馨提示',
 	                    hold:3000,
-	                    message: '获取新元宝产品加入记录失败，请稍后重试...'
+	                    message: '获取_产品加入记录失败，请稍后重试...'
 	                });
                 }
             });

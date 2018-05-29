@@ -16,7 +16,7 @@
 </div>
 <div style="margin-top:20px; width:100%; text-align:center;">
     <div style="display: none;">
-        <a href="${path}/#!/static/html/fund/fundUnInvested.html?path=fund" style="width:40%; text-align:center; padding:10px 0; background:#fbad36; color:#fff; font-size:18px; border-radius:6px; text-decoration:none; display:inline-block; margin:0 10px;">投资日日盈</a>
+        <a href="${path}/#!/static/html/fund/fundUnInvested.html?path=fund" style="width:40%; text-align:center; padding:10px 0; background:#fbad36; color:#fff; font-size:18px; border-radius:6px; text-decoration:none; display:inline-block; margin:0 10px;">投资_</a>
     </div>
     <div style="margin-top: 20px;">
         <a href="${path}/#!/static/html/borrow/borrowListV2.html" style="width:40%; text-align:center; padding:10px 0; background:#2096e9; color:#fff; font-size:18px; border-radius:6px; text-decoration:none; display:inline-block; margin:0 10px;">投资散标</a>

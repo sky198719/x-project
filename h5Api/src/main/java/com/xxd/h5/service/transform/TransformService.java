@@ -120,7 +120,7 @@ public class TransformService extends H5BaseService {
                 data.setIntroduction(Constants.PRODUCT_YJDJ_INTRODUCTION);
                 return data;
             case Constants.PRODUCT_XYB_TYPE:
-                data.setName("新元宝");
+                data.setName("_");
                 data.setProductType(ProductTypeEnum.PRODUCT_XYB.getType());
                 data.setTipAction(Constants.PRODUCT_XYB_TIPACTION);
                 data.setIntroduction(Constants.PRODUCT_XYB_INTRODUCTION);

@@ -2,7 +2,7 @@
  * Created by chaihuangqi on 2015/8/14.
  */
 /**
- * 日日盈转入确认投资页面
+ * _转入确认投资页面
  */
 define(['js/utils/date','js/utils/xxd_dmp'], function (DateHandle,xxd_dmp) {
 	  var bid = "";
@@ -64,13 +64,13 @@ define(['js/utils/date','js/utils/xxd_dmp'], function (DateHandle,xxd_dmp) {
                         $('#v_mostAmount').val(data.mostAmount);
                         
                          bid = data.fundApr.fcode;
-                         categorys="日日盈/"+data.fundApr.apr+"%/1天";
+                         categorys="_/"+data.fundApr.apr+"%/1天";
                     }
                 }
             });
         },
 
-        /** 日日盈协议 */
+        /** _协议 */
         ddeAgreement: function () {
             req.callGet({
                 url: GC.getHtmlPath() + 'fund/fundAgreement.html?' + GC.getVersion(),
@@ -105,7 +105,7 @@ define(['js/utils/date','js/utils/xxd_dmp'], function (DateHandle,xxd_dmp) {
             try {
                 //XXD_TRACK._trackEvent({category: "webpp_fund_in", action: "popup_affirm_tochange", label: "确认转入", value: $('#trade_num').val(), custval: "" });
               //进入结账		
-                CheckOut({id:bid,name:"日日盈：日日盈",category:categorys});
+                CheckOut({id:bid,name:"_：_",category:categorys});
             } catch (e) {
             }
             var tradeNum = $('#trade_num').val();
@@ -135,7 +135,7 @@ define(['js/utils/date','js/utils/xxd_dmp'], function (DateHandle,xxd_dmp) {
                 return false;
             }
             if (!$$("#dde_agreementCheck").is(':checked')) {
-                xxdApp.alert("请阅读并同意《日日盈协议书》！", '提示');
+                xxdApp.alert("请阅读并同意《_协议书》！", '提示');
                 return false;
             }
 
@@ -146,7 +146,7 @@ define(['js/utils/date','js/utils/xxd_dmp'], function (DateHandle,xxd_dmp) {
                 return;
             }
 
-            xxdApp.modalPassword('确认从您的账户扣除' + appFunc.fmoney(tradeNum, 2) + '元转入日日盈账户，请输入支付密码', '支付确认', function (password) {
+            xxdApp.modalPassword('确认从您的账户扣除' + appFunc.fmoney(tradeNum, 2) + '元转入_账户，请输入支付密码', '支付确认', function (password) {
                 if (password == null || password == '') {
                     xxdApp.alert('请输入支付密码！');
                     return;
@@ -181,7 +181,7 @@ define(['js/utils/date','js/utils/xxd_dmp'], function (DateHandle,xxd_dmp) {
                                     xxd_dmp.clickDmpEvent(xxd_dmp.dmp_data_obj("click","buy_success",$("#confirmButton").attr("dev_id"),$("#confirmButton").attr("target_id"),"","",$(".dmp_content_input").val(),$("#confirmButton").attr("dmp_redBag"),xxd_utm_source));
                                 }
                             	var newRedAmount = "0元红包";
-                            	transaction({id:bid,name:"日日盈：日日盈",category:categorys,price:tradeNum,tradeId:tradeId,revenue:tradeNum,coupon:newRedAmount});
+                            	transaction({id:bid,name:"_：_",category:categorys,price:tradeNum,tradeId:tradeId,revenue:tradeNum,coupon:newRedAmount});
                             	//growingIO布码
                               var GAUserId = $$("body").attr("data-userId");
                             	growingIOInits({userId:GAUserId});

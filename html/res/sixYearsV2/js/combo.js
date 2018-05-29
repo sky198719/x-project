@@ -18,7 +18,7 @@ require(['base', 'float', 'allRoll', 'trackBase', 'store', 'header', 'footer', '
 
 
 
-    //新元宝状体
+    //_状体
     var xybNewId;
     var xybNewLeft;
 
@@ -238,7 +238,7 @@ require(['base', 'float', 'allRoll', 'trackBase', 'store', 'header', 'footer', '
         $('.rightBox').fadeOut(0);
     }
 
-    //新元宝
+    //_
     var xybLeft = 0;
     function xybCheck(term){
         timer = new Date();

@@ -26,7 +26,7 @@ define(['js/utils/download'],function (download) {
                 xxdApp.alert("系统异常，请稍后重试", '抱歉');
                 return;
             }
-            //try{XXD_TRACK._trackEvent({category:"webapp_1111day",action:"1111day_buy_now",label:"立即抢购",value:closeTerm,custval:closeTerm+"个月新元宝"});}catch(e){}
+            //try{XXD_TRACK._trackEvent({category:"webapp_1111day",action:"1111day_buy_now",label:"立即抢购",value:closeTerm,custval:closeTerm+"个月_"});}catch(e){}
             req.callJSON({
                 url: "xplan/getLatestSchemeId.do",
                 data: {

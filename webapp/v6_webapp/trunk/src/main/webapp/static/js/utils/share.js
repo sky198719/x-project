@@ -7,7 +7,7 @@ define(function () {
         initSina:function(){
             sinaParam = {
                 appkey:'3921074379',
-                source:'新新贷',
+                source:'_',
                 content:'utf-8'
             };
         },

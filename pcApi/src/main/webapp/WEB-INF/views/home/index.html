@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" th:href="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/css/i/favicon.ico'}">
     <link rel="Bookmark" th:href="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/css/i/favicon.ico'}">
-    <title>【新新贷官网】专业透明的P2P网络借贷平台，P2P网贷，网上贷款借款、投融资信息中介平台</title>
-    <meta name="keywords" content="新新贷，P2P网贷，P2P理财，投资理财，网上理财，新元宝，月月派，新手专享，投融资，贷款，企业贷款，无抵押小额贷款，借款"/>
+    <title>【_官网】专业透明的P2P网络借贷平台，P2P网贷，网上贷款借款、投融资信息中介平台</title>
+    <meta name="keywords" content="_，P2P网贷，P2P理财，投资理财，网上理财，_，_，新手专享，投融资，贷款，企业贷款，无抵押小额贷款，借款"/>
     <meta name="description"
-          content="新新贷是中国专业的互联网金融P2P网络借贷信息中介平台，为出借人和借款人提供省心的互联网金融信息服务。资金银行存管、严格的风控体系、信息披露透明等多重安全保障措施。"/>
+          content="_是中国专业的互联网金融P2P网络借贷信息中介平台，为出借人和借款人提供省心的互联网金融信息服务。资金银行存管、严格的风控体系、信息披露透明等多重安全保障措施。"/>
     <link th:href="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/mods/home/_.css'}" rel="stylesheet">
 </head>
 <body>
@@ -35,7 +35,7 @@
                 <div th:if="${globalData.isLogin == false}" class="focus-login">已有账号？<a
                         href="/user/ilogin.html">立即登录</a></div>
                 <div th:if="${globalData.isLogin == true}" class="focus-register focus-my-xxd"><a
-                        href="/usercenter/accountInfo.html" class="ga-promo"><i class="my-xxd"></i>我的新新贷</a></div>
+                        href="/usercenter/accountInfo.html" class="ga-promo"><i class="my-xxd"></i>我的_</a></div>
             </div>
             <div class="focus-bg"></div>
         </div>
@@ -58,7 +58,7 @@
                         <a href="/html/financing/" target="_blank"><i class="bg2"></i></a>
                         <p style="padding-right: 30px">
                             <a class="title" href="/html/financing/" target="_blank">国资系,新实力</a>
-                            <a class="desc" href="/html/financing/" target="_blank">央企中核汇能战略入股新新贷国有大企业集团实力支撑</a>
+                            <a class="desc" href="/html/financing/" target="_blank">央企中核汇能战略入股_国有大企业集团实力支撑</a>
                         </p>
                     </div>
                 </li>
@@ -92,7 +92,7 @@
                     </div>
                     <div class='dimension-con'>
                         <dl class="dimension-name clearfix">
-                            <dt>新元宝（新手专享）</dt>
+                            <dt>_（新手专享）</dt>
                             <dd>限参与一次</dd>
                             <span>已累计加入：[[${globalData.thirtyTender.data.accumulatedInvestors}]]</span>
                         </dl>
@@ -150,7 +150,7 @@
                     </div>
                     <div class='dimension-con'>
                         <dl class="dimension-name dimension-name-gold clearfix">
-                            <dt>月进斗金</dt>
+                            <dt>_</dt>
                             <dd>每日限量|先到先得</dd>
                             <div class="tip tip-gold j_countdown" th:data-activite-time="${globalData.YJDJ.data.lefTime}"
                              th:switch="${globalData.YJDJ.data.status.code}">
@@ -173,10 +173,10 @@
                                    th:case="'WAIT_TO_SELL'">[[${globalData.YJDJ.data.status.message}]]</a>
                                 <a href="/detail/monthgold.html" target="_blank" class="btn-active ga-click xa-click"
                                    th:case="'SELLING'" ga-commnd="send,ec:addProduct,ec:setAction"
-                                   th:ga-ec-addProduct="'{\'id\':\'' + ${globalData.YJDJ.data.id} + '\',\'name\':\'月进斗金\',\'category\':\'月进斗金/' + ${globalData.YJDJ.data.plannedAnnualRate}+'%' + '/' + ${globalData.YJDJ.data.leastPeriod}+${globalData.YJDJ.data.leastPeriodUnit} + '\'}' "
+                                   th:ga-ec-addProduct="'{\'id\':\'' + ${globalData.YJDJ.data.id} + '\',\'name\':\'_\',\'category\':\'_/' + ${globalData.YJDJ.data.plannedAnnualRate}+'%' + '/' + ${globalData.YJDJ.data.leastPeriod}+${globalData.YJDJ.data.leastPeriodUnit} + '\'}' "
                                    ga-ec-setAction='{"list":"首页大显身手"}'
                                    ga-ec-setAction-command="click" ga-hitType="event" ga-category="增强电商" ga-action="产品点击"
-                                   ga-label="月进斗金" xa-category="pc_monthgold_in" xa-action="index_buy_once"
+                                   ga-label="_" xa-category="pc_monthgold_in" xa-action="index_buy_once"
                                    xa-label="首页立即加入">立即加入</a>
                                 <a target="_blank" class="btn-active disable"
                                    th:case="'SOLD_OUT'">本场已结束</a>
@@ -191,7 +191,7 @@
                     </div>
                     <div class="dimension-block">
                         <div class="dimension-info clearfix">
-                            <h2>新元宝</h2>
+                            <h2>_</h2>
                             <ul>
                                 <li>募集成功后次日起息</li>
                             </ul>
@@ -216,10 +216,10 @@
                                 <a th:href="'/xplan/detail/' + ${item.id} + '.html'" target="_blank"
                                    class="btn-active ga-click xa-click" th:case="'SELLING'"
                                    ga-commnd="send,ec:addProduct,ec:setAction"
-                                   th:ga-ec-addProduct="'{\'id\':\'' + ${item.id} + '\',\'name\':\'新元宝\',\'category\':\'新元宝/' + ${item.plannedAnnualRateTo} +'%' + '/' + ${item.frozenPeriod} + '个月\'}' "
+                                   th:ga-ec-addProduct="'{\'id\':\'' + ${item.id} + '\',\'name\':\'_\',\'category\':\'_/' + ${item.plannedAnnualRateTo} +'%' + '/' + ${item.frozenPeriod} + '个月\'}' "
                                    ga-ec-setAction='{"list":"首页生财有道"}'
                                    ga-ec-setAction-command="click" ga-hitType="event" ga-category="增强电商"
-                                   ga-action="产品点击" ga-label="新元宝" xa-category="pc_xplan_in" xa-action="index_buy_once"
+                                   ga-action="产品点击" ga-label="_" xa-category="pc_xplan_in" xa-action="index_buy_once"
                                    xa-label="立即加入">立即加入</a>
                                 <a th:href="'/xplan/detail/' + ${item.id} + '.html'" target="_blank"
                                    class="btn-active disable" th:case="'SOLD_OUT'">[[${item.status.message}]]</a>
@@ -230,7 +230,7 @@
                     </div>
                     <div class="dimension-block overauto">
                         <div class="dimension-info clearfix">
-                            <h2>月月派<i class="logo"></i>
+                            <h2>_<i class="logo"></i>
                             </h2>
                             <div class="tag-hot" th:if="${!#strings.isEmpty(globalData.YYP.data.remark)}">
                                 <p><span>[[${globalData.YYP.data.remark}]]</span></p>
@@ -251,7 +251,7 @@
                             <!--href="/promotion/yyp.html"-->
                         </div>
                         <div class="download-QRcode" id="download-qr-code">
-                            <img width="128" alt="新新贷app下载二维码" th:src="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/img/qr-code-phone@2x.png'}">
+                            <img width="128" alt="_app下载二维码" th:src="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/img/qr-code-phone@2x.png'}">
                             <p>手机APP下载</p>
                         </div>
                     </div>
@@ -409,7 +409,7 @@
                 <div class="qr-code">
                     <table>
                         <tr class="tr1">
-                            <td colspan="2">扫一扫下载/关注新新贷</td>
+                            <td colspan="2">扫一扫下载/关注_</td>
                         </tr>
                         <tr class="tr2">
                             <td>

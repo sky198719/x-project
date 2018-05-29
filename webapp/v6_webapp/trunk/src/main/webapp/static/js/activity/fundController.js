@@ -1,7 +1,7 @@
 define(function () {
    var fundCtrl = {
        init: function() {
-           $$("title").html("日日盈重磅上线");
+           $$("title").html("_重磅上线");
            fundCtrl.loadData();
            fundCtrl.getFundInfo();
            fundCtrl.getFundLimit();
@@ -114,11 +114,11 @@ define(function () {
            var purchaseSwitch = $$('#un_v_purchase_switch').val();
            if(isBalance=="1" || isLastBalance == "1") {
                fundCtrl.enablePurchase("false");
-               $$("#notice_join").html("系统正在结算收益，暂不能加入日日盈");
+               $$("#notice_join").html("系统正在结算收益，暂不能加入_");
            }else{
                if(purchaseSwitch=="1") {
                    fundCtrl.enablePurchase("false");
-                   $$("#notice_join").html("因系统维护，暂不能加入日日盈");
+                   $$("#notice_join").html("因系统维护，暂不能加入_");
                } else {
                    fundCtrl.enablePurchase("true");
                }

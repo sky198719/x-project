@@ -77,13 +77,13 @@ define(['base','tip',"dialog"],function($ ,tip ,dialog) {
                     var contentArray = [];
                     if(!isPurchased){
                         contentArray.push("<ul class='invest-dropdown'>");
-                        contentArray.push("<li class='hot'><a href='/detail/thirtytender.html'>新元宝（新手专享）</a><i></i></li>");
+                        contentArray.push("<li class='hot'><a href='/detail/thirtytender.html'>_（新手专享）</a><i></i></li>");
                     }else{
                         contentArray.push("<ul class='invest-dropdown'>");
                     }
-                    contentArray.push("<li><a href='/detail/monthgold.html'>月进斗金</a></li>");
-                    contentArray.push("<li><a href='/xplan/search/list.html'>新元宝</a></li>");
-                    // contentArray.push("<li><a href='/promotion/yyp.html'>月月派</a></li>");
+                    contentArray.push("<li><a href='/detail/monthgold.html'>_</a></li>");
+                    contentArray.push("<li><a href='/xplan/search/list.html'>_</a></li>");
+                    // contentArray.push("<li><a href='/promotion/yyp.html'>_</a></li>");
                     contentArray.push("<li><a href='/borrow/search/list.html'>散标直投</a></li>");
                     contentArray.push("<li><a href='/detail/consumptionList.html'>新宜贷</a></li>");
                     contentArray.push("<li><a href='/traderequest/tradeRequestMoreSearch.html'>债权转让</a></li></ul>");
@@ -125,7 +125,7 @@ define(['base','tip',"dialog"],function($ ,tip ,dialog) {
                 self:this,
                 formatCallback:function (data){
                     var tpl = "<ul class='user-dropdown'>" +
-                        "<li><a href='/usercenter/accountInfo.html'>我的新新贷</a></li>" +
+                        "<li><a href='/usercenter/accountInfo.html'>我的_</a></li>" +
                         /*"<li><a href='ownerOrder/ownerOrderList/1.html'>我的商城</a></li>" +*/
                         "<li><a href='/usercenter/recharge.html'>账户充值</a></li>" +
                         "<li><a href='/account/message.html'>站内信</a></li></li>" +

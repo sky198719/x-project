@@ -6,9 +6,9 @@ package com.xxd.h5.common.enums;
 public enum ProductTypeEnum {
 
     /**
-     * 日日盈.
+     * _.
      */
-    PRODUCT_RRY(1, "日日盈"),
+    PRODUCT_RRY(1, "_"),
 
     /**
      * 步步高升.
@@ -20,19 +20,19 @@ public enum ProductTypeEnum {
      */
     PRODUCT_QTDS(3, "七天大胜"),
     /**
-     * 月进斗金.
+     * _.
      */
-    PRODUCT_YJDJ(4, "月进斗金"),
+    PRODUCT_YJDJ(4, "_"),
 
     /**
-     * 新元宝.
+     * _.
      */
-    PRODUCT_XYB(5, "新元宝"),
+    PRODUCT_XYB(5, "_"),
 
     /**
-     * 月月派.
+     * _.
      */
-    PRODUCT_YYP(6, "月月派"),
+    PRODUCT_YYP(6, "_"),
 
     /**
      * 散标.

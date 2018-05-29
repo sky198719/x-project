@@ -201,7 +201,7 @@ define(['js/account/hongbaoView', 'js/account/hongbaoModel','js/utils/date'], fu
                                 'faceValue': b.faceValue,
                                 'quota': b.quota,
                                 'code':b.redCode,
-                                'usrDesc':'适用于步步高升，新元宝，月月派及散标（票据贷除外）',
+                                'usrDesc':'适用于步步高升，_，_及散标（票据贷除外）',
                                 'usr':'PC、WAP、APP可用',
                                 'status':status == 1 ? true : false,
                                 'bengDate':DateHandle.formatDate('yyyy-MM-dd',new Date(Date.parse(b.addTime.replace(/-/g,"/")))),
@@ -227,15 +227,15 @@ define(['js/account/hongbaoView', 'js/account/hongbaoModel','js/utils/date'], fu
                                 for(var j = 0 ;j < b.productScope.length;j++) {
                                     var bb = b.productScope[j];
                                     if(bb.productType == 5) {
-                                        usrDesc += '新元宝' + bb.termsList.join("/") + '个月';
+                                        usrDesc += '_' + bb.termsList.join("/") + '个月';
                                     } else if(bb.productType == 2) {
                                         usrDesc += "步步高升";
                                     } else if(bb.productType == 3) {
                                         usrDesc += "七天大胜";
                                     } else if(bb.productType == 4) {
-                                        usrDesc += "月进斗金";
+                                        usrDesc += "_";
                                     } else if(bb.productType == 6) {
-                                        usrDesc += "月月派" + bb.termsList.join("/") + '个月';
+                                        usrDesc += "_" + bb.termsList.join("/") + '个月';
                                     } else if(bb.productType  == 7) {
                                         usrDesc += "散标";
                                     } else if(bb.productType == 8) {

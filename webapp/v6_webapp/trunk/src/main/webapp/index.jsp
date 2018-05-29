@@ -8,9 +8,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta property="wb:webmaster" content="5ffead0c7bf3e589"/>
-    <title>【新新贷官网-移动版】中国领先的P2P网贷,个人投资理财贷款,中小微企业投融资服务平台</title>
+    <title>【_官网-移动版】中国领先的P2P网贷,个人投资理财贷款,中小微企业投融资服务平台</title>
     <meta name="keywords" content="P2P 网贷,P2P 理财,投融资,P2P 贷款,无抵押小额贷款" />
-    <meta name="description" content="新新贷是中国领先的P2P投资理财及借贷款平台。严格的风控体系及银行托管质保服务专款制度保障您资金安全。新手标7天期13%、活期7%+1%，秒杀标月进斗金、省心理财新元宝1个月起等优质理财产品；新商贷，新车贷，新房贷等专业贷款产品，满足您投资及贷款的不同需求。5秒注册即可获赠新手红包108元。P2P理财、P2P贷款、小额投资、无抵押贷款信用贷款，就上新新贷！" />
+    <meta name="description" content="_是中国领先的P2P投资理财及借贷款平台。严格的风控体系及银行托管质保服务专款制度保障您资金安全。新手标7天期13%、活期7%+1%，秒杀标_、省心理财_1个月起等优质理财产品；新商贷，新车贷，新房贷等专业贷款产品，满足您投资及贷款的不同需求。5秒注册即可获赠新手红包108元。P2P理财、P2P贷款、小额投资、无抵押贷款信用贷款，就上_！" />
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="static/css/framework7/framework7.min.css?v=${sv}">
     <link rel="stylesheet" href="static/css/framework7/framework7.upscroller.css?v=${sv}">

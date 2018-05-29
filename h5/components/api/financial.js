@@ -196,7 +196,7 @@ const getLoanInfo = async (context) => {
 }
 
 
-//  获取每月份的新元宝的利率
+//  获取每月份的_的利率
 const getEachNew = async (context) => {
     const res = await cFetch(`${urlPath}/apih5/api/finances/max-apr-xyb`, {
         data: {

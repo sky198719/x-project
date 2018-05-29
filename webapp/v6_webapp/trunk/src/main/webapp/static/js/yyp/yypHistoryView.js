@@ -60,7 +60,7 @@ define(['js/utils/date','js/plan/planUtils'], function (DateHandle,PlanUtils) {
                         var lockDate = DateHandle.addDay(endDate,-1);
 
                         output+= ' data-id="' + yyp.productId + '" data-joinid="'+yyp.joinId+'">'+
-                            '<span class="text-overflow" style="font-size:1rem;max-width: 68%;">'+ '月月派' + yyp.period + '个月 - ' + yyp.periodName+'期' +'</span>'+
+                            '<span class="text-overflow" style="font-size:1rem;max-width: 68%;">'+ '_' + yyp.period + '个月 - ' + yyp.periodName+'期' +'</span>'+
                             '<span class="color-gray" style="font-size: 0.7rem;">'+imgpath+statusText + '&gt;</span>' +
                             '</div>'+
                             '<div class="card-content" style="font-size:0.9rem;">'+

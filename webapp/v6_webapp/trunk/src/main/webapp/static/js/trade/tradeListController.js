@@ -48,7 +48,7 @@ define(['js/borrow/borrowUtils'], function (borrowUtils) {
             tradeListCtrl.pullToRefresh();
         },
         tradeListyiwen:function(){
-            xxdApp.alert("您的资金将可能投资到以下任意一个或多个项目中，您可在投资后前往“我的新新贷—投资记录”查询详细的匹配记录","提示");
+            xxdApp.alert("您的资金将可能投资到以下任意一个或多个项目中，您可在投资后前往“我的_—投资记录”查询详细的匹配记录","提示");
         },
         pullToRefresh:function(){
             tradeListCtrl.loanRelationshipRecord(1,"pull");

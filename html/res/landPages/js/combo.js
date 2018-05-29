@@ -17,7 +17,7 @@ require(['base', 'float', 'trackBase', 'store', 'swiper2','dialog', "requirejs"]
         phoneExistence:'您输入的手机号已被注册！',
         pswPhoneExist:'密码不能包括手机号！',
         errorMsg:'请检查您的网络！',
-        argeeInfo:'请勾选《新新贷使用协议》'
+        argeeInfo:'请勾选《_使用协议》'
 
     };
     var dataUrl={
@@ -290,7 +290,7 @@ require(['base', 'float', 'trackBase', 'store', 'swiper2','dialog', "requirejs"]
         }
 
     }
-    //月进斗金
+    //_
     if($("#J_wrapBody").attr('data-page')=="monthgold"){
         mainScroll(500);
         $('#J_invest,#J_bbgs,#J_xscp,#J_xyb,#J_joinup,#J_sideRegister,#J_yyp').on('click',function (ev) {

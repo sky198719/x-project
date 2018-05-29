@@ -81,7 +81,7 @@ public class FinanceRest extends H5BaseService {
             @HeaderParam(value = "clientId") @NotNull String clientId,
             @ApiParam(name = "token", value = "token")
             @HeaderParam(value = "token") String token,
-            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-月进斗金,5-新元宝,6-月月派,7-散标,8-债券,10-新手产品30天))", required = true)
+            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-_,5-_,6-_,7-散标,8-债券,10-新手产品30天))", required = true)
             @QueryParam(value = "productType") @NotNull int productType,
             @ApiParam(name = "productId", value = "理财产品Id ", required = true)
             @PathParam(value = "productId") @NotNull String productId) {
@@ -109,7 +109,7 @@ public class FinanceRest extends H5BaseService {
             @QueryParam(value = "page") @NotNull int currentPage,
             @ApiParam(name = "pageSize", value = "默认20条")
             @DefaultValue(value = "20") @QueryParam(value = "pageSize") @NotNull int pageSize,
-            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-月进斗金,5-新元宝,6-月月派,7-散标,8-债券,10-新手产品30天))", required = true)
+            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-_,5-_,6-_,7-散标,8-债券,10-新手产品30天))", required = true)
             @QueryParam(value = "productType") @NotNull int productType) {
 
         String productCode = transformService.convertType2PinYin(productType);
@@ -397,11 +397,11 @@ public class FinanceRest extends H5BaseService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/hot-xyb-yyp")
-    @ApiOperation(value = "获取热门理财产品列表-新元宝-月月派利息最高的", httpMethod = "GET")
+    @ApiOperation(value = "获取热门理财产品列表-_-_利息最高的", httpMethod = "GET")
     public Message hotProductList(
             @ApiParam(name = "clientId", value = "clientId", required = true)
             @HeaderParam(value = "clientId") @NotNull String clientId,
-            @ApiParam(name = "productType", value = "产品类型5-新元宝,6-月月派)", required = true)
+            @ApiParam(name = "productType", value = "产品类型5-_,6-_)", required = true)
             @QueryParam(value = "productType") @NotNull int productType) {
         try {
             Headers headers = Headers.createHeaders()
@@ -414,10 +414,10 @@ public class FinanceRest extends H5BaseService {
                     .addParameter("productCode", productCode);
             return apiUtil.get(ApiEnum.API_TRADECENTER_XYB_YYP_HOTLIST, headers, queryStrings);
         } catch (CoreException | ServiceException exception) {
-            logger.error("获取热门理财产品列表-新元宝-月月派利息最高的", exception);
+            logger.error("获取热门理财产品列表-_-_利息最高的", exception);
             return new ErrorMessage(exception.getCode(), exception.getMessage());
         } catch (Exception e) {
-            logger.error("获取热门理财产品列表-新元宝-月月派利息最高的", e);
+            logger.error("获取热门理财产品列表-_-_利息最高的", e);
             return new ErrorMessage(e.getMessage());
         }
     }
@@ -433,7 +433,7 @@ public class FinanceRest extends H5BaseService {
             @HeaderParam(value = "clientId") @NotNull String clientId,
             @ApiParam(name = "token", value = "token", required = true)
             @HeaderParam(value = "token") @NotNull String token,
-            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-月进斗金,5-新元宝,6-月月派,7-散标,8-债券,10-新手产品30天)", required = true)
+            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-_,5-_,6-_,7-散标,8-债券,10-新手产品30天)", required = true)
             @QueryParam(value = "productType") @NotNull int productType,
             @ApiParam(name = "productId", value = "产品Id", required = true)
             @QueryParam(value = "productId") @NotNull int productId,
@@ -468,7 +468,7 @@ public class FinanceRest extends H5BaseService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/max-apr-xyb")
-    @ApiOperation(value = "查询新元宝每期最大利率", httpMethod = "GET")
+    @ApiOperation(value = "查询_每期最大利率", httpMethod = "GET")
     public Message getXYBMaxApr(
             @ApiParam(name = "clientId", value = "clientId", required = true)
             @HeaderParam(value = "clientId") @NotNull String clientId) {
@@ -479,10 +479,10 @@ public class FinanceRest extends H5BaseService {
 
             return apiUtil.get(ApiEnum.API_INVESTMENT_XYB_MAXAPR, headers);
         } catch (CoreException | ServiceException exception) {
-            logger.error("查询新元宝每期最大利率失败", exception);
+            logger.error("查询_每期最大利率失败", exception);
             return new ErrorMessage(exception.getCode(), exception.getMessage());
         } catch (Exception e) {
-            logger.error("查询新元宝每期最大利率失败", e);
+            logger.error("查询_每期最大利率失败", e);
             return new ErrorMessage(e.getMessage());
         }
     }

@@ -66,7 +66,7 @@ export default class Success extends Component {
                     </div>
                     <div className="btn-ordersuccess">
                         <Button className="btn" type="primary" onClick={ this.moreProduct }>更多理财产品</Button>
-                        <Button className="btn" type="primary" onClick={ this.myXXDDetail }>去“我的新新贷”查看</Button>
+                        <Button className="btn" type="primary" onClick={ this.myXXDDetail }>去“我的_”查看</Button>
                     </div>
                 </div>
             </div>

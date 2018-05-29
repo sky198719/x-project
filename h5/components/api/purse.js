@@ -331,7 +331,7 @@ const stepOutRecord = async (context) => {
     }
 }
 
-//  新元宝加入记录
+//  _加入记录
 const newplanJoinRecord = async (context) => {
     const res = await cFetch(`${urlPath}/apih5/api/investments/user-tender-detail/` + context.joinId , {
         data: {

@@ -107,7 +107,7 @@ $(document).ready(function () {
         job = jobTmep;
     }
 
-    //日日盈活动码
+    //_活动码
     var fundActivityCodeTemp = GetQueryString("fundActivityCode")
     if (fundActivityCodeTemp != undefined) {
         fundActivityCode = fundActivityCodeTemp;

@@ -20,14 +20,14 @@ public class RedEnvelopeLimitTypeConsts {
 
 
     /**
-     * ********************************产品类型1散标2债权转染3新元宝 ********************************************
+     * ********************************产品类型1散标2债权转染3_ ********************************************
      */
 
     public final static int TENDER_USE_PRODUCT_TYPE = 1;//散标
 
     public final static int TRADE_TENSFER_USE_PRODUCT_TYPE = 2; //债权转让
 
-    public final static int XPLAN_USED_PRODUCT_TYPE = 3;//新元宝
+    public final static int XPLAN_USED_PRODUCT_TYPE = 3;//_
     
     public final static int STEP_USED_PRODUCT_TYPE = 4;//步步高升
 

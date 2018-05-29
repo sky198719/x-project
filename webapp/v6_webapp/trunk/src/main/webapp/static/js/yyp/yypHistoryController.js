@@ -60,7 +60,7 @@ define(['js/yyp/yypHistoryView'],function (yypHistoryView) {
             //==========================切记此处不能删除============================
         },
         /**
-         * 月月派记录
+         * _记录
          * @param currentPage  当前页
          * @param type 刷新类型
          */
@@ -95,7 +95,7 @@ define(['js/yyp/yypHistoryView'],function (yypHistoryView) {
             }, 5000);
         },
         /**
-         * 月月派列表事件绑定
+         * _列表事件绑定
          */
         myYypListBindEvent: function () {
             var bindings = [

@@ -187,16 +187,16 @@ define(['js/monthFinance/monthFinanceHistoryModel', 'js/monthFinance/monthFinanc
                 		xxdApp.addNotification({
                             title: '抱歉',
                             hold: 3000,
-                            message: '获取月进斗金投资记录失败，请稍后重试...'
+                            message: '获取_投资记录失败，请稍后重试...'
                         });
         			}
                 },
                 error: function(xhr, type){
-                	console.log("获取月进斗金投资记录失败,ajax error...");
+                	console.log("获取_投资记录失败,ajax error...");
                     xxdApp.addNotification({
                         title: '抱歉',
                         hold: 3000,
-                        message: '获取月进斗金投资记录失败，请稍后重试...'
+                        message: '获取_投资记录失败，请稍后重试...'
                     });
                 }
             });

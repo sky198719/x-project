@@ -117,7 +117,7 @@ require(['base', 'float', 'trackBase', 'store', 'header', 'footer', 'backTop', "
         error: function () {
         }
     });
-    //月进斗金
+    //_
     $.xxdAjax({
         url: '/tradeCenter/YJDJ/brief',
         clientId: 'XXD_FRONT_END',

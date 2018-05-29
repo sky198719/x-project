@@ -336,7 +336,7 @@ require(['base','vTicker', "requirejs", 'trackBase', 'xui_user_v101','com'], fun
                     main.oLogin();
                     return;
                 }
-                //新元宝的产品详情页面
+                //_的产品详情页面
                 window.location.href = '/m/#!/static/html/popular/financesList.html'+ '?xxd_utm_source=' + xxd_utm_source;
             });
             //步步高升
@@ -356,7 +356,7 @@ require(['base','vTicker', "requirejs", 'trackBase', 'xui_user_v101','com'], fun
                 }
                 window.location.href = '/m/#!/static/html/stepUpward/stepUpwardDetail.html'+ '?xxd_utm_source=' + xxd_utm_source;
             });
-            //月月派
+            //_
             $('#yyp').click(function () {
                 //console.log("start");
                 //活动未开始已结束弹框
@@ -372,7 +372,7 @@ require(['base','vTicker', "requirejs", 'trackBase', 'xui_user_v101','com'], fun
                     main.oLogin();
                     return;
                 }
-                //月月派的产品详情页面
+                //_的产品详情页面
                 $.xxdAjax({
                     url: '/tradeCenter/investBiz/showStatus/YYP',
                     dataType: 'json',

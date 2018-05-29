@@ -123,19 +123,19 @@ require(['base', "requirejs", 'json', "juicer", "trackBase"], function ($, regis
         // 注册协议
         agreement.init();
 
-        // 关于新新贷
+        // 关于_
         bulletin.init();
 
         // 七天大胜
         get7DaysInfo.init();
 
-        // 日日盈
+        // _
         getFundInfo.init();
 
-        // 新元宝
+        // _
         getPlan.init();
 
-        // 月进斗金
+        // _
         getMonthFinance.init();
 
         // 马上赚钱
@@ -381,7 +381,7 @@ require(['base', "requirejs", 'json', "juicer", "trackBase"], function ($, regis
         }
     });
 
-// 关于新新贷->运营数据
+// 关于_->运营数据
     var bulletin = {
         init: function () {
             bulletin.data();
@@ -475,7 +475,7 @@ require(['base', "requirejs", 'json', "juicer", "trackBase"], function ($, regis
         }
     };
 
-// 月进斗金
+// _
     var getMonthFinance = {
         init: function () {
             getMonthFinance.data();
@@ -520,7 +520,7 @@ require(['base', "requirejs", 'json', "juicer", "trackBase"], function ($, regis
 
     };
 
-// 日日盈
+// _
     var getFundInfo = {
         init: function () {
             getFundInfo.data();
@@ -562,7 +562,7 @@ require(['base', "requirejs", 'json', "juicer", "trackBase"], function ($, regis
         }
     };
 
-// 新元宝
+// _
     var getPlan = {
         init: function () {
             getPlan.data();

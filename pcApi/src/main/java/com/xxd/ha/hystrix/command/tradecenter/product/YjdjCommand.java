@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 月进斗金
+ * _
  */
 public class YjdjCommand extends FallbackWithCacheHystrixCommand {
 
@@ -47,7 +47,7 @@ public class YjdjCommand extends FallbackWithCacheHystrixCommand {
             data.put("activitedEndDateFormat", sdf.format(new Date(data.getLong("activitedEndDate"))));
         }
 
-        // 月进斗金计算倒计时时间
+        // _计算倒计时时间
         YJDJVo yjdjVo = TypeUtils.castToJavaBean(data, YJDJVo.class);
         if (yjdjVo.getActivitedEndDate() != 0 &&
                 yjdjVo.getActivitedStartDate() != 0 &&

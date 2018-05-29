@@ -27,7 +27,7 @@ public class Constants {
     public static final int PRODUCT_YJDJ_TYPE = 4;
     public static final int PRODUCT_YJDJ_DATABASE_TYPE = 95;
     public static final String PRODUCT_YJDJ_PINYIN = "YJDJ";
-    public static final String PRODUCT_YJDJ_NAME = "月进斗金";
+    public static final String PRODUCT_YJDJ_NAME = "_";
     public static final String PRODUCT_YJDJ_TIPACTION = "31天后可申请转让";
     public static final String PRODUCT_YJDJ_INTRODUCTION = "每日10点、20点限时发售";
     public static final String PRODUCT_YJDJ_RECOMMEND_TIPACTION = "31天后可申请转让";
@@ -36,7 +36,7 @@ public class Constants {
     public static final int PRODUCT_XYB_TYPE = 5;
     public static final int PRODUCT_XYB_DATABASE_TYPE = 98;
     public static final String PRODUCT_XYB_PINYIN = "XYB";
-    public static final String PRODUCT_XYB_NAME = "新元宝";
+    public static final String PRODUCT_XYB_NAME = "_";
     public static final String PRODUCT_XYB_TIPACTION = "1个月后可申请转让";
     public static final String PRODUCT_XYB_INTRODUCTION = "多种期限可选";
     public static final String PRODUCT_XYB_RECOMMEND_TIPACTION = "1个月后可申请转让";
@@ -45,7 +45,7 @@ public class Constants {
     public static final int PRODUCT_YYP_TYPE = 6;
     public static final int PRODUCT_YYP_DATABASE_TYPE = 97;
     public static final String PRODUCT_YYP_PINYIN = "YYP";
-    public static final String PRODUCT_YYP_NAME = "月月派";
+    public static final String PRODUCT_YYP_NAME = "_";
     public static final String PRODUCT_YYP_TIPACTION = "持有30天后可转让";
     public static final String PRODUCT_YYP_INTRODUCTION = "多种期限可选";
     public static final String PRODUCT_YYP_RECOMMEND_TIPACTION = "持有30天后可转让";

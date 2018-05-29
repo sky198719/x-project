@@ -86,11 +86,11 @@ define(function () {
             var purchaseSwitch = $$('#newYear_purchase_switch').val();
             if(isBalance=="1" || isLastBalance == "1") {
                 fundNewYearCtrl.enablePurchase("false");
-                $$("#newYear_notice").html("系统正在结算收益，暂不能加入日日盈");
+                $$("#newYear_notice").html("系统正在结算收益，暂不能加入_");
             }else{
                 if(purchaseSwitch=="1") {
                     fundNewYearCtrl.enablePurchase("false");
-                    $$("#newYear_notice").html("因系统维护，暂不能加入日日盈");
+                    $$("#newYear_notice").html("因系统维护，暂不能加入_");
                 } else {
                     fundNewYearCtrl.enablePurchase("true");
                 }

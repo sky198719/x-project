@@ -41,7 +41,7 @@ class Investment extends Component {
             selectList: [],
             proName: '所有产品',         //  1: 当前; 2: 历史
             code: 1,                    //  1: LIST, 2: detail
-            productType: '0'            //  0=默认所有,1=日日盈(只有历史),2=步步高升,3=七天大胜(只有历史),4=月进斗金,5=新元宝,6=月月派,7=散标债权,10=新手专属30天,16=新手标
+            productType: '0'            //  0=默认所有,1=_(只有历史),2=步步高升,3=七天大胜(只有历史),4=_,5=_,6=_,7=散标债权,10=新手专属30天,16=新手标
         }
     }
     async componentWillMount() {
@@ -271,7 +271,7 @@ class Investment extends Component {
             let productType = rowData.productType || ''
             let historyName = this.state.investType == '1' ? '待收' : '实际'
             if(productType == 6){
-                // 月月派
+                // _
                 if(this.state.investType == '1'){
                     return (
                         <li key={ rowID }>
@@ -312,7 +312,7 @@ class Investment extends Component {
                     )
                 }
             }else if(productType == 5){
-                // 新元宝
+                // _
                 if(this.state.investType == '1'){
                     return (
                         <li key={ rowID }>
@@ -354,7 +354,7 @@ class Investment extends Component {
                     )
                 }
             }else if(productType == 10 || productType == 4 || productType == 16){
-                // 新手产品30天 || 月进斗金 || 新手标
+                // 新手产品30天 || _ || 新手标
                 return (
                     <li key={ rowID }>
                         <p className="product-name">{ rowData.name } <span className="tips">{status(rowData.status)}</span></p>
@@ -474,7 +474,7 @@ class Investment extends Component {
                     )
                 }
             }else if(productType == 1){
-                //  日日盈
+                //  _
                 return (
                     <li key={ rowID }>
                         <p className="product-name">{ rowData.name } <span className="tips">{status(rowData.status)}</span></p>

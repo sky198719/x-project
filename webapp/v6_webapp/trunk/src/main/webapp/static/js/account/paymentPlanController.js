@@ -110,7 +110,7 @@ define(['js/account/paymentPlanView','js/account/paymentPlanModel','js/utils/dat
                             	statusDouble = false;
                             }
                             var isYYP = false;
-                            if(b.name.indexOf("月月派") >= 0){
+                            if(b.name.indexOf("_") >= 0){
                             	isYYP = true;
                             }*/
                             var periodName = b.periodName;

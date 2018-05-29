@@ -6,7 +6,7 @@
         "sub_button": [
           {
             "type": "view",
-            "name": "月进斗金",
+            "name": "_",
             "url": "http://www.xinxindai.com/m/#!/static/html/monthFinance/monthFinanceDetails.html"
           },
           {
@@ -16,12 +16,12 @@
           },
           {
             "type": "view",
-            "name": "日日盈",
+            "name": "_",
             "url": "http://www.xinxindai.com/m/#!/static/html/fund/fundUnInvested.html?path=fund"
           },
           {
             "type": "view",
-            "name": "新元宝",
+            "name": "_",
             "url": "http://www.xinxindai.com/m/#!/static/html/popular/financesList.html"
           },
           {
@@ -56,7 +56,7 @@
           },
           {
             "type": "view",
-            "name": "新新贷官网",
+            "name": "_官网",
             "url": "http://www.xinxindai.com/m"
           }
         ]

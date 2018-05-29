@@ -91,7 +91,7 @@ public class PlanUtils {
 
 
     /**
-    * 新元宝类型转换
+    * _类型转换
     * @param scheme
     * @return
     */

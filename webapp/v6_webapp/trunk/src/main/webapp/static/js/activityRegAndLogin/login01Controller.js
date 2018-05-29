@@ -4,7 +4,7 @@ define(['zeptoMd5','js/home/homeController'], function (zeptoMd5,homeController)
         init: function (event) {
 			mainView.hideNavbar();
 			$$("#login01").css("padding-top", "0px");
-            $$("title").html("登录新新贷");
+            $$("title").html("登录_");
             login01Ctrl.bindEvents();
             
             score = appFunc.getEventDetailPageQuery(event).score;

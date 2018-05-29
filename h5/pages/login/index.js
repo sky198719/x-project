@@ -95,7 +95,7 @@ export default class Login extends Component {
                     <link rel='stylesheet' type='text/css' href="/static/mods/login/_.css" />
                 </Head>
                 <div className="login-box">
-                    <Header title="登录新新贷" dmp={ true } dev_id="C1.1-1" eventtype="jump" />
+                    <Header title="登录_" dmp={ true } dev_id="C1.1-1" eventtype="jump" />
                     <div className="register-container login-container">
                         <div className="div-logo"></div>
                         <div className="input-wrapper">

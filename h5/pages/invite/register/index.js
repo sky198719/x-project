@@ -36,8 +36,8 @@ export default class record extends Component {
                             {img:'/static/mods/invite/imgs/register-9-7.png',name:'累计为投资人赚取',detail:'5.44亿元'}
                         ],
             xszcRate:{},//新手专享30天利率
-            yjdjRate:'12',//月进斗金利率
-            xybRate:[]//新元宝利率
+            yjdjRate:'12',//_利率
+            xybRate:[]//_利率
         }
     }
   
@@ -84,11 +84,11 @@ export default class record extends Component {
                 })
             })
     }
-    // 月进斗金
+    // _
     async yjdj(){
         let res = Api_invite.yjdj()
             res.then((r) => {
-                console.log(r,'月进斗金')
+                console.log(r,'_')
                 if(r.data.items){
                     this.setState({
                         yjdjRate: r.data.items.apr
@@ -96,11 +96,11 @@ export default class record extends Component {
                 }
             })
     }
-    // 新元宝利率
+    // _利率
     async getXybRate(){
         let res = Api_invite.getXybRate()
             res.then((r) => {
-                console.log(r,'新元宝')
+                console.log(r,'_')
                 let arry = []
                     arry.push(r.data[0]['apr'])
                     arry.push(r.data[5]['apr'])
@@ -292,7 +292,7 @@ export default class record extends Component {
             Toast.info('密码应为6-16位数字与字母组合', 2)
             return
         }else if(!this.state.protocol){
-            Toast.info('注册前需同意《新新贷注册协议》、《资金出借风险提示函》', 2)
+            Toast.info('注册前需同意《_注册协议》、《资金出借风险提示函》', 2)
             return
         }
         let GetQueryString = (name) => {
@@ -334,7 +334,7 @@ export default class record extends Component {
                         </div>
                         {/* 利率 */}
                         <div className="rate">
-                            我在新新贷出借新手产品有14%年化收益，注册送的108元红包已撸，Oh Yeah！
+                            我在_出借新手产品有14%年化收益，注册送的108元红包已撸，Oh Yeah！
                         </div>
                         {/* 输入电话 */}
                         {this.state.showInput1&&
@@ -404,14 +404,14 @@ export default class record extends Component {
                             <li>
                                 <p>历史年化收益</p>
                                 <p><i>{this.state.yjdjRate}</i>%</p>
-                                <p>月进斗金</p>
+                                <p>_</p>
                             </li>
                             <li>
                                 <p>历史年化收益</p>
                                     <div className="sbox">
                                         <div className="sbox-child"><i>{this.state.xybRate[0]} </i> - <i> {this.state.xybRate[1]}</i></div>%
                                     </div>
-                                <p>新元宝</p>
+                                <p>_</p>
                             </li>
                         </ul>
                     </div>

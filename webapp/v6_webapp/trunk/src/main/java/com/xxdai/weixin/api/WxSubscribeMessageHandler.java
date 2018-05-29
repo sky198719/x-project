@@ -106,7 +106,7 @@ public class WxSubscribeMessageHandler implements WxMessageHandler {
 			log.error("微信用户关注公众号，消息处理失败", e);		
 			WxXmlOutTextMessage outTextMsg = new WxXmlOutTextMessage();
 			outTextMsg.setCreateTime(System.currentTimeMillis()/1000);
-			outTextMsg.setContent("使用新新贷，财富常在！感谢您关注新新贷官方微信！\n\n更多内容请访问www.xinxindai.com官网或下载“新新贷”APP\n\n客服热线：4000169521");
+			outTextMsg.setContent("使用_，财富常在！感谢您关注_官方微信！\n\n更多内容请访问www.xinxindai.com官网或下载“_”APP\n\n客服热线：4000169521");
 			outTextMsg.setFromUserName(wxMessage.getToUserName());
 			outTextMsg.setToUserName(wxMessage.getFromUserName());
 			outTextMsg.setMsgType(WxConsts.XML_MSG_TEXT);			
@@ -130,7 +130,7 @@ public class WxSubscribeMessageHandler implements WxMessageHandler {
         text.setFromUserName(toUserName);
         text.setToUserName(fromUserName);
         text.setMsgType(WxConsts.XML_MSG_TEXT);
-        text.setContent("使用新新贷，财富常在！感谢您关注新新贷官方微信！\n\n更多内容请访问www.xinxindai.com官网或下载“新新贷”APP\n\n客服热线：4000169521");
+        text.setContent("使用_，财富常在！感谢您关注_官方微信！\n\n更多内容请访问www.xinxindai.com官网或下载“_”APP\n\n客服热线：4000169521");
         outMsg = text;
 		return outMsg;
 	}	

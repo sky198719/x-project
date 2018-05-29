@@ -15,7 +15,7 @@ define([ 'zeptoMd5', 'js/activity/outWebsiteRegisterView'], function (zeptoMd5, 
             outWebsiteRegisterCtrl.loadData();
             outWebsiteRegisterCtrl.regActivity();
 
-            $$("title").html("注册新新贷");
+            $$("title").html("注册_");
         },
         loadData: function () {
             outWebsiteRegisterCtrl.outWebsiteRegisterBanner();

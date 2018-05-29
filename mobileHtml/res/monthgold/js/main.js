@@ -426,7 +426,7 @@ require(['jquery', "requirejs", 'IScroll', "trackBase", 'xui_user_v102', 'mcLaye
             });
         });
 
-        // 什么是月进斗金
+        // 什么是_
         $(document).on('click', '#introduce', function () {
             $('#answer').slideToggle();
             $("#introduce").find("p").toggleClass("arrow-active");

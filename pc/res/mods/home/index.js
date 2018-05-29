@@ -217,7 +217,7 @@ require(['base', "trackBase", 'rotate', 'store', 'sbztTpl', 'zqzrTpl', 'juicer'
                 }
             });
         }
-        //    月月派按钮浮层
+        //    _按钮浮层
         $('#download-qr-code,.dimension-mobile-btn').on('mouseover',function(){
             $('#download-qr-code').show();
         });

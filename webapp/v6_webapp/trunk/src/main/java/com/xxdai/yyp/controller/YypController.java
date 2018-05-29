@@ -45,19 +45,19 @@ public class YypController {
     Logger log = LoggerFactory.getLogger(YypController.class);
 
     /**
-     * 月月派交易接口
+     * _交易接口
      */
     private ReglIntstTradeCXFService reglIntstTradeCXFService = (ReglIntstTradeCXFService) CXF_Factory.getFactory(ReglIntstTradeCXFService.class, Configuration.getInstance().getValue("webService_url") + "/yypTradeCXFService").create();
 
     /**
-     * 月月派接口
+     * _接口
      */
     private ReglIntstCXFService reglIntstCXFService = (ReglIntstCXFService) CXF_Factory.getFactory(ReglIntstCXFService.class, Configuration.getInstance().getValue("webService_url") + "/yypCXFService").create();
 
     private ApproQueryCXFService approQueryCXFService = (ApproQueryCXFService) CXF_Factory.getFactory(ApproQueryCXFService.class, Configuration.getInstance().getValue("webService_url") + "/approQueryWebService").create();
 
     /**
-     * 获取月月派列表
+     * 获取_列表
      *
      * @param request
      * @return
@@ -107,7 +107,7 @@ public class YypController {
     }
 
     /**
-     * 获取月月派
+     * 获取_
      *
      * @param request
      * @return
@@ -171,7 +171,7 @@ public class YypController {
             //查当天
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             param.put("openDate", sdf.format(new Date()));
-            //调用远程查询新元宝接口
+            //调用远程查询_接口
            // log.info("selectYypTerms req:" + param.toJSONString());
             String resultStr = reglIntstCXFService.selectReglintstList(param.toJSONString());
             //log.info("selectYypTerms resp =" + resultStr);
@@ -217,7 +217,7 @@ public class YypController {
                 resultJson = JSON.parseObject(resultStr);
             } else {
                 resultJson.put("resultCode", "-1");
-                resultJson.put("desc", "获取月月派加入记录失败，请稍后重试...");
+                resultJson.put("desc", "获取_加入记录失败，请稍后重试...");
             }
         } catch (Exception e) {
             log.error("YypController joinHistory ----> arise exception:", e);
@@ -322,7 +322,7 @@ public class YypController {
     String history(HttpServletRequest request, HttpServletRequest response) {
         JSONObject resultJson = new JSONObject();
         resultJson.put("resultCode", "-1");
-        resultJson.put("desc", "获取月月派投资记录失败，请稍后重试...");
+        resultJson.put("desc", "获取_投资记录失败，请稍后重试...");
         try {
             //从session取的当前登录用户
             Object userObj = request.getSession().getAttribute("loginUser");
@@ -350,7 +350,7 @@ public class YypController {
                 JSONObject rj = JSON.parseObject(resultStr);
                 if ("0".equals(String.valueOf(rj.get("resultCode")))) {
                     resultJson.put("resultCode", "0");
-                    resultJson.put("desc", "获取月月派投资记录成功");
+                    resultJson.put("desc", "获取_投资记录成功");
                     resultJson.put("resultList", rj.getJSONArray("resultList"));
                     resultJson.put("totalPages", rj.get("totalPages"));
                 }
@@ -367,7 +367,7 @@ public class YypController {
     }
 
     /**
-     * 查询用户本期月月派投资信息
+     * 查询用户本期_投资信息
      *
      * @param request
      * @return
@@ -401,7 +401,7 @@ public class YypController {
                 resultJson = JSON.parseObject(resultStr);
             } else {
                 resultJson.put("resultCode", "-1");
-                resultJson.put("desc", "获取用户月月派信息失败，请稍后重试...");
+                resultJson.put("desc", "获取用户_信息失败，请稍后重试...");
             }
         } catch (Exception e) {
             log.error("YypController getUserYypInfo ----> arise exception:", e);
@@ -537,7 +537,7 @@ public class YypController {
                 resultJson = JSON.parseObject(resultStr);
                 resultJson.put("desc", resultJson.get("resultDesc"));
 
-                /******************月月派GA部署所需参数start******************/
+                /******************_GA部署所需参数start******************/
                 JSONObject gaJson = new JSONObject();
                 gaJson.put("joinId", yypJoinId);
                 gaJson.put("userId", userId);
@@ -545,7 +545,7 @@ public class YypController {
                 WSModelResponse gaRes = JsonUtil.jsonToBean(gaJsonStr, WSModelResponse.class);
                 if(gaRes.getData()!=null) {
                     String dataStr = String.valueOf(gaRes.getData());
-                  //  log.info("月月派ga布码结果：" + dataStr);
+                  //  log.info("_ga布码结果：" + dataStr);
                     Map map = JsonUtil.jsonToBean(dataStr, Map.class);
                     String serviceNum ="";
                     if(null != map){
@@ -562,11 +562,11 @@ public class YypController {
                         resultJson.put("servicenum",serviceNum);
                     }
                 }
-                //log.info("月月派退出结果：" + resultJson.toJSONString());
-                /******************月月派GA部署所需参数end******************/
+                //log.info("_退出结果：" + resultJson.toJSONString());
+                /******************_GA部署所需参数end******************/
             } else {
                 resultJson.put("resultCode", "-1");
-                resultJson.put("desc", "月月派退出失败，请稍后重试...");
+                resultJson.put("desc", "_退出失败，请稍后重试...");
             }
         } catch (Exception e) {
             log.error("YypController quit ----> arise exception:", e);
@@ -590,7 +590,7 @@ public class YypController {
     String commonInfo(HttpServletRequest request, HttpServletRequest response) {
         JSONObject resultJson = new JSONObject();
         resultJson.put("resultCode", "-1");
-        resultJson.put("desc", "获取月月派基本信息失败，请稍后重试...");
+        resultJson.put("desc", "获取_基本信息失败，请稍后重试...");
         try {
             JSONObject paramJson = new JSONObject();
             String openDate = request.getParameter("openDate");
@@ -649,7 +649,7 @@ public class YypController {
                             }
                         });
                         resultJson.put("resultCode", "0");
-                        resultJson.put("desc", "获取月月派基本信息成功");
+                        resultJson.put("desc", "获取_基本信息成功");
                         resultJson.put("termAndAprs", termAndAprs);
                         resultJson.put("minAmount", minAmount);
                         resultJson.put("increaseRadix", increaseRadix);

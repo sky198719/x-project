@@ -250,7 +250,7 @@ require(['base','vTicker', "requirejs", 'trackBase', 'xui_user_v101','com','xxdB
                 flag = false;
             });
             //底部投资按钮点击
-            //新元宝
+            //_
             $('#goldIngot').click(function () {
                 //活动未开始已结束弹框
                 if (activityStatus == -1) {
@@ -317,7 +317,7 @@ require(['base','vTicker', "requirejs", 'trackBase', 'xui_user_v101','com','xxdB
                     }
                 });
             });
-            //月月派
+            //_
             $('#yyp').click(function () {
                 //console.log("start");
                 //活动未开始已结束弹框
@@ -336,7 +336,7 @@ require(['base','vTicker', "requirejs", 'trackBase', 'xui_user_v101','com','xxdB
                     });
                     return;
                 }
-                //月月派的产品详情页面
+                //_的产品详情页面
                 $.xxdAjax({
                     url: '/tradeCenter/investBiz/showStatus/YYP',
                     dataType: 'json',

@@ -109,7 +109,7 @@ export default class extends Component {
                         <div className="open-account-prompt">
                             <div className="prompt">
                                 <div className="prompt-tit">为什么开通银行存管账户？</div>
-                                <div className="prompt-content">为了保障出借人的资金安全，新新贷全面采用银行存管的运营模式，只有成功开通了银行存管账户，才能在新新贷平台 进行充值、出借等行为</div>
+                                <div className="prompt-content">为了保障出借人的资金安全，_全面采用银行存管的运营模式，只有成功开通了银行存管账户，才能在_平台 进行充值、出借等行为</div>
                             </div>
                         </div>
                     </div>

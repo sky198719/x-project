@@ -34,14 +34,14 @@ define(['js/utils/date'], function (DateHandle) {
             appFunc.bindEvents(binding);
         },
         yypAgreement: function () {
-            // 月月派协议
+            // _协议
             req.callJSON({
                 url: "yyp/agreementData/" + joinId + ".do",
                 data: {},
                 timeout: 15000,
                 indicator: true,
                 success: function (data) {
-                    data.yypInfo.PNAME = '月月派' + data.yypInfo.TERMS + '个月';// - ' + data.yypInfo.NAME;
+                    data.yypInfo.PNAME = '_' + data.yypInfo.TERMS + '个月';// - ' + data.yypInfo.NAME;
 
                     data.yypInfo.APR = data.yypInfo.APR + '%';
 
@@ -107,10 +107,10 @@ define(['js/utils/date'], function (DateHandle) {
             paymentPlanStr.advanceQuit(joinId, pterms, pname, forfeitpercent);
         },
         advanceQuit: function (joinId, pterms, pname, forfeitpercent) {
-            xxdApp.confirm('月月派' + pterms + '个月 - ' + pname + '正处于锁定期，您若选择退出，会产生违约行为，平台会征收您' + forfeitpercent + '%的违约金' + '，提交后不可取消，确认要退出吗？', '提前退出月月派', function () {
-                //月月派提前退出GA
-                gaClickEvent({property1:"转出",property2: "月月派转出", property3: window.location});
-                xxdApp.modalPassword('请输入支付密码', '提前退出月月派', function (password) {
+            xxdApp.confirm('_' + pterms + '个月 - ' + pname + '正处于锁定期，您若选择退出，会产生违约行为，平台会征收您' + forfeitpercent + '%的违约金' + '，提交后不可取消，确认要退出吗？', '提前退出_', function () {
+                //_提前退出GA
+                gaClickEvent({property1:"转出",property2: "_转出", property3: window.location});
+                xxdApp.modalPassword('请输入支付密码', '提前退出_', function (password) {
                     if (password == null || password == '') {
                         xxdApp.alert('请输入支付密码！');
                         return;
@@ -126,7 +126,7 @@ define(['js/utils/date'], function (DateHandle) {
                         success: function (data) {
                             xxdApp.hideIndicator();
                             if (data.resultCode == 0) {
-                                redemption({id:data.productId,name:"月月派赎回",category:"月月派赎回/" + data.apr + "%/" + data.terms + "个月",price:data.price,tradeId:data.tradeid,affiliation:data.servicenum});
+                                redemption({id:data.productId,name:"_赎回",category:"_赎回/" + data.apr + "%/" + data.terms + "个月",price:data.price,tradeId:data.tradeid,affiliation:data.servicenum});
                                 xxdApp.alert(data.desc, '提示', function () {
                                 	mainView.router.back({url:"yyp/yypHistory.html?path=yyp?v=" + GC.getVersion()});
                                 });
@@ -208,7 +208,7 @@ define(['js/utils/date'], function (DateHandle) {
                     }
                     var b = result.data;
                     $$(".paymentPlan #apr").html(b.APR);
-                    $$(".paymentPlan #name").html("月月派" + b.TERMS + "个月 " + b.NAME);
+                    $$(".paymentPlan #name").html("_" + b.TERMS + "个月 " + b.NAME);
                     var dmp_click_yyp = "5." + b.TERMS;
                     $("#yyp-quit").attr("dmp_target_id", dmp_click_yyp);
 					//锁定期显示提前退出                    

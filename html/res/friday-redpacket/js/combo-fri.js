@@ -295,7 +295,7 @@ require(['base', 'float', 'trackBase', 'store', "requirejs", "paging"], function
 
             });
         },
-    //    产品数据展示 新元宝
+    //    产品数据展示 _
       xybData:function (o) {
           $.xxdAjax({
               url      : dataUrl.xybUrl,

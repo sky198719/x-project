@@ -4,7 +4,7 @@ define(['base', 'paging', 'store', "dialog", "md"], function ($, paging, store, 
     var common = {
         judegName: function () {
             if (window.location.href.indexOf('monthgold') >= 0) {
-                return productName = '月进斗金';
+                return productName = '_';
             } else if (window.location.href.indexOf('sevengold') >= 0) {
                 return productName = '七天大胜';
             } else if (window.location.href.indexOf('newtender') >= 0) {
@@ -53,7 +53,7 @@ define(['base', 'paging', 'store', "dialog", "md"], function ($, paging, store, 
                 var proWidth = (row.bidAmount - row.leftTenderAmount) / row.bidAmount * 100;
                 contentArray.push('<div class="consumption-list"><div class="list clearfix"><div class="list-infomation">');
                 contentArray.push('<div class="account-img f-left"><div class="img-bg grade'+row.riskGrade+'">' +
-                    '<p>新新贷根据内部风控部门制定的风险定价策略，将借款项目按从低到高分为 A-E 5个风险评级，不同的风险评级将对应不同的借款利率及风险，请您谨慎选择<i></i></p>' +
+                    '<p>_根据内部风控部门制定的风险定价策略，将借款项目按从低到高分为 A-E 5个风险评级，不同的风险评级将对应不同的借款利率及风险，请您谨慎选择<i></i></p>' +
                     '</div></div>');
                 contentArray.push('<div class="list-focus f-left"><h4><a href="' + '/detail/consumption/' + row.bidCode + '.html' + '" target="_blank">' + row.bidName + '</a><span class="consumption-icon"><i><b></b></i>新宜贷</span></h4>');
                 contentArray.push('<p>历史年化收益：<span class="annualized-returns">' + row.plannedAnnualRate.toFixed(2) + '</span><i>%</i></p>');

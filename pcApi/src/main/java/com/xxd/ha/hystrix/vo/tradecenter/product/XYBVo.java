@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 新元宝 模型
+ * _ 模型
  */
 @Data
 public class XYBVo implements Serializable {

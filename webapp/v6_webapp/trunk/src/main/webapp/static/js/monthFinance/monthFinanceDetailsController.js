@@ -161,8 +161,8 @@ define(['chart', 'chartDoughnut','js/utils/date','js/monthFinance/monthFinanceDe
 
                         //产品ID
                         monthFinanceId = resultData.productId;
-                        gname = "月进斗金-" + resultData.periodName;
-                        categorys = "月进斗金/" + resultData.plannedAnnualRate + "%/" + resultData.leastPeriod + "天";
+                        gname = "_-" + resultData.periodName;
+                        categorys = "_/" + resultData.plannedAnnualRate + "%/" + resultData.leastPeriod + "天";
                         try {
                             product_detail({id: monthFinanceId, name: gname, category: categorys});
                         } catch (e) {
@@ -260,7 +260,7 @@ define(['chart', 'chartDoughnut','js/utils/date','js/monthFinance/monthFinanceDe
                         xxdApp.addNotification({
                             title: '温馨提示',
                             hold: 3000,
-                            message: '获取月进斗金产品信息失败，请稍后重试...'
+                            message: '获取_产品信息失败，请稍后重试...'
                         });
                     }
                     //加载完毕需要重置
@@ -272,11 +272,11 @@ define(['chart', 'chartDoughnut','js/utils/date','js/monthFinance/monthFinanceDe
                     monthFinanceDetailsView.setAnnularProgress();
                 },
                 error: function (xhr, type) {
-                    console.log("获取月进斗金产品加入记录失败,ajax error...");
+                    console.log("获取_产品加入记录失败,ajax error...");
                     xxdApp.addNotification({
                         title: '抱歉',
                         hold: 3000,
-                        message: '获取月进斗金产品信息失败，请稍后重试...'
+                        message: '获取_产品信息失败，请稍后重试...'
                     });
                 }
             });
@@ -331,11 +331,11 @@ define(['chart', 'chartDoughnut','js/utils/date','js/monthFinance/monthFinanceDe
             monthFinanceDetailsCtrl.setTabSelectedStyle({"selected": "joinHistory"});
             //产品ID是否为空
             if (monthFinanceId == null || monthFinanceId == "") {
-                console.log("月进斗金产品ID为空");
+                console.log("_产品ID为空");
                 xxdApp.addNotification({
                     title: '温馨提示',
                     hold: 3000,
-                    message: '获取月进斗金产品加入记录失败，请稍后重试...'
+                    message: '获取_产品加入记录失败，请稍后重试...'
                 });
                 return;
             }
@@ -371,12 +371,12 @@ define(['chart', 'chartDoughnut','js/utils/date','js/monthFinance/monthFinanceDe
                             }
                             monthFinanceDetailsView.showJoinHistory({"dataList": data, "type": type});
                         } else {
-                            console.log("获取月进斗金产品加入记录失败");
+                            console.log("获取_产品加入记录失败");
                             $$(".monthFinanceDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
                             xxdApp.addNotification({
                                 title: '温馨提示',
                                 hold: 3000,
-                                message: '获取月进斗金产品加入记录失败，请稍后重试...'
+                                message: '获取_产品加入记录失败，请稍后重试...'
                             });
                         }
                     } catch (e) {
@@ -384,17 +384,17 @@ define(['chart', 'chartDoughnut','js/utils/date','js/monthFinance/monthFinanceDe
                         xxdApp.addNotification({
                             title: '抱歉',
                             hold: 3000,
-                            message: '获取月进斗金产品加入记录失败，请稍后重试...'
+                            message: '获取_产品加入记录失败，请稍后重试...'
                         });
                     }
                 },
                 error: function (result) {
-                    console.log("获取月进斗金产品加入记录失败,ajax error...");
+                    console.log("获取_产品加入记录失败,ajax error...");
                     $$(".monthFinanceDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
                     xxdApp.addNotification({
                         title: '温馨提示',
                         hold: 3000,
-                        message: '获取月进斗金产品加入记录失败，请稍后重试...'
+                        message: '获取_产品加入记录失败，请稍后重试...'
                     });
                 }
             });
@@ -406,11 +406,11 @@ define(['chart', 'chartDoughnut','js/utils/date','js/monthFinance/monthFinanceDe
 
             //产品ID是否为空
             if (monthFinanceId == null || monthFinanceId == "") {
-                console.log("月进斗金产品ID为空");
+                console.log("_产品ID为空");
                 xxdApp.addNotification({
                     title: '温馨提示',
                     hold: 3000,
-                    message: '获取月进斗金产品加入记录失败，请稍后重试...'
+                    message: '获取_产品加入记录失败，请稍后重试...'
                 });
                 return;
             }
@@ -444,12 +444,12 @@ define(['chart', 'chartDoughnut','js/utils/date','js/monthFinance/monthFinanceDe
                             }
                             monthFinanceDetailsView.showJoinHistory({"dataList": data, "type": type});
                         } else {
-                            console.log("获取月进斗金产品加入记录失败");
+                            console.log("获取_产品加入记录失败");
                             $$(".monthFinanceDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
                             xxdApp.addNotification({
                                 title: '温馨提示',
                                 hold: 3000,
-                                message: '获取月进斗金产品加入记录失败，请稍后重试...'
+                                message: '获取_产品加入记录失败，请稍后重试...'
                             });
                         }
                     } catch (e) {
@@ -457,17 +457,17 @@ define(['chart', 'chartDoughnut','js/utils/date','js/monthFinance/monthFinanceDe
                         xxdApp.addNotification({
                             title: '抱歉',
                             hold: 3000,
-                            message: '获取月进斗金产品加入记录失败，请稍后重试...'
+                            message: '获取_产品加入记录失败，请稍后重试...'
                         });
                     }
                 },
                 error: function (result) {
-                    console.log("获取月进斗金产品加入记录失败,ajax error...");
+                    console.log("获取_产品加入记录失败,ajax error...");
                     $$(".monthFinanceDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
                     xxdApp.addNotification({
                         title: '温馨提示',
                         hold: 3000,
-                        message: '获取月进斗金产品加入记录失败，请稍后重试...'
+                        message: '获取_产品加入记录失败，请稍后重试...'
                     });
                 }
             });

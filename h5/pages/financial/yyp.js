@@ -59,9 +59,9 @@ export default class extends Component {
                 <div>
                     <Head>
                         <link rel='stylesheet' type='text/css' href="/static/mods/financial/_.css" />
-                        <title>月月派_每月付息_出借产品_网络借贷-新新贷</title>
-                        <meta name="keywords" content="月月派,出借，网络借贷" />
-                        <meta name="description" content="月月派是新新贷推出的便捷高效的自动投标工具。月月派在用户认可的标的范围内，对符合要求的标的进行自动投标，每月派息，到期通过债权转让退出。详情请登录新新贷官网。" />
+                        <title>__每月付息_出借产品_网络借贷-_</title>
+                        <meta name="keywords" content="_,出借，网络借贷" />
+                        <meta name="description" content="_是_推出的便捷高效的自动投标工具。_在用户认可的标的范围内，对符合要求的标的进行自动投标，每月派息，到期通过债权转让退出。详情请登录_官网。" />
                     </Head>
                     <div className="product-box position-a">
                         <Ceil />
@@ -74,9 +74,9 @@ export default class extends Component {
             <div>
                 <Head>
                     <link rel='stylesheet' type='text/css' href="/static/mods/financial/_.css" />
-                    <title>月月派_每月付息_出借产品_网络借贷-新新贷</title>
-                    <meta name="keywords" content="月月派,出借，网络借贷" />
-                    <meta name="description" content="月月派是新新贷推出的便捷高效的自动投标工具。月月派在用户认可的标的范围内，对符合要求的标的进行自动投标，每月派息，到期通过债权转让退出。详情请登录新新贷官网。" />
+                    <title>__每月付息_出借产品_网络借贷-_</title>
+                    <meta name="keywords" content="_,出借，网络借贷" />
+                    <meta name="description" content="_是_推出的便捷高效的自动投标工具。_在用户认可的标的范围内，对符合要求的标的进行自动投标，每月派息，到期通过债权转让退出。详情请登录_官网。" />
                 </Head>
                 <div className="product-box position-a">
                     <Ceil />
@@ -113,7 +113,7 @@ export default class extends Component {
                 
                         <ul className="intro-list">
                             <Tab title="产品描述" show={ true }>
-                                月月派是新新贷推出的便捷高效的自动投标工具。月月派在用户认可的标的范围内，对符合要求的标的进行自动投标，根据借款用户回款日期收息，期限结束后经用户授权，通过新新贷债权转让平台进行转让退出。该计划所对应的标的由系统实现标的分散出借。
+                                _是_推出的便捷高效的自动投标工具。_在用户认可的标的范围内，对符合要求的标的进行自动投标，根据借款用户回款日期收息，期限结束后经用户授权，通过_债权转让平台进行转让退出。该计划所对应的标的由系统实现标的分散出借。
                             </Tab>
                             <Tab title="收益计算" show={ false }>
                                 <p>出借锁定期：<span className="notice">{productDetail.leastPeriod}{productDetail.leastPeriodUnit}</span></p>
@@ -131,7 +131,7 @@ export default class extends Component {
                         <ProBottom />
                     </div>
                     <div className="div-bottom-btn">
-                        <button className="xxd-xl-btn" onClick={ this.openApp }>心动了吗？赶紧前往新新贷APP吧</button>
+                        <button className="xxd-xl-btn" onClick={ this.openApp }>心动了吗？赶紧前往_APP吧</button>
                     </div>
                     <HomeIco />
                 </div>

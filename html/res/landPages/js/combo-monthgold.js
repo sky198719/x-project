@@ -12,7 +12,7 @@ require(['base', 'float', 'trackBase', "requirejs"], function ($, float, track) 
     xscpData();
     xybData();
     bbgsData();
-    //  月进斗金
+    //  _
     function yjdjData() {
         $.xxdAjax({
             url      : dataUrl.yjdjUrl,
@@ -73,7 +73,7 @@ require(['base', 'float', 'trackBase', "requirejs"], function ($, float, track) 
 
         });
     }
-    //新元宝
+    //_
     function xybData() {
         $.xxdAjax({
             url      : dataUrl.xybUrl,
@@ -153,7 +153,7 @@ require(['base', 'float', 'trackBase', "requirejs"], function ($, float, track) 
 
 var timer = new Date();
 var myTime = timer.getTime(); //本地时间
-//月月派
+//_
 $.ajax({
     url:'/tradeCenter/investBiz/showStatus/YYP',
     type:'get',

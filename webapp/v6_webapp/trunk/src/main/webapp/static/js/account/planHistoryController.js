@@ -64,7 +64,7 @@ define(['js/account/myPlanListView','js/plan/planUtils','js/utils/date'],functio
             //==========================切记此处不能删除============================
         },
         /**
-         * 新元宝记录
+         * _记录
          * @param currentPage  当前页
          * @param type 刷新类型
          */
@@ -97,7 +97,7 @@ define(['js/account/myPlanListView','js/plan/planUtils','js/utils/date'],functio
             }, 5000);
         },
         /**
-         * 新元宝列表事件绑定
+         * _列表事件绑定
          */
         myPlanListBindEvent: function () {
             var bindings = [
@@ -152,10 +152,10 @@ define(['js/account/myPlanListView','js/plan/planUtils','js/utils/date'],functio
 
             var wy = appFunc.fmoney(tendermoney * (forfeitpercent / 100),2);
             var hongbaoMoney = planHistoryCtrl.investmentDetail(joinid);
-            xxdApp.confirm(PlanUtils.schemeType(ptype) + ' - ' + pname + '正处于锁定期，你若选择退出，会产生违约行为，平台会征收你' + forfeitpercent + '%的违约金，(若您使用了红包，红包金额也会收回)提交后不可取消，确认要退出吗？<br>违约金：'+wy+'元' + (hongbaoMoney > 0 ? '<br>扣除红包金额：' + hongbaoMoney +'元' : ''), '提前退出新元宝', function () {
-                //新元宝提前退出GA
-                gaClickEvent({property1:"转出",property2: "新元宝转出", property3:window.location});
-                xxdApp.modalPassword('请输入支付密码', '提前退出新元宝', function (password) {
+            xxdApp.confirm(PlanUtils.schemeType(ptype) + ' - ' + pname + '正处于锁定期，你若选择退出，会产生违约行为，平台会征收你' + forfeitpercent + '%的违约金，(若您使用了红包，红包金额也会收回)提交后不可取消，确认要退出吗？<br>违约金：'+wy+'元' + (hongbaoMoney > 0 ? '<br>扣除红包金额：' + hongbaoMoney +'元' : ''), '提前退出_', function () {
+                //_提前退出GA
+                gaClickEvent({property1:"转出",property2: "_转出", property3:window.location});
+                xxdApp.modalPassword('请输入支付密码', '提前退出_', function (password) {
                     if (password == null || password == '') {
                         xxdApp.alert('请输入支付密码！');
                         return;
@@ -175,7 +175,7 @@ define(['js/account/myPlanListView','js/plan/planUtils','js/utils/date'],functio
                             if (result == 500) {
                                 xxdApp.loginScreen();
                             } else if (result == 0) {
-                                redemption({id:data.productId,name:"新元宝赎回",category:"新元宝/" + data.apr + "%/"  + data.terms + "个月",price:data.price,tradeId:data.tradeid,affiliation:data.servicenum});
+                                redemption({id:data.productId,name:"_赎回",category:"_/" + data.apr + "%/"  + data.terms + "个月",price:data.price,tradeId:data.tradeid,affiliation:data.servicenum});
                                 planHistoryCtrl.pullToRefresh();
                             } else if (result == -1) {
                                 xxdApp.alert("获取支付密码异常！");
@@ -219,14 +219,14 @@ define(['js/account/myPlanListView','js/plan/planUtils','js/utils/date'],functio
                             planHistoryCtrl.advanceQuit(planId, ptype, pname, forfeitpercent,tendermoney,joinid);
                         }
                     } else {
-                        xxdApp.alert("获取新元宝信息有误，请重新尝试或联系客服。", "提示");
+                        xxdApp.alert("获取_信息有误，请重新尝试或联系客服。", "提示");
                     }
                 }
             });
         },
         planAgreement: function () {
             var planId = $(this).attr("data-id");
-            // 新元宝协议
+            // _协议
             req.callJSON({
                 url: "xplan/agreement/" + planId + ".do?noShow=true",
                 data: {},
@@ -275,7 +275,7 @@ define(['js/account/myPlanListView','js/plan/planUtils','js/utils/date'],functio
                         if (data.userSchemeInfo.collectiontype == 1) {
                             data.userSchemeInfo.collectiontype = '收益再投标';
                         } else if (data.userSchemeInfo.collectiontype == 2) {
-                            data.userSchemeInfo.collectiontype = '提至新新贷账户';
+                            data.userSchemeInfo.collectiontype = '提至_账户';
                         }
                         data.userSchemeInfo.account = appFunc.fmoney(data.userSchemeInfo.account, 2);
                     }

@@ -76,7 +76,7 @@
 		
 	</section>
 	<footer class="ui-footer" style="height:85px;font-size:13px;color:#AEAEAE;text-align:center;">
-		<span>新新贷（上海）金融信息服务有限公司</span><br>
+		<span>_（上海）金融信息服务有限公司</span><br>
 		<span>上海市虹口区四川北路859号中信广场28楼</span><br>
 		<span>客服电话：4000-169-521</span><br>
 		<span>服务时间：09:00-18:00（工作日）</span>

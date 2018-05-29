@@ -100,7 +100,7 @@ define(['js/plan/planUtils','js/utils/animateNumber'], function (PlanUtils,anima
                             }, 1000));
                         });
                     } catch (e) {
-                        console.log('新元宝定时器异常');
+                        console.log('_定时器异常');
                     }
                 }
 

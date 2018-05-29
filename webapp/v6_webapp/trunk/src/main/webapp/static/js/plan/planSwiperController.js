@@ -1,5 +1,5 @@
 /**
- * 新元宝轮播图片
+ * _轮播图片
  */
 define(['js/plan/planSwiperView'], function (planSwiperView) {
     var planSwiperCtrl = {

@@ -58,7 +58,7 @@ require(['jquery', 'requirejs', 'trackBase', 'com'], function ($, requirejs, tra
                     $('.dt_id_card_no').text(oUser.idCardNo);
                     // 联系电话
                     $('.dt_mobile').text(oUser.mobile);
-                    // 新新贷用户名
+                    // _用户名
                     $('.dt_user_name').text(oUser.userName);
 
                     // 产品名称

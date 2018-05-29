@@ -20,15 +20,15 @@ public class FundConstant {
     
     public static final int FUND_TRADE_INITIATOR_SYSTEM = 2;//系统发起
 	
-    /**日日盈交易发起人类型，1用户*/
+    /**_交易发起人类型，1用户*/
     public static int FUND_USERTRADE_INITIATOR_USER = 1;
-    /**日日盈交易发起人类型，2系统*/
+    /**_交易发起人类型，2系统*/
     public static int FUND_USERTRADE_INITIATOR_SYS = 2;
-    /**日日盈交易Token失效错误*/
+    /**_交易Token失效错误*/
     public static int FUND_TRADE_TOKEN_ERROR = 301;
 
-    /**日日盈申购开关*/
+    /**_申购开关*/
     public static String FUND_PURCHASE_SWITCH = "FUND_PURCHASE_SWITCH";
-    /**日日盈赎回开关*/
+    /**_赎回开关*/
     public static String FUND_RANSOM_SWITCH = "FUND_RANSOM_SWITCH";
 }

@@ -59,7 +59,7 @@ define([], function () {
 			      '</div>' +
 			      '<div class="picker-modal-inner">' +
 			        '<div class="content-block" style="color:#8D8D8D;">' +
-				          '<p>新新币即在新新贷网站可兑换相应现金的虚拟币。<br>' +
+				          '<p>新新币即在_网站可兑换相应现金的虚拟币。<br>' +
 					       '新新币兑换人民币的比例为50:1，即50个新新币可兑换1元人民币。<br>' +
 					       '新新币主要在新新商城进行消费。' +
 					      '</p>' +

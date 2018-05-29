@@ -206,7 +206,7 @@ export default class extends Component {
                     transparent
                     onClose={this.onClose('modals')}
                     title="提示"
-                    footer={[{ text: '立即前往新新贷金融app', onPress: () => { 
+                    footer={[{ text: '立即前往_金融app', onPress: () => { 
                         bridge.open({
                             pagename: 'home'
                         } , ()=>{
@@ -219,7 +219,7 @@ export default class extends Component {
                     } }]}
                 >
                     <div style={{ overflow: 'scroll' }}>
-                    为了保障您的资金安全，请您前往新新贷金融app进行提现
+                    为了保障您的资金安全，请您前往_金融app进行提现
                     </div>
                 </Modal>
             </div>

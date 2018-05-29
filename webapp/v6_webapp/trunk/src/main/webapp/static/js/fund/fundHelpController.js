@@ -2,7 +2,7 @@
  * Created by chaihuangqi on 2015/11/6.
  */
 /**
- * 日日盈帮助页面
+ * _帮助页面
  */
 define(function () {
     var fundHelpCtrl = {

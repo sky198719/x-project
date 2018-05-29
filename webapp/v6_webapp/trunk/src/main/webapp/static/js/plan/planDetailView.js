@@ -34,7 +34,7 @@ define(['js/utils/date','js/plan/planUtils'], function (DateHandle,PlanUtils) {
                 } else if (status == 6) {<!--撤销-->
                     $$("#plan_goTender").addClass("btn-disabled");
                     $$("#plan_goTender").attr("disabled", "disabled");
-                    $$("#plan_goTender").html("撤销的新元宝，不能操作");
+                    $$("#plan_goTender").html("撤销的_，不能操作");
                     $$("#plan_goTender").show();
                 } else if (status == 7) {<!--等待公开加入-->
                     $$("#plan_goTender").addClass("btn-xyb-full");
@@ -73,12 +73,12 @@ define(['js/utils/date','js/plan/planUtils'], function (DateHandle,PlanUtils) {
             });
         },
         /**
-         * 新元宝信息
+         * _信息
          * @param data
          */
         planInfo: function (data,joinId) {
         	try{
-                //#14302展示用户加入新元宝信息 锁定期、已提前退出、已退出、退出中、开放期
+                //#14302展示用户加入_信息 锁定期、已提前退出、已退出、退出中、开放期
                 var status = data.scheme.schemeStatus;
                 var displayUserInfo = false;
                 if(status == 3||status == 4||status == 5||status == 8||status==9){
@@ -139,7 +139,7 @@ define(['js/utils/date','js/plan/planUtils'], function (DateHandle,PlanUtils) {
 
             html += '<p>1.收益不循环投资，直接返还账户';
             html += '<br>2.收益循环再投资，随本金一次性返还账户';
-            html += '<br><span class="font-red">3.锁定期结束后次日本金及收益自动返还至新新贷账户</span></p>';
+            html += '<br><span class="font-red">3.锁定期结束后次日本金及收益自动返还至_账户</span></p>';
             html += '<h4 class="font-dark font-bold">期限说明</h4>';
 
             html += '<p>投资锁定期：<span class="font-red font18">' + data.scheme.closeterm + '个月</span></p>';

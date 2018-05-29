@@ -9,7 +9,7 @@ define(function(){
                  }
              ];
             appFunc.bindEvents(binding);
-            $$("title").html("月月派专题页");
+            $$("title").html("_专题页");
         },
         yypButton: function(){
         	GS.loadPage("popular/financesList.html?path=popular");

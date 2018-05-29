@@ -147,7 +147,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs", "paging"],
             $('#voiceCode').html('密码必须是8-20位的数字和字母的组合！');
             return false;
         }if(!$('#ruleCheck').is(':checked')){
-            $('#voiceCode').html('请先阅读并同意《新新贷使用协议》！');
+            $('#voiceCode').html('请先阅读并同意《_使用协议》！');
             return false;
         }if($('#mobileCode').val() == '' || $('#mobileCode').val() == null || $('#mobileCode').val() == undefined){
             $('#voiceCode').html('请输入手机验证码！');
@@ -463,7 +463,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs", "paging"],
         }
     });
 
-    //新元宝状态
+    //_状态
     $.ajax({
         url:'../../../activityCenter/doubleDanActivityBase/getActivitySchemeList',
         type:'get',
@@ -476,7 +476,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs", "paging"],
         success:function(data){
             if(data.data.oneMonthScheme == -1){
                 $('#oneMonth').click(function(){
-                    alert('没有可投的新元宝活动标与普通标！');
+                    alert('没有可投的_活动标与普通标！');
                 });
             }else{
                 $('#oneMonth').click(function(){
@@ -485,7 +485,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs", "paging"],
             }
             if(data.data.twelveMonthScheme == -1){
                 $('#twelveMonth').click(function(){
-                    alert('没有可投的新元宝活动标与普通标！');
+                    alert('没有可投的_活动标与普通标！');
                 });
             }else{
                 $('#twelveMonth').click(function(){

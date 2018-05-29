@@ -117,7 +117,7 @@ define(['js/user/login', 'js/common/menu'], function (login, menu) {
             GS.loadPage("borrow/borrowListV2.html");
         },
         /**
-         * 跳转到新元宝列表
+         * 跳转到_列表
          */
         toPlanList: function () {
             xxdApp.closeModal('.popover');

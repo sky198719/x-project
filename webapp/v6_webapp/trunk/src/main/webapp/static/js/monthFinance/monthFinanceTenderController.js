@@ -171,7 +171,7 @@ define(['js/borrowTender/borrowTenderView', 'js/utils/date', 'js/utils/dayContro
                         xxdApp.addNotification({
                             title: '温馨提示',
                             hold: 3000,
-                            message: '获取月进斗金产品信息失败，请稍后重试...'
+                            message: '获取_产品信息失败，请稍后重试...'
                         });
                     }
                     //monthFinanceTenderCtrl.loadMonthFinanceAgreement();
@@ -206,7 +206,7 @@ define(['js/borrowTender/borrowTenderView', 'js/utils/date', 'js/utils/dayContro
                 success: function (result) {
                     $$(".popup-bidhistory").html(result);
                     //            var tenderAmount = $$("#tenderAmount").val();
-                    $$("#monthFinanceAgreement .itemName").html(itemName); 				//计划名称					---->	月进斗金
+                    $$("#monthFinanceAgreement .itemName").html(itemName); 				//计划名称					---->	_
                     //            $$("#monthFinanceAgreement .applyJoinTime").html(applyJoinTime); 	//申请加入时间（年月日）		---->	2015/11/25
                     //            $$("#monthFinanceAgreement .joinAmount").html(tenderAmount);		//加入金额（单位：人民币/元）	---->	5000
                     $$("#monthFinanceAgreement .itemDays").html(itemDays);			//合约期限（日;包含节假日）	---->	31
@@ -248,7 +248,7 @@ define(['js/borrowTender/borrowTenderView', 'js/utils/date', 'js/utils/dayContro
                 var apr = $$(".monthFinanceTender #tenderApr").val();
                 var terms = $('.monthFinanceTender #itemName').html();
                 var name = terms;
-                var category = "月进斗金/" + apr + "%/" + timelimit + "天";
+                var category = "_/" + apr + "%/" + timelimit + "天";
                 //进入结账
                 CheckOut({id: $$("#monthFinanceId").val(), name: name, category: category});
             } catch (e) {
@@ -264,7 +264,7 @@ define(['js/borrowTender/borrowTenderView', 'js/utils/date', 'js/utils/dayContro
 
             var agreement = $$("#agreement").is(':checked');
             if (!agreement) {
-                xxdApp.alert("请先阅读并同意《月进斗金服务协议》、《自动配标委托书》！", "抱歉");
+                xxdApp.alert("请先阅读并同意《_服务协议》、《自动配标委托书》！", "抱歉");
                 return;
             }
             var monthFinanceId = $$("#monthFinanceId").val();
@@ -443,7 +443,7 @@ define(['js/borrowTender/borrowTenderView', 'js/utils/date', 'js/utils/dayContro
             }
 
             if (!$$(".monthFinanceTender #agreement").is(':checked')) {
-                xxdApp.alert("请阅读并同意《月进斗金服务协议》！", '提示');
+                xxdApp.alert("请阅读并同意《_服务协议》！", '提示');
                 return false;
             }
         },

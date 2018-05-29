@@ -135,9 +135,9 @@ export default class extends React.Component {
             <div>
                 <Head>
                     <link rel='stylesheet' type='text/css' href="/static/mods/home/_.css" />
-                    <title>【新新贷官网】专业透明的网络借贷平台，P2P网贷平台，网上贷款借款、投融资信息中介平台</title>
-                    <meta name="keywords" content="新新贷，P2P网贷，P2P理财,投资理财，新新贷理财，网上理财，债权转让，新元宝，月月派，新手专享，投融资,贷款，企业贷款，网上贷款，贷款公司，P2P贷款，无抵押小额贷款，借款" />
-                    <meta name="description" content="新新贷是中国专业的互联网金融P2P网络借贷信息中介平台，为出借人和借款人提供省心的互联网金融信息服务。资金银行存管、严格的风控体系、信息披露透明等多重安全保障措施。新手专享14%、新元宝，月月派等优质产品任您选择，投融资，投资理财，P2P理财、P2P贷款、无抵押贷款、信用贷款，就上新新贷！" />
+                    <title>【_官网】专业透明的网络借贷平台，P2P网贷平台，网上贷款借款、投融资信息中介平台</title>
+                    <meta name="keywords" content="_，P2P网贷，P2P理财,投资理财，_理财，网上理财，债权转让，_，_，新手专享，投融资,贷款，企业贷款，网上贷款，贷款公司，P2P贷款，无抵押小额贷款，借款" />
+                    <meta name="description" content="_是中国专业的互联网金融P2P网络借贷信息中介平台，为出借人和借款人提供省心的互联网金融信息服务。资金银行存管、严格的风控体系、信息披露透明等多重安全保障措施。新手专享14%、_，_等优质产品任您选择，投融资，投资理财，P2P理财、P2P贷款、无抵押贷款、信用贷款，就上_！" />
                 </Head>
                 <Ceiling></Ceiling>
                 <div className="home-container">
@@ -219,7 +219,7 @@ export default class extends React.Component {
                                     <a href="http://www.xinxindai.com?mobile=true" className="dmp-click" dev_id="A2.1-11" eventtype="jump">电脑版</a>
                                     <a href="/contactus" className="dmp-click" dev_id="A2.1-12" eventtype="jump">联系我们</a>
                                 </p>
-                                <p className="company-name">新新贷（上海）金融信息服务有限公司</p>
+                                <p className="company-name">_（上海）金融信息服务有限公司</p>
                                 <p className="company-tips">市场有风险，出借需谨慎</p>
                             </div>
                         </div>

@@ -109,7 +109,7 @@ public class AccountInfoVo {
         private Float sumStep = 0F;
 
         /**
-         * 日日盈
+         * _
          */
         private Float sumRry = 0F;
 
@@ -122,7 +122,7 @@ public class AccountInfoVo {
          */
         private Float sumXinShouBiao = 0F;
         /**
-         * 新元宝
+         * _
          */
         private Float sumXinYuanBao = 0F;
 

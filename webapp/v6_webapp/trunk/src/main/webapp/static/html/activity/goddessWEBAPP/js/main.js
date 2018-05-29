@@ -36,7 +36,7 @@ require(['jquery', 'jqmd5','analytics_plugin'], function (jquery, md5) {
     var popularizeCode;
     var sinaParam = {
         appkey: '3921074379',
-        source: '新新贷',
+        source: '_',
         content: 'utf-8'
     };
     var dataPosition = [
@@ -352,7 +352,7 @@ require(['jquery', 'jqmd5','analytics_plugin'], function (jquery, md5) {
                 url = escape(url);
                 shareUrl.push(url);
                 shareUrl.push("&title=");
-                shareUrl.push("【新新贷】女神节一起来唤醒女神吧！还有周大福钻戒、香奈儿口红、SK-II等豪礼相送哟！");
+                shareUrl.push("【_】女神节一起来唤醒女神吧！还有周大福钻戒、香奈儿口红、SK-II等豪礼相送哟！");
                 shareUrl.push("&pic=");
                 shareUrl.push(webappUrl + "/static/html/activity/goddessWEBAPP/img/share2.jpg");
                 window.open(shareUrl.join(''));
@@ -376,7 +376,7 @@ require(['jquery', 'jqmd5','analytics_plugin'], function (jquery, md5) {
                 }
                 var share = webappUrl + "/static/html/activity/goddessWEBAPP/invitation.html?uuid=" + popularizeCode + "&actCode=" + actCode;
                 share = escape(share);
-                var content = "【新新贷】女神节一起来唤醒女神吧！还有周大福钻戒、香奈儿口红、SK-II等豪礼相送哟！戳>>  " + share;
+                var content = "【_】女神节一起来唤醒女神吧！还有周大福钻戒、香奈儿口红、SK-II等豪礼相送哟！戳>>  " + share;
                 var symbol = "";
                 var u = navigator.userAgent;
                 if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {

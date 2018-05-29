@@ -14,7 +14,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs"], function 
             phoneExistence:'您输入的手机号已被注册！',
             pswPhoneExist:'密码不能包括手机号！',
             errorMsg:'请检查您的网络！',
-            argeeInfo:'请勾选《新新贷使用协议》'
+            argeeInfo:'请勾选《_使用协议》'
 
         };
         var dataUrl={

@@ -61,20 +61,20 @@ public class PlanConstant {
 
 
     /**
-     * 新元宝类型，1：新元宝季季盈
+     * _类型，1：_季季盈
      */
     public static final int SCHEME_TYPE_ONE = 1;
-    public static final String SCHEME_TYPE_NAME_ONE = "新元宝季季盈";
+    public static final String SCHEME_TYPE_NAME_ONE = "_季季盈";
 
     /**
-     * 新元宝类型，2：新元宝双季盈
+     * _类型，2：_双季盈
      */
     public static final int SCHEME_TYPE_TWO = 2;
-    public static final String SCHEME_TYPE_NAME_TWO = "新元宝双季盈";
+    public static final String SCHEME_TYPE_NAME_TWO = "_双季盈";
 
     /**
-     * 新元宝类型，3：新元宝年年盈
+     * _类型，3：_年年盈
      */
     public static final int SCHEME_TYPE_THREE = 3;
-    public static final String SCHEME_TYPE_NAME_THREE = "新元宝年年盈";
+    public static final String SCHEME_TYPE_NAME_THREE = "_年年盈";
 }

@@ -346,7 +346,7 @@ require(['base', "trackBase", 'store', 'detail', 'juicer'
             tenderAmount: +$('#investMoney').val()
         }
         if ($(".authorization >input").prop('checked') == false) {
-            $('.pop-error').html('请勾选同意新新贷资金出借风险提示函').removeClass('hide');
+            $('.pop-error').html('请勾选同意_资金出借风险提示函').removeClass('hide');
             return;
         }
         //支付密码校验
@@ -438,7 +438,7 @@ require(['base', "trackBase", 'store', 'detail', 'juicer'
             "<img src='/userCenter/kaptcha.jpg" +
             "' alt='' class='verifyUrl'><a href='#' class='refresh'><i></i></a>" +
             "</div> " +
-            "<div class='authorization'><input type='checkbox' checked>我已同意 <a href='/introduce/risknotice-agreement.jsp' target='_blank'>《新新贷资金出借风险提示函》</a></div> " +
+            "<div class='authorization'><input type='checkbox' checked>我已同意 <a href='/introduce/risknotice-agreement.jsp' target='_blank'>《_资金出借风险提示函》</a></div> " +
             "<p class='pop-error hide'></p>" +
             "<a href='#' class='btn J_purchase'>确认投标</a> " +
             "</div> " +

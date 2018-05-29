@@ -27,7 +27,7 @@ public class AccountConsts {
     //优选理财账户
     public final static String ACCOUNT_X_PLAN_ACCOUNT = "1004";
     
-    //日日盈账户
+    //_账户
     public final static String ACCOUNT_FUND_TYPE_ACCOUNT = "1005";
 
 

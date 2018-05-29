@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestHeader;
 
 /**
- * 查询用户是否投资过七天大胜、日日盈、步步高升
+ * 查询用户是否投资过七天大胜、_、步步高升
  * @author EvanChou
  * @date 2018-02-02 上午11:38
  */

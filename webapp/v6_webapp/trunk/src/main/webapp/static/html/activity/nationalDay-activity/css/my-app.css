@@ -886,7 +886,7 @@ html:not(.watch-active-state) .list-block .item-link:active, .list-block .item-l
     }
 }
 
-/*20150507 新元宝*/
+/*20150507 _*/
 .none-xyb {
     padding: 10%;
 }
@@ -1899,7 +1899,7 @@ a.link-active:active {
 
 /*首页改版 end*/
 
-/*春节加息 月进斗金 七天大胜 start*/
+/*春节加息 _ 七天大胜 start*/
 .mothm-btn {
     height: 40px;
     background-color: #fd3450;
@@ -1913,7 +1913,7 @@ a.link-active:active {
     background-color: #fd3450;
 }
 
-/*春节加息 月进斗金 七天大胜 end*/
+/*春节加息 _ 七天大胜 end*/
 
 /*投资记录investrecord.html  start*/
 .content-block-title + .card, .content-block-title + .content-block, .content-block-title + .list-block .mt0 {

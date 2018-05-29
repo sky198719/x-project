@@ -9,7 +9,7 @@ define(['js/utils/animateNumber','js/fund/fundAnimate','js/utils/date','js/activ
 	  var categorys = "";
     var fundUnInvestedCtrl = {
         init: function () {
-            //判断是否投资过跳转日日盈首页
+            //判断是否投资过跳转_首页
             if (appFunc.isLogin()) {
                 fundUnInvestedCtrl.isInvested();
             }
@@ -59,8 +59,8 @@ define(['js/utils/animateNumber','js/fund/fundAnimate','js/utils/date','js/activ
                         
                         //产品详情
                         bid = data.fundApr.fcode;
-                        categorys = "日日盈/"+apr+"%/1天";
-                      try{product_detail({id:bid,name:"日日盈：日日盈",category:categorys});}catch(e){} 
+                        categorys = "_/"+apr+"%/1天";
+                      try{product_detail({id:bid,name:"_：_",category:categorys});}catch(e){} 
                         
 
                         if(isActivity != undefined && isActivity == 1) {
@@ -136,7 +136,7 @@ define(['js/utils/animateNumber','js/fund/fundAnimate','js/utils/date','js/activ
                     $$('div[name="daydayEarningJoin"]').addClass("fund-rightjoin-button-disable");
                     $$('div[name="daydayEarningJoin"]').html("即将下架");
 
-                    $$("#notice_join").html("日日盈即将下架，请您及时做好安排，建议投资步步高升、新元宝等其他产品");
+                    $$("#notice_join").html("_即将下架，请您及时做好安排，建议投资步步高升、_等其他产品");
                     $$("#notice_join").css("color","red");
                     $$("#notice_join").css("text-align","left");
                 }
@@ -147,14 +147,14 @@ define(['js/utils/animateNumber','js/fund/fundAnimate','js/utils/date','js/activ
             GS.loadPage("fund/fundHelp.html?path=fund");
         },
 
-        /** 日日盈确认转入页 */
+        /** _确认转入页 */
         transferIn: function () {
             if ($$('div[name="daydayEarningJoin"]').hasClass("fund-rightjoin-button-disable")) {
                 return;
             }
             try {
             	//XXD_TRACK._trackEvent({category: "webpp_fund_in", action: "buyFund_tochange_now", label: "立即加入", value: "", custval: "" });
-            	add_to_cart({id:bid,name:"日日盈：日日盈",category:categorys});
+            	add_to_cart({id:bid,name:"_：_",category:categorys});
             } catch (e) {}
             //向server查询是否已满额&是否超过个人投资上限
             fundUnInvestedCtrl.selectFundLimitation();
@@ -171,7 +171,7 @@ define(['js/utils/animateNumber','js/fund/fundAnimate','js/utils/date','js/activ
                 success: function (data) {
                     if (data != null) {
                         if (data.isTotalFull == "true") {
-                            xxdApp.alert("日日盈已满额，暂不能转入。", '提示');
+                            xxdApp.alert("_已满额，暂不能转入。", '提示');
                         } else if (data.isPersonFull == "true") {
                             xxdApp.alert("您累计的转入金额已达" + appFunc.fmoney(data.fund.userMostTender, 2) + "投资上限，暂不能转入", '提示');
                         } else {
@@ -300,11 +300,11 @@ define(['js/utils/animateNumber','js/fund/fundAnimate','js/utils/date','js/activ
             var purchaseSwitch = $$('#un_v_purchase_switch').val();
             if (isBalance == "1" || isLastBalance == "1") {
                 fundUnInvestedCtrl.enablePurchase("false");
-                $$("#notice_join").html("系统正在结算收益，暂不能加入日日盈");
+                $$("#notice_join").html("系统正在结算收益，暂不能加入_");
             } else {
                 if (purchaseSwitch == "1") {
                     fundUnInvestedCtrl.enablePurchase("false");
-                    $$("#notice_join").html("因系统维护，暂不能加入日日盈");
+                    $$("#notice_join").html("因系统维护，暂不能加入_");
                 } else {
                     fundUnInvestedCtrl.enablePurchase("true");
                 }

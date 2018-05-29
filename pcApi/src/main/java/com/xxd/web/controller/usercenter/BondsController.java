@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BondsController extends AbstractIsInvestController {
 
     /**
-     * 新元宝
+     * _
      */
     @RequestMapping(value = "/goldIngot.html")
     public String goldIngot(Model model) {
@@ -21,7 +21,7 @@ public class BondsController extends AbstractIsInvestController {
     }
 
     /**
-     * 月进斗金.
+     * _.
      */
     @RequestMapping(value = "/monthgold.html")
     public String monthgold(Model model) {
@@ -30,7 +30,7 @@ public class BondsController extends AbstractIsInvestController {
     }
 
     /**
-     * 月月派.
+     * _.
      */
     @RequestMapping(value = "/monthSend.html")
     public String monthSend(Model model) {
@@ -66,7 +66,7 @@ public class BondsController extends AbstractIsInvestController {
     }
 
     /**
-     * 新元宝
+     * _
      */
     @RequestMapping(value = "/stepDetail.html")
     public String stepDetail(Model model) {

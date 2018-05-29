@@ -14,7 +14,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs", "paging"],
             phoneExistence:'您输入的手机号已被注册！',
             pswPhoneExist:'密码不能包括手机号！',
             errorMsg:'请检查您的网络！',
-            argeeInfo:'请勾选《新新贷使用协议》'
+            argeeInfo:'请勾选《_使用协议》'
 
         };
         var dataUrl={
@@ -194,7 +194,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs", "paging"],
         //展示数据
          qtdsData();
          xybData();
-        //新元宝
+        //_
         function xybData() {
             $.xxdAjax({
                 url      : dataUrl.xybUrl,

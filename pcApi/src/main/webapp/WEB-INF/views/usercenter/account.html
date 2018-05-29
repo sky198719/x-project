@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" th:href="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/css/i/favicon.ico'}">
     <link rel="Bookmark" th:href="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/css/i/favicon.ico'}">
-    <title>我的账户-个人资料-我的新新贷</title>
-    <meta name="keywords" content="新新贷，P2P网贷，P2P理财，投资理财，网上理财，新元宝，月月派，新手专享，投融资，贷款，企业贷款，无抵押小额贷款，借款"/>
+    <title>我的账户-个人资料-我的_</title>
+    <meta name="keywords" content="_，P2P网贷，P2P理财，投资理财，网上理财，_，_，新手专享，投融资，贷款，企业贷款，无抵押小额贷款，借款"/>
     <meta name="description"
-          content="新新贷是中国专业的互联网金融P2P网络借贷信息中介平台，为出借人和借款人提供省心的互联网金融信息服务。资金银行存管、严格的风控体系、信息披露透明等多重安全保障措施。"/>
+          content="_是中国专业的互联网金融P2P网络借贷信息中介平台，为出借人和借款人提供省心的互联网金融信息服务。资金银行存管、严格的风控体系、信息披露透明等多重安全保障措施。"/>
     <link th:href="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/mods/user/account/_.css'}"
           rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
     <div class="g-top">
         <div class="g-top-con">
             <div class="container-1200">
-                <a href="../../">首页</a> &gt; <a href="/usercenter/accountInfo.html">我的新新贷</a> &gt;
+                <a href="../../">首页</a> &gt; <a href="/usercenter/accountInfo.html">我的_</a> &gt;
                 <a href="javascript:void(0);">个人资料</a> &gt; <a href="javascript:void(0);">我的账户</a>
             </div>
         </div>
@@ -48,7 +48,7 @@
                                 <span th:if="${nowHours ge 18} and ${nowHours le 23}">晚上好，</span>
                                 <a href='/usercenter/personalInfo.html'>[[${globalData.userDetailInfo.data.userDetailInfo.nickname}]]</a>
                                 <a href="/help/aboutcreditlevel.html" class='position'>
-                                    [[${globalData.userDetailInfo.data.userDetailInfo.creditLevel}]]<span class='position-tip hide'>点击查看新新贷信用等级规则<i></i></span>
+                                    [[${globalData.userDetailInfo.data.userDetailInfo.creditLevel}]]<span class='position-tip hide'>点击查看_信用等级规则<i></i></span>
                                 </a>
                             </p>
                             <em>上次登录：[[${globalData.userDetailInfo.data.userDetailInfo.lastLoginTime}]]</em>
@@ -112,7 +112,7 @@
                     <div class='my-property'>
                         <div class='hover-tip'>
                             <span></span>
-                            <p>资产总额=可用余额+新元宝（新手专享）+月进斗金+新元宝+月月派+新手标+散标+冻结金额<i></i></p>
+                            <p>资产总额=可用余额+_（新手专享）+_+_+_+新手标+散标+冻结金额<i></i></p>
                         </div>
                         <div class='centre'>
                             <div class='sum-property'>
@@ -139,25 +139,25 @@
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.mapAccount.frozen, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                 </tr>
                                 <tr name="xszx">
-                                    <td class='J_xszx blue-color'>新元宝（新手专享)</td>
+                                    <td class='J_xszx blue-color'>_（新手专享)</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.xscp30tMap.EFFECTIVEMONEY, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.xscp30tMap.COLLECTEDINTEREST, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.xscp30tMap.COLLECTINTEREST, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                 </tr>
                                 <tr name="yjdj">
-                                    <td class='J_yjdj blue-color'>月进斗金</td>
+                                    <td class='J_yjdj blue-color'>_</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.yuejindoujinMap.EFFECTIVEMONEY, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.yuejindoujinMap.COLLECTEDINTEREST, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.yuejindoujinMap.COLLECTINTEREST, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                 </tr>
                                 <tr name="xyb">
-                                    <td class='J_xyb blue-color'>新元宝</td>
+                                    <td class='J_xyb blue-color'>_</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.xinyuanbaoMap.EFFECTIVEMONEY, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.xinyuanbaoMap.COLLECTEDINTEREST, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.xinyuanbaoMap.COLLECTINTEREST, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                 </tr>
                                 <tr name="yyp">
-                                    <td class='J_yyp blue-color'>月月派</td>
+                                    <td class='J_yyp blue-color'>_</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.yypMap.EFFECTIVEMONEY, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.yypMap.COLLECTEDINTEREST, 1, 'COMMA', 2, 'POINT')}]](元)</td>
                                     <td>[[${#numbers.formatDecimal(globalData.assetStatistics.data.yypMap.COLLECTINTEREST, 1, 'COMMA', 2, 'POINT')}]](元)</td>
@@ -182,7 +182,7 @@
                                 </tr>
                             </table>
                             <p th:if="${isInvestRRY || isInvestQTDS || isInvestBBGS}" class='other-pro hide'>已下架产品：
-                                <span th:if="${isInvestRRY}">日日盈</span>
+                                <span th:if="${isInvestRRY}">_</span>
                                 <span th:if="${isInvestQTDS}">七天大胜</span>
                                 <span th:if="${isInvestBBGS}">步步高升</span>
                                 <i></i>

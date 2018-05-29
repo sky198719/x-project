@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
- * 月进斗金模型
+ * _模型
  */
 @Data
 public class YJDJVo implements Serializable {

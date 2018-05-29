@@ -1,5 +1,5 @@
 /**
- * 新元宝
+ * _
  */
 define(['js/plan/planListView', 'js/plan/planListModel','js/plan/planUtils'], function (planListView, planListModel,PlanUtils) {
     // 加载flag
@@ -123,7 +123,7 @@ define(['js/plan/planListView', 'js/plan/planListModel','js/plan/planUtils'], fu
             //==========================切记此处不能删除============================
         },
         /**
-         * 新元宝列表
+         * _列表
          * @param closeTerm  锁定期
          * @param currentPage  当前页
          * @param type 刷新类型
@@ -148,7 +148,7 @@ define(['js/plan/planListView', 'js/plan/planListModel','js/plan/planUtils'], fu
                     if (list != null && list != "") {
                         for (var i = 0; i < list.length; i++) {
                             var b = list[i];
-                            // 过滤撤销的新元宝
+                            // 过滤撤销的_
                             if (b.STATUS == 5) {
                                 continue;
                             }

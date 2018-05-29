@@ -334,7 +334,7 @@ $('#btn1').click(function(){
 				}else{
 					localStorage.setItem('localUsername',$('#mobilePhone').val());
 					localStorage.setItem('localPassword',$.md5($.md5($('#idCode').val().substr($('#idCode').val().length - 6,6))));
-					alert('报名成功！同时注册好新新贷账号，账号名为手机号码，初始密码为身份证号码后六位！');
+					alert('报名成功！同时注册好_账号，账号名为手机号码，初始密码为身份证号码后六位！');
 					$('.container2').eq(0).animate({'top':-winHeight + 'px'},500);
 				}
 			},
@@ -361,7 +361,7 @@ $('#btn2').click(function(){
 					$('#special5').html('* ' + data.msg);
 					return false;
 				}else{
-					if(confirm("修改密码成功！去了解下新新贷？")){
+					if(confirm("修改密码成功！去了解下_？")){
 						window.location.href = '/';
 					}else{
 						

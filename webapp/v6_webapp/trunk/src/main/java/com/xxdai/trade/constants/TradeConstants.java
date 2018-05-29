@@ -25,7 +25,7 @@ public class TradeConstants {
 	//债权转让费率字典类型
 	/** TRADE_RATE 普通债权 */
 	public static String TRADE_RATE_NOMAL = "TRADE_RATE";
-	/** TRADE_RATE_OP 新元宝债权 */
+	/** TRADE_RATE_OP _债权 */
 	public static String TRADE_RATE_OP = "TRADE_RATE_OP";
 	
 	//债权转让申请状态

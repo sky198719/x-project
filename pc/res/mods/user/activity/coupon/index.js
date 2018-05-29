@@ -18,9 +18,9 @@ require(['base', "trackBase", 'store', 'side', 'juicer'
     var productType = [
         {'type': 2, 'value': "步步高升"},
         {'type': 3, 'value': "七天大胜"},
-        {'type': 4, 'value': "月进斗金"},
-        {'type': 5, 'value': "新元宝"},
-        {'type': 6, 'value': "月月派"},
+        {'type': 4, 'value': "_"},
+        {'type': 5, 'value': "_"},
+        {'type': 6, 'value': "_"},
         {'type': 7, 'value': "散标"},
         {'type': 8, 'value': "债权"}
 

@@ -11,7 +11,7 @@ import com.xxd.ha.hystrix.vo.tradecenter.detail.InvestProductDetailVo;
 import com.xxd.ha.utils.HeaderHelper;
 
 /**
- * 月进斗金详情  登陆状态下详情
+ * _详情  登陆状态下详情
  */
 public class YjdjDetailLoginedCommand extends AbstractHystrixCommand<JSONObject> {
 

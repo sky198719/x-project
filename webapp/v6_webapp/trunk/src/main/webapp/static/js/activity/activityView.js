@@ -12,7 +12,7 @@ define(function(){
                 $$('#typeTest').html('你的理财战斗力为：<br><br><br><a style="color:#682323">觉悟吧骚年！<br>点击查看<span class="f-36">最便捷</span>的赚钱方式吧！</a>');
                 $$('#gofixedbg').html('求安慰')
             } else if(result == 2){
-                $$('#typeTest').html('你的理财战斗力为：<br><br><br><a style="color:#682323">你还可以更有钱，试试用<span class="f-36">新新贷</span>吧！</a>');
+                $$('#typeTest').html('你的理财战斗力为：<br><br><br><a style="color:#682323">你还可以更有钱，试试用<span class="f-36">_</span>吧！</a>');
             } else if(result == 3){
                 $$('#typeTest').html('你的理财战斗力为：<br><br><br><a style="color:#682323">你那么会赚钱，试试<span class="f-36">钱生钱</span>的快感吧！</a>');
             } else if(result >= 4){

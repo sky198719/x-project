@@ -310,7 +310,7 @@ require(['base', "register", 'login', "requirejs", 'json','juicer'], function ($
                     main.toligin();
                     return;
                 }
-                //月月派的产品详情页面
+                //_的产品详情页面
                 $.ajax({
                     url:'/m/yyp/index.do',
                     type:'get',

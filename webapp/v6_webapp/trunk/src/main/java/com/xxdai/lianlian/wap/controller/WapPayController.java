@@ -233,14 +233,14 @@ public class WapPayController extends BaseController {
                 sb.append(id_no);
             }
             // 订单描述
-            String info_order = "新新贷线上充值";
+            String info_order = "_线上充值";
             sb.append("&info_order=");
             sb.append(info_order);
             // 传入参数交易金额（money_order）
             sb.append("&money_order=");
             sb.append(money_order);
             // 商品名称
-            String name_goods = "新新贷线上充值";
+            String name_goods = "_线上充值";
             sb.append("&name_goods=");
             sb.append(name_goods);
             // 传入参数签约协议号（no_agree）

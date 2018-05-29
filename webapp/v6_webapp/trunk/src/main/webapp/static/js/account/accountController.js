@@ -180,7 +180,7 @@ define(['chart', 'chartDoughnut', 'js/account/accountView', 'js/utils/animateNum
                 success: function (data) {
                     // 实名认证 && 支付密码
                     if (!(data.namestatus == '1' && data.paypwd != 0)) {
-                        xxdApp.confirm('您还未完善个人资料，请先完善资料，全面体验新新贷服务', '提示', function () {
+                        xxdApp.confirm('您还未完善个人资料，请先完善资料，全面体验_服务', '提示', function () {
                             GS.loadPage("personal/personalInfo.html");
                         }, function () {
                             return false;

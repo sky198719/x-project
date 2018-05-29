@@ -16,7 +16,7 @@ require(['base', 'float', 'trackBase', 'store', "requirejs", "paging"], function
         phoneExistence: '您输入的手机号已被注册！',
         pswPhoneExist: '密码不能包括手机号！',
         errorMsg: '请检查您的网络！',
-        argeeInfo: '请勾选《新新贷使用协议》'
+        argeeInfo: '请勾选《_使用协议》'
 
     };
     var dataUrl = {
@@ -488,7 +488,7 @@ require(['base', 'float', 'trackBase', 'store', "requirejs", "paging"], function
                         //已登录状态左边显示不一样
                         $('.register').addClass('logged').html("<div class='login-done'> " +
                             "<p>您好，<span id='username'>"+str.data.name+"</span></p> " +
-                            "<p>欢迎使用新新贷！</p> " +
+                            "<p>欢迎使用_！</p> " +
                             "<a href='/xplan/search/list.html'>马上投标</a></div> ");
                         $('.bg6').hide();
                     } else {

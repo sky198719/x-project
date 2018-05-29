@@ -5,7 +5,7 @@
       "accumulatedInvestors": "3374人",
       "mostTenderAmountLabel": "300.00万元",
       "frozenPeriod": "12个月",
-      "name": "月月派",
+      "name": "_",
       "floatingRate": "0.00",
       "leastTenderAmountLabel": "100元",
       "plannedAnnualRateFrom": "10.00",
@@ -24,7 +24,7 @@
       "leastTenderAmountLabel": "100元",
       "limitPurchaseCount": 1,
       "mostTenderAmountLabel": "10000元",
-      "name": "新元宝(新手专享)",
+      "name": "_(新手专享)",
       "plannedAnnualRate": 8,
       "status": {
         "code": "SOLD_OUT",
@@ -163,7 +163,7 @@
         },
         {
           "textHref": "//h.shlxhd.gov.cn/xinxindai.lx",
-          "text": "新新贷党支部"
+          "text": "_党支部"
         }
       ]
     },
@@ -330,7 +330,7 @@
           "remark":""
         }
       ],
-      "name": "新元宝",
+      "name": "_",
       "isMemberDay": "false"
     },
     "code": "200000"
@@ -404,7 +404,7 @@
       "productCode": "000001",
       "mostTenderAmountLabel": "8.00万元",
       "plannedAnnualRate": 5,
-      "name": "日日盈",
+      "name": "_",
       "floatingRate": "1.00",
       "leastTenderAmountLabel": "1元",
       "leastPeriod": "0",
@@ -464,7 +464,7 @@
       "items": [
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1782&newstype=news-1-1.html",
-          "text": "【17-9-28】新新贷发标预告"
+          "text": "【17-9-28】_发标预告"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1923&newstype=news-1-1.html",
@@ -635,23 +635,23 @@
       "items": [
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1922&newstype=news-2-1.html",
-          "text": "[最新动态]P2P最新合规成绩单：哪些平台限额最彻底？新新贷用数据告诉你！"
+          "text": "[最新动态]P2P最新合规成绩单：哪些平台限额最彻底？_用数据告诉你！"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1918&newstype=news-2-1.html",
-          "text": "[最新动态]新新贷受邀出席第十五届中智人力资本调研成果发布会"
+          "text": "[最新动态]_受邀出席第十五届中智人力资本调研成果发布会"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1909&newstype=news-2-1.html",
-          "text": "[最新动态]8月网贷平台“百强榜”发布，新新贷位列上海网贷平台第九名"
+          "text": "[最新动态]8月网贷平台“百强榜”发布，_位列上海网贷平台第九名"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1905&newstype=news-2-1.html",
-          "text": "[最新动态]新新贷受邀参与《2017上海网络信贷服务业白皮书》编撰工作"
+          "text": "[最新动态]_受邀参与《2017上海网络信贷服务业白皮书》编撰工作"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1898&newstype=news-2-1.html",
-          "text": "[最新动态]中国互联网金融协会莅临新新贷考察指导"
+          "text": "[最新动态]中国互联网金融协会莅临_考察指导"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1894&newstype=news-2-1.html",
@@ -659,11 +659,11 @@
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1890&newstype=news-2-1.html",
-          "text": "[最新动态]新新贷受邀“网络借贷信息中介机构业务活动信息披露指引解读”高级研修班"
+          "text": "[最新动态]_受邀“网络借贷信息中介机构业务活动信息披露指引解读”高级研修班"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1889&newstype=news-2-1.html",
-          "text": "[最新动态]新新贷受邀参加上海金融信息行业协会一届三次会员大会暨一届五次理事会"
+          "text": "[最新动态]_受邀参加上海金融信息行业协会一届三次会员大会暨一届五次理事会"
         }
       ]
     },
@@ -684,7 +684,7 @@
       "mostTenderAmountLabel": "3000元",
       "activitedStartDateFormat": "20:00",
       "plannedAnnualRate": 15,
-      "name": "月进斗金",
+      "name": "_",
       "lefTime": 0,
       "floatingRate": "0.00",
       "leastTenderAmountLabel": "100元",
@@ -722,7 +722,7 @@
         {
           "id": "1126",
           "textHref": "//mp.weixin.qq.com/s/C9dPdKn20OnYIuICLGhrKQ",
-          "text": "新新贷接入互金披露系统",
+          "text": "_接入互金披露系统",
           "backgroundColor": "",
           "extendUrl": "//www.xinxindai.com/static/admin/image/data/ppt/6cfbd204578648f9a4ad93ce73c7e531.jpg"
         }
@@ -735,7 +735,7 @@
       "items": [
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1818&newstype=news-2-1.html",
-          "text": "[媒体报道]新新贷：用发展的眼光对待细节"
+          "text": "[媒体报道]_：用发展的眼光对待细节"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1768&newstype=news-2-1.html",
@@ -743,23 +743,23 @@
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1767&newstype=news-2-1.html",
-          "text": "[媒体报道]新闻晨报：<新新贷CEO张扬：解读网贷2.0时代互金新格局>"
+          "text": "[媒体报道]新闻晨报：<_CEO_：解读网贷2.0时代互金新格局>"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1766&newstype=news-2-1.html",
-          "text": "[媒体报道]搜狐：新新贷携手“爱的电影”开展观影公益活动"
+          "text": "[媒体报道]搜狐：_携手“爱的电影”开展观影公益活动"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1733&newstype=news-2-1.html",
-          "text": "[媒体报道]新新贷获中国网消费频道“重点关注宣传示范单位”称号"
+          "text": "[媒体报道]_获中国网消费频道“重点关注宣传示范单位”称号"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1715&newstype=news-2-1.html",
-          "text": "[媒体报道]3.15特讯 | 2017国际消费者权益日，看新新贷如何立于言、践于行"
+          "text": "[媒体报道]3.15特讯 | 2017国际消费者权益日，看_如何立于言、践于行"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1697&newstype=news-2-1.html",
-          "text": "[媒体报道]CCTV证券资讯频道： 新新贷副总裁杨军接受中国经济新模式创新与发展峰会的采访"
+          "text": "[媒体报道]CCTV证券资讯频道： _副总裁杨军接受中国经济新模式创新与发展峰会的采访"
         },
         {
           "textHref": "//www.xinxindai.com/news/newsDetail.html?id=1696&newstype=news-2-1.html",

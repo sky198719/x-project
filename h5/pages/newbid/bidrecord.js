@@ -154,7 +154,7 @@ class BidRecord extends Component {
                                             <p>出借时间：{moment(item.addDate).format('YYYY-MM-DD HH:mm:ss')} <b>锁定期</b></p>
                                             <p>历史收益：{item.interest}元 <b className="red">{item.period + item.periodUnit}</b></p>
                                             <p>债权列表：<span onClick={this.clickGo} className="blue">点击查看</span></p>
-                                            <p>于{moment(item.endDate).format('YYYY-MM-DD')}日到期 本金和收益将返回新新贷账户</p>
+                                            <p>于{moment(item.endDate).format('YYYY-MM-DD')}日到期 本金和收益将返回_账户</p>
                                         </div>
                                     </Card.Body>
                                 </Card>
@@ -179,7 +179,7 @@ class BidRecord extends Component {
                                             <p>历史年化收益：{item.apr}%</p>
                                             <p>出借时间：{moment(item.addDate).format('YYYY-MM-DD HH:mm:ss')} <b>锁定期</b></p>
                                             <p>历史收益：{item.interest}元 <b className="red">{item.period + item.periodUnit}</b></p>
-                                            <p>于{moment(item.endDate).format('YYYY-MM-DD')}日到期 本金和收益已返回新新贷账户</p>
+                                            <p>于{moment(item.endDate).format('YYYY-MM-DD')}日到期 本金和收益已返回_账户</p>
                                         </div>
                                     </Card.Body>
                                 </Card>

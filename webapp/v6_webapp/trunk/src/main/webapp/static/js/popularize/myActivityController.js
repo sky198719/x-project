@@ -55,7 +55,7 @@ define(['js/popularize/myActivityView','share','js/utils/animateNumber'], functi
                 xxdApp.alert('您当前活动的推广链接已被关闭。如想继续开通，请联系客服。', '提示');
                 return ;
             }
-            xxdApp.alert("未通过专属链接注册的好友，也可在“我的新新贷>绑定验证码” 页面输入一下邀请码，成为您的被邀用户哦<br>邀请码：" + $$("#popularizeShareBtn").dataset.popularizeCode,"我的邀请码");
+            xxdApp.alert("未通过专属链接注册的好友，也可在“我的_>绑定验证码” 页面输入一下邀请码，成为您的被邀用户哦<br>邀请码：" + $$("#popularizeShareBtn").dataset.popularizeCode,"我的邀请码");
         },
         exclusiveLink:function(){
             //isLinkProhibit=0表示活动中状态
@@ -79,7 +79,7 @@ define(['js/popularize/myActivityView','share','js/utils/animateNumber'], functi
                     popularizeShareBtn.dataset.popularizeCode =  data.popularizeCode;
                     var invitationLink = data.frontUrl + "/invite/" + data.popularizeCode + ".html";
                     popularizeShareBtn.dataset.invitationLink = invitationLink;
-                    popularizeShareBtn.dataset.content = "【新新贷】您有108元红包未领取，好友" + data.userName + "  邀请您登陆新新贷账户领取红包 " + invitationLink;;
+                    popularizeShareBtn.dataset.content = "【_】您有108元红包未领取，好友" + data.userName + "  邀请您登陆_账户领取红包 " + invitationLink;;
                     popularizeShareBtn.dataset.sharePic = data.webappUrl + "/static/img/xxd/share_popularize.png";
                 }
             });

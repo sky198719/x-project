@@ -60,7 +60,7 @@ require(['base', 'float','trackBase', 'store', "dialog",'header', 'footer', 'bac
     xybData();
     bbgsData();
 
-    //新元宝
+    //_
     function xybData() {
         $.xxdAjax({
             url      : dataUrl.xybUrl,

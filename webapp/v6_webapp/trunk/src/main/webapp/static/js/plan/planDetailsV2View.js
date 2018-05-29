@@ -30,7 +30,7 @@ define(['chart', 'chartDoughnut','js/utils/date'], function (Chart, Doughnut, Da
                     $$(".planDetailsV2 .introductionForfeitpercent").html(params.forfeitpercent);
                 },
                 error: function (result){
-                	console.log("获取新元宝产品说明失败,ajax error...");
+                	console.log("获取_产品说明失败,ajax error...");
                 	$$(".planDetailsV2 #tabContent").html('<div style="text-align: center;color:#999999;">暂无内容...</div>');
                 }
             });
@@ -46,7 +46,7 @@ define(['chart', 'chartDoughnut','js/utils/date'], function (Chart, Doughnut, Da
                    $$(".planDetailsV2 #tabContent").html(result);
                 },
                 error: function (result){
-                	console.log("获取新元宝常见问题失败,ajax error...");
+                	console.log("获取_常见问题失败,ajax error...");
                 	$$(".planDetailsV2 #tabContent").html('<div style="text-align: center;color:#999999;">暂无内容...</div>');
                 }
             });
@@ -85,7 +85,7 @@ define(['chart', 'chartDoughnut','js/utils/date'], function (Chart, Doughnut, Da
 		        		content = content.replace("joinHistory",joinHistory);
 		        		$$(".planDetailsV2 #tabContent").html(content);
 		        	}else{
-		        		console.log("新元宝暂无加入记录...");
+		        		console.log("_暂无加入记录...");
 		        		$$(".planDetailsV2 #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
 		        	}
                 }

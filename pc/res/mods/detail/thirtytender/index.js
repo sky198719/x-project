@@ -124,7 +124,7 @@ require(['base', 'paging', "trackBase", 'store', 'detail', 'juicer'
                     btn = "<a class='btn fast-invest' id='J_buy'>立即加入</a>";
                 } else if (status == 2 && !meetTermOfPurchase) {
                     $('.J_noCondition').html('').append("<div class='no-thirty-condition'> " +
-                        "<p>您已经不是新手用户了， 查看其他更多新元宝产品。</p>" +
+                        "<p>您已经不是新手用户了， 查看其他更多_产品。</p>" +
                         "<a href='/xplan/search/list.html'>去看看</a></div>");
                 }
                 $("#J_buyWrap").html(btn);
@@ -301,7 +301,7 @@ require(['base', 'paging', "trackBase", 'store', 'detail', 'juicer'
                 actualPayment: actualPayment,
                 discountCoupon: discountCoupon,
                 url: '/commpd/agree/XSCP30T_agree_' + productId + '.html?productSign=XSCP30T',
-                agreement: '新元宝（新手专享）'
+                agreement: '_（新手专享）'
             }
 
             investmentObj.income = detail.rateEarning(period, apr, floatApr, $inputBox.val());
@@ -385,7 +385,7 @@ require(['base', 'paging', "trackBase", 'store', 'detail', 'juicer'
 
             //协议复选框勾选
             if ($(".authorization >input").prop('checked') == false) {
-                $('.pop-error').html('请勾选同意新元宝（新手专享）出借相关协议').removeClass('hide');
+                $('.pop-error').html('请勾选同意_（新手专享）出借相关协议').removeClass('hide');
                 return;
             }
 

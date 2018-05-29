@@ -856,7 +856,7 @@ public class UserController extends BaseController {
         regJson.put("ip", clientIP);
         regJson.put("terminalVer", HttpTookit.getRequestTerminal(request));
 
-        //日日盈活动标识
+        //_活动标识
         String fundActivityCode = request.getParameter("fundActivityCode");
         if (fundActivityCode != null && !"".equalsIgnoreCase(fundActivityCode)) {
             regJson.put("activityCode", fundActivityCode);
@@ -1061,7 +1061,7 @@ public class UserController extends BaseController {
             String password = request.getParameter("password");
             param.put("password", password);
 
-            //日日盈体验金标识
+            //_体验金标识
             String fundActivityCode = request.getParameter("fundActivityCode");
             param.put("fundActivityCode", fundActivityCode);
 

@@ -1,5 +1,5 @@
 /**
- * 新元宝
+ * _
  */
 define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js/activity/womensDay', 'js/utils/dayController', 'js/common/productUtil'], function (financesListView, PlanUtils, DateHandle, womensDay, dayController, productUtil) {
     // 加载flag
@@ -93,7 +93,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
             clearInterval(monthFinanceInterval);
 
             financesListCtrl.get30DaysInfo();
-            //月进斗金
+            //_
             financesListCtrl.getMonthFinance();
             financesListCtrl.getStepUpward();
 
@@ -136,7 +136,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
             //==========================切记此处不能删除============================
         },
         /**
-         * 新元宝列表
+         * _列表
          * @param closeTerm  锁定期
          * @param currentPage  当前页
          * @param type 刷新类型
@@ -169,7 +169,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
                         var tempList = [];
                         for (var i = 0; i < list.length; i++) {
                             b = list[i];
-                            // 过滤撤销的新元宝
+                            // 过滤撤销的_
                             if (b.STATUS == 5) {
                                 continue;
                             }
@@ -463,8 +463,8 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
                 var pname = $(this).attr("data-pname");
                 var closeterm = $(this).attr("data-closeterm");
                 var apr = $(this).attr("data-minapr");
-                var category = "新元宝/" + apr + "%/" + closeterm + "个月";
-                product_click({id: planId, name: pname, category: category, list: "热门理财新元宝"});
+                var category = "_/" + apr + "%/" + closeterm + "个月";
+                product_click({id: planId, name: pname, category: category, list: "热门理财_"});
             } catch (e) {
             }
             GS.loadPage('plan/planDetailsV2.html?planId=' + planId + "&path=plan");
@@ -481,7 +481,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
                 var pname = $(this).attr("data-pname");
                 var closeterm = $(this).attr("data-closeterm");
                 var apr = $(this).attr("data-minapr");
-                var category = "新元宝/" + apr + "%/" + closeterm + "个月";
+                var category = "_/" + apr + "%/" + closeterm + "个月";
                 add_to_cart({id: planId, name: pname, category: category});
             } catch (e) {
             }
@@ -769,7 +769,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
                                         xxdApp.addNotification({
                                             title: '温馨提示',
                                             hold: 3000,
-                                            message: '获取月进斗金产品信息失败，请稍后重试...'
+                                            message: '获取_产品信息失败，请稍后重试...'
                                         });
                                     }
                                 } catch (e) {
@@ -777,7 +777,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
                                     xxdApp.addNotification({
                                         title: '抱歉',
                                         hold: 3000,
-                                        message: '获取月进斗金产品信息失败，请稍后重试...'
+                                        message: '获取_产品信息失败，请稍后重试...'
                                     });
                                 }
                             },
@@ -785,7 +785,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
                                 xxdApp.addNotification({
                                     title: '抱歉',
                                     hold: 3000,
-                                    message: '获取月进斗金产品信息失败，请稍后重试...'
+                                    message: '获取_产品信息失败，请稍后重试...'
                                 });
                             }
                         });
@@ -795,7 +795,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
                 }
             });
         },
-        //月进斗金详情页
+        //_详情页
         toMonthFinanceDetail: function () {
             if (clickType.monthFinance == 1) {
                 clickType.monthFinance = 0;
@@ -807,10 +807,10 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
                 if (monthFinanceButton == '立即抢购') {
                     //加入购物车
                     var bid = deployId;
-                    var name = "月进斗金-" + terms;
+                    var name = "_-" + terms;
                     var apr = $$("#monthFinanceList #monthFinanceApr").html();
                     var closeTerm = $$("#monthFinanceList #monthFinanceLockDays").html();
-                    var category = "月进斗金/" + apr + "%/" + closeTerm + "天";
+                    var category = "_/" + apr + "%/" + closeTerm + "天";
                     product_click({id: bid, name: name, category: category, list: "热门理财大显身手"});
                 }
             } catch (e) {
@@ -818,7 +818,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
 
             GS.loadPage('monthFinance/monthFinanceDetails.html');
         },
-        //月进斗金购买页
+        //_购买页
         toMonthFinanceTender: function () {
         	//try {XXD_TRACK._trackEvent({category: "webapp_monthgold_in", action: "hot_buy_once", label: "立即抢购", value: "", custval: "" });} catch (e) {}
         	clickType.monthFinance = 1;
@@ -831,10 +831,10 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
         			if(monthFinanceButton =='立即抢购'){
 	        			//加入购物车
 	        			var bid = deployId;
-	        			var name = "月进斗金-"+terms;
+	        			var name = "_-"+terms;
 	        			var apr = $$("#monthFinanceList #monthFinanceApr").html(); 	
 	        			var closeTerm = $$("#monthFinanceList #monthFinanceLockDays").html();
-	        			var category = "月进斗金/"+apr+"%/"+closeTerm+"天";
+	        			var category = "_/"+apr+"%/"+closeTerm+"天";
 	        			add_to_cart({id:bid,name:name,category:category});
         			}
         		}catch(e){}
@@ -990,7 +990,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
             }
         },
         /**
-         * 月月派列表
+         * _列表
          * @param closeTerm  锁定期
          * @param currentPage  当前页
          * @param type 刷新类型
@@ -1011,7 +1011,7 @@ define(['js/popular/financesListView', 'js/plan/planUtils', 'js/utils/date', 'js
                     //     xxdApp.addNotification({
                     //         title: '抱歉',
                     //         hold: 3000,
-                    //         message: '获取月月派产品列表失败，请稍后重试...'
+                    //         message: '获取_产品列表失败，请稍后重试...'
                     //     });
                     //     return;
                     // }

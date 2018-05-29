@@ -8,7 +8,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs", "paging"],
     var mobileReg = /^(((13[0-9]{1})|(14(0-9){1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/; //验证手机号码是否合法
     var passwordReg = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,16}$/; //验证密码是否合法
 
-    //新元宝状态
+    //_状态
     var xybNewId;
     var xybNewLeft;
 
@@ -143,7 +143,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs", "paging"],
             $('#voiceCode').html('密码必须是6-16位的数字和字母的组合！');
             return false;
         }if(!$('#ruleCheck').is(':checked')){
-            $('#voiceCode').html('请先阅读并同意《新新贷使用协议》！');
+            $('#voiceCode').html('请先阅读并同意《_使用协议》！');
             return false;
         }if($('#mobileCode').val() == '' || $('#mobileCode').val() == null || $('#mobileCode').val() == undefined){
             $('#voiceCode').html('请输入手机验证码！');
@@ -392,7 +392,7 @@ require(['base', 'float','trackBase', 'store', "dialog", "requirejs", "paging"],
     }
     //gameAnimate(2000,500);
 
-    //新元宝
+    //_
     var xybLeft = 0;
     function xybCheck(term){
         timer = new Date();

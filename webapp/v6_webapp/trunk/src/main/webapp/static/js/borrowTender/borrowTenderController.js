@@ -152,7 +152,7 @@ define(['js/borrowTender/borrowTenderView','js/account/openOnAccount'], function
             }
 
             if (!$$("#agreement").is(':checked')) {
-                xxdApp.alert("请阅读并同意《新新贷资金出借风险提示函》！", '提示');
+                xxdApp.alert("请阅读并同意《_资金出借风险提示函》！", '提示');
                 return false;
             }
 

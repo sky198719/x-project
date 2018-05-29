@@ -15,7 +15,7 @@ import com.xxd.ha.hystrix.vo.usercenter.AccountInfoVo;
 import java.util.List;
 
 /**
- * 我的新新贷资产统计信息
+ * 我的_资产统计信息
  *
  * @author zhangshengwen
  * @date 2018/1/9
@@ -45,7 +45,7 @@ public class AssetStatisticsCommand extends AbstractHystrixCommand<JSONObject> {
         JSONObject data = JsonUtil.toJSONObject(message.getData());
 
         /**
-         * 日日盈和步步高升累加统一展现为其他产品
+         * _和步步高升累加统一展现为其他产品
          */
         AccountInfoVo.MapItem rry = JsonUtil.toObject(data.getJSONObject("rryMap"), AccountInfoVo.MapItem.class);
         AccountInfoVo.MapItem step = JsonUtil.toObject(data.getJSONObject("stepMap"), AccountInfoVo.MapItem.class);
@@ -76,11 +76,11 @@ public class AssetStatisticsCommand extends AbstractHystrixCommand<JSONObject> {
         percents.add(new AccountInfoVo.Percent("usable", mapAccount.getUsable()));
         // 新手专享30天
         percents.add(new AccountInfoVo.Percent("xszx", mapAccount.getSumXSCP30T()));
-        // 月进斗金
+        // _
         percents.add(new AccountInfoVo.Percent("yjdj", mapAccount.getSumYueJinDouJin()));
-        // 新元宝
+        // _
         percents.add(new AccountInfoVo.Percent("xyb", mapAccount.getSumXinYuanBao()));
-        // 月月派
+        // _
         percents.add(new AccountInfoVo.Percent("yyp", mapAccount.getSumYyp()));
         // 新手标
         percents.add(new AccountInfoVo.Percent("xsb", mapAccount.getSumXinShouBiao()));

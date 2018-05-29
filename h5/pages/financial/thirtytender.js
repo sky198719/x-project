@@ -194,9 +194,9 @@ export default class extends Component {
                 <div>
                     <Head>
                         <link rel='stylesheet' type='text/css' href="/static/mods/financial/_.css" />
-                        <title>新元宝（新手专享）-新手福利-出借服务-新新贷</title>
-                        <meta name="keywords" content="新元宝，新手专享，新手福利，出借，理财，投资理财，新新贷" />
-                        <meta name="description" content="新新贷（m.xinxindai.com）是中国顶尖P2P网络借款平台,为广大中小微企业以及民间个人提供无抵押小额贷款,企业项目融资,P2P网贷,P2P贷款,无抵押贷款信用贷款服务，成为P2P网贷平台和中小微金融服务的行业标杆品牌。新新贷以信相贷用新服务。" />
+                        <title>_（新手专享）-新手福利-出借服务-_</title>
+                        <meta name="keywords" content="_，新手专享，新手福利，出借，理财，投资理财，_" />
+                        <meta name="description" content="_（m.xinxindai.com）是中国顶尖P2P网络借款平台,为广大中小微企业以及民间个人提供无抵押小额贷款,企业项目融资,P2P网贷,P2P贷款,无抵押贷款信用贷款服务，成为P2P网贷平台和中小微金融服务的行业标杆品牌。_以信相贷用新服务。" />
                     </Head>
                     <div className="product-box position-a">
                         <Ceil />
@@ -209,9 +209,9 @@ export default class extends Component {
             <div>
                 <Head>
                     <link rel='stylesheet' type='text/css' href="/static/mods/financial/_.css" />
-                    <title>新元宝（新手专享）-新手福利-出借服务-新新贷</title>
-                    <meta name="keywords" content="新元宝，新手专享，新手福利，出借，理财，投资理财，新新贷" />
-                    <meta name="description" content="新新贷（m.xinxindai.com）是中国顶尖P2P网络借款平台,为广大中小微企业以及民间个人提供无抵押小额贷款,企业项目融资,P2P网贷,P2P贷款,无抵押贷款信用贷款服务，成为P2P网贷平台和中小微金融服务的行业标杆品牌。新新贷以信相贷用新服务。" />
+                    <title>_（新手专享）-新手福利-出借服务-_</title>
+                    <meta name="keywords" content="_，新手专享，新手福利，出借，理财，投资理财，_" />
+                    <meta name="description" content="_（m.xinxindai.com）是中国顶尖P2P网络借款平台,为广大中小微企业以及民间个人提供无抵押小额贷款,企业项目融资,P2P网贷,P2P贷款,无抵押贷款信用贷款服务，成为P2P网贷平台和中小微金融服务的行业标杆品牌。_以信相贷用新服务。" />
                 </Head>
                 <div className="product-box position-a">
                     <Ceil />
@@ -245,8 +245,8 @@ export default class extends Component {
                 
                         <ul className="intro-list">
                             <Tab title="产品描述" dev_id="A8.2-3.8" eventtype="close_float_window" eventtypehide="open_float_window" show={ true }>
-                                <p>新元宝（新手专享）是新元宝计划系列中专门针对新手推出的一种福利，仅限未曾在新新贷出借过的用户专享新手加息，每位新手用户仅限享受1次。新手用户的专享加息福利由平台贴息奖励。</p>
-                                <p>该服务在用户认可的标的范围内，对符合要求的标的进行自动投标，期限结束后会通过新新贷债权转让平台进行转让退出。</p>
+                                <p>_（新手专享）是_计划系列中专门针对新手推出的一种福利，仅限未曾在_出借过的用户专享新手加息，每位新手用户仅限享受1次。新手用户的专享加息福利由平台贴息奖励。</p>
+                                <p>该服务在用户认可的标的范围内，对符合要求的标的进行自动投标，期限结束后会通过_债权转让平台进行转让退出。</p>
                             </Tab>
                             <Tab title="收益计算" dev_id="A8.2-3.10.1" eventtype="close_float_window" eventtypehide="open_float_window" show={ false }>
                                 <p>历史收益=出借金额×{productDetail.plannedAnnualRate}%/12<span className="notice">{ productDetail.floatingRate > 0 ? '+出借金额×'+ productDetail.floatingRate +'%/12' : '' }</span></p>
@@ -284,7 +284,7 @@ export default class extends Component {
                                 </ul>
                             </Tab>
                             <Tab title="回款方式" dev_id="A8.2-3.11.1" eventtype="close_float_window" eventtypehide="open_float_window" show={ false }>
-                                锁定期结束后次日（含周末节假日）自动返还至新新贷账户。
+                                锁定期结束后次日（含周末节假日）自动返还至_账户。
                             </Tab>
                         </ul>
                         <Problem joinNum={ totalCount } proId={ this.state.data.productDetail.productId } type="thirty"/>

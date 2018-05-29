@@ -1,5 +1,5 @@
 /**
- * 新元宝详情
+ * _详情
  */
 define(['js/plan/planDetailView','js/activity/womensDay'], function (planDetailView,womensDay) {
     var joinId;
@@ -24,7 +24,7 @@ define(['js/plan/planDetailView','js/activity/womensDay'], function (planDetailV
                 success: function (data) {
                     // 投标按钮
                     planDetailView.setTenderButton(data);
-                    // 新元宝信息
+                    // _信息
                     planDetailView.planInfo(data,joinId);
                     // 计划介绍
                     planDetailView.credita(data);

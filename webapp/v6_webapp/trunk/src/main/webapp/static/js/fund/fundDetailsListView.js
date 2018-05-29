@@ -53,9 +53,9 @@ define(['js/utils/date'], function (DateHandle) {
                 html += '<div class="item-inner">';
                 html += '<div class="item-title-row">';
                 if (o.INITIATOR == 3) {
-                    html += '<div class="item-title"><h4 class="font-grey">转入日日盈(体验金)</h4></div>';
+                    html += '<div class="item-title"><h4 class="font-grey">转入_(体验金)</h4></div>';
                 } else {
-                    html += '<div class="item-title"><h4 class="font-grey">转入日日盈</h4></div>';
+                    html += '<div class="item-title"><h4 class="font-grey">转入_</h4></div>';
                 }
                 html += '<div class="item-after"><h4 class="font-green">+' + appFunc.fmoney(o.TRADENUM, 2) + '</h4></div>';
                 html += '</div>';
@@ -84,9 +84,9 @@ define(['js/utils/date'], function (DateHandle) {
                 html += '<div class="item-inner">';
                 html += '<div class="item-title-row">';
                 if (o.INITIATOR == 3) {
-                    html += '<div class="item-title"><h4 class="font-grey">转出日日盈(体验金)</h4></div>';
+                    html += '<div class="item-title"><h4 class="font-grey">转出_(体验金)</h4></div>';
                 } else {
-                    html += '<div class="item-title"><h4 class="font-grey">转出日日盈</h4></div>';
+                    html += '<div class="item-title"><h4 class="font-grey">转出_</h4></div>';
                 }
                 html += '<div class="item-after"><h4 class="font-orange">-' + appFunc.fmoney(o.TRADENUM, 2) + '</h4></div>';
                 html += '</div>';

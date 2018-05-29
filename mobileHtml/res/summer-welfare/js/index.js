@@ -412,7 +412,7 @@ require(['jquery', 'requirejs', 'IScroll', 'xui_user_v101', 'com', 'vticker'], f
                                 // }
 
                                 // if (i == nToday && xui_user.isLogin()) {
-                                //     var sText = '<p>欢迎登录，今天获得<span style="font-size:6.4vw; color:#c10a0a">' + aCoins[i] + '</span>个新新币哦！周五新元宝最高<span style="color:#c10a0a">加息2%</span>，万万不能忘！</p><button id="x_prompt">朕记住啦！</button>';
+                                //     var sText = '<p>欢迎登录，今天获得<span style="font-size:6.4vw; color:#c10a0a">' + aCoins[i] + '</span>个新新币哦！周五_最高<span style="color:#c10a0a">加息2%</span>，万万不能忘！</p><button id="x_prompt">朕记住啦！</button>';
                                 //     ux.oPrompt(sText);
                                 // }
 

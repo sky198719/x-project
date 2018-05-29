@@ -8,7 +8,7 @@ import com.xxd.ha.hystrix.support.FallbackWithCacheHystrixCommand;
 import com.xxd.ha.hystrix.vo.tradecenter.product.YYPVo;
 
 /**
- * 月月派
+ * _
  */
 public class YypCommand extends FallbackWithCacheHystrixCommand {
 

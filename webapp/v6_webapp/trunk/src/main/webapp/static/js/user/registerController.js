@@ -63,7 +63,7 @@ define(['js/user/registerView', 'js/utils/date'], function (registerView, DateHa
             job = page.job;
             $$('#job').val(job);
 
-            //日日盈活动码
+            //_活动码
             if (page.fundActivityCode != undefined) {
                 fundActivityCode = page.fundActivityCode;
             }

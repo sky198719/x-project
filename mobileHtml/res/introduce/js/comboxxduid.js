@@ -51,7 +51,7 @@ require(['base', 'requirejs', 'trackBase',"xxdBridge"], function ($, requirejs, 
             }
         })
     }
-    //    新元宝
+    //    _
     function ajaxXyb() {
         $.ajax({
             url: '/m/xplan/getLatestSchemeId.do',

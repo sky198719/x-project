@@ -26,7 +26,7 @@ export default class extends Component {
                             </li>
                             <li className="contact-list-item">
                                 <span className="item-left wb-icon">官方微博</span>
-                                <span className="item-right item-value">新新贷</span>
+                                <span className="item-right item-value">_</span>
                             </li>
                             <li className="contact-list-item">
                                 <span className="item-left telephone-icon">客服电话</span>

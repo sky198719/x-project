@@ -5,7 +5,7 @@ define(function() {
     var intervalArray = [];
     var fundCpaCtrl = {
         init: function () {
-            $$("title").html("日日盈-新新贷注册");
+            $$("title").html("_-_注册");
             $$.each(intervalArray,function(index,value){
                 clearInterval(value);
             });

@@ -44,15 +44,15 @@ define(function(){
 		                        var pName = "";
 		                   	 	var type =schemeInfo.TYPE;
 			       	           	 if(type == 1){
-			       	           		  pName = "新元宝3个月 - "+ schemeInfo.PNAME;
+			       	           		  pName = "_3个月 - "+ schemeInfo.PNAME;
 			       	           	 }else if(type == 2){
-			       	           		 pName = "新元宝6个月 - "+ schemeInfo.PNAME;
+			       	           		 pName = "_6个月 - "+ schemeInfo.PNAME;
 			       	           	 }else if(type == 3){
-			       	           		 pName = "新元宝12个月 - "+ schemeInfo.PNAME;
+			       	           		 pName = "_12个月 - "+ schemeInfo.PNAME;
 			       	           	 }else if(type == 4){
-			       		    		 pName = "新元宝1个月 - "+ schemeInfo.PNAME;
+			       		    		 pName = "_1个月 - "+ schemeInfo.PNAME;
 			       		    	 }
-			       	           	 var category = "新元宝/"+apr+"%/"+schemeInfo.CLOSETERM+"个月";
+			       	           	 var category = "_/"+apr+"%/"+schemeInfo.CLOSETERM+"个月";
 			       	           	 product_click({id:planId,name:pName,category:category,list:"中秋活动列表"});
                     	 }catch(e){}
 	                        
@@ -67,7 +67,7 @@ define(function(){
         			}   
                 },
                 error: function(xhr, type){
-                	console.log("获取新元宝"+ closeTerm +"个月产品信息失败,ajax error...");
+                	console.log("获取_"+ closeTerm +"个月产品信息失败,ajax error...");
                 	xxdApp.alert("系统异常，请稍后重试", '抱歉');
                 }
             });

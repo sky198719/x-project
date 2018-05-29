@@ -46,7 +46,7 @@ const onlyInvestRecord = async (context) => {
     }
 }
 
-//  日日盈出借记录
+//  _出借记录
 const rryInvestRecord = async (context) => {
     const res = await cFetch(`${urlPath}/apih5/api/investments/rry`, {
         data: {

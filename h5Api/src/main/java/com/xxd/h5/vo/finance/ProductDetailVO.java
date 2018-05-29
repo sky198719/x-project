@@ -225,7 +225,7 @@ public class ProductDetailVO {
 
 
     /**
-     * 月月派下的期数.
+     * _下的期数.
      */
     @Data
     public static class Item {
@@ -238,7 +238,7 @@ public class ProductDetailVO {
     }
 
     /**
-     * 新元宝期数.
+     * _期数.
      */
     @Data
     public static class Period {

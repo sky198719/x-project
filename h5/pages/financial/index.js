@@ -81,9 +81,9 @@ export default class extends Component {
             <div>
                 <Head>
                     <link rel='stylesheet' type='text/css' href="/static/mods/financial/_.css" />
-                    <title>热门出借产品_热门出借服务_P2P网贷-新新贷</title>
+                    <title>热门出借产品_热门出借服务_P2P网贷-_</title>
                     <meta name="keywords" content="出借产品,出借服务,P2P网贷,理财,投资理财" />
-                    <meta name="description" content="新新贷(m.xinxindai.com)是中国专业的网络借贷信息平台，P2P小额借贷平台。稳健运营六年，值得信赖，新新贷是专业、透明、规范的投融资信息平台。详情请登录新新贷官网。" />
+                    <meta name="description" content="_(m.xinxindai.com)是中国专业的网络借贷信息平台，P2P小额借贷平台。稳健运营六年，值得信赖，_是专业、透明、规范的投融资信息平台。详情请登录_官网。" />
                 </Head>
                 <div className="product-box position-a">
 

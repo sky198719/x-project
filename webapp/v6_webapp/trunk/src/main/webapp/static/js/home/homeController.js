@@ -23,7 +23,7 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
         loadData:function(){
             homeCtrl.bindEventAll();
             homeCtrl.indexBanner();
-            //月进斗金
+            //_
             homeCtrl.getMonthFinance();
             homeCtrl.getStepUpward();
             homeCtrl.property30();
@@ -227,12 +227,12 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
             GS.loadPage("popular/financesList.html?path=popular");
         },
 
-        /** 新元宝 */
+        /** _ */
         planList: function () {
             GS.loadPage("plan/planSwiper.html?path=plan");
         },
 
-        /** 新元宝 */
+        /** _ */
         initXplanSwiper: function () {
             req.callJSON({
                 url: 'xplan/getSchemeForNewIndex.do',
@@ -328,7 +328,7 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
             });
         },
 
-        /** 月月派 */
+        /** _ */
 
         toTednerYyp:function(){
             var btn =  $$(".yypIndex .home-ul button");
@@ -609,7 +609,7 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
             });
             return resultMoney;
         },
-        //月进斗金
+        //_
         getMonthFinance: function () {
             enableFlag.monthFinance = 0;
             req.callJSON({
@@ -689,16 +689,16 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
 
                             $$(".monthFinanceHome").show();
                         }else{
-                            console.log("获取月进斗金产品信息失败，请稍后重试...");
+                            console.log("获取_产品信息失败，请稍后重试...");
                         }
                     }catch (e) {
                         console.log(e.message);
-                        console.log("获取月进斗金产品信息失败，请稍后重试...");
+                        console.log("获取_产品信息失败，请稍后重试...");
                     }
                 },
                 error: function(xhr, type){
                     console.log("ajax error...");
-                    console.log("获取月进斗金产品信息失败，请稍后重试...");
+                    console.log("获取_产品信息失败，请稍后重试...");
                 }
             });
         },
@@ -841,7 +841,7 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
                 });
             }
         },
-        //月进斗金详情页
+        //_详情页
         toMonthFinanceDetail: function () {
             window.event? window.event.cancelBubble = true : e.stopPropagation();
         	if(clickType.monthFinance == 1){
@@ -857,8 +857,8 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
 		        		var timelimit = $$(".monthFinanceHome #monthFinanceDays").html();
 		        		var apr = $$(".monthFinanceHome #monthFinanceApr").html();
 		        		var terms = $$(".monthFinanceHome #monthFinanceDays").attr("data-terms");
-		            	var name = "月进斗金-"+terms;
-		            	var category = "月进斗金/"+apr+"%/"+timelimit+"天";
+		            	var name = "_-"+terms;
+		            	var category = "_/"+apr+"%/"+timelimit+"天";
 		            	product_click({id:borrowId,name:name,category:category,list:"首页大显身手"});
 	            	}
 	        	} catch (e) {}
@@ -867,7 +867,7 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
         	
             GS.loadPage('monthFinance/monthFinanceDetails.html');
         },
-        //月进斗金购买页
+        //_购买页
         toMonthFinanceTender: function () {
         	clickType.monthFinance = 1;
         	if(enableFlag.monthFinance == 0 || enableFlag.monthFinance == 2){
@@ -883,8 +883,8 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
 		        		var timelimit = $$(".monthFinanceHome #monthFinanceDays").html();
 		        		var apr = $$(".monthFinanceHome #monthFinanceApr").html();
 		        		var terms = $$(".monthFinanceHome #monthFinanceDays").attr("data-terms");
-		            	var name = "月进斗金-"+terms;
-		            	var category = "月进斗金/"+apr+"%/"+timelimit+"天";
+		            	var name = "_-"+terms;
+		            	var category = "_/"+apr+"%/"+timelimit+"天";
 		            	add_to_cart({id:bid,name:name,category:category});
 	            	}
 	        	} catch (e) {}
@@ -943,7 +943,7 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
 	            }
         	}
         },
-        //新元宝详情页
+        //_详情页
         toXybDetail: function () {
             if(enableFlag.xyb == 0){
                 return;
@@ -963,23 +963,23 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
 	           	 var pName ="";
 	           	 var type = $$('.indexPlan #indexPlanCloseTerm').attr("data-type");
 	           	 if(type == 1){
-	           		  pName = "新元宝3个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
+	           		  pName = "_3个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
 	           	 }else if(type == 2){
-	           		 pName = "新元宝6个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
+	           		 pName = "_6个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
 	           	 }else if(type == 3){
-	           		 pName = "新元宝12个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
+	           		 pName = "_12个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
 	           	 }else if(type == 4){
-		    		 pName = "新元宝1个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
+		    		 pName = "_1个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
 		    	 }
 	              //	var apr = ((minApr != maxApr)?minApr+"~"+maxApr:minApr);
-	            	var category = "新元宝/"+apr+"%/"+closeterm+"个月";
-	            	product_click({id:planId,name:pName,category:category,list:"首页新元宝列表"});
+	            	var category = "_/"+apr+"%/"+closeterm+"个月";
+	            	product_click({id:planId,name:pName,category:category,list:"首页_列表"});
 	            } catch (e) {}
             }
 
             GS.loadPage('plan/planDetailsV2.html?planId=' + planId + "&path=plan");
         },
-        //新元宝购买页
+        //_购买页
         toXybTender: function () {
         	 var planBtn =  $$(".indexPlan #indexPlanTenderBtn").html();
         	if(enableFlag.xyb == 0){
@@ -1001,16 +1001,16 @@ define([ 'zeptoMd5', 'js/home/homeView','js/utils/date','js/utils/animateNumber'
     			    	 var pName ="";
     			    	 var type = $$('.indexPlan #indexPlanCloseTerm').attr("data-type");
     			    	 if(type == 1){
-    			    		  pName = "新元宝3个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
+    			    		  pName = "_3个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
     			    	 }else if(type == 2){
-    			    		 pName = "新元宝6个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
+    			    		 pName = "_6个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
     			    	 }else if(type == 3){
-    			    		 pName = "新元宝12个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
+    			    		 pName = "_12个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
     			    	 }else if(type == 4){
-    			    		 pName = "新元宝1个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
+    			    		 pName = "_1个月 - "+ $$('.indexPlan #indexPlanCloseTerm').attr("data-pname");
     			    	 }
     			       //	var apr = ((minApr != maxApr)?minApr+"~"+maxApr:minApr);
-    			     	var category = "新元宝/"+apr+"%/"+closeterm+"个月";
+    			     	var category = "_/"+apr+"%/"+closeterm+"个月";
     			     	add_to_cart({id:planId,name:pName,category:category});
     			     } catch (e) {}
             	 }

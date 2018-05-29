@@ -114,7 +114,7 @@ require(['base', 'float', 'trackBase', "requirejs"], function ($, float, track) 
 
         });
     }
-    //新元宝
+    //_
     function xybData() {
         $.xxdAjax({
             url      : dataUrl.xybUrl,
@@ -159,7 +159,7 @@ require(['base', 'float', 'trackBase', "requirejs"], function ($, float, track) 
         }
         return 0;
     }
-//  月进斗金
+//  _
     function yjdjData() {
         $.xxdAjax({
             url      : dataUrl.yjdjUrl,

@@ -31,31 +31,31 @@ export default class extends Component {
                         this.props.type == 'thirty' ? 
                         <ul className="content" className={ this.state.isShow ? 'content show' : 'content' }>
                         <li>
-                            <p className="question">1. 新元宝（新手专享）安全吗？</p>
+                            <p className="question">1. _（新手专享）安全吗？</p>
                             <div className="answer">
-                            本产品是新用户专享的一种福利。同新元宝计划一样，匹配新新贷平台优质的借款标的，均经过严格的标准筛选，同享安全保障。
+                            本产品是新用户专享的一种福利。同_计划一样，匹配_平台优质的借款标的，均经过严格的标准筛选，同享安全保障。
                             </div>
                         </li>
                         <li>
-                            <p className="question">2. 我为什么无法出借新元宝（新手专享）？</p>
+                            <p className="question">2. 我为什么无法出借_（新手专享）？</p>
                             <div className="answer">
-                            新元宝（新手专享）仅针对未在新新贷平台出借过的新用户，且每位用户只能参与一次。
+                            _（新手专享）仅针对未在_平台出借过的新用户，且每位用户只能参与一次。
                             </div>
                         </li>
                         <li>
-                            <p className="question">3. 新元宝（新手专享）产品可以使用红包吗？</p>
+                            <p className="question">3. _（新手专享）产品可以使用红包吗？</p>
                             <div className="answer">
-                            不可以。红包仅限用于新元宝等普通产品，请详见红包使用说明。
+                            不可以。红包仅限用于_等普通产品，请详见红包使用说明。
                             </div>
                         </li>
                         <li>
-                            <p className="question">4. 新元宝（新手专享）可以提前退出吗？</p>
+                            <p className="question">4. _（新手专享）可以提前退出吗？</p>
                             <div className="answer">
                             不可以，锁定期限内不支持提前退出。
                             </div>
                         </li>
                         <li>
-                            <p className="question">5. 新元宝（新手专享）什么时候回款？</p>
+                            <p className="question">5. _（新手专享）什么时候回款？</p>
                             <div className="answer">
                             本产品在锁定期结束后，次日一次性还本付息，到时可至您的银行存管账户查询。
                             </div>
@@ -71,7 +71,7 @@ export default class extends Component {
                         <li>
                             <p className="question">2、出借新手标可以使用新手红包吗？</p>
                             <div className="answer">
-                                不可以，新手红包仅限在出借月月派、新元宝产品及散标直投产品（票据贷除外）可用。
+                                不可以，新手红包仅限在出借_、_产品及散标直投产品（票据贷除外）可用。
                             </div>
                         </li>
                         <li>
@@ -83,7 +83,7 @@ export default class extends Component {
                         <li>
                             <p className="question">4、新手标安全吗？</p>
                             <div className="answer">
-                                新新贷以严谨负责的态度对每笔借款进行严格筛选。
+                                _以严谨负责的态度对每笔借款进行严格筛选。
                             </div>
                         </li>
                     </ul>

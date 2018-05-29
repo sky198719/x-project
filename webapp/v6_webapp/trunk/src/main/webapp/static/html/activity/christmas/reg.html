@@ -100,7 +100,7 @@ button{outline:none;}
         <li id="registerPassWord"><label>密码</label><input type="password" maxlength=20 id="password" placeholder="请设置密码" /></li>
         <li id="registerImageCode"><label>验证码</label><input type="text" maxlength=4 id="vCode" placeholder="图片验证码" /><img src="" id="codeUrl1" /></li>
         <li id="registerMobileCode"><label>手机验证</label><input type="text" maxlength=4 id="mCode" placeholder="手机验证码" class="ga-xa-event" ga_pro2="获取验证码" xa_pro1="Christmas_get_code" xa_pro2="获取验证码" /><span>获取验证码</span></li>
-        <li id="sli2"><p class="current"><img src="img/right.png" /></p><b>我已阅读并同意新新贷协议</b></li>
+        <li id="sli2"><p class="current"><img src="img/right.png" /></p><b>我已阅读并同意_协议</b></li>
         <li id="sli3"><button><img src="img/btn3.png" id="btn3"  class="ga-xa-event" ga_pro2="马上注册" xa_pro1="Christmas_reg_btn" xa_pro2="马上注册" /></button></li>
         <li class="bss" id="rbss"></li>
         <li id="sli" class="ga-xa-event" ga_pro2="立即登录" xa_pro1="Christmas_log_btn" xa_pro2="立即登录">已有账号？<strong>立即登录</strong></li>
@@ -121,9 +121,9 @@ button{outline:none;}
     <img src="img/close.png" class="closes" />
 </div>
 <div id="intellless">
-    <h3>新新贷注册使用协议</h3>
-    <p>本服务协议双方为新新贷（上海）金融信息服务有限公司（下称"新新贷"）与新新贷用户，本服务协议具有合同效力。</p>
-    <p>本网站由新新贷（上海）金融信息服务有限公司负责运营(以下本网站均指新新贷网站)。用户注册成为新新贷用户前请务必仔细阅读以下条款。一旦注册，则用户接受新新贷的服务时必须受以下条款的约束。若用户不接受以下条款，请立即离开本网站。</p>
+    <h3>_注册使用协议</h3>
+    <p>本服务协议双方为_（上海）金融信息服务有限公司（下称"_"）与_用户，本服务协议具有合同效力。</p>
+    <p>本网站由_（上海）金融信息服务有限公司负责运营(以下本网站均指_网站)。用户注册成为_用户前请务必仔细阅读以下条款。一旦注册，则用户接受_的服务时必须受以下条款的约束。若用户不接受以下条款，请立即离开本网站。</p>
     <p>本服务协议内容包括以下条款及已经发布的或将来可能发布的各类规则。所有规则为协议不可分割的一部分，与协议正文具有同等法律效力。本协议是由您与本网站共同签订的，适用于您在本网站的全部活动。在您注册成为用户时，您已经阅读、理解并接受本协议的全部条款及各类规则，并承诺遵守中国现行的法律、法规、规章及其他政府规定，如有违反而导致任何法律后果的发生，您将以自己的名义独立承担所有相应的法律责任。</p>
     <p><span>本网站有权根据需要不时地制定、修改本协议或各类规则，如本协议及规则有任何变更，本网站将在网站上刊载公告，经修订的协议、规则一经在公布后，立即自动生效。您应不时地注意本协议及附属规则地变更，若您不同意相关变更，本网站有权不经任何告知终止、中止本协议或者限制您进入本网站的全部或者部分板块且不承担任何法律责任。</span>您确认本服务协议后，本服务协议即在您和本网站之间产生法律效力。您只要在注册页面协议链接前方的选择框内打勾，并按照本网站规定的注册程序成功注册为用户，您的行为既表示同意并签署了本服务协议。本服务协议不涉及您与本网站的其他用户之间因网上交易而产生的法律关系及法律纠纷。</p>
     <strong>一、使用限制</strong>
@@ -435,7 +435,7 @@ $('#btn3').click(function(){
         rred('手机号码格式错误！');
         return false;
     }else if(isPass == 1){
-        rred('请先阅读并同意《新新贷使用协议》！');
+        rred('请先阅读并同意《_使用协议》！');
         return false;
     }else if(emptyCheckr('#mobile','手机号码') == 1 || emptyCheckr('#password','登录密码') == 1 || emptyCheckr('#mCode','短信验证码') == 1){
         ran = Math.random();

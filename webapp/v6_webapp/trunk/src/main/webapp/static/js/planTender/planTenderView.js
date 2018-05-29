@@ -77,7 +77,7 @@ define(['js/utils/date','js/plan/planUtils','js/utils/dayController'], function 
                 if (data.userSchemeInfo.collectiontype == 1) {
                     $('#picker-interest').val('收益再投标').attr("disabled", "disabled");
                 } else if (data.userSchemeInfo.collectiontype == 2) {
-                    $('#picker-interest').val('提至新新贷账户').attr("disabled", "disabled");
+                    $('#picker-interest').val('提至_账户').attr("disabled", "disabled");
                 }
                 $('#presaleMoney').val(data.userSchemeInfo.account).attr("disabled", "disabled");
                 $('#presale_affirm_money_show').html(data.userSchemeInfo.surplusMoney);

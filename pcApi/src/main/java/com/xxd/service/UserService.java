@@ -215,7 +215,7 @@ public class UserService {
             regJson.put("ip", ip);
             regJson.put("terminalVer", terminal);
 
-            //日日盈活动标识
+            //_活动标识
             if (fundActivityCode != null && !"".equalsIgnoreCase(fundActivityCode)) {
                 regJson.put("activityCode", fundActivityCode);
             }

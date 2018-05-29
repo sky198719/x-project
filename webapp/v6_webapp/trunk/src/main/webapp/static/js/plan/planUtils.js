@@ -7,23 +7,23 @@ define(function () {
          */
         schemeType: function (type) {
             if (type == 1) {
-//                return "新元宝季季盈";
-                return "新元宝3个月";
+//                return "_季季盈";
+                return "_3个月";
             } else if (type == 2) {
-//                return "新元宝季季盈元宝双季盈";
-                return "新元宝6个月";
+//                return "_季季盈元宝双季盈";
+                return "_6个月";
             } else if (type == 3) {
-//                return "新元宝年年盈";
-                return "新元宝12个月";
+//                return "_年年盈";
+                return "_12个月";
             } else if (type == 4) {
-//                return "新元宝年年盈";
-                return "新元宝1个月";
+//                return "_年年盈";
+                return "_1个月";
             } else if(type == 7) {
-                return "新元宝36个月";
+                return "_36个月";
             } else if(type ==5) {
-                return "新元宝18个月";
+                return "_18个月";
             } else if(type == 6) {
-                return "新元宝24个月";
+                return "_24个月";
             }
         },
         /**

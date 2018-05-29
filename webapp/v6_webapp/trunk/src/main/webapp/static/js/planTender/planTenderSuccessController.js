@@ -34,7 +34,7 @@ define(['js/utils/date','js/plan/planUtils','js/utils/dayController'], function 
 
                 xxdApp.modal({
                      title: '提示',
-                     afterText: '投资成功！ 新元宝投资满800元可抽奖赢空气净化器！',
+                     afterText: '投资成功！ _投资满800元可抽奖赢空气净化器！',
                      buttons: [
                          {
                           text: '知道了',
@@ -62,7 +62,7 @@ define(['js/utils/date','js/plan/planUtils','js/utils/dayController'], function 
                     if (result.resultCode == 0) {
                         xxdApp.modal({
                             title: '提示',
-                            afterText: '投资成功！新元宝满100元可抽奖赢iPhoneX！',
+                            afterText: '投资成功！_满100元可抽奖赢iPhoneX！',
                             buttons: [
                                 {
                                     text: '知道了',

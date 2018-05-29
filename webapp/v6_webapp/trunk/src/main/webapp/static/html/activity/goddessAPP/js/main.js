@@ -377,7 +377,7 @@ require(['jquery', 'jqmd5','analytics_plugin'], function (jquery, md5) {
                 return false;
             }
             var title = "唤醒女神，共赢好礼！";
-            var dec = "【新新贷】女神节一起来唤醒女神吧！还有周大福钻戒、香奈儿口红、SK-II等豪礼相送哟！";
+            var dec = "【_】女神节一起来唤醒女神吧！还有周大福钻戒、香奈儿口红、SK-II等豪礼相送哟！";
             var img = webappUrl + "/static/html/activity/goddessWEBAPP/img/share2.jpg";
             img = escape(img);
             var shareurl = webappUrl + "/static/html/activity/goddessWEBAPP/invitation.html?uuid=" + popularizeCode + "&actCode=" + actCode;

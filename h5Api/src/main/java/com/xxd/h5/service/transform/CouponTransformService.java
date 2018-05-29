@@ -152,7 +152,7 @@ public class CouponTransformService extends H5BaseService {
      * after
      * </p>
      * <p>
-     * 新元宝
+     * _
      * </p>
      *
      * @param jsonArray

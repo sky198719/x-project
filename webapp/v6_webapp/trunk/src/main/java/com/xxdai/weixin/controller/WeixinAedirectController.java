@@ -128,7 +128,7 @@ public class WeixinAedirectController {
                     User user = JsonUtil.jsonToBean(userResp.getData().toString(), User.class);
                     this.setToken(user,openid.toString(),request,response);
 
-                    log.info("已绑定新新贷账户【" + user.getUserName() + "】");
+                    log.info("已绑定_账户【" + user.getUserName() + "】");
                 }
                 result.put("resultCode", 0);
                 result.put("msg", "成功");
@@ -191,7 +191,7 @@ public class WeixinAedirectController {
                     User user = JsonUtil.jsonToBean(userResp.getData().toString(), User.class);
                     this.setToken(user,openid.toString(),request,response);
 
-                    log.info("已绑定新新贷账户【" + user.getUserName() + "】");
+                    log.info("已绑定_账户【" + user.getUserName() + "】");
                 }
                 result.put("resultCode", 405);
                 result.put("msg", "已绑定其他微信号");
@@ -223,7 +223,7 @@ public class WeixinAedirectController {
 
             WSModelResponse getwxUserBindRespStr = weixinService.getWeixinUserBindByUserId(user.getUserId());
             if (getwxUserBindRespStr.getResultCode() == 0 && getwxUserBindRespStr.getData() != null) {
-                log.info("您的新新贷账户【" + user.getUserName() + "】，已绑定其他微信号，如有疑问，请联系客服");
+                log.info("您的_账户【" + user.getUserName() + "】，已绑定其他微信号，如有疑问，请联系客服");
                 result.put("resultCode", 407);
                 result.put("msg", "已绑定其他微信号");
                 return result.toJSONString();
@@ -283,7 +283,7 @@ public class WeixinAedirectController {
                         User user = JsonUtil.jsonToBean(userResp.getData().toString(), User.class);
                         this.setToken(user,openid.toString(),request,response);
 
-                        log.info("已绑定新新贷账户【" + user.getUserName() + "】");
+                        log.info("已绑定_账户【" + user.getUserName() + "】");
                     }
                     return "redirect:" + referer;
                 }

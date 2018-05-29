@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" th:href="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/css/i/favicon.ico'}">
     <link rel="Bookmark" th:href="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/css/i/favicon.ico'}">
-    <title>问卷调查-个人资料-我的新新贷</title>
-    <meta name="keywords" content="新新贷，P2P网贷，P2P理财，投资理财，网上理财，新元宝，月月派，新手专享，投融资，贷款，企业贷款，无抵押小额贷款，借款"/>
+    <title>问卷调查-个人资料-我的_</title>
+    <meta name="keywords" content="_，P2P网贷，P2P理财，投资理财，网上理财，_，_，新手专享，投融资，贷款，企业贷款，无抵押小额贷款，借款"/>
     <meta name="description"
-          content="新新贷是中国专业的互联网金融P2P网络借贷信息中介平台，为出借人和借款人提供省心的互联网金融信息服务。资金银行存管、严格的风控体系、信息披露透明等多重安全保障措施。"/>
+          content="_是中国专业的互联网金融P2P网络借贷信息中介平台，为出借人和借款人提供省心的互联网金融信息服务。资金银行存管、严格的风控体系、信息披露透明等多重安全保障措施。"/>
     <link th:href="@{${global.staticHost}+'/pc/'+${global.xxdVersion}+'/build/mods/user/personalData/questionnaire/_.css'}" rel="stylesheet">
 </head>
 <body>
@@ -20,7 +20,7 @@
     <div class="g-top">
         <div class="g-top-con">
             <div class="container-1200">
-                <a href="../../">首页</a> &gt; <a href="/usercenter/accountInfo.html">我的新新贷</a> &gt; <a
+                <a href="../../">首页</a> &gt; <a href="/usercenter/accountInfo.html">我的_</a> &gt; <a
                     href="javascript:void(0);">个人资料</a> &gt; <a href="javascript:void(0);">问卷调查</a>
             </div>
         </div>
@@ -32,15 +32,15 @@
             <div class="m-con-wrap">
                 <div class="m-con-hd user-title">
                     <li class='question-title'>风险测评</li>
-                    <li class='hide question-tip'>新新贷出借者风险承受能力与偏好测试问卷 <i class='back J_back'>返回</i></li>
+                    <li class='hide question-tip'>_出借者风险承受能力与偏好测试问卷 <i class='back J_back'>返回</i></li>
                 </div>
                 <div class="questionnaire-box clearfix">
                     <div th:class="'success J_success ' + ${globalData.riskExamResult.data.status == false ? 'hide' : ''}">
-                        <p>您的新新贷出借者风险承受能力与偏好测试问卷结果：<span id='totalScore'>[[${globalData.riskExamResult.data.results.totalScore}]]</span>分</p>
+                        <p>您的_出借者风险承受能力与偏好测试问卷结果：<span id='totalScore'>[[${globalData.riskExamResult.data.results.totalScore}]]</span>分</p>
                         <p>属于测试类型：<span id='typeName'>[[${globalData.riskExamResult.data.results.typeName}]]</span></p>
                         <p class='text-indent' id='notes'>[[${globalData.riskExamResult.data.results.notes}]]
                         </p>
-                        <p>个人声明：本人已填写新新贷出借者风险承受能力与偏好测试问卷，并已阅读评估结果。(本测试仅适用于个人，结果供参考)</p>
+                        <p>个人声明：本人已填写_出借者风险承受能力与偏好测试问卷，并已阅读评估结果。(本测试仅适用于个人，结果供参考)</p>
 
                         <a th:class="${globalData.riskExamResult.data.results.count == 0} ? 'J_nextQuestion disable':'J_nextQuestion disable hide'"  class = 'J_nextQuestion disable' >重新测试</a>
 

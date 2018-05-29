@@ -30,7 +30,7 @@ define(['js/utils/date', 'js/common/menu'], function (DateHandle, menu) {
                             html += '<li>';
                             html += '<span>' + obj.NICKNAME + '</span>';
                             html += '<span>' + appFunc.fmoney(obj.ACCOUNT, 2) + '</span>';
-                            html += '<span>新元宝-' + obj.CLOSETERM + '个月</span>';
+                            html += '<span>_-' + obj.CLOSETERM + '个月</span>';
                             html += '<span>' + obj.ADDTIME + '</span>';
                             html += '</li>';
                             num++;
@@ -119,7 +119,7 @@ define(['js/utils/date', 'js/common/menu'], function (DateHandle, menu) {
                         if (result.userTenderInfo == undefined || result.userTenderInfo.ACCOUNT == 0) {
                             xxdApp.modal({
                                 title: '提示',
-                                text: '您还没有投资新元宝，请投资新元宝后参加活动',
+                                text: '您还没有投资_，请投资_后参加活动',
                                 verticalButtons: true,
                                 buttons: [
                                     {

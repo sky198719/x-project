@@ -97,7 +97,7 @@ define(['js/tradeTender/tradeTenderView'], function (tradeTenderView) {
                 return false;
             }
             if (!$$("#trd_agreement").is(':checked')) {
-                xxdApp.alert("请阅读并同意《新新贷资金出借风险提示函》！", '提示');
+                xxdApp.alert("请阅读并同意《_资金出借风险提示函》！", '提示');
                 return false;
             }
 

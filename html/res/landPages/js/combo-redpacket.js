@@ -67,7 +67,7 @@ require(['base', 'float','dialog', 'trackBase','store', "requirejs"], function (
         });
     }
 
-  //  月进斗金
+  //  _
     function yjdjData() {
         $.xxdAjax({
             url      : dataUrl.yjdjUrl,
@@ -123,7 +123,7 @@ require(['base', 'float','dialog', 'trackBase','store', "requirejs"], function (
 
 var timer = new Date();
 var myTime = timer.getTime(); //本地时间
-//新元宝
+//_
 $.ajax({
     url:'/tradeCenter/XYB/brief',
     type:'get',

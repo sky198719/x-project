@@ -33,7 +33,7 @@ require(['base', 'float', 'allRoll', 'trackBase', 'store', 'header', 'footer', '
         });
     }
 
-    //获取当前新元宝标的
+    //获取当前_标的
     $('body').on('click','.J_clickLeft',function () {
         $.xxdAjax({
             url: '/activityCenter/doubleDanActivityBase/getActivitySchemeList',
@@ -44,7 +44,7 @@ require(['base', 'float', 'allRoll', 'trackBase', 'store', 'header', 'footer', '
                 if (data.code == "200000") {
                     if (data.data) {
                         if (data.data.oneMonthScheme == -1) {
-                            alert('没有可投的新元宝活动标与普通标');
+                            alert('没有可投的_活动标与普通标');
                         } else {
                             window.open('/xplan/detail/' + data.data.oneMonthScheme + '.html');
                         }
@@ -66,7 +66,7 @@ require(['base', 'float', 'allRoll', 'trackBase', 'store', 'header', 'footer', '
                 if (data.code == "200000") {
                     if (data.data) {
                         if (data.data.twelveMonthScheme == -1) {
-                            alert('没有可投的新元宝活动标与普通标');
+                            alert('没有可投的_活动标与普通标');
                         } else {
                             window.open('/xplan/detail/' + data.data.twelveMonthScheme + '.html');
                         }

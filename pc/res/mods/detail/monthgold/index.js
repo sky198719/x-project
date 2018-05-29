@@ -320,7 +320,7 @@ require(['base', 'paging', "trackBase", 'store', 'detail', 'juicer'
             actualPayment: actualPayment,
             discountCoupon: discountCoupon,
             url: '/commpd/agree/monthgold_agree_' + productId + '.html?productSign=YJDJ',
-            agreement: '月进斗金'
+            agreement: '_'
         }
         investmentObj.income = detail.rateEarning(period, apr, floatApr, $inputBox.val());
         investmentObj.actualPayment = $inputBox.val();
@@ -395,7 +395,7 @@ require(['base', 'paging', "trackBase", 'store', 'detail', 'juicer'
 
         //协议复选框勾选
         if ($(".authorization >input").prop('checked') == false) {
-            $('.pop-error').html('请勾选同意月进斗金出借相关协议').removeClass('hide');
+            $('.pop-error').html('请勾选同意_出借相关协议').removeClass('hide');
             return;
         }
 

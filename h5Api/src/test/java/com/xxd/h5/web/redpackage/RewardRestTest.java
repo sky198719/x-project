@@ -49,7 +49,7 @@ public class RewardRestTest {
             "        \"isEffective\": \"Y\",\n" +
             "        \"isEvent\": \"Y\",\n" +
             "        \"isUsed\": \"Y\",\n" +
-            "        \"name\": \"新元宝三月--红包加息标除外\",\n" +
+            "        \"name\": \"_三月--红包加息标除外\",\n" +
             "        \"platform\": [\n" +
             "          \"WAP\",\n" +
             "          \"APP\",\n" +
@@ -360,7 +360,7 @@ public class RewardRestTest {
             "        \"isEffective\": \"Y\",\n" +
             "        \"isEvent\": \"Y\",\n" +
             "        \"isUsed\": \"Y\",\n" +
-            "        \"name\": \"新元宝三月--红包加息标除外\",\n" +
+            "        \"name\": \"_三月--红包加息标除外\",\n" +
             "        \"platform\": [\n" +
             "          \"WAP\",\n" +
             "          \"APP\",\n" +

@@ -26,7 +26,7 @@ public class Constant {
     /**Token失效错误*/
     public static int TOKEN_INVALID_ERROR = 301;
 
-	//短期理财产品类型 月进斗金
+	//短期理财产品类型 _
 	public static final String MONTH_GOLD_PRODUCT_TYPE = "monthgold";
 
 	//短期理财产品类型 七天大胜

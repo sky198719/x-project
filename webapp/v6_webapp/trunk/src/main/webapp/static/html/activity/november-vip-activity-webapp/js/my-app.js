@@ -1,6 +1,6 @@
 
 var myApp = new Framework7({
-	modalTitle: '新新贷',
+	modalTitle: '_',
     pushState: true,
 	cache: true,
 	pushState:true,
@@ -123,7 +123,7 @@ myApp.onPageInit('account', function (page) {
 	  
 	})
 });
-//新元宝
+//_
 myApp.onPageInit('list-xyb', function (page) {
 	var mySwiper = myApp.swiper('.xyb-swiper-container', {
 		pagination:'.xyb-swiper-pagination',
@@ -142,12 +142,12 @@ myApp.onPageInit('xyb-bid', function (page) {
 		cols: [
 			{
 				textAlign: 'left',
-				values: ['收益再投标', '提至新新贷账户']
+				values: ['收益再投标', '提至_账户']
 			}
 		]
 	});
 });
-/*新元宝投资记录*/
+/*_投资记录*/
 myApp.onPageInit('bid-history', function (page) {
 	$$('.ac-3').on('click', function () {
 	  var buttons1 = [
@@ -165,7 +165,7 @@ myApp.onPageInit('bid-history', function (page) {
 			  text: '查看计划详情',
 		  },
 		  {
-			  text: '《新新贷新元宝用户协议》',
+			  text: '《__用户协议》',
 		  }
 	  ];
 	  var buttons2 = [
@@ -187,14 +187,14 @@ myApp.onPageInit('bid-history', function (page) {
 			  text: '查看计划详情',
 		  },
 		  {
-			  text: '《新新贷新元宝用户协议》',
+			  text: '《__用户协议》',
 		  },
 		  {
 			  text: '提前退出',
 			  onClick: function () {
-				myApp.confirm('新元宝计划正在投资锁定期中，提前退出将会产生违约金 2000 元，提交后不可取消，确认要退出吗？','提前退出新元宝', function () {
-					myApp.prompt('请输入支付密码', '确认提前退出新元宝' ,function () {
-						myApp.alert('提交成功！','提前退出新元宝');
+				myApp.confirm('_计划正在投资锁定期中，提前退出将会产生违约金 2000 元，提交后不可取消，确认要退出吗？','提前退出_', function () {
+					myApp.prompt('请输入支付密码', '确认提前退出_' ,function () {
+						myApp.alert('提交成功！','提前退出_');
 				    });
 				});
 			  }

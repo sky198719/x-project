@@ -75,7 +75,7 @@ public class MonthFinanceController {
     	JSONObject paramJson = new JSONObject();
     	JSONObject resultJson = new JSONObject();
     	try{
-	    	paramJson.put("busiType", "monthgold");	//月进斗金
+	    	paramJson.put("busiType", "monthgold");	//_
 			//log.info("MonthFinanceController getProudctBaseInfo ----> params:" + paramJson.toJSONString());
 			String resultStr = commProdDeployCXFService.queryCommProdDeployFrontInfo(paramJson.toJSONString());
 			//log.info("MonthFinanceController getProudctBaseInfo ----> return:" + resultStr);
@@ -84,7 +84,7 @@ public class MonthFinanceController {
 					resultJson.put("serverTime", DateUtil.format(new Date(), "yyyy-MM-dd HH:mm:ss"));
 			}else{
 				resultJson.put("resultCode", "-1");
-				resultJson.put("desc", "获取月进斗金产品基本信息失败，请稍后重试...");
+				resultJson.put("desc", "获取_产品基本信息失败，请稍后重试...");
 			}
     	}catch(Exception e){
     		log.error("MonthFinanceController getProudctBaseInfo ----> arise exception:" , e);
@@ -115,7 +115,7 @@ public class MonthFinanceController {
 	    		paramJson.put("curUserId", user.getUserId());
 	    	}
 	    	
-	    	paramJson.put("busiType", "monthgold");	//月进斗金
+	    	paramJson.put("busiType", "monthgold");	//_
 	    	//log.info("MonthFinanceController getProudctDetail ----> params:" + paramJson.toJSONString());
 	    	String resultStr = commProdDeployCXFService.queryCommProdDeployFrontInfo(paramJson.toJSONString());
 	    	//log.info("MonthFinanceController getProudctDetail ----> return:" + resultStr);
@@ -124,7 +124,7 @@ public class MonthFinanceController {
 	    		resultJson.put("serverTime", DateUtil.format(new Date(), "yyyy-MM-dd HH:mm:ss"));
 	    	}else{
 	    		resultJson.put("resultCode", "-1");
-	    		resultJson.put("desc", "获取月进斗金产品信息失败，请稍后重试...");
+	    		resultJson.put("desc", "获取_产品信息失败，请稍后重试...");
 	    	}
     	}catch(Exception e){
     		log.error("MonthFinanceController getProudctDetail ----> arise exception:" , e);
@@ -183,7 +183,7 @@ public class MonthFinanceController {
 	    		resultJson.put("defaultAccount", defaultJson); // 投资账户
 	    	}
 	    	
-	    	paramJson.put("busiType", "monthgold");	//月进斗金
+	    	paramJson.put("busiType", "monthgold");	//_
 	    	//log.info("MonthFinanceController getProudctAndUserInfo ----> params:" + paramJson.toJSONString());
 	    	String resultStr = commProdDeployCXFService.queryCommProdDeployFrontInfo(paramJson.toJSONString());
 	    	//log.info("MonthFinanceController getProudctAndUserInfo ----> return:" + resultStr);
@@ -192,7 +192,7 @@ public class MonthFinanceController {
 	    		resultJson.put("serverTime", DateUtil.format(new Date(), "yyyy-MM-dd HH:mm:ss"));
 	    	}else{
 	    		resultJson.put("resultCode", "-1");
-	    		resultJson.put("desc", "获取月进斗金产品信息失败，请稍后重试...");
+	    		resultJson.put("desc", "获取_产品信息失败，请稍后重试...");
 	    	}
     	}catch(Exception e){
     		log.error("MonthFinanceController getProudctAndUserInfo ----> arise exception:" , e);
@@ -230,7 +230,7 @@ public class MonthFinanceController {
 	    		resultJson = JSON.parseObject(resultStr);
 	    	}else{
 	    		resultJson.put("resultCode", "-1");
-	    		resultJson.put("desc", "获取月进斗金产品加入记录失败，请稍后重试...");
+	    		resultJson.put("desc", "获取_产品加入记录失败，请稍后重试...");
 	    	}
     	}catch(Exception e){
     		log.error("MonthFinanceController monthFinanceJoinHistory ----> arise exception:" , e);
@@ -481,7 +481,7 @@ public class MonthFinanceController {
 			}
 	    	
 	    	paramJson.put("userId", userId);
-	    	paramJson.put("busiType", "monthgold");	//月进斗金
+	    	paramJson.put("busiType", "monthgold");	//_
 	    	paramJson.put("pageSize", pageSize);
 	    	paramJson.put("currentPage", currentPage);
 	    	paramJson.put("status", status);
@@ -492,7 +492,7 @@ public class MonthFinanceController {
 	    		resultJson = JSON.parseObject(resultStr);
 	    	}else{
 	    		resultJson.put("resultCode", "-1");
-	    		resultJson.put("desc", "获取月进斗金产品投资记录失败，请稍后重试...");
+	    		resultJson.put("desc", "获取_产品投资记录失败，请稍后重试...");
 	    	}
     	}catch(Exception e){
     		log.error("MonthFinanceController monthFinanceHistory ----> arise exception:" , e);

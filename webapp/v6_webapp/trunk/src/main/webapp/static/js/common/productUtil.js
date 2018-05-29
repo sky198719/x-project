@@ -142,16 +142,16 @@ define([], function () {
 	                    if(result.resultCode == 0){
 	                		userYypAccount = result.data;
 	                	}else{
-	                		xxdApp.addNotification({title: '抱歉', message: '获取用户月月派信息失败，请稍后重试...', hold: 3000 });
+	                		xxdApp.addNotification({title: '抱歉', message: '获取用户_信息失败，请稍后重试...', hold: 3000 });
 	                	}
 	                }catch (e) {
                 		console.log(e.message);
-                		xxdApp.addNotification({title: '抱歉', message: '获取用户月月派信息失败，请稍后重试...', hold: 3000 });
+                		xxdApp.addNotification({title: '抱歉', message: '获取用户_信息失败，请稍后重试...', hold: 3000 });
         			}
                 },
                 error: function(xhr, type){
-                	console.log("获取用户月月派信息失败,ajax error...");
-                    xxdApp.addNotification({title: '抱歉', message: '获取用户月月派信息失败，请稍后重试...', hold: 3000 });
+                	console.log("获取用户_信息失败,ajax error...");
+                    xxdApp.addNotification({title: '抱歉', message: '获取用户_信息失败，请稍后重试...', hold: 3000 });
                 }
             });
             return userYypAccount;

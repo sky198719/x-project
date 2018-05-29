@@ -245,7 +245,7 @@ require(['base', "register", 'login', "requirejs", 'json', 'juicer'], function (
                     window.location.href = 'xxd://login';
                     return;
                 }
-                //新元宝的产品详情页面
+                //_的产品详情页面
                 $.ajax({
                     url: '/m/xplan/getLatestSchemeId.do',
                     type: 'get',
@@ -276,7 +276,7 @@ require(['base', "register", 'login', "requirejs", 'json', 'juicer'], function (
                 }
                 window.location.href = 'xxd://list/pdi?selID=1&pdName=bubugaosheng' + '&xxd_utm_source=' + xxd_utm_source;
             });
-            //月月派
+            //_
             $('#yyp').click(function () {
                 //活动未开始已结束弹框
                 if (activityStatus == -1) {
@@ -291,7 +291,7 @@ require(['base', "register", 'login', "requirejs", 'json', 'juicer'], function (
                     window.location.href = 'xxd://login';
                     return;
                 }
-                //月月派的产品详情页面
+                //_的产品详情页面
                 $.ajax({
                     url: '/m/yyp/index.do',
                     type: 'get',

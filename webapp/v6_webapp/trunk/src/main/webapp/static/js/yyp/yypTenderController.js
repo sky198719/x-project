@@ -1,5 +1,5 @@
 /**
- * 新元宝购买投标
+ * _购买投标
  */
 define(['js/utils/date', 'js/common/productUtil', 'js/utils/dayController', 'js/utils/xxd_dmp', 'js/common/ami', 'js/account/openOnAccount'], function (DateHandle, productUtil, dayController, xxd_dmp, ami, openOnAccount) {
     var step;
@@ -77,14 +77,14 @@ define(['js/utils/date', 'js/common/productUtil', 'js/utils/dayController', 'js/
                 indicator: true,
                 success: function (result) {
                     if (result.resultCode == 0) {
-                        xxdApp.addNotification({title: '抱歉', hold: 3000, message: '获取月月派产品信息失败.'});
+                        xxdApp.addNotification({title: '抱歉', hold: 3000, message: '获取_产品信息失败.'});
                         return;
                     }
                     var yyp = result.data;
                     step = result.data.items[0].step;
                     yypInfo = yyp;
                     var html = '';
-                    html += '<h4 class="yyName" >月月派' + yyp.leastPeriod + '个月 - ' + yyp.periodName + '</h4>';
+                    html += '<h4 class="yyName" >_' + yyp.leastPeriod + '个月 - ' + yyp.periodName + '</h4>';
                     html += '<h5 class="font-grey mt10">';
                     html += '历史年化收益：';
                     html += '<span class="font-red font18">' + yyp.plannedAnnualRate + '%</span>';
@@ -119,7 +119,7 @@ define(['js/utils/date', 'js/common/productUtil', 'js/utils/dayController', 'js/
 
                     var dmp_click_yypbuy = "5." + yyp.leastPeriod;
                     var dmp_devId = "yyp_" + yyp.TEleastPeriodRMS;
-                    var dmp_targetId = "月月派" + yyp.leastPeriod + "个月-" + yyp.leastPeriod;
+                    var dmp_targetId = "_" + yyp.leastPeriod + "个月-" + yyp.leastPeriod;
                     $("#confirmTender").attr({
                         "dmp_target_id": dmp_click_yypbuy,
                         "dev_id": dmp_devId,
@@ -259,7 +259,7 @@ define(['js/utils/date', 'js/common/productUtil', 'js/utils/dayController', 'js/
 
                     var compiledTemplate = t7.compile(result);
                     var productInfo = $.extend(true, {}, yypInfo);
-                    productInfo.PNAME = '月月派' + yypInfo.leastPeriod + '个月';// - ' + yypInfo.NAME ;
+                    productInfo.PNAME = '_' + yypInfo.leastPeriod + '个月';// - ' + yypInfo.NAME ;
                     productInfo.APR = yypInfo.plannedAnnualRate + '%';
                     productInfo.TERMS = yypInfo.leastPeriod;
                     productInfo.LEASTAMOUNT = appFunc.fmoney(yypInfo.leastInvestAmount, 2);
@@ -339,7 +339,7 @@ define(['js/utils/date', 'js/common/productUtil', 'js/utils/dayController', 'js/
             }
             var agreement = $$("#agreement").is(':checked');
             if (!agreement) {
-                xxdApp.alert("请先阅读并同意《月月派用户协议书》、《自动配标委托书》！", "抱歉");
+                xxdApp.alert("请先阅读并同意《_用户协议书》、《自动配标委托书》！", "抱歉");
                 return;
             }
 
@@ -419,7 +419,7 @@ define(['js/utils/date', 'js/common/productUtil', 'js/utils/dayController', 'js/
                                 }
 
                                 var data = result.data;
-                                var tenderProduct = "月月派" + yypInfo.leastPeriod + '个月 - ' + yypInfo.name;
+                                var tenderProduct = "_" + yypInfo.leastPeriod + '个月 - ' + yypInfo.name;
                                 var tenderAmount1 = appFunc.fmoney(data.amount, 2);
                                 var tenderTime = DateHandle.formatDate('yyyy-MM-dd HH:mm:ss', new Date(data.createTime));
                                 var startDayIsToday = "Y"; //非今日计息，但这里图标要显示蓝色
@@ -557,7 +557,7 @@ define(['js/utils/date', 'js/common/productUtil', 'js/utils/dayController', 'js/
             }
 
             if (!$$(".yypTender #agreement").is(':checked')) {
-                xxdApp.alert("请阅读并同意《月月派用户协议书》！", '提示');
+                xxdApp.alert("请阅读并同意《_用户协议书》！", '提示');
                 return false;
             }
         },

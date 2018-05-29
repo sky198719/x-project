@@ -19,7 +19,7 @@ export default class extends Component {
         const { productId, productCode, productJoinId, token, clientTime } = this.props.params
         return (
             <div>
-                <Template title="新元宝（新手专享）服务协议" template={ "/html/products/thirtyProduct/agreement.html?productId=" + productId + '&productCode=' + productCode + '&productJoinId=' + productJoinId + '&token=' + token + '&clientTime=' + clientTime } />
+                <Template title="_（新手专享）服务协议" template={ "/html/products/thirtyProduct/agreement.html?productId=" + productId + '&productCode=' + productCode + '&productJoinId=' + productJoinId + '&token=' + token + '&clientTime=' + clientTime } />
             </div>
         )
     }

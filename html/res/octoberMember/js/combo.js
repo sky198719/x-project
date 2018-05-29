@@ -88,7 +88,7 @@ require(['base', 'float','trackBase', 'store', "dialog",'header', 'footer', 'bac
             }
         })
     }
-    // 新元宝
+    // _
     function xybData() {
         $.xxdAjax({
             url      : dataUrl.xybUrl,

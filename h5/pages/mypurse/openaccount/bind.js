@@ -71,7 +71,7 @@ export default class extends Component {
                                 </div>
                                 <img src={ this.state.bankImgBg || '' } alt="" className="bank-bg position-a" />
                             </div>
-                            <p className="bank-card-tips"><span>*</span>如需更换银行卡，请至新新贷官网操作</p>
+                            <p className="bank-card-tips"><span>*</span>如需更换银行卡，请至_官网操作</p>
                         </div>
                     </div>
                 </div>

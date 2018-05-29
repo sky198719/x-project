@@ -120,7 +120,7 @@ public class Scheme {
     private Long lastModify;
 
     /**
-     * 计划类型。1：新元宝A，2：新元宝双季盈，3：新元宝年年盈
+     * 计划类型。1：_A，2：_双季盈，3：_年年盈
      */
     private Integer type;
     /**

@@ -75,7 +75,7 @@ public class AccountController extends BaseController {
     private RedpacketCXFService redpacketCXFService = (RedpacketCXFService) CXF_Factory.getFactory(RedpacketCXFService.class, Configuration.getInstance().getValue("webService_url") + "/redpacketWebService").create();
     UserQueryCXFService userQueryService = (UserQueryCXFService) CXF_Factory.getFactory(UserQueryCXFService.class, Configuration.getInstance().getValue("webService_url") + "/userQueryWebService").create();
     /**
-     * 月月派接口
+     * _接口
      */
     private ReglIntstCXFService reglIntstCXFService = (ReglIntstCXFService) CXF_Factory.getFactory(ReglIntstCXFService.class, Configuration.getInstance().getValue("webService_url") + "/yypCXFService").create();
     private CashWhiteListCXFService cashWhiteListService = (CashWhiteListCXFService) CXF_Factory.getFactory(CashWhiteListCXFService.class, com.xxdai.util.Configuration.getInstance().getValue("webService_url") + "/cashWhiteListCXFService").create();
@@ -462,7 +462,7 @@ public class AccountController extends BaseController {
     }
 
     /**
-     * 我的新新贷总资产的计算（可用余额+冻结金额+产品本金+产品待收益）
+     * 我的_总资产的计算（可用余额+冻结金额+产品本金+产品待收益）
      * @param userId
      * @return
      */
@@ -479,7 +479,7 @@ public class AccountController extends BaseController {
             }
 
         } catch (Exception e) {
-            log.error("[AccountViewController.getAccountTotal]我的新新贷：资产总额,查询异常", e);
+            log.error("[AccountViewController.getAccountTotal]我的_：资产总额,查询异常", e);
         }
         return returnMap;
     }
@@ -1282,7 +1282,7 @@ public class AccountController extends BaseController {
             paramsJson.put("userId", user.getUserId());
             paramsJson.put("format", month);
 
-            //投标收益：散标(七天大胜、月进斗金、新元宝、新新宝、新手标、散标)+日日盈 (本月)
+            //投标收益：散标(七天大胜、_、_、新新宝、新手标、散标)+_ (本月)
             //log.info("AccountController earningsMonth ----> params:" + paramsJson.toJSONString());
             String str = borrowQueryCXFService.getInterestEarnSum(paramsJson.toString());
             //log.info("AccountController earningsMonth ----> return:" + str);
@@ -1392,21 +1392,21 @@ public class AccountController extends BaseController {
     }
 
     /**
-     * 我的新新贷_我的投资(累计投资、累计收益、待收收益)
+     * 我的__我的投资(累计投资、累计收益、待收收益)
      *
      * @param userId
      * @return
      */
     private Map<String, Map> getMyInvest(long userId) {
         Map sanbiaoMap = null;//散标
-        Map xinyuanbaoMap = null;//新元宝
-        Map ririyingMap = null;//日日盈
+        Map xinyuanbaoMap = null;//_
+        Map ririyingMap = null;//_
         Map xinxinbaoMap = null;//新新宝
         Map xinshoubiaoMap = null;//新手标
-        Map yuejindoujinMap = null; //月进斗金
+        Map yuejindoujinMap = null; //_
         Map qitiandashengMap = null;//七天大胜
         Map stepUpwardMap = null;//步步高升
-        Map yueyuepaiMap = null;//月月派
+        Map yueyuepaiMap = null;//_
 
         Map<String, Map> investMap = null;
 
@@ -1442,7 +1442,7 @@ public class AccountController extends BaseController {
                 }
             }
 
-            /******新元宝******/
+            /******_******/
             //根据账户ID和账号类型查询用户账户
             Account account1004 = this.getAccountByUserIdAndType(userId, AccountConsts.ACCOUNT_X_PLAN_ACCOUNT);
             if (null != account1004) {
@@ -1465,7 +1465,7 @@ public class AccountController extends BaseController {
                 }
             }
 
-            /******日日盈******/
+            /******_******/
             Account account1005 = this.getAccountByUserIdAndType(userId, AccountConsts.ACCOUNT_FUND_TYPE_ACCOUNT);
             if (null != account1005) {
                 ririyingMap = new HashMap();
@@ -1474,7 +1474,7 @@ public class AccountController extends BaseController {
 
                 BigDecimal fundEarnTotal = BigDecimal.ZERO;//累计利息
 
-                //查询日日盈的累计利息
+                //查询_的累计利息
                 JSONObject jsonTotalObj = new JSONObject();
                 jsonTotalObj.put("userId", userId);
                 jsonTotalObj.put("type", FundConstant.FUND_TRADE_TYPE_PURCHASE);
@@ -1495,8 +1495,8 @@ public class AccountController extends BaseController {
             //累计投资、投资收益、待收收益
             xinshoubiaoMap = this.getXinxinbaoOrXinshoubiaoInvest(userId, BorrowConsts.BORROW_XSB_TYPE);//新手标16
 
-            /******月进斗金******/
-            //获取月进斗金:待收总额、累计投资、累计收益、待收收益
+            /******_******/
+            //获取_:待收总额、累计投资、累计收益、待收收益
             Map yuejindoujin_map = this.getYuejindoujinOrQitiandasheng(userId, Constant.MONTH_GOLD_PRODUCT_TYPE);
 
             //累计投资、累计已收益、待收收益
@@ -1528,7 +1528,7 @@ public class AccountController extends BaseController {
                 stepUpwardMap.put("COLLECTINTEREST", stepUpward_map != null ? stepUpward_map.get("collectInterest") : BigDecimal.ZERO);//待收收益
                 //stepUpwardMap.put("COLLECTINTEREST", BigDecimal.ZERO);//待收收益(不统计)
             }
-            /******月月派******/
+            /******_******/
             ////累计投资总额:accountTotal, 当前持有总额: remaCapitalTotal：累计收益总额:interestTotal：待收收益collectInterest
             Map yueyuepai_map = this.getYyp(userId);
             if (yueyuepai_map != null) {
@@ -1549,7 +1549,7 @@ public class AccountController extends BaseController {
             investMap.put("stepUpwardMap", stepUpwardMap);
             investMap.put("yueyuepaiMap", yueyuepaiMap);
         } catch (Exception e) {
-            log.error("[AccountViewController.getMyInvest]我的新新贷：我的投资 查询异常", e);
+            log.error("[AccountViewController.getMyInvest]我的_：我的投资 查询异常", e);
         }
         return investMap;
     }
@@ -1579,7 +1579,7 @@ public class AccountController extends BaseController {
     }
 
     /**
-     * 我的新新贷_我的投资_新新宝 或 新手标:累计投资、累计收益、待收收益
+     * 我的__我的投资_新新宝 或 新手标:累计投资、累计收益、待收收益
      *
      * @param userId
      * @param borrowType
@@ -1601,14 +1601,14 @@ public class AccountController extends BaseController {
                 }
             }
         } catch (Exception e) {
-            log.error("[AccountViewController.getXinxinbaoOrXinshoubiaoInvest]我的新新贷：我的投资_新元宝或新手标,查询异常", e);
+            log.error("[AccountViewController.getXinxinbaoOrXinshoubiaoInvest]我的_：我的投资__或新手标,查询异常", e);
         }
         return returnMap;
     }
 
     /**
-     * 我的新新贷_我的投资_月进斗金 或 七天大胜:待收总额
-     * 我的新新贷_我的投资_月进斗金 或 七天大胜:累计投资、累计收益、待收收益
+     * 我的__我的投资__ 或 七天大胜:待收总额
+     * 我的__我的投资__ 或 七天大胜:累计投资、累计收益、待收收益
      *
      * @param userId
      * @return
@@ -1616,7 +1616,7 @@ public class AccountController extends BaseController {
     private Map getYuejindoujinOrQitiandasheng(long userId, String prodspell) {
         Map returnmap = null;
         try {
-            //月进斗金的待收总额、累计投资、累计收益、待收收益
+            //_的待收总额、累计投资、累计收益、待收收益
             JSONObject json = new JSONObject();
             json.put("userId", userId);
             json.put("prodspell", prodspell);
@@ -1630,14 +1630,14 @@ public class AccountController extends BaseController {
                 }
             }
         } catch (Exception e) {
-            log.error("[AccountViewController.getYuejindoujinOrQitiandasheng]我的新新贷：月进斗金 或 七天大胜,查询异常", e);
+            log.error("[AccountViewController.getYuejindoujinOrQitiandasheng]我的_：_ 或 七天大胜,查询异常", e);
         }
         return returnmap;
     }
 
     /**
-     * 我的新新贷_我的投资_步步高升
-     * 我的新新贷_我的投资_步步高升:累计投资、累计收益、待收收益
+     * 我的__我的投资_步步高升
+     * 我的__我的投资_步步高升:累计投资、累计收益、待收收益
      *
      * @param userId
      * @return
@@ -1652,14 +1652,14 @@ public class AccountController extends BaseController {
             String stepStr = borrowQueryCXFService.queryStepInvest(stepJson.toString());
             stepMap = JsonUtil.jsonToBean(stepStr, Map.class);
         } catch (Exception e) {
-            log.error("[AccountViewController.getYuejindoujinOrQitiandasheng]我的新新贷：月进斗金 或 七天大胜,查询异常", e);
+            log.error("[AccountViewController.getYuejindoujinOrQitiandasheng]我的_：_ 或 七天大胜,查询异常", e);
         }
         return stepMap;
     }
 
     /**
-     * 我的新新贷_我的投资_月月派
-     * 我的新新贷_我的投资_月月派:累计投资、累计收益、待收收益
+     * 我的__我的投资__
+     * 我的__我的投资__:累计投资、累计收益、待收收益
      *
      * @param userId
      * @return
@@ -1667,16 +1667,16 @@ public class AccountController extends BaseController {
     private Map getYyp(long userId) {
         Map yypMap = null;
         try {
-            /******月月派******/
+            /******_******/
             JSONObject yypJson = new JSONObject();
             yypJson.put("userId", userId);
             //累计投资总额:EFFECTIVEMONEY, 累计收益总额:COLLECTEDINTEREST：待收收益COLLECTINTEREST
             String str = reglIntstCXFService.queryInvestInfo(yypJson.toString());
-            //log.info("我的新新贷_我的投资_月月派:" + str);
+            //log.info("我的__我的投资__:" + str);
             JSONObject jo = JSONObject.parseObject(str);
             yypMap = JsonUtil.jsonToBean(jo.get("data").toString(), Map.class);
         } catch (Exception e) {
-            log.error("[AccountViewController.getYuejindoujinOrQitiandasheng]我的新新贷：月进斗金 或 七天大胜,查询异常", e);
+            log.error("[AccountViewController.getYuejindoujinOrQitiandasheng]我的_：_ 或 七天大胜,查询异常", e);
         }
         return yypMap;
     }
@@ -1819,7 +1819,7 @@ public class AccountController extends BaseController {
             User user = (User) request.getSession().getAttribute("loginUser");
             // 是否是登录状态
             if (null != user) {
-                //1:散标		2:债权转让	3:新元宝		4:步步高升	5:月月派
+                //1:散标		2:债权转让	3:_		4:步步高升	5:_
                 String prodType = request.getParameter("prodType");
                 if (StringUtils.isNotEmpty(prodType)) {
                     Integer pt = Integer.parseInt(prodType);

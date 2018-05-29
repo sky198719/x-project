@@ -61,7 +61,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
- * 新元宝相关操作
+ * _相关操作
  *
  * @version $Id: PlanCotroller.java 18533 2015-04-30 05:24:57Z wangyuxiang $
  * @since jdk1.6
@@ -75,7 +75,7 @@ public class PlanCotroller {
     Logger log = LoggerFactory.getLogger(PlanCotroller.class);
 
     /**
-     * 新元宝接口
+     * _接口
      */
     private PlanCXFService planCXFService = (PlanCXFService) CXF_Factory.getFactory(PlanCXFService.class, Configuration.getInstance().getValue("webService_url") + "/planWebService").create();
 
@@ -111,7 +111,7 @@ public class PlanCotroller {
     @Autowired
     private UserService userService;
     /**
-     * 加载新元宝列表页面
+     * 加载_列表页面
      *
      * @param request
      * @return
@@ -166,7 +166,7 @@ public class PlanCotroller {
     }
     
     /**
-     * 获取新元宝列表
+     * 获取_列表
      *
      * @param serviceId
      * @param request
@@ -202,7 +202,7 @@ public class PlanCotroller {
         json.put("status", status);
         json.put("closeTerm", closeTerm);
 
-        //调用远程查询新元宝接口
+        //调用远程查询_接口
         //log.info("PlanCotroller schemeList ----> params:" + json.toJSONString());
         String resultStr = planCXFService.getSchemeList(json.toJSONString());
         //log.info("PlanCotroller schemeList ----> return:" + resultStr);
@@ -217,7 +217,7 @@ public class PlanCotroller {
     }
 
     /**
-     * 获取新元宝
+     * 获取_
      *
      * @param request
      * @return
@@ -226,15 +226,15 @@ public class PlanCotroller {
     @ResponseBody
     public String preferPlan(@PathVariable("planId") String planId, HttpServletRequest request) {
         JSONObject resultJson = new JSONObject();
-        //log.info("查看新元宝，planId = " + planId);
+        //log.info("查看_，planId = " + planId);
         resultJson.put("planId", planId);
         JSONObject json = new JSONObject();
         json.put("schemeId", planId);
         String respStr = planCXFService.getSchemeInfo(json.toJSONString());
         WSModelResponse resp = JsonUtil.jsonToBean(respStr, WSModelResponse.class);
         if (resp.getResultCode() != 0) {
-            log.info("新元宝【" + planId + "】不存在");
-            resultJson.put("msg", "查询不到，新元宝【" + planId + "】");
+            log.info("_【" + planId + "】不存在");
+            resultJson.put("msg", "查询不到，_【" + planId + "】");
             resultJson.put("bankUrl", "/index");
             return "model";
         }
@@ -245,7 +245,7 @@ public class PlanCotroller {
             resultJson.put("scheme", scheme);
             resultJson.put("isHappyHour", scheme.getIsHappyHour());
             if (scheme != null) {
-                //计算新元宝结束时间
+                //计算_结束时间
                 Date endTime = new Date();
                 Calendar cal = Calendar.getInstance();
                 Date opensaleEndDate = scheme.getOpensaleEnd();
@@ -258,7 +258,7 @@ public class PlanCotroller {
                 //推算计划当前所处状态
                 PlanUtils planUtils = new PlanUtils();
                 int status = planUtils.schemeStatus(scheme);
-                //log.info("新元宝，当前状态为：" + status);
+                //log.info("_，当前状态为：" + status);
                 resultJson.put("status", status);
 
                 //计算计划进度
@@ -276,7 +276,7 @@ public class PlanCotroller {
             //是否是登录状态
             if (null != user) {
 
-                //查询新元宝账户信息
+                //查询_账户信息
                 /*JSONObject useMoneyParam = new JSONObject();
                 useMoneyParam.put("userId", user.getUserId());
                 useMoneyParam.put("accountType", AccountConsts.ACCOUNT_ONLINE_DEFAULT_TYPE_ACCOUNT);
@@ -299,7 +299,7 @@ public class PlanCotroller {
                     resultJson.put("defaultAccount", defaultAccount);
                 }
 
-                //查询当前用户加入新元宝的相关信息
+                //查询当前用户加入_的相关信息
                 JSONObject userSchemeInfoJson = new JSONObject();
                 userSchemeInfoJson.put("schemeId", planId);
                 userSchemeInfoJson.put("userId", user.getUserId());
@@ -317,7 +317,7 @@ public class PlanCotroller {
 
 
         } catch (Exception e) {
-            log.error("查看新元宝异常：" + e.getMessage(), e);
+            log.error("查看_异常：" + e.getMessage(), e);
         }
 
         resultJson.put("activity_url", Configuration.getInstance().getValue("activity_url"));
@@ -325,7 +325,7 @@ public class PlanCotroller {
     }
 
     /**
-     * 确认购买新元宝
+     * 确认购买_
      *
      * @param request
      * @return
@@ -334,15 +334,15 @@ public class PlanCotroller {
     @ResponseBody
     public String requestQuick(HttpServletRequest request, @RequestParam(required = true, value = "planId") String planId) {
         JSONObject resultJson = new JSONObject();
-        //log.info("查看新元宝，planId = " + planId);
+        //log.info("查看_，planId = " + planId);
         resultJson.put("planId", planId);
         JSONObject json = new JSONObject();
         json.put("schemeId", planId);
         String respStr = planCXFService.getSchemeInfo(json.toJSONString());
         WSModelResponse resp = JsonUtil.jsonToBean(respStr, WSModelResponse.class);
         if (resp.getResultCode() != 0) {
-            log.info("新元宝【" + planId + "】不存在");
-            resultJson.put("msg", "查询不到，新元宝【" + planId + "】");
+            log.info("_【" + planId + "】不存在");
+            resultJson.put("msg", "查询不到，_【" + planId + "】");
             resultJson.put("bankUrl", "/index");
             return "model";
         }
@@ -353,7 +353,7 @@ public class PlanCotroller {
             resultJson.put("scheme", scheme);
             resultJson.put("isHappyHour", scheme.getIsHappyHour());
             if (scheme != null) {
-                //计算新元宝结束时间
+                //计算_结束时间
                 Date endTime = new Date();
                 Calendar cal = Calendar.getInstance();
                 Date opensaleEndDate = scheme.getOpensaleEnd();
@@ -366,7 +366,7 @@ public class PlanCotroller {
                 //推算计划当前所处状态
                 PlanUtils planUtils = new PlanUtils();
                 int status = planUtils.schemeStatus(scheme);
-                //log.info("新元宝，当前状态为：" + status);
+                //log.info("_，当前状态为：" + status);
                 resultJson.put("status", status);
 
                 //计算计划进度
@@ -384,7 +384,7 @@ public class PlanCotroller {
             //是否是登录状态
             if (null != user) {
 
-                //查询新元宝账户信息
+                //查询_账户信息
                 /*JSONObject useMoneyParam = new JSONObject();
                 useMoneyParam.put("userId", user.getUserId());
                 useMoneyParam.put("accountType", AccountConsts.ACCOUNT_ONLINE_DEFAULT_TYPE_ACCOUNT);
@@ -407,7 +407,7 @@ public class PlanCotroller {
                     resultJson.put("defaultAccount", defaultAccount);
                 }
 
-                //查询当前用户加入新元宝的相关信息
+                //查询当前用户加入_的相关信息
                 JSONObject userSchemeInfoJson = new JSONObject();
                 userSchemeInfoJson.put("schemeId", planId);
                 userSchemeInfoJson.put("userId", user.getUserId());
@@ -425,14 +425,14 @@ public class PlanCotroller {
 
 
         } catch (Exception e) {
-            log.error("查看新元宝异常：" + e.getMessage(), e);
+            log.error("查看_异常：" + e.getMessage(), e);
         }
 
         return resultJson.toJSONString();
     }
 
     /**
-     * 获取新元宝信息
+     * 获取_信息
      *
      * @param request
      * @return
@@ -450,7 +450,7 @@ public class PlanCotroller {
     }
 
     /**
-     * 获取新元宝信息
+     * 获取_信息
      *
      * @param request
      * @return
@@ -474,7 +474,7 @@ public class PlanCotroller {
         json.put("schemeId", schemeId);
         json.put("queryType", request.getParameter("queryType"));
 
-        //调用远程查询新元宝接口
+        //调用远程查询_接口
         String resultStr = planCXFService.getUserSchemeList(json.toJSONString());
         WSPageResponse response = JsonUtil.jsonToBean(resultStr, WSPageResponse.class);
         List<JSONObject> dataList = response.getResultList();
@@ -510,7 +510,7 @@ public class PlanCotroller {
             User user = (User) request.getSession().getAttribute("loginUser");
             if (user == null) {
                 log.info("当前加入计划的用户，未登录，");
-                result.put("desc", "您未登录，不能加入新元宝");
+                result.put("desc", "您未登录，不能加入_");
                 result.put("result", 200);
                 return result.toString();
             }
@@ -524,7 +524,7 @@ public class PlanCotroller {
             }
 
             String productCategory = "0";//0封装化产品，1散标，2债权转让
-            int productType = 98;//98代表新元宝
+            int productType = 98;//98代表_
             String tenderAmount = request.getParameter("account");
             BigDecimal tAmount = new BigDecimal(tenderAmount);
             String redEnvelopeCode = request.getParameter("redCodes");
@@ -589,7 +589,7 @@ public class PlanCotroller {
 
             /*
             JSONObject schemeJson = new JSONObject();
-            //新元宝编号
+            //_编号
             String schemeId = request.getParameter("schemeId");
             schemeJson.put("schemeId", schemeId);
             schemeJson.put("userId", user.getUserId());
@@ -631,7 +631,7 @@ public class PlanCotroller {
             result.put("activity_url",Configuration.getInstance().getValue("activity_url"));*/
         } catch (Exception e) {
             log.error("plan buyScheme error : " + e.getMessage(), e);
-            result.put("desc", "申请加入新元宝异常，请重新重试或者联系客服");
+            result.put("desc", "申请加入_异常，请重新重试或者联系客服");
             result.put("result", 404);
         }
         log.info("plan buyScheme result : " + result.toJSONString());
@@ -639,7 +639,7 @@ public class PlanCotroller {
     }
 
     /**
-     * 加载我的新元宝
+     * 加载我的_
      *
      * @param request
      * @return
@@ -651,7 +651,7 @@ public class PlanCotroller {
     }
 
     /**
-     * 查询我所参与的新元宝
+     * 查询我所参与的_
      *
      * @param request
      * @return
@@ -665,11 +665,11 @@ public class PlanCotroller {
         User user = (User) request.getSession().getAttribute("loginUser");
         if (user == null) {
             log.info("当前加入计划的用户，未登录，");
-            result.put("desc", "您未登录，不能加入新元宝");
+            result.put("desc", "您未登录，不能加入_");
             result.put("result", 200);
             return result.toString();
         }
-        //查询我所参与的新元宝
+        //查询我所参与的_
         JSONObject mySchemeJson = new JSONObject();
         mySchemeJson.put("userId", user.getUserId());
         String mySchemeListStr = planCXFService.getMySchemeList(mySchemeJson.toJSONString());
@@ -678,7 +678,7 @@ public class PlanCotroller {
         List<Map<String, Object>> schemeList = resp.getResultList();
         if (schemeList != null && schemeList.size() > 0) {
             for (Map<String, Object> map : schemeList) {
-                // 计算新元宝结束时间
+                // 计算_结束时间
                 Date endTime;
                 Calendar cal = Calendar.getInstance();
                 Date opensaleEndDate = new Date();
@@ -692,7 +692,7 @@ public class PlanCotroller {
                 endTime = cal.getTime();
                 map.put("endTime", endTime);
 
-                // 查询当前用户加入新元宝的相关信息
+                // 查询当前用户加入_的相关信息
                 JSONObject userSchemeInfoJson = new JSONObject();
                 userSchemeInfoJson.put("schemeId", map.get("SCHEMEID"));
                 userSchemeInfoJson.put("userId", user.getUserId());
@@ -739,7 +739,7 @@ public class PlanCotroller {
         if (user == null) {
             log.info("当前加入计划的用户，未登录，");
             resultJson.put("resultCode", 200);
-            resultJson.put("message", "您未登录，不能加入新元宝");
+            resultJson.put("message", "您未登录，不能加入_");
             return resultJson.toString();
         }
 
@@ -794,11 +794,11 @@ public class PlanCotroller {
         tradeJson.put("busiId", 0);
         tradeJson.put("operateMoney", tradeMoney);
         if ("out".equals(tradeType)) {
-            log.info("从新元宝账户转账到默认账户，金额=" + tradeMoney);
+            log.info("从_账户转账到默认账户，金额=" + tradeMoney);
             tradeJson.put("originalPcode", AccountConsts.ACCOUNT_X_PLAN_ACCOUNT);
             tradeJson.put("targetPcode", AccountConsts.ACCOUNT_ONLINE_DEFAULT_TYPE_ACCOUNT);
         } else {
-            log.info("从默认账户转账到新元宝账户，金额=" + tradeMoney);
+            log.info("从默认账户转账到_账户，金额=" + tradeMoney);
             tradeJson.put("originalPcode", AccountConsts.ACCOUNT_ONLINE_DEFAULT_TYPE_ACCOUNT);
             tradeJson.put("targetPcode", AccountConsts.ACCOUNT_X_PLAN_ACCOUNT);
         }
@@ -819,7 +819,7 @@ public class PlanCotroller {
 
 
     /**
-     * 查看用户加入新元宝详情
+     * 查看用户加入_详情
      *
      * @param request
      * @return
@@ -831,7 +831,7 @@ public class PlanCotroller {
     }
 
     /**
-     * 加载用户加入新元宝详情数据
+     * 加载用户加入_详情数据
      *
      * @param request
      * @return
@@ -846,12 +846,12 @@ public class PlanCotroller {
         User user = (User) request.getSession().getAttribute("loginUser");
         if (user == null) {
             log.info("当前加入计划的用户，未登录，");
-            resultJson.put("desc", "您未登录，不能加入新元宝");
+            resultJson.put("desc", "您未登录，不能加入_");
             resultJson.put("result", 200);
             return resultJson.toString();
         }
 
-        //查询新元宝信息
+        //查询_信息
         String planId = request.getParameter("planId");
         JSONObject json = new JSONObject();
         json.put("schemeId", planId);
@@ -865,7 +865,7 @@ public class PlanCotroller {
             resultJson.put("schemeStatus", utils.schemeStatus(scheme));
         }
 
-        //查询当前用户加入新元宝的相关信息
+        //查询当前用户加入_的相关信息
         JSONObject userSchemeInfoJson = new JSONObject();
         userSchemeInfoJson.put("schemeId", planId);
         userSchemeInfoJson.put("userId", user.getUserId());
@@ -890,14 +890,14 @@ public class PlanCotroller {
         String msg = request.getParameter("msgType");
         String schemeId = request.getParameter("schemeId");
         request.setAttribute("messageType", "success");
-        request.setAttribute("success_content", "加入新元宝成功");
+        request.setAttribute("success_content", "加入_成功");
         request.setAttribute("returnUrl", "../xplan/detail/" + schemeId + ".html");
-        request.setAttribute("returnName", "返回查看新元宝");
+        request.setAttribute("returnName", "返回查看_");
         return "plan/model";
     }
 
     /**
-     * 用户加入新元宝，持有债权
+     * 用户加入_，持有债权
      *
      * @param request
      * @return
@@ -930,7 +930,7 @@ public class PlanCotroller {
     }
 
     /**
-     * 用户加入新元宝理财流水
+     * 用户加入_理财流水
      *
      * @param request
      * @return
@@ -964,7 +964,7 @@ public class PlanCotroller {
 
 
     /**
-     * 新元宝协议
+     * _协议
      *
      * @param request
      * @return
@@ -978,7 +978,7 @@ public class PlanCotroller {
             //用户信息
             User user = (User) request.getSession().getAttribute("loginUser");
             if (user != null) {
-                //查询当前用户加入新元宝的相关信息
+                //查询当前用户加入_的相关信息
                 JSONObject userSchemeInfoJson = new JSONObject();
                 userSchemeInfoJson.put("schemeId", schemeId);
                 userSchemeInfoJson.put("userId", user.getUserId());
@@ -1012,7 +1012,7 @@ public class PlanCotroller {
             }
         }
 
-        //查询新元宝信息
+        //查询_信息
         JSONObject json = new JSONObject();
         json.put("schemeId", schemeId);
         String respStr = planCXFService.getSchemeInfo(json.toJSONString());
@@ -1022,7 +1022,7 @@ public class PlanCotroller {
             //推算计划所处阶段
             resultJson.put("scheme", scheme);
 
-            //计算新元宝结束时间
+            //计算_结束时间
             Date endTime = new Date();
             try {
                 if (scheme != null) {
@@ -1033,7 +1033,7 @@ public class PlanCotroller {
                     endTime = cal.getTime();
                 }
             } catch (Exception e) {
-                log.error("计算新元宝结束时间异常", e);
+                log.error("计算_结束时间异常", e);
                 e.printStackTrace();
             }
             log.info("计划结束日期：" + endTime);
@@ -1043,7 +1043,7 @@ public class PlanCotroller {
     }
 
     /**
-     * 提前退出新元宝
+     * 提前退出_
      *
      * @param request
      * @return
@@ -1110,7 +1110,7 @@ public class PlanCotroller {
             param.put("ip", HttpTookit.getRealIpAddr(request));
             log.info("quit scheme req param :" + param.toJSONString());
             String respStr = planCXFService.quitScheme(param.toJSONString());*/
-            result = productService.quit(token,joinId,schemeId,98,new BigDecimal(11.11).setScale(3,BigDecimal.ROUND_HALF_UP),"remark",userAgent);//目前此方法的参数productId，remark，quitAmount对新元宝没什么意义
+            result = productService.quit(token,joinId,schemeId,98,new BigDecimal(11.11).setScale(3,BigDecimal.ROUND_HALF_UP),"remark",userAgent);//目前此方法的参数productId，remark，quitAmount对_没什么意义
             log.info("quit scheme resp :" + result);
             WSResponse resp = JsonUtil.jsonToBean(result.getString("data"), WSResponse.class);
             /*WSResponse resp = JsonUtil.jsonToBean(respStr, WSResponse.class);
@@ -1120,7 +1120,7 @@ public class PlanCotroller {
                 result.put("msg", "成功");
                 log.info("quit ok");
 
-                /******************新元宝GA部署所需参数start******************/
+                /******************_GA部署所需参数start******************/
                 JSONObject gaJson = new JSONObject();
                 gaJson.put("schemeid", joinId);//schemeId);
                 gaJson.put("userId", user.getUserId());
@@ -1128,7 +1128,7 @@ public class PlanCotroller {
                 WSModelResponse gaRes = JsonUtil.jsonToBean(gaJsonStr, WSModelResponse.class);
                 if(gaRes.getData()!=null) {
                     String dataStr = String.valueOf(gaRes.getData());
-                    log.info("新元宝ga布码结果：" + dataStr);
+                    log.info("_ga布码结果：" + dataStr);
                     Map map = JsonUtil.jsonToBean(dataStr, Map.class);
                     String serviceNum ="";
                     if(null != map){
@@ -1145,8 +1145,8 @@ public class PlanCotroller {
                         result.put("servicenum",serviceNum);
                     }
                 }
-                log.info("新元宝退出结果：" + result.toJSONString());
-                /******************新元宝GA部署所需参数end******************/
+                log.info("_退出结果：" + result.toJSONString());
+                /******************_GA部署所需参数end******************/
 
             } else {
                 result.put("resultCode", resp.getResultCode());
@@ -1155,9 +1155,9 @@ public class PlanCotroller {
                 log.info("quit fail");
             }
         } catch (Exception e) {
-            log.error("退出新元宝失败", e);
+            log.error("退出_失败", e);
             result.put("resultCode", 300);
-            result.put("msg", "退出新元宝失败");
+            result.put("msg", "退出_失败");
             e.printStackTrace();
         }
         return result.toJSONString();
@@ -1194,7 +1194,7 @@ public class PlanCotroller {
         }
     }
     /**
-     * 首页展示新元宝
+     * 首页展示_
      *
      * @param request
      * @return
@@ -1208,12 +1208,12 @@ public class PlanCotroller {
         json.put("currentPage", 1);
         json.put("pageSize", 6);
         JSONObject resultJson = new JSONObject();
-        //调用远程查询新元宝接口
+        //调用远程查询_接口
         try{
             String resultStr = planCXFService.getSchemeList(json.toJSONString());
             WSPageResponse response = JsonUtil.jsonToBean(resultStr, WSPageResponse.class);
             List list = response.getResultList();
-            //根据新元宝类型倒序排序
+            //根据_类型倒序排序
             Collections.sort(list, new Comparator() {
                 @Override
                 public int compare(Object o1, Object o2) {
@@ -1240,9 +1240,9 @@ public class PlanCotroller {
                     break;
                 }
             }
-            int schemeSta = 4;//开放期新元宝
+            int schemeSta = 4;//开放期_
             if(boolType){
-                schemeSta = 5;//显示锁定期新元宝
+                schemeSta = 5;//显示锁定期_
             }
             JSONObject result = new JSONObject();
             result = indexShow_scheme(schemeType,list,schemeSta);
@@ -1256,7 +1256,7 @@ public class PlanCotroller {
     }
 
     /**
-     * 从新元宝list里面遍历出一条最新数据显示
+     * 从_list里面遍历出一条最新数据显示
      * @param type
      * @param list
      * @return
@@ -1289,7 +1289,7 @@ public class PlanCotroller {
     
     
     /**
-     * 获取新首页展示-->12个月的新元宝
+     * 获取新首页展示-->12个月的_
      *
      * @param serviceId
      * @param request
@@ -1329,7 +1329,7 @@ public class PlanCotroller {
 				findFlag = false;
 				list = null;
 				paramJson.put("closeTerm", closeTerms[i]);
-				//调用远程查询新元宝接口
+				//调用远程查询_接口
 			   // log.info("PlanCotroller getSchemeForNewIndex ----> params:" + paramJson.toJSONString());
 			    String resultStr = planCXFService.getSchemeList(paramJson.toJSONString());
 			   // log.info("PlanCotroller getSchemeForNewIndex ----> return:" + resultStr);
@@ -1376,7 +1376,7 @@ public class PlanCotroller {
         return resultJson.toJSONString();
     }
 	/**
-	 * 获取指定期限最新一期的新元宝
+	 * 获取指定期限最新一期的_
 	 *
 	 * @param serviceId
 	 * @param request
@@ -1414,7 +1414,7 @@ public class PlanCotroller {
             paramJson.put("opensaleBeginLte", DateUtil.format(new Date(), "yyyy-MM-dd")+" 23:59:59");
             paramJson.put("orderByColumnIn", "0,1,2");
 			
-			//调用远程查询新元宝接口
+			//调用远程查询_接口
 		//	log.info("PlanCotroller getLatestSchemeId ----> params:" + paramJson.toJSONString());
 			String resultStr = planCXFService.getSchemeList(paramJson.toJSONString());
 		//	log.info("PlanCotroller getLatestSchemeId ----> return:" + resultStr);
@@ -1447,7 +1447,7 @@ public class PlanCotroller {
         paramJson.put("pageSize", 1);
         paramJson.put("closeTerm", closeTerm);
 
-        //调用远程查询新元宝接口
+        //调用远程查询_接口
        // log.info("PlanCotroller getSchemeForNewIndex ----> params:" + paramJson.toJSONString());
         String resultStr = planCXFService.getSchemeList(paramJson.toJSONString());
        // log.info("PlanCotroller getSchemeForNewIndex ----> return:" + resultStr);
@@ -1472,7 +1472,7 @@ public class PlanCotroller {
             paramJson.put("pageSize", 50);
             paramJson.put("closeTerm", closeTerm);
 
-            //调用远程查询新元宝接口
+            //调用远程查询_接口
             // log.info("PlanCotroller getSchemeForNewIndex ----> params:" + paramJson.toJSONString());
             String resultStr = planCXFService.getSchemeList(paramJson.toJSONString());
             // log.info("PlanCotroller getSchemeForNewIndex ----> return:" + resultStr);
@@ -1531,7 +1531,7 @@ public class PlanCotroller {
             paramJson.put("pageSize", 50);
             paramJson.put("closeTerm", closeTerm);
 
-            //调用远程查询新元宝接口
+            //调用远程查询_接口
            // log.info("PlanCotroller getSchemeForNewIndex ----> params:" + paramJson.toJSONString());
             String resultStr = planCXFService.getSchemeList(paramJson.toJSONString());
            // log.info("PlanCotroller getSchemeForNewIndex ----> return:" + resultStr);

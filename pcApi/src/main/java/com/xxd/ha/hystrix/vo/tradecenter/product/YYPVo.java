@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 月月派
+ * _
  */
 @Data
 public class YYPVo implements Serializable {

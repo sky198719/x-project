@@ -29,7 +29,7 @@ require(["jquery", "jqmd5", "flexible"], function (jquery, md5, flexible) {
     var actCode = "Thanksgiving-Day";
     var sinaParam = {
         appkey: '3921074379',
-        source: '新新贷',
+        source: '_',
         content: 'utf-8'
     };
     var main = {
@@ -178,7 +178,7 @@ require(["jquery", "jqmd5", "flexible"], function (jquery, md5, flexible) {
                 }
                 var share = webappUrl + "/static/html/activity/thanksgivingWebapp/invitation.html?uuid=" + popularizeCode+"&actCode="+actCode;
                 share = escape(share);
-                var content = "【新新贷】有只逆天的火鸡在！暴！走！我正在这里助它一臂之力，快快加入一起来！戳>>  " + share;
+                var content = "【_】有只逆天的火鸡在！暴！走！我正在这里助它一臂之力，快快加入一起来！戳>>  " + share;
                 var symbol = "";
                 var u = navigator.userAgent;
                 if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {

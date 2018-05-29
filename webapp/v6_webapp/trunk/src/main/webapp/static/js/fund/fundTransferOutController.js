@@ -2,7 +2,7 @@
  * Created by chaihuangqi on 2015/8/14.
  */
 /**
- * 日日盈转出确认投资页面
+ * _转出确认投资页面
  */
 define(function () {
     var fundTransferOutCtrl = {
@@ -82,7 +82,7 @@ define(function () {
                 xxdApp.alert("初始化表单失败，请返回重新进入","抱歉");
                 return;
             }
-            xxdApp.modalPassword('确认从您的日日盈账户转出' + appFunc.fmoney(tradeNum, 2) + '元至您的账户，请输入支付密码', '支付确认', function (password) {
+            xxdApp.modalPassword('确认从您的_账户转出' + appFunc.fmoney(tradeNum, 2) + '元至您的账户，请输入支付密码', '支付确认', function (password) {
                 if (password == null || password == '') {
                     xxdApp.alert('请输入支付密码！');
                     return;
@@ -107,7 +107,7 @@ define(function () {
                     success: function (data) {
                         xxdApp.hideIndicator();
                         if (data.result == 0) {
-                            redemption({id:data.productId,name:"日日盈赎回",category:"日日盈/" + data.apr + "%",price:data.price,tradeId:data.tradeid,affiliation:data.servicenum});
+                            redemption({id:data.productId,name:"_赎回",category:"_/" + data.apr + "%",price:data.price,tradeId:data.tradeid,affiliation:data.servicenum});
                         	 //try {XXD_TRACK._trackEvent({category: "webpp_fund_out", action: "popup_fund_out_success", label: "转出成功", value: tradeNum, custval: "1" });} catch (e) {}
                             GS.loadPage("fund/fundTransferOutSucceed.html?path=fund");
                         } else {

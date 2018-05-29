@@ -56,7 +56,7 @@ require(['base', 'paging', "trackBase", 'store', 'side', 'juicer'
         $('.verifyUrl').attr('src', '/userCenter/kaptcha.jpg?' + new Date().getTime());
     });
 
-    //月月派出借详情
+    //_出借详情
     getYYPdetail();
     function getYYPdetail() {
         $.xxdAjax({

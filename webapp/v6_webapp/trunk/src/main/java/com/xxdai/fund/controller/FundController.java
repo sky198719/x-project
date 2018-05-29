@@ -66,7 +66,7 @@ public class FundController {
     private SystemHolidayCXFService systemHolidayCXFService = (SystemHolidayCXFService) CXF_Factory.getFactory(SystemHolidayCXFService.class, Configuration.getInstance().getValue("trade_url") + "/systemHolidayWebService").create();
 
     /**
-     * 日日盈操作接口
+     * _操作接口
      */
     private FundTradeCXFService fundTradeCXFService = (FundTradeCXFService) CXF_Factory.getFactory(FundTradeCXFService.class, Configuration.getInstance().getValue("trade_url") + "/fundTradeWebService").create();
 
@@ -107,17 +107,17 @@ public class FundController {
             String fundTradeStr = jsonFund2.getString("data");
             JSONObject fundTradeJson = JSONObject.parseObject(fundTradeStr);
             result.put("fundTrade", fundTradeJson);
-            result.put("msg", "获取日日盈用户投资信息成功");
+            result.put("msg", "获取_用户投资信息成功");
         } catch (Exception e) {
-            log.error("获取日日盈用户投资信息失败", e);
+            log.error("获取_用户投资信息失败", e);
             result.put("resultCode", 200);
-            result.put("msg", "获取日日盈用户投资信息失败");
+            result.put("msg", "获取_用户投资信息失败");
         }
         return result.toJSONString();
     }
 
     /**
-     * 获取日日盈基金产品信息
+     * 获取_基金产品信息
      * @return
      * @throws WebException
      */
@@ -128,7 +128,7 @@ public class FundController {
             String resultFundJson = userFundTradeCXFService.selectFundByStatus(jsonFundObject.toJSONString());
             JSONObject jsonFund = JSONObject.parseObject(resultFundJson);
             if (jsonFund.getIntValue("resultCode") != 0) {
-                throw new WebException(-100, "获取日日盈基金产品失败");
+                throw new WebException(-100, "获取_基金产品失败");
             }
 
             String fundStr = jsonFund.getString("data");
@@ -136,8 +136,8 @@ public class FundController {
         } catch (WebException we) {
             throw we;
         } catch (Exception e) {
-            log.error("获取日日盈基金产品异常",e);
-            throw new WebException(-101,"获取日日盈基金产品异常");
+            log.error("获取_基金产品异常",e);
+            throw new WebException(-101,"获取_基金产品异常");
         }
     }
 
@@ -215,9 +215,9 @@ public class FundController {
             String arrivalDate = jsonDate.getString("arrivalDate");
             result.put("valueDate", valueDate);
             result.put("arrivalDate", arrivalDate);
-            result.put("msg", "获取日日盈账户信息成功");
+            result.put("msg", "获取_账户信息成功");
             
-            /*查询日日盈初始信息*/
+            /*查询_初始信息*/
             JSONObject param = new JSONObject();
             param.put("date", DateUtil.format(new Date(), "yyyyMMdd"));
             param.put("fcode", fund.getFcode());
@@ -231,9 +231,9 @@ public class FundController {
             JSONObject fundAprJson = fundAprStr.getJSONObject("fundApr");
             result.put("fundApr", fundAprJson);
         } catch (Exception e) {
-            log.error("获取日日盈账户信息失败", e);
+            log.error("获取_账户信息失败", e);
             result.put("resultCode", 200);
-            result.put("msg", "获取日日盈账户信息失败");
+            result.put("msg", "获取_账户信息失败");
         }
         return result.toJSONString();
     }
@@ -266,11 +266,11 @@ public class FundController {
             String fundTotalStr = jsonFund.getString("data");
             FundTotalVO fundTotalVO = JsonUtil.jsonToBean(fundTotalStr, FundTotalVO.class);
             result.put("fundTotal", fundTotalVO);
-            result.put("msg", "获取日日盈账户信息成功");
+            result.put("msg", "获取_账户信息成功");
         } catch (Exception e) {
-            log.error("获取日日盈账户信息失败", e);
+            log.error("获取_账户信息失败", e);
             result.put("resultCode", 200);
-            result.put("msg", "获取日日盈账户信息失败");
+            result.put("msg", "获取_账户信息失败");
         }
         return result.toJSONString();
     }
@@ -369,7 +369,7 @@ public class FundController {
     }
 
     /**
-     * 日日盈产品限制条件
+     * _产品限制条件
      * @param reqeust
      * @return
      */
@@ -392,11 +392,11 @@ public class FundController {
             result.put("isBalance",fund.getIsBalance());
             result.put("isLastBalance",isLastBalance);
 
-            //日日盈申购开关
+            //_申购开关
             String purchaseSwitch = CacheUtil.getCacheValue(FundConstant.FUND_PURCHASE_SWITCH);
             result.put("purchaseSwitch", purchaseSwitch);
 
-            //日日盈赎回开关
+            //_赎回开关
             String ransomSwitch = CacheUtil.getCacheValue(FundConstant.FUND_RANSOM_SWITCH);
             result.put("ransomSwitch", ransomSwitch);
             result.put("resultCode",Constant.RETURN_SUCC);
@@ -411,7 +411,7 @@ public class FundController {
     }
 
     /**
-     * 查询日日盈信息
+     * 查询_信息
      */
     @RequestMapping(value = "/selectFundInfo", produces = {"application/json;charset=UTF-8"})
     public
@@ -447,18 +447,18 @@ public class FundController {
             result.put("fundApr", fundAprJson);
             result.put("activityInfo",activityInfo);
             result.put("fund", fund);
-            result.put("msg", "获取日日盈信息成功");
+            result.put("msg", "获取_信息成功");
             result.put("resultCode", Constant.RETURN_SUCC);
         } catch (Exception e) {
-            log.error("获取日日盈信息失败", e);
+            log.error("获取_信息失败", e);
             result.put("resultCode", 200);
-            result.put("msg", "获取日日盈信息失败");
+            result.put("msg", "获取_信息失败");
         }
         return TokenUtil.jsonpCallback(request, result.toJSONString());
     }
 
     /**
-     * 查询用户是否投资过日日盈
+     * 查询用户是否投资过_
      */
     @RequestMapping(value = "/selectIsInvested", produces = {"application/json;charset=UTF-8"})
     public
@@ -485,12 +485,12 @@ public class FundController {
             JSONObject jsonFund = JSONObject.parseObject(resultJson);
             String isInvested = jsonFund.getString("data");
             result.put("isInvested", isInvested);
-            result.put("msg", "获取日日盈投资信息成功");
+            result.put("msg", "获取_投资信息成功");
             result.put("resultCode", Constant.RETURN_SUCC);
         } catch (Exception e) {
-            log.error("获取日日盈投资信息失败", e);
+            log.error("获取_投资信息失败", e);
             result.put("resultCode", 200);
-            result.put("msg", "获取日日盈投资信息失败");
+            result.put("msg", "获取_投资信息失败");
         }
         return result.toJSONString();
     }
@@ -545,11 +545,11 @@ public class FundController {
                 }
                 if (fund.getLowestTender().compareTo(fund.getRemAccount()) == 1) {
                     result.put("isTotalFull", "true");
-                    log.info(String.format("日日盈剩余投资金额小于日日盈最低可投资金额,LowestTender=%s,fundRemAccount=%s",fund.getLowestTender(),fund.getRemAccount()));
+                    log.info(String.format("_剩余投资金额小于_最低可投资金额,LowestTender=%s,fundRemAccount=%s",fund.getLowestTender(),fund.getRemAccount()));
                 }
                 if (investAmount.add(fund.getLowestTender()).compareTo(fund.getUserMostTender()) == 1) {
                     result.put("isPersonFull", "true");
-                    log.info(String.format("个人可投资金额小于日日盈最低可投资金额,investAmount=%s,LowestTender = %s,fundUserMostTender=%s",investAmount,fund.getLowestTender(),fund.getUserMostTender()));
+                    log.info(String.format("个人可投资金额小于_最低可投资金额,investAmount=%s,LowestTender = %s,fundUserMostTender=%s",investAmount,fund.getLowestTender(),fund.getUserMostTender()));
                 }
             }
 
@@ -559,11 +559,11 @@ public class FundController {
             }
 
             result.put("fund",fund);
-            result.put("msg", "获取日日盈信息成功");
+            result.put("msg", "获取_信息成功");
         } catch (Exception e) {
-            log.error("获取日日盈信息失败", e);
+            log.error("获取_信息失败", e);
             result.put("resultCode", 200);
-            result.put("msg", "获取日日盈信息失败");
+            result.put("msg", "获取_信息失败");
         }
         return result.toJSONString();
     }
@@ -591,7 +591,7 @@ public class FundController {
             //用户信息
             User user = (User) request.getSession().getAttribute("loginUser");
             if (user == null) {
-                log.info("日日盈转入转出，未登录，");
+                log.info("_转入转出，未登录，");
                 result.put("desc", "您未登录，不能进行下一步操作");
                 result.put("result", 200);
                 return result.toString();
@@ -606,9 +606,9 @@ public class FundController {
             String browser = request.getHeader("User-Agent");
             browser = browser.length() > 200 ? browser.substring(0,200):browser;
             pswJson.put("browser", browser);
-            log.info("用户申购/赎回日日盈验证支付密码，请求参数：" + pswJson.toJSONString());
+            log.info("用户申购/赎回_验证支付密码，请求参数：" + pswJson.toJSONString());
             String resultPsw = userCXFService.checkPayPassword(pswJson.toString());
-            log.info("用户申购/赎回日日盈验证支付密码，响应内容：" + resultPsw);
+            log.info("用户申购/赎回_验证支付密码，响应内容：" + resultPsw);
             WSModelResponse pswResp = JsonUtil.jsonToBean(resultPsw, WSModelResponse.class);
             if (pswResp.getResultCode() == -2) {
                 result.put("desc", "支付密码错误，请重新输入");
@@ -649,9 +649,9 @@ public class FundController {
             fundTradeJson.put("terminalver", HttpTookit.getRequestTerminal(request));
 
             fundTradeJson.put("buyDate", DateUtil.format(new Date(), "yyyyMMdd HH:mm:ss"));
-           // log.info("用户申购/赎回日日盈，请求参数：" + fundTradeJson.toJSONString());
+           // log.info("用户申购/赎回_，请求参数：" + fundTradeJson.toJSONString());
             String resultBuyScheme = fundTradeCXFService.fundTrade(fundTradeJson.toJSONString());
-           // log.info("用户申购/赎回日日盈，响应内容：" + resultBuyScheme);
+           // log.info("用户申购/赎回_，响应内容：" + resultBuyScheme);
             WSModelResponse resp = JsonUtil.jsonToBean(resultBuyScheme, WSModelResponse.class);
             log.info(resp.toJson());
             result.put("tradeId", resp.getData());
@@ -659,7 +659,7 @@ public class FundController {
             result.put("result", resp.getResultCode());
 
             if(resp.getResultCode() == AppConsts.WS_RETURN_SUCC){
-                /******************日日盈转出GA部署所需参数start******************/
+                /******************_转出GA部署所需参数start******************/
                 JSONObject gaJson = new JSONObject();
                 gaJson.put("fcode", fcode);
                 gaJson.put("userId", user.getUserId());
@@ -668,7 +668,7 @@ public class FundController {
                 WSModelResponse gaRes = JsonUtil.jsonToBean(gaJsonStr, WSModelResponse.class);
                 if(gaRes.getData()!=null) {
                     String dataStr = String.valueOf(gaRes.getData());
-                    log.info("日日盈ga布码结果：" + dataStr);
+                    log.info("_ga布码结果：" + dataStr);
                     Map map = JsonUtil.jsonToBean(dataStr, Map.class);
                     String serviceNum ="";
                     if(null != map){
@@ -684,14 +684,14 @@ public class FundController {
                         result.put("servicenum",serviceNum);
                     }
                 }
-                log.info("日日盈退出结果：" + result.toJSONString());
-                /******************日日盈转出GA部署所需参数end********************/
+                log.info("_退出结果：" + result.toJSONString());
+                /******************_转出GA部署所需参数end********************/
             }
             result.put("activity_url",Configuration.getInstance().getValue("activity_url"));
         } catch (Exception e) {
             result.put("desc", "操作异常，请重新尝试或者联系客服");
             result.put("result", -100);
-            log.error("用户申购/赎回日日盈失败，" + e.getMessage(), e);
+            log.error("用户申购/赎回_失败，" + e.getMessage(), e);
         }
         return result.toJSONString();
     }

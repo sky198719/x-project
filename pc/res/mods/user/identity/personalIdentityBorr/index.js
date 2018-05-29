@@ -122,11 +122,11 @@ require(['base', "trackBase", 'store', 'juicer', 'header', 'footer', "dialog", '
             "<input type='text' placeholder=''> </div> " +
             "<div class='filed-user tips' style='margin-top: 25px'> " +
             "<p>没有专属财富顾问编号怎么办？可从下方选择我们提供的在线客服为您服务。</p> " +
-            "<ul class='clearfix'> <li><input type='radio' name='kf'>新新贷客服宝宝</li> " +
-            "<li><input type='radio' name='kf'>新新贷客服宝宝</li> " +
-            "<li><input type='radio' name='kf'>新新贷客服宝宝</li> " +
-            "<li><input type='radio' name='kf'>新新贷客服宝宝</li> " +
-            "<li><input type='radio' name='kf'>新新贷客服宝宝</li> </ul> " +
+            "<ul class='clearfix'> <li><input type='radio' name='kf'>_客服宝宝</li> " +
+            "<li><input type='radio' name='kf'>_客服宝宝</li> " +
+            "<li><input type='radio' name='kf'>_客服宝宝</li> " +
+            "<li><input type='radio' name='kf'>_客服宝宝</li> " +
+            "<li><input type='radio' name='kf'>_客服宝宝</li> </ul> " +
             "</div> <div class='wrong_tip wt_pos'>错误提示....</div> " +
             "<div class='filed-user'> <span></span> <p><a class='btn'>确认提交</a></p> " +
             "</div> </div> </div>",

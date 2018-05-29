@@ -168,7 +168,7 @@ const getCompanyData = async (context) => {
     const res = await fetch(`${urlPath}/biz/bulletin/operationData`, param)
             return res.json()
 }
-// 新元宝新手专享
+// _新手专享
 const xszx = async (context) => {
     let param = {
             method : 'GET',
@@ -186,7 +186,7 @@ const xszx = async (context) => {
     const res = await fetch(`${urlPath}/m/product/getNewProduct.do?pCode=XSCP30T`, param)
             return res.json()
 }
-// 月进斗金
+// _
 const yjdj = async (context) => {
     let param = {
             method : 'GET',
@@ -216,7 +216,7 @@ const getNewUserRate = async (context) => {
         Toast.info(res.message, 2)
     }
 }
-// 新元宝利率
+// _利率
 const getXybRate = async (context) => {
     const res = await cFetch(`${urlPath}/apih5/api/finances/max-apr-xyb`, {
         data: {},

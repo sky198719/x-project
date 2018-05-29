@@ -17,20 +17,20 @@ define(['js/utils/date'],function(DateHandle){
         },
         
         loadData:function(){
-            //月进斗金
+            //_
         	monthFinance9WebappCtrl.getMonthFinance();
         },
         goDetail:function(){
         	try {
 	        		//XXD_TRACK._trackEvent({category: "webapp_monthgold_in", action: "index_buy_once", label: "立即抢购", value: "", custval: "" });
 	        		//GA部署
-	            	product_click({id:bid,name:name,category:category,list:"中秋活动-月进斗金"});
+	            	product_click({id:bid,name:name,category:category,list:"中秋活动-_"});
         	} catch (e) {}
     	
         	
               GS.loadPage("monthFinance/monthFinanceDetails.html");
         },
-        //月进斗金
+        //_
         getMonthFinance: function () {
             req.callJSON({
                 url: 'monthFinance/getProudctBaseInfo.do',
@@ -44,20 +44,20 @@ define(['js/utils/date'],function(DateHandle){
 	                		//年化利率
 	                		var apr = resultData.apr;
 		            		 bid = resultData.deployId;
-		            		 name = "月进斗金-"+resultData.terms;
-		            		 category = "月进斗金/"+apr+"%/"+resultData.closeTerm+"天";
+		            		 name = "_-"+resultData.terms;
+		            		 category = "_/"+apr+"%/"+resultData.closeTerm+"天";
 	                		
 	                	}else{
-	                		console.log("获取月进斗金产品信息失败，请稍后重试...");
+	                		console.log("获取_产品信息失败，请稍后重试...");
 	                	}
 	                }catch (e) {
                 		console.log(e.message);
-                		console.log("获取月进斗金产品信息失败，请稍后重试...");
+                		console.log("获取_产品信息失败，请稍后重试...");
         			} 
                 },
                 error: function(xhr, type){
                 	console.log("ajax error...");
-                	console.log("获取月进斗金产品信息失败，请稍后重试...");
+                	console.log("获取_产品信息失败，请稍后重试...");
                 }
             });
         },

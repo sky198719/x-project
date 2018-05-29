@@ -203,7 +203,7 @@
         window.location.href = link + "#!/static/html/newHand/sevenDaysDetail.html";
     }
 
-    //页面跳转至当天新元宝1个月详情页
+    //页面跳转至当天_1个月详情页
     function skiptoxybone() {
         $.ajax({
             url: link + 'xplan/getLatestSchemeId.do' + linkextra,
@@ -212,7 +212,7 @@
             data: {
                 currentPage: 1,
                 pageSize: 1,
-                closeTerm: 1 //参数1 表示获取新元宝1个月 12你猜
+                closeTerm: 1 //参数1 表示获取_1个月 12你猜
             },
             success: function (data) {
                 var schemeid = data.schemeInfo.SCHEMEID;
@@ -222,11 +222,11 @@
 
     }
 
-    //页面跳转至月进斗金
+    //页面跳转至_
     function skiptoyjdj() {
         window.location.href = link + "/#!/static/html/monthFinance/monthFinanceDetails.html";
     }
-    //页面跳转至日日盈详情页
+    //页面跳转至_详情页
     function skitptorry() {
         window.location.href = link + "/#!/static/html/stepUpward/stepUpwardDetail.html";
     }

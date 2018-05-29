@@ -1407,7 +1407,7 @@ dd {
     }
 }
 
-/*20150507 新元宝*/
+/*20150507 _*/
 .ic-perple, .ic-green, .ic-orange, .ic-grey, .ic-blue {
     padding: 2px 7px;
     border-radius: 4px;
@@ -3131,7 +3131,7 @@ a.link-active:active {
     margin: 10px 0 10px 0;
 }
 
-/* 月进斗金倒计时 */
+/* _倒计时 */
 .countdown {
     float: left;
     background: #8E8C8C;
@@ -3584,7 +3584,7 @@ a.link-active:active {
      left: -3px;
 }
 
-/*春节加息 月进斗金 七天大胜 start*/
+/*春节加息 _ 七天大胜 start*/
 .mothm-btn{
     line-height: 55px;
     height: 60px;
@@ -3599,7 +3599,7 @@ a.link-active:active {
 .bg-fd3450{
     background-color: #fd3450;
 }
-/*春节加息 月进斗金 七天大胜 end*/
+/*春节加息 _ 七天大胜 end*/
 
 .menu-box-shadow{
     -webkit-box-shadow:-10px -20px 30px rgba(105,179,242, .7);

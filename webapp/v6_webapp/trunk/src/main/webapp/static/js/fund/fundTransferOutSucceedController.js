@@ -2,7 +2,7 @@
  * Created by chaihuangqi on 2015/8/14.
  */
 /**
- * 日日盈转出成功页面
+ * _转出成功页面
  */
 define(function () {
     var fundTransferOutSucCtrl = {

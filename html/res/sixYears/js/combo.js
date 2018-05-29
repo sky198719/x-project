@@ -8,7 +8,7 @@ require(['base', 'float', 'allRoll', 'trackBase', 'store', 'header', 'footer', '
     var mobileReg = /^(((13[0-9]{1})|(14(0-9){1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; //验证手机号码是否合法
     var passwordReg = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,16}$/; //验证密码是否合法
 
-    //新元宝状体
+    //_状体
     var xybNewId;
     var xybNewLeft;
 
@@ -132,7 +132,7 @@ require(['base', 'float', 'allRoll', 'trackBase', 'store', 'header', 'footer', '
         $('.rightBox').fadeOut(0);
     }
 
-    //新元宝
+    //_
     var xybLeft = 0;
     function xybCheck(term){
         timer = new Date();

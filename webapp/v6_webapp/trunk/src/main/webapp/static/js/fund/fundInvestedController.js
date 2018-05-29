@@ -1,5 +1,5 @@
 /**
- * 日日盈已投资页面
+ * _已投资页面
  */
 define(['js/utils/animateNumber', 'js/fund/fundAnimate','js/utils/date','js/activity/womensDay'], function (animateNumber, fundAnimate,DateHandle,womensDay) {
     var fcode = '';
@@ -95,8 +95,8 @@ define(['js/utils/animateNumber', 'js/fund/fundAnimate','js/utils/date','js/acti
 
                     //产品详情
                     bid = data.fundApr.fcode;
-                    gname = "日日盈：日日盈";
-                    categorys = "日日盈/"+apr+"%/1天";
+                    gname = "_：_";
+                    categorys = "_/"+apr+"%/1天";
                     try{product_detail({id:bid,name:gname,category:categorys});}catch(e){}
 
                     if(isActivity != undefined && isActivity == 1) {
@@ -155,7 +155,7 @@ define(['js/utils/animateNumber', 'js/fund/fundAnimate','js/utils/date','js/acti
             GS.loadPage("fund/fundDetailsList.html?fcode=" + fcode + "&tab=transferIn&path=fund");
         },
 
-        /** 日日盈确认转入页 */
+        /** _确认转入页 */
         transferIn: function () {
             if ($$('a[name="index_transferIn"]').hasClass("button-51-disable")) {
                 return;
@@ -179,7 +179,7 @@ define(['js/utils/animateNumber', 'js/fund/fundAnimate','js/utils/date','js/acti
                 success: function (data) {
                     if (data != null) {
                         if (data.isTotalFull == "true") {
-                            xxdApp.alert("日日盈已满额，暂不能转入。", '提示');
+                            xxdApp.alert("_已满额，暂不能转入。", '提示');
                         } else if (data.isPersonFull == "true") {
                             xxdApp.alert("您累计的转入金额已达" + appFunc.fmoney(data.fund.userMostTender, 2) + "投资上限，暂不能转入", '提示');
                         } else {
@@ -302,8 +302,8 @@ define(['js/utils/animateNumber', 'js/fund/fundAnimate','js/utils/date','js/acti
             }
             try {
                 //XXD_TRACK._trackEvent({category: "webpp_fund_out", action: "turn_out", label: "转出", value: "", custval: "" });
-                //日日盈立即转出GA
-                gaClickEvent({property1:"转出",property2: "日日盈转出", property3:window.location});
+                //_立即转出GA
+                gaClickEvent({property1:"转出",property2: "_转出", property3:window.location});
             } catch (e) {
             }
             GS.loadPage('fund/fundTransferOut.html?path=fund');

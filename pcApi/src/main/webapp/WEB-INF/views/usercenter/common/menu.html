@@ -7,7 +7,7 @@
 
 <div class="g-left" th:fragment="menu (i, j)">
     <div class="menu">
-        <h2><a href="/usercenter/accountInfo.html">我的新新贷</a></h2>
+        <h2><a href="/usercenter/accountInfo.html">我的_</a></h2>
         <ul>
             <li><a  href="javascript:void(0);" th:class="${i=='fundRecord' ? 'active':''}">资金记录</a>
                 <div class="sub">
@@ -19,13 +19,13 @@
             </li>
             <li><a href="javascript:void(0);" th:class="${i=='tender' ? 'active':'' }">出借管理</a>
                 <div class="sub">
-                    <a href="/usercenter/tender/thirtytender.html"><i th:if="${j=='thirtytender'}"></i><strong>新元宝(新手专享)</strong></a>
+                    <a href="/usercenter/tender/thirtytender.html"><i th:if="${j=='thirtytender'}"></i><strong>_(新手专享)</strong></a>
                     <a th:if="${isInvestQTDS}" href="/usercenter/tender/sevengold.html"><i th:if="${j=='sevengold'}"></i><strong>七天大胜</strong></a>
-                    <a href="/usercenter/tender/monthgold.html"><i th:if="${j=='monthgold'}"></i><strong>月进斗金</strong></a>
-                    <a th:if="${isInvestRRY}" href="/usercenter/tender/dayProfit.html"><i th:if="${j=='dayProfit'}"></i><strong>日日盈</strong></a>
-                    <a href="/usercenter/tender/goldIngot.html"><i th:if="${j=='goldIngot'}"></i><strong>新元宝</strong></a>
+                    <a href="/usercenter/tender/monthgold.html"><i th:if="${j=='monthgold'}"></i><strong>_</strong></a>
+                    <a th:if="${isInvestRRY}" href="/usercenter/tender/dayProfit.html"><i th:if="${j=='dayProfit'}"></i><strong>_</strong></a>
+                    <a href="/usercenter/tender/goldIngot.html"><i th:if="${j=='goldIngot'}"></i><strong>_</strong></a>
                     <a th:if="${isInvestBBGS}" href="/usercenter/tender/stepDetail.html"><i th:if="${j=='stepDetail'}"></i><strong>步步高升</strong></a>
-                    <a href="/usercenter/tender/monthSend.html"><i th:if="${j=='monthSend'}"></i><strong>月月派</strong></a>
+                    <a href="/usercenter/tender/monthSend.html"><i th:if="${j=='monthSend'}"></i><strong>_</strong></a>
                     <a href="/usercenter/tender/investment.html"><i th:if="${j=='investment'}"></i><strong>散标直投</strong></a>
                     <a href="/usercenter/tender/creditortTansfer.html"><i th:if="${j=='creditortTansfer'}"></i><strong>债权转让</strong></a>
                     <a th:if="${isInvestXSB}" href="/usercenter/tender/newtender.html"><i th:if="${j=='newtender'}"></i><strong>新手标</strong></a>
@@ -64,7 +64,7 @@
 
 <div class="g-left" th:fragment="company-menu (i, j)">
     <div class="menu">
-        <h2><a href="/usercenter/company/account.html">我的新新贷</a></h2>
+        <h2><a href="/usercenter/company/account.html">我的_</a></h2>
         <ul>
             <li>
                 <a href="javascript:void(0);" th:classappend="${i=='userinfo' ? 'active':''}">账户总览</a>

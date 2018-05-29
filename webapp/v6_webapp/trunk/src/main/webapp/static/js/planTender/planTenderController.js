@@ -1,5 +1,5 @@
 /**
- * 新元宝购买投标
+ * _购买投标
  */
 define(['js/utils/date', 'js/planTender/planTenderView', 'js/plan/planUtils', 'js/activity/womensDay', 'js/utils/xxd_dmp', 'js/common/ami', 'js/account/openOnAccount','js/account/selectHongbao'], function (DateHandle, planTenderView, PlanUtils, womensDay, xxd_dmp, ami, openOnAccount,selectHongbao) {
     var redPacketList = [];
@@ -104,7 +104,7 @@ define(['js/utils/date', 'js/planTender/planTenderView', 'js/plan/planUtils', 'j
         },
 
         loadPlanAgreement: function () {
-            // 新元宝协议
+            // _协议
             req.callJSON({
                 url: "xplan/agreement/" + planId + ".do",
                 data: {},
@@ -143,7 +143,7 @@ define(['js/utils/date', 'js/planTender/planTenderView', 'js/plan/planUtils', 'j
                         if (data.userSchemeInfo.collectiontype == 1) {
                             data.userSchemeInfo.collectiontype = '收益再投标';
                         } else if (data.userSchemeInfo.collectiontype == 2) {
-                            data.userSchemeInfo.collectiontype = '提至新新贷账户';
+                            data.userSchemeInfo.collectiontype = '提至_账户';
                         }
                         data.userSchemeInfo.account = appFunc.fmoney(data.userSchemeInfo.account, 2);
                     }
@@ -269,15 +269,15 @@ define(['js/utils/date', 'js/planTender/planTenderView', 'js/plan/planUtils', 'j
                 var bid = $("#plan_schemeId").val();
                 var pname = "";
                 if (xpanType == 1) {
-                    pname = "新元宝3个月 -" + $("#xpanName").val();
+                    pname = "_3个月 -" + $("#xpanName").val();
                 } else if (xpanType == 2) {
-                    pname = "新元宝6个月 -" + $("#xpanName").val();
+                    pname = "_6个月 -" + $("#xpanName").val();
                 } else if (xpanType == 3) {
-                    pname = "新元宝12个月 -" + $("#xpanName").val();
+                    pname = "_12个月 -" + $("#xpanName").val();
                 } else if (xpanType == 4) {
-                    pname = "新元宝1个月 -" + $("#xpanName").val();
+                    pname = "_1个月 -" + $("#xpanName").val();
                 }
-                var categorys = "新元宝/" + $("#xpanApr").val() + "/" + $("#xpanCloseterm").val() + "个月";
+                var categorys = "_/" + $("#xpanApr").val() + "/" + $("#xpanCloseterm").val() + "个月";
 
                 CheckOut({id: bid, name: pname, category: categorys});
             } catch (e) {
@@ -289,7 +289,7 @@ define(['js/utils/date', 'js/planTender/planTenderView', 'js/plan/planUtils', 'j
 
             var agreement = $$("#plan_agreement").is(':checked');
             if (!agreement) {
-                xxdApp.alert("请先阅读并同意《新元宝用户协议书》、《自动配标委托书》！", "抱歉");
+                xxdApp.alert("请先阅读并同意《_用户协议书》、《自动配标委托书》！", "抱歉");
                 return;
             }
 
@@ -301,7 +301,7 @@ define(['js/utils/date', 'js/planTender/planTenderView', 'js/plan/planUtils', 'j
             } else {
                 if (pay_collection == '收益再投标') {
                     pay_collectiontype = 1;
-                } else if (pay_collection == '提至新新贷账户') {
+                } else if (pay_collection == '提至_账户') {
                     pay_collectiontype = 2;
                 }
             }
@@ -313,9 +313,9 @@ define(['js/utils/date', 'js/planTender/planTenderView', 'js/plan/planUtils', 'j
             var surplusMoney = $('#plan_surplusMoney').val();
             var ext_msg = '';
             if (payType == 1) {
-                // 新元宝账户可用余额
+                // _账户可用余额
                 if (parseFloat(presale_affirm_money) > parseFloat(default_account_usable)) {
-                    xxdApp.alert("您的账户可用余额，不够支付本次加入新元宝的金额，请充值", '提示');
+                    xxdApp.alert("您的账户可用余额，不够支付本次加入_的金额，请充值", '提示');
                     return false;
                 }
                 ext_msg = '支付剩余金额';
@@ -330,9 +330,9 @@ define(['js/utils/date', 'js/planTender/planTenderView', 'js/plan/planUtils', 'j
                     xxdApp.alert("您输入的加入金额必须是[" + step + "元]的整数倍", '提示');
                     return false;
                 }
-                // 新元宝账户可用余额
+                // _账户可用余额
                 if (parseFloat(presale_affirm_money) > parseFloat(default_account_usable)) {
-                    xxdApp.alert("您的账户可用余额，不够支付本次加入新元宝的金额，请充值", '提示');
+                    xxdApp.alert("您的账户可用余额，不够支付本次加入_的金额，请充值", '提示');
                     return false;
                 }
                 // 最大购买金额
@@ -361,17 +361,17 @@ define(['js/utils/date', 'js/planTender/planTenderView', 'js/plan/planUtils', 'j
                 // 计划剩余金额
                 var remacount = $("#plan_remacount").val();
                 if (parseFloat(presaleMoney) > parseFloat(remacount)) {
-                    xxdApp.alert("您输入的加入金额大于当前新元宝的剩余金额【" + remacount + "元】，请重新输入", '提示');
+                    xxdApp.alert("您输入的加入金额大于当前_的剩余金额【" + remacount + "元】，请重新输入", '提示');
                     return false;
                 }
             }
 
             if (!$$("#plan_agreement").is(':checked')) {
-                xxdApp.alert("请阅读并同意《新元宝用户协议书》！", '提示');
+                xxdApp.alert("请阅读并同意《_用户协议书》！", '提示');
                 return false;
             }
 
-            xxdApp.modalPassword('确认从您的账户扣除' + appFunc.fmoney(presale_affirm_money, 2) + '元购买新元宝' + ext_msg + '，请输入支付密码', '支付确认', function (password) {
+            xxdApp.modalPassword('确认从您的账户扣除' + appFunc.fmoney(presale_affirm_money, 2) + '元购买_' + ext_msg + '，请输入支付密码', '支付确认', function (password) {
                 if (password == null || password == '') {
                     xxdApp.alert('请输入支付密码！');
                     return;

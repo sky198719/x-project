@@ -541,7 +541,7 @@ function regSubmit() {
                 } catch (e) {}
 
                 $.dialog({
-                     content: '注册成功！108元新手红包已发放至账户，请在‘我的新新贷’中查看！',
+                     content: '注册成功！108元新手红包已发放至账户，请在‘我的_’中查看！',
                      title: "ok",
                      time: 3000
                  });

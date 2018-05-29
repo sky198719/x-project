@@ -203,10 +203,10 @@ export default class extends Component {
                 
                         <ul className="intro-list">
                             <Tab title="产品描述" dev_id="A8.1-2" eventtype="close_float_window" eventtypehide="open_float_window" show={ true }>
-                                新手标是针对<span className="notice">尚未在新新贷出借过的新手用户</span>推出的自动投标出借计划，新手标
+                                新手标是针对<span className="notice">尚未在_出借过的新手用户</span>推出的自动投标出借计划，新手标
                                 在用户任何的标的范围内，对符合要求的标的进行自动投标，切回款本金在相应期限内自动复投，期限结束后新手标会通过
-                                新新贷债权转让平台进行转让推出，该计划一旦投标成功，不支持提前退出或债权转让，该计划所对应的标的均百分之百适
-                                用于新新贷质保服务专款计划并由系统实现标的分散出借。
+                                _债权转让平台进行转让推出，该计划一旦投标成功，不支持提前退出或债权转让，该计划所对应的标的均百分之百适
+                                用于_质保服务专款计划并由系统实现标的分散出借。
                             </Tab>
                             <Tab title="出借图示" show={ false }>
                                 <div className="wrapper">
@@ -233,12 +233,12 @@ export default class extends Component {
                                         <span className="txt">到期日</span><i className="desc">结束计息</i>
                                     </div>
                                     <div><span className="circle"></span>
-                                        <span className="txt">退出日</span><i className="desc">本金和利息返还至新新贷账户</i>
+                                        <span className="txt">退出日</span><i className="desc">本金和利息返还至_账户</i>
                                     </div>
                                 </div>
                             </Tab>
                             <Tab title="回款方式" show={ false }>
-                                <p>1、锁定期结束后次日（含周末及节假日）系统自动将本金和收益返还到新新贷账户。</p>
+                                <p>1、锁定期结束后次日（含周末及节假日）系统自动将本金和收益返还到_账户。</p>
                                 <p>2、锁定期内不支持提前退出。</p>
                             </Tab>
                             <Tab title="费用说明" show={ false }>

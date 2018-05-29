@@ -242,7 +242,7 @@ require(['base', "register", 'login', "requirejs", 'json', 'juicer'], function (
             });
 
             //底部投资按钮点击
-            //新元宝
+            //_
             $('#goldIngot').click(function () {
                 userToken = window["userToken"] || main.getCookie('userToken');
                 //活动未开始已结束弹框
@@ -258,7 +258,7 @@ require(['base', "register", 'login', "requirejs", 'json', 'juicer'], function (
                     main.toligin();
                     return;
                 }
-                //新元宝的产品详情页面
+                //_的产品详情页面
                 $.ajax({
                     url: '/m/xplan/getLatestSchemeId.do',
                     type: 'get',
@@ -291,7 +291,7 @@ require(['base', "register", 'login', "requirejs", 'json', 'juicer'], function (
                 }
                 window.location.href = '/m/#!/static/html/stepUpward/stepUpwardDetail.html'+ '?xxd_utm_source=' + xxd_utm_source;
             });
-            //月月派
+            //_
             $('#yyp').click(function () {
                 userToken = window["userToken"] || main.getCookie('userToken');
                 console.log("start");
@@ -308,7 +308,7 @@ require(['base', "register", 'login', "requirejs", 'json', 'juicer'], function (
                     main.toligin();
                     return;
                 }
-                //月月派的产品详情页面
+                //_的产品详情页面
                 $.ajax({
                     url:'/m/yyp/index.do',
                     type:'get',

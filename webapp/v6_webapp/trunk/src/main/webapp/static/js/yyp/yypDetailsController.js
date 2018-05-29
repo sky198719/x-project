@@ -184,7 +184,7 @@ define(['js/yyp/yypDetailsView','js/common/productUtil','js/utils/date','js/util
                             }
 
                         }else{
-                            xxdApp.addNotification({ title: '温馨提示', message: '获取月月派产品信息失败，请稍后重试...', hold:3000});
+                            xxdApp.addNotification({ title: '温馨提示', message: '获取_产品信息失败，请稍后重试...', hold:3000});
                         }
 
                         mainView.showToolbar();
@@ -228,12 +228,12 @@ define(['js/yyp/yypDetailsView','js/common/productUtil','js/utils/date','js/util
                         }
                     }catch (e) {
                         console.log(e.message);
-                        xxdApp.addNotification({ title: '抱歉', message: '获取月月派产品信息失败，请稍后重试...', hold: 3000 });
+                        xxdApp.addNotification({ title: '抱歉', message: '获取_产品信息失败，请稍后重试...', hold: 3000 });
                     }
                 },
                 error: function(xhr, type){
-                    console.log("获取月月派产品加入记录失败,ajax error...");
-                    xxdApp.addNotification({ title: '抱歉', message: '获取月月派产品信息失败，请稍后重试...', hold: 3000 });
+                    console.log("获取_产品加入记录失败,ajax error...");
+                    xxdApp.addNotification({ title: '抱歉', message: '获取_产品信息失败，请稍后重试...', hold: 3000 });
                 }
             });
         },
@@ -310,8 +310,8 @@ define(['js/yyp/yypDetailsView','js/common/productUtil','js/utils/date','js/util
             yypDetailsCtrl.setTabSelectedStyle({"selected":"joinHistory"});
             //产品ID是否为空
             if (pId == null || pId == "") {
-                console.log("月月派产品ID为空");
-                xxdApp.addNotification({ title: '温馨提示', message: '获取月月派产品加入记录失败，请稍后重试...', hold:3000 });
+                console.log("_产品ID为空");
+                xxdApp.addNotification({ title: '温馨提示', message: '获取_产品加入记录失败，请稍后重试...', hold:3000 });
                 $$(".yypDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
                 return;
             }
@@ -358,13 +358,13 @@ define(['js/yyp/yypDetailsView','js/common/productUtil','js/utils/date','js/util
                     }catch (e) {
                         console.log(e.message);
                         $$(".yypDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
-                        xxdApp.addNotification({ title: '温馨提示', message: '获取月月派产品加入记录失败，请稍后重试...', hold:3000 });
+                        xxdApp.addNotification({ title: '温馨提示', message: '获取_产品加入记录失败，请稍后重试...', hold:3000 });
                     }
                 },
                 error: function (result){
-                    console.log("获取月月派产品加入记录失败,ajax error...");
+                    console.log("获取_产品加入记录失败,ajax error...");
                     $$(".yypDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
-                    xxdApp.addNotification({ title: '温馨提示', message: '获取月月派产品加入记录失败，请稍后重试...', hold:3000 });
+                    xxdApp.addNotification({ title: '温馨提示', message: '获取_产品加入记录失败，请稍后重试...', hold:3000 });
                 }
             });
         },
@@ -373,8 +373,8 @@ define(['js/yyp/yypDetailsView','js/common/productUtil','js/utils/date','js/util
         joinHistory:function(currentPage,pageSize,type){
             //产品ID是否为空
             if (pId == null || pId == "") {
-                console.log("月月派产品ID为空");
-                xxdApp.addNotification({ title: '温馨提示', message: '获取月月派产品加入记录失败，请稍后重试...', hold:3000 });
+                console.log("_产品ID为空");
+                xxdApp.addNotification({ title: '温馨提示', message: '获取_产品加入记录失败，请稍后重试...', hold:3000 });
                 $$(".yypDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
                 return;
             }
@@ -411,13 +411,13 @@ define(['js/yyp/yypDetailsView','js/common/productUtil','js/utils/date','js/util
                     }catch (e) {
                         console.log(e.message);
                         $$(".yypDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
-                        xxdApp.addNotification({ title: '温馨提示', message: '获取月月派产品加入记录失败，请稍后重试...', hold:3000 });
+                        xxdApp.addNotification({ title: '温馨提示', message: '获取_产品加入记录失败，请稍后重试...', hold:3000 });
                     }
                 },
                 error: function (result){
-                    console.log("获取月月派产品加入记录失败,ajax error...");
+                    console.log("获取_产品加入记录失败,ajax error...");
                     $$(".yypDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
-                    xxdApp.addNotification({ title: '温馨提示', message: '获取月月派产品加入记录失败，请稍后重试...', hold:3000 });
+                    xxdApp.addNotification({ title: '温馨提示', message: '获取_产品加入记录失败，请稍后重试...', hold:3000 });
                 }
             });
         },

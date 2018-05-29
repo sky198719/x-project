@@ -113,7 +113,7 @@ public class MemberDay922Controller {
                 resultJson.put("msg", "查询失败");
             }
 
-            //获取活动期间我的新元宝年化投资总额
+            //获取活动期间我的_年化投资总额
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("userId",userId);
             String userResultStr = activityUserCXFService.queryUserXYBamount(jsonObject.toJSONString());
@@ -352,7 +352,7 @@ public class MemberDay922Controller {
 
 
     /**
-     * 获取活动期间新元宝年化投资总额前三的信息
+     * 获取活动期间_年化投资总额前三的信息
      *
      * @param request
      * @return

@@ -197,7 +197,7 @@
     <div class="top" style="margin-top: 20px;">
         <div class="left"><img src="../static/img/activity/dowApp/logo.png" width="80" height="80"></div>
         <div class="left pl25">
-            <p class="app_name">新新贷理财</p>
+            <p class="app_name">_理财</p>
 
             <p class="app_intr">168.48万次下载|14.1MB</p>
 
@@ -238,20 +238,20 @@
     <!--新手有礼-->
     <div class="newer_info">
         <div class="app_newer">【欢乐周三送豪礼】</div>
-        <p>每周三10:00-23:59投资新元宝有机会赢取丰富奖品</p>
-        <p>〖新元宝〗——<span id="xpan_text"></span> 任选</p>
+        <p>每周三10:00-23:59投资_有机会赢取丰富奖品</p>
+        <p>〖_〗——<span id="xpan_text"></span> 任选</p>
         <p>最终收益以实际收益为准</p>
     </div>
     <p class="to_all_text">展开全文</p>
     <div id="conent" style="display: none;">
         <div class="fol_heart disnone">
             <div class="app_newer">【劲爆收益限时抢】</div>
-            <p>〖月进斗金〗——<span id="monthFinance_closeTerm">0</span>天尽享<span id="monthFinance_apr">0</span>%预期年化，每天<span id="monthFinance_startDate"></span>-<span id="monthFinance_endDate"></span>限时抢</p>
+            <p>〖_〗——<span id="monthFinance_closeTerm">0</span>天尽享<span id="monthFinance_apr">0</span>%预期年化，每天<span id="monthFinance_startDate"></span>-<span id="monthFinance_endDate"></span>限时抢</p>
         </div>
         <div class="fol_heart disnone">
             <div class="app_newer">【随心理财】</div>
             <p>1、〖新手专享〗注册送礼--注册即享108元现金红包</p>
-            <p>2、〖活期〗日日盈--<span id="fund_lowestTender">0</span>元起投，手机端年化<span id="fund_apr">0</span>%</p>
+            <p>2、〖活期〗_--<span id="fund_lowestTender">0</span>元起投，手机端年化<span id="fund_apr">0</span>%</p>
             <p>3、〖定期〗七天大胜--预期年化<span id="7d_apr">0</span>%，<span id="7d_closeTerm">0</span>天可取</p>
         </div>
         <div class="fol_heart disnone">
@@ -261,11 +261,11 @@
         </div>
         <div class="fol_heart disnone">
             <div class="app_newer">【关于我们】</div>
-            <p>新新贷使命：用公平金融的理念，致力于提高每个人的生活品质</p>
+            <p>_使命：用公平金融的理念，致力于提高每个人的生活品质</p>
             <p>客服专线：4000-169-521</p>
             <p>总部地址：上海市虹口区四川北路859号中信广场28F</p>
             <p>微信号：xinxindaicom</p>
-            <p>新新贷（上海）金融服务有限公司</p>
+            <p>_（上海）金融服务有限公司</p>
         </div>
     </div>
 

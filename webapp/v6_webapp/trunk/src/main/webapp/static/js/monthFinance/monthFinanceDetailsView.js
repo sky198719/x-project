@@ -27,7 +27,7 @@ define(['chart', 'chartDoughnut','js/utils/date'], function (Chart, Doughnut, Da
                     $$(".monthFinanceDetails #introductionTenderMost").html(params.tenderMost);
                 },
                 error: function (result){
-                	console.log("获取月进斗金产品说明失败,ajax error...");
+                	console.log("获取_产品说明失败,ajax error...");
                 	$$(".monthFinanceDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无内容...</div>');
                 }
             });
@@ -43,7 +43,7 @@ define(['chart', 'chartDoughnut','js/utils/date'], function (Chart, Doughnut, Da
                    $$(".monthFinanceDetails #tabContent").html(result);
                 },
                 error: function (result){
-                	console.log("获取月进斗金常见问题失败,ajax error...");
+                	console.log("获取_常见问题失败,ajax error...");
                 	$$(".monthFinanceDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无内容...</div>');
                 }
             });
@@ -81,7 +81,7 @@ define(['chart', 'chartDoughnut','js/utils/date'], function (Chart, Doughnut, Da
 		        		content = content.replace("joinHistory",joinHistory);
 		        		$$(".monthFinanceDetails #tabContent").html(content);
 		        	}else{
-		        		console.log("月进斗金暂无加入记录...");
+		        		console.log("_暂无加入记录...");
 		        		$$(".monthFinanceDetails #tabContent").html('<div style="text-align: center;color:#999999;">暂无数据...</div>');
 		        	}
                 }

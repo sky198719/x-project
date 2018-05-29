@@ -570,7 +570,7 @@ public class ApproveController extends BaseController {
             jsonObject.put("sendIp", HttpUtil.getRealIpAddr(request));
             jsonObject.put("sendType", sendType == null ? "0" : sendType);//0：发送短信验证码 1：发送语音验证码
             jsonObject.put("randCode", newRandCode);
-            jsonObject.put("msg", "您正在进行新新贷手机认证，短信验证码为：" + newRandCode + "，手机认证为免费认证，不收取任何费用。");
+            jsonObject.put("msg", "您正在进行_手机认证，短信验证码为：" + newRandCode + "，手机认证为免费认证，不收取任何费用。");
             logger.info("发送手机验证码参数：" + jsonObject);
 
             jsonArray.add(jsonObject);

@@ -88,7 +88,7 @@ define(function(){
         			}   
                 },
                 error: function(xhr, type){
-                	console.log("获取新元宝"+ closeTerm +"个月产品信息失败,ajax error...");
+                	console.log("获取_"+ closeTerm +"个月产品信息失败,ajax error...");
                 	xxdApp.alert("系统异常，请稍后重试", '抱歉');
                 }
             });

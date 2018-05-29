@@ -97,7 +97,7 @@ public class InvestmentRest extends H5Rest {
             @HeaderParam(value = "token") @NotNull String token,
             @ApiParam(name = "joinId", value = "joinId", required = true)
             @PathParam(value = "joinId") @NotNull String joinId,
-            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-月进斗金,5-新元宝,6-月月派,7-散标债券,10-新手产品30天)", required = true)
+            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-_,5-_,6-_,7-散标债券,10-新手产品30天)", required = true)
             @QueryParam(value = "productType") @NotNull int productType) {
         try {
             return investmentTranformService.productInvestDetail(clientId, joinId, productType, token, HttpHelper.getUserAgent(request));
@@ -125,7 +125,7 @@ public class InvestmentRest extends H5Rest {
             @QueryParam(value = "pageSize") @NotNull int pageSize,
             @ApiParam(name = "type", value = "类型:1.当前投资 2.历史投资", required = true)
             @QueryParam(value = "type") @NotNull String type,
-            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-月进斗金,5-新元宝,6-月月派,7-散标和债券,10-新手产品30天)", required = true)
+            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-_,5-_,6-_,7-散标和债券,10-新手产品30天)", required = true)
             @QueryParam(value = "productType") @NotNull int productType) {
 
         String productPinYin = "";
@@ -176,7 +176,7 @@ public class InvestmentRest extends H5Rest {
             @HeaderParam(value = "token") @NotNull String token,
             @ApiParam(name = "productId", value = "产品id", format = "String", required = true)
             @QueryParam(value = "productId") @NotNull String productId,
-            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-月进斗金,5-新元宝,6-月月派,7-散标,8-债券,10-新手产品30天)", format = "int", required = true)
+            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-_,5-_,6-_,7-散标,8-债券,10-新手产品30天)", format = "int", required = true)
             @QueryParam(value = "productType") @NotNull int productType) {
 
         Headers headers = Headers.createHeaders()
@@ -265,7 +265,7 @@ public class InvestmentRest extends H5Rest {
             @HeaderParam(value = "token") @NotNull String token,
             @ApiParam(name = "productId", value = "产品id", format = "String", required = true)
             @FormParam(value = "productId") @NotNull String productId,
-            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-月进斗金,5-新元宝,6-月月派,7-散标,8-债券,10-新手产品30天)", format = "int", required = true)
+            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-_,5-_,6-_,7-散标,8-债券,10-新手产品30天)", format = "int", required = true)
             @FormParam(value = "productType") @NotNull int productType,
             @ApiParam(name = "label", value = "只有散标、债券才需要传", format = "String")
             @FormParam(value = "label") String label,
@@ -359,7 +359,7 @@ public class InvestmentRest extends H5Rest {
             @HeaderParam(value = "token") @NotNull String token,
             @ApiParam(name = "productId", value = "产品id", format = "String", required = true)
             @FormParam(value = "productId") @NotNull String productId,
-            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-月进斗金,5-新元宝,6-月月派,7-散标,8-债券,10-新手产品30天)", format = "int", required = true)
+            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-_,5-_,6-_,7-散标,8-债券,10-新手产品30天)", format = "int", required = true)
             @FormParam(value = "productType") @NotNull int productType,
             @ApiParam(name = "label", value = "只有散标、债券才需要传", format = "String")
             @FormParam(value = "label") String label,
@@ -678,7 +678,7 @@ public class InvestmentRest extends H5Rest {
             @QueryParam(value = "type") @NotNull String type,
             @ApiParam(name = "code", value = "1:返回一个购买记录表,2:返回购买记录详细信息", required = true)
             @QueryParam(value = "code") @NotNull int code,
-            @ApiParam(name = "productCode", value = "0默认所有,1=日日盈(只有历史),2=步步高升,3=七天大胜(只有历史),4=月进斗金,5=新元宝,6=月月派,7=散标债权,10=新手专属30天,16=新手标", required = true)
+            @ApiParam(name = "productCode", value = "0默认所有,1=_(只有历史),2=步步高升,3=七天大胜(只有历史),4=_,5=_,6=_,7=散标债权,10=新手专属30天,16=新手标", required = true)
             @QueryParam(value = "productCode") @NotNull int productCode) {
 
         Headers headers = Headers.createHeaders()
@@ -709,7 +709,7 @@ public class InvestmentRest extends H5Rest {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("rry")
-    @ApiOperation(value = "日日盈历史投资记录")
+    @ApiOperation(value = "_历史投资记录")
     public Message recordRRY(
             @ApiParam(name = "clientId", value = "clientId", required = true)
             @HeaderParam(value = "clientId") @NotNull String clientId,
@@ -733,10 +733,10 @@ public class InvestmentRest extends H5Rest {
         try {
             return apiUtil.get(ApiEnum.API_INVESTMENT_INVESTS_RRYRECORD, headers, queryStrings);
         } catch (CoreException | ServiceException exception) {
-            logger.error("获取日日盈历史投资记录失败", exception);
+            logger.error("获取_历史投资记录失败", exception);
             return new ErrorMessage(exception.getCode(), exception.getMessage());
         } catch (Exception e) {
-            logger.error("获取日日盈历史投资记录失败", e);
+            logger.error("获取_历史投资记录失败", e);
             return new ErrorMessage(e.getMessage());
         }
     }
@@ -777,7 +777,7 @@ public class InvestmentRest extends H5Rest {
             @HeaderParam(value = "clientId") @NotNull String clientId,
             @ApiParam(name = "joinId", value = "joinId", required = true)
             @PathParam(value = "joinId") @NotNull String joinId,
-            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-月进斗金,5-新元宝,6-月月派,7-散标,8-债券,10-新手产品30天)",format = "int", required = true)
+            @ApiParam(name = "productType", value = "产品类型(2-步步高升,3-七天大胜,4-_,5-_,6-_,7-散标,8-债券,10-新手产品30天)",format = "int", required = true)
             @QueryParam(value = "productType") @NotNull int productType,
             @ApiParam(name = "page", value = "page", required = true)
             @QueryParam(value = "page") @NotNull int page,

@@ -15,7 +15,7 @@ define(['js/utils/date','js/plan/planUtils'], function (DateHandle,PlanUtils) {
                 output += '<div class="list-block media-list"><ul style="background: #efeff4;">';
                 for (var i = 0; i < list.length; i++) {
                     var b = list[i];
-                    // 过滤撤销的新元宝
+                    // 过滤撤销的_
                     if(b.STATUS == 5){
                         continue;
                     }

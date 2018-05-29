@@ -220,7 +220,7 @@ define(['js/utils/date','js/utils/animateNumber','js/common/productUtil'],functi
             GS.loadPage("trade/tradeRequestListV2.html");
         },
         /**
-         * 跳转到新元宝
+         * 跳转到_
          */
         toPlanSwiper: function () {
             GS.loadPage('popular/financesList.html');

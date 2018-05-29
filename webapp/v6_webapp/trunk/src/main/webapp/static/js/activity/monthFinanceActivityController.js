@@ -103,7 +103,7 @@ define(['js/utils/date'],function(DateHandle){
         			}   
                 },
                 error: function(xhr, type){
-                	console.log("获取月进斗金产品加入记录失败,ajax error...");
+                	console.log("获取_产品加入记录失败,ajax error...");
                     userTenderFlag = false;
 			        hintMsg = "加载出错，请稍后重试..."
                 }

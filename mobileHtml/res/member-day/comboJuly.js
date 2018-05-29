@@ -714,9 +714,9 @@ require(['base', "register", 'login','vTicker', "requirejs", 'trackBase', 'json'
                 //     /*xui.prompt({
                 //         time: 2000,
                 //         icon: 'warning',
-                //         msg : '请勾选我已阅读新新贷协议'
+                //         msg : '请勾选我已阅读_协议'
                 //     });*/
-                //     $('#reg_prompt').html('请勾选我已阅读新新贷协议!');
+                //     $('#reg_prompt').html('请勾选我已阅读_协议!');
                 //     return false;
                 // }
                 /*xui.prompt({
@@ -1095,7 +1095,7 @@ require(['base', "register", 'login','vTicker', "requirejs", 'trackBase', 'json'
                 }
                 window.location.href = '/m/#!/static/html/stepUpward/stepUpwardDetail.html'+ '?xxd_utm_source=' + xxd_utm_source;
             });
-            //月月派
+            //_
             $('#yyp').click(function () {
                 userToken = window["userToken"] || main.getCookie('userToken');
                 //console.log("start");
@@ -1112,7 +1112,7 @@ require(['base', "register", 'login','vTicker', "requirejs", 'trackBase', 'json'
                     main.showNoLogin();
                     return;
                 }
-                //月月派的产品详情页面
+                //_的产品详情页面
                 $.ajax({
                     url:'/m/yyp/index.do',
                     type:'get',

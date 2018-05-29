@@ -97,7 +97,7 @@ require(['base', 'paging', "trackBase", 'store', 'side', 'juicer'
                                     data.incomeProcessModeCode = v.message;
                                 }
                             });
-                            //新元宝出借详情
+                            //_出借详情
                             var investArray = [];
                             investArray.push('<tr class="table-content"><td>' + side.numberFormat(data.investmentAmount) + '</td>');
                             investArray.push('<td>' + data.plannedAnnualRate + '%+' + data.floatingRate + '%</td>');

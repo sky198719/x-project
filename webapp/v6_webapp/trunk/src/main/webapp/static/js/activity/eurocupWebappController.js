@@ -55,7 +55,7 @@ define(function(){
         			}   
                 },
                 error: function(xhr, type){
-                	console.log("获取新元宝"+ closeTerm +"个月产品信息失败,ajax error...");
+                	console.log("获取_"+ closeTerm +"个月产品信息失败,ajax error...");
                 	xxdApp.alert("系统异常，请稍后重试", '抱歉');
                 }
             });
@@ -211,8 +211,8 @@ define(function(){
                         	xxdApp.loginScreen();
 	                    }else{
 	                    	xxdApp.alert(data.desc, '提示',function (){
-	                    		//"只有投资新元宝才有机会参与竞猜哦！"；
-	                    		if(data.desc.indexOf("投资新元宝") > 0){
+	                    		//"只有投资_才有机会参与竞猜哦！"；
+	                    		if(data.desc.indexOf("投资_") > 0){
 	                    			$$(".eurocupWebapp").scrollTop(1170, 300, null);
 	                    		} 
 	                    	});

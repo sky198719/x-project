@@ -214,7 +214,7 @@ export default class Register extends Component {
             Toast.info('密码应为6-16位数字与字母组合', 2)
             return
         }else if(!this.state.protocol){
-            Toast.info('注册前需同意《新新贷注册协议》、《资金出借风险提示函》', 2)
+            Toast.info('注册前需同意《_注册协议》、《资金出借风险提示函》', 2)
             return
         }
         const context = {
@@ -264,19 +264,19 @@ export default class Register extends Component {
                                     <input className="dmp-click" dev_id="B2.1-3.3.5.4" eventtype={ this.state.protocol ? 'off' : 'on' } type="checkbox" defaultChecked />
                                 </label>
                                 <div className="agreement">
-                                    我已阅读并同意<a href="/modal/agreement">《新新贷注册使用协议》、</a><a href="/modal/risk">《资金出借风险提示函》</a>
+                                    我已阅读并同意<a href="/modal/agreement">《_注册使用协议》、</a><a href="/modal/risk">《资金出借风险提示函》</a>
                                 </div>
                             </div>
                             <div className="div-button">
                                 <button type="button" onClick={ this.register }>注册</button>
                             </div>
                             <div className="div-login">
-                                已是新新贷会员，<a href="/login" className="dmp-click" dev_id="B2.1-1.1" eventtype="jump">马上登录</a>
+                                已是_会员，<a href="/login" className="dmp-click" dev_id="B2.1-1.1" eventtype="jump">马上登录</a>
                             </div>
                         </div>
                         <div className="tips">
                             <div className="img-block"></div>
-                            <p>新新贷已接入银行存管</p>
+                            <p>_已接入银行存管</p>
                         </div>
                     </div>
                 </div>

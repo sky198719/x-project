@@ -503,7 +503,7 @@ public class FeApiController extends BaseController {
             String passwordTemp = CodecUtil.md5Hex(CodecUtil.md5Hex(password));
             param.put("password", passwordTemp);
 
-            //日日盈体验金标识
+            //_体验金标识
             String fundActivityCode = request.getParameter("fundActivityCode");
             param.put("fundActivityCode", fundActivityCode);
 
