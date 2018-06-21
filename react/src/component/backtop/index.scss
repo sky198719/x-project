@@ -1,0 +1,61 @@
+@import "../../css/variable";
+.ant-back-top-inner {
+	position: fixed;
+	display: block;
+	bottom: 50px;
+	right:49px;
+	width:65px;
+	height: 60px;
+	background: url("i/top.png") no-repeat;
+	background-size: 65px 60px;
+}
+.top-qr-wrap {
+	position: fixed;
+	display: block;
+	bottom: 115px;
+	right:20px;
+	width:123px;
+	height:204px;
+	background: url(i/qr-wrap.png) no-repeat;
+	background-size: 123px 204px;
+	.top-qr {
+		position: absolute;
+		top:55px;
+		left:6px;
+		width:111px;
+		height: 135px;
+		background: url("i/top-qr.png") no-repeat;
+		background-size: 111px 135px;
+		cursor: pointer;
+	}
+}
+
+.dialog-qr {
+	display: block;
+	width: 245px;
+	height: 245px;
+	min-width: 165px;
+	margin: 30px;
+	background: url(./i/qr.png) no-repeat;
+	background-size: 245px 245px;
+}
+
+
+.qr-tip {
+	position: absolute;
+	bottom:4px;
+	display:block;
+	width:100%;
+	text-align:center;
+	font:normal 12px/12px $font;
+}
+
+.dialog-title {
+	text-align: center;
+	font:normal 12px/15px $font;
+	span {
+		display: inline-block;
+		font: bold 18px/40px $font;
+		color:black;
+	}
+}
